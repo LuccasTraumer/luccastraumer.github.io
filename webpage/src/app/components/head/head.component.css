@@ -7,25 +7,30 @@
 
 .content {
     display: flex;
+    flex-basis: 0;
+    justify-content: center;
 }
 
-.text {
-    display: flex;
-    flex-direction: column;
+.img img {
+    border: 8px solid #1CB698;
+    border-radius: 100%;
+    z-index: 2;
+    height: 70%;
+    position: relative;
+}
+
+.card {
+    margin-right: 8.5%;
+    width: 25%;
+    height: 40%;
+    margin-top: 10%;
+    position: absolute;
     z-index: 1;
 }
 
-.img-background {
-    display: flex; 
-    z-index: 0;
-    justify-content: flex-end;
-    height: 70%;
-    width: 70%;
-    background: rgb(30,35,38);
-    background: linear-gradient(90deg, rgba(30,35,38,1) 0%, rgba(37,42,46,1) 100%);
-}
-
-.img-background img {
-    height: 70%;
-    width: 70%;
+.text {
+    padding-top: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }

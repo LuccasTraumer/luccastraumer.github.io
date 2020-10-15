@@ -1,0 +1,31 @@
+.container {
+    background-color: #1E2326;
+    color: #fff;
+    width: 100%;
+    padding-top: 0.2%;
+}
+
+.content {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.img-background {
+    display: flex; 
+    z-index: 0;
+    justify-content: flex-end;
+    height: 70%;
+    width: 70%;
+    background: rgb(30,35,38);
+    background: linear-gradient(90deg, rgba(30,35,38,1) 0%, rgba(37,42,46,1) 100%);
+}
+
+.img-background img {
+    height: 70%;
+    width: 70%;
+}

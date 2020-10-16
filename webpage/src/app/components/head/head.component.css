@@ -3,12 +3,20 @@
     color: #fff;
     width: 100%;
     padding-top: 0.2%;
+    height: 80%;
 }
 
 .content {
-    display: flex;
+    display: flexbox;
     flex-basis: 0;
     justify-content: center;
+    position: relative;
+    justify-content: column;
+}
+
+.img {
+    padding-top: 1%;
+    padding-left: 8%;
 }
 
 .img img {
@@ -20,17 +28,41 @@
 }
 
 .card {
-    margin-right: 8.5%;
-    width: 25%;
+    padding-top: 30%;
+    justify-content: center;
+    width: 30%;
     height: 40%;
-    margin-top: 10%;
-    position: absolute;
+    position: fixed;
     z-index: 1;
 }
 
 .text {
-    padding-top: 45%;
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+.links-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links-social div {
+    display: flexbox;
+    height: 18%;
+    border-radius: 100%;
+    margin-right: 5%;
+}
+
+.links-social div:hover {
+    background-color: #1CB698;
+}
+
+.links-social img {
+    height: 100%;
+}
+
+@media only screen and (max-width: 426px) {
+
 }

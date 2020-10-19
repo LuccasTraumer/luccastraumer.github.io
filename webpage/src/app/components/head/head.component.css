@@ -1,0 +1,18 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.persona-image img{
+    border: 12px solid #1CB698;
+    border-radius: 100%;
+    width: 70%;
+}
+
+.bg-card {
+    background-color: #252A2E;
+}
+
+.prof-info {
+    
+}

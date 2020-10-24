@@ -1,59 +1,13 @@
 .container-fluid {
     display: flex;
     justify-content: center;
-    height: 80vh;
     width: 100%;
     align-items: center;
-    top: 10%;
+    justify-items: center;
 }
 
-.persona-image {
-    display: contents;
-    width: 20%;
-    bottom: 2%;
-}
 
-.persona-image img{
-    border: 12px solid #1CB698;
-    border-radius: 100%;
-    width: 70%;
-}
 
-.bg-card {
-    text-align: center;
-    border-radius: 5%;
-    position: absolute;
-    background-color: #252A2E;
-    height: 35%;
-    z-index: -1;
-    justify-content: flex-end;
-    margin: 5%;
-}
 
-.prof-info {
-    
-}
 
-@media only screen and (min-width: 574px) {
-    .persona-image img{
-        border: 12px solid #1CB698;
-        border-radius: 100%;
-        width: 30%;
-    }
-}
 
-@media only screen and (min-width: 1024px) {
-    .persona-image img{
-        border: 12px solid #1CB698;
-        border-radius: 100%;
-        width: 25%;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .persona-image img{
-        border: 12px solid #1CB698;
-        border-radius: 100%;
-        width: 20%;
-    }
-}

@@ -4,3 +4,13 @@
     width: 100%;
     height: 100%;
 }
+
+.body {
+    display: grid;
+    grid-template-rows: 3fr 3fr 3fr 3fr 3fr;
+}
+.body div {
+    height: 80vh;
+    width: 100%;
+}
+

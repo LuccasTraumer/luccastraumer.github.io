@@ -12,6 +12,8 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { PortifolioComponent } from './components/portifolio/portifolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardComponent } from './components/head/card/card.component';
+import { RoundedImageComponent } from './components/head/rounded-image/rounded-image.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ResumeComponent,
     PortifolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent,
+    RoundedImageComponent
   ],
   imports: [
     BrowserModule,

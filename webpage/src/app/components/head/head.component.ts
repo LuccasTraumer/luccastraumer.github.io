@@ -1,3 +1,4 @@
+import { Constantes } from './../../../Utils/Constantes';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,5 +12,6 @@ export class HeadComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

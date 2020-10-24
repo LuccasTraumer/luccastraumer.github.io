@@ -1,0 +1,47 @@
+.card {
+    background-color: #252A2E;
+    color: #fff;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.card-body {
+    padding-top: 50%;
+}
+
+.card-title {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+
+.card-subtitle {
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: sans-serif, 'Courier New', Courier, monospace;
+    font-style: initial;
+
+}
+
+section {
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+section a {
+    margin: 0;
+    margin-bottom: 10%;
+    padding-right: 0%;
+}
+
+section img {
+    width: 60%;
+
+}
+
+section img:hover {
+    background-color: #1CB698;
+    border-radius: 50%;
+}

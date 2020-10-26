@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/head/card/card.component';
 import { RoundedImageComponent } from './components/head/rounded-image/rounded-image.component';
+import { IconsSocialMediasComponent } from './components/head/card/icons-social-medias/icons-social-medias.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RoundedImageComponent } from './components/head/rounded-image/rounded-i
     ContactComponent,
     FooterComponent,
     CardComponent,
-    RoundedImageComponent
+    RoundedImageComponent,
+    IconsSocialMediasComponent
   ],
   imports: [
     BrowserModule,

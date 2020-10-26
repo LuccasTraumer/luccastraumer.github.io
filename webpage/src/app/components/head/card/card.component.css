@@ -3,10 +3,11 @@
     color: #fff;
     text-align: center;
     border-radius: 5%;
+    width: 25rem;
 }
 
 .card-body {
-    padding-top: 50%;
+    padding-top: 60%;
 }
 
 .card-title {

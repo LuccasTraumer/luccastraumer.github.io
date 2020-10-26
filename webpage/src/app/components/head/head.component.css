@@ -1,9 +1,17 @@
 .container-fluid {
     display: flex;
     justify-content: center;
-    width: 100%;
-    align-items: center;
-    justify-items: center;
+}
+
+app-rounded-image {
+    position: relative;
+    z-index: 1;
+}
+
+app-card {
+    position: absolute;
+    z-index: -1;
+    top: 13rem;
 }
 
 

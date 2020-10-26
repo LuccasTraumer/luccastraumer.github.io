@@ -11,4 +11,6 @@ export const environment = {
     linkSocialMediaInstagram: 'https://www.instagram.com/luccastraumer/',
     linkSocialMediaGithub: 'https://github.com/LuccasTraumer',
     linkSocialMediaLinkedin: 'https://www.linkedin.com/in/luccastraumer/',
+
+    linkMyPersonalImage: 'https://avatars3.githubusercontent.com/u/16438051?s=400&u=fa0224315b18ada8435edf9ee06f2022f726bb6f&v=4',
 };

@@ -15,4 +15,6 @@ export class Constantes {
     public static readonly linkGithub = environment.linkSocialMediaFacebook;
     public static readonly linkLinkedin = environment.linkSocialMediaFacebook;
 
+    public static readonly myPersonalImage = environment.linkMyPersonalImage;
+
 }

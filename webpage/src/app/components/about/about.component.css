@@ -1,4 +1,55 @@
-.container {
-    background-color: darkcyan;
+.container-fluid {
     height: 100%;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+}
+
+.text {
+    padding: 5%;
+}
+
+.data-colums ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 0.5fr 0.2fr;
+    padding: 2%;
+
+}
+
+ul li {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+}
+
+li strong {
+    padding-right: 5%;
+}
+
+ul a {
+    color: #fff;
+}
+
+ul div {
+    display: flex;
+    
+}
+
+span {
+    text-align: center;
+    width: 6rem;
+    border-radius: 5%;
+}
+
+@media only screen and (min-width: 768px) {
+    .data-colums ul {
+        text-align: start;
+
+    }
 }

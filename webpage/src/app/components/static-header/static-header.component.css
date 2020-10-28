@@ -1,7 +1,8 @@
 .container-fluid {
-    padding: 0%;
+    width: 150%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin: 0%;
-    width: 100%;
 }
 
 .links {

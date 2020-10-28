@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/head/card/card.component';
 import { RoundedImageComponent } from './components/head/rounded-image/rounded-image.component';
 import { IconsSocialMediasComponent } from './components/head/card/icons-social-medias/icons-social-medias.component';
+import { ApresentacaoImageDataComponent } from './components/head/apresentacao-image-data/apresentacao-image-data.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { IconsSocialMediasComponent } from './components/head/card/icons-social-
     FooterComponent,
     CardComponent,
     RoundedImageComponent,
-    IconsSocialMediasComponent
+    IconsSocialMediasComponent,
+    ApresentacaoImageDataComponent
   ],
   imports: [
     BrowserModule,

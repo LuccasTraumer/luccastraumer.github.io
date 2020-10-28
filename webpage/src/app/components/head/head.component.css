@@ -1,18 +1,12 @@
 .container-fluid {
     display: flex;
     justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 
-app-rounded-image {
-    position: relative;
-    z-index: 1;
-}
 
-app-card {
-    position: absolute;
-    z-index: -1;
-    top: 13rem;
-}
 
 
 

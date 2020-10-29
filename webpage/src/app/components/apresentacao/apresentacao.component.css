@@ -7,7 +7,6 @@
 
 .body {
     display: grid;
-    grid-template-rows: 3fr 3fr 3fr 3fr 3fr;
 }
 .body div {
     height: 80vh;

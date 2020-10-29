@@ -14,4 +14,7 @@ export class HeadComponent implements OnInit {
   }
 
 
+  bgImage() {
+    return Constantes.backgroundImageHead;
+  }
 }

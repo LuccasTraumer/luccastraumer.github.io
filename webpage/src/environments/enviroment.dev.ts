@@ -13,4 +13,5 @@ export const environment = {
     linkSocialMediaLinkedin: 'https://www.linkedin.com/in/luccastraumer/',
 
     linkMyPersonalImage: 'https://avatars3.githubusercontent.com/u/16438051?s=400&u=fa0224315b18ada8435edf9ee06f2022f726bb6f&v=4',
+    backgroundImageHead: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/developer-working-on-his-project.jpg',
 };

@@ -1,6 +1,7 @@
 .content {
     display: flex;
     justify-content: center;
+    /*background-image: url('');*/
 }
 
 app-rounded-image {

@@ -1,3 +1,4 @@
+import { Constantes } from './../../../Utils/Constantes';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,4 +13,8 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  getIconInfo() {
+    return Constantes.iconInfo;
+  }
 }

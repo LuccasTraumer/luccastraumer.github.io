@@ -4,6 +4,10 @@
     letter-spacing: 0.5px;
     justify-content: center;
     background-color: #1e2326;
+    overflow: hidden;
+    display: block;
+    padding: 5%;
+    background-color: darkgray;
 }
 
 .title {
@@ -13,50 +17,28 @@
 }
 
 .title img {
-    width: fit-content;
+    width: 20%;
     align-self: center;
 }
 
 .text {
-    padding: 10%;
+    padding: 3%;
 }
 
-.data-colums ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 0.6fr 0.2fr;
-    padding: 2%;
-
+.personal-data {
+    margin-top: 2%;
 }
 
-ul li {
+.lists {
     display: flex;
-    position: relative;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-li strong {
-    padding-right: 5%;
+.lists app-personal-data-list {
+    width: 50%;
 }
 
-ul a {
-    color: #fff;
-}
-
-ul div {
-    display: flex;
-    
-}
-
-span {
-    text-align: center;
-    width: 6rem;
-    border-radius: 5%;
-}
-
-@media only screen and (min-width: 768px) {
-    .data-colums ul {
-        text-align: start;
-
-    }
+.lists app-list-hobbies {
+    width: 40%;
+    flex-wrap: wrap;
 }

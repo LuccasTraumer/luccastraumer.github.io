@@ -16,6 +16,8 @@ import { CardComponent } from './components/head/card/card.component';
 import { RoundedImageComponent } from './components/head/rounded-image/rounded-image.component';
 import { IconsSocialMediasComponent } from './components/head/card/icons-social-medias/icons-social-medias.component';
 import { ApresentacaoImageDataComponent } from './components/head/apresentacao-image-data/apresentacao-image-data.component';
+import { PersonalDataListComponent } from './components/about/personal-data-list/personal-data-list.component';
+import { ListHobbiesComponent } from './components/about/list-hobbies/list-hobbies.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ApresentacaoImageDataComponent } from './components/head/apresentacao-i
     CardComponent,
     RoundedImageComponent,
     IconsSocialMediasComponent,
-    ApresentacaoImageDataComponent
+    ApresentacaoImageDataComponent,
+    PersonalDataListComponent,
+    ListHobbiesComponent
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,9 @@
 
 .body {
     display: grid;
+    grid-area: auto;
 }
 .body div {
-    height: 90vh;
+    height: 85vh;
     width: 100%;
 }

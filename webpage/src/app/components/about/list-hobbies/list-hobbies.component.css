@@ -1,10 +1,30 @@
+.interest {
+    display: flex;
+    flex-direction: column;
+}
+
+.interest .title {
+    text-align: center;
+}
+
+.all-cards {
+    justify-content: start;
+}
+
 ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: start;
+    padding-right: 5%;
+}
+
+.card {
+    background-color: #252a2e;
 }
 
 ul li {
-    height: 100%;
-    padding: 2%;
+    height: 5vh;
+    text-align: center;
+    justify-content: center;
 }

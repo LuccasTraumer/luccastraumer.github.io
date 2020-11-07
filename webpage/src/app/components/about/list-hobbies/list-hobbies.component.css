@@ -33,4 +33,34 @@ ul li {
 li img {
     width: 40%;
     align-self: center;
+    padding: 2%;
+}
+
+.card:hover {
+    background-color: #1CB698;
+}
+
+@media only screen and (min-width: 425px) {
+    li img {
+        padding: 2%;
+        width: 15%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+    li img {
+        padding: 2%;
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    ul {
+        justify-content: center;
+       grid-template-columns: repeat(3, 20%);
+    }
+    
+    li img {
+        width: 22%;
+    }
 }

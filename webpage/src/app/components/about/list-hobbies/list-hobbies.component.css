@@ -13,18 +13,24 @@
 
 ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     justify-content: start;
     padding-right: 5%;
 }
 
 .card {
     background-color: #252a2e;
+    border-radius: 10%;
 }
 
 ul li {
-    height: 5vh;
+    height: 10vh;
     text-align: center;
     justify-content: center;
+}
+
+li img {
+    width: 40%;
+    align-self: center;
 }

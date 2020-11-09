@@ -59,7 +59,7 @@ li img {
         justify-content: center;
        grid-template-columns: repeat(3, 20%);
     }
-    
+
     li img {
         width: 22%;
     }

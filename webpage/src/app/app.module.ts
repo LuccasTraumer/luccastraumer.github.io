@@ -18,6 +18,7 @@ import { IconsSocialMediasComponent } from './components/head/card/icons-social-
 import { ApresentacaoImageDataComponent } from './components/head/apresentacao-image-data/apresentacao-image-data.component';
 import { PersonalDataListComponent } from './components/about/personal-data-list/personal-data-list.component';
 import { ListHobbiesComponent } from './components/about/list-hobbies/list-hobbies.component';
+import { TimelineComponent } from './components/resume/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ListHobbiesComponent } from './components/about/list-hobbies/list-hobbi
     IconsSocialMediasComponent,
     ApresentacaoImageDataComponent,
     PersonalDataListComponent,
-    ListHobbiesComponent
+    ListHobbiesComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@
 .body {
     display: grid;
     grid-area: auto;
-    grid-template-rows: 80vh repeat(5, 100vh);
+    grid-template-rows: 80vh 100vh 130vh repeat(2, 100vh);
 }
 .body div {
     width: 100%;

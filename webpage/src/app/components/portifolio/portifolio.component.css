@@ -1,4 +1,30 @@
-.container {
-    background-color: brown;
+.container-fluid {
+    background-color: #1e2326;
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid .top-data {
+    text-align: center;
+}
+
+.container-fluid .projetcs {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr;
+    column-gap: 2%;
+    row-gap: 2%;
+    justify-content: center;
+}
+
+.image {
+    justify-content: center;
+    height: auto;
+    border-radius: 10%;
+}
+
+.image img {
+    width: 20rem;
+    align-self: center;
 }

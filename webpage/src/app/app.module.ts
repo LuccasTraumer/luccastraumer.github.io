@@ -19,6 +19,7 @@ import { ApresentacaoImageDataComponent } from './components/head/apresentacao-i
 import { PersonalDataListComponent } from './components/about/personal-data-list/personal-data-list.component';
 import { ListHobbiesComponent } from './components/about/list-hobbies/list-hobbies.component';
 import { TimelineComponent } from './components/resume/timeline/timeline.component';
+import { ListCardComponent } from './components/portifolio/list-card/list-card.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TimelineComponent } from './components/resume/timeline/timeline.compone
     ApresentacaoImageDataComponent,
     PersonalDataListComponent,
     ListHobbiesComponent,
-    TimelineComponent
+    TimelineComponent,
+    ListCardComponent
   ],
   imports: [
     BrowserModule,

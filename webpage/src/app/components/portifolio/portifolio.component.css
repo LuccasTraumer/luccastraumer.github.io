@@ -23,12 +23,14 @@
     justify-content: center;
     height: auto;
     border-radius: 10%;
+    text-align: center;
+
 }
 
 .image img {
     width: 22rem;
-    height: 15rem;
-    align-self: center;
+    height: 20rem;
+    border-radius: 10%;
 }
 
 .img__description {
@@ -41,6 +43,11 @@
     color: #fff;
     visibility: hidden;
     opacity: 0;
+    margin-bottom: 4%;
+    border-radius: 10%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   
     /* transition effect. not necessary */
     transition: opacity .2s, visibility .2s;
@@ -50,3 +57,7 @@
     visibility: visible;
     opacity: 1;
   }
+
+.img__description label {
+    justify-content: center;
+}

@@ -19,12 +19,34 @@
 }
 
 .image {
+    position: relative;
     justify-content: center;
     height: auto;
     border-radius: 10%;
 }
 
 .image img {
-    width: 20rem;
+    width: 22rem;
+    height: 15rem;
     align-self: center;
 }
+
+.img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 182, 152, 0.60);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+
+  .image:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+  }

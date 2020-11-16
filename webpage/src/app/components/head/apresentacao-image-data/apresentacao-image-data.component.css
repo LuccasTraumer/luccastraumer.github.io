@@ -11,6 +11,5 @@ app-rounded-image {
 
 app-card {
     position: absolute;
-    z-index: -1;
     top: 13rem;
 }

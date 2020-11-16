@@ -7,9 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "gh-pages -d dist/webpage"
   },
   "private": true,
+  "homepage": "https://luccastraumer.github.io",
   "dependencies": {
     "@angular/animations": "~9.1.9",
     "@angular/common": "~9.1.9",

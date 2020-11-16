@@ -6,11 +6,28 @@
 }
 
 .body {
-    display: grid;
+    display: inline-block;
     grid-area: auto;
-    grid-template-rows: 80vh 100vh 130vh repeat(2, 100vh);
+    /*grid-template-rows: 80vh 100vh 130vh 100vh;*/
+    justify-content: center;
 }
 .body div {
-    width: 100%;
+    width: 100vw;
     display: contents;
+}
+
+
+.build .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    width: 20rem;
+}
+
+.build label {
+    margin-bottom: 0;
 }

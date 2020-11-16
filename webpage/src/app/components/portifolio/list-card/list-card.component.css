@@ -1,51 +1,109 @@
 .projetcs {
-    display: grid;
-    grid-template-columns: 0fr 0fr 0fr;
-    column-gap: 2%;
-    row-gap: 2%;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr;
+  column-gap: 2%;
+  row-gap: 2%;
+  justify-content: center;
 }
 
 .image {
-    position: relative;
-    justify-content: center;
-    height: auto;
-    border-radius: 10%;
-    text-align: center;
-
+  position: relative;
+  justify-content: center;
+  height: auto;
+  border-radius: 10%;
+  text-align: center;
 }
 
 .image img {
-    width: 22rem;
-    height: 20rem;
-    border-radius: 10%;
+  width: 22rem;
+  height: 20rem;
+  border-radius: 10%;
 }
 
 .img__description {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(28, 182, 152, 0.60);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    margin-bottom: 4%;
-    border-radius: 10%;
-    justify-content: center;
-    display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(28, 182, 152, 0.60);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  margin-bottom: 4%;
+  border-radius: 10%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.image:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description label {
+  justify-content: center;
+}
+
+body {
+margin: 0;
+}
+
+h1,
+label {
+width: 100%;
+}
+
+h1 {
+  text-align: left;
+  animation: right_to_left 3s ease;
+}
+
+label {
+  text-align: right;
+  animation: left_to_right 3s ease;
+}
+
+@keyframes right_to_left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes left_to_right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .projetcs {
+    display: grid;
+    grid-template-columns: 50% 50%;
     flex-direction: column;
+
+  }
+
+  .image {
+    padding: 2%;
+  }
   
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
+  .image img {
+    width: 13rem;
+    height: 12rem;
   }
 
   .image:hover .img__description {
-    visibility: visible;
-    opacity: 1;
+    padding: 5%;
   }
-
-.img__description label {
-    justify-content: center;
 }

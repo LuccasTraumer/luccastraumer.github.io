@@ -71,10 +71,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     Constantes.iconGithub = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].iconSocialMediaGithub;
     Constantes.iconLinkedin = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].iconSocialMediaLinkedin;
     Constantes.linkFacebook = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaFacebook;
-    Constantes.linkInstagram = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaFacebook;
-    Constantes.linkTwitter = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaFacebook;
-    Constantes.linkGithub = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaFacebook;
-    Constantes.linkLinkedin = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaFacebook;
+    Constantes.linkInstagram = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaInstagram;
+    Constantes.linkTwitter = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaTwitter;
+    Constantes.linkGithub = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaGithub;
+    Constantes.linkLinkedin = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkSocialMediaLinkedin;
     Constantes.myPersonalImage = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].linkMyPersonalImage;
     Constantes.backgroundImageHead = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].backgroundImageHead;
     Constantes.iconInfo = src_environments_enviroment_dev__WEBPACK_IMPORTED_MODULE_0__["environment"].iconInfo;
@@ -209,7 +209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [_components_apresentacao_apresentacao_component__WEBPACK_IMPORTED_MODULE_1__["ApresentacaoComponent"]],
-      styles: [".container-fluid[_ngcontent-%COMP%] {\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: 'Righteous', cursive;\r\n    color: #fff;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0lBQ1YsU0FBUztJQUNULGlDQUFpQztJQUNqQyxXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXItZmx1aWQge1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIGZvbnQtZmFtaWx5OiAnUmlnaHRlb3VzJywgY3Vyc2l2ZTtcclxuICAgIGNvbG9yOiAjZmZmO1xyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxufSJdfQ== */"]
+      styles: [".container-fluid[_ngcontent-%COMP%] {\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: 'Righteous', cursive;\r\n    color: #fff;\r\n    height: 100vh;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0lBQ1YsU0FBUztJQUNULGlDQUFpQztJQUNqQyxXQUFXO0lBQ1gsYUFBYTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lci1mbHVpZCB7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgZm9udC1mYW1pbHk6ICdSaWdodGVvdXMnLCBjdXJzaXZlO1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -482,9 +482,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
       type: AboutComponent,
       selectors: [["app-about"]],
-      decls: 13,
+      decls: 21,
       vars: 1,
-      consts: [[1, "container-fluid"], [1, "title"], ["alt", "icon image info", "srcset", "", 3, "src"], [1, "font-size1-5rem"], [1, "text"], [1, "personal-data"], [1, "title", "font-size1-5rem"], [1, "lists"]],
+      consts: [[1, "container-fluid"], [1, "title"], ["alt", "icon image info", "srcset", "", 3, "src"], [1, "font-size1-5rem"], [1, "text"], [1, "font-green"], ["href", "https://cotuca.unicamp.br/", "target", "_blank", 1, "font-white"], ["href", "https://br.ciandt.com/", "target", "_blank", 1, "font-white"], [1, "personal-data"], [1, "title", "font-size1-5rem"], [1, "lists"]],
       template: function AboutComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -503,23 +503,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, " Hello! I'm Lucas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur, obcaecati molestias, cumque at placeat, vel dolorum esse fuga magnam praesentium error nam ab suscipit deserunt blanditiis cum ratione nisi explicabo perspiciatis porro reiciendis dolores laudantium. Cumque fugiat accusamus blanditiis amet. Nihil suscipit beatae animi fugit amet adipisci, nobis pariatur? ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "span", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Hello! I'm Lucas.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, " IT Student and monitor at the Technical High School of Campinas. ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "label", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "a", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Personal Details");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "@cotuca");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, " and Software Engineer Intern at ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "app-personal-data-list");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "a", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](12, "app-list-hobbies");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, "@ciandt");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, ". I have a little experiencia with angular 8 and Spring boot. I like sou much what a do but in parallel I have studying about develop mobile native but don't have experience professional yet but is a thing who I want learn more Android and IOS native. I have a lucky to had greate professionals close to me in my job and this make easily the things to me. So thanks every one. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "label", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17, "Personal Details");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](19, "app-personal-data-list");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](20, "app-list-hobbies");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -745,7 +767,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-personal-data-list"]],
       decls: 24,
       vars: 0,
-      consts: [[1, "data-colums"], [1, "font-green"], ["href", "http://github.io/luccastraumer", "target", "_blank", "rel", "noopener noreferrer", 1, ""], [1, "bg-green"]],
+      consts: [[1, "data-colums"], [1, "font-green"], ["href", "http://github.io/luccastraumer", "target", "_blank", "rel", "noopener noreferrer", 1, ""], [1, "bg-green", "contant"]],
       template: function PersonalDataListComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -825,7 +847,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       },
-      styles: [".data-colums[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\r\n    list-style: none;\r\n    display: grid;\r\n    grid-template-columns: 0.6fr 0.2fr;\r\n    padding: 2%;\r\n    justify-content: center;\r\n\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    position: relative;\r\n    justify-content: flex-start;\r\n    width: auto;\r\n}\r\n\r\nli[_ngcontent-%COMP%]   strong[_ngcontent-%COMP%] {\r\n    padding-right: 5%;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\r\n    color: #fff;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    \r\n}\r\n\r\nspan[_ngcontent-%COMP%] {\r\n    text-align: center;\r\n    width: 6rem;\r\n    border-radius: 5%;\r\n}\r\n\r\n@media only screen and (min-width: 768px) {\r\n    .data-colums[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\r\n        text-align: start;\r\n        grid-template-columns: 0.2fr 0.2fr;\r\n    }\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hYm91dC9wZXJzb25hbC1kYXRhLWxpc3QvcGVyc29uYWwtZGF0YS1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsYUFBYTtJQUNiLGtDQUFrQztJQUNsQyxXQUFXO0lBQ1gsdUJBQXVCOztBQUUzQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsMkJBQTJCO0lBQzNCLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGFBQWE7O0FBRWpCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxpQkFBaUI7QUFDckI7O0FBRUE7SUFDSTtRQUNJLGlCQUFpQjtRQUNqQixrQ0FBa0M7SUFDdEM7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYWJvdXQvcGVyc29uYWwtZGF0YS1saXN0L3BlcnNvbmFsLWRhdGEtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRhdGEtY29sdW1zIHVsIHtcclxuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbiAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAwLjZmciAwLjJmcjtcclxuICAgIHBhZGRpbmc6IDIlO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcblxyXG59XHJcblxyXG51bCBsaSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xyXG4gICAgd2lkdGg6IGF1dG87XHJcbn1cclxuXHJcbmxpIHN0cm9uZyB7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiA1JTtcclxufVxyXG5cclxudWwgYSB7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxufVxyXG5cclxudWwgZGl2IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBcclxufVxyXG5cclxuc3BhbiB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogNnJlbTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUlO1xyXG59XHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgICAuZGF0YS1jb2x1bXMgdWwge1xyXG4gICAgICAgIHRleHQtYWxpZ246IHN0YXJ0O1xyXG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMC4yZnIgMC4yZnI7XHJcbiAgICB9XHJcbn0iXX0= */"]
+      styles: [".data-colums[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\r\n    list-style: none;\r\n    display: grid;\r\n    grid-template-columns: 0.6fr 0.2fr;\r\n    padding: 2%;\r\n    justify-content: center;\r\n\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    position: relative;\r\n    justify-content: flex-start;\r\n    width: auto;\r\n}\r\n\r\nli[_ngcontent-%COMP%]   strong[_ngcontent-%COMP%] {\r\n    padding-right: 5%;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\r\n    color: #fff;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    \r\n}\r\n\r\n@media only screen and (min-width: 768px) {\r\n    .data-colums[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\r\n        text-align: start;\r\n        grid-template-columns: 0.2fr 0.2fr;\r\n    }\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hYm91dC9wZXJzb25hbC1kYXRhLWxpc3QvcGVyc29uYWwtZGF0YS1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsYUFBYTtJQUNiLGtDQUFrQztJQUNsQyxXQUFXO0lBQ1gsdUJBQXVCOztBQUUzQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsMkJBQTJCO0lBQzNCLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGFBQWE7O0FBRWpCOztBQUdBO0lBQ0k7UUFDSSxpQkFBaUI7UUFDakIsa0NBQWtDO0lBQ3RDO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Fib3V0L3BlcnNvbmFsLWRhdGEtbGlzdC9wZXJzb25hbC1kYXRhLWxpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kYXRhLWNvbHVtcyB1bCB7XHJcbiAgICBsaXN0LXN0eWxlOiBub25lO1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMC42ZnIgMC4yZnI7XHJcbiAgICBwYWRkaW5nOiAyJTtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG5cclxufVxyXG5cclxudWwgbGkge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG59XHJcblxyXG5saSBzdHJvbmcge1xyXG4gICAgcGFkZGluZy1yaWdodDogNSU7XHJcbn1cclxuXHJcbnVsIGEge1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbnVsIGRpdiB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgXHJcbn1cclxuXHJcblxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgICAuZGF0YS1jb2x1bXMgdWwge1xyXG4gICAgICAgIHRleHQtYWxpZ246IHN0YXJ0O1xyXG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMC4yZnIgMC4yZnI7XHJcbiAgICB9XHJcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -1433,8 +1455,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: IconsSocialMediasComponent,
       selectors: [["app-icons-social-medias"]],
       decls: 11,
-      vars: 6,
-      consts: [["target", "_blank", 1, "card-link", 3, "href"], ["alt", "icone Facebook", 3, "src"], ["href", "linkInstagram()", "target", "_blank", 1, "card-link"], ["alt", "icone Instagram", 3, "src"], ["href", "linkTwitter()", "target", "_blank", 1, "card-link"], ["alt", "icone Twitter", 3, "src"], ["href", "linkLinkedin()", "target", "_blank", 1, "card-link"], ["alt", "icone Linkedin", 3, "src"], ["href", "linkGithub()", "target", "_blank", 1, "card-link"], ["alt", "icone Github", 3, "src"]],
+      vars: 10,
+      consts: [["target", "_blank", 1, "card-link", 3, "href"], ["alt", "icone Facebook", 3, "src"], ["alt", "icone Instagram", 3, "src"], ["alt", "icone Twitter", 3, "src"], ["alt", "icone Linkedin", 3, "src"], ["alt", "icone Github", 3, "src"]],
       template: function IconsSocialMediasComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section");
@@ -1445,27 +1467,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 3);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "img", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "img", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "img", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "a", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "img", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "img", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "img", 5);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1481,19 +1503,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.iconFacebook(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", ctx.linkInstagram(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.iconInstagram(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", ctx.linkTwitter(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.iconTwitter(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", ctx.linkLinkedin(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.iconLinkedin(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", ctx.linkGithub(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.iconGithub(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
         }

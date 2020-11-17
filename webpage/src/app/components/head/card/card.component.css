@@ -4,11 +4,10 @@
     text-align: center;
     border-radius: 5%;
     width: 25rem;
-    height: 28rem;
 }
 
 .card-body {
-    padding-top: 45%;
+    padding-top: 50%;
 }
 
 .card-title {

@@ -9,10 +9,10 @@ export class Constantes {
     public static readonly iconLinkedin = environment.iconSocialMediaLinkedin;
 
     public static readonly linkFacebook = environment.linkSocialMediaFacebook;
-    public static readonly linkInstagram = environment.linkSocialMediaFacebook;
-    public static readonly linkTwitter = environment.linkSocialMediaFacebook;
-    public static readonly linkGithub = environment.linkSocialMediaFacebook;
-    public static readonly linkLinkedin = environment.linkSocialMediaFacebook;
+    public static readonly linkInstagram = environment.linkSocialMediaInstagram;
+    public static readonly linkTwitter = environment.linkSocialMediaTwitter;
+    public static readonly linkGithub = environment.linkSocialMediaGithub;
+    public static readonly linkLinkedin = environment.linkSocialMediaLinkedin;
 
     public static readonly myPersonalImage = environment.linkMyPersonalImage;
 

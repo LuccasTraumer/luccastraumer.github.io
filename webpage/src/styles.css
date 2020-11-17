@@ -28,6 +28,10 @@
     color: #1CB698;
 }
 
+.font-white {
+    color: #ffffff;
+}
+
 /*Font Family Work Sans*/
 .font-fam-Works {
     font-family: 'Work Sans', sans-serif;
@@ -40,4 +44,12 @@
 
 .letter-spacing3 {
     letter-spacing: 3px;
+}
+
+/*  SPAN BACKGROUND */
+
+.contant {
+    text-align: center;
+    width: 6rem;
+    border-radius: 5%;
 }

@@ -20,6 +20,7 @@ import { PersonalDataListComponent } from './components/about/personal-data-list
 import { ListHobbiesComponent } from './components/about/list-hobbies/list-hobbies.component';
 import { TimelineComponent } from './components/resume/timeline/timeline.component';
 import { ListCardComponent } from './components/portifolio/list-card/list-card.component';
+import { BuildingComponent } from './components/building/building.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ListCardComponent } from './components/portifolio/list-card/list-card.c
     PersonalDataListComponent,
     ListHobbiesComponent,
     TimelineComponent,
-    ListCardComponent
+    ListCardComponent,
+    BuildingComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
 }
 
 .card-body {
-    padding-top: 50%;
+    padding-top: 75%;
 }
 
 .card-title {
@@ -21,4 +21,3 @@
     font-family: sans-serif, 'Courier New', Courier, monospace;
     font-style: initial;
 }
-

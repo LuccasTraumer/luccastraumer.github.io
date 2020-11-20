@@ -2,7 +2,7 @@
     background-color: #252a2e;
     padding: 0%;
     margin: 5% 0 0 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .container-fluid app-timeline {

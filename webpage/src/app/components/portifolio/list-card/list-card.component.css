@@ -107,3 +107,68 @@ label {
     padding: 5%;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  .projetcs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .img__description {
+    right: 3%;
+    left: 3%;
+    bottom: 1.4%;
+    top: 2%;
+  }
+
+  .image img {
+    width: 28rem;
+    height: 27rem;
+  }
+}
+
+@media (mix-width:1024px) and (max-width: 768px) {
+  .img__description {
+    right: 13.1%;
+    left: 13.1%;
+    bottom: 1%;
+    top: 2.6%;
+  }
+
+  .image img {
+    width: 25rem;
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .img__description {
+    right: 13.1%;
+    left: 13.1%;
+    bottom: 1%;
+    top: 2.6%;
+  }
+
+  .image img {
+    width: 25rem;
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img__description {
+    right: 16.3%;
+    left: 16.3%;
+    bottom: 2%;
+    top: 2%;
+  }
+
+  .image img {
+    width: 20rem;
+    height: 18rem;
+  }
+}
+
+

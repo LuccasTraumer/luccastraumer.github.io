@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constantes } from '../../../Utils/Constantes';
 
 @Component({
   selector: 'app-portifolio',
@@ -10,6 +11,10 @@ export class PortifolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getIconPort() {
+    return Constantes.iconPortfolio;
   }
 
 }

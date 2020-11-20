@@ -19,5 +19,6 @@ export class Constantes {
     public static readonly backgroundImageHead = environment.backgroundImageHead;
 
     public static readonly iconInfo = environment.iconInfo;
+    public static readonly iconPortfolio = environment.iconPortfolio;
 
 }

@@ -30,3 +30,44 @@
     font-weight: lighter;
     padding: 5%;
 }
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: .8em 4em;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+    width: 50%;
+}
+
+.button::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background: #1CB698;
+    transition: transform .3s;
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.button01::before {
+    transform-origin: right top;
+    transform: scale(0, 1);
+}
+
+.button01:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}

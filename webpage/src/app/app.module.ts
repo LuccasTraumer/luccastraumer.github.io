@@ -22,6 +22,7 @@ import { TimelineComponent } from './components/resume/timeline/timeline.compone
 import { ListCardComponent } from './components/portifolio/list-card/list-card.component';
 import { BuildingComponent } from './components/building/building.component';
 import { InputDataComponent } from './components/contact/input-data/input-data.component';
+import { MapsComponent } from './components/contact/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { InputDataComponent } from './components/contact/input-data/input-data.c
     TimelineComponent,
     ListCardComponent,
     BuildingComponent,
-    InputDataComponent
+    InputDataComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,

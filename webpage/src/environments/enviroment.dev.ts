@@ -19,9 +19,10 @@ export const environment = {
     /** LINKS IMAGES */
     linkMyPersonalImage: 'https://avatars3.githubusercontent.com/u/16438051?s=400&u=fa0224315b18ada8435edf9ee06f2022f726bb6f&v=4',
     backgroundImageHead: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/developer-working-on-his-project.jpg',
+    backgroundimageContact: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/dev/webpage/src/assets/contact_bg.png',
     iconInfo: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/2a1c89fad1e8a4710cb38c81fce09747de9bc986/webpage/src/assets/info.svg',
     iconPortfolio: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/b2e1bd71be97e847ef9fbb1ff3a927a678d1ef64/webpage/src/assets/icons/portfolio.svg',
-    backgroundimageContact: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/dev/webpage/src/assets/contact_bg.png',
+    iconContact: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/7da0a0e6816fcffc3e0a9db8932b8b3606b505cb/webpage/src/assets/icons/email-2537244.svg',
 
     /*LINKS REPOSITORYS */
     linkRepRemadeRandomsWebSites: 'https://github.com/LuccasTraumer/remade_random_websites',

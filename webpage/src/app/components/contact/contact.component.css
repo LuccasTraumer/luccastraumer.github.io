@@ -4,9 +4,16 @@
     width: 100%;
     height: 90vh;
     overflow: hidden;
+    margin-top: 2%;
 }
 
 .overview {
+    position: relative;
+    z-index: 1;
+}
+
+.back-image {
+    width: 90%;
     position: relative;
     z-index: 1;
 }
@@ -22,8 +29,13 @@
 .head-contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.head-contact .icon {
+    width: 8rem;
 }
 
 .contacting {

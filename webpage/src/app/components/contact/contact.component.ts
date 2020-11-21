@@ -17,4 +17,8 @@ export class ContactComponent implements OnInit {
   getBgImage() {
     return Constantes.backgroundImageContact;
   }
+
+  getIconContact() {
+    return Constantes.iconContact;
+  }
 }

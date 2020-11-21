@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
   selector: 'app-contact',
@@ -12,4 +13,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  getBgImage() {
+    return Constantes.backgroundImageContact;
+  }
 }

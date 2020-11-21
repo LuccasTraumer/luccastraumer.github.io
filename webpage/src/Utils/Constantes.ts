@@ -17,6 +17,7 @@ export class Constantes {
     public static readonly myPersonalImage = environment.linkMyPersonalImage;
 
     public static readonly backgroundImageHead = environment.backgroundImageHead;
+    public static readonly backgroundImageContact = environment.backgroundimageContact;
 
     public static readonly iconInfo = environment.iconInfo;
     public static readonly iconPortfolio = environment.iconPortfolio;

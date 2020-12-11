@@ -23,6 +23,9 @@ import { ListCardComponent } from './components/portifolio/list-card/list-card.c
 import { BuildingComponent } from './components/building/building.component';
 import { InputDataComponent } from './components/contact/input-data/input-data.component';
 import { MapsComponent } from './components/contact/maps/maps.component';
+import { AgmCoreModule } from '@agm/core';
+
+
 
 @NgModule({
   declarations: [
@@ -50,9 +53,12 @@ import { MapsComponent } from './components/contact/maps/maps.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD1-OhZysB1lIdI-QtN_mYF7rHj8KuO1Qc'
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

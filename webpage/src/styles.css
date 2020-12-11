@@ -53,3 +53,7 @@
     width: 6rem;
     border-radius: 5%;
 }
+
+agm-map {
+    height: 300px;
+}

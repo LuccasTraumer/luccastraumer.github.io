@@ -1,1 +1,3 @@
-<label for="">GOOGLE MAPS HERE</label>
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>

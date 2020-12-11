@@ -52,3 +52,19 @@
 .contacting .maps {
     width: 50%;
 }
+
+@media only screen and (max-width: 768px) {
+    .contacting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contacting .input {
+        width: 50%;
+    }
+
+    .contacting .maps {
+        width: 50%;
+    }
+}

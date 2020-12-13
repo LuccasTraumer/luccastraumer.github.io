@@ -23,7 +23,7 @@ export const environment = {
     iconInfo: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/2a1c89fad1e8a4710cb38c81fce09747de9bc986/webpage/src/assets/info.svg',
     iconPortfolio: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/b2e1bd71be97e847ef9fbb1ff3a927a678d1ef64/webpage/src/assets/icons/portfolio.svg',
     iconContact: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/7da0a0e6816fcffc3e0a9db8932b8b3606b505cb/webpage/src/assets/icons/email-2537244.svg',
-    iconPageNotFound: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/2fb8146aacc3e55249fb0d05e74257f60a2ce99c/webpage/src/assets/icons/not-found.svg',
+    iconPageNotFound: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/0072b70ae0eada2bbf1c63a90a475c379d819f1b/webpage/src/assets/icons/not-found.svg',
 
     /*LINKS REPOSITORYS */
     linkRepRemadeRandomsWebSites: 'https://github.com/LuccasTraumer/remade_random_websites',

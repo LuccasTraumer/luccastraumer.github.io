@@ -9,17 +9,25 @@
     flex-direction: column;
 }
 
-.container-fluid .img img {
-    width: 50rem;
-    border-radius: 50%;
-    background-color: aqua;   
+.container-fluid .img {
+    margin-top: 5%;
+    border-radius: 30%;
+    transition: 0.3s;
+}
+
+.container-fluid .img:hover {
+    background-color: #252a2e;
 }
 
 .container-fluid .img img {
-    width: 50rem;
-    
+    width: 30rem;
 }
 
 .container-fluid .text {
     font-size: 8rem;
+    transition: 0.3s;
+}
+
+.container-fluid .text:hover {
+    color: #1CB698;
 }

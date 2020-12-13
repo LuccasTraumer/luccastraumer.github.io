@@ -1,15 +1,24 @@
-.container {
+.container-fluid {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
 }
 
-.container app-social-medias-icons {
+.container-fluid app-social-medias-icons {
     padding-top: 2%;
     width: 20rem;
 }
 
-.container .text {
+.container-fluid .text {
     padding-top: 1%;
+}
+
+@media only screen and (max-width: 425px) {
+    .container-fluid {
+        width: 150%;
+    }
 }

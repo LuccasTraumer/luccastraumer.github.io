@@ -14,7 +14,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/head/card/card.component';
 import { RoundedImageComponent } from './components/head/rounded-image/rounded-image.component';
-import { IconsSocialMediasComponent } from './components/head/card/icons-social-medias/icons-social-medias.component';
 import { ApresentacaoImageDataComponent } from './components/head/apresentacao-image-data/apresentacao-image-data.component';
 import { PersonalDataListComponent } from './components/about/personal-data-list/personal-data-list.component';
 import { ListHobbiesComponent } from './components/about/list-hobbies/list-hobbies.component';
@@ -24,6 +23,7 @@ import { BuildingComponent } from './components/building/building.component';
 import { InputDataComponent } from './components/contact/input-data/input-data.component';
 import { MapsComponent } from './components/contact/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
+import { SocialMediasIconsComponent } from './components/social-medias-icons/social-medias-icons.component';
 
 
 
@@ -41,7 +41,6 @@ import { AgmCoreModule } from '@agm/core';
     FooterComponent,
     CardComponent,
     RoundedImageComponent,
-    IconsSocialMediasComponent,
     ApresentacaoImageDataComponent,
     PersonalDataListComponent,
     ListHobbiesComponent,
@@ -49,13 +48,14 @@ import { AgmCoreModule } from '@agm/core';
     ListCardComponent,
     BuildingComponent,
     InputDataComponent,
-    MapsComponent
+    MapsComponent,
+    SocialMediasIconsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyA9pWS6ELL5zjNttJjuG2779wyZzcAPzMM'
     })
   ],
   providers: [],

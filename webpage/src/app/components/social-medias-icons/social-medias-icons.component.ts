@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Constantes } from '../../../../../Utils/Constantes';
+import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
-  selector: 'app-icons-social-medias',
-  templateUrl: './icons-social-medias.component.html',
-  styleUrls: ['./icons-social-medias.component.css']
+  selector: 'app-social-medias-icons',
+  templateUrl: './social-medias-icons.component.html',
+  styleUrls: ['./social-medias-icons.component.css']
 })
-export class IconsSocialMediasComponent implements OnInit {
+export class SocialMediasIconsComponent implements OnInit {
 
   constructor() { }
 

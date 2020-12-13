@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconsSocialMediasComponent } from './icons-social-medias.component';
+import { SocialMediasIconsComponent } from './social-medias-icons.component';
 
-describe('IconsSocialMediasComponent', () => {
-  let component: IconsSocialMediasComponent;
-  let fixture: ComponentFixture<IconsSocialMediasComponent>;
+describe('SocialMediasIconsComponent', () => {
+  let component: SocialMediasIconsComponent;
+  let fixture: ComponentFixture<SocialMediasIconsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconsSocialMediasComponent ]
+      declarations: [ SocialMediasIconsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconsSocialMediasComponent);
+    fixture = TestBed.createComponent(SocialMediasIconsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

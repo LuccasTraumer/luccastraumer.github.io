@@ -1,4 +1,10 @@
 .container {
-    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
+}
+
+.icons app-social-medias-icons {
+    padding-bottom: 0%;
 }

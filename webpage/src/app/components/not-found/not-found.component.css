@@ -3,10 +3,13 @@
     color: #fff;
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .container-fluid .img {
@@ -24,10 +27,27 @@
 }
 
 .container-fluid .text {
-    font-size: 8rem;
+    font-size: 7rem;
     transition: 0.3s;
 }
 
 .container-fluid .text:hover {
     color: #1CB698;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container-fluid {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-fluid .img img{
+        width: 15rem;
+    }
+
+    .container-fluid .text {
+        font-size: 2.5rem;
+        transition: 0.3s;
+    }
 }

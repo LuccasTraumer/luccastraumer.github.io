@@ -2,37 +2,13 @@ function _get(target, property, receiver) { if (typeof Reflect !== "undefined" &
 
 function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest(); }
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
 function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
 
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -48,9 +24,7874 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendor"], {
+  /***/
+  "./node_modules/@agm/core/__ivy_ngcc__/fesm2015/agm-core.js":
+  /*!******************************************************************!*\
+    !*** ./node_modules/@agm/core/__ivy_ngcc__/fesm2015/agm-core.js ***!
+    \******************************************************************/
+
+  /*! exports provided: AgmBicyclingLayer, AgmCircle, AgmCoreModule, AgmDataLayer, AgmFitBounds, AgmGeocoder, AgmInfoWindow, AgmKmlLayer, AgmMap, AgmMarker, AgmPolygon, AgmPolyline, AgmPolylineIcon, AgmPolylinePoint, AgmRectangle, AgmTransitLayer, CircleManager, ControlPosition, DataLayerManager, FitBoundsAccessor, GeocoderLocationType, GeocoderStatus, GoogleMapsAPIWrapper, GoogleMapsScriptProtocol, InfoWindowManager, KmlLayerManager, LAZY_MAPS_API_CONFIG, LayerManager, LazyMapsAPILoader, MapTypeId, MapsAPILoader, MarkerManager, NoOpMapsAPILoader, PolygonManager, PolylineManager, RectangleManager, ScaleControlStyle, ZoomControlStyle, ɵa, ɵb, ɵc, ɵd, ɵe */
+
+  /***/
+  function node_modulesAgmCore__ivy_ngcc__Fesm2015AgmCoreJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmBicyclingLayer", function () {
+      return AgmBicyclingLayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmCircle", function () {
+      return AgmCircle;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmCoreModule", function () {
+      return AgmCoreModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmDataLayer", function () {
+      return AgmDataLayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmFitBounds", function () {
+      return AgmFitBounds;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmGeocoder", function () {
+      return AgmGeocoder;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmInfoWindow", function () {
+      return AgmInfoWindow;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmKmlLayer", function () {
+      return AgmKmlLayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmMap", function () {
+      return AgmMap;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmMarker", function () {
+      return AgmMarker;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmPolygon", function () {
+      return AgmPolygon;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmPolyline", function () {
+      return AgmPolyline;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmPolylineIcon", function () {
+      return AgmPolylineIcon;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmPolylinePoint", function () {
+      return AgmPolylinePoint;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmRectangle", function () {
+      return AgmRectangle;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AgmTransitLayer", function () {
+      return AgmTransitLayer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "CircleManager", function () {
+      return CircleManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ControlPosition", function () {
+      return ControlPosition;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DataLayerManager", function () {
+      return DataLayerManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FitBoundsAccessor", function () {
+      return FitBoundsAccessor;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GeocoderLocationType", function () {
+      return GeocoderLocationType;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GeocoderStatus", function () {
+      return GeocoderStatus;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GoogleMapsAPIWrapper", function () {
+      return GoogleMapsAPIWrapper;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GoogleMapsScriptProtocol", function () {
+      return GoogleMapsScriptProtocol;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "InfoWindowManager", function () {
+      return InfoWindowManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "KmlLayerManager", function () {
+      return KmlLayerManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "LAZY_MAPS_API_CONFIG", function () {
+      return LAZY_MAPS_API_CONFIG;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "LayerManager", function () {
+      return LayerManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "LazyMapsAPILoader", function () {
+      return LazyMapsAPILoader;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MapTypeId", function () {
+      return MapTypeId;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MapsAPILoader", function () {
+      return MapsAPILoader;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MarkerManager", function () {
+      return MarkerManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NoOpMapsAPILoader", function () {
+      return NoOpMapsAPILoader;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PolygonManager", function () {
+      return PolygonManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PolylineManager", function () {
+      return PolylineManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RectangleManager", function () {
+      return RectangleManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ScaleControlStyle", function () {
+      return ScaleControlStyle;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ZoomControlStyle", function () {
+      return ZoomControlStyle;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵa", function () {
+      return FitBoundsService;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵb", function () {
+      return coreDirectives;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵc", function () {
+      return WindowRef;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵd", function () {
+      return DocumentRef;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵe", function () {
+      return BROWSER_GLOBALS_PROVIDERS;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
+    var _c0 = ["*"];
+
+    var MapsAPILoader = function MapsAPILoader() {
+      _classCallCheck(this, MapsAPILoader);
+    };
+
+    MapsAPILoader.ɵfac = function MapsAPILoader_Factory(t) {
+      return new (t || MapsAPILoader)();
+    };
+
+    MapsAPILoader.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: MapsAPILoader,
+      factory: MapsAPILoader.ɵfac
+    });
+    /**
+     * Wrapper class that handles the communication with the Google Maps Javascript
+     * API v3
+     */
+
+    var GoogleMapsAPIWrapper = /*#__PURE__*/function () {
+      function GoogleMapsAPIWrapper(_loader, _zone) {
+        var _this = this;
+
+        _classCallCheck(this, GoogleMapsAPIWrapper);
+
+        this._loader = _loader;
+        this._zone = _zone;
+        this._map = new Promise(function (resolve) {
+          _this._mapResolver = resolve;
+        });
+      }
+
+      _createClass2(GoogleMapsAPIWrapper, [{
+        key: "createMap",
+        value: function createMap(el, mapOptions) {
+          var _this2 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this2._loader.load().then(function () {
+              var map = new google.maps.Map(el, mapOptions);
+
+              _this2._mapResolver(map);
+
+              return;
+            });
+          });
+        }
+      }, {
+        key: "setMapOptions",
+        value: function setMapOptions(options) {
+          var _this3 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            _this3._map.then(function (m) {
+              m.setOptions(options);
+            });
+          });
+        }
+        /**
+         * Creates a google map marker with the map context
+         */
+
+      }, {
+        key: "createMarker",
+        value: function createMarker() {
+          var _this4 = this;
+
+          var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          var addToMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+          return this._zone.runOutsideAngular(function () {
+            return _this4._map.then(function (map) {
+              if (addToMap) {
+                options.map = map;
+              }
+
+              return new google.maps.Marker(options);
+            });
+          });
+        }
+      }, {
+        key: "createInfoWindow",
+        value: function createInfoWindow(options) {
+          var _this5 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this5._map.then(function () {
+              return new google.maps.InfoWindow(options);
+            });
+          });
+        }
+        /**
+         * Creates a google.map.Circle for the current map.
+         */
+
+      }, {
+        key: "createCircle",
+        value: function createCircle(options) {
+          var _this6 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this6._map.then(function (map) {
+              if (typeof options.strokePosition === 'string') {
+                options.strokePosition = google.maps.StrokePosition[options.strokePosition];
+              }
+
+              options.map = map;
+              return new google.maps.Circle(options);
+            });
+          });
+        }
+        /**
+         * Creates a google.map.Rectangle for the current map.
+         */
+
+      }, {
+        key: "createRectangle",
+        value: function createRectangle(options) {
+          var _this7 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this7._map.then(function (map) {
+              options.map = map;
+              return new google.maps.Rectangle(options);
+            });
+          });
+        }
+      }, {
+        key: "createPolyline",
+        value: function createPolyline(options) {
+          var _this8 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this8.getNativeMap().then(function (map) {
+              var line = new google.maps.Polyline(options);
+              line.setMap(map);
+              return line;
+            });
+          });
+        }
+      }, {
+        key: "createPolygon",
+        value: function createPolygon(options) {
+          var _this9 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this9.getNativeMap().then(function (map) {
+              var polygon = new google.maps.Polygon(options);
+              polygon.setMap(map);
+              return polygon;
+            });
+          });
+        }
+        /**
+         * Creates a new google.map.Data layer for the current map
+         */
+
+      }, {
+        key: "createDataLayer",
+        value: function createDataLayer(options) {
+          var _this10 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this10._map.then(function (m) {
+              var data = new google.maps.Data(options);
+              data.setMap(m);
+              return data;
+            });
+          });
+        }
+        /**
+         * Creates a TransitLayer instance for a map
+         * @param {TransitLayerOptions} options - used for setting layer options
+         * @returns {Promise<TransitLayer>} a new transit layer object
+         */
+
+      }, {
+        key: "createTransitLayer",
+        value: function createTransitLayer(options) {
+          var _this11 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this11._map.then(function (map) {
+              var newLayer = new google.maps.TransitLayer();
+              newLayer.setMap(options.visible ? map : null);
+              return newLayer;
+            });
+          });
+        }
+        /**
+         * Creates a BicyclingLayer instance for a map
+         * @param {BicyclingLayerOptions} options - used for setting layer options
+         * @returns {Promise<BicyclingLayer>} a new bicycling layer object
+         */
+
+      }, {
+        key: "createBicyclingLayer",
+        value: function createBicyclingLayer(options) {
+          var _this12 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this12._map.then(function (map) {
+              var newLayer = new google.maps.BicyclingLayer();
+              newLayer.setMap(options.visible ? map : null);
+              return newLayer;
+            });
+          });
+        }
+        /**
+         * Determines if given coordinates are insite a Polygon path.
+         */
+
+      }, {
+        key: "containsLocation",
+        value: function containsLocation(latLng, polygon) {
+          return google.maps.geometry.poly.containsLocation(latLng, polygon);
+        }
+      }, {
+        key: "subscribeToMapEvent",
+        value: function subscribeToMapEvent(eventName) {
+          var _this13 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this13._map.then(function (m) {
+              m.addListener(eventName, function (arg) {
+                _this13._zone.run(function () {
+                  return observer.next(arg);
+                });
+              });
+            });
+          });
+        }
+      }, {
+        key: "clearInstanceListeners",
+        value: function clearInstanceListeners() {
+          var _this14 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            _this14._map.then(function (map) {
+              google.maps.event.clearInstanceListeners(map);
+            });
+          });
+        }
+      }, {
+        key: "setCenter",
+        value: function setCenter(latLng) {
+          var _this15 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this15._map.then(function (map) {
+              return map.setCenter(latLng);
+            });
+          });
+        }
+      }, {
+        key: "getZoom",
+        value: function getZoom() {
+          var _this16 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this16._map.then(function (map) {
+              return map.getZoom();
+            });
+          });
+        }
+      }, {
+        key: "getBounds",
+        value: function getBounds() {
+          var _this17 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this17._map.then(function (map) {
+              return map.getBounds();
+            });
+          });
+        }
+      }, {
+        key: "getMapTypeId",
+        value: function getMapTypeId() {
+          var _this18 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this18._map.then(function (map) {
+              return map.getMapTypeId();
+            });
+          });
+        }
+      }, {
+        key: "setZoom",
+        value: function setZoom(zoom) {
+          var _this19 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this19._map.then(function (map) {
+              return map.setZoom(zoom);
+            });
+          });
+        }
+      }, {
+        key: "getCenter",
+        value: function getCenter() {
+          var _this20 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this20._map.then(function (map) {
+              return map.getCenter();
+            });
+          });
+        }
+      }, {
+        key: "panTo",
+        value: function panTo(latLng) {
+          var _this21 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this21._map.then(function (map) {
+              return map.panTo(latLng);
+            });
+          });
+        }
+      }, {
+        key: "panBy",
+        value: function panBy(x, y) {
+          var _this22 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this22._map.then(function (map) {
+              return map.panBy(x, y);
+            });
+          });
+        }
+      }, {
+        key: "fitBounds",
+        value: function fitBounds(latLng, padding) {
+          var _this23 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this23._map.then(function (map) {
+              return map.fitBounds(latLng, padding);
+            });
+          });
+        }
+      }, {
+        key: "panToBounds",
+        value: function panToBounds(latLng, padding) {
+          var _this24 = this;
+
+          return this._zone.runOutsideAngular(function () {
+            return _this24._map.then(function (map) {
+              return map.panToBounds(latLng, padding);
+            });
+          });
+        }
+        /**
+         * Returns the native Google Maps Map instance. Be careful when using this instance directly.
+         */
+
+      }, {
+        key: "getNativeMap",
+        value: function getNativeMap() {
+          return this._map;
+        }
+        /**
+         * Triggers the given event name on the map instance.
+         */
+
+      }, {
+        key: "triggerMapEvent",
+        value: function triggerMapEvent(eventName) {
+          return this._map.then(function (m) {
+            return google.maps.event.trigger(m, eventName);
+          });
+        }
+      }]);
+
+      return GoogleMapsAPIWrapper;
+    }();
+
+    GoogleMapsAPIWrapper.ɵfac = function GoogleMapsAPIWrapper_Factory(t) {
+      return new (t || GoogleMapsAPIWrapper)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](MapsAPILoader), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    GoogleMapsAPIWrapper.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: GoogleMapsAPIWrapper,
+      factory: GoogleMapsAPIWrapper.ɵfac
+    });
+
+    GoogleMapsAPIWrapper.ctorParameters = function () {
+      return [{
+        type: MapsAPILoader
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    GoogleMapsAPIWrapper = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [MapsAPILoader, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], GoogleMapsAPIWrapper);
+    /**
+     * This class manages Transit and Bicycling Layers for a Google Map instance.
+     */
+
+    var LayerManager = /*#__PURE__*/function () {
+      function LayerManager(_wrapper) {
+        _classCallCheck(this, LayerManager);
+
+        this._wrapper = _wrapper;
+        this._layers = new Map();
+      }
+      /**
+       * Adds a transit layer to a map instance.
+       * @param {AgmTransitLayer} layer - a TransitLayer object
+       * @param {TransitLayerOptions} options - TransitLayerOptions options
+       * @returns void
+       */
+
+
+      _createClass2(LayerManager, [{
+        key: "addTransitLayer",
+        value: function addTransitLayer(layer, options) {
+          var newLayer = this._wrapper.createTransitLayer(options);
+
+          this._layers.set(layer, newLayer);
+        }
+        /**
+         * Adds a bicycling layer to a map instance.
+         * @param {AgmBicyclingLayer} layer - a bicycling layer object
+         * @param {BicyclingLayerOptions} options - BicyclingLayer options
+         * @returns void
+         */
+
+      }, {
+        key: "addBicyclingLayer",
+        value: function addBicyclingLayer(layer, options) {
+          var newLayer = this._wrapper.createBicyclingLayer(options);
+
+          this._layers.set(layer, newLayer);
+        }
+        /**
+         * Deletes a map layer
+         * @param {AgmTransitLayer|AgmBicyclingLayer} layer - the layer to delete
+         * @returns  Promise<void>
+         */
+
+      }, {
+        key: "deleteLayer",
+        value: function deleteLayer(layer) {
+          var _this25 = this;
+
+          return this._layers.get(layer).then(function (currentLayer) {
+            currentLayer.setMap(null);
+
+            _this25._layers["delete"](layer);
+          });
+        }
+        /**
+         * Hide/Show a google map layer
+         * @param { AgmTransitLayer|AgmBicyclingLayer} layer - the layer to hide/show
+         * @param {TransitLayerOptions|BicyclingLayerOptions} options - used to set visibility of the layer
+         * @returns Promise<void>
+         */
+
+      }, {
+        key: "toggleLayerVisibility",
+        value: function toggleLayerVisibility(layer, options) {
+          var _this26 = this;
+
+          return this._layers.get(layer).then(function (currentLayer) {
+            if (!options.visible) {
+              currentLayer.setMap(null);
+              return;
+            } else {
+              return _this26._wrapper.getNativeMap().then(function (map) {
+                currentLayer.setMap(map);
+              });
+            }
+          });
+        }
+      }]);
+
+      return LayerManager;
+    }();
+
+    LayerManager.ɵfac = function LayerManager_Factory(t) {
+      return new (t || LayerManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper));
+    };
+
+    LayerManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: LayerManager,
+      factory: LayerManager.ɵfac
+    });
+
+    LayerManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }];
+    };
+
+    LayerManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper])], LayerManager);
+    var layerId = 0;
+    /*
+     * This directive adds a bicycling layer to a google map instance
+     * <agm-bicycling-layer [visible]="true|false"> <agm-bicycling-layer>
+     * */
+
+    var AgmBicyclingLayer = /*#__PURE__*/function () {
+      function AgmBicyclingLayer(_manager) {
+        _classCallCheck(this, AgmBicyclingLayer);
+
+        this._manager = _manager;
+        this._addedToManager = false;
+        this._id = (layerId++).toString();
+        /**
+         * Hide/show bicycling layer
+         */
+
+        this.visible = true;
+      }
+
+      _createClass2(AgmBicyclingLayer, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          if (this._addedToManager) {
+            return;
+          }
+
+          this._manager.addBicyclingLayer(this, {
+            visible: this.visible
+          });
+
+          this._addedToManager = true;
+        }
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._addedToManager) {
+            return;
+          }
+
+          if (changes['visible'] != null) {
+            this._manager.toggleLayerVisibility(this, {
+              visible: changes['visible'].currentValue
+            });
+          }
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          return "AgmBicyclingLayer-".concat(this._id.toString());
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._manager.deleteLayer(this);
+        }
+      }]);
+
+      return AgmBicyclingLayer;
+    }();
+
+    AgmBicyclingLayer.ɵfac = function AgmBicyclingLayer_Factory(t) {
+      return new (t || AgmBicyclingLayer)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](LayerManager));
+    };
+
+    AgmBicyclingLayer.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmBicyclingLayer,
+      selectors: [["agm-bicycling-layer"]],
+      inputs: {
+        visible: "visible"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+
+    AgmBicyclingLayer.ctorParameters = function () {
+      return [{
+        type: LayerManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmBicyclingLayer.prototype, "visible", void 0);
+    AgmBicyclingLayer = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [LayerManager])], AgmBicyclingLayer);
+
+    var CircleManager = /*#__PURE__*/function () {
+      function CircleManager(_apiWrapper, _zone) {
+        _classCallCheck(this, CircleManager);
+
+        this._apiWrapper = _apiWrapper;
+        this._zone = _zone;
+        this._circles = new Map();
+      }
+
+      _createClass2(CircleManager, [{
+        key: "addCircle",
+        value: function addCircle(circle) {
+          this._circles.set(circle, this._apiWrapper.createCircle({
+            center: {
+              lat: circle.latitude,
+              lng: circle.longitude
+            },
+            clickable: circle.clickable,
+            draggable: circle.draggable,
+            editable: circle.editable,
+            fillColor: circle.fillColor,
+            fillOpacity: circle.fillOpacity,
+            radius: circle.radius,
+            strokeColor: circle.strokeColor,
+            strokeOpacity: circle.strokeOpacity,
+            strokePosition: circle.strokePosition,
+            strokeWeight: circle.strokeWeight,
+            visible: circle.visible,
+            zIndex: circle.zIndex
+          }));
+        }
+        /**
+         * Removes the given circle from the map.
+         */
+
+      }, {
+        key: "removeCircle",
+        value: function removeCircle(circle) {
+          var _this27 = this;
+
+          return this._circles.get(circle).then(function (c) {
+            c.setMap(null);
+
+            _this27._circles["delete"](circle);
+          });
+        }
+      }, {
+        key: "setOptions",
+        value: function setOptions(circle, options) {
+          return this._circles.get(circle).then(function (c) {
+            if (typeof options.strokePosition === 'string') {
+              options.strokePosition = google.maps.StrokePosition[options.strokePosition];
+            }
+
+            c.setOptions(options);
+          });
+        }
+      }, {
+        key: "getBounds",
+        value: function getBounds(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.getBounds();
+          });
+        }
+      }, {
+        key: "getCenter",
+        value: function getCenter(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.getCenter();
+          });
+        }
+      }, {
+        key: "getRadius",
+        value: function getRadius(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.getRadius();
+          });
+        }
+      }, {
+        key: "setCenter",
+        value: function setCenter(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.setCenter({
+              lat: circle.latitude,
+              lng: circle.longitude
+            });
+          });
+        }
+      }, {
+        key: "setEditable",
+        value: function setEditable(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.setEditable(circle.editable);
+          });
+        }
+      }, {
+        key: "setDraggable",
+        value: function setDraggable(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.setDraggable(circle.draggable);
+          });
+        }
+      }, {
+        key: "setVisible",
+        value: function setVisible(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.setVisible(circle.visible);
+          });
+        }
+      }, {
+        key: "setRadius",
+        value: function setRadius(circle) {
+          return this._circles.get(circle).then(function (c) {
+            return c.setRadius(circle.radius);
+          });
+        }
+      }, {
+        key: "getNativeCircle",
+        value: function getNativeCircle(circle) {
+          return this._circles.get(circle);
+        }
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, circle) {
+          var _this28 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            var listener = null;
+
+            _this28._circles.get(circle).then(function (c) {
+              listener = c.addListener(eventName, function (e) {
+                return _this28._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+
+            return function () {
+              if (listener !== null) {
+                listener.remove();
+              }
+            };
+          });
+        }
+      }]);
+
+      return CircleManager;
+    }();
+
+    CircleManager.ɵfac = function CircleManager_Factory(t) {
+      return new (t || CircleManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    CircleManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: CircleManager,
+      factory: CircleManager.ɵfac
+    });
+
+    CircleManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    CircleManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], CircleManager);
+    var AgmCircle_1;
+
+    var AgmCircle = AgmCircle_1 = /*#__PURE__*/function () {
+      function AgmCircle(_manager) {
+        _classCallCheck(this, AgmCircle);
+
+        this._manager = _manager;
+        /**
+         * Indicates whether this Circle handles mouse events. Defaults to true.
+         */
+
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this circle over the map. Defaults to false.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this circle by dragging the control points shown at
+         * the center and around the circumference of the circle. Defaults to false.
+         */
+
+        this.editable = false;
+        /**
+         * The radius in meters on the Earth's surface.
+         */
+
+        this.radius = 0;
+        /**
+         * The stroke position. Defaults to CENTER.
+         * This property is not supported on Internet Explorer 8 and earlier.
+         */
+
+        this.strokePosition = 'CENTER';
+        /**
+         * The stroke width in pixels.
+         */
+
+        this.strokeWeight = 0;
+        /**
+         * Whether this circle is visible on the map. Defaults to true.
+         */
+
+        this.visible = true;
+        /**
+         * This event is fired when the circle's center is changed.
+         */
+
+        this.centerChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the circle.
+         */
+
+        this.circleClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the circle.
+         */
+
+        this.circleDblClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the circle.
+         */
+
+        this.drag = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the circle.
+         */
+
+        this.dragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the circle.
+         */
+
+        this.dragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the circle.
+         */
+
+        this.mouseDown = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the circle.
+         */
+
+        this.mouseMove = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on circle mouseout.
+         */
+
+        this.mouseOut = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on circle mouseover.
+         */
+
+        this.mouseOver = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mouseup event is fired on the circle.
+         */
+
+        this.mouseUp = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the circle's radius is changed.
+         */
+
+        this.radiusChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the circle is right-clicked on.
+         */
+
+        this.rightClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this._circleAddedToManager = false;
+        this._eventSubscriptions = [];
+      }
+      /** @internal */
+
+
+      _createClass2(AgmCircle, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this._manager.addCircle(this);
+
+          this._circleAddedToManager = true;
+
+          this._registerEventListeners();
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._circleAddedToManager) {
+            return;
+          }
+
+          if (changes['latitude'] || changes['longitude']) {
+            this._manager.setCenter(this);
+          }
+
+          if (changes['editable']) {
+            this._manager.setEditable(this);
+          }
+
+          if (changes['draggable']) {
+            this._manager.setDraggable(this);
+          }
+
+          if (changes['visible']) {
+            this._manager.setVisible(this);
+          }
+
+          if (changes['radius']) {
+            this._manager.setRadius(this);
+          }
+
+          this._updateCircleOptionsChanges(changes);
+        }
+      }, {
+        key: "_updateCircleOptionsChanges",
+        value: function _updateCircleOptionsChanges(changes) {
+          var options = {};
+          var optionKeys = Object.keys(changes).filter(function (k) {
+            return AgmCircle_1._mapOptions.indexOf(k) !== -1;
+          });
+          optionKeys.forEach(function (k) {
+            options[k] = changes[k].currentValue;
+          });
+
+          if (optionKeys.length > 0) {
+            this._manager.setOptions(this, options);
+          }
+        }
+      }, {
+        key: "_registerEventListeners",
+        value: function _registerEventListeners() {
+          var _this29 = this;
+
+          var events = new Map();
+          events.set('center_changed', this.centerChange);
+          events.set('click', this.circleClick);
+          events.set('dblclick', this.circleDblClick);
+          events.set('drag', this.drag);
+          events.set('dragend', this.dragEnd);
+          events.set('dragstart', this.dragStart);
+          events.set('mousedown', this.mouseDown);
+          events.set('mousemove', this.mouseMove);
+          events.set('mouseout', this.mouseOut);
+          events.set('mouseover', this.mouseOver);
+          events.set('mouseup', this.mouseUp);
+          events.set('radius_changed', this.radiusChange);
+          events.set('rightclick', this.rightClick);
+          events.forEach(function (eventEmitter, eventName) {
+            _this29._eventSubscriptions.push(_this29._manager.createEventObservable(eventName, _this29).subscribe(function (value) {
+              switch (eventName) {
+                case 'radius_changed':
+                  _this29._manager.getRadius(_this29).then(function (radius) {
+                    return eventEmitter.emit(radius);
+                  });
+
+                  break;
+
+                case 'center_changed':
+                  _this29._manager.getCenter(_this29).then(function (center) {
+                    return eventEmitter.emit({
+                      lat: center.lat(),
+                      lng: center.lng()
+                    });
+                  });
+
+                  break;
+
+                default:
+                  eventEmitter.emit({
+                    coords: {
+                      lat: value.latLng.lat(),
+                      lng: value.latLng.lng()
+                    }
+                  });
+              }
+            }));
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._eventSubscriptions.forEach(function (s) {
+            s.unsubscribe();
+          });
+
+          this._eventSubscriptions = null;
+
+          this._manager.removeCircle(this);
+        }
+        /**
+         * Gets the LatLngBounds of this Circle.
+         */
+
+      }, {
+        key: "getBounds",
+        value: function getBounds() {
+          return this._manager.getBounds(this);
+        }
+      }, {
+        key: "getCenter",
+        value: function getCenter() {
+          return this._manager.getCenter(this);
+        }
+      }]);
+
+      return AgmCircle;
+    }();
+
+    AgmCircle.ɵfac = function AgmCircle_Factory(t) {
+      return new (t || AgmCircle)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](CircleManager));
+    };
+
+    AgmCircle.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmCircle,
+      selectors: [["agm-circle"]],
+      inputs: {
+        clickable: "clickable",
+        draggable: ["circleDraggable", "draggable"],
+        editable: "editable",
+        radius: "radius",
+        strokePosition: "strokePosition",
+        strokeWeight: "strokeWeight",
+        visible: "visible",
+        latitude: "latitude",
+        longitude: "longitude",
+        fillColor: "fillColor",
+        fillOpacity: "fillOpacity",
+        strokeColor: "strokeColor",
+        strokeOpacity: "strokeOpacity",
+        zIndex: "zIndex"
+      },
+      outputs: {
+        centerChange: "centerChange",
+        circleClick: "circleClick",
+        circleDblClick: "circleDblClick",
+        drag: "drag",
+        dragEnd: "dragEnd",
+        dragStart: "dragStart",
+        mouseDown: "mouseDown",
+        mouseMove: "mouseMove",
+        mouseOut: "mouseOut",
+        mouseOver: "mouseOver",
+        mouseUp: "mouseUp",
+        radiusChange: "radiusChange",
+        rightClick: "rightClick"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    AgmCircle._mapOptions = ['fillColor', 'fillOpacity', 'strokeColor', 'strokeOpacity', 'strokePosition', 'strokeWeight', 'visible', 'zIndex', 'clickable'];
+
+    AgmCircle.ctorParameters = function () {
+      return [{
+        type: CircleManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmCircle.prototype, "latitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmCircle.prototype, "longitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmCircle.prototype, "clickable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('circleDraggable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmCircle.prototype, "draggable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmCircle.prototype, "editable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmCircle.prototype, "fillColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmCircle.prototype, "fillOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmCircle.prototype, "radius", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmCircle.prototype, "strokeColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmCircle.prototype, "strokeOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmCircle.prototype, "strokePosition", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmCircle.prototype, "strokeWeight", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmCircle.prototype, "visible", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmCircle.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "centerChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "circleClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "circleDblClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "drag", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "dragEnd", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "dragStart", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "mouseDown", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "mouseMove", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "mouseOut", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "mouseOver", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "mouseUp", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "radiusChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmCircle.prototype, "rightClick", void 0);
+    AgmCircle = AgmCircle_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [CircleManager])], AgmCircle);
+    /**
+     * Manages all Data Layers for a Google Map instance.
+     */
+
+    var DataLayerManager = /*#__PURE__*/function () {
+      function DataLayerManager(_wrapper, _zone) {
+        _classCallCheck(this, DataLayerManager);
+
+        this._wrapper = _wrapper;
+        this._zone = _zone;
+        this._layers = new Map();
+      }
+      /**
+       * Adds a new Data Layer to the map.
+       */
+
+
+      _createClass2(DataLayerManager, [{
+        key: "addDataLayer",
+        value: function addDataLayer(layer) {
+          var _this30 = this;
+
+          var newLayer = this._wrapper.createDataLayer({
+            style: layer.style
+          }).then(function (d) {
+            if (layer.geoJson) {
+              _this30.getDataFeatures(d, layer.geoJson).then(function (features) {
+                return d.features = features;
+              });
+            }
+
+            return d;
+          });
+
+          this._layers.set(layer, newLayer);
+        }
+      }, {
+        key: "deleteDataLayer",
+        value: function deleteDataLayer(layer) {
+          var _this31 = this;
+
+          this._layers.get(layer).then(function (l) {
+            l.setMap(null);
+
+            _this31._layers["delete"](layer);
+          });
+        }
+      }, {
+        key: "updateGeoJson",
+        value: function updateGeoJson(layer, geoJson) {
+          var _this32 = this;
+
+          this._layers.get(layer).then(function (l) {
+            l.forEach(function (feature) {
+              l.remove(feature);
+              var index = l.features.indexOf(feature, 0);
+
+              if (index > -1) {
+                l.features.splice(index, 1);
+              }
+            });
+
+            _this32.getDataFeatures(l, geoJson).then(function (features) {
+              return l.features = features;
+            });
+          });
+        }
+      }, {
+        key: "setDataOptions",
+        value: function setDataOptions(layer, options) {
+          this._layers.get(layer).then(function (l) {
+            l.setControlPosition(options.controlPosition);
+            l.setControls(options.controls);
+            l.setDrawingMode(options.drawingMode);
+            l.setStyle(options.style);
+          });
+        }
+        /**
+         * Creates a Google Maps event listener for the given DataLayer as an Observable
+         */
+
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, layer) {
+          var _this33 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this33._layers.get(layer).then(function (d) {
+              d.addListener(eventName, function (e) {
+                return _this33._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+          });
+        }
+        /**
+         * Extract features from a geoJson using google.maps Data Class
+         * @param d : google.maps.Data class instance
+         * @param geoJson : url or geojson object
+         */
+
+      }, {
+        key: "getDataFeatures",
+        value: function getDataFeatures(d, geoJson) {
+          return new Promise(function (resolve, reject) {
+            if (typeof geoJson === 'object') {
+              try {
+                var features = d.addGeoJson(geoJson);
+                resolve(features);
+              } catch (e) {
+                reject(e);
+              }
+            } else if (typeof geoJson === 'string') {
+              d.loadGeoJson(geoJson, null, resolve);
+            } else {
+              reject("Impossible to extract features from geoJson: wrong argument type");
+            }
+          });
+        }
+      }]);
+
+      return DataLayerManager;
+    }();
+
+    DataLayerManager.ɵfac = function DataLayerManager_Factory(t) {
+      return new (t || DataLayerManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    DataLayerManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: DataLayerManager,
+      factory: DataLayerManager.ɵfac
+    });
+
+    DataLayerManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    DataLayerManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], DataLayerManager);
+    var AgmDataLayer_1;
+    var layerId$1 = 0;
+    /**
+     * AgmDataLayer enables the user to add data layers to the map.
+     *
+     * ### Example
+     * ```typescript
+     * import { Component } from 'angular2/core';
+     * import { AgmMap, AgmDataLayer } from
+     * 'angular-google-maps/core';
+     *
+     * @Component({
+     *  selector: 'my-map-cmp',
+     *  directives: [AgmMap, AgmDataLayer],
+     *  styles: [`
+     *    .agm-container {
+     *      height: 300px;
+     *    }
+     * `],
+     *  template: `
+     * <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     * 	  <agm-data-layer [geoJson]="geoJsonObject" (layerClick)="clicked($event)" [style]="styleFunc">
+     * 	  </agm-data-layer>
+     * </agm-map>
+     *  `
+     * })
+     * export class MyMapCmp {
+     *   lat: number = -25.274449;
+     *   lng: number = 133.775060;
+     *   zoom: number = 5;
+     *
+     * clicked(clickEvent) {
+     *    console.log(clickEvent);
+     *  }
+     *
+     *  styleFunc(feature) {
+     *    return ({
+     *      clickable: false,
+     *      fillColor: feature.getProperty('color'),
+     *      strokeWeight: 1
+     *    });
+     *  }
+     *
+     *  geoJsonObject: Object = {
+     *    "type": "FeatureCollection",
+     *    "features": [
+     *      {
+     *        "type": "Feature",
+     *        "properties": {
+     *          "letter": "G",
+     *          "color": "blue",
+     *          "rank": "7",
+     *          "ascii": "71"
+     *        },
+     *        "geometry": {
+     *          "type": "Polygon",
+     *          "coordinates": [
+     *            [
+     *              [123.61, -22.14], [122.38, -21.73], [121.06, -21.69], [119.66, -22.22], [119.00, -23.40],
+     *              [118.65, -24.76], [118.43, -26.07], [118.78, -27.56], [119.22, -28.57], [120.23, -29.49],
+     *              [121.77, -29.87], [123.57, -29.64], [124.45, -29.03], [124.71, -27.95], [124.80, -26.70],
+     *              [124.80, -25.60], [123.61, -25.64], [122.56, -25.64], [121.72, -25.72], [121.81, -26.62],
+     *              [121.86, -26.98], [122.60, -26.90], [123.57, -27.05], [123.57, -27.68], [123.35, -28.18],
+     *              [122.51, -28.38], [121.77, -28.26], [121.02, -27.91], [120.49, -27.21], [120.14, -26.50],
+     *              [120.10, -25.64], [120.27, -24.52], [120.67, -23.68], [121.72, -23.32], [122.43, -23.48],
+     *              [123.04, -24.04], [124.54, -24.28], [124.58, -23.20], [123.61, -22.14]
+     *            ]
+     *          ]
+     *        }
+     *      },
+     *      {
+     *        "type": "Feature",
+     *        "properties": {
+     *          "letter": "o",
+     *          "color": "red",
+     *          "rank": "15",
+     *          "ascii": "111"
+     *        },
+     *        "geometry": {
+     *          "type": "Polygon",
+     *          "coordinates": [
+     *            [
+     *              [128.84, -25.76], [128.18, -25.60], [127.96, -25.52], [127.88, -25.52], [127.70, -25.60],
+     *              [127.26, -25.79], [126.60, -26.11], [126.16, -26.78], [126.12, -27.68], [126.21, -28.42],
+     *              [126.69, -29.49], [127.74, -29.80], [128.80, -29.72], [129.41, -29.03], [129.72, -27.95],
+     *              [129.68, -27.21], [129.33, -26.23], [128.84, -25.76]
+     *            ],
+     *            [
+     *              [128.45, -27.44], [128.32, -26.94], [127.70, -26.82], [127.35, -27.05], [127.17, -27.80],
+     *              [127.57, -28.22], [128.10, -28.42], [128.49, -27.80], [128.45, -27.44]
+     *            ]
+     *          ]
+     *        }
+     *      },
+     *      {
+     *        "type": "Feature",
+     *        "properties": {
+     *          "letter": "o",
+     *          "color": "yellow",
+     *          "rank": "15",
+     *          "ascii": "111"
+     *        },
+     *        "geometry": {
+     *          "type": "Polygon",
+     *          "coordinates": [
+     *            [
+     *              [131.87, -25.76], [131.35, -26.07], [130.95, -26.78], [130.82, -27.64], [130.86, -28.53],
+     *              [131.26, -29.22], [131.92, -29.76], [132.45, -29.87], [133.06, -29.76], [133.72, -29.34],
+     *              [134.07, -28.80], [134.20, -27.91], [134.07, -27.21], [133.81, -26.31], [133.37, -25.83],
+     *              [132.71, -25.64], [131.87, -25.76]
+     *            ],
+     *            [
+     *              [133.15, -27.17], [132.71, -26.86], [132.09, -26.90], [131.74, -27.56], [131.79, -28.26],
+     *              [132.36, -28.45], [132.93, -28.34], [133.15, -27.76], [133.15, -27.17]
+     *            ]
+     *          ]
+     *        }
+     *      },
+     *      {
+     *        "type": "Feature",
+     *        "properties": {
+     *          "letter": "g",
+     *          "color": "blue",
+     *          "rank": "7",
+     *          "ascii": "103"
+     *        },
+     *        "geometry": {
+     *          "type": "Polygon",
+     *          "coordinates": [
+     *            [
+     *              [138.12, -25.04], [136.84, -25.16], [135.96, -25.36], [135.26, -25.99], [135, -26.90],
+     *              [135.04, -27.91], [135.26, -28.88], [136.05, -29.45], [137.02, -29.49], [137.81, -29.49],
+     *              [137.94, -29.99], [137.90, -31.20], [137.85, -32.24], [136.88, -32.69], [136.45, -32.36],
+     *              [136.27, -31.80], [134.95, -31.84], [135.17, -32.99], [135.52, -33.43], [136.14, -33.76],
+     *              [137.06, -33.83], [138.12, -33.65], [138.86, -33.21], [139.30, -32.28], [139.30, -31.24],
+     *              [139.30, -30.14], [139.21, -28.96], [139.17, -28.22], [139.08, -27.41], [139.08, -26.47],
+     *              [138.99, -25.40], [138.73, -25.00], [138.12, -25.04]
+     *            ],
+     *            [
+     *              [137.50, -26.54], [136.97, -26.47], [136.49, -26.58], [136.31, -27.13], [136.31, -27.72],
+     *              [136.58, -27.99], [137.50, -28.03], [137.68, -27.68], [137.59, -26.78], [137.50, -26.54]
+     *            ]
+     *          ]
+     *        }
+     *      },
+     *      {
+     *        "type": "Feature",
+     *        "properties": {
+     *          "letter": "l",
+     *          "color": "green",
+     *          "rank": "12",
+     *          "ascii": "108"
+     *        },
+     *        "geometry": {
+     *          "type": "Polygon",
+     *          "coordinates": [
+     *            [
+     *              [140.14, -21.04], [140.31, -29.42], [141.67, -29.49], [141.59, -20.92], [140.14, -21.04]
+     *            ]
+     *          ]
+     *        }
+     *      },
+     *      {
+     *        "type": "Feature",
+     *        "properties": {
+     *          "letter": "e",
+     *          "color": "red",
+     *          "rank": "5",
+     *          "ascii": "101"
+     *        },
+     *        "geometry": {
+     *          "type": "Polygon",
+     *          "coordinates": [
+     *            [
+     *              [144.14, -27.41], [145.67, -27.52], [146.86, -27.09], [146.82, -25.64], [146.25, -25.04],
+     *              [145.45, -24.68], [144.66, -24.60], [144.09, -24.76], [143.43, -25.08], [142.99, -25.40],
+     *              [142.64, -26.03], [142.64, -27.05], [142.64, -28.26], [143.30, -29.11], [144.18, -29.57],
+     *              [145.41, -29.64], [146.46, -29.19], [146.64, -28.72], [146.82, -28.14], [144.84, -28.42],
+     *              [144.31, -28.26], [144.14, -27.41]
+     *            ],
+     *            [
+     *              [144.18, -26.39], [144.53, -26.58], [145.19, -26.62], [145.72, -26.35], [145.81, -25.91],
+     *              [145.41, -25.68], [144.97, -25.68], [144.49, -25.64], [144, -25.99], [144.18, -26.39]
+     *            ]
+     *          ]
+     *        }
+     *      }
+     *    ]
+     *  };
+     * }
+     * ```
+     */
+
+    var AgmDataLayer = AgmDataLayer_1 = /*#__PURE__*/function () {
+      function AgmDataLayer(_manager) {
+        _classCallCheck(this, AgmDataLayer);
+
+        this._manager = _manager;
+        this._addedToManager = false;
+        this._id = (layerId$1++).toString();
+        this._subscriptions = [];
+        /**
+         * This event is fired when a feature in the layer is clicked.
+         */
+
+        this.layerClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * The geoJson to be displayed
+         */
+
+        this.geoJson = null;
+      }
+
+      _createClass2(AgmDataLayer, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          if (this._addedToManager) {
+            return;
+          }
+
+          this._manager.addDataLayer(this);
+
+          this._addedToManager = true;
+
+          this._addEventListeners();
+        }
+      }, {
+        key: "_addEventListeners",
+        value: function _addEventListeners() {
+          var _this34 = this;
+
+          var listeners = [{
+            name: 'click',
+            handler: function handler(ev) {
+              return _this34.layerClick.emit(ev);
+            }
+          }];
+          listeners.forEach(function (obj) {
+            var os = _this34._manager.createEventObservable(obj.name, _this34).subscribe(obj.handler);
+
+            _this34._subscriptions.push(os);
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          return "AgmDataLayer-".concat(this._id.toString());
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._manager.deleteDataLayer(this); // unsubscribe all registered observable subscriptions
+
+
+          this._subscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          var _this35 = this;
+
+          if (!this._addedToManager) {
+            return;
+          }
+
+          var geoJsonChange = changes['geoJson'];
+
+          if (geoJsonChange) {
+            this._manager.updateGeoJson(this, geoJsonChange.currentValue);
+          }
+
+          var dataOptions = {};
+
+          AgmDataLayer_1._dataOptionsAttributes.forEach(function (k) {
+            return dataOptions[k] = changes.hasOwnProperty(k) ? changes[k].currentValue : _this35[k];
+          });
+
+          this._manager.setDataOptions(this, dataOptions);
+        }
+      }]);
+
+      return AgmDataLayer;
+    }();
+
+    AgmDataLayer.ɵfac = function AgmDataLayer_Factory(t) {
+      return new (t || AgmDataLayer)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](DataLayerManager));
+    };
+
+    AgmDataLayer.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmDataLayer,
+      selectors: [["agm-data-layer"]],
+      inputs: {
+        geoJson: "geoJson",
+        style: "style"
+      },
+      outputs: {
+        layerClick: "layerClick"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    AgmDataLayer._dataOptionsAttributes = ['style'];
+
+    AgmDataLayer.ctorParameters = function () {
+      return [{
+        type: DataLayerManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmDataLayer.prototype, "layerClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmDataLayer.prototype, "geoJson", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function)], AgmDataLayer.prototype, "style", void 0);
+    AgmDataLayer = AgmDataLayer_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [DataLayerManager])], AgmDataLayer);
+    /**
+     * Class to implement when you what to be able to make it work with the auto fit bounds feature
+     * of AGM.
+     */
+
+    var FitBoundsAccessor = function FitBoundsAccessor() {
+      _classCallCheck(this, FitBoundsAccessor);
+    };
+    /**
+     * The FitBoundsService is responsible for computing the bounds of the a single map.
+     */
+
+
+    var FitBoundsService = /*#__PURE__*/function () {
+      function FitBoundsService(loader) {
+        var _this36 = this;
+
+        _classCallCheck(this, FitBoundsService);
+
+        this._boundsChangeSampleTime$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](200);
+        this._includeInBounds$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](new Map());
+        this.bounds$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(loader.load()).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["flatMap"])(function () {
+          return _this36._includeInBounds$;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["sample"])(this._boundsChangeSampleTime$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (time) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["timer"])(0, time);
+        }))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (includeInBounds) {
+          return _this36._generateBounds(includeInBounds);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["shareReplay"])(1));
+      }
+
+      _createClass2(FitBoundsService, [{
+        key: "_generateBounds",
+        value: function _generateBounds(includeInBounds) {
+          var bounds = new google.maps.LatLngBounds();
+          includeInBounds.forEach(function (b) {
+            return bounds.extend(b);
+          });
+          return bounds;
+        }
+      }, {
+        key: "addToBounds",
+        value: function addToBounds(latLng) {
+          var id = this._createIdentifier(latLng);
+
+          if (this._includeInBounds$.value.has(id)) {
+            return;
+          }
+
+          var map = this._includeInBounds$.value;
+          map.set(id, latLng);
+
+          this._includeInBounds$.next(map);
+        }
+      }, {
+        key: "removeFromBounds",
+        value: function removeFromBounds(latLng) {
+          var map = this._includeInBounds$.value;
+          map["delete"](this._createIdentifier(latLng));
+
+          this._includeInBounds$.next(map);
+        }
+      }, {
+        key: "changeFitBoundsChangeSampleTime",
+        value: function changeFitBoundsChangeSampleTime(timeMs) {
+          this._boundsChangeSampleTime$.next(timeMs);
+        }
+      }, {
+        key: "getBounds$",
+        value: function getBounds$() {
+          return this.bounds$;
+        }
+      }, {
+        key: "_createIdentifier",
+        value: function _createIdentifier(latLng) {
+          return "".concat(latLng.lat, "+").concat(latLng.lng);
+        }
+      }]);
+
+      return FitBoundsService;
+    }();
+
+    FitBoundsService.ɵfac = function FitBoundsService_Factory(t) {
+      return new (t || FitBoundsService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](MapsAPILoader));
+    };
+
+    FitBoundsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: FitBoundsService,
+      factory: FitBoundsService.ɵfac
+    });
+
+    FitBoundsService.ctorParameters = function () {
+      return [{
+        type: MapsAPILoader
+      }];
+    };
+
+    FitBoundsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [MapsAPILoader])], FitBoundsService);
+    /**
+     * Adds the given directive to the auto fit bounds feature when the value is true.
+     * To make it work with you custom AGM component, you also have to implement the {@link FitBoundsAccessor} abstract class.
+     * @example
+     * <agm-marker [agmFitBounds]="true"></agm-marker>
+     */
+
+    var AgmFitBounds = /*#__PURE__*/function () {
+      function AgmFitBounds(_fitBoundsAccessor, _fitBoundsService) {
+        _classCallCheck(this, AgmFitBounds);
+
+        this._fitBoundsAccessor = _fitBoundsAccessor;
+        this._fitBoundsService = _fitBoundsService;
+        /**
+         * If the value is true, the element gets added to the bounds of the map.
+         * Default: true.
+         */
+
+        this.agmFitBounds = true;
+        this._destroyed$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._latestFitBoundsDetails = null;
+      }
+      /**
+       * @internal
+       */
+
+
+      _createClass2(AgmFitBounds, [{
+        key: "ngOnChanges",
+        value: function ngOnChanges() {
+          this._updateBounds();
+        }
+        /**
+         * @internal
+         */
+
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this37 = this;
+
+          this._fitBoundsAccessor.getFitBoundsDetails$().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])(function (x, y) {
+            return x.latLng.lat === y.latLng.lat && x.latLng.lng === y.latLng.lng;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(this._destroyed$)).subscribe(function (details) {
+            return _this37._updateBounds(details);
+          });
+        }
+        /*
+         Either the location changed, or visible status changed.
+         Possible state changes are
+         invisible -> visible
+         visible -> invisible
+         visible -> visible (new location)
+        */
+
+      }, {
+        key: "_updateBounds",
+        value: function _updateBounds(newFitBoundsDetails) {
+          // either visibility will change, or location, so remove the old one anyway
+          if (this._latestFitBoundsDetails) {
+            this._fitBoundsService.removeFromBounds(this._latestFitBoundsDetails.latLng); // don't set latestFitBoundsDetails to null, because we can toggle visibility from
+            // true -> false -> true, in which case we still need old value cached here
+
+          }
+
+          if (newFitBoundsDetails) {
+            this._latestFitBoundsDetails = newFitBoundsDetails;
+          }
+
+          if (!this._latestFitBoundsDetails) {
+            return;
+          }
+
+          if (this.agmFitBounds === true) {
+            this._fitBoundsService.addToBounds(this._latestFitBoundsDetails.latLng);
+          }
+        }
+        /**
+         * @internal
+         */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._destroyed$.next();
+
+          this._destroyed$.complete();
+
+          if (this._latestFitBoundsDetails !== null) {
+            this._fitBoundsService.removeFromBounds(this._latestFitBoundsDetails.latLng);
+          }
+        }
+      }]);
+
+      return AgmFitBounds;
+    }();
+
+    AgmFitBounds.ɵfac = function AgmFitBounds_Factory(t) {
+      return new (t || AgmFitBounds)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](FitBoundsAccessor, 2), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](FitBoundsService));
+    };
+
+    AgmFitBounds.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmFitBounds,
+      selectors: [["", "agmFitBounds", ""]],
+      inputs: {
+        agmFitBounds: "agmFitBounds"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+
+    AgmFitBounds.ctorParameters = function () {
+      return [{
+        type: FitBoundsAccessor,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"]
+        }]
+      }, {
+        type: FitBoundsService
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmFitBounds.prototype, "agmFitBounds", void 0);
+    AgmFitBounds = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [FitBoundsAccessor, FitBoundsService])], AgmFitBounds);
+
+    var MarkerManager = /*#__PURE__*/function () {
+      function MarkerManager(_mapsWrapper, _zone) {
+        _classCallCheck(this, MarkerManager);
+
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._markers = new Map();
+      }
+
+      _createClass2(MarkerManager, [{
+        key: "convertAnimation",
+        value: function convertAnimation(uiAnim) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    if (!(uiAnim === null)) {
+                      _context.next = 4;
+                      break;
+                    }
+
+                    return _context.abrupt("return", null);
+
+                  case 4:
+                    return _context.abrupt("return", this._mapsWrapper.getNativeMap().then(function () {
+                      return google.maps.Animation[uiAnim];
+                    }));
+
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
+      }, {
+        key: "deleteMarker",
+        value: function deleteMarker(marker) {
+          var _this38 = this;
+
+          var m = this._markers.get(marker);
+
+          if (m == null) {
+            // marker already deleted
+            return Promise.resolve();
+          }
+
+          return m.then(function (m) {
+            return _this38._zone.run(function () {
+              m.setMap(null);
+
+              _this38._markers["delete"](marker);
+            });
+          });
+        }
+      }, {
+        key: "updateMarkerPosition",
+        value: function updateMarkerPosition(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setPosition({
+              lat: marker.latitude,
+              lng: marker.longitude
+            });
+          });
+        }
+      }, {
+        key: "updateTitle",
+        value: function updateTitle(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setTitle(marker.title);
+          });
+        }
+      }, {
+        key: "updateLabel",
+        value: function updateLabel(marker) {
+          return this._markers.get(marker).then(function (m) {
+            m.setLabel(marker.label);
+          });
+        }
+      }, {
+        key: "updateDraggable",
+        value: function updateDraggable(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setDraggable(marker.draggable);
+          });
+        }
+      }, {
+        key: "updateIcon",
+        value: function updateIcon(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setIcon(marker.iconUrl);
+          });
+        }
+      }, {
+        key: "updateOpacity",
+        value: function updateOpacity(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setOpacity(marker.opacity);
+          });
+        }
+      }, {
+        key: "updateVisible",
+        value: function updateVisible(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setVisible(marker.visible);
+          });
+        }
+      }, {
+        key: "updateZIndex",
+        value: function updateZIndex(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setZIndex(marker.zIndex);
+          });
+        }
+      }, {
+        key: "updateClickable",
+        value: function updateClickable(marker) {
+          return this._markers.get(marker).then(function (m) {
+            return m.setClickable(marker.clickable);
+          });
+        }
+      }, {
+        key: "updateAnimation",
+        value: function updateAnimation(marker) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            var m;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
+                    return this._markers.get(marker);
+
+                  case 2:
+                    m = _context2.sent;
+                    _context2.t0 = m;
+                    _context2.next = 6;
+                    return this.convertAnimation(marker.animation);
+
+                  case 6:
+                    _context2.t1 = _context2.sent;
+
+                    _context2.t0.setAnimation.call(_context2.t0, _context2.t1);
+
+                  case 8:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          }));
+        }
+      }, {
+        key: "addMarker",
+        value: function addMarker(marker) {
+          var _this39 = this;
+
+          var markerPromise = new Promise(function (resolve) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this39, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                while (1) {
+                  switch (_context3.prev = _context3.next) {
+                    case 0:
+                      _context3.t0 = this._mapsWrapper;
+                      _context3.t1 = {
+                        lat: marker.latitude,
+                        lng: marker.longitude
+                      };
+                      _context3.t2 = marker.label;
+                      _context3.t3 = marker.draggable;
+                      _context3.t4 = marker.iconUrl;
+                      _context3.t5 = marker.opacity;
+                      _context3.t6 = marker.visible;
+                      _context3.t7 = marker.zIndex;
+                      _context3.t8 = marker.title;
+                      _context3.t9 = marker.clickable;
+                      _context3.next = 12;
+                      return this.convertAnimation(marker.animation);
+
+                    case 12:
+                      _context3.t10 = _context3.sent;
+                      _context3.t11 = {
+                        position: _context3.t1,
+                        label: _context3.t2,
+                        draggable: _context3.t3,
+                        icon: _context3.t4,
+                        opacity: _context3.t5,
+                        visible: _context3.t6,
+                        zIndex: _context3.t7,
+                        title: _context3.t8,
+                        clickable: _context3.t9,
+                        animation: _context3.t10
+                      };
+                      return _context3.abrupt("return", _context3.t0.createMarker.call(_context3.t0, _context3.t11).then(resolve));
+
+                    case 15:
+                    case "end":
+                      return _context3.stop();
+                  }
+                }
+              }, _callee3, this);
+            }));
+          });
+
+          this._markers.set(marker, markerPromise);
+        }
+      }, {
+        key: "getNativeMarker",
+        value: function getNativeMarker(marker) {
+          return this._markers.get(marker);
+        }
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, marker) {
+          var _this40 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this40._markers.get(marker).then(function (m) {
+              m.addListener(eventName, function (e) {
+                return _this40._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+          });
+        }
+      }]);
+
+      return MarkerManager;
+    }();
+
+    MarkerManager.ɵfac = function MarkerManager_Factory(t) {
+      return new (t || MarkerManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    MarkerManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: MarkerManager,
+      factory: MarkerManager.ɵfac
+    });
+
+    MarkerManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    MarkerManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], MarkerManager);
+
+    var InfoWindowManager = /*#__PURE__*/function () {
+      function InfoWindowManager(_mapsWrapper, _zone, _markerManager) {
+        _classCallCheck(this, InfoWindowManager);
+
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._markerManager = _markerManager;
+        this._infoWindows = new Map();
+      }
+
+      _createClass2(InfoWindowManager, [{
+        key: "deleteInfoWindow",
+        value: function deleteInfoWindow(infoWindow) {
+          var _this41 = this;
+
+          var iWindow = this._infoWindows.get(infoWindow);
+
+          if (iWindow == null) {
+            // info window already deleted
+            return Promise.resolve();
+          }
+
+          return iWindow.then(function (i) {
+            return _this41._zone.run(function () {
+              i.close();
+
+              _this41._infoWindows["delete"](infoWindow);
+            });
+          });
+        }
+      }, {
+        key: "setPosition",
+        value: function setPosition(infoWindow) {
+          return this._infoWindows.get(infoWindow).then(function (i) {
+            return i.setPosition({
+              lat: infoWindow.latitude,
+              lng: infoWindow.longitude
+            });
+          });
+        }
+      }, {
+        key: "setZIndex",
+        value: function setZIndex(infoWindow) {
+          return this._infoWindows.get(infoWindow).then(function (i) {
+            return i.setZIndex(infoWindow.zIndex);
+          });
+        }
+      }, {
+        key: "open",
+        value: function open(infoWindow) {
+          var _this42 = this;
+
+          return this._infoWindows.get(infoWindow).then(function (w) {
+            if (infoWindow.hostMarker != null) {
+              return _this42._markerManager.getNativeMarker(infoWindow.hostMarker).then(function (marker) {
+                return _this42._mapsWrapper.getNativeMap().then(function (map) {
+                  return w.open(map, marker);
+                });
+              });
+            }
+
+            return _this42._mapsWrapper.getNativeMap().then(function (map) {
+              return w.open(map);
+            });
+          });
+        }
+      }, {
+        key: "close",
+        value: function close(infoWindow) {
+          return this._infoWindows.get(infoWindow).then(function (w) {
+            return w.close();
+          });
+        }
+      }, {
+        key: "setOptions",
+        value: function setOptions(infoWindow, options) {
+          return this._infoWindows.get(infoWindow).then(function (i) {
+            return i.setOptions(options);
+          });
+        }
+      }, {
+        key: "addInfoWindow",
+        value: function addInfoWindow(infoWindow) {
+          var options = {
+            content: infoWindow.content,
+            maxWidth: infoWindow.maxWidth,
+            zIndex: infoWindow.zIndex,
+            disableAutoPan: infoWindow.disableAutoPan
+          };
+
+          if (typeof infoWindow.latitude === 'number' && typeof infoWindow.longitude === 'number') {
+            options.position = {
+              lat: infoWindow.latitude,
+              lng: infoWindow.longitude
+            };
+          }
+
+          var infoWindowPromise = this._mapsWrapper.createInfoWindow(options);
+
+          this._infoWindows.set(infoWindow, infoWindowPromise);
+        }
+        /**
+         * Creates a Google Maps event listener for the given InfoWindow as an Observable
+         */
+
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, infoWindow) {
+          var _this43 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this43._infoWindows.get(infoWindow).then(function (i) {
+              i.addListener(eventName, function (e) {
+                return _this43._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+          });
+        }
+      }]);
+
+      return InfoWindowManager;
+    }();
+
+    InfoWindowManager.ɵfac = function InfoWindowManager_Factory(t) {
+      return new (t || InfoWindowManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](MarkerManager));
+    };
+
+    InfoWindowManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: InfoWindowManager,
+      factory: InfoWindowManager.ɵfac
+    });
+
+    InfoWindowManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }, {
+        type: MarkerManager
+      }];
+    };
+
+    InfoWindowManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], MarkerManager])], InfoWindowManager);
+    var AgmInfoWindow_1;
+    var infoWindowId = 0;
+    /**
+     * AgmInfoWindow renders a info window inside a {@link AgmMarker} or standalone.
+     *
+     * ### Example
+     * ```typescript
+     * import { Component } from '@angular/core';
+     *
+     * @Component({
+     *  selector: 'my-map-cmp',
+     *  styles: [`
+     *    .agm-map-container {
+     *      height: 300px;
+     *    }
+     * `],
+     *  template: `
+     *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     *      <agm-marker [latitude]="lat" [longitude]="lng" [label]="'M'">
+     *        <agm-info-window [disableAutoPan]="true">
+     *          Hi, this is the content of the <strong>info window</strong>
+     *        </agm-info-window>
+     *      </agm-marker>
+     *    </agm-map>
+     *  `
+     * })
+     * ```
+     */
+
+    var AgmInfoWindow = AgmInfoWindow_1 = /*#__PURE__*/function () {
+      function AgmInfoWindow(_infoWindowManager, _el) {
+        _classCallCheck(this, AgmInfoWindow);
+
+        this._infoWindowManager = _infoWindowManager;
+        this._el = _el;
+        /**
+         * Sets the open state for the InfoWindow. You can also call the open() and close() methods.
+         */
+
+        this.isOpen = false;
+        /**
+         * Emits an event when the info window is closed.
+         */
+
+        this.infoWindowClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this._infoWindowAddedToManager = false;
+        this._id = (infoWindowId++).toString();
+      }
+
+      _createClass2(AgmInfoWindow, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.content = this._el.nativeElement.querySelector('.agm-info-window-content');
+
+          this._infoWindowManager.addInfoWindow(this);
+
+          this._infoWindowAddedToManager = true;
+
+          this._updateOpenState();
+
+          this._registerEventListeners();
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._infoWindowAddedToManager) {
+            return;
+          }
+
+          if ((changes['latitude'] || changes['longitude']) && typeof this.latitude === 'number' && typeof this.longitude === 'number') {
+            this._infoWindowManager.setPosition(this);
+          }
+
+          if (changes['zIndex']) {
+            this._infoWindowManager.setZIndex(this);
+          }
+
+          if (changes['isOpen']) {
+            this._updateOpenState();
+          }
+
+          this._setInfoWindowOptions(changes);
+        }
+      }, {
+        key: "_registerEventListeners",
+        value: function _registerEventListeners() {
+          var _this44 = this;
+
+          this._infoWindowManager.createEventObservable('closeclick', this).subscribe(function () {
+            _this44.isOpen = false;
+
+            _this44.infoWindowClose.emit();
+          });
+        }
+      }, {
+        key: "_updateOpenState",
+        value: function _updateOpenState() {
+          this.isOpen ? this.open() : this.close();
+        }
+      }, {
+        key: "_setInfoWindowOptions",
+        value: function _setInfoWindowOptions(changes) {
+          var options = {};
+          var optionKeys = Object.keys(changes).filter(function (k) {
+            return AgmInfoWindow_1._infoWindowOptionsInputs.indexOf(k) !== -1;
+          });
+          optionKeys.forEach(function (k) {
+            options[k] = changes[k].currentValue;
+          });
+
+          this._infoWindowManager.setOptions(this, options);
+        }
+        /**
+         * Opens the info window.
+         */
+
+      }, {
+        key: "open",
+        value: function open() {
+          return this._infoWindowManager.open(this);
+        }
+        /**
+         * Closes the info window.
+         */
+
+      }, {
+        key: "close",
+        value: function close() {
+          var _this45 = this;
+
+          return this._infoWindowManager.close(this).then(function () {
+            _this45.infoWindowClose.emit();
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          return 'AgmInfoWindow-' + this._id.toString();
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._infoWindowManager.deleteInfoWindow(this);
+        }
+      }]);
+
+      return AgmInfoWindow;
+    }();
+
+    AgmInfoWindow.ɵfac = function AgmInfoWindow_Factory(t) {
+      return new (t || AgmInfoWindow)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](InfoWindowManager), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]));
+    };
+
+    AgmInfoWindow.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      type: AgmInfoWindow,
+      selectors: [["agm-info-window"]],
+      inputs: {
+        isOpen: "isOpen",
+        latitude: "latitude",
+        longitude: "longitude",
+        disableAutoPan: "disableAutoPan",
+        zIndex: "zIndex",
+        maxWidth: "maxWidth"
+      },
+      outputs: {
+        infoWindowClose: "infoWindowClose"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
+      ngContentSelectors: _c0,
+      decls: 2,
+      vars: 0,
+      consts: [[1, "agm-info-window-content"]],
+      template: function AgmInfoWindow_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      },
+      encapsulation: 2
+    });
+    AgmInfoWindow._infoWindowOptionsInputs = ['disableAutoPan', 'maxWidth'];
+
+    AgmInfoWindow.ctorParameters = function () {
+      return [{
+        type: InfoWindowManager
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmInfoWindow.prototype, "latitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmInfoWindow.prototype, "longitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], AgmInfoWindow.prototype, "disableAutoPan", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmInfoWindow.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmInfoWindow.prototype, "maxWidth", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmInfoWindow.prototype, "isOpen", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmInfoWindow.prototype, "infoWindowClose", void 0);
+    AgmInfoWindow = AgmInfoWindow_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [InfoWindowManager, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])], AgmInfoWindow);
+    /**
+     * Manages all KML Layers for a Google Map instance.
+     */
+
+    var KmlLayerManager = /*#__PURE__*/function () {
+      function KmlLayerManager(_wrapper, _zone) {
+        _classCallCheck(this, KmlLayerManager);
+
+        this._wrapper = _wrapper;
+        this._zone = _zone;
+        this._layers = new Map();
+      }
+      /**
+       * Adds a new KML Layer to the map.
+       */
+
+
+      _createClass2(KmlLayerManager, [{
+        key: "addKmlLayer",
+        value: function addKmlLayer(layer) {
+          var newLayer = this._wrapper.getNativeMap().then(function (m) {
+            return new google.maps.KmlLayer({
+              clickable: layer.clickable,
+              map: m,
+              preserveViewport: layer.preserveViewport,
+              screenOverlays: layer.screenOverlays,
+              suppressInfoWindows: layer.suppressInfoWindows,
+              url: layer.url,
+              zIndex: layer.zIndex
+            });
+          });
+
+          this._layers.set(layer, newLayer);
+        }
+      }, {
+        key: "setOptions",
+        value: function setOptions(layer, options) {
+          this._layers.get(layer).then(function (l) {
+            return l.setOptions(options);
+          });
+        }
+      }, {
+        key: "deleteKmlLayer",
+        value: function deleteKmlLayer(layer) {
+          var _this46 = this;
+
+          this._layers.get(layer).then(function (l) {
+            l.setMap(null);
+
+            _this46._layers["delete"](layer);
+          });
+        }
+        /**
+         * Creates a Google Maps event listener for the given KmlLayer as an Observable
+         */
+
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, layer) {
+          var _this47 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this47._layers.get(layer).then(function (m) {
+              m.addListener(eventName, function (e) {
+                return _this47._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+          });
+        }
+      }]);
+
+      return KmlLayerManager;
+    }();
+
+    KmlLayerManager.ɵfac = function KmlLayerManager_Factory(t) {
+      return new (t || KmlLayerManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    KmlLayerManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: KmlLayerManager,
+      factory: KmlLayerManager.ɵfac
+    });
+
+    KmlLayerManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    KmlLayerManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], KmlLayerManager);
+    var AgmKmlLayer_1;
+    var layerId$2 = 0;
+
+    var AgmKmlLayer = AgmKmlLayer_1 = /*#__PURE__*/function () {
+      function AgmKmlLayer(_manager) {
+        _classCallCheck(this, AgmKmlLayer);
+
+        this._manager = _manager;
+        this._addedToManager = false;
+        this._id = (layerId$2++).toString();
+        this._subscriptions = [];
+        /**
+         * If true, the layer receives mouse events. Default value is true.
+         */
+
+        this.clickable = true;
+        /**
+         * By default, the input map is centered and zoomed to the bounding box of the contents of the
+         * layer.
+         * If this option is set to true, the viewport is left unchanged, unless the map's center and zoom
+         * were never set.
+         */
+
+        this.preserveViewport = false;
+        /**
+         * Whether to render the screen overlays. Default true.
+         */
+
+        this.screenOverlays = true;
+        /**
+         * Suppress the rendering of info windows when layer features are clicked.
+         */
+
+        this.suppressInfoWindows = false;
+        /**
+         * The URL of the KML document to display.
+         */
+
+        this.url = null;
+        /**
+         * The z-index of the layer.
+         */
+
+        this.zIndex = null;
+        /**
+         * This event is fired when a feature in the layer is clicked.
+         */
+
+        this.layerClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the KML layers default viewport has changed.
+         */
+
+        this.defaultViewportChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the KML layer has finished loading.
+         * At this point it is safe to read the status property to determine if the layer loaded
+         * successfully.
+         */
+
+        this.statusChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+      }
+
+      _createClass2(AgmKmlLayer, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          if (this._addedToManager) {
+            return;
+          }
+
+          this._manager.addKmlLayer(this);
+
+          this._addedToManager = true;
+
+          this._addEventListeners();
+        }
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._addedToManager) {
+            return;
+          }
+
+          this._updatePolygonOptions(changes);
+        }
+      }, {
+        key: "_updatePolygonOptions",
+        value: function _updatePolygonOptions(changes) {
+          var options = Object.keys(changes).filter(function (k) {
+            return AgmKmlLayer_1._kmlLayerOptions.indexOf(k) !== -1;
+          }).reduce(function (obj, k) {
+            obj[k] = changes[k].currentValue;
+            return obj;
+          }, {});
+
+          if (Object.keys(options).length > 0) {
+            this._manager.setOptions(this, options);
+          }
+        }
+      }, {
+        key: "_addEventListeners",
+        value: function _addEventListeners() {
+          var _this48 = this;
+
+          var listeners = [{
+            name: 'click',
+            handler: function handler(ev) {
+              return _this48.layerClick.emit(ev);
+            }
+          }, {
+            name: 'defaultviewport_changed',
+            handler: function handler() {
+              return _this48.defaultViewportChange.emit();
+            }
+          }, {
+            name: 'status_changed',
+            handler: function handler() {
+              return _this48.statusChange.emit();
+            }
+          }];
+          listeners.forEach(function (obj) {
+            var os = _this48._manager.createEventObservable(obj.name, _this48).subscribe(obj.handler);
+
+            _this48._subscriptions.push(os);
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          return "AgmKmlLayer-".concat(this._id.toString());
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._manager.deleteKmlLayer(this); // unsubscribe all registered observable subscriptions
+
+
+          this._subscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          });
+        }
+      }]);
+
+      return AgmKmlLayer;
+    }();
+
+    AgmKmlLayer.ɵfac = function AgmKmlLayer_Factory(t) {
+      return new (t || AgmKmlLayer)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](KmlLayerManager));
+    };
+
+    AgmKmlLayer.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmKmlLayer,
+      selectors: [["agm-kml-layer"]],
+      inputs: {
+        clickable: "clickable",
+        preserveViewport: "preserveViewport",
+        screenOverlays: "screenOverlays",
+        suppressInfoWindows: "suppressInfoWindows",
+        url: "url",
+        zIndex: "zIndex"
+      },
+      outputs: {
+        layerClick: "layerClick",
+        defaultViewportChange: "defaultViewportChange",
+        statusChange: "statusChange"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    AgmKmlLayer._kmlLayerOptions = ['clickable', 'preserveViewport', 'screenOverlays', 'suppressInfoWindows', 'url', 'zIndex'];
+
+    AgmKmlLayer.ctorParameters = function () {
+      return [{
+        type: KmlLayerManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmKmlLayer.prototype, "clickable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmKmlLayer.prototype, "preserveViewport", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmKmlLayer.prototype, "screenOverlays", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmKmlLayer.prototype, "suppressInfoWindows", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmKmlLayer.prototype, "url", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmKmlLayer.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmKmlLayer.prototype, "layerClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmKmlLayer.prototype, "defaultViewportChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmKmlLayer.prototype, "statusChange", void 0);
+    AgmKmlLayer = AgmKmlLayer_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [KmlLayerManager])], AgmKmlLayer);
+
+    function createMVCEventObservable(array) {
+      var eventNames = ['insert_at', 'remove_at', 'set_at'];
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEventPattern"])(function (handler) {
+        return eventNames.map(function (evName) {
+          return array.addListener(evName, function (index, previous) {
+            return handler.apply(array, [{
+              'newArr': array.getArray(),
+              evName: evName,
+              index: index,
+              previous: previous
+            }]);
+          });
+        });
+      }, function (_handler, evListeners) {
+        return evListeners.forEach(function (evListener) {
+          return evListener.remove();
+        });
+      });
+    }
+
+    var MvcArrayMock = /*#__PURE__*/function () {
+      function MvcArrayMock() {
+        _classCallCheck(this, MvcArrayMock);
+
+        this.vals = [];
+        this.listeners = {
+          'remove_at': [],
+          'insert_at': [],
+          'set_at': []
+        };
+      }
+
+      _createClass2(MvcArrayMock, [{
+        key: "clear",
+        value: function clear() {
+          for (var i = this.vals.length - 1; i >= 0; i--) {
+            this.removeAt(i);
+          }
+        }
+      }, {
+        key: "getArray",
+        value: function getArray() {
+          return _toConsumableArray(this.vals);
+        }
+      }, {
+        key: "getAt",
+        value: function getAt(i) {
+          return this.vals[i];
+        }
+      }, {
+        key: "getLength",
+        value: function getLength() {
+          return this.vals.length;
+        }
+      }, {
+        key: "insertAt",
+        value: function insertAt(i, elem) {
+          this.vals.splice(i, 0, elem);
+          this.listeners.insert_at.map(function (listener) {
+            return listener(i);
+          });
+        }
+      }, {
+        key: "pop",
+        value: function pop() {
+          var _this49 = this;
+
+          var deleted = this.vals.pop();
+          this.listeners.remove_at.map(function (listener) {
+            return listener(_this49.vals.length, deleted);
+          });
+          return deleted;
+        }
+      }, {
+        key: "push",
+        value: function push(elem) {
+          var _this50 = this;
+
+          this.vals.push(elem);
+          this.listeners.insert_at.map(function (listener) {
+            return listener(_this50.vals.length - 1);
+          });
+          return this.vals.length;
+        }
+      }, {
+        key: "removeAt",
+        value: function removeAt(i) {
+          var deleted = this.vals.splice(i, 1)[0];
+          this.listeners.remove_at.map(function (listener) {
+            return listener(i, deleted);
+          });
+          return deleted;
+        }
+      }, {
+        key: "setAt",
+        value: function setAt(i, elem) {
+          var deleted = this.vals[i];
+          this.vals[i] = elem;
+          this.listeners.set_at.map(function (listener) {
+            return listener(i, deleted);
+          });
+        }
+      }, {
+        key: "forEach",
+        value: function forEach(callback) {
+          this.vals.forEach(callback);
+        }
+      }, {
+        key: "addListener",
+        value: function addListener(eventName, handler) {
+          var listenerArr = this.listeners[eventName];
+          listenerArr.push(handler);
+          return {
+            remove: function remove() {
+              listenerArr.splice(listenerArr.indexOf(handler), 1);
+            }
+          };
+        }
+      }]);
+
+      return MvcArrayMock;
+    }();
+
+    var PolygonManager = /*#__PURE__*/function () {
+      function PolygonManager(_mapsWrapper, _zone) {
+        _classCallCheck(this, PolygonManager);
+
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._polygons = new Map();
+      }
+
+      _createClass2(PolygonManager, [{
+        key: "addPolygon",
+        value: function addPolygon(path) {
+          var polygonPromise = this._mapsWrapper.createPolygon({
+            clickable: path.clickable,
+            draggable: path.draggable,
+            editable: path.editable,
+            fillColor: path.fillColor,
+            fillOpacity: path.fillOpacity,
+            geodesic: path.geodesic,
+            paths: path.paths,
+            strokeColor: path.strokeColor,
+            strokeOpacity: path.strokeOpacity,
+            strokeWeight: path.strokeWeight,
+            visible: path.visible,
+            zIndex: path.zIndex
+          });
+
+          this._polygons.set(path, polygonPromise);
+        }
+      }, {
+        key: "updatePolygon",
+        value: function updatePolygon(polygon) {
+          var _this51 = this;
+
+          var m = this._polygons.get(polygon);
+
+          if (m == null) {
+            return Promise.resolve();
+          }
+
+          return m.then(function (l) {
+            return _this51._zone.run(function () {
+              l.setPaths(polygon.paths);
+            });
+          });
+        }
+      }, {
+        key: "setPolygonOptions",
+        value: function setPolygonOptions(path, options) {
+          return this._polygons.get(path).then(function (l) {
+            l.setOptions(options);
+          });
+        }
+      }, {
+        key: "deletePolygon",
+        value: function deletePolygon(paths) {
+          var _this52 = this;
+
+          var m = this._polygons.get(paths);
+
+          if (m == null) {
+            return Promise.resolve();
+          }
+
+          return m.then(function (l) {
+            return _this52._zone.run(function () {
+              l.setMap(null);
+
+              _this52._polygons["delete"](paths);
+            });
+          });
+        }
+      }, {
+        key: "getPath",
+        value: function getPath(polygon) {
+          return this._polygons.get(polygon).then(function (polygon) {
+            return polygon.getPath().getArray();
+          });
+        }
+      }, {
+        key: "getPaths",
+        value: function getPaths(polygon) {
+          return this._polygons.get(polygon).then(function (polygon) {
+            return polygon.getPaths().getArray().map(function (p) {
+              return p.getArray();
+            });
+          });
+        }
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, path) {
+          var _this53 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this53._polygons.get(path).then(function (l) {
+              l.addListener(eventName, function (e) {
+                return _this53._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+          });
+        }
+      }, {
+        key: "createPathEventObservable",
+        value: function createPathEventObservable(agmPolygon) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            var polygon, paths, pathsChanges$;
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.next = 2;
+                    return this._polygons.get(agmPolygon);
+
+                  case 2:
+                    polygon = _context4.sent;
+                    paths = polygon.getPaths();
+                    pathsChanges$ = createMVCEventObservable(paths);
+                    return _context4.abrupt("return", pathsChanges$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])({
+                      newArr: paths.getArray()
+                    }), // in order to subscribe to them all
+                    Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (parentMVEvent) {
+                      return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"]).apply(void 0, _toConsumableArray( // rest parameter
+                      parentMVEvent.newArr.map(function (chMVC, index) {
+                        return createMVCEventObservable(chMVC).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (chMVCEvent) {
+                          return {
+                            parentMVEvent: parentMVEvent,
+                            chMVCEvent: chMVCEvent,
+                            pathIndex: index
+                          };
+                        }));
+                      }))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])({
+                        parentMVEvent: parentMVEvent,
+                        chMVCEvent: null,
+                        pathIndex: null
+                      }));
+                    }), // start the merged ob with an event signinifing change to parent
+                    Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["skip"])(1), // skip the manually added event
+                    Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref2) {
+                      var parentMVEvent = _ref2.parentMVEvent,
+                          chMVCEvent = _ref2.chMVCEvent,
+                          pathIndex = _ref2.pathIndex;
+                      var retVal;
+
+                      if (!chMVCEvent) {
+                        retVal = {
+                          newArr: parentMVEvent.newArr.map(function (subArr) {
+                            return subArr.getArray().map(function (latLng) {
+                              return latLng.toJSON();
+                            });
+                          }),
+                          eventName: parentMVEvent.evName,
+                          index: parentMVEvent.index
+                        };
+
+                        if (parentMVEvent.previous) {
+                          retVal.previous = parentMVEvent.previous.getArray();
+                        }
+                      } else {
+                        retVal = {
+                          newArr: parentMVEvent.newArr.map(function (subArr) {
+                            return subArr.getArray().map(function (latLng) {
+                              return latLng.toJSON();
+                            });
+                          }),
+                          pathIndex: pathIndex,
+                          eventName: chMVCEvent.evName,
+                          index: chMVCEvent.index
+                        };
+
+                        if (chMVCEvent.previous) {
+                          retVal.previous = chMVCEvent.previous;
+                        }
+                      }
+
+                      return retVal;
+                    })));
+
+                  case 6:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, this);
+          }));
+        }
+      }]);
+
+      return PolygonManager;
+    }();
+
+    PolygonManager.ɵfac = function PolygonManager_Factory(t) {
+      return new (t || PolygonManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    PolygonManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: PolygonManager,
+      factory: PolygonManager.ɵfac
+    });
+
+    PolygonManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    PolygonManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], PolygonManager);
+    var PolylineManager_1;
+
+    var PolylineManager = PolylineManager_1 = /*#__PURE__*/function () {
+      function PolylineManager(_mapsWrapper, _zone) {
+        _classCallCheck(this, PolylineManager);
+
+        this._mapsWrapper = _mapsWrapper;
+        this._zone = _zone;
+        this._polylines = new Map();
+      }
+
+      _createClass2(PolylineManager, [{
+        key: "addPolyline",
+        value: function addPolyline(line) {
+          var _this54 = this;
+
+          var polylinePromise = this._mapsWrapper.getNativeMap().then(function () {
+            return [PolylineManager_1._convertPoints(line), PolylineManager_1._convertIcons(line)];
+          }).then(function (_ref3) {
+            var _ref4 = _slicedToArray(_ref3, 2),
+                path = _ref4[0],
+                icons = _ref4[1];
+
+            return _this54._mapsWrapper.createPolyline({
+              clickable: line.clickable,
+              draggable: line.draggable,
+              editable: line.editable,
+              geodesic: line.geodesic,
+              strokeColor: line.strokeColor,
+              strokeOpacity: line.strokeOpacity,
+              strokeWeight: line.strokeWeight,
+              visible: line.visible,
+              zIndex: line.zIndex,
+              path: path,
+              icons: icons
+            });
+          });
+
+          this._polylines.set(line, polylinePromise);
+        }
+      }, {
+        key: "updatePolylinePoints",
+        value: function updatePolylinePoints(line) {
+          var _this55 = this;
+
+          var path = PolylineManager_1._convertPoints(line);
+
+          var m = this._polylines.get(line);
+
+          if (m == null) {
+            return Promise.resolve();
+          }
+
+          return m.then(function (l) {
+            return _this55._zone.run(function () {
+              l.setPath(path);
+            });
+          });
+        }
+      }, {
+        key: "updateIconSequences",
+        value: function updateIconSequences(line) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+            var _this56 = this;
+
+            var icons, m;
+            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+              while (1) {
+                switch (_context5.prev = _context5.next) {
+                  case 0:
+                    _context5.next = 2;
+                    return this._mapsWrapper.getNativeMap();
+
+                  case 2:
+                    icons = PolylineManager_1._convertIcons(line);
+                    m = this._polylines.get(line);
+
+                    if (!(m == null)) {
+                      _context5.next = 6;
+                      break;
+                    }
+
+                    return _context5.abrupt("return");
+
+                  case 6:
+                    return _context5.abrupt("return", m.then(function (l) {
+                      return _this56._zone.run(function () {
+                        return l.setOptions({
+                          icons: icons
+                        });
+                      });
+                    }));
+
+                  case 7:
+                  case "end":
+                    return _context5.stop();
+                }
+              }
+            }, _callee5, this);
+          }));
+        }
+      }, {
+        key: "setPolylineOptions",
+        value: function setPolylineOptions(line, options) {
+          return this._polylines.get(line).then(function (l) {
+            l.setOptions(options);
+          });
+        }
+      }, {
+        key: "deletePolyline",
+        value: function deletePolyline(line) {
+          var _this57 = this;
+
+          var m = this._polylines.get(line);
+
+          if (m == null) {
+            return Promise.resolve();
+          }
+
+          return m.then(function (l) {
+            return _this57._zone.run(function () {
+              l.setMap(null);
+
+              _this57._polylines["delete"](line);
+            });
+          });
+        }
+      }, {
+        key: "getMVCPath",
+        value: function getMVCPath(agmPolyline) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+            var polyline;
+            return regeneratorRuntime.wrap(function _callee6$(_context6) {
+              while (1) {
+                switch (_context6.prev = _context6.next) {
+                  case 0:
+                    _context6.next = 2;
+                    return this._polylines.get(agmPolyline);
+
+                  case 2:
+                    polyline = _context6.sent;
+                    return _context6.abrupt("return", polyline.getPath());
+
+                  case 4:
+                  case "end":
+                    return _context6.stop();
+                }
+              }
+            }, _callee6, this);
+          }));
+        }
+      }, {
+        key: "getPath",
+        value: function getPath(agmPolyline) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+            return regeneratorRuntime.wrap(function _callee7$(_context7) {
+              while (1) {
+                switch (_context7.prev = _context7.next) {
+                  case 0:
+                    _context7.next = 2;
+                    return this.getMVCPath(agmPolyline);
+
+                  case 2:
+                    return _context7.abrupt("return", _context7.sent.getArray());
+
+                  case 3:
+                  case "end":
+                    return _context7.stop();
+                }
+              }
+            }, _callee7, this);
+          }));
+        }
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, line) {
+          var _this58 = this;
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (observer) {
+            _this58._polylines.get(line).then(function (l) {
+              l.addListener(eventName, function (e) {
+                return _this58._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+          });
+        }
+      }, {
+        key: "createPathEventObservable",
+        value: function createPathEventObservable(line) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+            var mvcPath;
+            return regeneratorRuntime.wrap(function _callee8$(_context8) {
+              while (1) {
+                switch (_context8.prev = _context8.next) {
+                  case 0:
+                    _context8.next = 2;
+                    return this.getMVCPath(line);
+
+                  case 2:
+                    mvcPath = _context8.sent;
+                    return _context8.abrupt("return", createMVCEventObservable(mvcPath));
+
+                  case 4:
+                  case "end":
+                    return _context8.stop();
+                }
+              }
+            }, _callee8, this);
+          }));
+        }
+      }], [{
+        key: "_convertPoints",
+        value: function _convertPoints(line) {
+          var path = line._getPoints().map(function (point) {
+            return {
+              lat: point.latitude,
+              lng: point.longitude
+            };
+          });
+
+          return path;
+        }
+      }, {
+        key: "_convertPath",
+        value: function _convertPath(path) {
+          var symbolPath = google.maps.SymbolPath[path];
+
+          if (typeof symbolPath === 'number') {
+            return symbolPath;
+          } else {
+            return path;
+          }
+        }
+      }, {
+        key: "_convertIcons",
+        value: function _convertIcons(line) {
+          var icons = line._getIcons().map(function (agmIcon) {
+            return {
+              fixedRotation: agmIcon.fixedRotation,
+              offset: agmIcon.offset,
+              repeat: agmIcon.repeat,
+              icon: {
+                anchor: new google.maps.Point(agmIcon.anchorX, agmIcon.anchorY),
+                fillColor: agmIcon.fillColor,
+                fillOpacity: agmIcon.fillOpacity,
+                path: PolylineManager_1._convertPath(agmIcon.path),
+                rotation: agmIcon.rotation,
+                scale: agmIcon.scale,
+                strokeColor: agmIcon.strokeColor,
+                strokeOpacity: agmIcon.strokeOpacity,
+                strokeWeight: agmIcon.strokeWeight
+              }
+            };
+          }); // prune undefineds;
+
+
+          icons.forEach(function (icon) {
+            Object.entries(icon).forEach(function (_ref5) {
+              var _ref6 = _slicedToArray(_ref5, 2),
+                  key = _ref6[0],
+                  val = _ref6[1];
+
+              if (typeof val === 'undefined') {
+                delete icon[key];
+              }
+            });
+
+            if (typeof icon.icon.anchor.x === 'undefined' || typeof icon.icon.anchor.y === 'undefined') {
+              delete icon.icon.anchor;
+            }
+          });
+          return icons;
+        }
+      }]);
+
+      return PolylineManager;
+    }();
+
+    PolylineManager.ɵfac = function PolylineManager_Factory(t) {
+      return new (t || PolylineManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    PolylineManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: PolylineManager,
+      factory: PolylineManager.ɵfac
+    });
+
+    PolylineManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    PolylineManager = PolylineManager_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], PolylineManager);
+
+    var RectangleManager = /*#__PURE__*/function () {
+      function RectangleManager(_apiWrapper, _zone) {
+        _classCallCheck(this, RectangleManager);
+
+        this._apiWrapper = _apiWrapper;
+        this._zone = _zone;
+        this._rectangles = new Map();
+      }
+
+      _createClass2(RectangleManager, [{
+        key: "addRectangle",
+        value: function addRectangle(rectangle) {
+          this._rectangles.set(rectangle, this._apiWrapper.createRectangle({
+            bounds: {
+              north: rectangle.north,
+              east: rectangle.east,
+              south: rectangle.south,
+              west: rectangle.west
+            },
+            clickable: rectangle.clickable,
+            draggable: rectangle.draggable,
+            editable: rectangle.editable,
+            fillColor: rectangle.fillColor,
+            fillOpacity: rectangle.fillOpacity,
+            strokeColor: rectangle.strokeColor,
+            strokeOpacity: rectangle.strokeOpacity,
+            strokePosition: rectangle.strokePosition,
+            strokeWeight: rectangle.strokeWeight,
+            visible: rectangle.visible,
+            zIndex: rectangle.zIndex
+          }));
+        }
+        /**
+         * Removes the given rectangle from the map.
+         */
+
+      }, {
+        key: "removeRectangle",
+        value: function removeRectangle(rectangle) {
+          var _this59 = this;
+
+          return this._rectangles.get(rectangle).then(function (r) {
+            r.setMap(null);
+
+            _this59._rectangles["delete"](rectangle);
+          });
+        }
+      }, {
+        key: "setOptions",
+        value: function setOptions(rectangle, options) {
+          return this._rectangles.get(rectangle).then(function (r) {
+            return r.setOptions(options);
+          });
+        }
+      }, {
+        key: "getBounds",
+        value: function getBounds(rectangle) {
+          return this._rectangles.get(rectangle).then(function (r) {
+            return r.getBounds();
+          });
+        }
+      }, {
+        key: "setBounds",
+        value: function setBounds(rectangle) {
+          return this._rectangles.get(rectangle).then(function (r) {
+            return r.setBounds({
+              north: rectangle.north,
+              east: rectangle.east,
+              south: rectangle.south,
+              west: rectangle.west
+            });
+          });
+        }
+      }, {
+        key: "setEditable",
+        value: function setEditable(rectangle) {
+          return this._rectangles.get(rectangle).then(function (r) {
+            return r.setEditable(rectangle.editable);
+          });
+        }
+      }, {
+        key: "setDraggable",
+        value: function setDraggable(rectangle) {
+          return this._rectangles.get(rectangle).then(function (r) {
+            return r.setDraggable(rectangle.draggable);
+          });
+        }
+      }, {
+        key: "setVisible",
+        value: function setVisible(rectangle) {
+          return this._rectangles.get(rectangle).then(function (r) {
+            return r.setVisible(rectangle.visible);
+          });
+        }
+      }, {
+        key: "createEventObservable",
+        value: function createEventObservable(eventName, rectangle) {
+          var _this60 = this;
+
+          return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
+            var listener = null;
+
+            _this60._rectangles.get(rectangle).then(function (r) {
+              listener = r.addListener(eventName, function (e) {
+                return _this60._zone.run(function () {
+                  return observer.next(e);
+                });
+              });
+            });
+
+            return function () {
+              if (listener !== null) {
+                listener.remove();
+              }
+            };
+          });
+        }
+      }]);
+
+      return RectangleManager;
+    }();
+
+    RectangleManager.ɵfac = function RectangleManager_Factory(t) {
+      return new (t || RectangleManager)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    RectangleManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: RectangleManager,
+      factory: RectangleManager.ɵfac
+    });
+
+    RectangleManager.ctorParameters = function () {
+      return [{
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    RectangleManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [GoogleMapsAPIWrapper, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], RectangleManager);
+    var AgmMap_1;
+    /**
+     * AgmMap renders a Google Map.
+     * **Important note**: To be able see a map in the browser, you have to define a height for the
+     * element `agm-map`.
+     *
+     * ### Example
+     * ```typescript
+     * import { Component } from '@angular/core';
+     *
+     * @Component({
+     *  selector: 'my-map-cmp',
+     *  styles: [`
+     *    agm-map {
+     *      height: 300px;
+     *    }
+     * `],
+     *  template: `
+     *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     *    </agm-map>
+     *  `
+     * })
+     * ```
+     */
+
+    var AgmMap = AgmMap_1 = /*#__PURE__*/function () {
+      function AgmMap(_elem, _mapsWrapper, _platformId, _fitBoundsService, _zone) {
+        _classCallCheck(this, AgmMap);
+
+        this._elem = _elem;
+        this._mapsWrapper = _mapsWrapper;
+        this._platformId = _platformId;
+        this._fitBoundsService = _fitBoundsService;
+        this._zone = _zone;
+        /**
+         * The longitude that defines the center of the map.
+         */
+
+        this.longitude = 0;
+        /**
+         * The latitude that defines the center of the map.
+         */
+
+        this.latitude = 0;
+        /**
+         * The zoom level of the map. The default zoom level is 8.
+         */
+
+        this.zoom = 8;
+        /**
+         * Enables/disables if map is draggable.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.draggable = true;
+        /**
+         * Enables/disables zoom and center on double click. Enabled by default.
+         */
+
+        this.disableDoubleClickZoom = false;
+        /**
+         * Enables/disables all default UI of the Google map. Please note: When the map is created, this
+         * value cannot get updated.
+         */
+
+        this.disableDefaultUI = false;
+        /**
+         * If false, disables scrollwheel zooming on the map. The scrollwheel is enabled by default.
+         */
+
+        this.scrollwheel = true;
+        /**
+         * If false, prevents the map from being controlled by the keyboard. Keyboard shortcuts are
+         * enabled by default.
+         */
+
+        this.keyboardShortcuts = true;
+        /**
+         * Styles to apply to each of the default map types. Note that for Satellite/Hybrid and Terrain
+         * modes, these styles will only apply to labels and geometry.
+         */
+
+        this.styles = [];
+        /**
+         * When true and the latitude and/or longitude values changes, the Google Maps panTo method is
+         * used to
+         * center the map. See: https://developers.google.com/maps/documentation/javascript/reference#Map
+         */
+
+        this.usePanning = false;
+        /**
+         * Sets the viewport to contain the given bounds.
+         * If this option to `true`, the bounds get automatically computed from all elements that use the {@link AgmFitBounds} directive.
+         */
+
+        this.fitBounds = false;
+        /**
+         * The initial enabled/disabled state of the Scale control. This is disabled by default.
+         */
+
+        this.scaleControl = false;
+        /**
+         * The initial enabled/disabled state of the Map type control.
+         */
+
+        this.mapTypeControl = false;
+        /**
+         * The initial enabled/disabled state of the Pan control.
+         */
+
+        this.panControl = false;
+        /**
+         * The initial enabled/disabled state of the Rotate control.
+         */
+
+        this.rotateControl = false;
+        /**
+         * The initial enabled/disabled state of the Fullscreen control.
+         */
+
+        this.fullscreenControl = false;
+        /**
+         * The map mapTypeId. Defaults to 'roadmap'.
+         */
+
+        this.mapTypeId = 'roadmap';
+        /**
+         * When false, map icons are not clickable. A map icon represents a point of interest,
+         * also known as a POI. By default map icons are clickable.
+         */
+
+        this.clickableIcons = true;
+        /**
+         * A map icon represents a point of interest, also known as a POI.
+         * When map icons are clickable by default, an info window is displayed.
+         * When this property is set to false, the info window will not be shown but the click event
+         * will still fire
+         */
+
+        this.showDefaultInfoWindow = true;
+        /**
+         * This setting controls how gestures on the map are handled.
+         * Allowed values:
+         * - 'cooperative' (Two-finger touch gestures pan and zoom the map. One-finger touch gestures are not handled by the map.)
+         * - 'greedy'      (All touch gestures pan or zoom the map.)
+         * - 'none'        (The map cannot be panned or zoomed by user gestures.)
+         * - 'auto'        [default] (Gesture handling is either cooperative or greedy, depending on whether the page is scrollable or not.
+         */
+
+        this.gestureHandling = 'auto';
+        /**
+         * Controls the automatic switching behavior for the angle of incidence of
+         * the map. The only allowed values are 0 and 45. The value 0 causes the map
+         * to always use a 0° overhead view regardless of the zoom level and
+         * viewport. The value 45 causes the tilt angle to automatically switch to
+         * 45 whenever 45° imagery is available for the current zoom level and
+         * viewport, and switch back to 0 whenever 45° imagery is not available
+         * (this is the default behavior). 45° imagery is only available for
+         * satellite and hybrid map types, within some locations, and at some zoom
+         * levels. Note: getTilt returns the current tilt angle, not the value
+         * specified by this option. Because getTilt and this option refer to
+         * different things, do not bind() the tilt property; doing so may yield
+         * unpredictable effects. (Default of AGM is 0 (disabled). Enable it with value 45.)
+         */
+
+        this.tilt = 0;
+        this._observableSubscriptions = [];
+        /**
+         * This event emitter gets emitted when the user clicks on the map (but not when they click on a
+         * marker or infoWindow).
+         */
+
+        this.mapClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user right-clicks on the map (but not when they click
+         * on a marker or infoWindow).
+         */
+
+        this.mapRightClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user double-clicks on the map (but not when they click
+         * on a marker or infoWindow).
+         */
+
+        this.mapDblClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter is fired when the map center changes.
+         */
+
+        this.centerChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the viewport bounds have changed.
+         */
+
+        this.boundsChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the mapTypeId property changes.
+         */
+
+        this.mapTypeIdChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the map becomes idle after panning or zooming.
+         */
+
+        this.idle = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the zoom level has changed.
+         */
+
+        this.zoomChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the google map is fully initialized.
+         * You get the google.maps.Map instance as a result of this EventEmitter.
+         */
+
+        this.mapReady = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the visible tiles have finished loading.
+         */
+
+        this.tilesLoaded = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+      }
+      /** @internal */
+
+
+      _createClass2(AgmMap, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          if (Object(_angular_common__WEBPACK_IMPORTED_MODULE_4__["isPlatformServer"])(this._platformId)) {
+            // The code is running on the server, do nothing
+            return;
+          } // todo: this should be solved with a new component and a viewChild decorator
+
+
+          var container = this._elem.nativeElement.querySelector('.agm-map-container-inner');
+
+          this._initMapInstance(container);
+        }
+      }, {
+        key: "_initMapInstance",
+        value: function _initMapInstance(el) {
+          var _this61 = this;
+
+          this._mapsWrapper.createMap(el, {
+            center: {
+              lat: this.latitude || 0,
+              lng: this.longitude || 0
+            },
+            zoom: this.zoom,
+            minZoom: this.minZoom,
+            maxZoom: this.maxZoom,
+            controlSize: this.controlSize,
+            disableDefaultUI: this.disableDefaultUI,
+            disableDoubleClickZoom: this.disableDoubleClickZoom,
+            scrollwheel: this.scrollwheel,
+            backgroundColor: this.backgroundColor,
+            draggable: this.draggable,
+            draggableCursor: this.draggableCursor,
+            draggingCursor: this.draggingCursor,
+            keyboardShortcuts: this.keyboardShortcuts,
+            styles: this.styles,
+            zoomControl: this.zoomControl,
+            zoomControlOptions: this.zoomControlOptions,
+            streetViewControl: this.streetViewControl,
+            streetViewControlOptions: this.streetViewControlOptions,
+            scaleControl: this.scaleControl,
+            scaleControlOptions: this.scaleControlOptions,
+            mapTypeControl: this.mapTypeControl,
+            mapTypeControlOptions: this.mapTypeControlOptions,
+            panControl: this.panControl,
+            panControlOptions: this.panControlOptions,
+            rotateControl: this.rotateControl,
+            rotateControlOptions: this.rotateControlOptions,
+            fullscreenControl: this.fullscreenControl,
+            fullscreenControlOptions: this.fullscreenControlOptions,
+            mapTypeId: this.mapTypeId,
+            clickableIcons: this.clickableIcons,
+            gestureHandling: this.gestureHandling,
+            tilt: this.tilt,
+            restriction: this.restriction
+          }).then(function () {
+            return _this61._mapsWrapper.getNativeMap();
+          }).then(function (map) {
+            return _this61.mapReady.emit(map);
+          }); // register event listeners
+
+
+          this._handleMapCenterChange();
+
+          this._handleMapZoomChange();
+
+          this._handleMapMouseEvents();
+
+          this._handleBoundsChange();
+
+          this._handleMapTypeIdChange();
+
+          this._handleTilesLoadedEvent();
+
+          this._handleIdleEvent();
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          // unsubscribe all registered observable subscriptions
+          this._observableSubscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          }); // remove all listeners from the map instance
+
+
+          this._mapsWrapper.clearInstanceListeners();
+
+          if (this._fitBoundsSubscription) {
+            this._fitBoundsSubscription.unsubscribe();
+          }
+        }
+        /* @internal */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          this._updateMapOptionsChanges(changes);
+
+          this._updatePosition(changes);
+        }
+      }, {
+        key: "_updateMapOptionsChanges",
+        value: function _updateMapOptionsChanges(changes) {
+          var options = {};
+          var optionKeys = Object.keys(changes).filter(function (k) {
+            return AgmMap_1._mapOptionsAttributes.indexOf(k) !== -1;
+          });
+          optionKeys.forEach(function (k) {
+            options[k] = changes[k].currentValue;
+          });
+
+          this._mapsWrapper.setMapOptions(options);
+        }
+        /**
+         * Triggers a resize event on the google map instance.
+         * When recenter is true, the of the google map gets called with the current lat/lng values or fitBounds value to recenter the map.
+         * Returns a promise that gets resolved after the event was triggered.
+         */
+
+      }, {
+        key: "triggerResize",
+        value: function triggerResize() {
+          var _this62 = this;
+
+          var recenter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+          // Note: When we would trigger the resize event and show the map in the same turn (which is a
+          // common case for triggering a resize event), then the resize event would not
+          // work (to show the map), so we trigger the event in a timeout.
+          return new Promise(function (resolve) {
+            setTimeout(function () {
+              return _this62._mapsWrapper.triggerMapEvent('resize').then(function () {
+                if (recenter) {
+                  _this62.fitBounds != null ? _this62._fitBounds() : _this62._setCenter();
+                }
+
+                resolve();
+              });
+            });
+          });
+        }
+      }, {
+        key: "_updatePosition",
+        value: function _updatePosition(changes) {
+          if (changes['latitude'] == null && changes['longitude'] == null && !changes['fitBounds']) {
+            // no position update needed
+            return;
+          } // we prefer fitBounds in changes
+
+
+          if ('fitBounds' in changes) {
+            this._fitBounds();
+
+            return;
+          }
+
+          if (typeof this.latitude !== 'number' || typeof this.longitude !== 'number') {
+            return;
+          }
+
+          this._setCenter();
+        }
+      }, {
+        key: "_setCenter",
+        value: function _setCenter() {
+          var newCenter = {
+            lat: this.latitude,
+            lng: this.longitude
+          };
+
+          if (this.usePanning) {
+            this._mapsWrapper.panTo(newCenter);
+          } else {
+            this._mapsWrapper.setCenter(newCenter);
+          }
+        }
+      }, {
+        key: "_fitBounds",
+        value: function _fitBounds() {
+          switch (this.fitBounds) {
+            case true:
+              this._subscribeToFitBoundsUpdates();
+
+              break;
+
+            case false:
+              if (this._fitBoundsSubscription) {
+                this._fitBoundsSubscription.unsubscribe();
+              }
+
+              break;
+
+            default:
+              this._updateBounds(this.fitBounds, this.fitBoundsPadding);
+
+          }
+        }
+      }, {
+        key: "_subscribeToFitBoundsUpdates",
+        value: function _subscribeToFitBoundsUpdates() {
+          var _this63 = this;
+
+          this._zone.runOutsideAngular(function () {
+            _this63._fitBoundsSubscription = _this63._fitBoundsService.getBounds$().subscribe(function (b) {
+              _this63._zone.run(function () {
+                return _this63._updateBounds(b, _this63.fitBoundsPadding);
+              });
+            });
+          });
+        }
+      }, {
+        key: "_updateBounds",
+        value: function _updateBounds(bounds, padding) {
+          if (!bounds) {
+            return;
+          }
+
+          if (this._isLatLngBoundsLiteral(bounds) && typeof google !== 'undefined' && google && google.maps && google.maps.LatLngBounds) {
+            var newBounds = new google.maps.LatLngBounds();
+            newBounds.union(bounds);
+            bounds = newBounds;
+          }
+
+          if (this.usePanning) {
+            this._mapsWrapper.panToBounds(bounds, padding);
+
+            return;
+          }
+
+          this._mapsWrapper.fitBounds(bounds, padding);
+        }
+      }, {
+        key: "_isLatLngBoundsLiteral",
+        value: function _isLatLngBoundsLiteral(bounds) {
+          return bounds != null && bounds.extend === undefined;
+        }
+      }, {
+        key: "_handleMapCenterChange",
+        value: function _handleMapCenterChange() {
+          var _this64 = this;
+
+          var s = this._mapsWrapper.subscribeToMapEvent('center_changed').subscribe(function () {
+            _this64._mapsWrapper.getCenter().then(function (center) {
+              _this64.latitude = center.lat();
+              _this64.longitude = center.lng();
+
+              _this64.centerChange.emit({
+                lat: _this64.latitude,
+                lng: _this64.longitude
+              });
+            });
+          });
+
+          this._observableSubscriptions.push(s);
+        }
+      }, {
+        key: "_handleBoundsChange",
+        value: function _handleBoundsChange() {
+          var _this65 = this;
+
+          var s = this._mapsWrapper.subscribeToMapEvent('bounds_changed').subscribe(function () {
+            _this65._mapsWrapper.getBounds().then(function (bounds) {
+              _this65.boundsChange.emit(bounds);
+            });
+          });
+
+          this._observableSubscriptions.push(s);
+        }
+      }, {
+        key: "_handleMapTypeIdChange",
+        value: function _handleMapTypeIdChange() {
+          var _this66 = this;
+
+          var s = this._mapsWrapper.subscribeToMapEvent('maptypeid_changed').subscribe(function () {
+            _this66._mapsWrapper.getMapTypeId().then(function (mapTypeId) {
+              _this66.mapTypeIdChange.emit(mapTypeId);
+            });
+          });
+
+          this._observableSubscriptions.push(s);
+        }
+      }, {
+        key: "_handleMapZoomChange",
+        value: function _handleMapZoomChange() {
+          var _this67 = this;
+
+          var s = this._mapsWrapper.subscribeToMapEvent('zoom_changed').subscribe(function () {
+            _this67._mapsWrapper.getZoom().then(function (z) {
+              _this67.zoom = z;
+
+              _this67.zoomChange.emit(z);
+            });
+          });
+
+          this._observableSubscriptions.push(s);
+        }
+      }, {
+        key: "_handleIdleEvent",
+        value: function _handleIdleEvent() {
+          var _this68 = this;
+
+          var s = this._mapsWrapper.subscribeToMapEvent('idle').subscribe(function () {
+            _this68.idle.emit(void 0);
+          });
+
+          this._observableSubscriptions.push(s);
+        }
+      }, {
+        key: "_handleTilesLoadedEvent",
+        value: function _handleTilesLoadedEvent() {
+          var _this69 = this;
+
+          var s = this._mapsWrapper.subscribeToMapEvent('tilesloaded').subscribe(function () {
+            return _this69.tilesLoaded.emit(void 0);
+          });
+
+          this._observableSubscriptions.push(s);
+        }
+      }, {
+        key: "_handleMapMouseEvents",
+        value: function _handleMapMouseEvents() {
+          var _this70 = this;
+
+          var events = [{
+            name: 'click',
+            emitter: this.mapClick
+          }, {
+            name: 'rightclick',
+            emitter: this.mapRightClick
+          }, {
+            name: 'dblclick',
+            emitter: this.mapDblClick
+          }];
+          events.forEach(function (e) {
+            var s = _this70._mapsWrapper.subscribeToMapEvent(e.name).subscribe(function (event) {
+              var value = {
+                coords: {
+                  lat: event.latLng.lat(),
+                  lng: event.latLng.lng()
+                },
+                placeId: event.placeId
+              }; // the placeId will be undefined in case the event was not an IconMouseEvent (google types)
+
+              if (value.placeId && !_this70.showDefaultInfoWindow) {
+                event.stop();
+              }
+
+              e.emitter.emit(value);
+            });
+
+            _this70._observableSubscriptions.push(s);
+          });
+        }
+      }]);
+
+      return AgmMap;
+    }();
+
+    AgmMap.ɵfac = function AgmMap_Factory(t) {
+      return new (t || AgmMap)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](GoogleMapsAPIWrapper), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](FitBoundsService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+    };
+
+    AgmMap.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      type: AgmMap,
+      selectors: [["agm-map"]],
+      hostVars: 2,
+      hostBindings: function AgmMap_HostBindings(rf, ctx) {
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("sebm-google-map-container", true);
+        }
+      },
+      inputs: {
+        longitude: "longitude",
+        latitude: "latitude",
+        zoom: "zoom",
+        draggable: ["mapDraggable", "draggable"],
+        disableDoubleClickZoom: "disableDoubleClickZoom",
+        disableDefaultUI: "disableDefaultUI",
+        scrollwheel: "scrollwheel",
+        keyboardShortcuts: "keyboardShortcuts",
+        styles: "styles",
+        usePanning: "usePanning",
+        fitBounds: "fitBounds",
+        scaleControl: "scaleControl",
+        mapTypeControl: "mapTypeControl",
+        panControl: "panControl",
+        rotateControl: "rotateControl",
+        fullscreenControl: "fullscreenControl",
+        mapTypeId: "mapTypeId",
+        clickableIcons: "clickableIcons",
+        showDefaultInfoWindow: "showDefaultInfoWindow",
+        gestureHandling: "gestureHandling",
+        tilt: "tilt",
+        minZoom: "minZoom",
+        maxZoom: "maxZoom",
+        controlSize: "controlSize",
+        backgroundColor: "backgroundColor",
+        draggableCursor: "draggableCursor",
+        draggingCursor: "draggingCursor",
+        zoomControl: "zoomControl",
+        zoomControlOptions: "zoomControlOptions",
+        streetViewControl: "streetViewControl",
+        streetViewControlOptions: "streetViewControlOptions",
+        fitBoundsPadding: "fitBoundsPadding",
+        scaleControlOptions: "scaleControlOptions",
+        mapTypeControlOptions: "mapTypeControlOptions",
+        panControlOptions: "panControlOptions",
+        rotateControlOptions: "rotateControlOptions",
+        fullscreenControlOptions: "fullscreenControlOptions",
+        restriction: "restriction"
+      },
+      outputs: {
+        mapClick: "mapClick",
+        mapRightClick: "mapRightClick",
+        mapDblClick: "mapDblClick",
+        centerChange: "centerChange",
+        boundsChange: "boundsChange",
+        mapTypeIdChange: "mapTypeIdChange",
+        idle: "idle",
+        zoomChange: "zoomChange",
+        mapReady: "mapReady",
+        tilesLoaded: "tilesLoaded"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([CircleManager, DataLayerManager, DataLayerManager, FitBoundsService, GoogleMapsAPIWrapper, InfoWindowManager, KmlLayerManager, LayerManager, MarkerManager, PolygonManager, PolylineManager, RectangleManager]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
+      ngContentSelectors: _c0,
+      decls: 3,
+      vars: 0,
+      consts: [[1, "agm-map-container-inner", "sebm-google-map-container-inner"], [1, "agm-map-content"]],
+      template: function AgmMap_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      },
+      styles: [".agm-map-container-inner[_ngcontent-%COMP%] {\n      width: inherit;\n      height: inherit;\n    }\n    .agm-map-content[_ngcontent-%COMP%] {\n      display:none;\n    }"]
+    });
+    /**
+     * Map option attributes that can change over time
+     */
+
+    AgmMap._mapOptionsAttributes = ['disableDoubleClickZoom', 'scrollwheel', 'draggable', 'draggableCursor', 'draggingCursor', 'keyboardShortcuts', 'zoomControl', 'zoomControlOptions', 'styles', 'streetViewControl', 'streetViewControlOptions', 'zoom', 'mapTypeControl', 'mapTypeControlOptions', 'minZoom', 'maxZoom', 'panControl', 'panControlOptions', 'rotateControl', 'rotateControlOptions', 'fullscreenControl', 'fullscreenControlOptions', 'scaleControl', 'scaleControlOptions', 'mapTypeId', 'clickableIcons', 'gestureHandling', 'tilt', 'restriction'];
+
+    AgmMap.ctorParameters = function () {
+      return [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+      }, {
+        type: GoogleMapsAPIWrapper
+      }, {
+        type: Object,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+          args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]]
+        }]
+      }, {
+        type: FitBoundsService
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "longitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "latitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "zoom", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmMap.prototype, "minZoom", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmMap.prototype, "maxZoom", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmMap.prototype, "controlSize", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mapDraggable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "draggable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "disableDoubleClickZoom", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "disableDefaultUI", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "scrollwheel", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMap.prototype, "backgroundColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMap.prototype, "draggableCursor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMap.prototype, "draggingCursor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "keyboardShortcuts", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], AgmMap.prototype, "zoomControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "zoomControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array)], AgmMap.prototype, "styles", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "usePanning", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], AgmMap.prototype, "streetViewControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "streetViewControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "fitBounds", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "fitBoundsPadding", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "scaleControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "scaleControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "mapTypeControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "mapTypeControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "panControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "panControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "rotateControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "rotateControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "fullscreenControl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "fullscreenControlOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMap.prototype, "mapTypeId", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "clickableIcons", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "showDefaultInfoWindow", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMap.prototype, "gestureHandling", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "tilt", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMap.prototype, "restriction", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "mapClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "mapRightClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "mapDblClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "centerChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "boundsChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "mapTypeIdChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "idle", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "zoomChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "mapReady", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMap.prototype, "tilesLoaded", void 0);
+    AgmMap = AgmMap_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"])), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], GoogleMapsAPIWrapper, Object, FitBoundsService, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], AgmMap);
+    var AgmMarker_1;
+    var markerId = 0;
+    /**
+     * AgmMarker renders a map marker inside a {@link AgmMap}.
+     *
+     * ### Example
+     * ```typescript
+     * import { Component } from '@angular/core';
+     *
+     * @Component({
+     *  selector: 'my-map-cmp',
+     *  styles: [`
+     *    .agm-map-container {
+     *      height: 300px;
+     *    }
+     * `],
+     *  template: `
+     *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     *      <agm-marker [latitude]="lat" [longitude]="lng" [label]="'M'">
+     *      </agm-marker>
+     *    </agm-map>
+     *  `
+     * })
+     * ```
+     */
+
+    var AgmMarker = AgmMarker_1 = /*#__PURE__*/function () {
+      function AgmMarker(_markerManager) {
+        _classCallCheck(this, AgmMarker);
+
+        this._markerManager = _markerManager;
+        /**
+         * If true, the marker can be dragged. Default value is false.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.draggable = false;
+        /**
+         * If true, the marker is visible
+         */
+
+        this.visible = true;
+        /**
+         * Whether to automatically open the child info window when the marker is clicked.
+         */
+
+        this.openInfoWindow = true;
+        /**
+         * The marker's opacity between 0.0 and 1.0.
+         */
+
+        this.opacity = 1;
+        /**
+         * All markers are displayed on the map in order of their zIndex, with higher values displaying in
+         * front of markers with lower values. By default, markers are displayed according to their
+         * vertical position on screen, with lower markers appearing in front of markers further up the
+         * screen.
+         */
+
+        this.zIndex = 1;
+        /**
+         * If true, the marker can be clicked. Default value is true.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.clickable = true;
+        /**
+         * This event is fired when the marker's animation property changes.
+         *
+         * @memberof AgmMarker
+         */
+
+        this.animationChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the marker.
+         */
+
+        this.markerClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks twice on the marker.
+         */
+
+        this.markerDblClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user rightclicks on the marker.
+         */
+
+        this.markerRightClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the marker.
+         */
+
+        this.dragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the marker.
+         */
+
+        this.drag = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the marker.
+         */
+
+        this.dragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user mouses over the marker.
+         */
+
+        this.mouseOver = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user mouses outside the marker.
+         */
+
+        this.mouseOut = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /** @internal */
+
+        this.infoWindow = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["QueryList"]();
+        this._markerAddedToManger = false;
+        this._observableSubscriptions = [];
+        this._fitBoundsDetails$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"](1);
+        this._id = (markerId++).toString();
+      }
+      /* @internal */
+
+
+      _createClass2(AgmMarker, [{
+        key: "ngAfterContentInit",
+        value: function ngAfterContentInit() {
+          var _this71 = this;
+
+          this.handleInfoWindowUpdate();
+          this.infoWindow.changes.subscribe(function () {
+            return _this71.handleInfoWindowUpdate();
+          });
+        }
+      }, {
+        key: "handleInfoWindowUpdate",
+        value: function handleInfoWindowUpdate() {
+          var _this72 = this;
+
+          if (this.infoWindow.length > 1) {
+            throw new Error('Expected no more than one info window.');
+          }
+
+          this.infoWindow.forEach(function (marker) {
+            marker.hostMarker = _this72;
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (typeof this.latitude === 'string') {
+            this.latitude = Number(this.latitude);
+          }
+
+          if (typeof this.longitude === 'string') {
+            this.longitude = Number(this.longitude);
+          }
+
+          if (typeof this.latitude !== 'number' || typeof this.longitude !== 'number') {
+            return;
+          }
+
+          if (!this._markerAddedToManger) {
+            this._markerManager.addMarker(this);
+
+            this._updateFitBoundsDetails();
+
+            this._markerAddedToManger = true;
+
+            this._addEventListeners();
+
+            return;
+          }
+
+          if (changes['latitude'] || changes['longitude']) {
+            this._markerManager.updateMarkerPosition(this);
+
+            this._updateFitBoundsDetails();
+          }
+
+          if (changes['title']) {
+            this._markerManager.updateTitle(this);
+          }
+
+          if (changes['label']) {
+            this._markerManager.updateLabel(this);
+          }
+
+          if (changes['draggable']) {
+            this._markerManager.updateDraggable(this);
+          }
+
+          if (changes['iconUrl']) {
+            this._markerManager.updateIcon(this);
+          }
+
+          if (changes['opacity']) {
+            this._markerManager.updateOpacity(this);
+          }
+
+          if (changes['visible']) {
+            this._markerManager.updateVisible(this);
+          }
+
+          if (changes['zIndex']) {
+            this._markerManager.updateZIndex(this);
+          }
+
+          if (changes['clickable']) {
+            this._markerManager.updateClickable(this);
+          }
+
+          if (changes['animation']) {
+            this._markerManager.updateAnimation(this);
+          }
+        }
+        /** @internal */
+
+      }, {
+        key: "getFitBoundsDetails$",
+        value: function getFitBoundsDetails$() {
+          return this._fitBoundsDetails$.asObservable();
+        }
+      }, {
+        key: "_updateFitBoundsDetails",
+        value: function _updateFitBoundsDetails() {
+          this._fitBoundsDetails$.next({
+            latLng: {
+              lat: this.latitude,
+              lng: this.longitude
+            }
+          });
+        }
+      }, {
+        key: "_addEventListeners",
+        value: function _addEventListeners() {
+          var _this73 = this;
+
+          var cs = this._markerManager.createEventObservable('click', this).subscribe(function () {
+            if (_this73.openInfoWindow) {
+              _this73.infoWindow.forEach(function (infoWindow) {
+                return infoWindow.open();
+              });
+            }
+
+            _this73.markerClick.emit(_this73);
+          });
+
+          this._observableSubscriptions.push(cs);
+
+          var dcs = this._markerManager.createEventObservable('dblclick', this).subscribe(function () {
+            _this73.markerDblClick.emit(null);
+          });
+
+          this._observableSubscriptions.push(dcs);
+
+          var rc = this._markerManager.createEventObservable('rightclick', this).subscribe(function () {
+            _this73.markerRightClick.emit(null);
+          });
+
+          this._observableSubscriptions.push(rc);
+
+          var ds = this._markerManager.createEventObservable('dragstart', this).subscribe(function (e) {
+            _this73.dragStart.emit({
+              coords: {
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng()
+              }
+            });
+          });
+
+          this._observableSubscriptions.push(ds);
+
+          var d = this._markerManager.createEventObservable('drag', this).subscribe(function (e) {
+            _this73.drag.emit({
+              coords: {
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng()
+              }
+            });
+          });
+
+          this._observableSubscriptions.push(d);
+
+          var de = this._markerManager.createEventObservable('dragend', this).subscribe(function (e) {
+            _this73.dragEnd.emit({
+              coords: {
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng()
+              }
+            });
+          });
+
+          this._observableSubscriptions.push(de);
+
+          var mover = this._markerManager.createEventObservable('mouseover', this).subscribe(function (e) {
+            _this73.mouseOver.emit({
+              coords: {
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng()
+              }
+            });
+          });
+
+          this._observableSubscriptions.push(mover);
+
+          var mout = this._markerManager.createEventObservable('mouseout', this).subscribe(function (e) {
+            _this73.mouseOut.emit({
+              coords: {
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng()
+              }
+            });
+          });
+
+          this._observableSubscriptions.push(mout);
+
+          var anChng = this._markerManager.createEventObservable('animation_changed', this).subscribe(function () {
+            _this73.animationChange.emit(_this73.animation);
+          });
+
+          this._observableSubscriptions.push(anChng);
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          return 'AgmMarker-' + this._id.toString();
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._markerManager.deleteMarker(this); // unsubscribe all registered observable subscriptions
+
+
+          this._observableSubscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          });
+        }
+      }]);
+
+      return AgmMarker;
+    }();
+
+    AgmMarker.ɵfac = function AgmMarker_Factory(t) {
+      return new (t || AgmMarker)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](MarkerManager));
+    };
+
+    AgmMarker.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmMarker,
+      selectors: [["agm-marker"]],
+      contentQueries: function AgmMarker_ContentQueries(rf, ctx, dirIndex) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵcontentQuery"](dirIndex, AgmInfoWindow, false);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.infoWindow = _t);
+        }
+      },
+      inputs: {
+        latitude: "latitude",
+        longitude: "longitude",
+        title: "title",
+        label: "label",
+        draggable: ["markerDraggable", "draggable"],
+        iconUrl: "iconUrl",
+        openInfoWindow: "openInfoWindow",
+        opacity: "opacity",
+        visible: "visible",
+        zIndex: "zIndex",
+        animation: "animation",
+        clickable: ["markerClickable", "clickable"]
+      },
+      outputs: {
+        markerClick: "markerClick",
+        dragStart: "dragStart",
+        drag: "drag",
+        dragEnd: "dragEnd",
+        mouseOver: "mouseOver",
+        mouseOut: "mouseOut",
+        animationChange: "animationChange",
+        markerDblClick: "markerDblClick",
+        markerRightClick: "markerRightClick"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([{
+        provide: FitBoundsAccessor,
+        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
+          return AgmMarker_1;
+        })
+      }]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+
+    AgmMarker.ctorParameters = function () {
+      return [{
+        type: MarkerManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmMarker.prototype, "latitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmMarker.prototype, "longitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMarker.prototype, "title", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "label", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('markerDraggable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "draggable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMarker.prototype, "iconUrl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "visible", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "openInfoWindow", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "opacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('markerClickable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "clickable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmMarker.prototype, "animation", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmMarker.prototype, "animationChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "markerClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "markerDblClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "markerRightClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "dragStart", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "drag", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "dragEnd", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "mouseOver", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmMarker.prototype, "mouseOut", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(AgmInfoWindow), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["QueryList"])], AgmMarker.prototype, "infoWindow", void 0);
+    AgmMarker = AgmMarker_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [MarkerManager])], AgmMarker);
+    var AgmPolygon_1;
+    /**
+     * AgmPolygon renders a polygon on a {@link AgmMap}
+     *
+     * ### Example
+     * ```typescript
+     * import { Component } from '@angular/core';
+     *
+     * @Component({
+     *  selector: 'my-map-cmp',
+     *  styles: [`
+     *    agm-map {
+     *      height: 300px;
+     *    }
+     * `],
+     *  template: `
+     *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     *      <agm-polygon [paths]="paths">
+     *      </agm-polygon>
+     *    </agm-map>
+     *  `
+     * })
+     * export class MyMapCmp {
+     *   lat: number = 0;
+     *   lng: number = 0;
+     *   zoom: number = 10;
+     *   paths: Array<LatLngLiteral> = [
+     *     { lat: 0,  lng: 10 },
+     *     { lat: 0,  lng: 20 },
+     *     { lat: 10, lng: 20 },
+     *     { lat: 10, lng: 10 },
+     *     { lat: 0,  lng: 10 }
+     *   ]
+     *   // Nesting paths will create a hole where they overlap;
+     *   nestedPaths: Array<Array<LatLngLiteral>> = [[
+     *     { lat: 0,  lng: 10 },
+     *     { lat: 0,  lng: 20 },
+     *     { lat: 10, lng: 20 },
+     *     { lat: 10, lng: 10 },
+     *     { lat: 0,  lng: 10 }
+     *   ], [
+     *     { lat: 0, lng: 15 },
+     *     { lat: 0, lng: 20 },
+     *     { lat: 5, lng: 20 },
+     *     { lat: 5, lng: 15 },
+     *     { lat: 0, lng: 15 }
+     *   ]]
+     * }
+     * ```
+     */
+
+    var AgmPolygon = AgmPolygon_1 = /*#__PURE__*/function () {
+      function AgmPolygon(_polygonManager) {
+        _classCallCheck(this, AgmPolygon);
+
+        this._polygonManager = _polygonManager;
+        /**
+         * Indicates whether this Polygon handles mouse events. Defaults to true.
+         */
+
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this shape over the map. The geodesic
+         * property defines the mode of dragging. Defaults to false.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this shape by dragging the control
+         * points shown at the vertices and on each segment. Defaults to false.
+         */
+
+        this.editable = false;
+        /**
+         * When true, edges of the polygon are interpreted as geodesic and will
+         * follow the curvature of the Earth. When false, edges of the polygon are
+         * rendered as straight lines in screen space. Note that the shape of a
+         * geodesic polygon may appear to change when dragged, as the dimensions
+         * are maintained relative to the surface of the earth. Defaults to false.
+         */
+
+        this.geodesic = false;
+        /**
+         * The ordered sequence of coordinates that designates a closed loop.
+         * Unlike polylines, a polygon may consist of one or more paths.
+         *  As a result, the paths property may specify one or more arrays of
+         * LatLng coordinates. Paths are closed automatically; do not repeat the
+         * first vertex of the path as the last vertex. Simple polygons may be
+         * defined using a single array of LatLngs. More complex polygons may
+         * specify an array of arrays. Any simple arrays are converted into Arrays.
+         * Inserting or removing LatLngs from the Array will automatically update
+         * the polygon on the map.
+         */
+
+        this.paths = [];
+        /**
+         * This event is fired when the DOM click event is fired on the Polygon.
+         */
+
+        this.polyClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM dblclick event is fired on the Polygon.
+         */
+
+        this.polyDblClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the polygon.
+         */
+
+        this.polyDrag = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the polygon.
+         */
+
+        this.polyDragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the polygon.
+         */
+
+        this.polyDragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the Polygon.
+         */
+
+        this.polyMouseDown = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the Polygon.
+         */
+
+        this.polyMouseMove = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on Polygon mouseout.
+         */
+
+        this.polyMouseOut = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on Polygon mouseover.
+         */
+
+        this.polyMouseOver = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired whe the DOM mouseup event is fired on the Polygon
+         */
+
+        this.polyMouseUp = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the Polygon is right-clicked on.
+         */
+
+        this.polyRightClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired after Polygon first path changes.
+         */
+
+        this.polyPathsChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this._polygonAddedToManager = false;
+        this._subscriptions = [];
+      }
+      /** @internal */
+
+
+      _createClass2(AgmPolygon, [{
+        key: "ngAfterContentInit",
+        value: function ngAfterContentInit() {
+          if (!this._polygonAddedToManager) {
+            this._init();
+          }
+        }
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._polygonAddedToManager) {
+            this._init();
+
+            return;
+          }
+
+          this._polygonManager.setPolygonOptions(this, this._updatePolygonOptions(changes));
+        }
+      }, {
+        key: "_init",
+        value: function _init() {
+          this._polygonManager.addPolygon(this);
+
+          this._polygonAddedToManager = true;
+
+          this._addEventListeners();
+        }
+      }, {
+        key: "_addEventListeners",
+        value: function _addEventListeners() {
+          var _this74 = this;
+
+          var handlers = [{
+            name: 'click',
+            handler: function handler(ev) {
+              return _this74.polyClick.emit(ev);
+            }
+          }, {
+            name: 'dblclick',
+            handler: function handler(ev) {
+              return _this74.polyDblClick.emit(ev);
+            }
+          }, {
+            name: 'drag',
+            handler: function handler(ev) {
+              return _this74.polyDrag.emit(ev);
+            }
+          }, {
+            name: 'dragend',
+            handler: function handler(ev) {
+              return _this74.polyDragEnd.emit(ev);
+            }
+          }, {
+            name: 'dragstart',
+            handler: function handler(ev) {
+              return _this74.polyDragStart.emit(ev);
+            }
+          }, {
+            name: 'mousedown',
+            handler: function handler(ev) {
+              return _this74.polyMouseDown.emit(ev);
+            }
+          }, {
+            name: 'mousemove',
+            handler: function handler(ev) {
+              return _this74.polyMouseMove.emit(ev);
+            }
+          }, {
+            name: 'mouseout',
+            handler: function handler(ev) {
+              return _this74.polyMouseOut.emit(ev);
+            }
+          }, {
+            name: 'mouseover',
+            handler: function handler(ev) {
+              return _this74.polyMouseOver.emit(ev);
+            }
+          }, {
+            name: 'mouseup',
+            handler: function handler(ev) {
+              return _this74.polyMouseUp.emit(ev);
+            }
+          }, {
+            name: 'rightclick',
+            handler: function handler(ev) {
+              return _this74.polyRightClick.emit(ev);
+            }
+          }];
+          handlers.forEach(function (obj) {
+            var os = _this74._polygonManager.createEventObservable(obj.name, _this74).subscribe(obj.handler);
+
+            _this74._subscriptions.push(os);
+          });
+
+          this._polygonManager.createPathEventObservable(this).then(function (paths$) {
+            var os = paths$.subscribe(function (pathEvent) {
+              return _this74.polyPathsChange.emit(pathEvent);
+            });
+
+            _this74._subscriptions.push(os);
+          });
+        }
+      }, {
+        key: "_updatePolygonOptions",
+        value: function _updatePolygonOptions(changes) {
+          return Object.keys(changes).filter(function (k) {
+            return AgmPolygon_1._polygonOptionsAttributes.indexOf(k) !== -1;
+          }).reduce(function (obj, k) {
+            obj[k] = changes[k].currentValue;
+            return obj;
+          }, {});
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._polygonManager.deletePolygon(this); // unsubscribe all registered observable subscriptions
+
+
+          this._subscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          });
+        }
+      }, {
+        key: "getPath",
+        value: function getPath() {
+          return this._polygonManager.getPath(this);
+        }
+      }, {
+        key: "getPaths",
+        value: function getPaths() {
+          return this._polygonManager.getPaths(this);
+        }
+      }]);
+
+      return AgmPolygon;
+    }();
+
+    AgmPolygon.ɵfac = function AgmPolygon_Factory(t) {
+      return new (t || AgmPolygon)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](PolygonManager));
+    };
+
+    AgmPolygon.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmPolygon,
+      selectors: [["agm-polygon"]],
+      inputs: {
+        clickable: "clickable",
+        draggable: ["polyDraggable", "draggable"],
+        editable: "editable",
+        geodesic: "geodesic",
+        paths: "paths",
+        fillColor: "fillColor",
+        fillOpacity: "fillOpacity",
+        strokeColor: "strokeColor",
+        strokeOpacity: "strokeOpacity",
+        strokeWeight: "strokeWeight",
+        visible: "visible",
+        zIndex: "zIndex"
+      },
+      outputs: {
+        polyClick: "polyClick",
+        polyDblClick: "polyDblClick",
+        polyDrag: "polyDrag",
+        polyDragEnd: "polyDragEnd",
+        polyDragStart: "polyDragStart",
+        polyMouseDown: "polyMouseDown",
+        polyMouseMove: "polyMouseMove",
+        polyMouseOut: "polyMouseOut",
+        polyMouseOver: "polyMouseOver",
+        polyMouseUp: "polyMouseUp",
+        polyRightClick: "polyRightClick",
+        polyPathsChange: "polyPathsChange"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    AgmPolygon._polygonOptionsAttributes = ['clickable', 'draggable', 'editable', 'fillColor', 'fillOpacity', 'geodesic', 'icon', 'map', 'paths', 'strokeColor', 'strokeOpacity', 'strokeWeight', 'visible', 'zIndex', 'draggable', 'editable', 'visible'];
+
+    AgmPolygon.ctorParameters = function () {
+      return [{
+        type: PolygonManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolygon.prototype, "clickable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('polyDraggable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolygon.prototype, "draggable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolygon.prototype, "editable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolygon.prototype, "fillColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolygon.prototype, "fillOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolygon.prototype, "geodesic", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array)], AgmPolygon.prototype, "paths", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolygon.prototype, "strokeColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolygon.prototype, "strokeOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolygon.prototype, "strokeWeight", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], AgmPolygon.prototype, "visible", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolygon.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyDblClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyDrag", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyDragEnd", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyDragStart", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyMouseDown", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyMouseMove", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyMouseOut", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyMouseOver", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyMouseUp", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolygon.prototype, "polyRightClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolygon.prototype, "polyPathsChange", void 0);
+    AgmPolygon = AgmPolygon_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [PolygonManager])], AgmPolygon);
+    /**
+     * AgmPolylineIcon enables to add polyline sequences to add arrows, circle,
+     * or custom icons either along the entire line, or in a specific part of it.
+     * See https://developers.google.com/maps/documentation/javascript/shapes#polyline_customize
+     *
+     * ### Example
+     * ```html
+     *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     *      <agm-polyline>
+     *          <agm-icon-sequence [fixedRotation]="true" [path]="'FORWARD_OPEN_ARROW'">
+     *          </agm-icon-sequence>
+     *      </agm-polyline>
+     *    </agm-map>
+     * ```
+     *
+     * @export
+     * @class AgmPolylineIcon
+     */
+
+    var AgmPolylineIcon = /*#__PURE__*/function () {
+      function AgmPolylineIcon() {
+        _classCallCheck(this, AgmPolylineIcon);
+      }
+
+      _createClass2(AgmPolylineIcon, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          if (this.path == null) {
+            throw new Error('Icon Sequence path is required');
+          }
+        }
+      }]);
+
+      return AgmPolylineIcon;
+    }();
+
+    AgmPolylineIcon.ɵfac = function AgmPolylineIcon_Factory(t) {
+      return new (t || AgmPolylineIcon)();
+    };
+
+    AgmPolylineIcon.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmPolylineIcon,
+      selectors: [["agm-icon-sequence"]],
+      inputs: {
+        fixedRotation: "fixedRotation",
+        offset: "offset",
+        repeat: "repeat",
+        anchorX: "anchorX",
+        anchorY: "anchorY",
+        fillColor: "fillColor",
+        fillOpacity: "fillOpacity",
+        path: "path",
+        rotation: "rotation",
+        scale: "scale",
+        strokeColor: "strokeColor",
+        strokeOpacity: "strokeOpacity",
+        strokeWeight: "strokeWeight"
+      }
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], AgmPolylineIcon.prototype, "fixedRotation", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolylineIcon.prototype, "offset", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolylineIcon.prototype, "repeat", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "anchorX", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "anchorY", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolylineIcon.prototype, "fillColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "fillOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolylineIcon.prototype, "path", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "rotation", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "scale", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolylineIcon.prototype, "strokeColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "strokeOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylineIcon.prototype, "strokeWeight", void 0);
+    var AgmPolylinePoint_1;
+    /**
+     * AgmPolylinePoint represents one element of a polyline within a  {@link
+     * AgmPolyline}
+     */
+
+    var AgmPolylinePoint = AgmPolylinePoint_1 = /*#__PURE__*/function () {
+      function AgmPolylinePoint() {
+        _classCallCheck(this, AgmPolylinePoint);
+
+        /**
+         * This event emitter gets emitted when the position of the point changed.
+         */
+        this.positionChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+      }
+
+      _createClass2(AgmPolylinePoint, [{
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (changes['latitude'] || changes['longitude']) {
+            var position = {
+              lat: changes['latitude'] ? changes['latitude'].currentValue : this.latitude,
+              lng: changes['longitude'] ? changes['longitude'].currentValue : this.longitude
+            };
+            this.positionChanged.emit(position);
+          }
+        }
+        /** @internal */
+
+      }, {
+        key: "getFitBoundsDetails$",
+        value: function getFitBoundsDetails$() {
+          return this.positionChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])({
+            lat: this.latitude,
+            lng: this.longitude
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (position) {
+            return {
+              latLng: position
+            };
+          }));
+        }
+      }]);
+
+      return AgmPolylinePoint;
+    }();
+
+    AgmPolylinePoint.ɵfac = function AgmPolylinePoint_Factory(t) {
+      return new (t || AgmPolylinePoint)();
+    };
+
+    AgmPolylinePoint.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmPolylinePoint,
+      selectors: [["agm-polyline-point"]],
+      inputs: {
+        latitude: "latitude",
+        longitude: "longitude"
+      },
+      outputs: {
+        positionChanged: "positionChanged"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([{
+        provide: FitBoundsAccessor,
+        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
+          return AgmPolylinePoint_1;
+        })
+      }]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylinePoint.prototype, "latitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolylinePoint.prototype, "longitude", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolylinePoint.prototype, "positionChanged", void 0);
+    AgmPolylinePoint = AgmPolylinePoint_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], AgmPolylinePoint);
+    var AgmPolyline_1;
+    var polylineId = 0;
+    /**
+     * AgmPolyline renders a polyline on a {@link AgmMap}
+     *
+     * ### Example
+     * ```typescript
+     * import { Component } from '@angular/core';
+     *
+     * @Component({
+     *  selector: 'my-map-cmp',
+     *  styles: [`
+     *    .agm-map-container {
+     *      height: 300px;
+     *    }
+     * `],
+     *  template: `
+     *    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+     *      <agm-polyline>
+     *          <agm-polyline-point [latitude]="latA" [longitude]="lngA">
+     *          </agm-polyline-point>
+     *          <agm-polyline-point [latitude]="latB" [longitude]="lngB">
+     *          </agm-polyline-point>
+     *      </agm-polyline>
+     *    </agm-map>
+     *  `
+     * })
+     * ```
+     */
+
+    var AgmPolyline = AgmPolyline_1 = /*#__PURE__*/function () {
+      function AgmPolyline(_polylineManager) {
+        _classCallCheck(this, AgmPolyline);
+
+        this._polylineManager = _polylineManager;
+        /**
+         * Indicates whether this Polyline handles mouse events. Defaults to true.
+         */
+
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this shape over the map. The geodesic property defines the
+         * mode of dragging. Defaults to false.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this shape by dragging the control points shown at the
+         * vertices and on each segment. Defaults to false.
+         */
+
+        this.editable = false;
+        /**
+         * When true, edges of the polygon are interpreted as geodesic and will follow the curvature of
+         * the Earth. When false, edges of the polygon are rendered as straight lines in screen space.
+         * Note that the shape of a geodesic polygon may appear to change when dragged, as the dimensions
+         * are maintained relative to the surface of the earth. Defaults to false.
+         */
+
+        this.geodesic = false;
+        /**
+         * Whether this polyline is visible on the map. Defaults to true.
+         */
+
+        this.visible = true;
+        /**
+         * This event is fired when the DOM click event is fired on the Polyline.
+         */
+
+        this.lineClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM dblclick event is fired on the Polyline.
+         */
+
+        this.lineDblClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the polyline.
+         */
+
+        this.lineDrag = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the polyline.
+         */
+
+        this.lineDragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the polyline.
+         */
+
+        this.lineDragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the Polyline.
+         */
+
+        this.lineMouseDown = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the Polyline.
+         */
+
+        this.lineMouseMove = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on Polyline mouseout.
+         */
+
+        this.lineMouseOut = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on Polyline mouseover.
+         */
+
+        this.lineMouseOver = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired whe the DOM mouseup event is fired on the Polyline
+         */
+
+        this.lineMouseUp = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the Polyline is right-clicked on.
+         */
+
+        this.lineRightClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired after Polyline's path changes.
+         */
+
+        this.polyPathChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this._polylineAddedToManager = false;
+        this._subscriptions = [];
+        this._id = (polylineId++).toString();
+      }
+      /** @internal */
+
+
+      _createClass2(AgmPolyline, [{
+        key: "ngAfterContentInit",
+        value: function ngAfterContentInit() {
+          var _this75 = this;
+
+          if (this.points.length) {
+            this.points.forEach(function (point) {
+              var s = point.positionChanged.subscribe(function () {
+                _this75._polylineManager.updatePolylinePoints(_this75);
+              });
+
+              _this75._subscriptions.push(s);
+            });
+          }
+
+          if (!this._polylineAddedToManager) {
+            this._init();
+          }
+
+          var pointSub = this.points.changes.subscribe(function () {
+            return _this75._polylineManager.updatePolylinePoints(_this75);
+          });
+
+          this._subscriptions.push(pointSub);
+
+          this._polylineManager.updatePolylinePoints(this);
+
+          var iconSub = this.iconSequences.changes.subscribe(function () {
+            return _this75._polylineManager.updateIconSequences(_this75);
+          });
+
+          this._subscriptions.push(iconSub);
+        }
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._polylineAddedToManager) {
+            this._init();
+
+            return;
+          }
+
+          var options = {};
+          var optionKeys = Object.keys(changes).filter(function (k) {
+            return AgmPolyline_1._polylineOptionsAttributes.indexOf(k) !== -1;
+          });
+          optionKeys.forEach(function (k) {
+            return options[k] = changes[k].currentValue;
+          });
+
+          this._polylineManager.setPolylineOptions(this, options);
+        }
+      }, {
+        key: "getPath",
+        value: function getPath() {
+          return this._polylineManager.getPath(this);
+        }
+      }, {
+        key: "_init",
+        value: function _init() {
+          this._polylineManager.addPolyline(this);
+
+          this._polylineAddedToManager = true;
+
+          this._addEventListeners();
+        }
+      }, {
+        key: "_addEventListeners",
+        value: function _addEventListeners() {
+          var _this76 = this;
+
+          var handlers = [{
+            name: 'click',
+            handler: function handler(ev) {
+              return _this76.lineClick.emit(ev);
+            }
+          }, {
+            name: 'dblclick',
+            handler: function handler(ev) {
+              return _this76.lineDblClick.emit(ev);
+            }
+          }, {
+            name: 'drag',
+            handler: function handler(ev) {
+              return _this76.lineDrag.emit(ev);
+            }
+          }, {
+            name: 'dragend',
+            handler: function handler(ev) {
+              return _this76.lineDragEnd.emit(ev);
+            }
+          }, {
+            name: 'dragstart',
+            handler: function handler(ev) {
+              return _this76.lineDragStart.emit(ev);
+            }
+          }, {
+            name: 'mousedown',
+            handler: function handler(ev) {
+              return _this76.lineMouseDown.emit(ev);
+            }
+          }, {
+            name: 'mousemove',
+            handler: function handler(ev) {
+              return _this76.lineMouseMove.emit(ev);
+            }
+          }, {
+            name: 'mouseout',
+            handler: function handler(ev) {
+              return _this76.lineMouseOut.emit(ev);
+            }
+          }, {
+            name: 'mouseover',
+            handler: function handler(ev) {
+              return _this76.lineMouseOver.emit(ev);
+            }
+          }, {
+            name: 'mouseup',
+            handler: function handler(ev) {
+              return _this76.lineMouseUp.emit(ev);
+            }
+          }, {
+            name: 'rightclick',
+            handler: function handler(ev) {
+              return _this76.lineRightClick.emit(ev);
+            }
+          }];
+          handlers.forEach(function (obj) {
+            var os = _this76._polylineManager.createEventObservable(obj.name, _this76).subscribe(obj.handler);
+
+            _this76._subscriptions.push(os);
+          });
+
+          this._polylineManager.createPathEventObservable(this).then(function (ob$) {
+            var os = ob$.subscribe(function (pathEvent) {
+              return _this76.polyPathChange.emit(pathEvent);
+            });
+
+            _this76._subscriptions.push(os);
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "_getPoints",
+        value: function _getPoints() {
+          if (this.points) {
+            return this.points.toArray();
+          }
+
+          return [];
+        }
+      }, {
+        key: "_getIcons",
+        value: function _getIcons() {
+          if (this.iconSequences) {
+            return this.iconSequences.toArray();
+          }
+
+          return [];
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._polylineManager.deletePolyline(this); // unsubscribe all registered observable subscriptions
+
+
+          this._subscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          });
+        }
+      }]);
+
+      return AgmPolyline;
+    }();
+
+    AgmPolyline.ɵfac = function AgmPolyline_Factory(t) {
+      return new (t || AgmPolyline)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](PolylineManager));
+    };
+
+    AgmPolyline.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmPolyline,
+      selectors: [["agm-polyline"]],
+      contentQueries: function AgmPolyline_ContentQueries(rf, ctx, dirIndex) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵcontentQuery"](dirIndex, AgmPolylinePoint, false);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵcontentQuery"](dirIndex, AgmPolylineIcon, false);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.points = _t);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.iconSequences = _t);
+        }
+      },
+      inputs: {
+        clickable: "clickable",
+        draggable: ["polylineDraggable", "draggable"],
+        editable: "editable",
+        geodesic: "geodesic",
+        visible: "visible",
+        strokeColor: "strokeColor",
+        strokeOpacity: "strokeOpacity",
+        strokeWeight: "strokeWeight",
+        zIndex: "zIndex"
+      },
+      outputs: {
+        lineClick: "lineClick",
+        lineDblClick: "lineDblClick",
+        lineDrag: "lineDrag",
+        lineDragEnd: "lineDragEnd",
+        lineDragStart: "lineDragStart",
+        lineMouseDown: "lineMouseDown",
+        lineMouseMove: "lineMouseMove",
+        lineMouseOut: "lineMouseOut",
+        lineMouseOver: "lineMouseOver",
+        lineMouseUp: "lineMouseUp",
+        lineRightClick: "lineRightClick",
+        polyPathChange: "polyPathChange"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    AgmPolyline._polylineOptionsAttributes = ['draggable', 'editable', 'visible', 'geodesic', 'strokeColor', 'strokeOpacity', 'strokeWeight', 'zIndex'];
+
+    AgmPolyline.ctorParameters = function () {
+      return [{
+        type: PolylineManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolyline.prototype, "clickable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('polylineDraggable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolyline.prototype, "draggable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolyline.prototype, "editable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolyline.prototype, "geodesic", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmPolyline.prototype, "strokeColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolyline.prototype, "strokeOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolyline.prototype, "strokeWeight", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolyline.prototype, "visible", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmPolyline.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineDblClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineDrag", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineDragEnd", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineDragStart", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineMouseDown", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineMouseMove", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineMouseOut", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineMouseOver", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineMouseUp", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmPolyline.prototype, "lineRightClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmPolyline.prototype, "polyPathChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(AgmPolylinePoint), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["QueryList"])], AgmPolyline.prototype, "points", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(AgmPolylineIcon), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["QueryList"])], AgmPolyline.prototype, "iconSequences", void 0);
+    AgmPolyline = AgmPolyline_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [PolylineManager])], AgmPolyline);
+    var AgmRectangle_1;
+
+    var AgmRectangle = AgmRectangle_1 = /*#__PURE__*/function () {
+      function AgmRectangle(_manager) {
+        _classCallCheck(this, AgmRectangle);
+
+        this._manager = _manager;
+        /**
+         * Indicates whether this Rectangle handles mouse events. Defaults to true.
+         */
+
+        this.clickable = true;
+        /**
+         * If set to true, the user can drag this rectangle over the map. Defaults to false.
+         */
+        // tslint:disable-next-line:no-input-rename
+
+        this.draggable = false;
+        /**
+         * If set to true, the user can edit this rectangle by dragging the control points shown at
+         * the center and around the circumference of the rectangle. Defaults to false.
+         */
+
+        this.editable = false;
+        /**
+         * The stroke position. Defaults to CENTER.
+         * This property is not supported on Internet Explorer 8 and earlier.
+         */
+
+        this.strokePosition = 'CENTER';
+        /**
+         * The stroke width in pixels.
+         */
+
+        this.strokeWeight = 0;
+        /**
+         * Whether this rectangle is visible on the map. Defaults to true.
+         */
+
+        this.visible = true;
+        /**
+         * This event is fired when the rectangle's is changed.
+         */
+
+        this.boundsChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the rectangle.
+         */
+
+        this.rectangleClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event emitter gets emitted when the user clicks on the rectangle.
+         */
+
+        this.rectangleDblClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is repeatedly fired while the user drags the rectangle.
+         */
+
+        this.drag = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user stops dragging the rectangle.
+         */
+
+        this.dragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the user starts dragging the rectangle.
+         */
+
+        this.dragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousedown event is fired on the rectangle.
+         */
+
+        this.mouseDown = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mousemove event is fired on the rectangle.
+         */
+
+        this.mouseMove = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on rectangle mouseout.
+         */
+
+        this.mouseOut = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired on rectangle mouseover.
+         */
+
+        this.mouseOver = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the DOM mouseup event is fired on the rectangle.
+         */
+
+        this.mouseUp = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        /**
+         * This event is fired when the rectangle is right-clicked on.
+         */
+
+        this.rightClick = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this._rectangleAddedToManager = false;
+        this._eventSubscriptions = [];
+      }
+      /** @internal */
+
+
+      _createClass2(AgmRectangle, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this._manager.addRectangle(this);
+
+          this._rectangleAddedToManager = true;
+
+          this._registerEventListeners();
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._rectangleAddedToManager) {
+            return;
+          }
+
+          if (changes['north'] || changes['east'] || changes['south'] || changes['west']) {
+            this._manager.setBounds(this);
+          }
+
+          if (changes['editable']) {
+            this._manager.setEditable(this);
+          }
+
+          if (changes['draggable']) {
+            this._manager.setDraggable(this);
+          }
+
+          if (changes['visible']) {
+            this._manager.setVisible(this);
+          }
+
+          this._updateRectangleOptionsChanges(changes);
+        }
+      }, {
+        key: "_updateRectangleOptionsChanges",
+        value: function _updateRectangleOptionsChanges(changes) {
+          var options = {};
+          var optionKeys = Object.keys(changes).filter(function (k) {
+            return AgmRectangle_1._mapOptions.indexOf(k) !== -1;
+          });
+          optionKeys.forEach(function (k) {
+            options[k] = changes[k].currentValue;
+          });
+
+          if (optionKeys.length > 0) {
+            this._manager.setOptions(this, options);
+          }
+        }
+      }, {
+        key: "_registerEventListeners",
+        value: function _registerEventListeners() {
+          var _this77 = this;
+
+          var events = new Map();
+          events.set('bounds_changed', this.boundsChange);
+          events.set('click', this.rectangleClick);
+          events.set('dblclick', this.rectangleDblClick);
+          events.set('drag', this.drag);
+          events.set('dragend', this.dragEnd);
+          events.set('dragStart', this.dragStart);
+          events.set('mousedown', this.mouseDown);
+          events.set('mousemove', this.mouseMove);
+          events.set('mouseout', this.mouseOut);
+          events.set('mouseover', this.mouseOver);
+          events.set('mouseup', this.mouseUp);
+          events.set('rightclick', this.rightClick);
+          events.forEach(function (eventEmitter, eventName) {
+            _this77._eventSubscriptions.push(_this77._manager.createEventObservable(eventName, _this77).subscribe(function (value) {
+              switch (eventName) {
+                case 'bounds_changed':
+                  _this77._manager.getBounds(_this77).then(function (bounds) {
+                    return eventEmitter.emit({
+                      north: bounds.getNorthEast().lat(),
+                      east: bounds.getNorthEast().lng(),
+                      south: bounds.getSouthWest().lat(),
+                      west: bounds.getSouthWest().lng()
+                    });
+                  });
+
+                  break;
+
+                default:
+                  eventEmitter.emit({
+                    coords: {
+                      lat: value.latLng.lat(),
+                      lng: value.latLng.lng()
+                    }
+                  });
+              }
+            }));
+          });
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._eventSubscriptions.forEach(function (s) {
+            s.unsubscribe();
+          });
+
+          this._eventSubscriptions = null;
+
+          this._manager.removeRectangle(this);
+        }
+        /**
+         * Gets the LatLngBounds of this Rectangle.
+         */
+
+      }, {
+        key: "getBounds",
+        value: function getBounds() {
+          return this._manager.getBounds(this);
+        }
+      }]);
+
+      return AgmRectangle;
+    }();
+
+    AgmRectangle.ɵfac = function AgmRectangle_Factory(t) {
+      return new (t || AgmRectangle)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](RectangleManager));
+    };
+
+    AgmRectangle.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmRectangle,
+      selectors: [["agm-rectangle"]],
+      inputs: {
+        clickable: "clickable",
+        draggable: ["rectangleDraggable", "draggable"],
+        editable: "editable",
+        strokePosition: "strokePosition",
+        strokeWeight: "strokeWeight",
+        visible: "visible",
+        north: "north",
+        east: "east",
+        south: "south",
+        west: "west",
+        fillColor: "fillColor",
+        fillOpacity: "fillOpacity",
+        strokeColor: "strokeColor",
+        strokeOpacity: "strokeOpacity",
+        zIndex: "zIndex"
+      },
+      outputs: {
+        boundsChange: "boundsChange",
+        rectangleClick: "rectangleClick",
+        rectangleDblClick: "rectangleDblClick",
+        drag: "drag",
+        dragEnd: "dragEnd",
+        dragStart: "dragStart",
+        mouseDown: "mouseDown",
+        mouseMove: "mouseMove",
+        mouseOut: "mouseOut",
+        mouseOver: "mouseOver",
+        mouseUp: "mouseUp",
+        rightClick: "rightClick"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+    AgmRectangle._mapOptions = ['fillColor', 'fillOpacity', 'strokeColor', 'strokeOpacity', 'strokePosition', 'strokeWeight', 'visible', 'zIndex', 'clickable'];
+
+    AgmRectangle.ctorParameters = function () {
+      return [{
+        type: RectangleManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "north", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "east", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "south", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "west", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmRectangle.prototype, "clickable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('rectangleDraggable'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmRectangle.prototype, "draggable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmRectangle.prototype, "editable", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmRectangle.prototype, "fillColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "fillOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmRectangle.prototype, "strokeColor", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "strokeOpacity", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], AgmRectangle.prototype, "strokePosition", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmRectangle.prototype, "strokeWeight", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmRectangle.prototype, "visible", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], AgmRectangle.prototype, "zIndex", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "boundsChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "rectangleClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "rectangleDblClick", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "drag", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "dragEnd", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "dragStart", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "mouseDown", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "mouseMove", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "mouseOut", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "mouseOver", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "mouseUp", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])], AgmRectangle.prototype, "rightClick", void 0);
+    AgmRectangle = AgmRectangle_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [RectangleManager])], AgmRectangle);
+    var layerId$3 = 0;
+    /*
+     * This directive adds a transit layer to a google map instance
+     * <agm-transit-layer [visible]="true|false"> <agm-transit-layer>
+     * */
+
+    var AgmTransitLayer = /*#__PURE__*/function () {
+      function AgmTransitLayer(_manager) {
+        _classCallCheck(this, AgmTransitLayer);
+
+        this._manager = _manager;
+        this._addedToManager = false;
+        this._id = (layerId$3++).toString();
+        /**
+         * Hide/show transit layer
+         */
+
+        this.visible = true;
+      }
+
+      _createClass2(AgmTransitLayer, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          if (this._addedToManager) {
+            return;
+          }
+
+          this._manager.addTransitLayer(this, {
+            visible: this.visible
+          });
+
+          this._addedToManager = true;
+        }
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          if (!this._addedToManager) {
+            return;
+          }
+
+          if (changes['visible'] != null) {
+            this._manager.toggleLayerVisibility(this, {
+              visible: changes['visible'].currentValue
+            });
+          }
+        }
+        /** @internal */
+
+      }, {
+        key: "id",
+        value: function id() {
+          return this._id;
+        }
+        /** @internal */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          return "AgmTransitLayer-".concat(this._id.toString());
+        }
+        /** @internal */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._manager.deleteLayer(this);
+        }
+      }]);
+
+      return AgmTransitLayer;
+    }();
+
+    AgmTransitLayer.ɵfac = function AgmTransitLayer_Factory(t) {
+      return new (t || AgmTransitLayer)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](LayerManager));
+    };
+
+    AgmTransitLayer.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+      type: AgmTransitLayer,
+      selectors: [["agm-transit-layer"]],
+      inputs: {
+        visible: "visible"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]]
+    });
+
+    AgmTransitLayer.ctorParameters = function () {
+      return [{
+        type: LayerManager
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], AgmTransitLayer.prototype, "visible", void 0);
+    AgmTransitLayer = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [LayerManager])], AgmTransitLayer);
+    var google$1;
+    var SymbolPath;
+
+    (function (SymbolPath) {
+      SymbolPath[SymbolPath["BACKWARD_CLOSED_ARROW"] = 3] = "BACKWARD_CLOSED_ARROW";
+      SymbolPath[SymbolPath["BACKWARD_OPEN_ARROW"] = 4] = "BACKWARD_OPEN_ARROW";
+      SymbolPath[SymbolPath["CIRCLE"] = 0] = "CIRCLE";
+      SymbolPath[SymbolPath["FORWARD_CLOSED_ARROW"] = 1] = "FORWARD_CLOSED_ARROW";
+      SymbolPath[SymbolPath["FORWARD_OPEN_ARROW"] = 2] = "FORWARD_OPEN_ARROW";
+    })(SymbolPath || (SymbolPath = {}));
+    /**
+     * Identifiers used to specify the placement of controls on the map. Controls are
+     * positioned relative to other controls in the same layout position. Controls that
+     * are added first are positioned closer to the edge of the map.
+     */
+
+
+    var ControlPosition;
+
+    (function (ControlPosition) {
+      ControlPosition[ControlPosition["RIGHT_BOTTOM"] = 0] = "RIGHT_BOTTOM";
+      ControlPosition[ControlPosition["TOP_LEFT"] = 1] = "TOP_LEFT";
+      ControlPosition[ControlPosition["TOP_CENTER"] = 2] = "TOP_CENTER";
+      ControlPosition[ControlPosition["TOP_RIGHT"] = 3] = "TOP_RIGHT";
+      ControlPosition[ControlPosition["LEFT_CENTER"] = 4] = "LEFT_CENTER";
+      ControlPosition[ControlPosition["LEFT_TOP"] = 5] = "LEFT_TOP";
+      ControlPosition[ControlPosition["LEFT_BOTTOM"] = 6] = "LEFT_BOTTOM";
+      ControlPosition[ControlPosition["RIGHT_TOP"] = 7] = "RIGHT_TOP";
+      ControlPosition[ControlPosition["RIGHT_CENTER"] = 8] = "RIGHT_CENTER";
+      ControlPosition[ControlPosition["BOTTOM_RIGHT"] = 9] = "BOTTOM_RIGHT";
+      ControlPosition[ControlPosition["BOTTOM_LEFT"] = 10] = "BOTTOM_LEFT";
+      ControlPosition[ControlPosition["BOTTOM_CENTER"] = 11] = "BOTTOM_CENTER";
+    })(ControlPosition || (ControlPosition = {}));
+
+    var MapTypeId;
+
+    (function (MapTypeId) {
+      /** This map type displays a transparent layer of major streets on satellite images. */
+      MapTypeId[MapTypeId["HYBRID"] = 0] = "HYBRID";
+      /** This map type displays a normal street map. */
+
+      MapTypeId[MapTypeId["ROADMAP"] = 1] = "ROADMAP";
+      /** This map type displays satellite images. */
+
+      MapTypeId[MapTypeId["SATELLITE"] = 2] = "SATELLITE";
+      /** This map type displays maps with physical features such as terrain and vegetation. */
+
+      MapTypeId[MapTypeId["TERRAIN"] = 3] = "TERRAIN";
+    })(MapTypeId || (MapTypeId = {}));
+
+    var MapTypeControlStyle;
+
+    (function (MapTypeControlStyle) {
+      MapTypeControlStyle[MapTypeControlStyle["DEFAULT"] = 0] = "DEFAULT";
+      MapTypeControlStyle[MapTypeControlStyle["DROPDOWN_MENU"] = 2] = "DROPDOWN_MENU";
+      MapTypeControlStyle[MapTypeControlStyle["HORIZONTAL_BAR"] = 1] = "HORIZONTAL_BAR";
+    })(MapTypeControlStyle || (MapTypeControlStyle = {}));
+
+    var ScaleControlStyle;
+
+    (function (ScaleControlStyle) {
+      ScaleControlStyle[ScaleControlStyle["DEFAULT"] = 0] = "DEFAULT";
+    })(ScaleControlStyle || (ScaleControlStyle = {}));
+
+    var ZoomControlStyle;
+
+    (function (ZoomControlStyle) {
+      ZoomControlStyle[ZoomControlStyle["DEFAULT"] = 0] = "DEFAULT";
+      ZoomControlStyle[ZoomControlStyle["LARGE"] = 1] = "LARGE";
+      ZoomControlStyle[ZoomControlStyle["SMALL"] = 2] = "SMALL";
+    })(ZoomControlStyle || (ZoomControlStyle = {}));
+
+    var GeocoderLocationType;
+
+    (function (GeocoderLocationType) {
+      GeocoderLocationType["APPROXIMATE"] = "APPROXIMATE";
+      GeocoderLocationType["GEOMETRIC_CENTER"] = "GEOMETRIC_CENTER";
+      GeocoderLocationType["RANGE_INTERPOLATED"] = "RANGE_INTERPOLATED";
+      GeocoderLocationType["ROOFTOP"] = "ROOFTOP";
+    })(GeocoderLocationType || (GeocoderLocationType = {}));
+
+    var GeocoderStatus;
+
+    (function (GeocoderStatus) {
+      GeocoderStatus["ERROR"] = "ERROR";
+      GeocoderStatus["INVALID_REQUEST"] = "INVALID_REQUEST";
+      GeocoderStatus["OK"] = "OK";
+      GeocoderStatus["OVER_QUERY_LIMIT"] = "OVER_QUERY_LIMIT";
+      GeocoderStatus["REQUEST_DENIED"] = "REQUEST_DENIED";
+      GeocoderStatus["UNKNOWN_ERROR"] = "UNKNOWN_ERROR";
+      GeocoderStatus["ZERO_RESULTS"] = "ZERO_RESULTS";
+    })(GeocoderStatus || (GeocoderStatus = {}));
+
+    var AgmGeocoder = /*#__PURE__*/function () {
+      function AgmGeocoder(loader) {
+        var _this78 = this;
+
+        _classCallCheck(this, AgmGeocoder);
+
+        var connectableGeocoder$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](function (subscriber) {
+          loader.load().then(function () {
+            return subscriber.next();
+          });
+        }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function () {
+          return _this78._createGeocoder();
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["multicast"])(new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"](1)));
+        connectableGeocoder$.connect(); // ignore the subscription
+        // since we will remain subscribed till application exits
+
+        this.geocoder$ = connectableGeocoder$;
+      }
+
+      _createClass2(AgmGeocoder, [{
+        key: "geocode",
+        value: function geocode(request) {
+          var _this79 = this;
+
+          return this.geocoder$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (geocoder) {
+            return _this79._getGoogleResults(geocoder, request);
+          }));
+        }
+      }, {
+        key: "_getGoogleResults",
+        value: function _getGoogleResults(geocoder, request) {
+          var geocodeObservable = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["bindCallback"])(geocoder.geocode);
+          return geocodeObservable(request).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (_ref7) {
+            var _ref8 = _slicedToArray(_ref7, 2),
+                results = _ref8[0],
+                status = _ref8[1];
+
+            if (status === GeocoderStatus.OK) {
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(results);
+            }
+
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])(status);
+          }));
+        }
+      }, {
+        key: "_createGeocoder",
+        value: function _createGeocoder() {
+          return new google.maps.Geocoder();
+        }
+      }]);
+
+      return AgmGeocoder;
+    }();
+
+    AgmGeocoder.ɵfac = function AgmGeocoder_Factory(t) {
+      return new (t || AgmGeocoder)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](MapsAPILoader));
+    };
+
+    AgmGeocoder.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: AgmGeocoder,
+      factory: AgmGeocoder.ɵfac,
+      providedIn: 'root'
+    });
+
+    AgmGeocoder.ctorParameters = function () {
+      return [{
+        type: MapsAPILoader
+      }];
+    };
+
+    AgmGeocoder.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"])({
+      factory: function AgmGeocoder_Factory() {
+        return new AgmGeocoder(Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"])(MapsAPILoader));
+      },
+      token: AgmGeocoder,
+      providedIn: "root"
+    });
+    AgmGeocoder = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [MapsAPILoader])], AgmGeocoder);
+
+    var WindowRef = /*#__PURE__*/function () {
+      function WindowRef() {
+        _classCallCheck(this, WindowRef);
+      }
+
+      _createClass2(WindowRef, [{
+        key: "getNativeWindow",
+        value: function getNativeWindow() {
+          return window;
+        }
+      }]);
+
+      return WindowRef;
+    }();
+
+    var DocumentRef = /*#__PURE__*/function () {
+      function DocumentRef() {
+        _classCallCheck(this, DocumentRef);
+      }
+
+      _createClass2(DocumentRef, [{
+        key: "getNativeDocument",
+        value: function getNativeDocument() {
+          return document;
+        }
+      }]);
+
+      return DocumentRef;
+    }();
+
+    var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
+    var GoogleMapsScriptProtocol;
+
+    (function (GoogleMapsScriptProtocol) {
+      GoogleMapsScriptProtocol[GoogleMapsScriptProtocol["HTTP"] = 1] = "HTTP";
+      GoogleMapsScriptProtocol[GoogleMapsScriptProtocol["HTTPS"] = 2] = "HTTPS";
+      GoogleMapsScriptProtocol[GoogleMapsScriptProtocol["AUTO"] = 3] = "AUTO";
+    })(GoogleMapsScriptProtocol || (GoogleMapsScriptProtocol = {}));
+    /**
+     * Token for the config of the LazyMapsAPILoader. Please provide an object of type {@link
+     * LazyMapsAPILoaderConfig}.
+     */
+
+
+    var LAZY_MAPS_API_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('angular-google-maps LAZY_MAPS_API_CONFIG');
+
+    var LazyMapsAPILoader = /*#__PURE__*/function (_MapsAPILoader) {
+      _inherits(LazyMapsAPILoader, _MapsAPILoader);
+
+      var _super = _createSuper(LazyMapsAPILoader);
+
+      function LazyMapsAPILoader() {
+        var _this80;
+
+        var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+        var w = arguments.length > 1 ? arguments[1] : undefined;
+        var d = arguments.length > 2 ? arguments[2] : undefined;
+        var localeId = arguments.length > 3 ? arguments[3] : undefined;
+
+        _classCallCheck(this, LazyMapsAPILoader);
+
+        _this80 = _super.call(this);
+        _this80.localeId = localeId;
+        _this80._SCRIPT_ID = 'agmGoogleMapsApiScript';
+        _this80.callbackName = "agmLazyMapsAPILoader";
+        _this80._config = config || {};
+        _this80._windowRef = w;
+        _this80._documentRef = d;
+        return _this80;
+      }
+
+      _createClass2(LazyMapsAPILoader, [{
+        key: "load",
+        value: function load() {
+          var window = this._windowRef.getNativeWindow();
+
+          if (window.google && window.google.maps) {
+            // Google maps already loaded on the page.
+            return Promise.resolve();
+          }
+
+          if (this._scriptLoadingPromise) {
+            return this._scriptLoadingPromise;
+          } // this can happen in HMR situations or Stackblitz.io editors.
+
+
+          var scriptOnPage = this._documentRef.getNativeDocument().getElementById(this._SCRIPT_ID);
+
+          if (scriptOnPage) {
+            this._assignScriptLoadingPromise(scriptOnPage);
+
+            return this._scriptLoadingPromise;
+          }
+
+          var script = this._documentRef.getNativeDocument().createElement('script');
+
+          script.type = 'text/javascript';
+          script.async = true;
+          script.defer = true;
+          script.id = this._SCRIPT_ID;
+          script.src = this._getScriptSrc(this.callbackName);
+
+          this._assignScriptLoadingPromise(script);
+
+          this._documentRef.getNativeDocument().body.appendChild(script);
+
+          return this._scriptLoadingPromise;
+        }
+      }, {
+        key: "_assignScriptLoadingPromise",
+        value: function _assignScriptLoadingPromise(scriptElem) {
+          var _this81 = this;
+
+          this._scriptLoadingPromise = new Promise(function (resolve, reject) {
+            _this81._windowRef.getNativeWindow()[_this81.callbackName] = function () {
+              resolve();
+            };
+
+            scriptElem.onerror = function (error) {
+              reject(error);
+            };
+          });
+        }
+      }, {
+        key: "_getScriptSrc",
+        value: function _getScriptSrc(callbackName) {
+          var protocolType = this._config && this._config.protocol || GoogleMapsScriptProtocol.HTTPS;
+          var protocol;
+
+          switch (protocolType) {
+            case GoogleMapsScriptProtocol.AUTO:
+              protocol = '';
+              break;
+
+            case GoogleMapsScriptProtocol.HTTP:
+              protocol = 'http:';
+              break;
+
+            case GoogleMapsScriptProtocol.HTTPS:
+              protocol = 'https:';
+              break;
+          }
+
+          var hostAndPath = this._config.hostAndPath || 'maps.googleapis.com/maps/api/js';
+          var queryParams = {
+            v: this._config.apiVersion || 'quarterly',
+            callback: callbackName,
+            key: this._config.apiKey,
+            client: this._config.clientId,
+            channel: this._config.channel,
+            libraries: this._config.libraries,
+            region: this._config.region,
+            language: this._config.language || this.localeId !== 'en-US' ? this.localeId : null
+          };
+          var params = Object.keys(queryParams).filter(function (k) {
+            return queryParams[k] != null;
+          }).filter(function (k) {
+            // remove empty arrays
+            return !Array.isArray(queryParams[k]) || Array.isArray(queryParams[k]) && queryParams[k].length > 0;
+          }).map(function (k) {
+            // join arrays as comma seperated strings
+            var i = queryParams[k];
+
+            if (Array.isArray(i)) {
+              return {
+                key: k,
+                value: i.join(',')
+              };
+            }
+
+            return {
+              key: k,
+              value: queryParams[k]
+            };
+          }).map(function (entry) {
+            return "".concat(entry.key, "=").concat(entry.value);
+          }).join('&');
+          return "".concat(protocol, "//").concat(hostAndPath, "?").concat(params);
+        }
+      }]);
+
+      return LazyMapsAPILoader;
+    }(MapsAPILoader);
+
+    LazyMapsAPILoader.ɵfac = function LazyMapsAPILoader_Factory(t) {
+      return new (t || LazyMapsAPILoader)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](LAZY_MAPS_API_CONFIG, 8), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](WindowRef), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](DocumentRef), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"]));
+    };
+
+    LazyMapsAPILoader.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: LazyMapsAPILoader,
+      factory: LazyMapsAPILoader.ɵfac
+    });
+
+    LazyMapsAPILoader.ctorParameters = function () {
+      return [{
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+          args: [LAZY_MAPS_API_CONFIG]
+        }]
+      }, {
+        type: WindowRef
+      }, {
+        type: DocumentRef
+      }, {
+        type: String,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+          args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"]]
+        }]
+      }];
+    };
+
+    LazyMapsAPILoader = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(LAZY_MAPS_API_CONFIG)), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"])), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object, WindowRef, DocumentRef, String])], LazyMapsAPILoader);
+    /**
+     * When using the NoOpMapsAPILoader, the Google Maps API must be added to the page via a `<script>`
+     * Tag.
+     * It's important that the Google Maps API script gets loaded first on the page.
+     */
+
+    var NoOpMapsAPILoader = /*#__PURE__*/function () {
+      function NoOpMapsAPILoader() {
+        _classCallCheck(this, NoOpMapsAPILoader);
+      }
+
+      _createClass2(NoOpMapsAPILoader, [{
+        key: "load",
+        value: function load() {
+          if (!window.google || !window.google.maps) {
+            throw new Error('Google Maps API not loaded on page. Make sure window.google.maps is available!');
+          }
+
+          return Promise.resolve();
+        }
+      }]);
+
+      return NoOpMapsAPILoader;
+    }(); // exported map types
+
+
+    var AgmCoreModule_1;
+    /**
+     * @internal
+     */
+
+    function coreDirectives() {
+      return [AgmBicyclingLayer, AgmCircle, AgmDataLayer, AgmFitBounds, AgmInfoWindow, AgmKmlLayer, AgmMap, AgmMarker, AgmPolygon, AgmPolyline, AgmPolylineIcon, AgmPolylinePoint, AgmRectangle, AgmTransitLayer];
+    }
+    /**
+     * The angular-google-maps core module. Contains all Directives/Services/Pipes
+     * of the core module. Please use `AgmCoreModule.forRoot()` in your app module.
+     */
+
+
+    var AgmCoreModule = AgmCoreModule_1 = /*#__PURE__*/function () {
+      function AgmCoreModule() {
+        _classCallCheck(this, AgmCoreModule);
+      }
+
+      _createClass2(AgmCoreModule, null, [{
+        key: "forRoot",
+
+        /**
+         * Please use this method when you register the module at the root level.
+         */
+        value: function forRoot(lazyMapsAPILoaderConfig) {
+          return {
+            ngModule: AgmCoreModule_1,
+            providers: [].concat(BROWSER_GLOBALS_PROVIDERS, [{
+              provide: MapsAPILoader,
+              useClass: LazyMapsAPILoader
+            }, {
+              provide: LAZY_MAPS_API_CONFIG,
+              useValue: lazyMapsAPILoaderConfig
+            }])
+          };
+        }
+      }]);
+
+      return AgmCoreModule;
+    }();
+
+    AgmCoreModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+      type: AgmCoreModule
+    });
+    AgmCoreModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+      factory: function AgmCoreModule_Factory(t) {
+        return new (t || AgmCoreModule)();
+      }
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MapsAPILoader, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], null, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](GoogleMapsAPIWrapper, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: MapsAPILoader
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](LayerManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmBicyclingLayer, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-bicycling-layer'
+        }]
+      }], function () {
+        return [{
+          type: LayerManager
+        }];
+      }, {
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CircleManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmCircle, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-circle'
+        }]
+      }], function () {
+        return [{
+          type: CircleManager
+        }];
+      }, {
+        clickable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['circleDraggable']
+        }],
+        editable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        radius: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokePosition: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeWeight: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        centerChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        circleClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        circleDblClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        drag: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        dragEnd: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        dragStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseDown: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseMove: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseOut: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseOver: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseUp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        radiusChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        rightClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        latitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        longitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](DataLayerManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmDataLayer, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-data-layer'
+        }]
+      }], function () {
+        return [{
+          type: DataLayerManager
+        }];
+      }, {
+        layerClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        geoJson: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        style: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](FitBoundsService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: MapsAPILoader
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmFitBounds, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: '[agmFitBounds]'
+        }]
+      }], function () {
+        return [{
+          type: FitBoundsAccessor,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"]
+          }]
+        }, {
+          type: FitBoundsService
+        }];
+      }, {
+        agmFitBounds: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MarkerManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](InfoWindowManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }, {
+          type: MarkerManager
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmInfoWindow, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+          selector: 'agm-info-window',
+          template: "<div class='agm-info-window-content'>\n      <ng-content></ng-content>\n    </div>\n  "
+        }]
+      }], function () {
+        return [{
+          type: InfoWindowManager
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }];
+      }, {
+        isOpen: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        infoWindowClose: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        latitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        longitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        disableAutoPan: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        maxWidth: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](KmlLayerManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmKmlLayer, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-kml-layer'
+        }]
+      }], function () {
+        return [{
+          type: KmlLayerManager
+        }];
+      }, {
+        clickable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        preserveViewport: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        screenOverlays: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        suppressInfoWindows: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        url: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        layerClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        defaultViewportChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        statusChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PolygonManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PolylineManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](RectangleManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmMap, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+          selector: 'agm-map',
+          providers: [CircleManager, DataLayerManager, DataLayerManager, FitBoundsService, GoogleMapsAPIWrapper, InfoWindowManager, KmlLayerManager, LayerManager, MarkerManager, PolygonManager, PolylineManager, RectangleManager],
+          host: {
+            // todo: deprecated - we will remove it with the next version
+            '[class.sebm-google-map-container]': 'true'
+          },
+          template: "\n              <div class='agm-map-container-inner sebm-google-map-container-inner'></div>\n              <div class='agm-map-content'>\n                <ng-content></ng-content>\n              </div>\n  ",
+          styles: ["\n    .agm-map-container-inner {\n      width: inherit;\n      height: inherit;\n    }\n    .agm-map-content {\n      display:none;\n    }\n  "]
+        }]
+      }], function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }, {
+          type: GoogleMapsAPIWrapper
+        }, {
+          type: Object,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]]
+          }]
+        }, {
+          type: FitBoundsService
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      }, {
+        longitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        latitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zoom: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['mapDraggable']
+        }],
+        disableDoubleClickZoom: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        disableDefaultUI: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        scrollwheel: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        keyboardShortcuts: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        styles: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        usePanning: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fitBounds: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        scaleControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        mapTypeControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        panControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        rotateControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fullscreenControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        mapTypeId: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        clickableIcons: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        showDefaultInfoWindow: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        gestureHandling: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        tilt: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        mapClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mapRightClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mapDblClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        centerChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        boundsChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mapTypeIdChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        idle: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        zoomChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mapReady: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        tilesLoaded: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        minZoom: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        maxZoom: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        controlSize: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        backgroundColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggableCursor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggingCursor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zoomControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zoomControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        streetViewControl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        streetViewControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fitBoundsPadding: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        scaleControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        mapTypeControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        panControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        rotateControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fullscreenControlOptions: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        restriction: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmMarker, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-marker',
+          providers: [{
+            provide: FitBoundsAccessor,
+            useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
+              return AgmMarker_1;
+            })
+          }],
+          inputs: ['latitude', 'longitude', 'title', 'label', 'draggable: markerDraggable', 'iconUrl', 'openInfoWindow', 'opacity', 'visible', 'zIndex', 'animation'],
+          outputs: ['markerClick', 'dragStart', 'drag', 'dragEnd', 'mouseOver', 'mouseOut']
+        }]
+      }], function () {
+        return [{
+          type: MarkerManager
+        }];
+      }, {
+        draggable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['markerDraggable']
+        }],
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        openInfoWindow: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        opacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        clickable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['markerClickable']
+        }],
+        animationChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        markerClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        markerDblClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        markerRightClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        dragStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        drag: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        dragEnd: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseOver: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseOut: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        infoWindow: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"],
+          args: [AgmInfoWindow]
+        }],
+        latitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        longitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        title: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        label: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        iconUrl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        animation: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmPolygon, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-polygon'
+        }]
+      }], function () {
+        return [{
+          type: PolygonManager
+        }];
+      }, {
+        clickable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['polyDraggable']
+        }],
+        editable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        geodesic: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        paths: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        polyClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyDblClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyDrag: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyDragEnd: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyDragStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyMouseDown: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyMouseMove: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyMouseOut: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyMouseOver: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyMouseUp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyRightClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyPathsChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        fillColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeWeight: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmPolylineIcon, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-polyline agm-icon-sequence'
+        }]
+      }], null, {
+        fixedRotation: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        offset: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        repeat: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        anchorX: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        anchorY: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        path: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        rotation: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        scale: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeWeight: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmPolylinePoint, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-polyline-point',
+          providers: [{
+            provide: FitBoundsAccessor,
+            useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
+              return AgmPolylinePoint_1;
+            })
+          }]
+        }]
+      }], function () {
+        return [];
+      }, {
+        positionChanged: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        latitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        longitude: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmPolyline, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-polyline'
+        }]
+      }], function () {
+        return [{
+          type: PolylineManager
+        }];
+      }, {
+        clickable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['polylineDraggable']
+        }],
+        editable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        geodesic: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        lineClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineDblClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineDrag: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineDragEnd: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineDragStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineMouseDown: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineMouseMove: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineMouseOut: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineMouseOver: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineMouseUp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        lineRightClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        polyPathChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        strokeColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeWeight: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        points: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"],
+          args: [AgmPolylinePoint]
+        }],
+        iconSequences: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"],
+          args: [AgmPolylineIcon]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmRectangle, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-rectangle'
+        }]
+      }], function () {
+        return [{
+          type: RectangleManager
+        }];
+      }, {
+        clickable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        draggable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+          args: ['rectangleDraggable']
+        }],
+        editable: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokePosition: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeWeight: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        boundsChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        rectangleClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        rectangleDblClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        drag: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        dragEnd: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        dragStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseDown: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseMove: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseOut: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseOver: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        mouseUp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        rightClick: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }],
+        north: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        east: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        south: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        west: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        fillOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        strokeOpacity: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        zIndex: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmTransitLayer, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{
+          selector: 'agm-transit-layer'
+        }]
+      }], function () {
+        return [{
+          type: LayerManager
+        }];
+      }, {
+        visible: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmGeocoder, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
+        args: [{
+          providedIn: 'root'
+        }]
+      }], function () {
+        return [{
+          type: MapsAPILoader
+        }];
+      }, null);
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](LazyMapsAPILoader, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+      }], function () {
+        return [{
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [LAZY_MAPS_API_CONFIG]
+          }]
+        }, {
+          type: WindowRef
+        }, {
+          type: DocumentRef
+        }, {
+          type: String,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+            args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"]]
+          }]
+        }];
+      }, null);
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AgmCoreModule, {
+        declarations: [AgmBicyclingLayer, AgmCircle, AgmDataLayer, AgmFitBounds, AgmInfoWindow, AgmKmlLayer, AgmMap, AgmMarker, AgmPolygon, AgmPolyline, AgmPolylineIcon, AgmPolylinePoint, AgmRectangle, AgmTransitLayer],
+        exports: [AgmBicyclingLayer, AgmCircle, AgmDataLayer, AgmFitBounds, AgmInfoWindow, AgmKmlLayer, AgmMap, AgmMarker, AgmPolygon, AgmPolyline, AgmPolylineIcon, AgmPolylinePoint, AgmRectangle, AgmTransitLayer]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AgmCoreModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+        args: [{
+          declarations: coreDirectives(),
+          exports: coreDirectives()
+        }]
+      }], null, null);
+    })(); // main modules
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=agm-core.js.map
+
+    /***/
+
+  },
+
   /***/
   "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js":
   /*!**********************************************************************!*\
@@ -814,22 +8655,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BrowserPlatformLocation = /*#__PURE__*/function (_PlatformLocation) {
       _inherits(BrowserPlatformLocation, _PlatformLocation);
 
-      var _super = _createSuper(BrowserPlatformLocation);
+      var _super2 = _createSuper(BrowserPlatformLocation);
 
       /**
        * @param {?} _doc
        */
       function BrowserPlatformLocation(_doc) {
-        var _this;
+        var _this82;
 
         _classCallCheck(this, BrowserPlatformLocation);
 
-        _this = _super.call(this);
-        _this._doc = _doc;
+        _this82 = _super2.call(this);
+        _this82._doc = _doc;
 
-        _this._init();
+        _this82._init();
 
-        return _this;
+        return _this82;
       } // This is moved to its own method so that `MockPlatformLocationStrategy` can overwrite it
 
       /**
@@ -1296,30 +9137,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var PathLocationStrategy = /*#__PURE__*/function (_LocationStrategy) {
       _inherits(PathLocationStrategy, _LocationStrategy);
 
-      var _super2 = _createSuper(PathLocationStrategy);
+      var _super3 = _createSuper(PathLocationStrategy);
 
       /**
        * @param {?} _platformLocation
        * @param {?=} href
        */
       function PathLocationStrategy(_platformLocation, href) {
-        var _this2;
+        var _this83;
 
         _classCallCheck(this, PathLocationStrategy);
 
-        _this2 = _super2.call(this);
-        _this2._platformLocation = _platformLocation;
+        _this83 = _super3.call(this);
+        _this83._platformLocation = _platformLocation;
 
         if (href == null) {
-          href = _this2._platformLocation.getBaseHrefFromDOM();
+          href = _this83._platformLocation.getBaseHrefFromDOM();
         }
 
         if (href == null) {
           throw new Error("No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.");
         }
 
-        _this2._baseHref = href;
-        return _this2;
+        _this83._baseHref = href;
+        return _this83;
       }
       /**
        * @param {?} fn
@@ -1499,26 +9340,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var HashLocationStrategy = /*#__PURE__*/function (_LocationStrategy2) {
       _inherits(HashLocationStrategy, _LocationStrategy2);
 
-      var _super3 = _createSuper(HashLocationStrategy);
+      var _super4 = _createSuper(HashLocationStrategy);
 
       /**
        * @param {?} _platformLocation
        * @param {?=} _baseHref
        */
       function HashLocationStrategy(_platformLocation, _baseHref) {
-        var _this3;
+        var _this84;
 
         _classCallCheck(this, HashLocationStrategy);
 
-        _this3 = _super3.call(this);
-        _this3._platformLocation = _platformLocation;
-        _this3._baseHref = '';
+        _this84 = _super4.call(this);
+        _this84._platformLocation = _platformLocation;
+        _this84._baseHref = '';
 
         if (_baseHref != null) {
-          _this3._baseHref = _baseHref;
+          _this84._baseHref = _baseHref;
         }
 
-        return _this3;
+        return _this84;
       }
       /**
        * @param {?} fn
@@ -1730,7 +9571,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} platformLocation
        */
       function Location(platformStrategy, platformLocation) {
-        var _this4 = this;
+        var _this85 = this;
 
         _classCallCheck(this, Location);
 
@@ -1757,8 +9598,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (ev) {
-          _this4._subject.emit({
-            'url': _this4.path(true),
+          _this85._subject.emit({
+            'url': _this85.path(true),
             'pop': true,
             'state': ev.state,
             'type': ev.type
@@ -1914,7 +9755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onUrlChange",
         value: function onUrlChange(fn) {
-          var _this5 = this;
+          var _this86 = this;
 
           this._urlChangeListeners.push(fn);
 
@@ -1924,7 +9765,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (v) {
-            _this5._notifyUrlChangeListeners(v.url, v.state);
+            _this86._notifyUrlChangeListeners(v.url, v.state);
           });
         }
         /**
@@ -4767,19 +12608,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgLocaleLocalization = /*#__PURE__*/function (_NgLocalization) {
       _inherits(NgLocaleLocalization, _NgLocalization);
 
-      var _super4 = _createSuper(NgLocaleLocalization);
+      var _super5 = _createSuper(NgLocaleLocalization);
 
       /**
        * @param {?} locale
        */
       function NgLocaleLocalization(locale) {
-        var _this6;
+        var _this87;
 
         _classCallCheck(this, NgLocaleLocalization);
 
-        _this6 = _super4.call(this);
-        _this6.locale = locale;
-        return _this6;
+        _this87 = _super5.call(this);
+        _this87.locale = locale;
+        return _this87;
       }
       /**
        * @param {?} value
@@ -4913,10 +12754,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
           var eqIndex = cookie.indexOf('=');
 
-          var _ref2 = eqIndex == -1 ? [cookie, ''] : [cookie.slice(0, eqIndex), cookie.slice(eqIndex + 1)],
-              _ref3 = _slicedToArray(_ref2, 2),
-              cookieName = _ref3[0],
-              cookieValue = _ref3[1];
+          var _ref9 = eqIndex == -1 ? [cookie, ''] : [cookie.slice(0, eqIndex), cookie.slice(eqIndex + 1)],
+              _ref10 = _slicedToArray(_ref9, 2),
+              cookieName = _ref10[0],
+              cookieValue = _ref10[1];
 
           if (cookieName.trim() === name) {
             return decodeURIComponent(cookieValue);
@@ -5027,7 +12868,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyKeyValueChanges",
         value: function _applyKeyValueChanges(changes) {
-          var _this7 = this;
+          var _this88 = this;
 
           changes.forEachAddedItem(
           /**
@@ -5035,7 +12876,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this7._toggleClass(record.key, record.currentValue);
+            return _this88._toggleClass(record.key, record.currentValue);
           });
           changes.forEachChangedItem(
           /**
@@ -5043,7 +12884,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this7._toggleClass(record.key, record.currentValue);
+            return _this88._toggleClass(record.key, record.currentValue);
           });
           changes.forEachRemovedItem(
           /**
@@ -5052,7 +12893,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (record) {
             if (record.previousValue) {
-              _this7._toggleClass(record.key, false);
+              _this88._toggleClass(record.key, false);
             }
           });
         }
@@ -5065,7 +12906,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyIterableChanges",
         value: function _applyIterableChanges(changes) {
-          var _this8 = this;
+          var _this89 = this;
 
           changes.forEachAddedItem(
           /**
@@ -5074,7 +12915,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (record) {
             if (typeof record.item === 'string') {
-              _this8._toggleClass(record.item, true);
+              _this89._toggleClass(record.item, true);
             } else {
               throw new Error("NgClass can only toggle CSS classes expressed as strings, got ".concat(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵstringify"])(record.item)));
             }
@@ -5085,7 +12926,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this8._toggleClass(record.item, false);
+            return _this89._toggleClass(record.item, false);
           });
         }
         /**
@@ -5103,7 +12944,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyClasses",
         value: function _applyClasses(rawClassVal) {
-          var _this9 = this;
+          var _this90 = this;
 
           if (rawClassVal) {
             if (Array.isArray(rawClassVal) || rawClassVal instanceof Set) {
@@ -5114,7 +12955,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this9._toggleClass(klass, true);
+                return _this90._toggleClass(klass, true);
               });
             } else {
               Object.keys(rawClassVal).forEach(
@@ -5123,7 +12964,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this9._toggleClass(klass, !!rawClassVal[klass]);
+                return _this90._toggleClass(klass, !!rawClassVal[klass]);
               });
             }
           }
@@ -5139,7 +12980,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_removeClasses",
         value: function _removeClasses(rawClassVal) {
-          var _this10 = this;
+          var _this91 = this;
 
           if (rawClassVal) {
             if (Array.isArray(rawClassVal) || rawClassVal instanceof Set) {
@@ -5150,7 +12991,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this10._toggleClass(klass, false);
+                return _this91._toggleClass(klass, false);
               });
             } else {
               Object.keys(rawClassVal).forEach(
@@ -5159,7 +13000,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this10._toggleClass(klass, false);
+                return _this91._toggleClass(klass, false);
               });
             }
           }
@@ -5174,7 +13015,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_toggleClass",
         value: function _toggleClass(klass, enabled) {
-          var _this11 = this;
+          var _this92 = this;
 
           klass = klass.trim();
 
@@ -5186,9 +13027,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (klass) {
               if (enabled) {
-                _this11._renderer.addClass(_this11._ngEl.nativeElement, klass);
+                _this92._renderer.addClass(_this92._ngEl.nativeElement, klass);
               } else {
-                _this11._renderer.removeClass(_this11._ngEl.nativeElement, klass);
+                _this92._renderer.removeClass(_this92._ngEl.nativeElement, klass);
               }
             });
           }
@@ -5727,7 +13568,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyChanges",
         value: function _applyChanges(changes) {
-          var _this12 = this;
+          var _this93 = this;
 
           /** @type {?} */
           var insertTuples = [];
@@ -5745,25 +13586,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               // there is an iterable value for "_ngForOf".
 
               /** @type {?} */
-              var view = _this12._viewContainer.createEmbeddedView(_this12._template, new NgForOfContext(
+              var view = _this93._viewContainer.createEmbeddedView(_this93._template, new NgForOfContext(
               /** @type {?} */
               null,
               /** @type {?} */
-              _this12._ngForOf, -1, -1), currentIndex === null ? undefined : currentIndex);
+              _this93._ngForOf, -1, -1), currentIndex === null ? undefined : currentIndex);
               /** @type {?} */
 
 
               var tuple = new RecordViewTuple(item, view);
               insertTuples.push(tuple);
             } else if (currentIndex == null) {
-              _this12._viewContainer.remove(adjustedPreviousIndex === null ? undefined : adjustedPreviousIndex);
+              _this93._viewContainer.remove(adjustedPreviousIndex === null ? undefined : adjustedPreviousIndex);
             } else if (adjustedPreviousIndex !== null) {
               /** @type {?} */
               var _view2 =
               /** @type {?} */
-              _this12._viewContainer.get(adjustedPreviousIndex);
+              _this93._viewContainer.get(adjustedPreviousIndex);
 
-              _this12._viewContainer.move(_view2, currentIndex);
+              _this93._viewContainer.move(_view2, currentIndex);
               /** @type {?} */
 
 
@@ -5801,7 +13642,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var viewRef =
             /** @type {?} */
-            _this12._viewContainer.get(record.currentIndex);
+            _this93._viewContainer.get(record.currentIndex);
 
             viewRef.context.$implicit = record.item;
           });
@@ -7188,7 +15029,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyChanges",
         value: function _applyChanges(changes) {
-          var _this13 = this;
+          var _this94 = this;
 
           changes.forEachRemovedItem(
           /**
@@ -7196,7 +15037,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, null);
+            return _this94._setStyle(record.key, null);
           });
           changes.forEachAddedItem(
           /**
@@ -7204,7 +15045,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, record.currentValue);
+            return _this94._setStyle(record.key, record.currentValue);
           });
           changes.forEachChangedItem(
           /**
@@ -7212,7 +15053,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, record.currentValue);
+            return _this94._setStyle(record.key, record.currentValue);
           });
         }
       }, {
@@ -7743,7 +15584,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_subscribe",
         value: function _subscribe(obj) {
-          var _this14 = this;
+          var _this95 = this;
 
           this._obj = obj;
           this._strategy = this._selectStrategy(obj);
@@ -7753,7 +15594,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (value) {
-            return _this14._updateLatestValue(obj, value);
+            return _this95._updateLatestValue(obj, value);
           });
         }
         /**
@@ -8602,7 +16443,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(KeyValuePipe, [{
         key: "transform",
         value: function transform(input) {
-          var _this15 = this;
+          var _this96 = this;
 
           var compareFn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultComparator;
 
@@ -8629,7 +16470,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (r) {
-              _this15.keyValues.push(makeKeyValuePair(r.key,
+              _this96.keyValues.push(makeKeyValuePair(r.key,
               /** @type {?} */
               r.currentValue));
             });
@@ -19158,12 +26999,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeHtmlImpl = /*#__PURE__*/function (_SafeValueImpl) {
       _inherits(SafeHtmlImpl, _SafeValueImpl);
 
-      var _super5 = _createSuper(SafeHtmlImpl);
+      var _super6 = _createSuper(SafeHtmlImpl);
 
       function SafeHtmlImpl() {
         _classCallCheck(this, SafeHtmlImpl);
 
-        return _super5.apply(this, arguments);
+        return _super6.apply(this, arguments);
       }
 
       _createClass2(SafeHtmlImpl, [{
@@ -19185,12 +27026,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeStyleImpl = /*#__PURE__*/function (_SafeValueImpl2) {
       _inherits(SafeStyleImpl, _SafeValueImpl2);
 
-      var _super6 = _createSuper(SafeStyleImpl);
+      var _super7 = _createSuper(SafeStyleImpl);
 
       function SafeStyleImpl() {
         _classCallCheck(this, SafeStyleImpl);
 
-        return _super6.apply(this, arguments);
+        return _super7.apply(this, arguments);
       }
 
       _createClass2(SafeStyleImpl, [{
@@ -19212,12 +27053,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeScriptImpl = /*#__PURE__*/function (_SafeValueImpl3) {
       _inherits(SafeScriptImpl, _SafeValueImpl3);
 
-      var _super7 = _createSuper(SafeScriptImpl);
+      var _super8 = _createSuper(SafeScriptImpl);
 
       function SafeScriptImpl() {
         _classCallCheck(this, SafeScriptImpl);
 
-        return _super7.apply(this, arguments);
+        return _super8.apply(this, arguments);
       }
 
       _createClass2(SafeScriptImpl, [{
@@ -19239,12 +27080,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeUrlImpl = /*#__PURE__*/function (_SafeValueImpl4) {
       _inherits(SafeUrlImpl, _SafeValueImpl4);
 
-      var _super8 = _createSuper(SafeUrlImpl);
+      var _super9 = _createSuper(SafeUrlImpl);
 
       function SafeUrlImpl() {
         _classCallCheck(this, SafeUrlImpl);
 
-        return _super8.apply(this, arguments);
+        return _super9.apply(this, arguments);
       }
 
       _createClass2(SafeUrlImpl, [{
@@ -19266,12 +27107,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeResourceUrlImpl = /*#__PURE__*/function (_SafeValueImpl5) {
       _inherits(SafeResourceUrlImpl, _SafeValueImpl5);
 
-      var _super9 = _createSuper(SafeResourceUrlImpl);
+      var _super10 = _createSuper(SafeResourceUrlImpl);
 
       function SafeResourceUrlImpl() {
         _classCallCheck(this, SafeResourceUrlImpl);
 
-        return _super9.apply(this, arguments);
+        return _super10.apply(this, arguments);
       }
 
       _createClass2(SafeResourceUrlImpl, [{
@@ -20940,10 +28781,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               /** @type {?} */
 
 
-              var _context = createLContext(_lView2, index, _native3);
+              var _context9 = createLContext(_lView2, index, _native3);
 
-              attachPatchData(_native3, _context);
-              mpValue = _context;
+              attachPatchData(_native3, _context9);
+              mpValue = _context9;
               break;
             }
           }
@@ -21003,12 +28844,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         attachPatchData(context["native"], context);
       } else {
         /** @type {?} */
-        var _context2 =
+        var _context10 =
         /** @type {?} */
 
         /** @type {?} */
         lView;
-        view = getComponentLViewByIndex(_context2.nodeIndex, _context2.lView);
+        view = getComponentLViewByIndex(_context10.nodeIndex, _context10.lView);
       }
 
       return view;
@@ -29776,19 +37617,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RootViewRef = /*#__PURE__*/function (_ViewRef) {
       _inherits(RootViewRef, _ViewRef);
 
-      var _super10 = _createSuper(RootViewRef);
+      var _super11 = _createSuper(RootViewRef);
 
       /**
        * @param {?} _view
        */
       function RootViewRef(_view) {
-        var _this16;
+        var _this97;
 
         _classCallCheck(this, RootViewRef);
 
-        _this16 = _super10.call(this, _view);
-        _this16._view = _view;
-        return _this16;
+        _this97 = _super11.call(this, _view);
+        _this97._view = _view;
+        return _this97;
       }
       /**
        * @return {?}
@@ -29961,12 +37802,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         R3ElementRef = /*#__PURE__*/function (_ElementRefToken) {
           _inherits(ElementRef, _ElementRefToken);
 
-          var _super11 = _createSuper(ElementRef);
+          var _super12 = _createSuper(ElementRef);
 
           function ElementRef() {
             _classCallCheck(this, ElementRef);
 
-            return _super11.apply(this, arguments);
+            return _super12.apply(this, arguments);
           }
 
           return ElementRef;
@@ -30010,7 +37851,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         R3TemplateRef = /*#__PURE__*/function (_TemplateRefToken) {
           _inherits(TemplateRef, _TemplateRefToken);
 
-          var _super12 = _createSuper(TemplateRef);
+          var _super13 = _createSuper(TemplateRef);
 
           /**
            * @param {?} _declarationView
@@ -30018,15 +37859,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} elementRef
            */
           function TemplateRef(_declarationView, _declarationTContainer, elementRef) {
-            var _this17;
+            var _this98;
 
             _classCallCheck(this, TemplateRef);
 
-            _this17 = _super12.call(this);
-            _this17._declarationView = _declarationView;
-            _this17._declarationTContainer = _declarationTContainer;
-            _this17.elementRef = elementRef;
-            return _this17;
+            _this98 = _super13.call(this);
+            _this98._declarationView = _declarationView;
+            _this98._declarationTContainer = _declarationTContainer;
+            _this98.elementRef = elementRef;
+            return _this98;
           }
           /**
            * @param {?} context
@@ -30115,7 +37956,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         R3ViewContainerRef = /*#__PURE__*/function (_ViewContainerRefToke) {
           _inherits(ViewContainerRef, _ViewContainerRefToke);
 
-          var _super13 = _createSuper(ViewContainerRef);
+          var _super14 = _createSuper(ViewContainerRef);
 
           /**
            * @param {?} _lContainer
@@ -30123,15 +37964,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} _hostView
            */
           function ViewContainerRef(_lContainer, _hostTNode, _hostView) {
-            var _this18;
+            var _this99;
 
             _classCallCheck(this, ViewContainerRef);
 
-            _this18 = _super13.call(this);
-            _this18._lContainer = _lContainer;
-            _this18._hostTNode = _hostTNode;
-            _this18._hostView = _hostView;
-            return _this18;
+            _this99 = _super14.call(this);
+            _this99._lContainer = _lContainer;
+            _this99._hostTNode = _hostTNode;
+            _this99._hostView = _hostView;
+            return _this99;
           }
           /**
            * @return {?}
@@ -31683,7 +39524,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} source
        */
       function R3Injector(def, additionalProviders, parent) {
-        var _this19 = this;
+        var _this100 = this;
 
         var source = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
@@ -31720,7 +39561,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (provider) {
-          return _this19.processProvider(provider, def, additionalProviders);
+          return _this100.processProvider(provider, def, additionalProviders);
         });
         deepForEach([def],
         /**
@@ -31728,7 +39569,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (injectorDef) {
-          return _this19.processInjectorType(injectorDef, [], dedupStack);
+          return _this100.processInjectorType(injectorDef, [], dedupStack);
         }); // Make sure the INJECTOR token provides this injector.
 
         this.records.set(INJECTOR, makeRecord(undefined, this)); // Detect whether this injector has the APP_ROOT_SCOPE token and thus should provide
@@ -31870,7 +39711,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_resolveInjectorDefTypes",
         value: function _resolveInjectorDefTypes() {
-          var _this20 = this;
+          var _this101 = this;
 
           this.injectorDefTypes.forEach(
           /**
@@ -31878,7 +39719,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (defType) {
-            return _this20.get(defType);
+            return _this101.get(defType);
           });
         }
         /**
@@ -31936,7 +39777,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processInjectorType",
         value: function processInjectorType(defOrWrappedDef, parents, dedupStack) {
-          var _this21 = this;
+          var _this102 = this;
 
           defOrWrappedDef = resolveForwardRef(defOrWrappedDef);
           if (!defOrWrappedDef) return false; // Either the defOrWrappedDef is an InjectorType (with injector def) or an
@@ -32009,7 +39850,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (imported) {
-                if (_this21.processInjectorType(imported, parents, dedupStack)) {
+                if (_this102.processInjectorType(imported, parents, dedupStack)) {
                   if (importTypesWithProviders === undefined) importTypesWithProviders = []; // If the processed import is an injector type with providers, we store it in the
                   // list of import types with providers, so that we can process those afterwards.
 
@@ -32037,7 +39878,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function (provider) {
-                  return _this21.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
+                  return _this102.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
                 });
               };
 
@@ -32067,7 +39908,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (provider) {
-              return _this21.processProvider(provider, injectorType, defProviders);
+              return _this102.processProvider(provider, injectorType, defProviders);
             });
           }
 
@@ -34401,7 +42242,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_instantiate",
         value: function _instantiate(provider, ResolvedReflectiveFactory) {
-          var _this22 = this;
+          var _this103 = this;
 
           /** @type {?} */
           var factory = ResolvedReflectiveFactory.factory;
@@ -34416,7 +42257,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (dep) {
-              return _this22._getByReflectiveDependency(dep);
+              return _this103._getByReflectiveDependency(dep);
             });
           } catch (e) {
             if (e.addKey) {
@@ -44207,26 +52048,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactoryBoundToModule = /*#__PURE__*/function (_ComponentFactory) {
       _inherits(ComponentFactoryBoundToModule, _ComponentFactory);
 
-      var _super14 = _createSuper(ComponentFactoryBoundToModule);
+      var _super15 = _createSuper(ComponentFactoryBoundToModule);
 
       /**
        * @param {?} factory
        * @param {?} ngModule
        */
       function ComponentFactoryBoundToModule(factory, ngModule) {
-        var _this23;
+        var _this104;
 
         _classCallCheck(this, ComponentFactoryBoundToModule);
 
-        _this23 = _super14.call(this);
-        _this23.factory = factory;
-        _this23.ngModule = ngModule;
-        _this23.selector = factory.selector;
-        _this23.componentType = factory.componentType;
-        _this23.ngContentSelectors = factory.ngContentSelectors;
-        _this23.inputs = factory.inputs;
-        _this23.outputs = factory.outputs;
-        return _this23;
+        _this104 = _super15.call(this);
+        _this104.factory = factory;
+        _this104.ngModule = ngModule;
+        _this104.selector = factory.selector;
+        _this104.componentType = factory.componentType;
+        _this104.ngContentSelectors = factory.ngContentSelectors;
+        _this104.inputs = factory.inputs;
+        _this104.outputs = factory.outputs;
+        return _this104;
       }
       /**
        * @param {?} injector
@@ -44781,7 +52622,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(collection) {
-          var _this24 = this;
+          var _this105 = this;
 
           this._reset();
           /** @type {?} */
@@ -44831,18 +52672,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (item) {
-              itemTrackBy = _this24._trackByFn(index, item);
+              itemTrackBy = _this105._trackByFn(index, item);
 
               if (record === null || !looseIdentical(record.trackById, itemTrackBy)) {
-                record = _this24._mismatch(record, item, itemTrackBy, index);
+                record = _this105._mismatch(record, item, itemTrackBy, index);
                 mayBeDirty = true;
               } else {
                 if (mayBeDirty) {
                   // TODO(misko): can we limit this to duplicates only?
-                  record = _this24._verifyReinsertion(record, item, itemTrackBy, index);
+                  record = _this105._verifyReinsertion(record, item, itemTrackBy, index);
                 }
 
-                if (!looseIdentical(record.item, item)) _this24._addIdentityChange(record, item);
+                if (!looseIdentical(record.item, item)) _this105._addIdentityChange(record, item);
               }
 
               record = record._next;
@@ -45833,7 +53674,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(map) {
-          var _this25 = this;
+          var _this106 = this;
 
           this._reset();
           /** @type {?} */
@@ -45850,15 +53691,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (value, key) {
             if (insertBefore && insertBefore.key === key) {
-              _this25._maybeAddToChanges(insertBefore, value);
+              _this106._maybeAddToChanges(insertBefore, value);
 
-              _this25._appendAfter = insertBefore;
+              _this106._appendAfter = insertBefore;
               insertBefore = insertBefore._next;
             } else {
               /** @type {?} */
-              var record = _this25._getOrCreateRecordForKey(key, value);
+              var record = _this106._getOrCreateRecordForKey(key, value);
 
-              insertBefore = _this25._insertBeforeOrAppend(insertBefore, record);
+              insertBefore = _this106._insertBeforeOrAppend(insertBefore, record);
             }
           }); // Items remaining at the end of the list have been deleted
 
@@ -47760,10 +55601,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @param {?} __0
         * @return {?}
         */
-        function (_ref4) {
-          var _ref5 = _slicedToArray(_ref4, 2),
-              queryId = _ref5[0],
-              valueType = _ref5[1];
+        function (_ref11) {
+          var _ref12 = _slicedToArray(_ref11, 2),
+              queryId = _ref12[0],
+              valueType = _ref12[1];
 
           if (typeof queryId === 'number') {
             matchedQueries[queryId] = valueType;
@@ -48944,7 +56785,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactory_ = /*#__PURE__*/function (_ComponentFactory2) {
       _inherits(ComponentFactory_, _ComponentFactory2);
 
-      var _super15 = _createSuper(ComponentFactory_);
+      var _super16 = _createSuper(ComponentFactory_);
 
       /**
        * @param {?} selector
@@ -48955,20 +56796,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngContentSelectors
        */
       function ComponentFactory_(selector, componentType, viewDefFactory, _inputs, _outputs, ngContentSelectors) {
-        var _this26;
+        var _this107;
 
         _classCallCheck(this, ComponentFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this26 = _super15.call(this);
-        _this26.selector = selector;
-        _this26.componentType = componentType;
-        _this26._inputs = _inputs;
-        _this26._outputs = _outputs;
-        _this26.ngContentSelectors = ngContentSelectors;
-        _this26.viewDefFactory = viewDefFactory;
-        return _this26;
+        _this107 = _super16.call(this);
+        _this107.selector = selector;
+        _this107.componentType = componentType;
+        _this107._inputs = _inputs;
+        _this107._outputs = _outputs;
+        _this107.ngContentSelectors = ngContentSelectors;
+        _this107.viewDefFactory = viewDefFactory;
+        return _this107;
       }
       /**
        * @return {?}
@@ -49067,7 +56908,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentRef_ = /*#__PURE__*/function (_ComponentRef) {
       _inherits(ComponentRef_, _ComponentRef);
 
-      var _super16 = _createSuper(ComponentRef_);
+      var _super17 = _createSuper(ComponentRef_);
 
       /**
        * @param {?} _view
@@ -49075,19 +56916,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _component
        */
       function ComponentRef_(_view, _viewRef, _component) {
-        var _this27;
+        var _this108;
 
         _classCallCheck(this, ComponentRef_);
 
-        _this27 = _super16.call(this);
-        _this27._view = _view;
-        _this27._viewRef = _viewRef;
-        _this27._component = _component;
-        _this27._elDef = _this27._view.def.nodes[0];
-        _this27.hostView = _viewRef;
-        _this27.changeDetectorRef = _viewRef;
-        _this27.instance = _component;
-        return _this27;
+        _this108 = _super17.call(this);
+        _this108._view = _view;
+        _this108._viewRef = _viewRef;
+        _this108._component = _component;
+        _this108._elDef = _this108._view.def.nodes[0];
+        _this108.hostView = _viewRef;
+        _this108.changeDetectorRef = _viewRef;
+        _this108.instance = _component;
+        return _this108;
       }
       /**
        * @return {?}
@@ -49601,21 +57442,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TemplateRef_ = /*#__PURE__*/function (_TemplateRef) {
       _inherits(TemplateRef_, _TemplateRef);
 
-      var _super17 = _createSuper(TemplateRef_);
+      var _super18 = _createSuper(TemplateRef_);
 
       /**
        * @param {?} _parentView
        * @param {?} _def
        */
       function TemplateRef_(_parentView, _def) {
-        var _this28;
+        var _this109;
 
         _classCallCheck(this, TemplateRef_);
 
-        _this28 = _super17.call(this);
-        _this28._parentView = _parentView;
-        _this28._def = _def;
-        return _this28;
+        _this109 = _super18.call(this);
+        _this109._parentView = _parentView;
+        _this109._def = _def;
+        return _this109;
       }
       /**
        * @param {?} context
@@ -50885,19 +58726,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactoryResolver$1 = /*#__PURE__*/function (_ComponentFactoryReso) {
       _inherits(ComponentFactoryResolver$1, _ComponentFactoryReso);
 
-      var _super18 = _createSuper(ComponentFactoryResolver$1);
+      var _super19 = _createSuper(ComponentFactoryResolver$1);
 
       /**
        * @param {?=} ngModule The NgModuleRef to which all resolved factories are bound.
        */
       function ComponentFactoryResolver$1(ngModule) {
-        var _this29;
+        var _this110;
 
         _classCallCheck(this, ComponentFactoryResolver$1);
 
-        _this29 = _super18.call(this);
-        _this29.ngModule = ngModule;
-        return _this29;
+        _this110 = _super19.call(this);
+        _this110.ngModule = ngModule;
+        return _this110;
       }
       /**
        * @template T
@@ -51018,25 +58859,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactory$1 = /*#__PURE__*/function (_ComponentFactory3) {
       _inherits(ComponentFactory$1, _ComponentFactory3);
 
-      var _super19 = _createSuper(ComponentFactory$1);
+      var _super20 = _createSuper(ComponentFactory$1);
 
       /**
        * @param {?} componentDef The component definition.
        * @param {?=} ngModule The NgModuleRef to which the factory is bound.
        */
       function ComponentFactory$1(componentDef, ngModule) {
-        var _this30;
+        var _this111;
 
         _classCallCheck(this, ComponentFactory$1);
 
-        _this30 = _super19.call(this);
-        _this30.componentDef = componentDef;
-        _this30.ngModule = ngModule;
-        _this30.componentType = componentDef.type;
-        _this30.selector = stringifyCSSSelectorList(componentDef.selectors);
-        _this30.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
-        _this30.isBoundToModule = !!ngModule;
-        return _this30;
+        _this111 = _super20.call(this);
+        _this111.componentDef = componentDef;
+        _this111.ngModule = ngModule;
+        _this111.componentType = componentDef.type;
+        _this111.selector = stringifyCSSSelectorList(componentDef.selectors);
+        _this111.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
+        _this111.isBoundToModule = !!ngModule;
+        return _this111;
       }
       /**
        * @return {?}
@@ -51242,7 +59083,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentRef$1 = /*#__PURE__*/function (_ComponentRef2) {
       _inherits(ComponentRef$1, _ComponentRef2);
 
-      var _super20 = _createSuper(ComponentRef$1);
+      var _super21 = _createSuper(ComponentRef$1);
 
       /**
        * @param {?} componentType
@@ -51252,20 +59093,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _tNode
        */
       function ComponentRef$1(componentType, instance, location, _rootLView, _tNode) {
-        var _this31;
+        var _this112;
 
         _classCallCheck(this, ComponentRef$1);
 
-        _this31 = _super20.call(this);
-        _this31.location = location;
-        _this31._rootLView = _rootLView;
-        _this31._tNode = _tNode;
-        _this31.destroyCbs = [];
-        _this31.instance = instance;
-        _this31.hostView = _this31.changeDetectorRef = new RootViewRef(_rootLView);
+        _this112 = _super21.call(this);
+        _this112.location = location;
+        _this112._rootLView = _rootLView;
+        _this112._tNode = _tNode;
+        _this112.destroyCbs = [];
+        _this112.instance = instance;
+        _this112.hostView = _this112.changeDetectorRef = new RootViewRef(_rootLView);
         assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
-        _this31.componentType = componentType;
-        return _this31;
+        _this112.componentType = componentType;
+        return _this112;
       }
       /**
        * @return {?}
@@ -53979,30 +61820,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgModuleRef$1 = /*#__PURE__*/function (_NgModuleRef) {
       _inherits(NgModuleRef$1, _NgModuleRef);
 
-      var _super21 = _createSuper(NgModuleRef$1);
+      var _super22 = _createSuper(NgModuleRef$1);
 
       /**
        * @param {?} ngModuleType
        * @param {?} _parent
        */
       function NgModuleRef$1(ngModuleType, _parent) {
-        var _this32;
+        var _this113;
 
         _classCallCheck(this, NgModuleRef$1);
 
-        _this32 = _super21.call(this);
-        _this32._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
+        _this113 = _super22.call(this);
+        _this113._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
 
-        _this32._bootstrapComponents = [];
-        _this32.injector = _assertThisInitialized(_this32);
-        _this32.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
+        _this113._bootstrapComponents = [];
+        _this113.injector = _assertThisInitialized(_this113);
+        _this113.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
         // ApplicationRef -> ComponentFactoryResolver -> NgModuleRef. The problem is that if the
         // module being resolved tries to inject the ComponentFactoryResolver, it'll create a
         // circular dependency which will result in a runtime error, because the injector doesn't
         // exist yet. We work around the issue by creating the ComponentFactoryResolver ourselves
         // and providing it, rather than letting the injector resolve it.
 
-        _this32.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this32));
+        _this113.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this113));
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(ngModuleType);
@@ -54011,25 +61852,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var ngLocaleIdDef = getNgLocaleIdDef(ngModuleType);
         ngLocaleIdDef && setLocaleId(ngLocaleIdDef);
-        _this32._bootstrapComponents = maybeUnwrapFn(
+        _this113._bootstrapComponents = maybeUnwrapFn(
         /** @type {?} */
         ngModuleDef.bootstrap);
-        _this32._r3Injector =
+        _this113._r3Injector =
         /** @type {?} */
         createInjectorWithoutInjectorInstances(ngModuleType, _parent, [{
           provide: NgModuleRef,
-          useValue: _assertThisInitialized(_this32)
+          useValue: _assertThisInitialized(_this113)
         }, {
           provide: ComponentFactoryResolver,
-          useValue: _this32.componentFactoryResolver
+          useValue: _this113.componentFactoryResolver
         }], stringify(ngModuleType)); // We need to resolve the injector types separately from the injector creation, because
         // the module might be trying to use this ref in its contructor for DI which will cause a
         // circular error that will eventually error out, because the injector isn't created yet.
 
-        _this32._r3Injector._resolveInjectorDefTypes();
+        _this113._r3Injector._resolveInjectorDefTypes();
 
-        _this32.instance = _this32.get(ngModuleType);
-        return _this32;
+        _this113.instance = _this113.get(ngModuleType);
+        return _this113;
       }
       /**
        * @param {?} token
@@ -54102,18 +61943,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgModuleFactory$1 = /*#__PURE__*/function (_NgModuleFactory) {
       _inherits(NgModuleFactory$1, _NgModuleFactory);
 
-      var _super22 = _createSuper(NgModuleFactory$1);
+      var _super23 = _createSuper(NgModuleFactory$1);
 
       /**
        * @param {?} moduleType
        */
       function NgModuleFactory$1(moduleType) {
-        var _this33;
+        var _this114;
 
         _classCallCheck(this, NgModuleFactory$1);
 
-        _this33 = _super22.call(this);
-        _this33.moduleType = moduleType;
+        _this114 = _super23.call(this);
+        _this114.moduleType = moduleType;
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(moduleType);
@@ -54147,7 +61988,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           moduleType);
         }
 
-        return _this33;
+        return _this114;
       }
       /**
        * @param {?} parentInjector
@@ -54864,7 +62705,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EventEmitter = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT) {
       _inherits(EventEmitter, _rxjs__WEBPACK_IMPORT);
 
-      var _super23 = _createSuper(EventEmitter);
+      var _super24 = _createSuper(EventEmitter);
 
       // tslint:disable-line
 
@@ -54876,15 +62717,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        *
        */
       function EventEmitter() {
-        var _this34;
+        var _this115;
 
         var isAsync = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
         _classCallCheck(this, EventEmitter);
 
-        _this34 = _super23.call(this);
-        _this34.__isAsync = isAsync;
-        return _this34;
+        _this115 = _super24.call(this);
+        _this115.__isAsync = isAsync;
+        return _this115;
       }
       /**
        * Emits an event containing a given value.
@@ -58695,7 +66536,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appInits
        */
       function ApplicationInitStatus(appInits) {
-        var _this35 = this;
+        var _this116 = this;
 
         _classCallCheck(this, ApplicationInitStatus);
 
@@ -58709,8 +66550,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (res, rej) {
-          _this35.resolve = res;
-          _this35.reject = rej;
+          _this116.resolve = res;
+          _this116.reject = rej;
         });
       }
       /**
@@ -58722,7 +66563,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationInitStatus, [{
         key: "runInitializers",
         value: function runInitializers() {
-          var _this36 = this;
+          var _this117 = this;
 
           if (this.initialized) {
             return;
@@ -58739,9 +66580,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function complete() {
             /** @type {?} */
-            _this36.done = true;
+            _this117.done = true;
 
-            _this36.resolve();
+            _this117.resolve();
           };
 
           if (this.appInits) {
@@ -58767,7 +66608,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (e) {
-            _this36.reject(e);
+            _this117.reject(e);
           });
 
           if (asyncInitPromises.length === 0) {
@@ -59506,11 +67347,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @param {?} __0
        */
-      function NgZone(_ref6) {
-        var _ref6$enableLongStack = _ref6.enableLongStackTrace,
-            enableLongStackTrace = _ref6$enableLongStack === void 0 ? false : _ref6$enableLongStack,
-            _ref6$shouldCoalesceE = _ref6.shouldCoalesceEventChangeDetection,
-            shouldCoalesceEventChangeDetection = _ref6$shouldCoalesceE === void 0 ? false : _ref6$shouldCoalesceE;
+      function NgZone(_ref13) {
+        var _ref13$enableLongStac = _ref13.enableLongStackTrace,
+            enableLongStackTrace = _ref13$enableLongStac === void 0 ? false : _ref13$enableLongStac,
+            _ref13$shouldCoalesce = _ref13.shouldCoalesceEventChangeDetection,
+            shouldCoalesceEventChangeDetection = _ref13$shouldCoalesce === void 0 ? false : _ref13$shouldCoalesce;
 
         _classCallCheck(this, NgZone);
 
@@ -60085,7 +67926,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngZone
        */
       function Testability(_ngZone) {
-        var _this37 = this;
+        var _this118 = this;
 
         _classCallCheck(this, Testability);
 
@@ -60110,7 +67951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function () {
-          _this37.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
+          _this118.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
         });
       }
       /**
@@ -60122,7 +67963,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(Testability, [{
         key: "_watchAngularEvents",
         value: function _watchAngularEvents() {
-          var _this38 = this;
+          var _this119 = this;
 
           this._ngZone.onUnstable.subscribe({
             next:
@@ -60130,8 +67971,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function next() {
-              _this38._didWork = true;
-              _this38._isZoneStable = false;
+              _this119._didWork = true;
+              _this119._isZoneStable = false;
             }
           });
 
@@ -60140,7 +67981,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this38._ngZone.onStable.subscribe({
+            _this119._ngZone.onStable.subscribe({
               next:
               /**
               * @return {?}
@@ -60152,9 +67993,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function () {
-                  _this38._isZoneStable = true;
+                  _this119._isZoneStable = true;
 
-                  _this38._runCallbacksIfReady();
+                  _this119._runCallbacksIfReady();
                 });
               }
             });
@@ -60210,7 +68051,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_runCallbacksIfReady",
         value: function _runCallbacksIfReady() {
-          var _this39 = this;
+          var _this120 = this;
 
           if (this.isStable()) {
             // Schedules the call backs in a new frame so that it is always async.
@@ -60219,17 +68060,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              while (_this39._callbacks.length !== 0) {
+              while (_this120._callbacks.length !== 0) {
                 /** @type {?} */
                 var cb =
                 /** @type {?} */
-                _this39._callbacks.pop();
+                _this120._callbacks.pop();
 
                 clearTimeout(cb.timeoutId);
-                cb.doneCb(_this39._didWork);
+                cb.doneCb(_this120._didWork);
               }
 
-              _this39._didWork = false;
+              _this120._didWork = false;
             });
           } else {
             // Still not stable, send updates.
@@ -60295,7 +68136,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addCallback",
         value: function addCallback(cb, timeout, updateCb) {
-          var _this40 = this;
+          var _this121 = this;
 
           /** @type {?} */
           var timeoutId = -1;
@@ -60306,7 +68147,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              _this40._callbacks = _this40._callbacks.filter(
+              _this121._callbacks = _this121._callbacks.filter(
               /**
               * @param {?} cb
               * @return {?}
@@ -60314,7 +68155,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               function (cb) {
                 return cb.timeoutId !== timeoutId;
               });
-              cb(_this40._didWork, _this40.getPendingTasks());
+              cb(_this121._didWork, _this121.getPendingTasks());
             }, timeout);
           }
 
@@ -60994,7 +68835,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(PlatformRef, [{
         key: "bootstrapModuleFactory",
         value: function bootstrapModuleFactory(moduleFactory, options) {
-          var _this41 = this;
+          var _this122 = this;
 
           // Note: We need to create the NgZone _before_ we instantiate the module,
           // as instantiating the module creates some providers eagerly.
@@ -61025,7 +68866,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var ngZoneInjector = Injector.create({
               providers: providers,
-              parent: _this41.injector,
+              parent: _this122.injector,
               name: moduleFactory.moduleType.name
             });
             /** @type {?} */
@@ -61046,7 +68887,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return remove(_this41._modules, moduleRef);
+              return remove(_this122._modules, moduleRef);
             });
 
             /** @type {?} */
@@ -61092,7 +68933,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   setLocaleId(localeId || DEFAULT_LOCALE_ID);
                 }
 
-                _this41._moduleDoBootstrap(moduleRef);
+                _this122._moduleDoBootstrap(moduleRef);
 
                 return moduleRef;
               });
@@ -61123,7 +68964,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "bootstrapModule",
         value: function bootstrapModule(moduleType) {
-          var _this42 = this;
+          var _this123 = this;
 
           var compilerOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
@@ -61135,7 +68976,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (moduleFactory) {
-            return _this42.bootstrapModuleFactory(moduleFactory, options);
+            return _this123.bootstrapModuleFactory(moduleFactory, options);
           });
         }
         /**
@@ -61458,7 +69299,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _initStatus
        */
       function ApplicationRef(_zone, _console, _injector, _exceptionHandler, _componentFactoryResolver, _initStatus) {
-        var _this43 = this;
+        var _this124 = this;
 
         _classCallCheck(this, ApplicationRef);
 
@@ -61496,12 +69337,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function next() {
-            _this43._zone.run(
+            _this124._zone.run(
             /**
             * @return {?}
             */
             function () {
-              _this43.tick();
+              _this124.tick();
             });
           }
         });
@@ -61514,14 +69355,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (observer) {
-          _this43._stable = _this43._zone.isStable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks;
+          _this124._stable = _this124._zone.isStable && !_this124._zone.hasPendingMacrotasks && !_this124._zone.hasPendingMicrotasks;
 
-          _this43._zone.runOutsideAngular(
+          _this124._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            observer.next(_this43._stable);
+            observer.next(_this124._stable);
             observer.complete();
           });
         });
@@ -61539,12 +69380,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
           var stableSub;
 
-          _this43._zone.runOutsideAngular(
+          _this124._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            stableSub = _this43._zone.onStable.subscribe(
+            stableSub = _this124._zone.onStable.subscribe(
             /**
             * @return {?}
             */
@@ -61557,8 +69398,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                if (!_this43._stable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks) {
-                  _this43._stable = true;
+                if (!_this124._stable && !_this124._zone.hasPendingMacrotasks && !_this124._zone.hasPendingMicrotasks) {
+                  _this124._stable = true;
                   observer.next(true);
                 }
               });
@@ -61567,17 +69408,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
 
 
-          var unstableSub = _this43._zone.onUnstable.subscribe(
+          var unstableSub = _this124._zone.onUnstable.subscribe(
           /**
           * @return {?}
           */
           function () {
             NgZone.assertInAngularZone();
 
-            if (_this43._stable) {
-              _this43._stable = false;
+            if (_this124._stable) {
+              _this124._stable = false;
 
-              _this43._zone.runOutsideAngular(
+              _this124._zone.runOutsideAngular(
               /**
               * @return {?}
               */
@@ -61626,7 +69467,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationRef, [{
         key: "bootstrap",
         value: function bootstrap(componentOrFactory, rootSelectorOrNode) {
-          var _this44 = this;
+          var _this125 = this;
 
           if (!this._initStatus.done) {
             throw new Error('Cannot bootstrap as there are still asynchronous initializers running. Bootstrap components in the `ngDoBootstrap` method of the root module.');
@@ -61660,7 +69501,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this44._unloadComponent(compRef);
+            _this125._unloadComponent(compRef);
           });
           /** @type {?} */
 
@@ -61693,7 +69534,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tick",
         value: function tick() {
-          var _this45 = this;
+          var _this126 = this;
 
           if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
@@ -61739,7 +69580,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this45._exceptionHandler.handleError(e);
+              return _this126._exceptionHandler.handleError(e);
             });
           } finally {
             this._runningTick = false;
@@ -62106,7 +69947,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadAndCompile",
         value: function loadAndCompile(path) {
-          var _this46 = this;
+          var _this127 = this;
 
           var _path$split = path.split(_SEPARATOR),
               _path$split2 = _slicedToArray(_path$split, 2),
@@ -62137,7 +69978,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (type) {
-            return _this46._compiler.compileModuleAsync(type);
+            return _this127._compiler.compileModuleAsync(type);
           });
         }
         /**
@@ -62260,12 +70101,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ViewRef$1 = /*#__PURE__*/function (_ChangeDetectorRef) {
       _inherits(ViewRef$1, _ChangeDetectorRef);
 
-      var _super24 = _createSuper(ViewRef$1);
+      var _super25 = _createSuper(ViewRef$1);
 
       function ViewRef$1() {
         _classCallCheck(this, ViewRef$1);
 
-        return _super24.apply(this, arguments);
+        return _super25.apply(this, arguments);
       }
 
       return ViewRef$1;
@@ -62332,12 +70173,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EmbeddedViewRef = /*#__PURE__*/function (_ViewRef$) {
       _inherits(EmbeddedViewRef, _ViewRef$);
 
-      var _super25 = _createSuper(EmbeddedViewRef);
+      var _super26 = _createSuper(EmbeddedViewRef);
 
       function EmbeddedViewRef() {
         _classCallCheck(this, EmbeddedViewRef);
 
-        return _super25.apply(this, arguments);
+        return _super26.apply(this, arguments);
       }
 
       return EmbeddedViewRef;
@@ -62459,7 +70300,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebugElement__PRE_R3__ = /*#__PURE__*/function (_DebugNode__PRE_R3__) {
       _inherits(DebugElement__PRE_R3__, _DebugNode__PRE_R3__);
 
-      var _super26 = _createSuper(DebugElement__PRE_R3__);
+      var _super27 = _createSuper(DebugElement__PRE_R3__);
 
       /**
        * @param {?} nativeNode
@@ -62467,18 +70308,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _debugContext
        */
       function DebugElement__PRE_R3__(nativeNode, parent, _debugContext) {
-        var _this47;
+        var _this128;
 
         _classCallCheck(this, DebugElement__PRE_R3__);
 
-        _this47 = _super26.call(this, nativeNode, parent, _debugContext);
-        _this47.properties = {};
-        _this47.attributes = {};
-        _this47.classes = {};
-        _this47.styles = {};
-        _this47.childNodes = [];
-        _this47.nativeElement = nativeNode;
-        return _this47;
+        _this128 = _super27.call(this, nativeNode, parent, _debugContext);
+        _this128.properties = {};
+        _this128.attributes = {};
+        _this128.classes = {};
+        _this128.styles = {};
+        _this128.childNodes = [];
+        _this128.nativeElement = nativeNode;
+        return _this128;
       }
       /**
        * @param {?} child
@@ -62522,7 +70363,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "insertChildrenAfter",
         value: function insertChildrenAfter(child, newChildren) {
-          var _this48 = this;
+          var _this129 = this;
 
           /** @type {?} */
           var siblingIndex = this.childNodes.indexOf(child);
@@ -62544,7 +70385,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
 
               /** @type {?} */
-              child.parent = _this48;
+              child.parent = _this129;
             });
           }
         }
@@ -62835,7 +70676,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebugElement__POST_R3__ = /*#__PURE__*/function (_DebugNode__POST_R3__) {
       _inherits(DebugElement__POST_R3__, _DebugNode__POST_R3__);
 
-      var _super27 = _createSuper(DebugElement__POST_R3__);
+      var _super28 = _createSuper(DebugElement__POST_R3__);
 
       /**
        * @param {?} nativeNode
@@ -62844,7 +70685,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, DebugElement__POST_R3__);
 
         ngDevMode && assertDomNode(nativeNode);
-        return _super27.call(this, nativeNode);
+        return _super28.call(this, nativeNode);
       }
       /**
        * @return {?}
@@ -64150,10 +71991,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       * @param {?} __0
       * @return {?}
       */
-      function (_ref7) {
-        var _ref8 = _slicedToArray(_ref7, 2),
-            namespaceAndName = _ref8[0],
-            value = _ref8[1];
+      function (_ref14) {
+        var _ref15 = _slicedToArray(_ref14, 2),
+            namespaceAndName = _ref15[0],
+            value = _ref15[1];
 
         var _splitNamespace5 = splitNamespace(namespaceAndName),
             _splitNamespace6 = _slicedToArray(_splitNamespace5, 2),
@@ -68729,7 +76570,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgModuleFactory_ = /*#__PURE__*/function (_NgModuleFactory2) {
       _inherits(NgModuleFactory_, _NgModuleFactory2);
 
-      var _super28 = _createSuper(NgModuleFactory_);
+      var _super29 = _createSuper(NgModuleFactory_);
 
       /**
        * @param {?} moduleType
@@ -68737,17 +76578,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngModuleDefFactory
        */
       function NgModuleFactory_(moduleType, _bootstrapComponents, _ngModuleDefFactory) {
-        var _this49;
+        var _this130;
 
         _classCallCheck(this, NgModuleFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this49 = _super28.call(this);
-        _this49.moduleType = moduleType;
-        _this49._bootstrapComponents = _bootstrapComponents;
-        _this49._ngModuleDefFactory = _ngModuleDefFactory;
-        return _this49;
+        _this130 = _super29.call(this);
+        _this130.moduleType = moduleType;
+        _this130._bootstrapComponents = _bootstrapComponents;
+        _this130._ngModuleDefFactory = _ngModuleDefFactory;
+        return _this130;
       }
       /**
        * @param {?} parentInjector
@@ -69222,12 +77063,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GenericBrowserDomAdapter = /*#__PURE__*/function (_angular_common__WEBP) {
       _inherits(GenericBrowserDomAdapter, _angular_common__WEBP);
 
-      var _super29 = _createSuper(GenericBrowserDomAdapter);
+      var _super30 = _createSuper(GenericBrowserDomAdapter);
 
       function GenericBrowserDomAdapter() {
         _classCallCheck(this, GenericBrowserDomAdapter);
 
-        return _super29.call(this);
+        return _super30.call(this);
       }
       /**
        * @return {?}
@@ -69288,12 +77129,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BrowserDomAdapter = /*#__PURE__*/function (_GenericBrowserDomAda) {
       _inherits(BrowserDomAdapter, _GenericBrowserDomAda);
 
-      var _super30 = _createSuper(BrowserDomAdapter);
+      var _super31 = _createSuper(BrowserDomAdapter);
 
       function BrowserDomAdapter() {
         _classCallCheck(this, BrowserDomAdapter);
 
-        return _super30.apply(this, arguments);
+        return _super31.apply(this, arguments);
       }
 
       _createClass2(BrowserDomAdapter, [{
@@ -70028,7 +77869,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _zone
        */
       function EventManager(plugins, _zone) {
-        var _this50 = this;
+        var _this131 = this;
 
         _classCallCheck(this, EventManager);
 
@@ -70042,7 +77883,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {THIS}
         */
         function (p) {
-          return p.manager = _this50;
+          return p.manager = _this131;
         });
         this._plugins = plugins.slice().reverse();
       }
@@ -70237,7 +78078,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(SharedStylesHost, [{
         key: "addStyles",
         value: function addStyles(styles) {
-          var _this51 = this;
+          var _this132 = this;
 
           /** @type {?} */
           var additions = new Set();
@@ -70247,8 +78088,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (style) {
-            if (!_this51._stylesSet.has(style)) {
-              _this51._stylesSet.add(style);
+            if (!_this132._stylesSet.has(style)) {
+              _this132._stylesSet.add(style);
 
               additions.add(style);
             }
@@ -70300,24 +78141,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DomSharedStylesHost = /*#__PURE__*/function (_SharedStylesHost) {
       _inherits(DomSharedStylesHost, _SharedStylesHost);
 
-      var _super31 = _createSuper(DomSharedStylesHost);
+      var _super32 = _createSuper(DomSharedStylesHost);
 
       /**
        * @param {?} _doc
        */
       function DomSharedStylesHost(_doc) {
-        var _this52;
+        var _this133;
 
         _classCallCheck(this, DomSharedStylesHost);
 
-        _this52 = _super31.call(this);
-        _this52._doc = _doc;
-        _this52._hostNodes = new Set();
-        _this52._styleNodes = new Set();
+        _this133 = _super32.call(this);
+        _this133._doc = _doc;
+        _this133._hostNodes = new Set();
+        _this133._styleNodes = new Set();
 
-        _this52._hostNodes.add(_doc.head);
+        _this133._hostNodes.add(_doc.head);
 
-        return _this52;
+        return _this133;
       }
       /**
        * @private
@@ -70330,7 +78171,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(DomSharedStylesHost, [{
         key: "_addStylesToHost",
         value: function _addStylesToHost(styles, host) {
-          var _this53 = this;
+          var _this134 = this;
 
           styles.forEach(
           /**
@@ -70339,11 +78180,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (style) {
             /** @type {?} */
-            var styleEl = _this53._doc.createElement('style');
+            var styleEl = _this134._doc.createElement('style');
 
             styleEl.textContent = style;
 
-            _this53._styleNodes.add(host.appendChild(styleEl));
+            _this134._styleNodes.add(host.appendChild(styleEl));
           });
         }
         /**
@@ -70376,7 +78217,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onStylesAdded",
         value: function onStylesAdded(additions) {
-          var _this54 = this;
+          var _this135 = this;
 
           this._hostNodes.forEach(
           /**
@@ -70384,7 +78225,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (hostNode) {
-            return _this54._addStylesToHost(additions, hostNode);
+            return _this135._addStylesToHost(additions, hostNode);
           });
         }
         /**
@@ -71015,7 +78856,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EmulatedEncapsulationDomRenderer2 = /*#__PURE__*/function (_DefaultDomRenderer) {
       _inherits(EmulatedEncapsulationDomRenderer2, _DefaultDomRenderer);
 
-      var _super32 = _createSuper(EmulatedEncapsulationDomRenderer2);
+      var _super33 = _createSuper(EmulatedEncapsulationDomRenderer2);
 
       /**
        * @param {?} eventManager
@@ -71024,19 +78865,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appId
        */
       function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component, appId) {
-        var _this55;
+        var _this136;
 
         _classCallCheck(this, EmulatedEncapsulationDomRenderer2);
 
-        _this55 = _super32.call(this, eventManager);
-        _this55.component = component;
+        _this136 = _super33.call(this, eventManager);
+        _this136.component = component;
         /** @type {?} */
 
         var styles = flattenStyles(appId + '-' + component.id, component.styles, []);
         sharedStylesHost.addStyles(styles);
-        _this55.contentAttr = shimContentAttribute(appId + '-' + component.id);
-        _this55.hostAttr = shimHostAttribute(appId + '-' + component.id);
-        return _this55;
+        _this136.contentAttr = shimContentAttribute(appId + '-' + component.id);
+        _this136.hostAttr = shimHostAttribute(appId + '-' + component.id);
+        return _this136;
       }
       /**
        * @param {?} element
@@ -71075,7 +78916,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ShadowDomRenderer = /*#__PURE__*/function (_DefaultDomRenderer2) {
       _inherits(ShadowDomRenderer, _DefaultDomRenderer2);
 
-      var _super33 = _createSuper(ShadowDomRenderer);
+      var _super34 = _createSuper(ShadowDomRenderer);
 
       /**
        * @param {?} eventManager
@@ -71084,28 +78925,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} component
        */
       function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
-        var _this56;
+        var _this137;
 
         _classCallCheck(this, ShadowDomRenderer);
 
-        _this56 = _super33.call(this, eventManager);
-        _this56.sharedStylesHost = sharedStylesHost;
-        _this56.hostEl = hostEl;
-        _this56.component = component;
+        _this137 = _super34.call(this, eventManager);
+        _this137.sharedStylesHost = sharedStylesHost;
+        _this137.hostEl = hostEl;
+        _this137.component = component;
 
         if (component.encapsulation === _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].ShadowDom) {
-          _this56.shadowRoot =
+          _this137.shadowRoot =
           /** @type {?} */
           hostEl.attachShadow({
             mode: 'open'
           });
         } else {
-          _this56.shadowRoot =
+          _this137.shadowRoot =
           /** @type {?} */
           hostEl.createShadowRoot();
         }
 
-        _this56.sharedStylesHost.addHost(_this56.shadowRoot);
+        _this137.sharedStylesHost.addHost(_this137.shadowRoot);
         /** @type {?} */
 
 
@@ -71116,10 +78957,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var styleEl = document.createElement('style');
           styleEl.textContent = styles[i];
 
-          _this56.shadowRoot.appendChild(styleEl);
+          _this137.shadowRoot.appendChild(styleEl);
         }
 
-        return _this56;
+        return _this137;
       }
       /**
        * @private
@@ -71202,7 +79043,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DomEventsPlugin = /*#__PURE__*/function (_EventManagerPlugin) {
       _inherits(DomEventsPlugin, _EventManagerPlugin);
 
-      var _super34 = _createSuper(DomEventsPlugin);
+      var _super35 = _createSuper(DomEventsPlugin);
 
       /**
        * @param {?} doc
@@ -71210,7 +79051,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function DomEventsPlugin(doc) {
         _classCallCheck(this, DomEventsPlugin);
 
-        return _super34.call(this, doc);
+        return _super35.call(this, doc);
       } // This plugin should come last in the list of plugins, because it accepts all
       // events.
 
@@ -71235,7 +79076,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this57 = this;
+          var _this138 = this;
 
           element.addEventListener(eventName,
           /** @type {?} */
@@ -71245,7 +79086,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this57.removeEventListener(element, eventName,
+              return _this138.removeEventListener(element, eventName,
               /** @type {?} */
               handler);
             }
@@ -71477,7 +79318,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var HammerGesturesPlugin = /*#__PURE__*/function (_EventManagerPlugin2) {
       _inherits(HammerGesturesPlugin, _EventManagerPlugin2);
 
-      var _super35 = _createSuper(HammerGesturesPlugin);
+      var _super36 = _createSuper(HammerGesturesPlugin);
 
       /**
        * @param {?} doc
@@ -71486,15 +79327,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} loader
        */
       function HammerGesturesPlugin(doc, _config, console, loader) {
-        var _this58;
+        var _this139;
 
         _classCallCheck(this, HammerGesturesPlugin);
 
-        _this58 = _super35.call(this, doc);
-        _this58._config = _config;
-        _this58.console = console;
-        _this58.loader = loader;
-        return _this58;
+        _this139 = _super36.call(this, doc);
+        _this139._config = _config;
+        _this139.console = console;
+        _this139.loader = loader;
+        return _this139;
       }
       /**
        * @param {?} eventName
@@ -71528,7 +79369,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this59 = this;
+          var _this140 = this;
 
           /** @type {?} */
           var zone = this.manager.getZone();
@@ -71563,7 +79404,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!
               /** @type {?} */
               window.Hammer) {
-                _this59.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
+                _this140.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
 
                 deregister =
                 /**
@@ -71577,14 +79418,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!cancelRegistration) {
                 // Now that Hammer is loaded and the listener is being loaded for real,
                 // the deregistration function changes from canceling registration to removal.
-                deregister = _this59.addEventListener(element, eventName, handler);
+                deregister = _this140.addEventListener(element, eventName, handler);
               }
             })["catch"](
             /**
             * @return {?}
             */
             function () {
-              _this59.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
+              _this140.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
 
               deregister =
               /**
@@ -71613,7 +79454,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             // Creating the manager bind events, must be done outside of angular
 
             /** @type {?} */
-            var mc = _this59._config.buildHammer(element);
+            var mc = _this140._config.buildHammer(element);
             /** @type {?} */
 
 
@@ -71905,7 +79746,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var KeyEventsPlugin = /*#__PURE__*/function (_EventManagerPlugin3) {
       _inherits(KeyEventsPlugin, _EventManagerPlugin3);
 
-      var _super36 = _createSuper(KeyEventsPlugin);
+      var _super37 = _createSuper(KeyEventsPlugin);
 
       /**
        * Initializes an instance of the browser plug-in.
@@ -71914,7 +79755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function KeyEventsPlugin(doc) {
         _classCallCheck(this, KeyEventsPlugin);
 
-        return _super36.call(this, doc);
+        return _super37.call(this, doc);
       }
       /**
        * Reports whether a named key event is supported.
@@ -72316,19 +80157,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DomSanitizerImpl = /*#__PURE__*/function (_DomSanitizer) {
       _inherits(DomSanitizerImpl, _DomSanitizer);
 
-      var _super37 = _createSuper(DomSanitizerImpl);
+      var _super38 = _createSuper(DomSanitizerImpl);
 
       /**
        * @param {?} _doc
        */
       function DomSanitizerImpl(_doc) {
-        var _this60;
+        var _this141;
 
         _classCallCheck(this, DomSanitizerImpl);
 
-        _this60 = _super37.call(this);
-        _this60._doc = _doc;
-        return _this60;
+        _this141 = _super38.call(this);
+        _this141._doc = _doc;
+        return _this141;
       }
       /**
        * @param {?} ctx
@@ -72786,7 +80627,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTags",
         value: function addTags(tags) {
-          var _this61 = this;
+          var _this142 = this;
 
           var forceCreation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
           if (!tags) return [];
@@ -72798,7 +80639,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (result, tag) {
             if (tag) {
-              result.push(_this61._getOrCreateElement(tag, forceCreation));
+              result.push(_this142._getOrCreateElement(tag, forceCreation));
             }
 
             return result;
@@ -74237,7 +82078,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationStart = /*#__PURE__*/function (_RouterEvent) {
       _inherits(NavigationStart, _RouterEvent);
 
-      var _super38 = _createSuper(NavigationStart);
+      var _super39 = _createSuper(NavigationStart);
 
       /**
        * @param {?} id
@@ -74250,17 +82091,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url) {
-        var _this62;
+        var _this143;
 
         var navigationTrigger = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'imperative';
         var restoredState = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
         _classCallCheck(this, NavigationStart);
 
-        _this62 = _super38.call(this, id, url);
-        _this62.navigationTrigger = navigationTrigger;
-        _this62.restoredState = restoredState;
-        return _this62;
+        _this143 = _super39.call(this, id, url);
+        _this143.navigationTrigger = navigationTrigger;
+        _this143.restoredState = restoredState;
+        return _this143;
       }
       /**
        * \@docsNotRequired
@@ -74289,7 +82130,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationEnd = /*#__PURE__*/function (_RouterEvent2) {
       _inherits(NavigationEnd, _RouterEvent2);
 
-      var _super39 = _createSuper(NavigationEnd);
+      var _super40 = _createSuper(NavigationEnd);
 
       /**
        * @param {?} id
@@ -74301,13 +82142,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects) {
-        var _this63;
+        var _this144;
 
         _classCallCheck(this, NavigationEnd);
 
-        _this63 = _super39.call(this, id, url);
-        _this63.urlAfterRedirects = urlAfterRedirects;
-        return _this63;
+        _this144 = _super40.call(this, id, url);
+        _this144.urlAfterRedirects = urlAfterRedirects;
+        return _this144;
       }
       /**
        * \@docsNotRequired
@@ -74339,7 +82180,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationCancel = /*#__PURE__*/function (_RouterEvent3) {
       _inherits(NavigationCancel, _RouterEvent3);
 
-      var _super40 = _createSuper(NavigationCancel);
+      var _super41 = _createSuper(NavigationCancel);
 
       /**
        * @param {?} id
@@ -74351,13 +82192,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, reason) {
-        var _this64;
+        var _this145;
 
         _classCallCheck(this, NavigationCancel);
 
-        _this64 = _super40.call(this, id, url);
-        _this64.reason = reason;
-        return _this64;
+        _this145 = _super41.call(this, id, url);
+        _this145.reason = reason;
+        return _this145;
       }
       /**
        * \@docsNotRequired
@@ -74386,7 +82227,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationError = /*#__PURE__*/function (_RouterEvent4) {
       _inherits(NavigationError, _RouterEvent4);
 
-      var _super41 = _createSuper(NavigationError);
+      var _super42 = _createSuper(NavigationError);
 
       /**
        * @param {?} id
@@ -74398,13 +82239,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, error) {
-        var _this65;
+        var _this146;
 
         _classCallCheck(this, NavigationError);
 
-        _this65 = _super41.call(this, id, url);
-        _this65.error = error;
-        return _this65;
+        _this146 = _super42.call(this, id, url);
+        _this146.error = error;
+        return _this146;
       }
       /**
        * \@docsNotRequired
@@ -74433,7 +82274,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RoutesRecognized = /*#__PURE__*/function (_RouterEvent5) {
       _inherits(RoutesRecognized, _RouterEvent5);
 
-      var _super42 = _createSuper(RoutesRecognized);
+      var _super43 = _createSuper(RoutesRecognized);
 
       /**
        * @param {?} id
@@ -74446,14 +82287,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this66;
+        var _this147;
 
         _classCallCheck(this, RoutesRecognized);
 
-        _this66 = _super42.call(this, id, url);
-        _this66.urlAfterRedirects = urlAfterRedirects;
-        _this66.state = state;
-        return _this66;
+        _this147 = _super43.call(this, id, url);
+        _this147.urlAfterRedirects = urlAfterRedirects;
+        _this147.state = state;
+        return _this147;
       }
       /**
        * \@docsNotRequired
@@ -74482,7 +82323,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GuardsCheckStart = /*#__PURE__*/function (_RouterEvent6) {
       _inherits(GuardsCheckStart, _RouterEvent6);
 
-      var _super43 = _createSuper(GuardsCheckStart);
+      var _super44 = _createSuper(GuardsCheckStart);
 
       /**
        * @param {?} id
@@ -74495,14 +82336,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this67;
+        var _this148;
 
         _classCallCheck(this, GuardsCheckStart);
 
-        _this67 = _super43.call(this, id, url);
-        _this67.urlAfterRedirects = urlAfterRedirects;
-        _this67.state = state;
-        return _this67;
+        _this148 = _super44.call(this, id, url);
+        _this148.urlAfterRedirects = urlAfterRedirects;
+        _this148.state = state;
+        return _this148;
       }
       /**
        * @return {?}
@@ -74530,7 +82371,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GuardsCheckEnd = /*#__PURE__*/function (_RouterEvent7) {
       _inherits(GuardsCheckEnd, _RouterEvent7);
 
-      var _super44 = _createSuper(GuardsCheckEnd);
+      var _super45 = _createSuper(GuardsCheckEnd);
 
       /**
        * @param {?} id
@@ -74544,15 +82385,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state, shouldActivate) {
-        var _this68;
+        var _this149;
 
         _classCallCheck(this, GuardsCheckEnd);
 
-        _this68 = _super44.call(this, id, url);
-        _this68.urlAfterRedirects = urlAfterRedirects;
-        _this68.state = state;
-        _this68.shouldActivate = shouldActivate;
-        return _this68;
+        _this149 = _super45.call(this, id, url);
+        _this149.urlAfterRedirects = urlAfterRedirects;
+        _this149.state = state;
+        _this149.shouldActivate = shouldActivate;
+        return _this149;
       }
       /**
        * @return {?}
@@ -74583,7 +82424,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ResolveStart = /*#__PURE__*/function (_RouterEvent8) {
       _inherits(ResolveStart, _RouterEvent8);
 
-      var _super45 = _createSuper(ResolveStart);
+      var _super46 = _createSuper(ResolveStart);
 
       /**
        * @param {?} id
@@ -74596,14 +82437,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this69;
+        var _this150;
 
         _classCallCheck(this, ResolveStart);
 
-        _this69 = _super45.call(this, id, url);
-        _this69.urlAfterRedirects = urlAfterRedirects;
-        _this69.state = state;
-        return _this69;
+        _this150 = _super46.call(this, id, url);
+        _this150.urlAfterRedirects = urlAfterRedirects;
+        _this150.state = state;
+        return _this150;
       }
       /**
        * @return {?}
@@ -74632,7 +82473,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ResolveEnd = /*#__PURE__*/function (_RouterEvent9) {
       _inherits(ResolveEnd, _RouterEvent9);
 
-      var _super46 = _createSuper(ResolveEnd);
+      var _super47 = _createSuper(ResolveEnd);
 
       /**
        * @param {?} id
@@ -74645,14 +82486,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this70;
+        var _this151;
 
         _classCallCheck(this, ResolveEnd);
 
-        _this70 = _super46.call(this, id, url);
-        _this70.urlAfterRedirects = urlAfterRedirects;
-        _this70.state = state;
-        return _this70;
+        _this151 = _super47.call(this, id, url);
+        _this151.urlAfterRedirects = urlAfterRedirects;
+        _this151.state = state;
+        return _this151;
       }
       /**
        * @return {?}
@@ -75981,7 +83822,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} children
        */
       function UrlSegmentGroup(segments, children) {
-        var _this71 = this;
+        var _this152 = this;
 
         _classCallCheck(this, UrlSegmentGroup);
 
@@ -76001,7 +83842,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {THIS}
         */
         function (v, k) {
-          return v.parent = _this71;
+          return v.parent = _this152;
         });
       }
       /**
@@ -77131,7 +84972,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RouterState = /*#__PURE__*/function (_Tree) {
       _inherits(RouterState, _Tree);
 
-      var _super47 = _createSuper(RouterState);
+      var _super48 = _createSuper(RouterState);
 
       /**
        * \@internal
@@ -77139,16 +84980,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} snapshot
        */
       function RouterState(root, snapshot) {
-        var _this72;
+        var _this153;
 
         _classCallCheck(this, RouterState);
 
-        _this72 = _super47.call(this, root);
-        _this72.snapshot = snapshot;
+        _this153 = _super48.call(this, root);
+        _this153.snapshot = snapshot;
         setRouterState(
         /** @type {?} */
-        _assertThisInitialized(_this72), root);
-        return _this72;
+        _assertThisInitialized(_this153), root);
+        return _this153;
       }
       /**
        * @return {?}
@@ -77643,7 +85484,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RouterStateSnapshot = /*#__PURE__*/function (_Tree2) {
       _inherits(RouterStateSnapshot, _Tree2);
 
-      var _super48 = _createSuper(RouterStateSnapshot);
+      var _super49 = _createSuper(RouterStateSnapshot);
 
       /**
        * \@internal
@@ -77651,16 +85492,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} root
        */
       function RouterStateSnapshot(url, root) {
-        var _this73;
+        var _this154;
 
         _classCallCheck(this, RouterStateSnapshot);
 
-        _this73 = _super48.call(this, root);
-        _this73.url = url;
+        _this154 = _super49.call(this, root);
+        _this154.url = url;
         setRouterState(
         /** @type {?} */
-        _assertThisInitialized(_this73), root);
-        return _this73;
+        _assertThisInitialized(_this154), root);
+        return _this154;
       }
       /**
        * @return {?}
@@ -78556,7 +86397,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deactivateChildRoutes",
         value: function deactivateChildRoutes(futureNode, currNode, contexts) {
-          var _this74 = this;
+          var _this155 = this;
 
           /** @type {?} */
           var children = nodeChildrenAsMap(currNode); // Recurse on the routes active in the future state to de-activate deeper children
@@ -78570,7 +86411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var childOutletName = futureChild.value.outlet;
 
-            _this74.deactivateRoutes(futureChild, children[childOutletName], contexts);
+            _this155.deactivateRoutes(futureChild, children[childOutletName], contexts);
 
             delete children[childOutletName];
           }); // De-activate the routes that will not be re-used
@@ -78582,7 +86423,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (v, childName) {
-            _this74.deactivateRouteAndItsChildren(v, contexts);
+            _this155.deactivateRouteAndItsChildren(v, contexts);
           });
         }
         /**
@@ -78676,7 +86517,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deactivateRouteAndOutlet",
         value: function deactivateRouteAndOutlet(route, parentContexts) {
-          var _this75 = this;
+          var _this156 = this;
 
           /** @type {?} */
           var context = parentContexts.getContext(route.value.outlet);
@@ -78694,7 +86535,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (v, k) {
-              return _this75.deactivateRouteAndItsChildren(v, contexts);
+              return _this156.deactivateRouteAndItsChildren(v, contexts);
             });
 
             if (context.outlet) {
@@ -78716,7 +86557,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "activateChildRoutes",
         value: function activateChildRoutes(futureNode, currNode, contexts) {
-          var _this76 = this;
+          var _this157 = this;
 
           /** @type {?} */
           var children = nodeChildrenAsMap(currNode);
@@ -78726,9 +86567,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (c) {
-            _this76.activateRoutes(c, children[c.value.outlet], contexts);
+            _this157.activateRoutes(c, children[c.value.outlet], contexts);
 
-            _this76.forwardEvent(new ActivationEnd(c.value.snapshot));
+            _this157.forwardEvent(new ActivationEnd(c.value.snapshot));
           });
 
           if (futureNode.children.length) {
@@ -78769,7 +86610,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               // if we have a normal route, we need to place the component into the outlet and recurse.
 
               /** @type {?} */
-              var _context3 = parentContexts.getOrCreateContext(future.outlet);
+              var _context11 = parentContexts.getOrCreateContext(future.outlet);
 
               if (this.routeReuseStrategy.shouldAttach(future.snapshot)) {
                 /** @type {?} */
@@ -78778,15 +86619,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this.routeReuseStrategy.retrieve(future.snapshot);
                 this.routeReuseStrategy.store(future.snapshot, null);
 
-                _context3.children.onOutletReAttached(stored.contexts);
+                _context11.children.onOutletReAttached(stored.contexts);
 
-                _context3.attachRef = stored.componentRef;
-                _context3.route = stored.route.value;
+                _context11.attachRef = stored.componentRef;
+                _context11.route = stored.route.value;
 
-                if (_context3.outlet) {
+                if (_context11.outlet) {
                   // Attach right away when the outlet has already been instantiated
                   // Otherwise attach from `RouterOutlet.ngOnInit` when it is instantiated
-                  _context3.outlet.attach(stored.componentRef, stored.route.value);
+                  _context11.outlet.attach(stored.componentRef, stored.route.value);
                 }
 
                 advanceActivatedRouteNodeAndItsChildren(stored.route);
@@ -78796,17 +86637,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 /** @type {?} */
 
                 var cmpFactoryResolver = config ? config.module.componentFactoryResolver : null;
-                _context3.attachRef = null;
-                _context3.route = future;
-                _context3.resolver = cmpFactoryResolver;
+                _context11.attachRef = null;
+                _context11.route = future;
+                _context11.resolver = cmpFactoryResolver;
 
-                if (_context3.outlet) {
+                if (_context11.outlet) {
                   // Activate the outlet when it has already been instantiated
                   // Otherwise it will get activated from its `ngOnInit` when instantiated
-                  _context3.outlet.activateWith(future, cmpFactoryResolver);
+                  _context11.outlet.activateWith(future, cmpFactoryResolver);
                 }
 
-                this.activateChildRoutes(futureNode, null, _context3.children);
+                this.activateChildRoutes(futureNode, null, _context11.children);
               }
             } else {
               // if we have a componentless route, we recurse but keep the same outlet map.
@@ -79065,7 +86906,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplyRedirects, [{
         key: "apply",
         value: function apply() {
-          var _this77 = this;
+          var _this158 = this;
 
           /** @type {?} */
           var expanded$ = this.expandSegmentGroup(this.ngModule, this.config, this.urlTree.root, PRIMARY_OUTLET);
@@ -79077,9 +86918,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (rootSegmentGroup) {
-            return _this77.createUrlTree(rootSegmentGroup, _this77.urlTree.queryParams,
+            return _this158.createUrlTree(rootSegmentGroup, _this158.urlTree.queryParams,
             /** @type {?} */
-            _this77.urlTree.fragment);
+            _this158.urlTree.fragment);
           }));
           return urlTrees$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
           /**
@@ -79089,13 +86930,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (e) {
             if (e instanceof AbsoluteRedirect) {
               // after an absolute redirect we do not apply any more redirects!
-              _this77.allowRedirects = false; // we need to run matching, so we can fetch all lazy-loaded modules
+              _this158.allowRedirects = false; // we need to run matching, so we can fetch all lazy-loaded modules
 
-              return _this77.match(e.urlTree);
+              return _this158.match(e.urlTree);
             }
 
             if (e instanceof NoMatch) {
-              throw _this77.noMatchError(e);
+              throw _this158.noMatchError(e);
             }
 
             throw e;
@@ -79110,7 +86951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "match",
         value: function match(tree) {
-          var _this78 = this;
+          var _this159 = this;
 
           /** @type {?} */
           var expanded$ = this.expandSegmentGroup(this.ngModule, this.config, tree.root, PRIMARY_OUTLET);
@@ -79122,7 +86963,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (rootSegmentGroup) {
-            return _this78.createUrlTree(rootSegmentGroup, tree.queryParams,
+            return _this159.createUrlTree(rootSegmentGroup, tree.queryParams,
             /** @type {?} */
             tree.fragment);
           }));
@@ -79133,7 +86974,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (e) {
             if (e instanceof NoMatch) {
-              throw _this78.noMatchError(e);
+              throw _this159.noMatchError(e);
             }
 
             throw e;
@@ -79202,7 +87043,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandChildren",
         value: function expandChildren(ngModule, routes, segmentGroup) {
-          var _this79 = this;
+          var _this160 = this;
 
           return waitForMap(segmentGroup.children,
           /**
@@ -79211,7 +87052,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (childOutlet, child) {
-            return _this79.expandSegmentGroup(ngModule, routes, child, childOutlet);
+            return _this160.expandSegmentGroup(ngModule, routes, child, childOutlet);
           });
         }
         /**
@@ -79228,7 +87069,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandSegment",
         value: function expandSegment(ngModule, segmentGroup, routes, segments, outlet, allowRedirects) {
-          var _this80 = this;
+          var _this161 = this;
 
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"]).apply(void 0, _toConsumableArray(routes)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
           /**
@@ -79237,7 +87078,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (r) {
             /** @type {?} */
-            var expanded$ = _this80.expandSegmentAgainstRoute(ngModule, segmentGroup, routes, r, segments, outlet, allowRedirects);
+            var expanded$ = _this161.expandSegmentAgainstRoute(ngModule, segmentGroup, routes, r, segments, outlet, allowRedirects);
 
             return expanded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
             /**
@@ -79271,7 +87112,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (e, _) {
             if (e instanceof rxjs__WEBPACK_IMPORTED_MODULE_2__["EmptyError"] || e.name === 'EmptyError') {
-              if (_this80.noLeftoversInUrl(segmentGroup, segments, outlet)) {
+              if (_this161.noLeftoversInUrl(segmentGroup, segments, outlet)) {
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(new UrlSegmentGroup([], {}));
               }
 
@@ -79355,7 +87196,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandWildCardWithParamsAgainstRouteUsingRedirect",
         value: function expandWildCardWithParamsAgainstRouteUsingRedirect(ngModule, routes, route, outlet) {
-          var _this81 = this;
+          var _this162 = this;
 
           /** @type {?} */
           var newTree = this.applyRedirectCommands([],
@@ -79376,7 +87217,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (newSegments) {
             /** @type {?} */
             var group = new UrlSegmentGroup(newSegments, {});
-            return _this81.expandSegment(ngModule, group, routes, newSegments, outlet, false);
+            return _this162.expandSegment(ngModule, group, routes, newSegments, outlet, false);
           }));
         }
         /**
@@ -79393,7 +87234,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandRegularSegmentAgainstRouteUsingRedirect",
         value: function expandRegularSegmentAgainstRouteUsingRedirect(ngModule, segmentGroup, routes, route, segments, outlet) {
-          var _this82 = this;
+          var _this163 = this;
 
           var _match = match(segmentGroup, route, segments),
               matched = _match.matched,
@@ -79422,7 +87263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (newSegments) {
-            return _this82.expandSegment(ngModule, segmentGroup, routes, newSegments.concat(segments.slice(lastChild)), outlet, false);
+            return _this163.expandSegment(ngModule, segmentGroup, routes, newSegments.concat(segments.slice(lastChild)), outlet, false);
           }));
         }
         /**
@@ -79437,7 +87278,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "matchSegmentAgainstRoute",
         value: function matchSegmentAgainstRoute(ngModule, rawSegmentGroup, route, segments) {
-          var _this83 = this;
+          var _this164 = this;
 
           if (route.path === '**') {
             if (route.loadChildren) {
@@ -79485,7 +87326,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
               /** @type {?} */
-              var _expanded$ = _this83.expandChildren(childModule, childConfig, segmentGroup);
+              var _expanded$ = _this164.expandChildren(childModule, childConfig, segmentGroup);
 
               return _expanded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
               /**
@@ -79503,7 +87344,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
 
 
-            var expanded$ = _this83.expandSegment(childModule, segmentGroup, childConfig, slicedSegments, PRIMARY_OUTLET, true);
+            var expanded$ = _this164.expandSegment(childModule, segmentGroup, childConfig, slicedSegments, PRIMARY_OUTLET, true);
 
             return expanded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
             /**
@@ -79526,7 +87367,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getChildConfig",
         value: function getChildConfig(ngModule, route, segments) {
-          var _this84 = this;
+          var _this165 = this;
 
           if (route.children) {
             // The children belong to the same module
@@ -79546,7 +87387,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (shouldLoad) {
               if (shouldLoad) {
-                return _this84.configLoader.load(ngModule.injector, route).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
+                return _this165.configLoader.load(ngModule.injector, route).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
                 /**
                 * @param {?} cfg
                 * @return {?}
@@ -79668,7 +87509,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createSegmentGroup",
         value: function createSegmentGroup(redirectTo, group, segments, posParams) {
-          var _this85 = this;
+          var _this166 = this;
 
           /** @type {?} */
           var updatedSegments = this.createSegments(redirectTo, group.segments, segments, posParams);
@@ -79682,7 +87523,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (child, name) {
-            children[name] = _this85.createSegmentGroup(redirectTo, child, segments, posParams);
+            children[name] = _this166.createSegmentGroup(redirectTo, child, segments, posParams);
           });
           return new UrlSegmentGroup(updatedSegments, children);
         }
@@ -79698,7 +87539,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createSegments",
         value: function createSegments(redirectTo, redirectToSegments, actualSegments, posParams) {
-          var _this86 = this;
+          var _this167 = this;
 
           return redirectToSegments.map(
           /**
@@ -79706,7 +87547,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (s) {
-            return s.path.startsWith(':') ? _this86.findPosParam(redirectTo, s, posParams) : _this86.findOrReturn(s, actualSegments);
+            return s.path.startsWith(':') ? _this167.findPosParam(redirectTo, s, posParams) : _this167.findOrReturn(s, actualSegments);
           });
         }
         /**
@@ -80860,7 +88701,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "inheritParamsAndData",
         value: function inheritParamsAndData(routeNode) {
-          var _this87 = this;
+          var _this168 = this;
 
           /** @type {?} */
           var route = routeNode.value;
@@ -80875,7 +88716,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (n) {
-            return _this87.inheritParamsAndData(n);
+            return _this168.inheritParamsAndData(n);
           });
         }
         /**
@@ -80903,7 +88744,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processChildren",
         value: function processChildren(config, segmentGroup) {
-          var _this88 = this;
+          var _this169 = this;
 
           /** @type {?} */
           var children = mapChildrenIntoArray(segmentGroup,
@@ -80913,7 +88754,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (child, childOutlet) {
-            return _this88.processSegmentGroup(config, child, childOutlet);
+            return _this169.processSegmentGroup(config, child, childOutlet);
           });
           checkOutletNameUniqueness(children);
           sortActivatedRouteSnapshots(children);
@@ -81810,7 +89651,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterConfigLoader, [{
         key: "load",
         value: function load(parentInjector, route) {
-          var _this89 = this;
+          var _this170 = this;
 
           if (this.onLoadStartListener) {
             this.onLoadStartListener(route);
@@ -81827,8 +89668,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (factory) {
-            if (_this89.onLoadEndListener) {
-              _this89.onLoadEndListener(route);
+            if (_this170.onLoadEndListener) {
+              _this170.onLoadEndListener(route);
             }
             /** @type {?} */
 
@@ -81846,7 +89687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadModuleFactory",
         value: function loadModuleFactory(loadChildren) {
-          var _this90 = this;
+          var _this171 = this;
 
           if (typeof loadChildren === 'string') {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(this.loader.load(loadChildren));
@@ -81860,7 +89701,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (t instanceof _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModuleFactory"]) {
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(t);
               } else {
-                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(_this90.compiler.compileModuleAsync(t));
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(_this171.compiler.compileModuleAsync(t));
               }
             }));
           }
@@ -82026,7 +89867,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        */
       // TODO: vsavkin make internal after the final is out.
       function Router(rootComponentType, urlSerializer, rootContexts, location, injector, loader, compiler, config) {
-        var _this91 = this;
+        var _this172 = this;
 
         _classCallCheck(this, Router);
 
@@ -82128,7 +89969,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function onLoadStart(r) {
-          return _this91.triggerEvent(new RouteConfigLoadStart(r));
+          return _this172.triggerEvent(new RouteConfigLoadStart(r));
         };
         /** @type {?} */
 
@@ -82139,7 +89980,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function onLoadEnd(r) {
-          return _this91.triggerEvent(new RouteConfigLoadEnd(r));
+          return _this172.triggerEvent(new RouteConfigLoadEnd(r));
         };
 
         this.ngModule = injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModuleRef"]);
@@ -82190,7 +90031,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(Router, [{
         key: "setupNavigations",
         value: function setupNavigations(transitions) {
-          var _this92 = this;
+          var _this173 = this;
 
           /** @type {?} */
           var eventsSubject =
@@ -82217,7 +90058,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return (
                 /** @type {?} */
                 Object.assign(Object.assign({}, t), {
-                  extractedUrl: _this92.urlHandlingStrategy.extract(t.rawUrl)
+                  extractedUrl: _this173.urlHandlingStrategy.extract(t.rawUrl)
                 })
               );
             }), // Using switchMap so we cancel executing navigations when a new one comes in
@@ -82239,13 +90080,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (t) {
-                _this92.currentNavigation = {
+                _this173.currentNavigation = {
                   id: t.id,
                   initialUrl: t.currentRawUrl,
                   extractedUrl: t.extractedUrl,
                   trigger: t.source,
                   extras: t.extras,
-                  previousNavigation: _this92.lastSuccessfulNavigation ? Object.assign(Object.assign({}, _this92.lastSuccessfulNavigation), {
+                  previousNavigation: _this173.lastSuccessfulNavigation ? Object.assign(Object.assign({}, _this173.lastSuccessfulNavigation), {
                     previousNavigation: null
                   }) : null
                 };
@@ -82256,11 +90097,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var urlTransition = !_this92.navigated || t.extractedUrl.toString() !== _this92.browserUrlTree.toString();
+                var urlTransition = !_this173.navigated || t.extractedUrl.toString() !== _this173.browserUrlTree.toString();
                 /** @type {?} */
 
 
-                var processCurrentUrl = (_this92.onSameUrlNavigation === 'reload' ? true : urlTransition) && _this92.urlHandlingStrategy.shouldProcessUrl(t.rawUrl);
+                var processCurrentUrl = (_this173.onSameUrlNavigation === 'reload' ? true : urlTransition) && _this173.urlHandlingStrategy.shouldProcessUrl(t.rawUrl);
 
                 if (processCurrentUrl) {
                   return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(t).pipe( // Fire NavigationStart event
@@ -82271,11 +90112,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var transition = _this92.transitions.getValue();
+                    var transition = _this173.transitions.getValue();
 
-                    eventsSubject.next(new NavigationStart(t.id, _this92.serializeUrl(t.extractedUrl), t.source, t.restoredState));
+                    eventsSubject.next(new NavigationStart(t.id, _this173.serializeUrl(t.extractedUrl), t.source, t.restoredState));
 
-                    if (transition !== _this92.transitions.getValue()) {
+                    if (transition !== _this173.transitions.getValue()) {
                       return rxjs__WEBPACK_IMPORTED_MODULE_2__["EMPTY"];
                     }
 
@@ -82290,39 +90131,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   function (t) {
                     return Promise.resolve(t);
                   }), // ApplyRedirects
-                  applyRedirects$1(_this92.ngModule.injector, _this92.configLoader, _this92.urlSerializer, _this92.config), // Update the currentNavigation
+                  applyRedirects$1(_this173.ngModule.injector, _this173.configLoader, _this173.urlSerializer, _this173.config), // Update the currentNavigation
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
                   /**
                   * @param {?} t
                   * @return {?}
                   */
                   function (t) {
-                    _this92.currentNavigation = Object.assign(Object.assign({},
+                    _this173.currentNavigation = Object.assign(Object.assign({},
                     /** @type {?} */
-                    _this92.currentNavigation), {
+                    _this173.currentNavigation), {
                       finalUrl: t.urlAfterRedirects
                     });
                   }), // Recognize
-                  recognize$1(_this92.rootComponentType, _this92.config,
+                  recognize$1(_this173.rootComponentType, _this173.config,
                   /**
                   * @param {?} url
                   * @return {?}
                   */
                   function (url) {
-                    return _this92.serializeUrl(url);
-                  }, _this92.paramsInheritanceStrategy, _this92.relativeLinkResolution), // Update URL if in `eager` update mode
+                    return _this173.serializeUrl(url);
+                  }, _this173.paramsInheritanceStrategy, _this173.relativeLinkResolution), // Update URL if in `eager` update mode
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
                   /**
                   * @param {?} t
                   * @return {?}
                   */
                   function (t) {
-                    if (_this92.urlUpdateStrategy === 'eager') {
+                    if (_this173.urlUpdateStrategy === 'eager') {
                       if (!t.extras.skipLocationChange) {
-                        _this92.setBrowserUrl(t.urlAfterRedirects, !!t.extras.replaceUrl, t.id, t.extras.state);
+                        _this173.setBrowserUrl(t.urlAfterRedirects, !!t.extras.replaceUrl, t.id, t.extras.state);
                       }
 
-                      _this92.browserUrlTree = t.urlAfterRedirects;
+                      _this173.browserUrlTree = t.urlAfterRedirects;
                     }
                   }), // Fire RoutesRecognized
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
@@ -82332,14 +90173,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var routesRecognized = new RoutesRecognized(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                    var routesRecognized = new RoutesRecognized(t.id, _this173.serializeUrl(t.extractedUrl), _this173.serializeUrl(t.urlAfterRedirects),
                     /** @type {?} */
                     t.targetSnapshot);
                     eventsSubject.next(routesRecognized);
                   }));
                 } else {
                   /** @type {?} */
-                  var processPreviousUrl = urlTransition && _this92.rawUrlTree && _this92.urlHandlingStrategy.shouldProcessUrl(_this92.rawUrlTree);
+                  var processPreviousUrl = urlTransition && _this173.rawUrlTree && _this173.urlHandlingStrategy.shouldProcessUrl(_this173.rawUrlTree);
                   /* When the current URL shouldn't be processed, but the previous one was,
                    * we handle this "error condition" by navigating to the previously
                    * successful URL, but leaving the URL intact.*/
@@ -82353,11 +90194,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         extras = t.extras;
                     /** @type {?} */
 
-                    var navStart = new NavigationStart(id, _this92.serializeUrl(extractedUrl), source, restoredState);
+                    var navStart = new NavigationStart(id, _this173.serializeUrl(extractedUrl), source, restoredState);
                     eventsSubject.next(navStart);
                     /** @type {?} */
 
-                    var targetSnapshot = createEmptyState(extractedUrl, _this92.rootComponentType).snapshot;
+                    var targetSnapshot = createEmptyState(extractedUrl, _this173.rootComponentType).snapshot;
                     return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(Object.assign(Object.assign({}, t), {
                       targetSnapshot: targetSnapshot,
                       urlAfterRedirects: extractedUrl,
@@ -82372,8 +90213,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                      * URL. This way the next navigation will be coming from the current URL
                      * in the browser.
                      */
-                    _this92.rawUrlTree = t.rawUrl;
-                    _this92.browserUrlTree = t.urlAfterRedirects;
+                    _this173.rawUrlTree = t.rawUrl;
+                    _this173.browserUrlTree = t.urlAfterRedirects;
                     t.resolve(null);
                     return rxjs__WEBPACK_IMPORTED_MODULE_2__["EMPTY"];
                   }
@@ -82392,7 +90233,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _t$extras = t.extras,
                     skipLocationChange = _t$extras.skipLocationChange,
                     replaceUrl = _t$extras.replaceUrl;
-                return _this92.hooks.beforePreactivation(
+                return _this173.hooks.beforePreactivation(
                 /** @type {?} */
                 targetSnapshot, {
                   navigationId: navigationId,
@@ -82409,11 +90250,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var guardsStart = new GuardsCheckStart(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                var guardsStart = new GuardsCheckStart(t.id, _this173.serializeUrl(t.extractedUrl), _this173.serializeUrl(t.urlAfterRedirects),
                 /** @type {?} */
                 t.targetSnapshot);
 
-                _this92.triggerEvent(guardsStart);
+                _this173.triggerEvent(guardsStart);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
               /**
               * @param {?} t
@@ -82423,15 +90264,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return Object.assign(Object.assign({}, t), {
                   guards: getAllRouteGuards(
                   /** @type {?} */
-                  t.targetSnapshot, t.currentSnapshot, _this92.rootContexts)
+                  t.targetSnapshot, t.currentSnapshot, _this173.rootContexts)
                 });
-              }), checkGuards(_this92.ngModule.injector,
+              }), checkGuards(_this173.ngModule.injector,
               /**
               * @param {?} evt
               * @return {?}
               */
               function (evt) {
-                return _this92.triggerEvent(evt);
+                return _this173.triggerEvent(evt);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
               /**
               * @param {?} t
@@ -82440,7 +90281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               function (t) {
                 if (isUrlTree(t.guardsResult)) {
                   /** @type {?} */
-                  var error = navigationCancelingError("Redirecting to \"".concat(_this92.serializeUrl(t.guardsResult), "\""));
+                  var error = navigationCancelingError("Redirecting to \"".concat(_this173.serializeUrl(t.guardsResult), "\""));
                   error.url = t.guardsResult;
                   throw error;
                 }
@@ -82451,11 +90292,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var guardsEnd = new GuardsCheckEnd(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                var guardsEnd = new GuardsCheckEnd(t.id, _this173.serializeUrl(t.extractedUrl), _this173.serializeUrl(t.urlAfterRedirects),
                 /** @type {?} */
                 t.targetSnapshot, !!t.guardsResult);
 
-                _this92.triggerEvent(guardsEnd);
+                _this173.triggerEvent(guardsEnd);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
               /**
               * @param {?} t
@@ -82463,11 +90304,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 if (!t.guardsResult) {
-                  _this92.resetUrlToCurrentUrlTree();
+                  _this173.resetUrlToCurrentUrlTree();
                   /** @type {?} */
 
 
-                  var navCancel = new NavigationCancel(t.id, _this92.serializeUrl(t.extractedUrl), '');
+                  var navCancel = new NavigationCancel(t.id, _this173.serializeUrl(t.extractedUrl), '');
                   eventsSubject.next(navCancel);
                   t.resolve(false);
                   return false;
@@ -82489,12 +90330,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var resolveStart = new ResolveStart(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                    var resolveStart = new ResolveStart(t.id, _this173.serializeUrl(t.extractedUrl), _this173.serializeUrl(t.urlAfterRedirects),
                     /** @type {?} */
                     t.targetSnapshot);
 
-                    _this92.triggerEvent(resolveStart);
-                  }), resolveData(_this92.paramsInheritanceStrategy, _this92.ngModule.injector), //
+                    _this173.triggerEvent(resolveStart);
+                  }), resolveData(_this173.paramsInheritanceStrategy, _this173.ngModule.injector), //
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
                   /**
                   * @param {?} t
@@ -82502,11 +90343,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var resolveEnd = new ResolveEnd(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                    var resolveEnd = new ResolveEnd(t.id, _this173.serializeUrl(t.extractedUrl), _this173.serializeUrl(t.urlAfterRedirects),
                     /** @type {?} */
                     t.targetSnapshot);
 
-                    _this92.triggerEvent(resolveEnd);
+                    _this173.triggerEvent(resolveEnd);
                   }));
                 }
 
@@ -82525,7 +90366,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _t$extras2 = t.extras,
                     skipLocationChange = _t$extras2.skipLocationChange,
                     replaceUrl = _t$extras2.replaceUrl;
-                return _this92.hooks.afterPreactivation(
+                return _this173.hooks.afterPreactivation(
                 /** @type {?} */
                 targetSnapshot, {
                   navigationId: navigationId,
@@ -82541,7 +90382,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var targetRouterState = createRouterState(_this92.routeReuseStrategy,
+                var targetRouterState = createRouterState(_this173.routeReuseStrategy,
                 /** @type {?} */
                 t.targetSnapshot, t.currentRouterState);
                 return Object.assign(Object.assign({}, t), {
@@ -82559,28 +90400,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (t) {
-                _this92.currentUrlTree = t.urlAfterRedirects;
-                _this92.rawUrlTree = _this92.urlHandlingStrategy.merge(_this92.currentUrlTree, t.rawUrl);
+                _this173.currentUrlTree = t.urlAfterRedirects;
+                _this173.rawUrlTree = _this173.urlHandlingStrategy.merge(_this173.currentUrlTree, t.rawUrl);
 
                 /** @type {?} */
-                _this92.routerState =
+                _this173.routerState =
                 /** @type {?} */
                 t.targetRouterState;
 
-                if (_this92.urlUpdateStrategy === 'deferred') {
+                if (_this173.urlUpdateStrategy === 'deferred') {
                   if (!t.extras.skipLocationChange) {
-                    _this92.setBrowserUrl(_this92.rawUrlTree, !!t.extras.replaceUrl, t.id, t.extras.state);
+                    _this173.setBrowserUrl(_this173.rawUrlTree, !!t.extras.replaceUrl, t.id, t.extras.state);
                   }
 
-                  _this92.browserUrlTree = t.urlAfterRedirects;
+                  _this173.browserUrlTree = t.urlAfterRedirects;
                 }
-              }), activateRoutes(_this92.rootContexts, _this92.routeReuseStrategy,
+              }), activateRoutes(_this173.rootContexts, _this173.routeReuseStrategy,
               /**
               * @param {?} evt
               * @return {?}
               */
               function (evt) {
-                return _this92.triggerEvent(evt);
+                return _this173.triggerEvent(evt);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])({
                 /**
                  * @return {?}
@@ -82615,11 +90456,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   // sync code which looks for a value here in order to determine whether or
                   // not to handle a given popstate event or to leave it to the Angualr
                   // router.
-                  _this92.resetUrlToCurrentUrlTree();
+                  _this173.resetUrlToCurrentUrlTree();
                   /** @type {?} */
 
 
-                  var navCancel = new NavigationCancel(t.id, _this92.serializeUrl(t.extractedUrl), "Navigation ID ".concat(t.id, " is not equal to the current navigation id ").concat(_this92.navigationId));
+                  var navCancel = new NavigationCancel(t.id, _this173.serializeUrl(t.extractedUrl), "Navigation ID ".concat(t.id, " is not equal to the current navigation id ").concat(_this173.navigationId));
                   eventsSubject.next(navCancel);
                   t.resolve(false);
                 } // currentNavigation should always be reset to null here. If navigation was
@@ -82627,7 +90468,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 // we can safely set currentNavigation to null here.
 
 
-                _this92.currentNavigation = null;
+                _this173.currentNavigation = null;
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
               /**
               * @param {?} e
@@ -82648,14 +90489,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     // isn't a change from the default currentUrlTree and won't navigate.
                     // This is only applicable with initial navigation, so setting
                     // `navigated` only when not redirecting resolves this scenario.
-                    _this92.navigated = true;
+                    _this173.navigated = true;
 
-                    _this92.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
+                    _this173.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
                   }
                   /** @type {?} */
 
 
-                  var navCancel = new NavigationCancel(t.id, _this92.serializeUrl(t.extractedUrl), e.message);
+                  var navCancel = new NavigationCancel(t.id, _this173.serializeUrl(t.extractedUrl), e.message);
                   eventsSubject.next(navCancel); // When redirecting, we need to delay resolving the navigation
                   // promise and push it to the redirect navigation
 
@@ -82672,15 +90513,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
                     function () {
                       /** @type {?} */
-                      var mergedTree = _this92.urlHandlingStrategy.merge(e.url, _this92.rawUrlTree);
+                      var mergedTree = _this173.urlHandlingStrategy.merge(e.url, _this173.rawUrlTree);
                       /** @type {?} */
 
 
                       var extras = {
                         skipLocationChange: t.extras.skipLocationChange,
-                        replaceUrl: _this92.urlUpdateStrategy === 'eager'
+                        replaceUrl: _this173.urlUpdateStrategy === 'eager'
                       };
-                      return _this92.scheduleNavigation(mergedTree, 'imperative', null, extras, {
+                      return _this173.scheduleNavigation(mergedTree, 'imperative', null, extras, {
                         resolve: t.resolve,
                         reject: t.reject,
                         promise: t.promise
@@ -82691,15 +90532,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                    * the pre-error state. */
 
                 } else {
-                  _this92.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
+                  _this173.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
                   /** @type {?} */
 
 
-                  var navError = new NavigationError(t.id, _this92.serializeUrl(t.extractedUrl), e);
+                  var navError = new NavigationError(t.id, _this173.serializeUrl(t.extractedUrl), e);
                   eventsSubject.next(navError);
 
                   try {
-                    t.resolve(_this92.errorHandler(e));
+                    t.resolve(_this173.errorHandler(e));
                   } catch (ee) {
                     t.reject(ee);
                   }
@@ -82776,7 +90617,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "setUpLocationChangeListener",
         value: function setUpLocationChangeListener() {
-          var _this93 = this;
+          var _this174 = this;
 
           // Don't need to use Zone.wrap any more, because zone.js
           // already patch onPopState, so location change callback will
@@ -82791,7 +90632,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (change) {
               /** @type {?} */
-              var rawUrlTree = _this93.parseUrl(change['url']);
+              var rawUrlTree = _this174.parseUrl(change['url']);
               /** @type {?} */
 
 
@@ -82806,7 +90647,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                _this93.scheduleNavigation(rawUrlTree, source, state, {
+                _this174.scheduleNavigation(rawUrlTree, source, state, {
                   replaceUrl: true
                 });
               }, 0);
@@ -83158,7 +90999,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processNavigations",
         value: function processNavigations() {
-          var _this94 = this;
+          var _this175 = this;
 
           this.navigations.subscribe(
           /**
@@ -83166,14 +91007,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (t) {
-            _this94.navigated = true;
-            _this94.lastSuccessfulId = t.id;
+            _this175.navigated = true;
+            _this175.lastSuccessfulId = t.id;
 
             /** @type {?} */
-            _this94.events.next(new NavigationEnd(t.id, _this94.serializeUrl(t.extractedUrl), _this94.serializeUrl(_this94.currentUrlTree)));
+            _this175.events.next(new NavigationEnd(t.id, _this175.serializeUrl(t.extractedUrl), _this175.serializeUrl(_this175.currentUrlTree)));
 
-            _this94.lastSuccessfulNavigation = _this94.currentNavigation;
-            _this94.currentNavigation = null;
+            _this175.lastSuccessfulNavigation = _this175.currentNavigation;
+            _this175.currentNavigation = null;
             t.resolve(true);
           },
           /**
@@ -83181,7 +91022,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (e) {
-            _this94.console.warn("Unhandled Navigation Error: ");
+            _this175.console.warn("Unhandled Navigation Error: ");
           });
         }
         /**
@@ -83722,7 +91563,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} locationStrategy
        */
       function RouterLinkWithHref(router, route, locationStrategy) {
-        var _this95 = this;
+        var _this176 = this;
 
         _classCallCheck(this, RouterLinkWithHref);
 
@@ -83737,7 +91578,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         */
         function (s) {
           if (s instanceof NavigationEnd) {
-            _this95.updateTargetUrlAndHref();
+            _this176.updateTargetUrlAndHref();
           }
         });
       }
@@ -84092,7 +91933,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} linkWithHref
        */
       function RouterLinkActive(router, element, renderer, link, linkWithHref) {
-        var _this96 = this;
+        var _this177 = this;
 
         _classCallCheck(this, RouterLinkActive);
 
@@ -84113,7 +91954,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         */
         function (s) {
           if (s instanceof NavigationEnd) {
-            _this96.update();
+            _this177.update();
           }
         });
       }
@@ -84125,7 +91966,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterLinkActive, [{
         key: "ngAfterContentInit",
         value: function ngAfterContentInit() {
-          var _this97 = this;
+          var _this178 = this;
 
           this.links.changes.subscribe(
           /**
@@ -84133,7 +91974,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (_) {
-            return _this97.update();
+            return _this178.update();
           });
           this.linksWithHrefs.changes.subscribe(
           /**
@@ -84141,7 +91982,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (_) {
-            return _this97.update();
+            return _this178.update();
           });
           this.update();
         }
@@ -84177,7 +92018,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "update",
         value: function update() {
-          var _this98 = this;
+          var _this179 = this;
 
           if (!this.links || !this.linksWithHrefs || !this.router.navigated) return;
           Promise.resolve().then(
@@ -84186,22 +92027,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function () {
             /** @type {?} */
-            var hasActiveLinks = _this98.hasActiveLinks();
+            var hasActiveLinks = _this179.hasActiveLinks();
 
-            if (_this98.isActive !== hasActiveLinks) {
+            if (_this179.isActive !== hasActiveLinks) {
               /** @type {?} */
-              _this98.isActive = hasActiveLinks;
+              _this179.isActive = hasActiveLinks;
 
-              _this98.classes.forEach(
+              _this179.classes.forEach(
               /**
               * @param {?} c
               * @return {?}
               */
               function (c) {
                 if (hasActiveLinks) {
-                  _this98.renderer.addClass(_this98.element.nativeElement, c);
+                  _this179.renderer.addClass(_this179.element.nativeElement, c);
                 } else {
-                  _this98.renderer.removeClass(_this98.element.nativeElement, c);
+                  _this179.renderer.removeClass(_this179.element.nativeElement, c);
                 }
               });
             }
@@ -84216,7 +92057,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "isLinkActive",
         value: function isLinkActive(router) {
-          var _this99 = this;
+          var _this180 = this;
 
           return (
             /**
@@ -84224,7 +92065,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (link) {
-              return router.isActive(link.urlTree, _this99.routerLinkActiveOptions.exact);
+              return router.isActive(link.urlTree, _this180.routerLinkActiveOptions.exact);
             }
           );
         }
@@ -85017,7 +92858,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterPreloader, [{
         key: "setUpPreloading",
         value: function setUpPreloading() {
-          var _this100 = this;
+          var _this181 = this;
 
           this.subscription = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
           /**
@@ -85031,7 +92872,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            return _this100.preload();
+            return _this181.preload();
           })).subscribe(
           /**
           * @return {?}
@@ -85117,7 +92958,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "preloadConfig",
         value: function preloadConfig(ngModule, route) {
-          var _this101 = this;
+          var _this182 = this;
 
           return this.preloadingStrategy.preload(route,
           /**
@@ -85125,7 +92966,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function () {
             /** @type {?} */
-            var loaded$ = _this101.loader.load(ngModule.injector, route);
+            var loaded$ = _this182.loader.load(ngModule.injector, route);
 
             return loaded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(
             /**
@@ -85134,7 +92975,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (config) {
               route._loadedConfig = config;
-              return _this101.processRoutes(config.module, config.routes);
+              return _this182.processRoutes(config.module, config.routes);
             }));
           });
         }
@@ -85243,7 +93084,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createScrollEvents",
         value: function createScrollEvents() {
-          var _this102 = this;
+          var _this183 = this;
 
           return this.router.events.subscribe(
           /**
@@ -85253,13 +93094,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (e) {
             if (e instanceof NavigationStart) {
               // store the scroll position of the current stable navigations.
-              _this102.store[_this102.lastId] = _this102.viewportScroller.getScrollPosition();
-              _this102.lastSource = e.navigationTrigger;
-              _this102.restoredId = e.restoredState ? e.restoredState.navigationId : 0;
+              _this183.store[_this183.lastId] = _this183.viewportScroller.getScrollPosition();
+              _this183.lastSource = e.navigationTrigger;
+              _this183.restoredId = e.restoredState ? e.restoredState.navigationId : 0;
             } else if (e instanceof NavigationEnd) {
-              _this102.lastId = e.id;
+              _this183.lastId = e.id;
 
-              _this102.scheduleScrollEvent(e, _this102.router.parseUrl(e.urlAfterRedirects).fragment);
+              _this183.scheduleScrollEvent(e, _this183.router.parseUrl(e.urlAfterRedirects).fragment);
             }
           });
         }
@@ -85271,7 +93112,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "consumeScrollEvents",
         value: function consumeScrollEvents() {
-          var _this103 = this;
+          var _this184 = this;
 
           return this.router.events.subscribe(
           /**
@@ -85282,17 +93123,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (!(e instanceof Scroll)) return; // a popstate event. The pop state event will always ignore anchor scrolling.
 
             if (e.position) {
-              if (_this103.options.scrollPositionRestoration === 'top') {
-                _this103.viewportScroller.scrollToPosition([0, 0]);
-              } else if (_this103.options.scrollPositionRestoration === 'enabled') {
-                _this103.viewportScroller.scrollToPosition(e.position);
+              if (_this184.options.scrollPositionRestoration === 'top') {
+                _this184.viewportScroller.scrollToPosition([0, 0]);
+              } else if (_this184.options.scrollPositionRestoration === 'enabled') {
+                _this184.viewportScroller.scrollToPosition(e.position);
               } // imperative navigation "forward"
 
             } else {
-              if (e.anchor && _this103.options.anchorScrolling === 'enabled') {
-                _this103.viewportScroller.scrollToAnchor(e.anchor);
-              } else if (_this103.options.scrollPositionRestoration !== 'disabled') {
-                _this103.viewportScroller.scrollToPosition([0, 0]);
+              if (e.anchor && _this184.options.anchorScrolling === 'enabled') {
+                _this184.viewportScroller.scrollToAnchor(e.anchor);
+              } else if (_this184.options.scrollPositionRestoration !== 'disabled') {
+                _this184.viewportScroller.scrollToPosition([0, 0]);
               }
             }
           });
@@ -85776,7 +93617,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterInitializer, [{
         key: "appInitializer",
         value: function appInitializer() {
-          var _this104 = this;
+          var _this185 = this;
 
           /** @type {?} */
           var p = this.injector.get(_angular_common__WEBPACK_IMPORTED_MODULE_0__["LOCATION_INITIALIZED"], Promise.resolve(null));
@@ -85801,13 +93642,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             /** @type {?} */
 
-            var router = _this104.injector.get(Router);
+            var router = _this185.injector.get(Router);
             /** @type {?} */
 
 
-            var opts = _this104.injector.get(ROUTER_CONFIGURATION);
+            var opts = _this185.injector.get(ROUTER_CONFIGURATION);
 
-            if (_this104.isLegacyDisabled(opts) || _this104.isLegacyEnabled(opts)) {
+            if (_this185.isLegacyDisabled(opts) || _this185.isLegacyEnabled(opts)) {
               resolve(true);
             } else if (opts.initialNavigation === 'disabled') {
               router.setUpLocationChangeListener();
@@ -85819,10 +93660,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function () {
                 // only the initial navigation should be delayed
-                if (!_this104.initNavigation) {
-                  _this104.initNavigation = true;
+                if (!_this185.initNavigation) {
+                  _this185.initNavigation = true;
                   resolve(true);
-                  return _this104.resultOfPreactivationDone; // subsequent navigations should not be delayed
+                  return _this185.resultOfPreactivationDone; // subsequent navigations should not be delayed
                 } else {
                   return (
                     /** @type {?} */
@@ -86742,18 +94583,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP) {
       _inherits(AsyncSubject, _Subject__WEBPACK_IMP);
 
-      var _super49 = _createSuper(AsyncSubject);
+      var _super50 = _createSuper(AsyncSubject);
 
       function AsyncSubject() {
-        var _this105;
+        var _this186;
 
         _classCallCheck(this, AsyncSubject);
 
-        _this105 = _super49.apply(this, arguments);
-        _this105.value = null;
-        _this105.hasNext = false;
-        _this105.hasCompleted = false;
-        return _this105;
+        _this186 = _super50.apply(this, arguments);
+        _this186.value = null;
+        _this186.hasNext = false;
+        _this186.hasCompleted = false;
+        return _this186;
       }
 
       _createClass2(AsyncSubject, [{
@@ -86840,16 +94681,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BehaviorSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP2) {
       _inherits(BehaviorSubject, _Subject__WEBPACK_IMP2);
 
-      var _super50 = _createSuper(BehaviorSubject);
+      var _super51 = _createSuper(BehaviorSubject);
 
       function BehaviorSubject(_value) {
-        var _this106;
+        var _this187;
 
         _classCallCheck(this, BehaviorSubject);
 
-        _this106 = _super50.call(this);
-        _this106._value = _value;
-        return _this106;
+        _this187 = _super51.call(this);
+        _this187._value = _value;
+        return _this187;
       }
 
       _createClass2(BehaviorSubject, [{
@@ -86922,19 +94763,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var InnerSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_) {
       _inherits(InnerSubscriber, _Subscriber__WEBPACK_);
 
-      var _super51 = _createSuper(InnerSubscriber);
+      var _super52 = _createSuper(InnerSubscriber);
 
       function InnerSubscriber(parent, outerValue, outerIndex) {
-        var _this107;
+        var _this188;
 
         _classCallCheck(this, InnerSubscriber);
 
-        _this107 = _super51.call(this);
-        _this107.parent = parent;
-        _this107.outerValue = outerValue;
-        _this107.outerIndex = outerIndex;
-        _this107.index = 0;
-        return _this107;
+        _this188 = _super52.call(this);
+        _this188.parent = parent;
+        _this188.outerValue = outerValue;
+        _this188.outerIndex = outerIndex;
+        _this188.index = 0;
+        return _this188;
       }
 
       _createClass2(InnerSubscriber, [{
@@ -87226,12 +95067,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forEach",
         value: function forEach(next, promiseCtor) {
-          var _this108 = this;
+          var _this189 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var subscription;
-            subscription = _this108.subscribe(function (value) {
+            subscription = _this189.subscribe(function (value) {
               try {
                 next(value);
               } catch (err) {
@@ -87271,13 +95112,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toPromise",
         value: function toPromise(promiseCtor) {
-          var _this109 = this;
+          var _this190 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var value;
 
-            _this109.subscribe(function (x) {
+            _this190.subscribe(function (x) {
               return value = x;
             }, function (err) {
               return reject(err);
@@ -87388,12 +95229,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var OuterSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_2) {
       _inherits(OuterSubscriber, _Subscriber__WEBPACK_2);
 
-      var _super52 = _createSuper(OuterSubscriber);
+      var _super53 = _createSuper(OuterSubscriber);
 
       function OuterSubscriber() {
         _classCallCheck(this, OuterSubscriber);
 
-        return _super52.apply(this, arguments);
+        return _super53.apply(this, arguments);
       }
 
       _createClass2(OuterSubscriber, [{
@@ -87479,10 +95320,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ReplaySubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP3) {
       _inherits(ReplaySubject, _Subject__WEBPACK_IMP3);
 
-      var _super53 = _createSuper(ReplaySubject);
+      var _super54 = _createSuper(ReplaySubject);
 
       function ReplaySubject() {
-        var _this110;
+        var _this191;
 
         var bufferSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Number.POSITIVE_INFINITY;
         var windowTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
@@ -87490,21 +95331,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, ReplaySubject);
 
-        _this110 = _super53.call(this);
-        _this110.scheduler = scheduler;
-        _this110._events = [];
-        _this110._infiniteTimeWindow = false;
-        _this110._bufferSize = bufferSize < 1 ? 1 : bufferSize;
-        _this110._windowTime = windowTime < 1 ? 1 : windowTime;
+        _this191 = _super54.call(this);
+        _this191.scheduler = scheduler;
+        _this191._events = [];
+        _this191._infiniteTimeWindow = false;
+        _this191._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        _this191._windowTime = windowTime < 1 ? 1 : windowTime;
 
         if (windowTime === Number.POSITIVE_INFINITY) {
-          _this110._infiniteTimeWindow = true;
-          _this110.next = _this110.nextInfiniteTimeWindow;
+          _this191._infiniteTimeWindow = true;
+          _this191.next = _this191.nextInfiniteTimeWindow;
         } else {
-          _this110.next = _this110.nextTimeWindow;
+          _this191.next = _this191.nextTimeWindow;
         }
 
-        return _this110;
+        return _this191;
       }
 
       _createClass2(ReplaySubject, [{
@@ -87742,16 +95583,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubjectSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_3) {
       _inherits(SubjectSubscriber, _Subscriber__WEBPACK_3);
 
-      var _super54 = _createSuper(SubjectSubscriber);
+      var _super55 = _createSuper(SubjectSubscriber);
 
       function SubjectSubscriber(destination) {
-        var _this111;
+        var _this192;
 
         _classCallCheck(this, SubjectSubscriber);
 
-        _this111 = _super54.call(this, destination);
-        _this111.destination = destination;
-        return _this111;
+        _this192 = _super55.call(this, destination);
+        _this192.destination = destination;
+        return _this192;
       }
 
       return SubjectSubscriber;
@@ -87760,20 +95601,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Subject = /*#__PURE__*/function (_Observable__WEBPACK_) {
       _inherits(Subject, _Observable__WEBPACK_);
 
-      var _super55 = _createSuper(Subject);
+      var _super56 = _createSuper(Subject);
 
       function Subject() {
-        var _this112;
+        var _this193;
 
         _classCallCheck(this, Subject);
 
-        _this112 = _super55.call(this);
-        _this112.observers = [];
-        _this112.closed = false;
-        _this112.isStopped = false;
-        _this112.hasError = false;
-        _this112.thrownError = null;
-        return _this112;
+        _this193 = _super56.call(this);
+        _this193.observers = [];
+        _this193.closed = false;
+        _this193.isStopped = false;
+        _this193.hasError = false;
+        _this193.thrownError = null;
+        return _this193;
       }
 
       _createClass2(Subject, [{
@@ -87894,17 +95735,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnonymousSubject = /*#__PURE__*/function (_Subject) {
       _inherits(AnonymousSubject, _Subject);
 
-      var _super56 = _createSuper(AnonymousSubject);
+      var _super57 = _createSuper(AnonymousSubject);
 
       function AnonymousSubject(destination, source) {
-        var _this113;
+        var _this194;
 
         _classCallCheck(this, AnonymousSubject);
 
-        _this113 = _super56.call(this);
-        _this113.destination = destination;
-        _this113.source = source;
-        return _this113;
+        _this194 = _super57.call(this);
+        _this194.destination = destination;
+        _this194.source = source;
+        return _this194;
       }
 
       _createClass2(AnonymousSubject, [{
@@ -87983,18 +95824,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubjectSubscription = /*#__PURE__*/function (_Subscription__WEBPAC) {
       _inherits(SubjectSubscription, _Subscription__WEBPAC);
 
-      var _super57 = _createSuper(SubjectSubscription);
+      var _super58 = _createSuper(SubjectSubscription);
 
       function SubjectSubscription(subject, subscriber) {
-        var _this114;
+        var _this195;
 
         _classCallCheck(this, SubjectSubscription);
 
-        _this114 = _super57.call(this);
-        _this114.subject = subject;
-        _this114.subscriber = subscriber;
-        _this114.closed = false;
-        return _this114;
+        _this195 = _super58.call(this);
+        _this195.subject = subject;
+        _this195.subscriber = subscriber;
+        _this195.closed = false;
+        return _this195;
       }
 
       _createClass2(SubjectSubscription, [{
@@ -88093,50 +95934,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Subscriber = /*#__PURE__*/function (_Subscription__WEBPAC2) {
       _inherits(Subscriber, _Subscription__WEBPAC2);
 
-      var _super58 = _createSuper(Subscriber);
+      var _super59 = _createSuper(Subscriber);
 
       function Subscriber(destinationOrNext, error, complete) {
-        var _this115;
+        var _this196;
 
         _classCallCheck(this, Subscriber);
 
-        _this115 = _super58.call(this);
-        _this115.syncErrorValue = null;
-        _this115.syncErrorThrown = false;
-        _this115.syncErrorThrowable = false;
-        _this115.isStopped = false;
+        _this196 = _super59.call(this);
+        _this196.syncErrorValue = null;
+        _this196.syncErrorThrown = false;
+        _this196.syncErrorThrowable = false;
+        _this196.isStopped = false;
 
         switch (arguments.length) {
           case 0:
-            _this115.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+            _this196.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
             break;
 
           case 1:
             if (!destinationOrNext) {
-              _this115.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+              _this196.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
               break;
             }
 
             if (typeof destinationOrNext === 'object') {
               if (destinationOrNext instanceof Subscriber) {
-                _this115.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
-                _this115.destination = destinationOrNext;
-                destinationOrNext.add(_assertThisInitialized(_this115));
+                _this196.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
+                _this196.destination = destinationOrNext;
+                destinationOrNext.add(_assertThisInitialized(_this196));
               } else {
-                _this115.syncErrorThrowable = true;
-                _this115.destination = new SafeSubscriber(_assertThisInitialized(_this115), destinationOrNext);
+                _this196.syncErrorThrowable = true;
+                _this196.destination = new SafeSubscriber(_assertThisInitialized(_this196), destinationOrNext);
               }
 
               break;
             }
 
           default:
-            _this115.syncErrorThrowable = true;
-            _this115.destination = new SafeSubscriber(_assertThisInitialized(_this115), destinationOrNext, error, complete);
+            _this196.syncErrorThrowable = true;
+            _this196.destination = new SafeSubscriber(_assertThisInitialized(_this196), destinationOrNext, error, complete);
             break;
         }
 
-        return _this115;
+        return _this196;
       }
 
       _createClass2(Subscriber, [{
@@ -88223,18 +96064,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeSubscriber = /*#__PURE__*/function (_Subscriber) {
       _inherits(SafeSubscriber, _Subscriber);
 
-      var _super59 = _createSuper(SafeSubscriber);
+      var _super60 = _createSuper(SafeSubscriber);
 
       function SafeSubscriber(_parentSubscriber, observerOrNext, error, complete) {
-        var _this116;
+        var _this197;
 
         _classCallCheck(this, SafeSubscriber);
 
-        _this116 = _super59.call(this);
-        _this116._parentSubscriber = _parentSubscriber;
+        _this197 = _super60.call(this);
+        _this197._parentSubscriber = _parentSubscriber;
         var next;
 
-        var context = _assertThisInitialized(_this116);
+        var context = _assertThisInitialized(_this197);
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(observerOrNext)) {
           next = observerOrNext;
@@ -88247,18 +96088,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             context = Object.create(observerOrNext);
 
             if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(context.unsubscribe)) {
-              _this116.add(context.unsubscribe.bind(context));
+              _this197.add(context.unsubscribe.bind(context));
             }
 
-            context.unsubscribe = _this116.unsubscribe.bind(_assertThisInitialized(_this116));
+            context.unsubscribe = _this197.unsubscribe.bind(_assertThisInitialized(_this197));
           }
         }
 
-        _this116._context = context;
-        _this116._next = next;
-        _this116._error = error;
-        _this116._complete = complete;
-        return _this116;
+        _this197._context = context;
+        _this197._next = next;
+        _this197._error = error;
+        _this197._complete = complete;
+        return _this197;
       }
 
       _createClass2(SafeSubscriber, [{
@@ -88314,14 +96155,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "complete",
         value: function complete() {
-          var _this117 = this;
+          var _this198 = this;
 
           if (!this.isStopped) {
             var _parentSubscriber = this._parentSubscriber;
 
             if (this._complete) {
               var wrappedComplete = function wrappedComplete() {
-                return _this117._complete.call(_this117._context);
+                return _this198._complete.call(_this198._context);
               };
 
               if (!_config__WEBPACK_IMPORTED_MODULE_4__["config"].useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {
@@ -88707,19 +96548,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ConnectableObservable = /*#__PURE__*/function (_Observable__WEBPACK_2) {
       _inherits(ConnectableObservable, _Observable__WEBPACK_2);
 
-      var _super60 = _createSuper(ConnectableObservable);
+      var _super61 = _createSuper(ConnectableObservable);
 
       function ConnectableObservable(source, subjectFactory) {
-        var _this118;
+        var _this199;
 
         _classCallCheck(this, ConnectableObservable);
 
-        _this118 = _super60.call(this);
-        _this118.source = source;
-        _this118.subjectFactory = subjectFactory;
-        _this118._refCount = 0;
-        _this118._isComplete = false;
-        return _this118;
+        _this199 = _super61.call(this);
+        _this199.source = source;
+        _this199.subjectFactory = subjectFactory;
+        _this199._refCount = 0;
+        _this199._isComplete = false;
+        return _this199;
       }
 
       _createClass2(ConnectableObservable, [{
@@ -88806,16 +96647,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ConnectableSubscriber = /*#__PURE__*/function (_Subject__WEBPACK_IMP4) {
       _inherits(ConnectableSubscriber, _Subject__WEBPACK_IMP4);
 
-      var _super61 = _createSuper(ConnectableSubscriber);
+      var _super62 = _createSuper(ConnectableSubscriber);
 
       function ConnectableSubscriber(destination, connectable) {
-        var _this119;
+        var _this200;
 
         _classCallCheck(this, ConnectableSubscriber);
 
-        _this119 = _super61.call(this, destination);
-        _this119.connectable = connectable;
-        return _this119;
+        _this200 = _super62.call(this, destination);
+        _this200.connectable = connectable;
+        return _this200;
       }
 
       _createClass2(ConnectableSubscriber, [{
@@ -88885,16 +96726,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RefCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_4) {
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_4);
 
-      var _super62 = _createSuper(RefCountSubscriber);
+      var _super63 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this120;
+        var _this201;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this120 = _super62.call(this, destination);
-        _this120.connectable = connectable;
-        return _this120;
+        _this201 = _super63.call(this, destination);
+        _this201.connectable = connectable;
+        return _this201;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -88980,30 +96821,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscribeOnObservable = /*#__PURE__*/function (_Observable__WEBPACK_3) {
       _inherits(SubscribeOnObservable, _Observable__WEBPACK_3);
 
-      var _super63 = _createSuper(SubscribeOnObservable);
+      var _super64 = _createSuper(SubscribeOnObservable);
 
       function SubscribeOnObservable(source) {
-        var _this121;
+        var _this202;
 
         var delayTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var scheduler = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
 
         _classCallCheck(this, SubscribeOnObservable);
 
-        _this121 = _super63.call(this);
-        _this121.source = source;
-        _this121.delayTime = delayTime;
-        _this121.scheduler = scheduler;
+        _this202 = _super64.call(this);
+        _this202.source = source;
+        _this202.delayTime = delayTime;
+        _this202.scheduler = scheduler;
 
         if (!Object(_util_isNumeric__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(delayTime) || delayTime < 0) {
-          _this121.delayTime = 0;
+          _this202.delayTime = 0;
         }
 
         if (!scheduler || typeof scheduler.schedule !== 'function') {
-          _this121.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
+          _this202.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
         }
 
-        return _this121;
+        return _this202;
       }
 
       _createClass2(SubscribeOnObservable, [{
@@ -89161,7 +97002,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this122 = this;
+      var _this203 = this;
 
       var self = this;
       var args = state.args,
@@ -89182,7 +97023,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-          _this122.add(scheduler.schedule(dispatchNext, 0, {
+          _this203.add(scheduler.schedule(dispatchNext, 0, {
             value: value,
             subject: subject
           }));
@@ -89344,7 +97185,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this123 = this;
+      var _this204 = this;
 
       var params = state.params,
           subscriber = state.subscriber,
@@ -89365,14 +97206,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var err = innerArgs.shift();
 
           if (err) {
-            _this123.add(scheduler.schedule(dispatchError, 0, {
+            _this204.add(scheduler.schedule(dispatchError, 0, {
               err: err,
               subject: subject
             }));
           } else {
             var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-            _this123.add(scheduler.schedule(dispatchNext, 0, {
+            _this204.add(scheduler.schedule(dispatchNext, 0, {
               value: value,
               subject: subject
             }));
@@ -89516,19 +97357,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CombineLatestSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB) {
       _inherits(CombineLatestSubscriber, _OuterSubscriber__WEB);
 
-      var _super64 = _createSuper(CombineLatestSubscriber);
+      var _super65 = _createSuper(CombineLatestSubscriber);
 
       function CombineLatestSubscriber(destination, resultSelector) {
-        var _this124;
+        var _this205;
 
         _classCallCheck(this, CombineLatestSubscriber);
 
-        _this124 = _super64.call(this, destination);
-        _this124.resultSelector = resultSelector;
-        _this124.active = 0;
-        _this124.values = [];
-        _this124.observables = [];
-        return _this124;
+        _this205 = _super65.call(this, destination);
+        _this205.resultSelector = resultSelector;
+        _this205.active = 0;
+        _this205.values = [];
+        _this205.observables = [];
+        return _this205;
       }
 
       _createClass2(CombineLatestSubscriber, [{
@@ -90995,18 +98836,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RaceSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB2) {
       _inherits(RaceSubscriber, _OuterSubscriber__WEB2);
 
-      var _super65 = _createSuper(RaceSubscriber);
+      var _super66 = _createSuper(RaceSubscriber);
 
       function RaceSubscriber(destination) {
-        var _this125;
+        var _this206;
 
         _classCallCheck(this, RaceSubscriber);
 
-        _this125 = _super65.call(this, destination);
-        _this125.hasFirst = false;
-        _this125.observables = [];
-        _this125.subscriptions = [];
-        return _this125;
+        _this206 = _super66.call(this, destination);
+        _this206.hasFirst = false;
+        _this206.observables = [];
+        _this206.subscriptions = [];
+        return _this206;
       }
 
       _createClass2(RaceSubscriber, [{
@@ -91203,9 +99044,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function dispatch(_ref12) {
-      var error = _ref12.error,
-          subscriber = _ref12.subscriber;
+    function dispatch(_ref19) {
+      var error = _ref19.error,
+          subscriber = _ref19.subscriber;
       subscriber.error(error);
     } //# sourceMappingURL=throwError.js.map
 
@@ -91479,21 +99320,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ZipSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_5) {
       _inherits(ZipSubscriber, _Subscriber__WEBPACK_5);
 
-      var _super66 = _createSuper(ZipSubscriber);
+      var _super67 = _createSuper(ZipSubscriber);
 
       function ZipSubscriber(destination, resultSelector) {
-        var _this126;
+        var _this207;
 
         var values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.create(null);
 
         _classCallCheck(this, ZipSubscriber);
 
-        _this126 = _super66.call(this, destination);
-        _this126.iterators = [];
-        _this126.active = 0;
-        _this126.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
-        _this126.values = values;
-        return _this126;
+        _this207 = _super67.call(this, destination);
+        _this207.iterators = [];
+        _this207.active = 0;
+        _this207.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
+        _this207.values = values;
+        return _this207;
       }
 
       _createClass2(ZipSubscriber, [{
@@ -91684,20 +99525,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ZipBufferIterator = /*#__PURE__*/function (_OuterSubscriber__WEB3) {
       _inherits(ZipBufferIterator, _OuterSubscriber__WEB3);
 
-      var _super67 = _createSuper(ZipBufferIterator);
+      var _super68 = _createSuper(ZipBufferIterator);
 
       function ZipBufferIterator(destination, parent, observable) {
-        var _this127;
+        var _this208;
 
         _classCallCheck(this, ZipBufferIterator);
 
-        _this127 = _super67.call(this, destination);
-        _this127.parent = parent;
-        _this127.observable = observable;
-        _this127.stillUnsubscribed = true;
-        _this127.buffer = [];
-        _this127.isComplete = false;
-        return _this127;
+        _this208 = _super68.call(this, destination);
+        _this208.parent = parent;
+        _this208.observable = observable;
+        _this208.stillUnsubscribed = true;
+        _this208.buffer = [];
+        _this208.isComplete = false;
+        return _this208;
       }
 
       _createClass2(ZipBufferIterator, [{
@@ -91820,17 +99661,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AuditSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB4) {
       _inherits(AuditSubscriber, _OuterSubscriber__WEB4);
 
-      var _super68 = _createSuper(AuditSubscriber);
+      var _super69 = _createSuper(AuditSubscriber);
 
       function AuditSubscriber(destination, durationSelector) {
-        var _this128;
+        var _this209;
 
         _classCallCheck(this, AuditSubscriber);
 
-        _this128 = _super68.call(this, destination);
-        _this128.durationSelector = durationSelector;
-        _this128.hasValue = false;
-        return _this128;
+        _this209 = _super69.call(this, destination);
+        _this209.durationSelector = durationSelector;
+        _this209.hasValue = false;
+        return _this209;
       }
 
       _createClass2(AuditSubscriber, [{
@@ -92003,19 +99844,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB5) {
       _inherits(BufferSubscriber, _OuterSubscriber__WEB5);
 
-      var _super69 = _createSuper(BufferSubscriber);
+      var _super70 = _createSuper(BufferSubscriber);
 
       function BufferSubscriber(destination, closingNotifier) {
-        var _this129;
+        var _this210;
 
         _classCallCheck(this, BufferSubscriber);
 
-        _this129 = _super69.call(this, destination);
-        _this129.buffer = [];
+        _this210 = _super70.call(this, destination);
+        _this210.buffer = [];
 
-        _this129.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this129), closingNotifier));
+        _this210.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this210), closingNotifier));
 
-        return _this129;
+        return _this210;
       }
 
       _createClass2(BufferSubscriber, [{
@@ -92099,17 +99940,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_6) {
       _inherits(BufferCountSubscriber, _Subscriber__WEBPACK_6);
 
-      var _super70 = _createSuper(BufferCountSubscriber);
+      var _super71 = _createSuper(BufferCountSubscriber);
 
       function BufferCountSubscriber(destination, bufferSize) {
-        var _this130;
+        var _this211;
 
         _classCallCheck(this, BufferCountSubscriber);
 
-        _this130 = _super70.call(this, destination);
-        _this130.bufferSize = bufferSize;
-        _this130.buffer = [];
-        return _this130;
+        _this211 = _super71.call(this, destination);
+        _this211.bufferSize = bufferSize;
+        _this211.buffer = [];
+        return _this211;
       }
 
       _createClass2(BufferCountSubscriber, [{
@@ -92142,19 +99983,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferSkipCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_7) {
       _inherits(BufferSkipCountSubscriber, _Subscriber__WEBPACK_7);
 
-      var _super71 = _createSuper(BufferSkipCountSubscriber);
+      var _super72 = _createSuper(BufferSkipCountSubscriber);
 
       function BufferSkipCountSubscriber(destination, bufferSize, startBufferEvery) {
-        var _this131;
+        var _this212;
 
         _classCallCheck(this, BufferSkipCountSubscriber);
 
-        _this131 = _super71.call(this, destination);
-        _this131.bufferSize = bufferSize;
-        _this131.startBufferEvery = startBufferEvery;
-        _this131.buffers = [];
-        _this131.count = 0;
-        return _this131;
+        _this212 = _super72.call(this, destination);
+        _this212.bufferSize = bufferSize;
+        _this212.startBufferEvery = startBufferEvery;
+        _this212.buffers = [];
+        _this212.count = 0;
+        return _this212;
       }
 
       _createClass2(BufferSkipCountSubscriber, [{
@@ -92298,50 +100139,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_8) {
       _inherits(BufferTimeSubscriber, _Subscriber__WEBPACK_8);
 
-      var _super72 = _createSuper(BufferTimeSubscriber);
+      var _super73 = _createSuper(BufferTimeSubscriber);
 
       function BufferTimeSubscriber(destination, bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        var _this132;
+        var _this213;
 
         _classCallCheck(this, BufferTimeSubscriber);
 
-        _this132 = _super72.call(this, destination);
-        _this132.bufferTimeSpan = bufferTimeSpan;
-        _this132.bufferCreationInterval = bufferCreationInterval;
-        _this132.maxBufferSize = maxBufferSize;
-        _this132.scheduler = scheduler;
-        _this132.contexts = [];
+        _this213 = _super73.call(this, destination);
+        _this213.bufferTimeSpan = bufferTimeSpan;
+        _this213.bufferCreationInterval = bufferCreationInterval;
+        _this213.maxBufferSize = maxBufferSize;
+        _this213.scheduler = scheduler;
+        _this213.contexts = [];
 
-        var context = _this132.openContext();
+        var context = _this213.openContext();
 
-        _this132.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
+        _this213.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
 
-        if (_this132.timespanOnly) {
+        if (_this213.timespanOnly) {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this132),
+            subscriber: _assertThisInitialized(_this213),
             context: context,
             bufferTimeSpan: bufferTimeSpan
           };
 
-          _this132.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
+          _this213.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
         } else {
           var closeState = {
-            subscriber: _assertThisInitialized(_this132),
+            subscriber: _assertThisInitialized(_this213),
             context: context
           };
           var creationState = {
             bufferTimeSpan: bufferTimeSpan,
             bufferCreationInterval: bufferCreationInterval,
-            subscriber: _assertThisInitialized(_this132),
+            subscriber: _assertThisInitialized(_this213),
             scheduler: scheduler
           };
 
-          _this132.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
+          _this213.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
 
-          _this132.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
+          _this213.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
         }
 
-        return _this132;
+        return _this213;
       }
 
       _createClass2(BufferTimeSubscriber, [{
@@ -92538,21 +100379,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferToggleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB6) {
       _inherits(BufferToggleSubscriber, _OuterSubscriber__WEB6);
 
-      var _super73 = _createSuper(BufferToggleSubscriber);
+      var _super74 = _createSuper(BufferToggleSubscriber);
 
       function BufferToggleSubscriber(destination, openings, closingSelector) {
-        var _this133;
+        var _this214;
 
         _classCallCheck(this, BufferToggleSubscriber);
 
-        _this133 = _super73.call(this, destination);
-        _this133.openings = openings;
-        _this133.closingSelector = closingSelector;
-        _this133.contexts = [];
+        _this214 = _super74.call(this, destination);
+        _this214.openings = openings;
+        _this214.closingSelector = closingSelector;
+        _this214.contexts = [];
 
-        _this133.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this133), openings));
+        _this214.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this214), openings));
 
-        return _this133;
+        return _this214;
       }
 
       _createClass2(BufferToggleSubscriber, [{
@@ -92730,20 +100571,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB7) {
       _inherits(BufferWhenSubscriber, _OuterSubscriber__WEB7);
 
-      var _super74 = _createSuper(BufferWhenSubscriber);
+      var _super75 = _createSuper(BufferWhenSubscriber);
 
       function BufferWhenSubscriber(destination, closingSelector) {
-        var _this134;
+        var _this215;
 
         _classCallCheck(this, BufferWhenSubscriber);
 
-        _this134 = _super74.call(this, destination);
-        _this134.closingSelector = closingSelector;
-        _this134.subscribing = false;
+        _this215 = _super75.call(this, destination);
+        _this215.closingSelector = closingSelector;
+        _this215.subscribing = false;
 
-        _this134.openBuffer();
+        _this215.openBuffer();
 
-        return _this134;
+        return _this215;
       }
 
       _createClass2(BufferWhenSubscriber, [{
@@ -92890,17 +100731,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CatchSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB8) {
       _inherits(CatchSubscriber, _OuterSubscriber__WEB8);
 
-      var _super75 = _createSuper(CatchSubscriber);
+      var _super76 = _createSuper(CatchSubscriber);
 
       function CatchSubscriber(destination, selector, caught) {
-        var _this135;
+        var _this216;
 
         _classCallCheck(this, CatchSubscriber);
 
-        _this135 = _super75.call(this, destination);
-        _this135.selector = selector;
-        _this135.caught = caught;
-        return _this135;
+        _this216 = _super76.call(this, destination);
+        _this216.selector = selector;
+        _this216.caught = caught;
+        return _this216;
       }
 
       _createClass2(CatchSubscriber, [{
@@ -93234,19 +101075,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_9) {
       _inherits(CountSubscriber, _Subscriber__WEBPACK_9);
 
-      var _super76 = _createSuper(CountSubscriber);
+      var _super77 = _createSuper(CountSubscriber);
 
       function CountSubscriber(destination, predicate, source) {
-        var _this136;
+        var _this217;
 
         _classCallCheck(this, CountSubscriber);
 
-        _this136 = _super76.call(this, destination);
-        _this136.predicate = predicate;
-        _this136.source = source;
-        _this136.count = 0;
-        _this136.index = 0;
-        return _this136;
+        _this217 = _super77.call(this, destination);
+        _this217.predicate = predicate;
+        _this217.source = source;
+        _this217.count = 0;
+        _this217.index = 0;
+        return _this217;
       }
 
       _createClass2(CountSubscriber, [{
@@ -93347,18 +101188,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebounceSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB9) {
       _inherits(DebounceSubscriber, _OuterSubscriber__WEB9);
 
-      var _super77 = _createSuper(DebounceSubscriber);
+      var _super78 = _createSuper(DebounceSubscriber);
 
       function DebounceSubscriber(destination, durationSelector) {
-        var _this137;
+        var _this218;
 
         _classCallCheck(this, DebounceSubscriber);
 
-        _this137 = _super77.call(this, destination);
-        _this137.durationSelector = durationSelector;
-        _this137.hasValue = false;
-        _this137.durationSubscription = null;
-        return _this137;
+        _this218 = _super78.call(this, destination);
+        _this218.durationSelector = durationSelector;
+        _this218.hasValue = false;
+        _this218.durationSubscription = null;
+        return _this218;
       }
 
       _createClass2(DebounceSubscriber, [{
@@ -93496,20 +101337,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebounceTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_10) {
       _inherits(DebounceTimeSubscriber, _Subscriber__WEBPACK_10);
 
-      var _super78 = _createSuper(DebounceTimeSubscriber);
+      var _super79 = _createSuper(DebounceTimeSubscriber);
 
       function DebounceTimeSubscriber(destination, dueTime, scheduler) {
-        var _this138;
+        var _this219;
 
         _classCallCheck(this, DebounceTimeSubscriber);
 
-        _this138 = _super78.call(this, destination);
-        _this138.dueTime = dueTime;
-        _this138.scheduler = scheduler;
-        _this138.debouncedSubscription = null;
-        _this138.lastValue = null;
-        _this138.hasValue = false;
-        return _this138;
+        _this219 = _super79.call(this, destination);
+        _this219.dueTime = dueTime;
+        _this219.scheduler = scheduler;
+        _this219.debouncedSubscription = null;
+        _this219.lastValue = null;
+        _this219.hasValue = false;
+        return _this219;
       }
 
       _createClass2(DebounceTimeSubscriber, [{
@@ -93615,17 +101456,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DefaultIfEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_11) {
       _inherits(DefaultIfEmptySubscriber, _Subscriber__WEBPACK_11);
 
-      var _super79 = _createSuper(DefaultIfEmptySubscriber);
+      var _super80 = _createSuper(DefaultIfEmptySubscriber);
 
       function DefaultIfEmptySubscriber(destination, defaultValue) {
-        var _this139;
+        var _this220;
 
         _classCallCheck(this, DefaultIfEmptySubscriber);
 
-        _this139 = _super79.call(this, destination);
-        _this139.defaultValue = defaultValue;
-        _this139.isEmpty = true;
-        return _this139;
+        _this220 = _super80.call(this, destination);
+        _this220.defaultValue = defaultValue;
+        _this220.isEmpty = true;
+        return _this220;
       }
 
       _createClass2(DefaultIfEmptySubscriber, [{
@@ -93726,20 +101567,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DelaySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_12) {
       _inherits(DelaySubscriber, _Subscriber__WEBPACK_12);
 
-      var _super80 = _createSuper(DelaySubscriber);
+      var _super81 = _createSuper(DelaySubscriber);
 
       function DelaySubscriber(destination, delay, scheduler) {
-        var _this140;
+        var _this221;
 
         _classCallCheck(this, DelaySubscriber);
 
-        _this140 = _super80.call(this, destination);
-        _this140.delay = delay;
-        _this140.scheduler = scheduler;
-        _this140.queue = [];
-        _this140.active = false;
-        _this140.errored = false;
-        return _this140;
+        _this221 = _super81.call(this, destination);
+        _this221.delay = delay;
+        _this221.scheduler = scheduler;
+        _this221.queue = [];
+        _this221.active = false;
+        _this221.errored = false;
+        return _this221;
       }
 
       _createClass2(DelaySubscriber, [{
@@ -93900,19 +101741,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DelayWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB10) {
       _inherits(DelayWhenSubscriber, _OuterSubscriber__WEB10);
 
-      var _super81 = _createSuper(DelayWhenSubscriber);
+      var _super82 = _createSuper(DelayWhenSubscriber);
 
       function DelayWhenSubscriber(destination, delayDurationSelector) {
-        var _this141;
+        var _this222;
 
         _classCallCheck(this, DelayWhenSubscriber);
 
-        _this141 = _super81.call(this, destination);
-        _this141.delayDurationSelector = delayDurationSelector;
-        _this141.completed = false;
-        _this141.delayNotifierSubscriptions = [];
-        _this141.index = 0;
-        return _this141;
+        _this222 = _super82.call(this, destination);
+        _this222.delayDurationSelector = delayDurationSelector;
+        _this222.completed = false;
+        _this222.delayNotifierSubscriptions = [];
+        _this222.index = 0;
+        return _this222;
       }
 
       _createClass2(DelayWhenSubscriber, [{
@@ -93998,17 +101839,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscriptionDelayObservable = /*#__PURE__*/function (_Observable__WEBPACK_4) {
       _inherits(SubscriptionDelayObservable, _Observable__WEBPACK_4);
 
-      var _super82 = _createSuper(SubscriptionDelayObservable);
+      var _super83 = _createSuper(SubscriptionDelayObservable);
 
       function SubscriptionDelayObservable(source, subscriptionDelay) {
-        var _this142;
+        var _this223;
 
         _classCallCheck(this, SubscriptionDelayObservable);
 
-        _this142 = _super82.call(this);
-        _this142.source = source;
-        _this142.subscriptionDelay = subscriptionDelay;
-        return _this142;
+        _this223 = _super83.call(this);
+        _this223.source = source;
+        _this223.subscriptionDelay = subscriptionDelay;
+        return _this223;
       }
 
       _createClass2(SubscriptionDelayObservable, [{
@@ -94024,18 +101865,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscriptionDelaySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_13) {
       _inherits(SubscriptionDelaySubscriber, _Subscriber__WEBPACK_13);
 
-      var _super83 = _createSuper(SubscriptionDelaySubscriber);
+      var _super84 = _createSuper(SubscriptionDelaySubscriber);
 
       function SubscriptionDelaySubscriber(parent, source) {
-        var _this143;
+        var _this224;
 
         _classCallCheck(this, SubscriptionDelaySubscriber);
 
-        _this143 = _super83.call(this);
-        _this143.parent = parent;
-        _this143.source = source;
-        _this143.sourceSubscribed = false;
-        return _this143;
+        _this224 = _super84.call(this);
+        _this224.parent = parent;
+        _this224.source = source;
+        _this224.sourceSubscribed = false;
+        return _this224;
       }
 
       _createClass2(SubscriptionDelaySubscriber, [{
@@ -94123,12 +101964,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DeMaterializeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_14) {
       _inherits(DeMaterializeSubscriber, _Subscriber__WEBPACK_14);
 
-      var _super84 = _createSuper(DeMaterializeSubscriber);
+      var _super85 = _createSuper(DeMaterializeSubscriber);
 
       function DeMaterializeSubscriber(destination) {
         _classCallCheck(this, DeMaterializeSubscriber);
 
-        return _super84.call(this, destination);
+        return _super85.call(this, destination);
       }
 
       _createClass2(DeMaterializeSubscriber, [{
@@ -94210,22 +102051,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DistinctSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB11) {
       _inherits(DistinctSubscriber, _OuterSubscriber__WEB11);
 
-      var _super85 = _createSuper(DistinctSubscriber);
+      var _super86 = _createSuper(DistinctSubscriber);
 
       function DistinctSubscriber(destination, keySelector, flushes) {
-        var _this144;
+        var _this225;
 
         _classCallCheck(this, DistinctSubscriber);
 
-        _this144 = _super85.call(this, destination);
-        _this144.keySelector = keySelector;
-        _this144.values = new Set();
+        _this225 = _super86.call(this, destination);
+        _this225.keySelector = keySelector;
+        _this225.values = new Set();
 
         if (flushes) {
-          _this144.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this144), flushes));
+          _this225.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this225), flushes));
         }
 
-        return _this144;
+        return _this225;
       }
 
       _createClass2(DistinctSubscriber, [{
@@ -94334,22 +102175,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DistinctUntilChangedSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_15) {
       _inherits(DistinctUntilChangedSubscriber, _Subscriber__WEBPACK_15);
 
-      var _super86 = _createSuper(DistinctUntilChangedSubscriber);
+      var _super87 = _createSuper(DistinctUntilChangedSubscriber);
 
       function DistinctUntilChangedSubscriber(destination, compare, keySelector) {
-        var _this145;
+        var _this226;
 
         _classCallCheck(this, DistinctUntilChangedSubscriber);
 
-        _this145 = _super86.call(this, destination);
-        _this145.keySelector = keySelector;
-        _this145.hasKey = false;
+        _this226 = _super87.call(this, destination);
+        _this226.keySelector = keySelector;
+        _this226.hasKey = false;
 
         if (typeof compare === 'function') {
-          _this145.compare = compare;
+          _this226.compare = compare;
         }
 
-        return _this145;
+        return _this226;
       }
 
       _createClass2(DistinctUntilChangedSubscriber, [{
@@ -94601,20 +102442,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EverySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_16) {
       _inherits(EverySubscriber, _Subscriber__WEBPACK_16);
 
-      var _super87 = _createSuper(EverySubscriber);
+      var _super88 = _createSuper(EverySubscriber);
 
       function EverySubscriber(destination, predicate, thisArg, source) {
-        var _this146;
+        var _this227;
 
         _classCallCheck(this, EverySubscriber);
 
-        _this146 = _super87.call(this, destination);
-        _this146.predicate = predicate;
-        _this146.thisArg = thisArg;
-        _this146.source = source;
-        _this146.index = 0;
-        _this146.thisArg = thisArg || _assertThisInitialized(_this146);
-        return _this146;
+        _this227 = _super88.call(this, destination);
+        _this227.predicate = predicate;
+        _this227.thisArg = thisArg;
+        _this227.source = source;
+        _this227.index = 0;
+        _this227.thisArg = thisArg || _assertThisInitialized(_this227);
+        return _this227;
       }
 
       _createClass2(EverySubscriber, [{
@@ -94709,17 +102550,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SwitchFirstSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB12) {
       _inherits(SwitchFirstSubscriber, _OuterSubscriber__WEB12);
 
-      var _super88 = _createSuper(SwitchFirstSubscriber);
+      var _super89 = _createSuper(SwitchFirstSubscriber);
 
       function SwitchFirstSubscriber(destination) {
-        var _this147;
+        var _this228;
 
         _classCallCheck(this, SwitchFirstSubscriber);
 
-        _this147 = _super88.call(this, destination);
-        _this147.hasCompleted = false;
-        _this147.hasSubscription = false;
-        return _this147;
+        _this228 = _super89.call(this, destination);
+        _this228.hasCompleted = false;
+        _this228.hasSubscription = false;
+        return _this228;
       }
 
       _createClass2(SwitchFirstSubscriber, [{
@@ -94844,19 +102685,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExhaustMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB13) {
       _inherits(ExhaustMapSubscriber, _OuterSubscriber__WEB13);
 
-      var _super89 = _createSuper(ExhaustMapSubscriber);
+      var _super90 = _createSuper(ExhaustMapSubscriber);
 
       function ExhaustMapSubscriber(destination, project) {
-        var _this148;
+        var _this229;
 
         _classCallCheck(this, ExhaustMapSubscriber);
 
-        _this148 = _super89.call(this, destination);
-        _this148.project = project;
-        _this148.hasSubscription = false;
-        _this148.hasCompleted = false;
-        _this148.index = 0;
-        return _this148;
+        _this229 = _super90.call(this, destination);
+        _this229.project = project;
+        _this229.hasSubscription = false;
+        _this229.hasCompleted = false;
+        _this229.index = 0;
+        return _this229;
       }
 
       _createClass2(ExhaustMapSubscriber, [{
@@ -95011,26 +102852,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExpandSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB14) {
       _inherits(ExpandSubscriber, _OuterSubscriber__WEB14);
 
-      var _super90 = _createSuper(ExpandSubscriber);
+      var _super91 = _createSuper(ExpandSubscriber);
 
       function ExpandSubscriber(destination, project, concurrent, scheduler) {
-        var _this149;
+        var _this230;
 
         _classCallCheck(this, ExpandSubscriber);
 
-        _this149 = _super90.call(this, destination);
-        _this149.project = project;
-        _this149.concurrent = concurrent;
-        _this149.scheduler = scheduler;
-        _this149.index = 0;
-        _this149.active = 0;
-        _this149.hasCompleted = false;
+        _this230 = _super91.call(this, destination);
+        _this230.project = project;
+        _this230.concurrent = concurrent;
+        _this230.scheduler = scheduler;
+        _this230.index = 0;
+        _this230.active = 0;
+        _this230.hasCompleted = false;
 
         if (concurrent < Number.POSITIVE_INFINITY) {
-          _this149.buffer = [];
+          _this230.buffer = [];
         }
 
-        return _this149;
+        return _this230;
       }
 
       _createClass2(ExpandSubscriber, [{
@@ -95183,18 +103024,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FilterSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_17) {
       _inherits(FilterSubscriber, _Subscriber__WEBPACK_17);
 
-      var _super91 = _createSuper(FilterSubscriber);
+      var _super92 = _createSuper(FilterSubscriber);
 
       function FilterSubscriber(destination, predicate, thisArg) {
-        var _this150;
+        var _this231;
 
         _classCallCheck(this, FilterSubscriber);
 
-        _this150 = _super91.call(this, destination);
-        _this150.predicate = predicate;
-        _this150.thisArg = thisArg;
-        _this150.count = 0;
-        return _this150;
+        _this231 = _super92.call(this, destination);
+        _this231.predicate = predicate;
+        _this231.thisArg = thisArg;
+        _this231.count = 0;
+        return _this231;
       }
 
       _createClass2(FilterSubscriber, [{
@@ -95280,18 +103121,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FinallySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_18) {
       _inherits(FinallySubscriber, _Subscriber__WEBPACK_18);
 
-      var _super92 = _createSuper(FinallySubscriber);
+      var _super93 = _createSuper(FinallySubscriber);
 
       function FinallySubscriber(destination, callback) {
-        var _this151;
+        var _this232;
 
         _classCallCheck(this, FinallySubscriber);
 
-        _this151 = _super92.call(this, destination);
+        _this232 = _super93.call(this, destination);
 
-        _this151.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
+        _this232.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
 
-        return _this151;
+        return _this232;
       }
 
       return FinallySubscriber;
@@ -95372,20 +103213,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FindValueSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_19) {
       _inherits(FindValueSubscriber, _Subscriber__WEBPACK_19);
 
-      var _super93 = _createSuper(FindValueSubscriber);
+      var _super94 = _createSuper(FindValueSubscriber);
 
       function FindValueSubscriber(destination, predicate, source, yieldIndex, thisArg) {
-        var _this152;
+        var _this233;
 
         _classCallCheck(this, FindValueSubscriber);
 
-        _this152 = _super93.call(this, destination);
-        _this152.predicate = predicate;
-        _this152.source = source;
-        _this152.yieldIndex = yieldIndex;
-        _this152.thisArg = thisArg;
-        _this152.index = 0;
-        return _this152;
+        _this233 = _super94.call(this, destination);
+        _this233.predicate = predicate;
+        _this233.source = source;
+        _this233.yieldIndex = yieldIndex;
+        _this233.thisArg = thisArg;
+        _this233.index = 0;
+        return _this233;
       }
 
       _createClass2(FindValueSubscriber, [{
@@ -95613,22 +103454,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupBySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_20) {
       _inherits(GroupBySubscriber, _Subscriber__WEBPACK_20);
 
-      var _super94 = _createSuper(GroupBySubscriber);
+      var _super95 = _createSuper(GroupBySubscriber);
 
       function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
-        var _this153;
+        var _this234;
 
         _classCallCheck(this, GroupBySubscriber);
 
-        _this153 = _super94.call(this, destination);
-        _this153.keySelector = keySelector;
-        _this153.elementSelector = elementSelector;
-        _this153.durationSelector = durationSelector;
-        _this153.subjectSelector = subjectSelector;
-        _this153.groups = null;
-        _this153.attemptedToUnsubscribe = false;
-        _this153.count = 0;
-        return _this153;
+        _this234 = _super95.call(this, destination);
+        _this234.keySelector = keySelector;
+        _this234.elementSelector = elementSelector;
+        _this234.durationSelector = durationSelector;
+        _this234.subjectSelector = subjectSelector;
+        _this234.groups = null;
+        _this234.attemptedToUnsubscribe = false;
+        _this234.count = 0;
+        return _this234;
       }
 
       _createClass2(GroupBySubscriber, [{
@@ -95743,18 +103584,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupDurationSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_21) {
       _inherits(GroupDurationSubscriber, _Subscriber__WEBPACK_21);
 
-      var _super95 = _createSuper(GroupDurationSubscriber);
+      var _super96 = _createSuper(GroupDurationSubscriber);
 
       function GroupDurationSubscriber(key, group, parent) {
-        var _this154;
+        var _this235;
 
         _classCallCheck(this, GroupDurationSubscriber);
 
-        _this154 = _super95.call(this, group);
-        _this154.key = key;
-        _this154.group = group;
-        _this154.parent = parent;
-        return _this154;
+        _this235 = _super96.call(this, group);
+        _this235.key = key;
+        _this235.group = group;
+        _this235.parent = parent;
+        return _this235;
       }
 
       _createClass2(GroupDurationSubscriber, [{
@@ -95781,18 +103622,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupedObservable = /*#__PURE__*/function (_Observable__WEBPACK_5) {
       _inherits(GroupedObservable, _Observable__WEBPACK_5);
 
-      var _super96 = _createSuper(GroupedObservable);
+      var _super97 = _createSuper(GroupedObservable);
 
       function GroupedObservable(key, groupSubject, refCountSubscription) {
-        var _this155;
+        var _this236;
 
         _classCallCheck(this, GroupedObservable);
 
-        _this155 = _super96.call(this);
-        _this155.key = key;
-        _this155.groupSubject = groupSubject;
-        _this155.refCountSubscription = refCountSubscription;
-        return _this155;
+        _this236 = _super97.call(this);
+        _this236.key = key;
+        _this236.groupSubject = groupSubject;
+        _this236.refCountSubscription = refCountSubscription;
+        return _this236;
       }
 
       _createClass2(GroupedObservable, [{
@@ -95817,17 +103658,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var InnerRefCountSubscription = /*#__PURE__*/function (_Subscription__WEBPAC3) {
       _inherits(InnerRefCountSubscription, _Subscription__WEBPAC3);
 
-      var _super97 = _createSuper(InnerRefCountSubscription);
+      var _super98 = _createSuper(InnerRefCountSubscription);
 
       function InnerRefCountSubscription(parent) {
-        var _this156;
+        var _this237;
 
         _classCallCheck(this, InnerRefCountSubscription);
 
-        _this156 = _super97.call(this);
-        _this156.parent = parent;
+        _this237 = _super98.call(this);
+        _this237.parent = parent;
         parent.count++;
-        return _this156;
+        return _this237;
       }
 
       _createClass2(InnerRefCountSubscription, [{
@@ -95904,12 +103745,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var IgnoreElementsSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_22) {
       _inherits(IgnoreElementsSubscriber, _Subscriber__WEBPACK_22);
 
-      var _super98 = _createSuper(IgnoreElementsSubscriber);
+      var _super99 = _createSuper(IgnoreElementsSubscriber);
 
       function IgnoreElementsSubscriber() {
         _classCallCheck(this, IgnoreElementsSubscriber);
 
-        return _super98.apply(this, arguments);
+        return _super99.apply(this, arguments);
       }
 
       _createClass2(IgnoreElementsSubscriber, [{
@@ -95974,12 +103815,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var IsEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_23) {
       _inherits(IsEmptySubscriber, _Subscriber__WEBPACK_23);
 
-      var _super99 = _createSuper(IsEmptySubscriber);
+      var _super100 = _createSuper(IsEmptySubscriber);
 
       function IsEmptySubscriber(destination) {
         _classCallCheck(this, IsEmptySubscriber);
 
-        return _super99.call(this, destination);
+        return _super100.call(this, destination);
       }
 
       _createClass2(IsEmptySubscriber, [{
@@ -96142,18 +103983,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MapSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_24) {
       _inherits(MapSubscriber, _Subscriber__WEBPACK_24);
 
-      var _super100 = _createSuper(MapSubscriber);
+      var _super101 = _createSuper(MapSubscriber);
 
       function MapSubscriber(destination, project, thisArg) {
-        var _this157;
+        var _this238;
 
         _classCallCheck(this, MapSubscriber);
 
-        _this157 = _super100.call(this, destination);
-        _this157.project = project;
-        _this157.count = 0;
-        _this157.thisArg = thisArg || _assertThisInitialized(_this157);
-        return _this157;
+        _this238 = _super101.call(this, destination);
+        _this238.project = project;
+        _this238.count = 0;
+        _this238.thisArg = thisArg || _assertThisInitialized(_this238);
+        return _this238;
       }
 
       _createClass2(MapSubscriber, [{
@@ -96231,16 +104072,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MapToSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_25) {
       _inherits(MapToSubscriber, _Subscriber__WEBPACK_25);
 
-      var _super101 = _createSuper(MapToSubscriber);
+      var _super102 = _createSuper(MapToSubscriber);
 
       function MapToSubscriber(destination, value) {
-        var _this158;
+        var _this239;
 
         _classCallCheck(this, MapToSubscriber);
 
-        _this158 = _super101.call(this, destination);
-        _this158.value = value;
-        return _this158;
+        _this239 = _super102.call(this, destination);
+        _this239.value = value;
+        return _this239;
       }
 
       _createClass2(MapToSubscriber, [{
@@ -96313,12 +104154,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MaterializeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_26) {
       _inherits(MaterializeSubscriber, _Subscriber__WEBPACK_26);
 
-      var _super102 = _createSuper(MaterializeSubscriber);
+      var _super103 = _createSuper(MaterializeSubscriber);
 
       function MaterializeSubscriber(destination) {
         _classCallCheck(this, MaterializeSubscriber);
 
-        return _super102.call(this, destination);
+        return _super103.call(this, destination);
       }
 
       _createClass2(MaterializeSubscriber, [{
@@ -96574,23 +104415,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MergeMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB15) {
       _inherits(MergeMapSubscriber, _OuterSubscriber__WEB15);
 
-      var _super103 = _createSuper(MergeMapSubscriber);
+      var _super104 = _createSuper(MergeMapSubscriber);
 
       function MergeMapSubscriber(destination, project) {
-        var _this159;
+        var _this240;
 
         var concurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, MergeMapSubscriber);
 
-        _this159 = _super103.call(this, destination);
-        _this159.project = project;
-        _this159.concurrent = concurrent;
-        _this159.hasCompleted = false;
-        _this159.buffer = [];
-        _this159.active = 0;
-        _this159.index = 0;
-        return _this159;
+        _this240 = _super104.call(this, destination);
+        _this240.project = project;
+        _this240.concurrent = concurrent;
+        _this240.hasCompleted = false;
+        _this240.buffer = [];
+        _this240.active = 0;
+        _this240.index = 0;
+        return _this240;
       }
 
       _createClass2(MergeMapSubscriber, [{
@@ -96796,23 +104637,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MergeScanSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB16) {
       _inherits(MergeScanSubscriber, _OuterSubscriber__WEB16);
 
-      var _super104 = _createSuper(MergeScanSubscriber);
+      var _super105 = _createSuper(MergeScanSubscriber);
 
       function MergeScanSubscriber(destination, accumulator, acc, concurrent) {
-        var _this160;
+        var _this241;
 
         _classCallCheck(this, MergeScanSubscriber);
 
-        _this160 = _super104.call(this, destination);
-        _this160.accumulator = accumulator;
-        _this160.acc = acc;
-        _this160.concurrent = concurrent;
-        _this160.hasValue = false;
-        _this160.hasCompleted = false;
-        _this160.buffer = [];
-        _this160.active = 0;
-        _this160.index = 0;
-        return _this160;
+        _this241 = _super105.call(this, destination);
+        _this241.accumulator = accumulator;
+        _this241.acc = acc;
+        _this241.concurrent = concurrent;
+        _this241.hasValue = false;
+        _this241.hasCompleted = false;
+        _this241.buffer = [];
+        _this241.active = 0;
+        _this241.index = 0;
+        return _this241;
       }
 
       _createClass2(MergeScanSubscriber, [{
@@ -97099,19 +104940,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ObserveOnSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_27) {
       _inherits(ObserveOnSubscriber, _Subscriber__WEBPACK_27);
 
-      var _super105 = _createSuper(ObserveOnSubscriber);
+      var _super106 = _createSuper(ObserveOnSubscriber);
 
       function ObserveOnSubscriber(destination, scheduler) {
-        var _this161;
+        var _this242;
 
         var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
         _classCallCheck(this, ObserveOnSubscriber);
 
-        _this161 = _super105.call(this, destination);
-        _this161.scheduler = scheduler;
-        _this161.delay = delay;
-        return _this161;
+        _this242 = _super106.call(this, destination);
+        _this242.scheduler = scheduler;
+        _this242.delay = delay;
+        return _this242;
       }
 
       _createClass2(ObserveOnSubscriber, [{
@@ -97266,17 +105107,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var OnErrorResumeNextSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB17) {
       _inherits(OnErrorResumeNextSubscriber, _OuterSubscriber__WEB17);
 
-      var _super106 = _createSuper(OnErrorResumeNextSubscriber);
+      var _super107 = _createSuper(OnErrorResumeNextSubscriber);
 
       function OnErrorResumeNextSubscriber(destination, nextSources) {
-        var _this162;
+        var _this243;
 
         _classCallCheck(this, OnErrorResumeNextSubscriber);
 
-        _this162 = _super106.call(this, destination);
-        _this162.destination = destination;
-        _this162.nextSources = nextSources;
-        return _this162;
+        _this243 = _super107.call(this, destination);
+        _this243.destination = destination;
+        _this243.nextSources = nextSources;
+        return _this243;
       }
 
       _createClass2(OnErrorResumeNextSubscriber, [{
@@ -97378,16 +105219,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var PairwiseSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_28) {
       _inherits(PairwiseSubscriber, _Subscriber__WEBPACK_28);
 
-      var _super107 = _createSuper(PairwiseSubscriber);
+      var _super108 = _createSuper(PairwiseSubscriber);
 
       function PairwiseSubscriber(destination) {
-        var _this163;
+        var _this244;
 
         _classCallCheck(this, PairwiseSubscriber);
 
-        _this163 = _super107.call(this, destination);
-        _this163.hasPrev = false;
-        return _this163;
+        _this244 = _super108.call(this, destination);
+        _this244.hasPrev = false;
+        return _this244;
       }
 
       _createClass2(PairwiseSubscriber, [{
@@ -97873,16 +105714,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RefCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_29) {
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_29);
 
-      var _super108 = _createSuper(RefCountSubscriber);
+      var _super109 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this164;
+        var _this245;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this164 = _super108.call(this, destination);
-        _this164.connectable = connectable;
-        return _this164;
+        _this245 = _super109.call(this, destination);
+        _this245.connectable = connectable;
+        return _this245;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -97993,17 +105834,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RepeatSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_30) {
       _inherits(RepeatSubscriber, _Subscriber__WEBPACK_30);
 
-      var _super109 = _createSuper(RepeatSubscriber);
+      var _super110 = _createSuper(RepeatSubscriber);
 
       function RepeatSubscriber(destination, count, source) {
-        var _this165;
+        var _this246;
 
         _classCallCheck(this, RepeatSubscriber);
 
-        _this165 = _super109.call(this, destination);
-        _this165.count = count;
-        _this165.source = source;
-        return _this165;
+        _this246 = _super110.call(this, destination);
+        _this246.count = count;
+        _this246.source = source;
+        return _this246;
       }
 
       _createClass2(RepeatSubscriber, [{
@@ -98095,18 +105936,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RepeatWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB18) {
       _inherits(RepeatWhenSubscriber, _OuterSubscriber__WEB18);
 
-      var _super110 = _createSuper(RepeatWhenSubscriber);
+      var _super111 = _createSuper(RepeatWhenSubscriber);
 
       function RepeatWhenSubscriber(destination, notifier, source) {
-        var _this166;
+        var _this247;
 
         _classCallCheck(this, RepeatWhenSubscriber);
 
-        _this166 = _super110.call(this, destination);
-        _this166.notifier = notifier;
-        _this166.source = source;
-        _this166.sourceIsBeingSubscribedTo = true;
-        return _this166;
+        _this247 = _super111.call(this, destination);
+        _this247.notifier = notifier;
+        _this247.source = source;
+        _this247.sourceIsBeingSubscribedTo = true;
+        return _this247;
       }
 
       _createClass2(RepeatWhenSubscriber, [{
@@ -98249,17 +106090,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RetrySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_31) {
       _inherits(RetrySubscriber, _Subscriber__WEBPACK_31);
 
-      var _super111 = _createSuper(RetrySubscriber);
+      var _super112 = _createSuper(RetrySubscriber);
 
       function RetrySubscriber(destination, count, source) {
-        var _this167;
+        var _this248;
 
         _classCallCheck(this, RetrySubscriber);
 
-        _this167 = _super111.call(this, destination);
-        _this167.count = count;
-        _this167.source = source;
-        return _this167;
+        _this248 = _super112.call(this, destination);
+        _this248.count = count;
+        _this248.source = source;
+        return _this248;
       }
 
       _createClass2(RetrySubscriber, [{
@@ -98352,17 +106193,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RetryWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB19) {
       _inherits(RetryWhenSubscriber, _OuterSubscriber__WEB19);
 
-      var _super112 = _createSuper(RetryWhenSubscriber);
+      var _super113 = _createSuper(RetryWhenSubscriber);
 
       function RetryWhenSubscriber(destination, notifier, source) {
-        var _this168;
+        var _this249;
 
         _classCallCheck(this, RetryWhenSubscriber);
 
-        _this168 = _super112.call(this, destination);
-        _this168.notifier = notifier;
-        _this168.source = source;
-        return _this168;
+        _this249 = _super113.call(this, destination);
+        _this249.notifier = notifier;
+        _this249.source = source;
+        return _this249;
       }
 
       _createClass2(RetryWhenSubscriber, [{
@@ -98496,16 +106337,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SampleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB20) {
       _inherits(SampleSubscriber, _OuterSubscriber__WEB20);
 
-      var _super113 = _createSuper(SampleSubscriber);
+      var _super114 = _createSuper(SampleSubscriber);
 
       function SampleSubscriber() {
-        var _this169;
+        var _this250;
 
         _classCallCheck(this, SampleSubscriber);
 
-        _this169 = _super113.apply(this, arguments);
-        _this169.hasValue = false;
-        return _this169;
+        _this250 = _super114.apply(this, arguments);
+        _this250.hasValue = false;
+        return _this250;
       }
 
       _createClass2(SampleSubscriber, [{
@@ -98601,24 +106442,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SampleTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_32) {
       _inherits(SampleTimeSubscriber, _Subscriber__WEBPACK_32);
 
-      var _super114 = _createSuper(SampleTimeSubscriber);
+      var _super115 = _createSuper(SampleTimeSubscriber);
 
       function SampleTimeSubscriber(destination, period, scheduler) {
-        var _this170;
+        var _this251;
 
         _classCallCheck(this, SampleTimeSubscriber);
 
-        _this170 = _super114.call(this, destination);
-        _this170.period = period;
-        _this170.scheduler = scheduler;
-        _this170.hasValue = false;
+        _this251 = _super115.call(this, destination);
+        _this251.period = period;
+        _this251.scheduler = scheduler;
+        _this251.hasValue = false;
 
-        _this170.add(scheduler.schedule(dispatchNotification, period, {
-          subscriber: _assertThisInitialized(_this170),
+        _this251.add(scheduler.schedule(dispatchNotification, period, {
+          subscriber: _assertThisInitialized(_this251),
           period: period
         }));
 
-        return _this170;
+        return _this251;
       }
 
       _createClass2(SampleTimeSubscriber, [{
@@ -98713,19 +106554,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ScanSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_33) {
       _inherits(ScanSubscriber, _Subscriber__WEBPACK_33);
 
-      var _super115 = _createSuper(ScanSubscriber);
+      var _super116 = _createSuper(ScanSubscriber);
 
       function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
-        var _this171;
+        var _this252;
 
         _classCallCheck(this, ScanSubscriber);
 
-        _this171 = _super115.call(this, destination);
-        _this171.accumulator = accumulator;
-        _this171._seed = _seed;
-        _this171.hasSeed = hasSeed;
-        _this171.index = 0;
-        return _this171;
+        _this252 = _super116.call(this, destination);
+        _this252.accumulator = accumulator;
+        _this252._seed = _seed;
+        _this252.hasSeed = hasSeed;
+        _this252.index = 0;
+        return _this252;
       }
 
       _createClass2(ScanSubscriber, [{
@@ -98836,23 +106677,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SequenceEqualSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_34) {
       _inherits(SequenceEqualSubscriber, _Subscriber__WEBPACK_34);
 
-      var _super116 = _createSuper(SequenceEqualSubscriber);
+      var _super117 = _createSuper(SequenceEqualSubscriber);
 
       function SequenceEqualSubscriber(destination, compareTo, comparator) {
-        var _this172;
+        var _this253;
 
         _classCallCheck(this, SequenceEqualSubscriber);
 
-        _this172 = _super116.call(this, destination);
-        _this172.compareTo = compareTo;
-        _this172.comparator = comparator;
-        _this172._a = [];
-        _this172._b = [];
-        _this172._oneComplete = false;
+        _this253 = _super117.call(this, destination);
+        _this253.compareTo = compareTo;
+        _this253.comparator = comparator;
+        _this253._a = [];
+        _this253._b = [];
+        _this253._oneComplete = false;
 
-        _this172.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this172))));
+        _this253.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this253))));
 
-        return _this172;
+        return _this253;
       }
 
       _createClass2(SequenceEqualSubscriber, [{
@@ -98937,16 +106778,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SequenceEqualCompareToSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_35) {
       _inherits(SequenceEqualCompareToSubscriber, _Subscriber__WEBPACK_35);
 
-      var _super117 = _createSuper(SequenceEqualCompareToSubscriber);
+      var _super118 = _createSuper(SequenceEqualCompareToSubscriber);
 
       function SequenceEqualCompareToSubscriber(destination, parent) {
-        var _this173;
+        var _this254;
 
         _classCallCheck(this, SequenceEqualCompareToSubscriber);
 
-        _this173 = _super117.call(this, destination);
-        _this173.parent = parent;
-        return _this173;
+        _this254 = _super118.call(this, destination);
+        _this254.parent = parent;
+        return _this254;
       }
 
       _createClass2(SequenceEqualCompareToSubscriber, [{
@@ -99072,13 +106913,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       };
     }
 
-    function shareReplayOperator(_ref13) {
-      var _ref13$bufferSize = _ref13.bufferSize,
-          bufferSize = _ref13$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref13$bufferSize,
-          _ref13$windowTime = _ref13.windowTime,
-          windowTime = _ref13$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref13$windowTime,
-          useRefCount = _ref13.refCount,
-          scheduler = _ref13.scheduler;
+    function shareReplayOperator(_ref20) {
+      var _ref20$bufferSize = _ref20.bufferSize,
+          bufferSize = _ref20$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref20$bufferSize,
+          _ref20$windowTime = _ref20.windowTime,
+          windowTime = _ref20$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref20$windowTime,
+          useRefCount = _ref20.refCount,
+          scheduler = _ref20.scheduler;
       var subject;
       var refCount = 0;
       var subscription;
@@ -99183,19 +107024,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SingleSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_36) {
       _inherits(SingleSubscriber, _Subscriber__WEBPACK_36);
 
-      var _super118 = _createSuper(SingleSubscriber);
+      var _super119 = _createSuper(SingleSubscriber);
 
       function SingleSubscriber(destination, predicate, source) {
-        var _this174;
+        var _this255;
 
         _classCallCheck(this, SingleSubscriber);
 
-        _this174 = _super118.call(this, destination);
-        _this174.predicate = predicate;
-        _this174.source = source;
-        _this174.seenValue = false;
-        _this174.index = 0;
-        return _this174;
+        _this255 = _super119.call(this, destination);
+        _this255.predicate = predicate;
+        _this255.source = source;
+        _this255.seenValue = false;
+        _this255.index = 0;
+        return _this255;
       }
 
       _createClass2(SingleSubscriber, [{
@@ -99303,17 +107144,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_37) {
       _inherits(SkipSubscriber, _Subscriber__WEBPACK_37);
 
-      var _super119 = _createSuper(SkipSubscriber);
+      var _super120 = _createSuper(SkipSubscriber);
 
       function SkipSubscriber(destination, total) {
-        var _this175;
+        var _this256;
 
         _classCallCheck(this, SkipSubscriber);
 
-        _this175 = _super119.call(this, destination);
-        _this175.total = total;
-        _this175.count = 0;
-        return _this175;
+        _this256 = _super120.call(this, destination);
+        _this256.total = total;
+        _this256.count = 0;
+        return _this256;
       }
 
       _createClass2(SkipSubscriber, [{
@@ -99398,18 +107239,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipLastSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_38) {
       _inherits(SkipLastSubscriber, _Subscriber__WEBPACK_38);
 
-      var _super120 = _createSuper(SkipLastSubscriber);
+      var _super121 = _createSuper(SkipLastSubscriber);
 
       function SkipLastSubscriber(destination, _skipCount) {
-        var _this176;
+        var _this257;
 
         _classCallCheck(this, SkipLastSubscriber);
 
-        _this176 = _super120.call(this, destination);
-        _this176._skipCount = _skipCount;
-        _this176._count = 0;
-        _this176._ring = new Array(_skipCount);
-        return _this176;
+        _this257 = _super121.call(this, destination);
+        _this257._skipCount = _skipCount;
+        _this257._count = 0;
+        _this257._ring = new Array(_skipCount);
+        return _this257;
       }
 
       _createClass2(SkipLastSubscriber, [{
@@ -99501,29 +107342,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipUntilSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB21) {
       _inherits(SkipUntilSubscriber, _OuterSubscriber__WEB21);
 
-      var _super121 = _createSuper(SkipUntilSubscriber);
+      var _super122 = _createSuper(SkipUntilSubscriber);
 
       function SkipUntilSubscriber(destination, notifier) {
-        var _this177;
+        var _this258;
 
         _classCallCheck(this, SkipUntilSubscriber);
 
-        _this177 = _super121.call(this, destination);
-        _this177.hasValue = false;
-        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this177), undefined, undefined);
+        _this258 = _super122.call(this, destination);
+        _this258.hasValue = false;
+        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this258), undefined, undefined);
 
-        _this177.add(innerSubscriber);
+        _this258.add(innerSubscriber);
 
-        _this177.innerSubscription = innerSubscriber;
-        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this177), notifier, undefined, undefined, innerSubscriber);
+        _this258.innerSubscription = innerSubscriber;
+        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this258), notifier, undefined, undefined, innerSubscriber);
 
         if (innerSubscription !== innerSubscriber) {
-          _this177.add(innerSubscription);
+          _this258.add(innerSubscription);
 
-          _this177.innerSubscription = innerSubscription;
+          _this258.innerSubscription = innerSubscription;
         }
 
-        return _this177;
+        return _this258;
       }
 
       _createClass2(SkipUntilSubscriber, [{
@@ -99606,18 +107447,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipWhileSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_39) {
       _inherits(SkipWhileSubscriber, _Subscriber__WEBPACK_39);
 
-      var _super122 = _createSuper(SkipWhileSubscriber);
+      var _super123 = _createSuper(SkipWhileSubscriber);
 
       function SkipWhileSubscriber(destination, predicate) {
-        var _this178;
+        var _this259;
 
         _classCallCheck(this, SkipWhileSubscriber);
 
-        _this178 = _super122.call(this, destination);
-        _this178.predicate = predicate;
-        _this178.skipping = true;
-        _this178.index = 0;
-        return _this178;
+        _this259 = _super123.call(this, destination);
+        _this259.predicate = predicate;
+        _this259.skipping = true;
+        _this259.index = 0;
+        return _this259;
       }
 
       _createClass2(SkipWhileSubscriber, [{
@@ -99888,17 +107729,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SwitchMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB22) {
       _inherits(SwitchMapSubscriber, _OuterSubscriber__WEB22);
 
-      var _super123 = _createSuper(SwitchMapSubscriber);
+      var _super124 = _createSuper(SwitchMapSubscriber);
 
       function SwitchMapSubscriber(destination, project) {
-        var _this179;
+        var _this260;
 
         _classCallCheck(this, SwitchMapSubscriber);
 
-        _this179 = _super123.call(this, destination);
-        _this179.project = project;
-        _this179.index = 0;
-        return _this179;
+        _this260 = _super124.call(this, destination);
+        _this260.project = project;
+        _this260.index = 0;
+        return _this260;
       }
 
       _createClass2(SwitchMapSubscriber, [{
@@ -100085,17 +107926,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_40) {
       _inherits(TakeSubscriber, _Subscriber__WEBPACK_40);
 
-      var _super124 = _createSuper(TakeSubscriber);
+      var _super125 = _createSuper(TakeSubscriber);
 
       function TakeSubscriber(destination, total) {
-        var _this180;
+        var _this261;
 
         _classCallCheck(this, TakeSubscriber);
 
-        _this180 = _super124.call(this, destination);
-        _this180.total = total;
-        _this180.count = 0;
-        return _this180;
+        _this261 = _super125.call(this, destination);
+        _this261.total = total;
+        _this261.count = 0;
+        return _this261;
       }
 
       _createClass2(TakeSubscriber, [{
@@ -100194,18 +108035,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeLastSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_41) {
       _inherits(TakeLastSubscriber, _Subscriber__WEBPACK_41);
 
-      var _super125 = _createSuper(TakeLastSubscriber);
+      var _super126 = _createSuper(TakeLastSubscriber);
 
       function TakeLastSubscriber(destination, total) {
-        var _this181;
+        var _this262;
 
         _classCallCheck(this, TakeLastSubscriber);
 
-        _this181 = _super125.call(this, destination);
-        _this181.total = total;
-        _this181.ring = new Array();
-        _this181.count = 0;
-        return _this181;
+        _this262 = _super126.call(this, destination);
+        _this262.total = total;
+        _this262.ring = new Array();
+        _this262.count = 0;
+        return _this262;
       }
 
       _createClass2(TakeLastSubscriber, [{
@@ -100315,16 +108156,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeUntilSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB23) {
       _inherits(TakeUntilSubscriber, _OuterSubscriber__WEB23);
 
-      var _super126 = _createSuper(TakeUntilSubscriber);
+      var _super127 = _createSuper(TakeUntilSubscriber);
 
       function TakeUntilSubscriber(destination) {
-        var _this182;
+        var _this263;
 
         _classCallCheck(this, TakeUntilSubscriber);
 
-        _this182 = _super126.call(this, destination);
-        _this182.seenValue = false;
-        return _this182;
+        _this263 = _super127.call(this, destination);
+        _this263.seenValue = false;
+        return _this263;
       }
 
       _createClass2(TakeUntilSubscriber, [{
@@ -100399,18 +108240,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeWhileSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_42) {
       _inherits(TakeWhileSubscriber, _Subscriber__WEBPACK_42);
 
-      var _super127 = _createSuper(TakeWhileSubscriber);
+      var _super128 = _createSuper(TakeWhileSubscriber);
 
       function TakeWhileSubscriber(destination, predicate, inclusive) {
-        var _this183;
+        var _this264;
 
         _classCallCheck(this, TakeWhileSubscriber);
 
-        _this183 = _super127.call(this, destination);
-        _this183.predicate = predicate;
-        _this183.inclusive = inclusive;
-        _this183.index = 0;
-        return _this183;
+        _this264 = _super128.call(this, destination);
+        _this264.predicate = predicate;
+        _this264.inclusive = inclusive;
+        _this264.index = 0;
+        return _this264;
       }
 
       _createClass2(TakeWhileSubscriber, [{
@@ -100518,31 +108359,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TapSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_43) {
       _inherits(TapSubscriber, _Subscriber__WEBPACK_43);
 
-      var _super128 = _createSuper(TapSubscriber);
+      var _super129 = _createSuper(TapSubscriber);
 
       function TapSubscriber(destination, observerOrNext, error, complete) {
-        var _this184;
+        var _this265;
 
         _classCallCheck(this, TapSubscriber);
 
-        _this184 = _super128.call(this, destination);
-        _this184._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this265 = _super129.call(this, destination);
+        _this265._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this265._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this265._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this265._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this265._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_2__["isFunction"])(observerOrNext)) {
-          _this184._context = _assertThisInitialized(_this184);
-          _this184._tapNext = observerOrNext;
+          _this265._context = _assertThisInitialized(_this265);
+          _this265._tapNext = observerOrNext;
         } else if (observerOrNext) {
-          _this184._context = observerOrNext;
-          _this184._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this184._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this184._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this265._context = observerOrNext;
+          _this265._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this265._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this265._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
         }
 
-        return _this184;
+        return _this265;
       }
 
       _createClass2(TapSubscriber, [{
@@ -100662,20 +108503,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrottleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB24) {
       _inherits(ThrottleSubscriber, _OuterSubscriber__WEB24);
 
-      var _super129 = _createSuper(ThrottleSubscriber);
+      var _super130 = _createSuper(ThrottleSubscriber);
 
       function ThrottleSubscriber(destination, durationSelector, _leading, _trailing) {
-        var _this185;
+        var _this266;
 
         _classCallCheck(this, ThrottleSubscriber);
 
-        _this185 = _super129.call(this, destination);
-        _this185.destination = destination;
-        _this185.durationSelector = durationSelector;
-        _this185._leading = _leading;
-        _this185._trailing = _trailing;
-        _this185._hasValue = false;
-        return _this185;
+        _this266 = _super130.call(this, destination);
+        _this266.destination = destination;
+        _this266.durationSelector = durationSelector;
+        _this266._leading = _leading;
+        _this266._trailing = _trailing;
+        _this266._hasValue = false;
+        return _this266;
       }
 
       _createClass2(ThrottleSubscriber, [{
@@ -100829,21 +108670,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrottleTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_44) {
       _inherits(ThrottleTimeSubscriber, _Subscriber__WEBPACK_44);
 
-      var _super130 = _createSuper(ThrottleTimeSubscriber);
+      var _super131 = _createSuper(ThrottleTimeSubscriber);
 
       function ThrottleTimeSubscriber(destination, duration, scheduler, leading, trailing) {
-        var _this186;
+        var _this267;
 
         _classCallCheck(this, ThrottleTimeSubscriber);
 
-        _this186 = _super130.call(this, destination);
-        _this186.duration = duration;
-        _this186.scheduler = scheduler;
-        _this186.leading = leading;
-        _this186.trailing = trailing;
-        _this186._hasTrailingValue = false;
-        _this186._trailingValue = null;
-        return _this186;
+        _this267 = _super131.call(this, destination);
+        _this267.duration = duration;
+        _this267.scheduler = scheduler;
+        _this267.leading = leading;
+        _this267.trailing = trailing;
+        _this267._hasTrailingValue = false;
+        _this267._trailingValue = null;
+        return _this267;
       }
 
       _createClass2(ThrottleTimeSubscriber, [{
@@ -100967,17 +108808,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrowIfEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_45) {
       _inherits(ThrowIfEmptySubscriber, _Subscriber__WEBPACK_45);
 
-      var _super131 = _createSuper(ThrowIfEmptySubscriber);
+      var _super132 = _createSuper(ThrowIfEmptySubscriber);
 
       function ThrowIfEmptySubscriber(destination, errorFactory) {
-        var _this187;
+        var _this268;
 
         _classCallCheck(this, ThrowIfEmptySubscriber);
 
-        _this187 = _super131.call(this, destination);
-        _this187.errorFactory = errorFactory;
-        _this187.hasValue = false;
-        return _this187;
+        _this268 = _super132.call(this, destination);
+        _this268.errorFactory = errorFactory;
+        _this268.hasValue = false;
+        return _this268;
       }
 
       _createClass2(ThrowIfEmptySubscriber, [{
@@ -101070,8 +108911,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var scheduler = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _scheduler_async__WEBPACK_IMPORTED_MODULE_0__["async"];
       return function (source) {
         return Object(_observable_defer__WEBPACK_IMPORTED_MODULE_2__["defer"])(function () {
-          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref14, value) {
-            var current = _ref14.current;
+          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref21, value) {
+            var current = _ref21.current;
             return {
               value: value,
               current: scheduler.now(),
@@ -101081,10 +108922,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             current: scheduler.now(),
             value: undefined,
             last: undefined
-          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref15) {
-            var current = _ref15.current,
-                last = _ref15.last,
-                value = _ref15.value;
+          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref22) {
+            var current = _ref22.current,
+                last = _ref22.last,
+                value = _ref22.value;
             return new TimeInterval(value, current - last);
           }));
         });
@@ -101231,23 +109072,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TimeoutWithSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB25) {
       _inherits(TimeoutWithSubscriber, _OuterSubscriber__WEB25);
 
-      var _super132 = _createSuper(TimeoutWithSubscriber);
+      var _super133 = _createSuper(TimeoutWithSubscriber);
 
       function TimeoutWithSubscriber(destination, absoluteTimeout, waitFor, withObservable, scheduler) {
-        var _this188;
+        var _this269;
 
         _classCallCheck(this, TimeoutWithSubscriber);
 
-        _this188 = _super132.call(this, destination);
-        _this188.absoluteTimeout = absoluteTimeout;
-        _this188.waitFor = waitFor;
-        _this188.withObservable = withObservable;
-        _this188.scheduler = scheduler;
-        _this188.action = null;
+        _this269 = _super133.call(this, destination);
+        _this269.absoluteTimeout = absoluteTimeout;
+        _this269.waitFor = waitFor;
+        _this269.withObservable = withObservable;
+        _this269.scheduler = scheduler;
+        _this269.action = null;
 
-        _this188.scheduleTimeout();
+        _this269.scheduleTimeout();
 
-        return _this188;
+        return _this269;
       }
 
       _createClass2(TimeoutWithSubscriber, [{
@@ -101465,17 +109306,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB26) {
       _inherits(WindowSubscriber, _OuterSubscriber__WEB26);
 
-      var _super133 = _createSuper(WindowSubscriber);
+      var _super134 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination) {
-        var _this189;
+        var _this270;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this189 = _super133.call(this, destination);
-        _this189.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
-        destination.next(_this189.window);
-        return _this189;
+        _this270 = _super134.call(this, destination);
+        _this270.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        destination.next(_this270.window);
+        return _this270;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -101597,21 +109438,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_46) {
       _inherits(WindowCountSubscriber, _Subscriber__WEBPACK_46);
 
-      var _super134 = _createSuper(WindowCountSubscriber);
+      var _super135 = _createSuper(WindowCountSubscriber);
 
       function WindowCountSubscriber(destination, windowSize, startWindowEvery) {
-        var _this190;
+        var _this271;
 
         _classCallCheck(this, WindowCountSubscriber);
 
-        _this190 = _super134.call(this, destination);
-        _this190.destination = destination;
-        _this190.windowSize = windowSize;
-        _this190.startWindowEvery = startWindowEvery;
-        _this190.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
-        _this190.count = 0;
-        destination.next(_this190.windows[0]);
-        return _this190;
+        _this271 = _super135.call(this, destination);
+        _this271.destination = destination;
+        _this271.windowSize = windowSize;
+        _this271.startWindowEvery = startWindowEvery;
+        _this271.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
+        _this271.count = 0;
+        destination.next(_this271.windows[0]);
+        return _this271;
       }
 
       _createClass2(WindowCountSubscriber, [{
@@ -101780,16 +109621,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CountedSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP5) {
       _inherits(CountedSubject, _Subject__WEBPACK_IMP5);
 
-      var _super135 = _createSuper(CountedSubject);
+      var _super136 = _createSuper(CountedSubject);
 
       function CountedSubject() {
-        var _this191;
+        var _this272;
 
         _classCallCheck(this, CountedSubject);
 
-        _this191 = _super135.apply(this, arguments);
-        _this191._numberOfNextedValues = 0;
-        return _this191;
+        _this272 = _super136.apply(this, arguments);
+        _this272._numberOfNextedValues = 0;
+        return _this272;
       }
 
       _createClass2(CountedSubject, [{
@@ -101812,50 +109653,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_47) {
       _inherits(WindowTimeSubscriber, _Subscriber__WEBPACK_47);
 
-      var _super136 = _createSuper(WindowTimeSubscriber);
+      var _super137 = _createSuper(WindowTimeSubscriber);
 
       function WindowTimeSubscriber(destination, windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        var _this192;
+        var _this273;
 
         _classCallCheck(this, WindowTimeSubscriber);
 
-        _this192 = _super136.call(this, destination);
-        _this192.destination = destination;
-        _this192.windowTimeSpan = windowTimeSpan;
-        _this192.windowCreationInterval = windowCreationInterval;
-        _this192.maxWindowSize = maxWindowSize;
-        _this192.scheduler = scheduler;
-        _this192.windows = [];
+        _this273 = _super137.call(this, destination);
+        _this273.destination = destination;
+        _this273.windowTimeSpan = windowTimeSpan;
+        _this273.windowCreationInterval = windowCreationInterval;
+        _this273.maxWindowSize = maxWindowSize;
+        _this273.scheduler = scheduler;
+        _this273.windows = [];
 
-        var window = _this192.openWindow();
+        var window = _this273.openWindow();
 
         if (windowCreationInterval !== null && windowCreationInterval >= 0) {
           var closeState = {
-            subscriber: _assertThisInitialized(_this192),
+            subscriber: _assertThisInitialized(_this273),
             window: window,
             context: null
           };
           var creationState = {
             windowTimeSpan: windowTimeSpan,
             windowCreationInterval: windowCreationInterval,
-            subscriber: _assertThisInitialized(_this192),
+            subscriber: _assertThisInitialized(_this273),
             scheduler: scheduler
           };
 
-          _this192.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
+          _this273.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
 
-          _this192.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
+          _this273.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
         } else {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this192),
+            subscriber: _assertThisInitialized(_this273),
             window: window,
             windowTimeSpan: windowTimeSpan
           };
 
-          _this192.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
+          _this273.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
         }
 
-        return _this192;
+        return _this273;
       }
 
       _createClass2(WindowTimeSubscriber, [{
@@ -102044,21 +109885,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowToggleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB27) {
       _inherits(WindowToggleSubscriber, _OuterSubscriber__WEB27);
 
-      var _super137 = _createSuper(WindowToggleSubscriber);
+      var _super138 = _createSuper(WindowToggleSubscriber);
 
       function WindowToggleSubscriber(destination, openings, closingSelector) {
-        var _this193;
+        var _this274;
 
         _classCallCheck(this, WindowToggleSubscriber);
 
-        _this193 = _super137.call(this, destination);
-        _this193.openings = openings;
-        _this193.closingSelector = closingSelector;
-        _this193.contexts = [];
+        _this274 = _super138.call(this, destination);
+        _this274.openings = openings;
+        _this274.closingSelector = closingSelector;
+        _this274.contexts = [];
 
-        _this193.add(_this193.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this193), openings, openings));
+        _this274.add(_this274.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this274), openings, openings));
 
-        return _this193;
+        return _this274;
       }
 
       _createClass2(WindowToggleSubscriber, [{
@@ -102264,20 +110105,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB28) {
       _inherits(WindowSubscriber, _OuterSubscriber__WEB28);
 
-      var _super138 = _createSuper(WindowSubscriber);
+      var _super139 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination, closingSelector) {
-        var _this194;
+        var _this275;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this194 = _super138.call(this, destination);
-        _this194.destination = destination;
-        _this194.closingSelector = closingSelector;
+        _this275 = _super139.call(this, destination);
+        _this275.destination = destination;
+        _this275.closingSelector = closingSelector;
 
-        _this194.openWindow();
+        _this275.openWindow();
 
-        return _this194;
+        return _this275;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -102431,31 +110272,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WithLatestFromSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB29) {
       _inherits(WithLatestFromSubscriber, _OuterSubscriber__WEB29);
 
-      var _super139 = _createSuper(WithLatestFromSubscriber);
+      var _super140 = _createSuper(WithLatestFromSubscriber);
 
       function WithLatestFromSubscriber(destination, observables, project) {
-        var _this195;
+        var _this276;
 
         _classCallCheck(this, WithLatestFromSubscriber);
 
-        _this195 = _super139.call(this, destination);
-        _this195.observables = observables;
-        _this195.project = project;
-        _this195.toRespond = [];
+        _this276 = _super140.call(this, destination);
+        _this276.observables = observables;
+        _this276.project = project;
+        _this276.toRespond = [];
         var len = observables.length;
-        _this195.values = new Array(len);
+        _this276.values = new Array(len);
 
         for (var i = 0; i < len; i++) {
-          _this195.toRespond.push(i);
+          _this276.toRespond.push(i);
         }
 
         for (var _i22 = 0; _i22 < len; _i22++) {
           var observable = observables[_i22];
 
-          _this195.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this195), observable, observable, _i22));
+          _this276.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this276), observable, observable, _i22));
         }
 
-        return _this195;
+        return _this276;
       }
 
       _createClass2(WithLatestFromSubscriber, [{
@@ -102973,12 +110814,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Action = /*#__PURE__*/function (_Subscription__WEBPAC4) {
       _inherits(Action, _Subscription__WEBPAC4);
 
-      var _super140 = _createSuper(Action);
+      var _super141 = _createSuper(Action);
 
       function Action(scheduler, work) {
         _classCallCheck(this, Action);
 
-        return _super140.call(this);
+        return _super141.call(this);
       }
 
       _createClass2(Action, [{
@@ -103025,17 +110866,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnimationFrameAction = /*#__PURE__*/function (_AsyncAction__WEBPACK) {
       _inherits(AnimationFrameAction, _AsyncAction__WEBPACK);
 
-      var _super141 = _createSuper(AnimationFrameAction);
+      var _super142 = _createSuper(AnimationFrameAction);
 
       function AnimationFrameAction(scheduler, work) {
-        var _this196;
+        var _this277;
 
         _classCallCheck(this, AnimationFrameAction);
 
-        _this196 = _super141.call(this, scheduler, work);
-        _this196.scheduler = scheduler;
-        _this196.work = work;
-        return _this196;
+        _this277 = _super142.call(this, scheduler, work);
+        _this277.scheduler = scheduler;
+        _this277.work = work;
+        return _this277;
       }
 
       _createClass2(AnimationFrameAction, [{
@@ -103106,12 +110947,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnimationFrameScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP) {
       _inherits(AnimationFrameScheduler, _AsyncScheduler__WEBP);
 
-      var _super142 = _createSuper(AnimationFrameScheduler);
+      var _super143 = _createSuper(AnimationFrameScheduler);
 
       function AnimationFrameScheduler() {
         _classCallCheck(this, AnimationFrameScheduler);
 
-        return _super142.apply(this, arguments);
+        return _super143.apply(this, arguments);
       }
 
       _createClass2(AnimationFrameScheduler, [{
@@ -103185,17 +111026,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsapAction = /*#__PURE__*/function (_AsyncAction__WEBPACK2) {
       _inherits(AsapAction, _AsyncAction__WEBPACK2);
 
-      var _super143 = _createSuper(AsapAction);
+      var _super144 = _createSuper(AsapAction);
 
       function AsapAction(scheduler, work) {
-        var _this197;
+        var _this278;
 
         _classCallCheck(this, AsapAction);
 
-        _this197 = _super143.call(this, scheduler, work);
-        _this197.scheduler = scheduler;
-        _this197.work = work;
-        return _this197;
+        _this278 = _super144.call(this, scheduler, work);
+        _this278.scheduler = scheduler;
+        _this278.work = work;
+        return _this278;
       }
 
       _createClass2(AsapAction, [{
@@ -103265,12 +111106,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsapScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP2) {
       _inherits(AsapScheduler, _AsyncScheduler__WEBP2);
 
-      var _super144 = _createSuper(AsapScheduler);
+      var _super145 = _createSuper(AsapScheduler);
 
       function AsapScheduler() {
         _classCallCheck(this, AsapScheduler);
 
-        return _super144.apply(this, arguments);
+        return _super145.apply(this, arguments);
       }
 
       _createClass2(AsapScheduler, [{
@@ -103338,18 +111179,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncAction = /*#__PURE__*/function (_Action__WEBPACK_IMPO) {
       _inherits(AsyncAction, _Action__WEBPACK_IMPO);
 
-      var _super145 = _createSuper(AsyncAction);
+      var _super146 = _createSuper(AsyncAction);
 
       function AsyncAction(scheduler, work) {
-        var _this198;
+        var _this279;
 
         _classCallCheck(this, AsyncAction);
 
-        _this198 = _super145.call(this, scheduler, work);
-        _this198.scheduler = scheduler;
-        _this198.work = work;
-        _this198.pending = false;
-        return _this198;
+        _this279 = _super146.call(this, scheduler, work);
+        _this279.scheduler = scheduler;
+        _this279.work = work;
+        _this279.pending = false;
+        return _this279;
       }
 
       _createClass2(AsyncAction, [{
@@ -103487,26 +111328,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncScheduler = /*#__PURE__*/function (_Scheduler__WEBPACK_I) {
       _inherits(AsyncScheduler, _Scheduler__WEBPACK_I);
 
-      var _super146 = _createSuper(AsyncScheduler);
+      var _super147 = _createSuper(AsyncScheduler);
 
       function AsyncScheduler(SchedulerAction) {
-        var _this199;
+        var _this280;
 
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Scheduler__WEBPACK_IMPORTED_MODULE_0__["Scheduler"].now;
 
         _classCallCheck(this, AsyncScheduler);
 
-        _this199 = _super146.call(this, SchedulerAction, function () {
-          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this199)) {
+        _this280 = _super147.call(this, SchedulerAction, function () {
+          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this280)) {
             return AsyncScheduler.delegate.now();
           } else {
             return now();
           }
         });
-        _this199.actions = [];
-        _this199.active = false;
-        _this199.scheduled = undefined;
-        return _this199;
+        _this280.actions = [];
+        _this280.active = false;
+        _this280.scheduled = undefined;
+        return _this280;
       }
 
       _createClass2(AsyncScheduler, [{
@@ -103588,17 +111429,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var QueueAction = /*#__PURE__*/function (_AsyncAction__WEBPACK3) {
       _inherits(QueueAction, _AsyncAction__WEBPACK3);
 
-      var _super147 = _createSuper(QueueAction);
+      var _super148 = _createSuper(QueueAction);
 
       function QueueAction(scheduler, work) {
-        var _this200;
+        var _this281;
 
         _classCallCheck(this, QueueAction);
 
-        _this200 = _super147.call(this, scheduler, work);
-        _this200.scheduler = scheduler;
-        _this200.work = work;
-        return _this200;
+        _this281 = _super148.call(this, scheduler, work);
+        _this281.scheduler = scheduler;
+        _this281.work = work;
+        return _this281;
       }
 
       _createClass2(QueueAction, [{
@@ -103669,12 +111510,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var QueueScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP3) {
       _inherits(QueueScheduler, _AsyncScheduler__WEBP3);
 
-      var _super148 = _createSuper(QueueScheduler);
+      var _super149 = _createSuper(QueueScheduler);
 
       function QueueScheduler() {
         _classCallCheck(this, QueueScheduler);
 
-        return _super148.apply(this, arguments);
+        return _super149.apply(this, arguments);
       }
 
       return QueueScheduler;
@@ -103725,23 +111566,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VirtualTimeScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP4) {
       _inherits(VirtualTimeScheduler, _AsyncScheduler__WEBP4);
 
-      var _super149 = _createSuper(VirtualTimeScheduler);
+      var _super150 = _createSuper(VirtualTimeScheduler);
 
       function VirtualTimeScheduler() {
-        var _this201;
+        var _this282;
 
         var SchedulerAction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : VirtualAction;
         var maxFrames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, VirtualTimeScheduler);
 
-        _this201 = _super149.call(this, SchedulerAction, function () {
-          return _this201.frame;
+        _this282 = _super150.call(this, SchedulerAction, function () {
+          return _this282.frame;
         });
-        _this201.maxFrames = maxFrames;
-        _this201.frame = 0;
-        _this201.index = -1;
-        return _this201;
+        _this282.maxFrames = maxFrames;
+        _this282.frame = 0;
+        _this282.index = -1;
+        return _this282;
       }
 
       _createClass2(VirtualTimeScheduler, [{
@@ -103778,22 +111619,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VirtualAction = /*#__PURE__*/function (_AsyncAction__WEBPACK4) {
       _inherits(VirtualAction, _AsyncAction__WEBPACK4);
 
-      var _super150 = _createSuper(VirtualAction);
+      var _super151 = _createSuper(VirtualAction);
 
       function VirtualAction(scheduler, work) {
-        var _this202;
+        var _this283;
 
         var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : scheduler.index += 1;
 
         _classCallCheck(this, VirtualAction);
 
-        _this202 = _super150.call(this, scheduler, work);
-        _this202.scheduler = scheduler;
-        _this202.work = work;
-        _this202.index = index;
-        _this202.active = true;
-        _this202.index = scheduler.index = index;
-        return _this202;
+        _this283 = _super151.call(this, scheduler, work);
+        _this283.scheduler = scheduler;
+        _this283.work = work;
+        _this283.index = index;
+        _this283.active = true;
+        _this283.index = scheduler.index = index;
+        return _this283;
       }
 
       _createClass2(VirtualAction, [{
@@ -106577,6 +114418,610 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return _internal_operators_zipAll__WEBPACK_IMPORTED_MODULE_102__["zipAll"];
     }); //# sourceMappingURL=index.js.map
 
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/tslib/tslib.es6.js":
+  /*!*****************************************!*\
+    !*** ./node_modules/tslib/tslib.es6.js ***!
+    \*****************************************/
+
+  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+
+  /***/
+  function node_modulesTslibTslibEs6Js(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__extends", function () {
+      return __extends;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__assign", function () {
+      return _assign;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__rest", function () {
+      return __rest;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__decorate", function () {
+      return __decorate;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__param", function () {
+      return __param;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__metadata", function () {
+      return __metadata;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__awaiter", function () {
+      return __awaiter;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__generator", function () {
+      return __generator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__createBinding", function () {
+      return __createBinding;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__exportStar", function () {
+      return __exportStar;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__values", function () {
+      return __values;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__read", function () {
+      return __read;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__spread", function () {
+      return __spread;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__spreadArrays", function () {
+      return __spreadArrays;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__await", function () {
+      return __await;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function () {
+      return __asyncGenerator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function () {
+      return __asyncDelegator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__asyncValues", function () {
+      return __asyncValues;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function () {
+      return __makeTemplateObject;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__importStar", function () {
+      return __importStar;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__importDefault", function () {
+      return __importDefault;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function () {
+      return __classPrivateFieldGet;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function () {
+      return __classPrivateFieldSet;
+    });
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+    
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+    
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+
+    /* global Reflect, Promise */
+
+
+    var _extendStatics = function extendStatics(d, b) {
+      _extendStatics = Object.setPrototypeOf || {
+        __proto__: []
+      } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+      } || function (d, b) {
+        for (var p in b) {
+          if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+      };
+
+      return _extendStatics(d, b);
+    };
+
+    function __extends(d, b) {
+      _extendStatics(d, b);
+
+      function __() {
+        this.constructor = d;
+      }
+
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    }
+
+    var _assign = function __assign() {
+      _assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+          s = arguments[i];
+
+          for (var p in s) {
+            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+          }
+        }
+
+        return t;
+      };
+
+      return _assign.apply(this, arguments);
+    };
+
+    function __rest(s, e) {
+      var t = {};
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+      }
+
+      if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+        if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+      }
+      return t;
+    }
+
+    function __decorate(decorators, target, key, desc) {
+      var c = arguments.length,
+          r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+          d;
+      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    }
+
+    function __param(paramIndex, decorator) {
+      return function (target, key) {
+        decorator(target, key, paramIndex);
+      };
+    }
+
+    function __metadata(metadataKey, metadataValue) {
+      if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+    }
+
+    function __awaiter(thisArg, _arguments, P, generator) {
+      function adopt(value) {
+        return value instanceof P ? value : new P(function (resolve) {
+          resolve(value);
+        });
+      }
+
+      return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) {
+          try {
+            step(generator.next(value));
+          } catch (e) {
+            reject(e);
+          }
+        }
+
+        function rejected(value) {
+          try {
+            step(generator["throw"](value));
+          } catch (e) {
+            reject(e);
+          }
+        }
+
+        function step(result) {
+          result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+      });
+    }
+
+    function __generator(thisArg, body) {
+      var _ = {
+        label: 0,
+        sent: function sent() {
+          if (t[0] & 1) throw t[1];
+          return t[1];
+        },
+        trys: [],
+        ops: []
+      },
+          f,
+          y,
+          t,
+          g;
+      return g = {
+        next: verb(0),
+        "throw": verb(1),
+        "return": verb(2)
+      }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+        return this;
+      }), g;
+
+      function verb(n) {
+        return function (v) {
+          return step([n, v]);
+        };
+      }
+
+      function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+
+        while (_) {
+          try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+
+            switch (op[0]) {
+              case 0:
+              case 1:
+                t = op;
+                break;
+
+              case 4:
+                _.label++;
+                return {
+                  value: op[1],
+                  done: false
+                };
+
+              case 5:
+                _.label++;
+                y = op[1];
+                op = [0];
+                continue;
+
+              case 7:
+                op = _.ops.pop();
+
+                _.trys.pop();
+
+                continue;
+
+              default:
+                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                  _ = 0;
+                  continue;
+                }
+
+                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                  _.label = op[1];
+                  break;
+                }
+
+                if (op[0] === 6 && _.label < t[1]) {
+                  _.label = t[1];
+                  t = op;
+                  break;
+                }
+
+                if (t && _.label < t[2]) {
+                  _.label = t[2];
+
+                  _.ops.push(op);
+
+                  break;
+                }
+
+                if (t[2]) _.ops.pop();
+
+                _.trys.pop();
+
+                continue;
+            }
+
+            op = body.call(thisArg, _);
+          } catch (e) {
+            op = [6, e];
+            y = 0;
+          } finally {
+            f = t = 0;
+          }
+        }
+
+        if (op[0] & 5) throw op[1];
+        return {
+          value: op[0] ? op[1] : void 0,
+          done: true
+        };
+      }
+    }
+
+    function __createBinding(o, m, k, k2) {
+      if (k2 === undefined) k2 = k;
+      o[k2] = m[k];
+    }
+
+    function __exportStar(m, exports) {
+      for (var p in m) {
+        if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+      }
+    }
+
+    function __values(o) {
+      var s = typeof Symbol === "function" && Symbol.iterator,
+          m = s && o[s],
+          i = 0;
+      if (m) return m.call(o);
+      if (o && typeof o.length === "number") return {
+        next: function next() {
+          if (o && i >= o.length) o = void 0;
+          return {
+            value: o && o[i++],
+            done: !o
+          };
+        }
+      };
+      throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    }
+
+    function __read(o, n) {
+      var m = typeof Symbol === "function" && o[Symbol.iterator];
+      if (!m) return o;
+      var i = m.call(o),
+          r,
+          ar = [],
+          e;
+
+      try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
+          ar.push(r.value);
+        }
+      } catch (error) {
+        e = {
+          error: error
+        };
+      } finally {
+        try {
+          if (r && !r.done && (m = i["return"])) m.call(i);
+        } finally {
+          if (e) throw e.error;
+        }
+      }
+
+      return ar;
+    }
+
+    function __spread() {
+      for (var ar = [], i = 0; i < arguments.length; i++) {
+        ar = ar.concat(__read(arguments[i]));
+      }
+
+      return ar;
+    }
+
+    function __spreadArrays() {
+      for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
+        s += arguments[i].length;
+      }
+
+      for (var r = Array(s), k = 0, i = 0; i < il; i++) {
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
+          r[k] = a[j];
+        }
+      }
+
+      return r;
+    }
+
+    ;
+
+    function __await(v) {
+      return this instanceof __await ? (this.v = v, this) : new __await(v);
+    }
+
+    function __asyncGenerator(thisArg, _arguments, generator) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var g = generator.apply(thisArg, _arguments || []),
+          i,
+          q = [];
+      return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+        return this;
+      }, i;
+
+      function verb(n) {
+        if (g[n]) i[n] = function (v) {
+          return new Promise(function (a, b) {
+            q.push([n, v, a, b]) > 1 || resume(n, v);
+          });
+        };
+      }
+
+      function resume(n, v) {
+        try {
+          step(g[n](v));
+        } catch (e) {
+          settle(q[0][3], e);
+        }
+      }
+
+      function step(r) {
+        r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+      }
+
+      function fulfill(value) {
+        resume("next", value);
+      }
+
+      function reject(value) {
+        resume("throw", value);
+      }
+
+      function settle(f, v) {
+        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+      }
+    }
+
+    function __asyncDelegator(o) {
+      var i, p;
+      return i = {}, verb("next"), verb("throw", function (e) {
+        throw e;
+      }), verb("return"), i[Symbol.iterator] = function () {
+        return this;
+      }, i;
+
+      function verb(n, f) {
+        i[n] = o[n] ? function (v) {
+          return (p = !p) ? {
+            value: __await(o[n](v)),
+            done: n === "return"
+          } : f ? f(v) : v;
+        } : f;
+      }
+    }
+
+    function __asyncValues(o) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var m = o[Symbol.asyncIterator],
+          i;
+      return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+        return this;
+      }, i);
+
+      function verb(n) {
+        i[n] = o[n] && function (v) {
+          return new Promise(function (resolve, reject) {
+            v = o[n](v), settle(resolve, reject, v.done, v.value);
+          });
+        };
+      }
+
+      function settle(resolve, reject, d, v) {
+        Promise.resolve(v).then(function (v) {
+          resolve({
+            value: v,
+            done: d
+          });
+        }, reject);
+      }
+    }
+
+    function __makeTemplateObject(cooked, raw) {
+      if (Object.defineProperty) {
+        Object.defineProperty(cooked, "raw", {
+          value: raw
+        });
+      } else {
+        cooked.raw = raw;
+      }
+
+      return cooked;
+    }
+
+    ;
+
+    function __importStar(mod) {
+      if (mod && mod.__esModule) return mod;
+      var result = {};
+      if (mod != null) for (var k in mod) {
+        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+      }
+      result["default"] = mod;
+      return result;
+    }
+
+    function __importDefault(mod) {
+      return mod && mod.__esModule ? mod : {
+        "default": mod
+      };
+    }
+
+    function __classPrivateFieldGet(receiver, privateMap) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+      }
+
+      return privateMap.get(receiver);
+    }
+
+    function __classPrivateFieldSet(receiver, privateMap, value) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+      }
+
+      privateMap.set(receiver, value);
+      return value;
+    }
     /***/
 
   }

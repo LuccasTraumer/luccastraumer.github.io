@@ -51,6 +51,12 @@
 
 .contacting .maps {
     width: 50%;
+    opacity: 70%;
+}
+
+.contacting .maps:hover {
+    width: 50%;
+    opacity: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -58,13 +64,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    .contacting .input {
-        width: 50%;
+        width: 100%;
     }
 
-    .contacting .maps {
-        width: 50%;
+    .contacting .input,.contacting .maps  {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .container-fluid {
+        width: 150vw;
     }
 }

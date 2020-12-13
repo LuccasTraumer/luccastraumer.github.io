@@ -24,6 +24,7 @@ import { InputDataComponent } from './components/contact/input-data/input-data.c
 import { MapsComponent } from './components/contact/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
 import { SocialMediasIconsComponent } from './components/social-medias-icons/social-medias-icons.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -49,7 +50,8 @@ import { SocialMediasIconsComponent } from './components/social-medias-icons/soc
     BuildingComponent,
     InputDataComponent,
     MapsComponent,
-    SocialMediasIconsComponent
+    SocialMediasIconsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

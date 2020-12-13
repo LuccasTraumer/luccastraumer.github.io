@@ -1583,6 +1583,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(FooterComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "getYear",
+        value: function getYear() {
+          return new Date().getFullYear();
+        }
       }]);
 
       return FooterComponent;
@@ -1596,7 +1601,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: FooterComponent,
       selectors: [["app-footer"]],
       decls: 11,
-      vars: 0,
+      vars: 1,
       consts: [[1, "container-fluid"], [1, "btn-page-up"], ["hidden", ""], [1, "w3-animate-top"], [1, "text"], [1, "letter-spacing0-5", "w3-animate-bottom"], [1, "font-green"]],
       template: function FooterComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -1618,7 +1623,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "label", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " \xA9 Copyright 2020 ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "span", 6);
 
@@ -1633,6 +1638,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" \xA9 Copyright ", ctx.getYear(), " ");
         }
       },
       directives: [_social_medias_icons_social_medias_icons_component__WEBPACK_IMPORTED_MODULE_1__["SocialMediasIconsComponent"]],

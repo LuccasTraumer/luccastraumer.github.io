@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
   selector: 'app-not-found',
@@ -10,6 +11,10 @@ export class NotFoundComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  imgNotFound() {
+    return Constantes.iconNotFoundPage;
   }
 
 }

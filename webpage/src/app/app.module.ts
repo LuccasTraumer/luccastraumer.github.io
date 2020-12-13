@@ -26,8 +26,6 @@ import { AgmCoreModule } from '@agm/core';
 import { SocialMediasIconsComponent } from './components/social-medias-icons/social-medias-icons.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +56,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9pWS6ELL5zjNttJjuG2779wyZzcAPzMM'
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -21,7 +21,7 @@
     "@angular/forms": "~9.1.9",
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
-    "@angular/router": "~9.1.9",
+    "@angular/router": "^9.1.12",
     "@types/google-maps": "^3.2.2",
     "bootstrap": "^4.5.3",
     "gh-pages": "^3.1.0",

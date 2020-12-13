@@ -22,6 +22,7 @@ export class Constantes {
     public static readonly iconInfo = environment.iconInfo;
     public static readonly iconPortfolio = environment.iconPortfolio;
     public static readonly iconContact = environment.iconContact;
+    public static readonly iconNotFoundPage = environment.iconPageNotFound;
 
     public static readonly linkRepRemadeWebSites = environment.linkRepRemadeRandomsWebSites;
     public static readonly linkRepAirCnC = environment.linkRepAirCnc;

@@ -5,6 +5,11 @@
     height: 100%;
 }
 
-.icons app-social-medias-icons {
-    padding-bottom: 0%;
+.container app-social-medias-icons {
+    padding-top: 2%;
+    width: 20rem;
+}
+
+.container .text {
+    padding-top: 1%;
 }

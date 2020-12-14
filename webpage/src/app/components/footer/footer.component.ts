@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
+  }
+
+  onClickScroll(elementId: string) {
+    console.log(this.viewportScroller.scrollToAnchor(elementId))
+
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
   getYear() {
     return new Date().getFullYear();
   }
-
 }

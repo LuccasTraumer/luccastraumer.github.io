@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     padding: 0%;
@@ -17,8 +18,21 @@
     padding-top: 1%;
 }
 
+.btn-page-up {
+    border-radius: 50%;
+    height: 3rem;
+    justify-content: center;
+}
+
+.btn-page-up a {
+    padding-top: 25%;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
 @media only screen and (max-width: 425px) {
     .container-fluid {
-        width: 150%;
+        padding-left: 45%;
     }
 }

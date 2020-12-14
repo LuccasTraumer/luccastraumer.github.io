@@ -8,7 +8,6 @@ const routes: Routes = [
   { 
     path: 'home',
     component: ApresentacaoComponent,
-    pathMatch: 'full' 
   },
   { 
     path: '',

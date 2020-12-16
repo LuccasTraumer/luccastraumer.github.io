@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaticHeaderComponent implements OnInit {
 
+  public isCollapsed = true;
+  
   constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {

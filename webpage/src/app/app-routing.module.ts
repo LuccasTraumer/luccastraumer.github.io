@@ -14,9 +14,13 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full' 
   },
-  { 
+/*  { 
     path: '**',
     component: NotFoundComponent,
+  },*/
+  {
+    path: 'navbarNavAltMarkup',
+    redirectTo: 'home'
   },
 ];
 

@@ -13,6 +13,12 @@
     justify-content: center;
 }
 
+.insp a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
 
 
 

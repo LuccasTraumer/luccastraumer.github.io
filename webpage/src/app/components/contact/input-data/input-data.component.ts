@@ -12,4 +12,8 @@ export class InputDataComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  alertUser() {
+    alert('This form is not working for now. ')
+  }
+
 }

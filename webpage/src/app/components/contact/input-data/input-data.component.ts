@@ -13,7 +13,7 @@ export class InputDataComponent implements OnInit {
   }
 
   alertUser() {
-    alert('This form is not working for now. ')
+    alert('This form is not working for now. My email: lucassj.dev@gmail.com')
   }
 
 }

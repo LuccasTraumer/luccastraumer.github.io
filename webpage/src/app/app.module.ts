@@ -6,9 +6,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { ApresentacaoComponent } from './components/apresentacao/apresentacao.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { BuildingComponent } from './components/building/building.component';
-import { SocialMediasIconsComponent } from './components/social-medias-icons/social-medias-icons.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderModule } from './header/header.module';
 import { ProfileModule } from './profile/profile.module';
@@ -16,14 +14,13 @@ import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { ContactModule } from './contact/contact.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ApresentacaoComponent,
-    FooterComponent,
     BuildingComponent,
-    SocialMediasIconsComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -36,6 +33,7 @@ import { ContactModule } from './contact/contact.module';
     ResumeModule,
     PortfolioModule,
     ContactModule,
+    FooterModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9pWS6ELL5zjNttJjuG2779wyZzcAPzMM'
     }),

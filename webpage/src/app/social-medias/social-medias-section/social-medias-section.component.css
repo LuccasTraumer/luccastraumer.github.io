@@ -1,0 +1,17 @@
+section {
+  display: flex;
+}
+
+section a {
+  margin: 0;
+  padding-right: 0%;
+}
+
+section img {
+  width: 60%;
+}
+
+section img:hover {
+  background-color: #1CB698;
+  border-radius: 50%;
+}

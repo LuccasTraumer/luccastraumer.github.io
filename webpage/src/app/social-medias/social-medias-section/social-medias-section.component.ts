@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
-  selector: 'app-social-medias-icons',
-  templateUrl: './social-medias-icons.component.html',
-  styleUrls: ['./social-medias-icons.component.css']
+  selector: 'social-medias-section',
+  templateUrl: './social-medias-section.component.html',
+  styleUrls: ['./social-medias-section.component.css']
 })
-export class SocialMediasIconsComponent implements OnInit {
+export class SocialMediasSectionComponent implements OnInit {
 
   constructor() { }
 
@@ -52,5 +52,4 @@ export class SocialMediasIconsComponent implements OnInit {
   linkGithub() {
     return Constantes.linkGithub;
   }
-
 }

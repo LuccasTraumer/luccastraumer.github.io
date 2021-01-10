@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
-  selector: 'app-not-found',
-  templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css']
+  selector: 'app-not-found-page',
+  templateUrl: './not-found-page.component.html',
+  styleUrls: ['./not-found-page.component.css']
 })
-export class NotFoundComponent implements OnInit {
+export class NotFoundPageComponent implements OnInit {
 
   constructor() { }
 

@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ApresentacaoComponent } from './components/apresentacao/apresentacao.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NotFoundPageComponent } from './not-found/not-found-page/not-found-page.component';
+import { ShowComponent } from './view-page/show/show.component';
 
 
 const routes: Routes = [
-  { 
+  {
     path: 'home',
-    component: ApresentacaoComponent,
+    component: ShowComponent,
   },
-  { 
+  {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full' 
+    pathMatch: 'full'
   },
-/*  { 
+  {
     path: '**',
-    component: NotFoundComponent,
-  },*/
+    component: NotFoundPageComponent,
+  },
   {
     path: 'navbarNavAltMarkup',
     redirectTo: 'home'

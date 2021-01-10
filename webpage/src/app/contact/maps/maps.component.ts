@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-maps',
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MapsComponent implements OnInit {
 
   title = 'AGM Project';
+  @Input()
   latitude = -22.8925058;
+  @Input()
   longitude = -47.0281151;
 
   constructor() { }
@@ -16,10 +18,8 @@ export class MapsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   onChoseLocation(event) {
     this.latitude = event.coords.lat;
     this.longitude = event.coords.lng;
-
   }
 }

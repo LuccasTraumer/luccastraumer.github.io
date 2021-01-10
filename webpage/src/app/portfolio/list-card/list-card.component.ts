@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Constantes } from './../../../../Utils/Constantes';
+import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
-  selector: 'app-list-card',
+  selector: 'list-card',
   templateUrl: './list-card.component.html',
   styleUrls: ['./list-card.component.css']
 })
@@ -32,4 +32,5 @@ export class ListCardComponent implements OnInit {
   getLinkMaiaraMartins() {
     return Constantes.linkRepMaiaraMartins;
   }
+
 }

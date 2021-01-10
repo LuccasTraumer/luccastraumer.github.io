@@ -1,39 +1,30 @@
 import { NgModule } from '@angular/core';
-import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { ApresentacaoComponent } from './components/apresentacao/apresentacao.component';
-import { PortifolioComponent } from './components/portifolio/portifolio.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ListCardComponent } from './components/portifolio/list-card/list-card.component';
 import { BuildingComponent } from './components/building/building.component';
-import { InputDataComponent } from './components/contact/input-data/input-data.component';
-import { MapsComponent } from './components/contact/maps/maps.component';
 import { SocialMediasIconsComponent } from './components/social-medias-icons/social-medias-icons.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderModule } from './header/header.module';
 import { ProfileModule } from './profile/profile.module';
 import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
+import { PortfolioModule } from './portfolio/portfolio.module';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     ApresentacaoComponent,
-    PortifolioComponent,
-    ContactComponent,
     FooterComponent,
-    ListCardComponent,
     BuildingComponent,
-    InputDataComponent,
-    MapsComponent,
     SocialMediasIconsComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +34,8 @@ import { ResumeModule } from './resume/resume.module';
     ProfileModule,
     AboutModule,
     ResumeModule,
+    PortfolioModule,
+    ContactModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9pWS6ELL5zjNttJjuG2779wyZzcAPzMM'
     }),

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-personal-data-list',
+  selector: 'personal-data-list',
   templateUrl: './personal-data-list.component.html',
   styleUrls: ['./personal-data-list.component.css']
 })

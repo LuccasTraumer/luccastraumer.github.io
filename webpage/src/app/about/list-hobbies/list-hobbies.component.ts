@@ -1,8 +1,7 @@
-import { Constantes } from './../../../../Utils/Constantes';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-list-hobbies',
+  selector: 'list-hobbies',
   templateUrl: './list-hobbies.component.html',
   styleUrls: ['./list-hobbies.component.css']
 })

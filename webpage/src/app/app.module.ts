@@ -26,6 +26,8 @@ import { MapsComponent } from './components/contact/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
 import { SocialMediasIconsComponent } from './components/social-medias-icons/social-medias-icons.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeaderModule } from './header/header.module';
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HeaderModule,
+    ProfileModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9pWS6ELL5zjNttJjuG2779wyZzcAPzMM'
     }),

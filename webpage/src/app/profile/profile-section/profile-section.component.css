@@ -1,0 +1,60 @@
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container-fluid img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  opacity: 10%;
+  width: 100%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+}
+
+.content .image {
+  position: absolute;
+  z-index: 1;
+  padding-top: 2%;
+}
+
+.content .container-card  {
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  padding-top: 30%;
+}
+
+@media only screen and (max-width: 425px) {
+  .container-fluid img {
+      width: 150%;
+  }
+
+  .container-fluid app-apresentacao-image-data {
+      margin-top: 5%;
+  }
+
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  .container-fluid app-apresentacao-image-data {
+      margin-left: 20%;
+  }
+}
+
+
+
+
+

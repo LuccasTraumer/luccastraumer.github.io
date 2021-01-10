@@ -6,11 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ApresentacaoComponent } from './components/apresentacao/apresentacao.component';
-import { ResumeComponent } from './components/resume/resume.component';
 import { PortifolioComponent } from './components/portifolio/portifolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { TimelineComponent } from './components/resume/timeline/timeline.component';
 import { ListCardComponent } from './components/portifolio/list-card/list-card.component';
 import { BuildingComponent } from './components/building/building.component';
 import { InputDataComponent } from './components/contact/input-data/input-data.component';
@@ -20,17 +18,16 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderModule } from './header/header.module';
 import { ProfileModule } from './profile/profile.module';
 import { AboutModule } from './about/about.module';
+import { ResumeModule } from './resume/resume.module';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     ApresentacaoComponent,
-    ResumeComponent,
     PortifolioComponent,
     ContactComponent,
     FooterComponent,
-    TimelineComponent,
     ListCardComponent,
     BuildingComponent,
     InputDataComponent,
@@ -45,6 +42,7 @@ import { AboutModule } from './about/about.module';
     HeaderModule,
     ProfileModule,
     AboutModule,
+    ResumeModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9pWS6ELL5zjNttJjuG2779wyZzcAPzMM'
     }),

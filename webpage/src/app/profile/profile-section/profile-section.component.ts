@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './profile-section.component.html',
   styleUrls: ['./profile-section.component.css']
 })
-export class ProfileSectionComponent implements OnInit {
+export class ProfileSectionComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   bgImage() {
     return Constantes.backgroundImageHead;

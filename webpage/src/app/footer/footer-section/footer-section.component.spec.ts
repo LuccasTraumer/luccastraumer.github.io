@@ -22,4 +22,10 @@ describe('FooterSectionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('When call getYear return current year', () => {
+    fixture = TestBed.createComponent(FooterSectionComponent);
+    component = fixture.componentInstance;
+    expect(component.getYear()).toBe(new Date().getFullYear());
+  });
 });

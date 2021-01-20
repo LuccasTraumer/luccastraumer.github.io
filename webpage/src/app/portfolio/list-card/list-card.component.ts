@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './list-card.component.html',
   styleUrls: ['./list-card.component.css']
 })
-export class ListCardComponent implements OnInit {
+export class ListCardComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getLinkAirCnC() {
     return Constantes.linkRepAirCnC;

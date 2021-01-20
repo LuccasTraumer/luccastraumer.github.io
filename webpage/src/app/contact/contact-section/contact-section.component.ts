@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './contact-section.component.html',
   styleUrls: ['./contact-section.component.css']
 })
-export class ContactSectionComponent implements OnInit {
+export class ContactSectionComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getBgImage() {
     return Constantes.backgroundImageContact;

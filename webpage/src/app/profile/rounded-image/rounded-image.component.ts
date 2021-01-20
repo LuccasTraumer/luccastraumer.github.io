@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './rounded-image.component.html',
   styleUrls: ['./rounded-image.component.css']
 })
-export class RoundedImageComponent implements OnInit {
+export class RoundedImageComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   personalImage() {
     return Constantes.myPersonalImage;

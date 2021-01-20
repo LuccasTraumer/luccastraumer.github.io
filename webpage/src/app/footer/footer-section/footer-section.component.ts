@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 
 @Component({
@@ -6,15 +6,12 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './footer-section.component.html',
   styleUrls: ['./footer-section.component.css']
 })
-export class FooterSectionComponent implements OnInit {
+export class FooterSectionComponent {
 
   constructor(private viewportScroller: ViewportScroller) { }
 
-  ngOnInit(): void {
-  }
-
   onClickScroll(elementId: string) {
-    console.log(this.viewportScroller.scrollToAnchor(elementId))
+    console.log(this.viewportScroller.scrollToAnchor(elementId));
 
     this.viewportScroller.scrollToAnchor(elementId);
   }

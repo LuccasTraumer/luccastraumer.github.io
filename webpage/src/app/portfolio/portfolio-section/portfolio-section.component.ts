@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './portfolio-section.component.html',
   styleUrls: ['./portfolio-section.component.css']
 })
-export class PortfolioSectionComponent implements OnInit {
+export class PortfolioSectionComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getIconPort() {
     return Constantes.iconPortfolio;

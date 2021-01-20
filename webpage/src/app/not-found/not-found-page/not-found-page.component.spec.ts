@@ -22,4 +22,10 @@ describe('NotFoundPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('When call imgNotFound should be return a url', () => {
+    fixture = TestBed.createComponent(NotFoundPageComponent);
+    component = fixture.componentInstance;
+    expect(component.imgNotFound()).toBe('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/0072b70ae0eada2bbf1c63a90a475c379d819f1b/webpage/src/assets/icons/not-found.svg');
+  });
 });

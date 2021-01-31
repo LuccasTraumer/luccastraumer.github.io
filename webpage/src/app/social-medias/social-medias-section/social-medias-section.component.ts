@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './social-medias-section.component.html',
   styleUrls: ['./social-medias-section.component.css']
 })
-export class SocialMediasSectionComponent implements OnInit {
+export class SocialMediasSectionComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   iconFacebook() {
     return Constantes.iconFacebook;

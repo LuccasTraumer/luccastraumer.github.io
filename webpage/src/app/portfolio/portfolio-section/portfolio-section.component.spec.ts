@@ -22,4 +22,10 @@ describe('PortfolioSectionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('When call getIconPort should be return a url', () => {
+    fixture = TestBed.createComponent(PortfolioSectionComponent);
+    component = fixture.componentInstance;
+    expect(component.getIconPort()).toBe('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/b2e1bd71be97e847ef9fbb1ff3a927a678d1ef64/webpage/src/assets/icons/portfolio.svg');
+  });
 });

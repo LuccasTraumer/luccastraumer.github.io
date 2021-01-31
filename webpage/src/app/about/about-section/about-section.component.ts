@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from 'src/Utils/Constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from 'src/Utils/Constantes';
   templateUrl: './about-section.component.html',
   styleUrls: ['./about-section.component.css']
 })
-export class AboutSectionComponent implements OnInit {
+export class AboutSectionComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getIconInfo() {
     return Constantes.iconInfo;

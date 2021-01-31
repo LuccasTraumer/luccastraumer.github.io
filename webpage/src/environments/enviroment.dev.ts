@@ -1,13 +1,13 @@
 export const environment = {
     production: false,
-    
+
     /** ICONS SOCIAL MEDIAS */
     iconSocialMediaFacebook: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/facebook.png',
     iconSocialMediaTwitter: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/twitter.png',
     iconSocialMediaInstagram: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/instagram.png',
     iconSocialMediaGithub: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/github.png',
     iconSocialMediaLinkedin: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/linkedin.png',
-    
+
     /** LINKS SOCIAL MEDIAS */
     linkSocialMediaFacebook: 'https://www.facebook.com/LuccasTraumer',
     linkSocialMediaTwitter: 'https://twitter.com/LuccasTraumer',
@@ -32,5 +32,8 @@ export const environment = {
     linkRepWazeDev: 'https://github.com/LuccasTraumer/WazeDev',
     linkRepMaiaraMartins: 'https://github.com/LuccasTraumer/mmartins',
 
+    /*EXTERNAL LINKS */
 
+    cotucaUrl: 'https://cotuca.unicamp.br/',
+    ciandtUrl: 'https://br.ciandt.com/',
 };

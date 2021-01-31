@@ -30,4 +30,7 @@ export class Constantes {
     public static readonly linkRepTwitterData = environment.linkRepTwitterDataC19;
     public static readonly linkRepMaiaraMartins = environment.linkRepMaiaraMartins;
 
+    public static readonly linkPageCotuca = environment.cotucaUrl;
+    public static readonly linkPageCiandt = environment.ciandtUrl;
+
 }

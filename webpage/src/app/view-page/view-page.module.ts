@@ -9,6 +9,7 @@ import { HeaderModule } from '../header/header.module';
 import { PortfolioModule } from '../portfolio/portfolio.module';
 import { ProfileModule } from '../profile/profile.module';
 import { ResumeModule } from '../resume/resume.module';
+import { ViewPageRoutingModule } from './view-page-routing.module';
 
 
 
@@ -16,13 +17,14 @@ import { ResumeModule } from '../resume/resume.module';
   declarations: [ShowComponent],
   imports: [
     CommonModule,
+    ViewPageRoutingModule,
+    ProfileModule,
     AboutModule,
     BuildingModule,
     ContactModule,
     FooterModule,
     HeaderModule,
     PortfolioModule,
-    ProfileModule,
     ResumeModule
   ],
   exports: [ShowComponent]

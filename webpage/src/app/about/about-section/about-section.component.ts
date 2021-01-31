@@ -13,4 +13,12 @@ export class AboutSectionComponent {
   getIconInfo() {
     return Constantes.iconInfo;
   }
+
+  getLinkPageCotuca() {
+    return Constantes.linkPageCotuca;
+  }
+
+  getLinkPageCiandt() {
+    return Constantes.linkPageCiandt;
+  }
 }

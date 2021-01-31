@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Constantes } from '../../../Utils/Constantes';
 
 @Component({
   selector: 'app-building-page',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
 export class BuildingPageComponent {
 
   constructor() { }
+
+  getIconInBuilding() {
+    return Constantes.iconInBuilding;
+  }
 
 }

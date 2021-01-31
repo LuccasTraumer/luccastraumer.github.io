@@ -9,7 +9,7 @@ import { PersonalDataListComponent } from './personal-data-list/personal-data-li
 @NgModule({
   declarations: [AboutSectionComponent, ListHobbiesComponent, PersonalDataListComponent],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [AboutSectionComponent]
 })

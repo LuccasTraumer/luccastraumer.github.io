@@ -1,12 +1,16 @@
 export const environment = {
     production: false,
 
+    apiGithubRepository: 'https://api.github.com/users/luccastraumer/repos?page=1&per_page=100',
+    apiGithubOwner: 'https://api.github.com/users/luccastraumer',
+
     /** ICONS SOCIAL MEDIAS */
     iconSocialMediaFacebook: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/facebook.png',
     iconSocialMediaTwitter: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/twitter.png',
     iconSocialMediaInstagram: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/instagram.png',
     iconSocialMediaGithub: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/github.png',
     iconSocialMediaLinkedin: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/social-media/linkedin.png',
+    iconInBuildning: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/db094b2aa68a6d98df6338cac2caf93ccaaa80e2/webpage/src/assets/in-building.svg',
 
     /** LINKS SOCIAL MEDIAS */
     linkSocialMediaFacebook: 'https://www.facebook.com/LuccasTraumer',
@@ -32,5 +36,8 @@ export const environment = {
     linkRepWazeDev: 'https://github.com/LuccasTraumer/WazeDev',
     linkRepMaiaraMartins: 'https://github.com/LuccasTraumer/mmartins',
 
+    /*EXTERNAL LINKS */
 
+    cotucaUrl: 'https://cotuca.unicamp.br/',
+    ciandtUrl: 'https://br.ciandt.com/',
 };

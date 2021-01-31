@@ -10,7 +10,7 @@ export class ContactSectionComponent {
 
   constructor() { }
 
-  getBgImage() {
+  getBackgroundImage() {
     return Constantes.backgroundImageContact;
   }
 

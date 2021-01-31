@@ -23,6 +23,7 @@ export class Constantes {
     public static readonly iconPortfolio = environment.iconPortfolio;
     public static readonly iconContact = environment.iconContact;
     public static readonly iconNotFoundPage = environment.iconPageNotFound;
+    public static readonly iconInBuilding = environment.iconInBuildning;
 
     public static readonly linkRepRemadeWebSites = environment.linkRepRemadeRandomsWebSites;
     public static readonly linkRepAirCnC = environment.linkRepAirCnc;
@@ -32,5 +33,8 @@ export class Constantes {
 
     public static readonly linkPageCotuca = environment.cotucaUrl;
     public static readonly linkPageCiandt = environment.ciandtUrl;
+
+    public static readonly apiGithubRepository = environment.apiGithubRepository;
+    public static readonly apiGithubOwner = environment.apiGithubOwner;
 
 }

@@ -1,10 +1,10 @@
 <div class="container-fluid bg-color-grey">
   <div class="back-image w3-animate-left">
-      <img class="bg-image" src="{{getBgImage()}}" alt="" srcset="">
+      <img class="bg-image" [src]="getBackgroundImage()" alt="" srcset="">
   </div>
   <div class="overview">
       <div class="head-contact w3-animate-top">
-          <img src="{{getIconContact()}}" class="icon" alt="icon contact" srcset="">
+          <img [src]="getIconContact()" class="icon" alt="icon contact" srcset="">
           <label class="title">Contact Me</label>
       </div>
 

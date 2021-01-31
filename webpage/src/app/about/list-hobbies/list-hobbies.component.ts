@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ListHobbiesComponent {
 
-  listaCards: {nameCard: string, urlImageCard: string}[] = [
+  public readonly listaCards: {nameCard: string, urlImageCard: string}[] = [
   {
     nameCard: 'games',
     urlImageCard: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/f701c08ece98dc59a7c699fe92900e38c98789c2/webpage/src/assets/about-icons/controler-game.svg'

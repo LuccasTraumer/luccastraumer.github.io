@@ -13,6 +13,4 @@ export class RoundedImageComponent {
   personalImage() {
     return Constantes.myPersonalImage;
   }
-
-
 }

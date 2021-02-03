@@ -26,6 +26,6 @@ describe('ProfileSectionComponent', () => {
   it('When call method to background image should be return a url', () => {
     fixture = TestBed.createComponent(ProfileSectionComponent);
     component = fixture.componentInstance;
-    expect(component.bgImage()).toBe('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/developer-working-on-his-project.jpg');
+    expect(component.backgroundImage()).toBe('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io-page/dev/webpage/src/assets/developer-working-on-his-project.jpg');
   });
 });

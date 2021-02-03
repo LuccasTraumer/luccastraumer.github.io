@@ -10,7 +10,7 @@ export class ProfileSectionComponent {
 
   constructor() { }
 
-  bgImage() {
+  backgroundImage() {
     return Constantes.backgroundImageHead;
   }
 

@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume-section.component.css']
 })
 export class ResumeSectionComponent {
-
   constructor() { }
-
 }

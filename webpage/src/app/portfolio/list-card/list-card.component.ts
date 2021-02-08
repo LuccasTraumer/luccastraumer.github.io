@@ -1,7 +1,5 @@
-import { AfterViewChecked, Component, OnDestroy, OnInit } from '@angular/core';
-import { element } from 'protractor';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Constantes } from 'src/Utils/Constantes';
 import { ApiGithubService } from '../api-github.service';
 import { RepositoryModel } from '../repository-model';
 

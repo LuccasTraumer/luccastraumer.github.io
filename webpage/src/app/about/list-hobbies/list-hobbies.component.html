@@ -1,12 +1,9 @@
 <div class="interest">
-  <div class="title">
-      <label >My Hobbies and Interest</label>
-  </div>
   <div class="all-cards">
       <ul>
         <li *ngFor="let card of listaCards" class="card">
           <img [src]="card.urlImageCard" [id]="card.nameCard" [alt]="card.nameCard">
-          {{card.nameCard}}
+          <h6> {{card.nameCard}} </h6>
         </li>
       </ul>
   </div>

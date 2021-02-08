@@ -20,10 +20,6 @@ describe('AboutSectionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
   it('when call getIconInfo() should be url', () => {
     fixture = TestBed.createComponent(AboutSectionComponent);
     component = fixture.componentInstance;

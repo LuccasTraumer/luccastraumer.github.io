@@ -27,7 +27,7 @@ describe('ContactSectionComponent', () => {
     it('When he get background image url', () => {
       fixture = TestBed.createComponent(ContactSectionComponent);
       component = fixture.componentInstance;
-      expect(component.getBgImage).toBe('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/dev/webpage/src/assets/contact_bg.png');
+      expect(component.getBackgroundImage).toBe('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/dev/webpage/src/assets/contact_bg.png');
     });
 
     it('When get contact icon should be return url', () => {

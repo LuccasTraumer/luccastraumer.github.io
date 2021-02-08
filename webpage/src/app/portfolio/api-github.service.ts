@@ -1,26 +1,19 @@
-import { HttpClient, HttpClientModule, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+
 import { Constantes } from '../../Utils/Constantes';
 import { RepositoryModel } from './repository-model';
-import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiGithubService {
 
-  private readonly apiGithubOwner = Constantes.apiGithubOwner;
   private apiGithubRepositories = Constantes.apiGithubRepository;
-  private repositories: Array<RepositoryModel> = [];
 
-  private httpOptions;
-
-  constructor(private http: HttpClient) {
-    this.httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
-  }
+  constructor(private http: HttpClient) { }
 
   getRepository(listaRep: string[]): Observable<RepositoryModel[]> {
      return this.makeRequestRepository();

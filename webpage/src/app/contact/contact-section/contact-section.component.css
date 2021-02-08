@@ -1,6 +1,4 @@
 .container-fluid {
-  padding: 0;
-  margin: 0;
   width: 100%;
   height: 90vh;
   overflow: hidden;
@@ -19,7 +17,7 @@
   z-index: 1;
 }
 
-.bg-image{
+.bg-image {
   position: absolute;
   z-index: 0;
   padding: 2%;

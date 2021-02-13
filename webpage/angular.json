@@ -28,7 +28,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
-          },
+          }},
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -58,8 +58,7 @@
                 }
               ]
             }
-          }
-        },
+          },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {

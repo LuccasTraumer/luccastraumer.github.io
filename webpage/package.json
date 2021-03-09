@@ -11,7 +11,7 @@
     "test:ci": "jest --runInBand",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && gh-pages -d dist/webpage"
+    "deploy": "ng build && gh-pages -d dist/webpage"
   },
   "private": true,
   "homepage": "https://luccastraumer.github.io",

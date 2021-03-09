@@ -30,7 +30,7 @@ export class ListCardComponent {
     }).unsubscribe;
   }
 
-  private getImageRepository(nameRep: string): string {
+  public getImageRepository(nameRep: string): string {
     let urlImage: string;
 
     switch (nameRep){

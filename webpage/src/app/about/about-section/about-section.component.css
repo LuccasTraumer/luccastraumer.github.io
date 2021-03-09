@@ -43,10 +43,37 @@
   width: 50vw;
 }
 
-.buttom button{
+button {
   color: #fff;
-  border: solid #fff;
-  background: #1e2326;
+  border: none;
+  background: none;
+  position: relative;
+  z-index: 2;
+
+  transition: all 1s ease-in-out;
+  top: -5px;
+}
+
+button::after {
+  content: '';
+
+  transition: inherit;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background: #1CB698;
+  left: -10px;
+  top: -6px;
+
+  width: 35px;
+  height: 35px;
+}
+
+button:hover::after {
+  width: calc(100% + 20px);
+  border-radius: 20px;
+  background: #1CB698;
+  opacity: 0.6;
 }
 
 @media only screen and (min-width: 1024px) {

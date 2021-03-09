@@ -3,7 +3,7 @@
       <ul>
         <li *ngFor="let card of listaCards" class="card">
           <img [src]="card.urlImageCard" [id]="card.nameCard" [alt]="card.nameCard">
-          <h6> {{card.nameCard}} </h6>
+          <h6> {{card.nameCard | uppercase}} </h6>
         </li>
       </ul>
   </div>

@@ -4,7 +4,7 @@
           <a [href]="repository.html_url" target="_blank" rel="noopener noreferrer">
               <img class="card-img-top w3-animate-bottom" [src]="repository.image" alt="" srcset="">
               <div class="img__description">
-                  <p class="font-size1-5rem w3-animate-top">{{repository.name}}</p>
+                  <p class="font-size1-5rem w3-animate-top">{{repository.name | uppercase}}</p>
                   <label class="w3-animate-bottom">{{repository.description}}</label>
               </div>
           </a>

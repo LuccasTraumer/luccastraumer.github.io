@@ -1,5 +1,16 @@
 <div class="container-fluid">
-  <a href="{{ linkSocialMedia }}" target="_blank" rel="noopener noreferrer">
-    <img src="{{ pathImage }}">
-  </a>
+  <ng-container class="social" *ngIf="inputSocialMedia !== 'email'; else elseTemplate">
+    <a href="{{ socialMedia.linkSocialMedia }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ socialMedia.pathImageBlack }}">
+     </a>
+  </ng-container>
+  <ng-template class="social" #elseTemplate>
+    <a href="mailto:lucassj.dev@gmail.com">
+      <img src="{{ socialMedia.pathImageBlack }}">
+    </a>
+  </ng-template>
 </div>
+
+
+
+

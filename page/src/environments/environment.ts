@@ -7,6 +7,24 @@ export const environment = {
   linkGithub: 'https://github.com/LuccasTraumer',
   linkLinkedin: 'https://www.linkedin.com/in/luccastraumer/',
   linkInstagram: 'https://www.instagram.com/luccastraumer/',
-  personalEmail: 'lucassj.dev@gmail.com'
+  personalEmail: 'lucassj.dev@gmail.com',
+
+  pathIconWhiteEmail: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/email-icon-bg-white.png',
+  pathIconWhiteGithub: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/github-icon-bg-white-svg.png',
+  pathIconWhiteLinkedin: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/linkedin-icon-bg-white.png',
+  pathIconWhiteInstagram: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/instagram-icon-bg-white.png',
+
+  pathIconBlackEmail: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/email-icon.png',
+  pathIconBlackGithub: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/github-icon-bg-black-svg.png',
+  pathIconBlackLinkedin: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/linkedin-icon-bg-black.png',
+  pathIconBlackInstagram: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/icons-social/instagram-icon-bg-black.png',
+
+  pathIconBlackLocation: '',
+  pathIconBlackSound: '',
+  pathIconBlackProfile: '',
+
+  pathIconWhiteLocation: '',
+  pathIconWhiteSound: '',
+  pathIconWhiteProfile: '',
 };
 

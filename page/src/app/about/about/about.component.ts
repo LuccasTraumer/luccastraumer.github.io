@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constantes } from '../../Constantes';
 
 @Component({
   selector: 'about',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+
+  public readonly LOCATION_ICON = Constantes.PATH_ICON_BLACK_LOCATION;
+  public readonly PROFILE_ICON = Constantes.PATH_ICON_BLACK_PROFILE;
+  public readonly SOUND_ICON = Constantes.PATH_ICON_BLACK_SOUND;
 
   constructor() { }
 

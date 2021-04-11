@@ -1,9 +1,53 @@
-.container-fluid .text {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0 1% 0;
+  height: 80vh;
+
+  .text {
+    padding: inherit;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+  }
 
   span {
     color: var(--first-color);
+  }
+
+  .button {
+    align-self: center;
+    margin: 5% 0 5% 0;
+    height: 5vh;
+    width: 15vh;
+    border-radius: 10px;
+    background-color: var(--first-color);
+    font-weight: bold;
+    color: var(--bg-contraste);
+    text-align: center;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-medias {
+    display: inherit;
+    justify-content: center;
+    width: inherit;
+    padding: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    padding: 10% 0 5% 0;
+
+    .text {
+      font-size: 2rem;
+    }
+
+    .social-medias {
+      padding: 40%;
+    }
   }
 }

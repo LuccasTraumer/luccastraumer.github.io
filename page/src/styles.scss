@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --first-color: rgb(26, 166, 139);
+  --bg-color: #e4e4e4;
+  --bg-contraste: #fff;
+}
+
+[data-theme="dark"] {
+  --dark-color: #252525;
+  --bg-color: #252525;
+  --bg-contraste: #303030;
+}
+
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+#ligth-theme {
+  background-color: var(--ligth-color);
+  color: var(--dark-color);
+}
+
+#dark-theme {
+  background-color: var(--dark-color);
+  color: var(--ligth-color);
+}

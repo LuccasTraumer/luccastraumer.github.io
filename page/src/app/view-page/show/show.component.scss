@@ -1,14 +1,13 @@
 .container-fluid {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
+  padding: inherit;
+  margin: inherit;
 }
 
 .content {
   display: grid;
   grid-area: auto;
-  justify-content: center;
   position: relative;
 }
-
-
 

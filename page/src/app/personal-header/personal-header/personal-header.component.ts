@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'personal-header',
   templateUrl: './personal-header.component.html',
   styleUrls: ['./personal-header.component.scss']
 })
-export class PersonalHeaderComponent implements OnInit {
+export class PersonalHeaderComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }

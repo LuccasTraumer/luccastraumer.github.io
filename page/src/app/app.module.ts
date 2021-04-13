@@ -8,6 +8,7 @@ import { BuildingModule } from './building/building.module';
 import { NotFoundModule } from './not-found/not-found.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +18,7 @@ import { NotFoundModule } from './not-found/not-found.module';
     AppRoutingModule,
     ViewPageModule,
     BuildingModule,
-    NotFoundModule
+    NotFoundModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

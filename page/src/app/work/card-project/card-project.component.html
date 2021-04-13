@@ -1,0 +1,8 @@
+<div *ngFor="let repository of repositories" class="container-fluid">
+  <h4>{{repository.title}}</h4>
+
+  {{repository.description}}
+
+  <a href="{{repository.html_url}}" target="_blank" rel="noopener noreferrer">GITHUB</a>
+
+</div>

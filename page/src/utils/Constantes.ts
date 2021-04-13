@@ -24,4 +24,7 @@ export class Constantes {
   public static readonly PATH_ICON_WHITE_SOUND = environment.pathIconWhiteSound;
   public static readonly PATH_ICON_WHITE_PROFILE = environment.pathIconWhiteProfile;
 
+  public static readonly apiGithubRepository = environment.apiGithubRepository;
+  public static readonly apiGithubOwner = environment.apiGithubOwner;
+
 }

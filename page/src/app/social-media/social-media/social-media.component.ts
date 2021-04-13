@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Constantes } from 'src/app/Constantes';
+import { Constantes } from 'src/utils/Constantes';
 import { SocialMediaModel } from 'src/model/social-media.model';
 
 @Component({

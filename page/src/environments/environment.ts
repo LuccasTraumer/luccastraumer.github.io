@@ -26,5 +26,8 @@ export const environment = {
   pathIconWhiteLocation: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/about-icons/location-icon-bg-white.png',
   pathIconWhiteSound: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/about-icons/sound-icon-bg-white.png',
   pathIconWhiteProfile: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/about-icons/profile-icon-bg-white.png',
+
+  apiGithubRepository: 'https://api.github.com/users/luccastraumer/repos?page=1&per_page=100',
+  apiGithubOwner: 'https://api.github.com/users/luccastraumer',
 };
 

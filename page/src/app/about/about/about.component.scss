@@ -1,3 +1,58 @@
+.container-fluid {
+  background-color: var(--bg-contraste);
+  display: flex;
+  padding: 5%;
+  align-items: center;
+  width: 60vw;
+  border-radius: 50px;
+
+  .title-section {
+    text-align: center;
+    padding: 5%;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+
+    .text {
+      width: 70%;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .me {
+      width: 30%;
+    }
+
+    table {
+      width: 100%;
+      padding: inherit;
+
+      tbody {
+        display: flex;
+        width: inherit;
+        flex-direction: column;
+
+        tr {
+          display: inherit;
+          width: 100%;
+          align-self: center;
+          justify-content: space-between;
+          padding: 5%;
+          font-size: 1rem;
+          font-weight: 500;
+
+          img {
+            width: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .container-fluid {
     width: 100vw;

@@ -22,7 +22,7 @@ export class CardProjectComponent {
 
   private loadData() {
     this.dataApi = this.serviceApi.getRepository(this.listRep);
-    let objObservable = this.dataApi.subscribe(data => {
+    const objObservable = this.dataApi.subscribe(data => {
       data.map((repository) => {
         if (this.listRep.indexOf(repository.name) >= 0) {
           this.repositories.push(repository);
@@ -30,5 +30,4 @@ export class CardProjectComponent {
       });
     }).unsubscribe;
   }
-
 }

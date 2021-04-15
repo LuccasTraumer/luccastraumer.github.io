@@ -1,8 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { RepositoryModel } from 'src/model/repository-model';
-import { ApiGithubService } from 'src/service/api-github.service';
-
+import { RepositoryModel } from '../../../model/repository-model';
 
 
 @Component({
@@ -12,22 +9,14 @@ import { ApiGithubService } from 'src/service/api-github.service';
 })
 export class CardProjectComponent {
 
-  public dataApi: Observable<RepositoryModel[]>;
-  private listRep: string[] = ['AirCnC', 'WazeDev', 'mmartins', 'remade_random_websites', 'twitter_data_covid-19', 'campact_huffman'];
-  public repositories: Array<RepositoryModel> = [];
+  @Input()
+  repository: RepositoryModel;
 
-  constructor(private serviceApi: ApiGithubService) {
-    this.loadData();
-  }
+  longDescription: boolean = true;
 
-  private loadData() {
-    this.dataApi = this.serviceApi.getRepository(this.listRep);
-    const objObservable = this.dataApi.subscribe(data => {
-      data.map((repository) => {
-        if (this.listRep.indexOf(repository.name) >= 0) {
-          this.repositories.push(repository);
-        }
-      });
-    }).unsubscribe;
+  constructor() { }
+
+  clickButton(event) {
+    this.longDescription = !this.longDescription;
   }
 }

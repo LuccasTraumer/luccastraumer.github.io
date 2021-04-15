@@ -1,50 +1,78 @@
 @media screen and (max-width: 425px) {
   .container-fluid {
-
-    width: 100vw;
-    height: 25vh;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+    background-color: var(--bg-contraste);
+    border-radius: 10px;
     margin-bottom: 5%;
+    flex-wrap: wrap;
 
-    .cont{
-      display: flex;
+    .title {
+      flex-wrap: wrap;
       width: 100%;
-      height: 100%;
-      flex-direction: column;
-      align-items: center;
+    }
+
+    .button {
+      background-color: var(--first-color);
+      width: 40%;
+      height: 5vh;
+      display: flex;
       justify-content: center;
-      text-align: center;
-      padding: 5%;
-      background-color: var(--bg-contraste);
-      border-radius: 10px;
+      align-items: center;
+      border-radius: 5px;
+      margin-top: 7%;
+      font-weight: 500;
 
-
-      .button {
-        background-color: var(--first-color);
-        width: 25vw;
-        height: 5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        margin-top: 7%;
-        a {
-          color: var(--bg-contraste);
-        }
+      a {
+        color: var(--bg-contraste);
       }
     }
   }
 }
 
-.container-fluid {
-  display: grid;
-
-  flex-flow: row wrap;
-
-
-
-  .cont {
-    height: 8vh;
-    width: 5vw;
+@media screen and (min-width: 768px) {
+  .container-fluid {
+    padding: 5%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     background-color: var(--bg-contraste);
+    border-radius: 8px;
+    width: 35vw;
+    height: 30vh;
+    font-size: 2vw;
+    flex-wrap: wrap;
+
+
+    .title {
+      word-wrap: break-word;
+      width: 100%;
+    }
+
+    .button {
+      background-color: var(--first-color);
+      width: 25%;
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin: 2% 0 2% 0;
+      font-size: 1.5vw;
+      font-weight: 500;
+      align-self: center;
+
+      a {
+        color: var(--bg-contraste);
+      }
+    }
   }
 }

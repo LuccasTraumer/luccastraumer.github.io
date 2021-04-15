@@ -1,12 +1,16 @@
 <div  class="container-fluid">
-  <div *ngFor="let repository of repositories" class="cont">
-    <h4>{{repository.name}}</h4>
 
-    {{repository.description.split(' ').splice(0, 10).join(' ')}}...
+  <h2 class="title">{{repository.name}}</h2>
 
-    <div class="button">
-      <a href="{{repository.html_url}}" target="_blank" rel="noopener noreferrer">GITHUB</a>
-    </div>
+  <ng-container  *ngIf="longDescription; else elseTemplate">
+    - {{repository.description.split(' ').splice(0, 10).join(' ')}} <a class="long-descript" (click)="clickButton()"> mostrar mais</a>
+  </ng-container>
+  <ng-template #elseTemplate>
+    {{repository.description.split(' ').splice(0, 30).join(' ')}}... <a class="long-descript" (click)="clickButton()"> mostrar menos</a>
+  </ng-template>
+
+  <div class="button">
+    <a href="{{repository.html_url}}" target="_blank" rel="noopener noreferrer">GITHUB</a>
   </div>
 
 </div>

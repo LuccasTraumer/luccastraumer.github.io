@@ -1,4 +1,6 @@
 <div class="container-fluid">
   <h1>Work</h1>
-  <card-project></card-project>
+  <div  class="cards-repositorys">
+    <card-project *ngFor="let repository of repositories" [repository]="repository"></card-project>
+  </div>
 </div>

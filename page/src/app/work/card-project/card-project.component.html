@@ -3,10 +3,10 @@
   <h2 class="title">{{repository.name}}</h2>
 
   <ng-container  *ngIf="longDescription; else elseTemplate">
-    - {{repository.description.split(' ').splice(0, 10).join(' ')}} <a class="long-descript" (click)="clickButton()"> mostrar mais</a>
+    - {{repository.description.split(' ').splice(0, 10).join(' ')}} <a class="descript" (click)="clickButton()"> mostrar mais</a>
   </ng-container>
   <ng-template #elseTemplate>
-    {{repository.description.split(' ').splice(0, 30).join(' ')}}... <a class="long-descript" (click)="clickButton()"> mostrar menos</a>
+    {{repository.description.split(' ').splice(0, 20).join(' ')}}... <a class="descript" (click)="clickButton()"> mostrar menos</a>
   </ng-template>
 
   <div class="button">

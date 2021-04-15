@@ -21,6 +21,8 @@
     .button {
       background-color: var(--first-color);
       width: 40%;
+      margin-left: 0;
+      margin-right: 0;
       height: 5vh;
       display: flex;
       justify-content: center;
@@ -39,7 +41,6 @@
 @media screen and (min-width: 768px) {
   .container-fluid {
     padding: 5%;
-    margin: 0%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -48,9 +49,13 @@
     border-radius: 8px;
     width: 35vw;
     height: 30vh;
-    font-size: 2vw;
-    flex-wrap: wrap;
+    font-size: 1.5em;
 
+
+
+    .descript {
+      font-size: 0.7em;
+    }
 
     .title {
       word-wrap: break-word;
@@ -66,7 +71,7 @@
       align-items: center;
       border-radius: 5px;
       margin: 2% 0 2% 0;
-      font-size: 1.5vw;
+      font-size: 0.7em;
       font-weight: 500;
       align-self: center;
 

@@ -1,7 +1,7 @@
 @media screen and (max-width: 425px) {
   .container-fluid {
     display: flex;
-    width: 100%;
+    width: 90vw;
     height: 100%;
     flex-direction: column;
     align-items: center;
@@ -16,6 +16,7 @@
     .title {
       flex-wrap: wrap;
       width: 100%;
+      word-wrap: break-word;
     }
 
     .button {
@@ -47,11 +48,9 @@
     justify-content: center;
     background-color: var(--bg-contraste);
     border-radius: 8px;
-    width: 35vw;
-    height: 30vh;
+    width: 25vw;
+    height: 25vh;
     font-size: 1.5em;
-
-
 
     .descript {
       font-size: 0.7em;

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalFooterComponent implements OnInit {
 
+  public readonly year = new Date().getFullYear();
   constructor() { }
 
   ngOnInit(): void {

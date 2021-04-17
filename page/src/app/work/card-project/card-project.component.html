@@ -6,11 +6,11 @@
     - {{repository.description.split(' ').splice(0, 7).join(' ')}} <a class="descript" (click)="clickButton()"> mostrar mais</a>
   </ng-container>
   <ng-template #elseTemplate>
-    {{repository.description.split(' ').splice(0, 15).join(' ')}}... <a class="descript" (click)="clickButton()"> mostrar menos</a>
+    {{repository.description.split(' ').splice(0, 9).join(' ')}}... <a class="descript" (click)="clickButton()"> mostrar menos</a>
   </ng-template>
 
   <div class="button">
-    <a href="{{repository.html_url}}" target="_blank" rel="noopener noreferrer">GITHUB</a>
+    <button-template [insideText]="'GITHUB'" [redirectLink]="'{{repository.html_url}}'"></button-template>
   </div>
 
 </div>

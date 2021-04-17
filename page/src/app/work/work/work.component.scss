@@ -28,12 +28,15 @@
     justify-content: center;
     max-width: max-content;
 
+    h1 {
+      margin: 2%;
+    }
 
     .cards-repositorys {
       display: grid;
       grid-template-columns: repeat(3, 30vw);
       max-width: max-content;
-      height: 50vh;
+      height: max-content;
       gap: 2% 0%;
       overflow: hidden;
     }

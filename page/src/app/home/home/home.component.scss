@@ -3,7 +3,11 @@
   flex-direction: column;
   padding: 5% 0 1% 0;
   height: 100vh;
+  align-items: center;
 
+  .button {
+    width: 25%;
+  }
 
   .text {
     padding: inherit;
@@ -16,21 +20,6 @@
     color: var(--first-color);
   }
 
-  .button {
-    align-self: center;
-    margin: 5% 0 5% 0;
-    height: 5vh;
-    width: 15vh;
-    border-radius: 10px;
-    background-color: var(--first-color);
-    font-weight: bold;
-    color: var(--bg-contraste);
-    text-align: center;
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-  }
-
   .social-medias {
     display: inherit;
     justify-content: center;
@@ -38,12 +27,6 @@
     padding: 10%;
   }
 }
-
-// @media screen and (min-width: 768px) {
-//   .button {
-//     width: 25vh;
-//   }
-// }
 
 @media screen and (max-width: 767px) {
   .container-fluid {

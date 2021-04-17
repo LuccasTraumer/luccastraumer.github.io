@@ -4,6 +4,7 @@ import { WorkComponent } from './work/work.component';
 import { CardProjectComponent } from './card-project/card-project.component';
 import { ApiGithubService } from 'src/service/api-github.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ButtonModule } from '../button/button.module';
 
 
 
@@ -11,7 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [WorkComponent, CardProjectComponent],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
   ],
   providers: [ApiGithubService],
   exports: [WorkComponent]

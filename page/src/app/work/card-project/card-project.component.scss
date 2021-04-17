@@ -20,63 +20,41 @@
     }
 
     .button {
-      background-color: var(--first-color);
-      width: 40%;
-      margin-left: 0;
-      margin-right: 0;
-      height: 5vh;
-      display: flex;
-      justify-content: center;
+      display: block;
       align-items: center;
-      border-radius: 5px;
-      margin-top: 7%;
-      font-weight: 500;
-
-      a {
-        color: var(--bg-contraste);
-      }
+      width: 100%;
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   .container-fluid {
-    padding: 5%;
+    padding: 1% 5%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     background-color: var(--bg-contraste);
     border-radius: 8px;
-    width: 25vw;
-    height: 25vh;
+    width: 28vw;
+    height: 28vh;
     font-size: 1.5em;
+    word-wrap: break-word;
 
     .descript {
       font-size: 0.7em;
     }
 
+    .button {
+      display: block;
+      width: 100%;
+      height: 20%;
+      align-items: center;
+    }
+
     .title {
       word-wrap: break-word;
       width: 100%;
-    }
-
-    .button {
-      background-color: var(--first-color);
-      width: 25%;
-      height: 5vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-      margin: 2% 0 2% 0;
-      font-size: 0.7em;
-      font-weight: 500;
-      align-self: center;
-
-      a {
-        color: var(--bg-contraste);
-      }
     }
   }
 }

@@ -18,7 +18,7 @@
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .container-fluid {
     padding: 2%;
     margin: 2%;
@@ -26,7 +26,8 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    max-width: max-content;
+    width: 100vw;
+    height: 80vh;
 
     h1 {
       margin: 2%;
@@ -36,7 +37,7 @@
       display: grid;
       grid-template-columns: repeat(3, 30vw);
       max-width: max-content;
-      height: max-content;
+      height: 70vh;
       gap: 2% 0%;
       overflow: hidden;
     }

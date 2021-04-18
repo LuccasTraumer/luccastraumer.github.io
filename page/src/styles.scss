@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #ligth-theme {
   background-color: var(--ligth-color);
   color: var(--dark-color);

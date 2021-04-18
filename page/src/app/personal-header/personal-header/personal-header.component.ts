@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class PersonalHeaderComponent {
 
+  constructor(private viewportScroller: ViewportScroller) { }
 
-
+  onClickScroll(elementId: string) {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 }

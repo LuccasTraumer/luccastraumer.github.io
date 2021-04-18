@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkComponent } from './work.component';
+import { CardProjectComponent } from '../card-project/card-project.component';
 
 describe('WorkComponent', () => {
   let component: WorkComponent;
@@ -8,7 +9,7 @@ describe('WorkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WorkComponent ]
+      declarations: [ WorkComponent, CardProjectComponent ]
     })
     .compileComponents();
   });

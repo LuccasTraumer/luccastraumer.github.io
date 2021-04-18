@@ -1,9 +1,15 @@
 .navbar {
   color: var(--font-color);
   font-weight: bold;
+  position: fixed;
+  width: 100%;
 
   li a:hover {
     text-decoration: underline;
+  }
+
+  a:active {
+    transition: all 1s step-start;
   }
 }
 

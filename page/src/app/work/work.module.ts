@@ -5,6 +5,7 @@ import { CardProjectComponent } from './card-project/card-project.component';
 import { ApiGithubService } from 'src/service/api-github.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from '../button/button.module';
+import { ButtonTemplateComponent } from '../button/button-template/button-template.component';
 
 
 

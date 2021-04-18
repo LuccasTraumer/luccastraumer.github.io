@@ -18,7 +18,38 @@
   }
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 767px) {
+  .container-fluid {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+  .cards-repositorys {
+    padding: inherit;
+    margin: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 95%;
+    max-height: 90%;
+    height: 85%;
+    height: inherit;
+    overflow: hidden;
+  }
+
+  card-project {
+    margin: 1%;
+    width: 40%;
+    height: 50%;
+  }
+}
+}
+
+@media screen and (min-width: 1028px) {
   .container-fluid {
     padding: 2%;
     margin: 2%;
@@ -27,19 +58,27 @@
     flex-direction: column;
     justify-content: center;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 
     h1 {
       margin: 2%;
     }
 
     .cards-repositorys {
-      display: grid;
-      grid-template-columns: repeat(3, 30vw);
-      max-width: max-content;
-      height: 70vh;
-      gap: 2% 0%;
+      padding: inherit;
+      margin: inherit;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      width: 90%;
+      height: inherit;
       overflow: hidden;
+    }
+
+    card-project {
+      margin: 1%;
+      width: 30%;
+      height: 30%;
     }
   }
 }

@@ -2,7 +2,7 @@
   --first-color: rgb(26, 166, 139);
   --bg-color: #e4e4e4;
   --bg-contraste: #fff;
-  --font-color: #252525;
+  --font-color: #363636;
 }
 
 [data-theme="dark"] {
@@ -22,6 +22,7 @@
 
 body {
   background-color: var(--bg-color);
+  color: var(--font-color);
   width: 100vw;
   height: 100vh;
   max-width: 100vw;

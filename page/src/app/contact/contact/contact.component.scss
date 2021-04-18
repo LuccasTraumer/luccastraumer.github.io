@@ -8,6 +8,10 @@
     border-radius: 10px;
     padding: 5%;
 
+    label {
+      font-weight: 600;
+    }
+
     .email, .name, .message {
       display: flex;
       flex-direction: column;
@@ -34,6 +38,7 @@
     .button {
       width: 20vw;
       height: 7vh;
+      margin-top: 5%;
     }
 
   }
@@ -51,13 +56,26 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: var(--bg-contraste);
-    width: 90vh;
-    padding: 5%;
-    border-radius: 5px;
+    width: 90vw;
+    align-items: center;
+
+    .title {
+      font-weight: 600;
+      font-size: 1.3em;
+    }
+
+    .content {
+      padding: 2%;
+      margin: 0%;
+      background-color: var(--bg-contraste);
+      width: 60%;
+      max-width: 70%;
+      border-radius: 10px;
+    }
 
     label {
       padding-left: 2%;
+      font-weight: 600;
     }
 
     .top {

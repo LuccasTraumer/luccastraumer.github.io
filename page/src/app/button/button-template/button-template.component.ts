@@ -15,7 +15,6 @@ export class ButtonTemplateComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

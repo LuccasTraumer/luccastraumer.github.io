@@ -19,7 +19,15 @@ describe('CardProjectComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('quando chamar o metodo de click do link', () => {
+    component.longDescription = false;
+
+    component.clickButton(event);
+
+    expect(component.longDescription).toBeTruthy();
   });
 });

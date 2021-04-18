@@ -17,9 +17,14 @@ describe('WorkComponent', () => {
     fixture = TestBed.createComponent(WorkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    // component.ngOnInit();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('quando chamar o load deve executar com sucesso', () => {
+    // expect(component.ngOnInit()).toBeCalled();
   });
 });

@@ -7,7 +7,7 @@ import { RepositoryModel } from '../../../model/repository-model';
   templateUrl: './card-project.component.html',
   styleUrls: ['./card-project.component.scss']
 })
-export class CardProjectComponent {
+export class CardProjectComponent implements OnInit{
 
   @Input()
   repository: RepositoryModel;
@@ -15,6 +15,10 @@ export class CardProjectComponent {
   longDescription: boolean = true;
 
   constructor() { }
+  ngOnInit(): void {
+  }
+
+
 
   clickButton(event) {
     this.longDescription = !this.longDescription;

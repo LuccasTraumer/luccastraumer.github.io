@@ -9,11 +9,7 @@ export class HomeComponent {
 
   public sentence: string;
   readonly sentences = ['Angular Developer', 'Fullstack Developer', 'Javascript & Typescript', 'in love for mobile dev', 'in love for frontend dev'];
-
   private index: number = 1;
-  private timer = 5000;
-
-  now:number;
 
   constructor() {
     this.sentence = this.sentences[this.index];

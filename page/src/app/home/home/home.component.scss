@@ -5,6 +5,7 @@
   height: 100vh;
   align-items: center;
 
+
   .button {
     width: 25%;
   }
@@ -26,6 +27,10 @@
     width: inherit;
     padding: 10%;
   }
+}
+
+.container-fluid:focus {
+  color: aqua;
 }
 
 @media screen and (max-width: 767px) {

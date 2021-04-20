@@ -11,7 +11,7 @@ import { ApiGithubService } from 'src/service/api-github.service';
 export class WorkComponent implements OnInit {
 
   public dataApi: Observable<RepositoryModel[]>;
-  private listRep: string[] = ['AirCnC', 'WazeDev', 'mmartins', 'remade_random_websites', 'twitter_data_covid-19', 'campact_huffman'];
+  private listRep: string[] = ['AirCnC', 'WazeDev', 'mmartins', 'campact_huffman', 'twitter_data_covid-19', 'remade_random_websites'];
   public repositories: Array<RepositoryModel> = [];
 
 

@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -13,8 +14,12 @@ export class ButtonTemplateComponent implements OnInit {
   @Input()
   insideText: string;
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void { }
 
+  onClickScroll(elementId: string) {
+    console.log('Cheguei', elementId)
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 }

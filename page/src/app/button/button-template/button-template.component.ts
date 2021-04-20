@@ -19,7 +19,6 @@ export class ButtonTemplateComponent implements OnInit {
   ngOnInit(): void { }
 
   onClickScroll(elementId: string) {
-    console.log('Cheguei', elementId)
     this.viewportScroller.scrollToAnchor(elementId);
   }
 }

@@ -14,7 +14,6 @@ export class HomeComponent {
   constructor() {
     this.sentence = this.sentences[this.index];
     setInterval(() => {
-      console.log(this.index)
       this.sentence = this.index > this.sentences.length-1 ? this.sentences[this.index = 0] : this.sentences[this.index++];
     }, 3000);
   }

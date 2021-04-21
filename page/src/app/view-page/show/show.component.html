@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="content " [ngClass]="{'dark-theme': isDarkModeOn}">
+    <section id="header">
+      <personal-header (mode)="receiveMode($event)"></personal-header>
+    </section>
+    <section id="home" >
+      <home [isDarkMode]=isDarkModeOn (mode)="receiveMode($event)"></home>
+    </section>
+    <section id="about">
+      <about [isDarkMode]=isDarkModeOn></about>
+    </section>
+    <section>
+      <work id="work"></work>
+    </section>
+    <section id="contact">
+      <contact></contact>
+    </section>
+    <section>
+      <personal-footer [isDarkMode]=isDarkModeOn></personal-footer>
+    </section>
+  </div>
+</div>

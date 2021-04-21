@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <ng-container class="social" *ngIf="inputSocialMedia !== 'email'; else elseTemplate">
+    <a href="{{ socialMedia.linkSocialMedia }}" target="_blank" rel="noopener noreferrer">
+
+      <ng-container *ngIf="isDarkModeOn; else elseTemplate">
+        <img src="{{ socialMedia.pathImageWhite }}" >
+      </ng-container>
+      <ng-template #elseTemplate>
+        <img src="{{ socialMedia.pathImageBlack }}" >
+      </ng-template>
+
+     </a>
+  </ng-container>
+  <ng-template class="social" #elseTemplate>
+    <a href="mailto:lucassj.dev@gmail.com">
+
+      <ng-container *ngIf="isDarkModeOn; else elseTemplate">
+        <img src="{{ socialMedia.pathImageWhite }}" >
+      </ng-container>
+      <ng-template #elseTemplate>
+        <img src="{{ socialMedia.pathImageBlack }}" >
+      </ng-template>
+    </a>
+  </ng-template>
+</div>
+
+
+
+

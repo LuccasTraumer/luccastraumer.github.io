@@ -1,0 +1,50 @@
+:root {
+  --first-color: rgb(26, 166, 139);
+  --bg-color: #e4e4e4;
+  --bg-contraste: #fff;
+  --font-color: #363636;
+  --bg-color-input: #f0f0f0;
+}
+
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  min-width: 10vw;
+  max-height: 100vh;
+  min-height: 10vh;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.ligth-theme {
+  background-color: var(--ligth-color);
+  color: var(--dark-color);
+}
+
+.dark-theme {
+  background-color: var(--dark-color);
+  color: var(--ligth-color);
+}
+
+.dark-theme {
+  --dark-color: #252525;
+  --bg-color: #252525;
+  --bg-contraste: rgb(48 48 48);
+  --font-color: #fff;
+  --bg-color-input: #f0f0f0;
+  --first-color: rgb(26, 166, 139);
+}

@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="conten">
+    <section class="title-section">
+      <h1>About</h1>
+    </section>
+
+    <div class="body">
+      <div class="text">
+        Hello! I'm Lucas. IT Student at the Technical High School of Campinas. @cotuca and Software Engineer Intern at @ciandt.
+      I loved tattos, finance and martial arts
+      </div>
+      <div class="me">
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                <ng-container *ngIf="isDarkMode; else elseTemplate">
+                  <img src="{{ PROFILE_ICON_WHITE }}" alt="profile icon" srcset="">
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <img src="{{ PROFILE_ICON_BLACK }}" alt="profile icon" srcset="">
+                </ng-template>
+
+              </th>
+              <td>Lucas Jesus</td>
+            </tr>
+
+            <tr>
+              <th>
+                <ng-container *ngIf="isDarkMode; else elseTemplate">
+                  <img src="{{ SOUND_ICON_WHITE }}" alt="language icon" srcset="">
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <img src="{{ SOUND_ICON_BLACK }}" alt="language icon" srcset="">
+                </ng-template>
+
+              </th>
+              <td>Portugues & English</td>
+            </tr>
+
+            <tr>
+              <th>
+                <ng-container *ngIf="isDarkMode; else elseTemplate">
+                  <img src="{{ LOCATION_ICON_WHITE }}" alt="location icon" srcset="">
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <img src="{{ LOCATION_ICON_BLACK }}" alt="location icon" srcset="">
+                </ng-template>
+
+              </th>
+              <td>Campinas, Brazil</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

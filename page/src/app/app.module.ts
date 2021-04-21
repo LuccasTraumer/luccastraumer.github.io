@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ViewPageModule } from './view-page/view-page.module';
 import { BuildingModule } from './building/building.module';
 import { NotFoundModule } from './not-found/not-found.module';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 
 
@@ -19,6 +20,7 @@ import { NotFoundModule } from './not-found/not-found.module';
     ViewPageModule,
     BuildingModule,
     NotFoundModule,
+    NgsRevealModule
   ],
   providers: [],
   bootstrap: [AppComponent]

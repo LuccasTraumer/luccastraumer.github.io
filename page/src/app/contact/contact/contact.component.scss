@@ -8,6 +8,7 @@
     border-radius: 10px;
     padding: 5%;
     text-align: center;
+    color: var(--font-color);
 
     label {
       font-weight: 600;
@@ -59,6 +60,7 @@
     flex-wrap: wrap;
     width: 90vw;
     align-items: center;
+    color: var(--font-color);
 
     .title {
       font-weight: 600;
@@ -92,7 +94,7 @@
       margin-top: 2%;
 
       input, textarea {
-        background-color: var(--bg-color);
+        background-color: var(--bg-color-input);
         border-radius: 5px;
         padding: 2%;
         margin-left: 2%;

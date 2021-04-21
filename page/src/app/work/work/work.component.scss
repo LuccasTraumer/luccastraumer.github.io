@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    color: var(--font-color);
 
     .cards-repositorys {
       display: flex;
@@ -28,6 +29,7 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    color: var(--font-color);
 
   .cards-repositorys {
     padding: inherit;
@@ -60,6 +62,7 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    color: var(--font-color);
 
     h1 {
       margin: 2%;

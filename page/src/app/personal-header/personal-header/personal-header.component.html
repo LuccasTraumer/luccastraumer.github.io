@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
   <div>
     <a class="navbar-brand" href="#"></a>
   </div>
@@ -20,7 +20,10 @@
         <a class="nav-link" (click)="onClickScroll('contact')">Contact</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Toggle</a>
+        <label class="switch">
+          <input (click)="toggleDarkTheme()" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
       </li>
     </ul>
   </div>

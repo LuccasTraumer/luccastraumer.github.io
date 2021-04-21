@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'show',
   templateUrl: './show.component.html',
   styleUrls: ['./show.component.scss']
 })
-export class ShowComponent implements OnInit {
+export class ShowComponent {
 
-  constructor() { }
+  isDarkModeOn: boolean;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
+  receiveMode($event) {
+    this.isDarkModeOn = $event;
+    console.log(this.isDarkModeOn);
+  }
 }

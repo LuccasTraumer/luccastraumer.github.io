@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Constantes } from 'src/utils/Constantes';
 import { SocialMediaModel } from 'src/model/social-media.model';
 
@@ -14,7 +14,11 @@ export class SocialMediaComponent implements OnInit{
 
   socialMedia: SocialMediaModel = new SocialMediaModel();
 
-  constructor() { }
+  @Input()
+  isDarkModeOn: boolean = false;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.selectSocialMedia();
@@ -44,5 +48,4 @@ export class SocialMediaComponent implements OnInit{
           break;
     }
   }
-
 }

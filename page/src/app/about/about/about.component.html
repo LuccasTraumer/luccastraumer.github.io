@@ -13,17 +13,41 @@
         <table>
           <tbody>
             <tr>
-              <th><img src="{{ PROFILE_ICON }}" alt="profile icon" srcset=""></th>
+              <th>
+                <ng-container *ngIf="isDarkMode; else elseTemplate">
+                  <img src="{{ PROFILE_ICON_WHITE }}" alt="profile icon" srcset="">
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <img src="{{ PROFILE_ICON_BLACK }}" alt="profile icon" srcset="">
+                </ng-template>
+
+              </th>
               <td>Lucas Jesus</td>
             </tr>
 
             <tr>
-              <th><img src="{{ SOUND_ICON }}" alt="language icon" srcset=""></th>
+              <th>
+                <ng-container *ngIf="isDarkMode; else elseTemplate">
+                  <img src="{{ SOUND_ICON_WHITE }}" alt="language icon" srcset="">
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <img src="{{ SOUND_ICON_BLACK }}" alt="language icon" srcset="">
+                </ng-template>
+
+              </th>
               <td>Portugues & English</td>
             </tr>
 
             <tr>
-              <th><img src="{{ LOCATION_ICON }}" alt="location icon" srcset=""></th>
+              <th>
+                <ng-container *ngIf="isDarkMode; else elseTemplate">
+                  <img src="{{ LOCATION_ICON_WHITE }}" alt="location icon" srcset="">
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <img src="{{ LOCATION_ICON_BLACK }}" alt="location icon" srcset="">
+                </ng-template>
+
+              </th>
               <td>Campinas, Brazil</td>
             </tr>
           </tbody>

@@ -14,7 +14,6 @@ export class WorkComponent implements OnInit {
   private listRep: string[] = ['AirCnC', 'WazeDev', 'mmartins', 'campact_huffman', 'twitter_data_covid-19', 'remade_random_websites'];
   public repositories: Array<RepositoryModel> = [];
 
-
   constructor(private serviceApi: ApiGithubService) { }
 
   ngOnInit(): void {
@@ -31,5 +30,4 @@ export class WorkComponent implements OnInit {
       });
     }).unsubscribe;
   }
-
 }

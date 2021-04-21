@@ -1,0 +1,91 @@
+@media screen and (max-width: 1024px) {
+  .container-fluid {
+    padding: 5%;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--font-color);
+
+    .cards-repositorys {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3em;
+      padding: 5%;
+      overflow-x: hidden;
+      flex-grow: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .container-fluid {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: var(--font-color);
+
+  .cards-repositorys {
+    padding: inherit;
+    margin: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 95%;
+    max-height: 90%;
+    height: 85%;
+    height: inherit;
+    overflow: hidden;
+  }
+
+  card-project {
+    margin: 1%;
+    width: 40%;
+    height: 50%;
+  }
+}
+}
+
+@media screen and (min-width: 1028px) {
+  .container-fluid {
+    padding: 2%;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: var(--font-color);
+
+    h1 {
+      margin: 2%;
+    }
+
+    .cards-repositorys {
+      padding: inherit;
+      margin: inherit;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      width: 90%;
+      height: inherit;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+
+    card-project {
+      margin: 1%;
+      width: 30%;
+      height: 45%;
+      flex-grow: 1;
+      flex-basis: 300px;
+    }
+  }
+}

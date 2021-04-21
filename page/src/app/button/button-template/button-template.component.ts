@@ -9,14 +9,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonTemplateComponent implements OnInit {
 
   @Input()
-  redirectLink: string;
+  redirectLink?: string;
 
   @Input()
   insideText: string;
 
   constructor(private viewportScroller: ViewportScroller) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    if (this.redirectLink.match('#'))
+      this.onClickScroll(this.redirectLink);
+  }
 
   onClickScroll(elementId: string) {
     this.viewportScroller.scrollToAnchor(elementId);

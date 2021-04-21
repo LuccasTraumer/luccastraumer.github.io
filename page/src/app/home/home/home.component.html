@@ -8,7 +8,7 @@
   </div>
 
   <div class="button">
-    <button-template [redirectLink]="''" (onClickScroll)="'contact'" [insideText]="'Contact'"></button-template>
+    <button-template (click)="onClickScroll('contact')" [redirectLink]=null [insideText]="'Contact'"></button-template>
   </div>
 
   <div class="social-medias">

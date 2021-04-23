@@ -11,6 +11,8 @@ export class PersonalHeaderComponent {
 
   setDark = false;
 
+
+
   constructor(private viewportScroller: ViewportScroller) { }
 
   onClickScroll(elementId: string) {

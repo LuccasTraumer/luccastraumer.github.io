@@ -22,6 +22,7 @@ nav {
   }
 }
 
+
 @media screen and (max-width: 425px) {
   div .navbar-brand::before {
     content: 'LJ';
@@ -42,7 +43,6 @@ nav {
 
   .navbar-collapse {
     flex-grow: 0;
-
   }
 
   div .navbar-brand::before {

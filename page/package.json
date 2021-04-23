@@ -8,7 +8,7 @@
     "test": "jest -c ./jest.config.js ./src",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npm run build && gh-pages -d dist/page"
+    "deploy": "npm run build --prod && gh-pages -d dist/page"
   },
   "private": true,
   "homepage": "https://luccastraumer.github.io",

@@ -17,7 +17,7 @@ export class ButtonTemplateComponent implements OnInit {
   constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
-    if (this.redirectLink.match('#'))
+    if (this.redirectLink !== null || this.redirectLink !== undefined || this.redirectLink.match('#'))
       this.onClickScroll(this.redirectLink);
   }
 

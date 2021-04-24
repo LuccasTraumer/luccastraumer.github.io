@@ -12,12 +12,25 @@
   --bg-color-input: #f0f0f0;
 }
 
+.dark-theme {
+  --dark-color: #252525;
+  --bg-color: #252525;
+  --bg-contraste: rgb(48 48 48);
+  --font-color: #fff;
+  --bg-color-input: #f0f0f0;
+  --first-color: rgb(26, 166, 139);
+}
+
 * {
   padding: 0;
   margin: 0;
   vertical-align: baseline;
   list-style: none;
   border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,27 +45,9 @@ body {
   overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.ligth-theme {
-  background-color: var(--ligth-color);
-  color: var(--dark-color);
-}
-
 .dark-theme {
   background-color: var(--dark-color);
   color: var(--ligth-color);
-}
-
-.dark-theme {
-  --dark-color: #252525;
-  --bg-color: #252525;
-  --bg-contraste: rgb(48 48 48);
-  --font-color: #fff;
-  --bg-color-input: #f0f0f0;
-  --first-color: rgb(26, 166, 139);
 }
 
 /*# sourceMappingURL=styles.css.map*/

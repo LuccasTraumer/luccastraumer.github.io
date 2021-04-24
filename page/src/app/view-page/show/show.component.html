@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="content " [ngClass]="{'dark-theme': isDarkModeOn}">
+  <nav class="content " [ngClass]="{'dark-theme': isDarkModeOn}">
     <section id="header">
       <personal-header (mode)="receiveMode($event)"></personal-header>
     </section>
@@ -18,5 +18,5 @@
     <section>
       <personal-footer [isDarkMode]=isDarkModeOn></personal-footer>
     </section>
-  </div>
+  </nav>
 </div>

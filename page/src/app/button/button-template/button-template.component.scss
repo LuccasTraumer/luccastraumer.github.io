@@ -1,31 +1,27 @@
+.button {
+  background-color: var(--first-color);
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+
+  a {
+    color: var(--bg-contraste);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .button {
-    background-color: var(--first-color);
     height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    border-radius: 5px;
     font-size: 1em;
-    font-weight: 500;
-
-    a {
-      color: #fff;
-    }
   }
 }
 
 @media screen and (max-width: 425px) {
   .button {
-    background-color: var(--first-color);
     display: block;
     text-align: center;
-    border-radius: 5px;
-    font-weight: 500;
-
-    a {
-      color: var(--bg-contraste);
-    }
   }
 }

@@ -1,20 +1,20 @@
 <div class="container-fluid">
-  <div class="text">
+  <section class="text">
     Hi, I'm <span>Lucas Jesus</span>
     <br>
     <label>
       {{this.sentence}}
     </label>
-  </div>
+  </section>
 
-  <div class="button">
+  <section class="button">
     <button-template (click)="onClickScroll('contact')" [redirectLink]=null [insideText]="'Contact'"></button-template>
-  </div>
+  </section>
 
-  <div class="social-medias">
+  <section class="social-medias">
     <social-media [isDarkModeOn] = isDarkMode [inputSocialMedia]="'instagram'"></social-media>
     <social-media [isDarkModeOn] = isDarkMode [inputSocialMedia]="'linkedin'"></social-media>
     <social-media [isDarkModeOn] = isDarkMode [inputSocialMedia]="'github'"></social-media>
     <social-media [isDarkModeOn] = isDarkMode [inputSocialMedia]="'email'"></social-media>
-  </div>
+  </section>
 </div>

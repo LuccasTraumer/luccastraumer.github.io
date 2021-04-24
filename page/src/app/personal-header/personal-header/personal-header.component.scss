@@ -1,17 +1,14 @@
 nav {
   background-color: var(--bg-contraste);
-
-  a {
-    color: var(--font-color);
-    cursor: pointer;
-  }
-}
-
-.navbar {
   color: var(--font-color);
   font-weight: bold;
   position: fixed;
   width: 100%;
+
+  a, .navbar-nav .nav-link {
+    color: var(--font-color);
+    cursor: pointer;
+  }
 
   li a:hover {
     text-decoration: underline;
@@ -35,14 +32,14 @@ nav {
     justify-content: space-between;
     padding: .5rem 5rem;
     height: 7vh;
-  }
 
-  .navbar-nav {
-    align-items: baseline;
-  }
+    .navbar-nav {
+      align-items: baseline;
+    }
 
-  .navbar-collapse {
-    flex-grow: 0;
+    .navbar-collapse {
+      flex-grow: 0;
+    }
   }
 
   div .navbar-brand::before {
@@ -100,7 +97,6 @@ nav {
     transform: translateX(26px);
   }
 
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
@@ -108,7 +104,5 @@ nav {
   .slider.round:before {
     border-radius: 50%;
   }
-
-
 }
 

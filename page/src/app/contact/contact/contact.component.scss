@@ -1,18 +1,50 @@
+.container-fluid {
+  display: flex;
+  color: var(--font-color);
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90vw;
+
+  .title {
+      font-weight: 600;
+      font-size: 1.3em;
+  }
+
+  label {
+      font-weight: 600;
+  }
+
+  .email, .name, .message {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: fit-content;
+      align-items: center;
+      margin-top: 2%;
+
+      input, textarea {
+        background-color: var(--bg-color);
+        border-radius: 5px;
+        padding: 2%;
+        margin-left: 2%;
+        text-indent: 10%;
+        width: 90%;
+        height: 5vh;
+      }
+
+      textarea {
+        height: max-content;
+      }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .container-fluid {
     background-color: var(--bg-contraste);
-    display: flex;
-    flex-direction: column;
     height: 95%;
-    width: 90vw;
     border-radius: 10px;
     padding: 5%;
     text-align: center;
-    color: var(--font-color);
-
-    label {
-      font-weight: 600;
-    }
 
     .email, .name, .message {
       display: flex;
@@ -42,7 +74,6 @@
       height: 7vh;
       margin-top: 5%;
     }
-
   }
 
   .container-fluid > div {
@@ -55,17 +86,7 @@
 
 @media screen and (min-width: 768px) {
   .container-fluid {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90vw;
     align-items: center;
-    color: var(--font-color);
-
-    .title {
-      font-weight: 600;
-      font-size: 1.3em;
-    }
 
     .content {
       padding: 2%;
@@ -78,35 +99,14 @@
 
     label {
       padding-left: 2%;
-      font-weight: 600;
     }
 
     .top {
       display: flex;
     }
 
-    .email, .name, .message {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      height: fit-content;
-      align-items: flex-start;
-      margin-top: 2%;
-
-      input, textarea {
-        background-color: var(--bg-color-input);
-        border-radius: 5px;
-        padding: 2%;
-        margin-left: 2%;
-        text-indent: 7%;
-        width: 90%;
-        height: 5vh;
-      }
-
-      textarea {
+    textarea {
         width: 100%;
-        height: max-content;
-      }
     }
 
     .message {

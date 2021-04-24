@@ -11,8 +11,6 @@ export class PersonalHeaderComponent {
 
   setDark = false;
 
-
-
   constructor(private viewportScroller: ViewportScroller) { }
 
   onClickScroll(elementId: string) {
@@ -22,6 +20,5 @@ export class PersonalHeaderComponent {
   toggleDarkTheme() {
     this.setDark = !this.setDark;
     this.mode.emit(this.setDark);
-    sessionStorage.setItem('darkModeOn', `${this.setDark}`)
   }
 }

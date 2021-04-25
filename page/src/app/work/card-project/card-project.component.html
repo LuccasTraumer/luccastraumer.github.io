@@ -2,10 +2,11 @@
 
   <h3 class="title">{{repository.name.split('_').splice(0,2).join(' ')}}</h3>
 
-  <label [hidden]="!longDescription" class="descript">- {{repository.description.split(' ').splice(0, 5).join(' ')}}<a class="descript" (click)="clickButton()"> mostrar mais</a></label>
+  <label [hidden]="!longDescription" class="descript">- {{repository.description.split(' ').splice(0, 5).join(' ')}}</label>
+  <a [hidden]="!longDescription" class="descript" (click)="clickButton()"> mostrar mais</a>
 
-  <label [hidden]="longDescription" class="descript">- {{repository.description.split(' ').splice(0, 8).join(' ')}}... <a class="descript" (click)="clickButton()"> mostrar menos</a></label>
-
+  <label [hidden]="longDescription" class="descript">- {{repository.description.split(' ').splice(0, 8).join(' ')}}...</label>
+  <a [hidden]="longDescription" class="descript" (click)="clickButton()"> mostrar menos</a>
 
   <div class="button">
     <button-template [insideText] ="'GITHUB'" [redirectLink] = 'repository.html_url'></button-template>

@@ -10,6 +10,7 @@
   --bg-contraste: #fff;
   --font-color: #363636;
   --bg-color-input: #f0f0f0;
+  --input-color: #e4e4e4;
 }
 
 .dark-theme {
@@ -19,6 +20,7 @@
   --font-color: #fff;
   --bg-color-input: #f0f0f0;
   --first-color: rgb(26, 166, 139);
+  --input-color: #fff;
 }
 
 * {
@@ -35,6 +37,8 @@ html {
 
 body {
   background-color: var(--bg-color);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
   color: var(--font-color);
   width: 100vw;
   height: 100vh;

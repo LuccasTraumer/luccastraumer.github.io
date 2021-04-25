@@ -1,12 +1,16 @@
 <section  class="container-fluid">
 
-  <h3 class="title">{{repository.name.split('_').splice(0,2).join(' ')}}</h3>
+  <header>
+    <h3 class="title">{{repository.name.split('_').splice(0,2).join(' ')}}</h3>
+  </header>
 
-  <label [hidden]="!longDescription" class="descript">- {{repository.description.split(' ').splice(0, 5).join(' ')}}</label>
-  <a [hidden]="!longDescription" class="descript" (click)="clickButton()"> mostrar mais</a>
+  <main>
+    <label [hidden]="!longDescription" class="descript">- {{repository.description.split(' ').splice(0, 5).join(' ')}}</label>
+    <a [hidden]="!longDescription" class="descript" (click)="clickButton()"> mostrar mais</a>
 
-  <label [hidden]="longDescription" class="descript">- {{repository.description.split(' ').splice(0, 8).join(' ')}}...</label>
-  <a [hidden]="longDescription" class="descript" (click)="clickButton()"> mostrar menos</a>
+    <label [hidden]="longDescription" class="descript">- {{repository.description.split(' ').splice(0, 8).join(' ')}}...</label>
+    <a [hidden]="longDescription" class="descript" (click)="clickButton()"> mostrar menos</a>
+  </main>
 
   <div class="button">
     <button-template [insideText] ="'GITHUB'" [redirectLink] = 'repository.html_url'></button-template>

@@ -1,10 +1,15 @@
-<div class="container-fluid">
+<script src="https://unpkg.com/scrollreveal@4"></script>
+<script>
+  ScrollReveal({ duration: 1000 })
+</script>
+
+<div class="container-fluid" class="headline">
   <nav class="content " [ngClass]="{'dark-theme': isDarkModeOn}">
-    <section id="header">
+    <section id="header" class="tagline">
       <personal-header (mode)="receiveMode($event)"></personal-header>
     </section>
     <section id="home" >
-      <home [isDarkMode]=isDarkModeOn (mode)="receiveMode($event)"></home>
+      <home class="punchline" [isDarkMode]=isDarkModeOn (mode)="receiveMode($event)"></home>
     </section>
     <section id="about">
       <about [isDarkMode]=isDarkModeOn></about>
@@ -20,3 +25,9 @@
     </section>
   </nav>
 </div>
+
+<script>
+  ScrollReveal().reveal('.headline')
+  ScrollReveal().reveal('.tagline', { delay: 500 })
+  ScrollReveal().reveal('.punchline', { delay: 2000 })
+</script>

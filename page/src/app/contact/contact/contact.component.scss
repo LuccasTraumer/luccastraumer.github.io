@@ -23,7 +23,7 @@
       margin-top: 2%;
 
       input, textarea {
-        background-color: var(--bg-color);
+        background-color: var(--input-color);
         border-radius: 5px;
         padding: 2%;
         margin-left: 2%;
@@ -40,7 +40,6 @@
 
 @media screen and (max-width: 767px) {
   .container-fluid {
-    background-color: var(--bg-contraste);
     height: 95%;
     border-radius: 10px;
     padding: 5%;
@@ -55,7 +54,6 @@
       margin-top: 2%;
 
       input, textarea {
-        background-color: var(--bg-color);
         border-radius: 5px;
         padding: 2%;
         margin-left: 2%;

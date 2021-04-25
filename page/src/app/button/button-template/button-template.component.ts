@@ -1,12 +1,12 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'button-template',
   templateUrl: './button-template.component.html',
   styleUrls: ['./button-template.component.scss']
 })
-export class ButtonTemplateComponent implements OnInit {
+export class ButtonTemplateComponent {
 
   @Input()
   redirectLink?: string;
@@ -16,9 +16,9 @@ export class ButtonTemplateComponent implements OnInit {
 
   constructor(private viewportScroller: ViewportScroller) { }
 
-  ngOnInit(): void {
+  sendToRedirectLink($event) {
     if (this.redirectLink !== null || this.redirectLink !== undefined || this.redirectLink.match('#'))
-      this.onClickScroll(this.redirectLink);
+    this.onClickScroll(this.redirectLink);
   }
 
   onClickScroll(elementId: string) {

@@ -15,6 +15,7 @@
     max-width: 100%;
     overflow: hidden;
     height: inherit;
+    gap: 1.5%;
   }
 
   header {
@@ -35,6 +36,11 @@
       flex-grow: 1;
       margin: 0%;
     }
+
+    card-project {
+      margin: 1% 0%;
+    }
+
   }
 }
 

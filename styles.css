@@ -23,6 +23,17 @@
   --input-color: #fff;
 }
 
+.cont {
+  right: -100%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.show {
+  right: 0%;
+  transition-timing-function: ease-in-out;
+}
+
 * {
   padding: 0;
   margin: 0;

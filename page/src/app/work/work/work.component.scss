@@ -32,13 +32,16 @@
 
     .cards-repositorys {
       align-items: center;
-      padding: 5%;
+      padding: 0%;
       flex-grow: 1;
       margin: 0%;
+      height: 100%;
     }
 
     card-project {
-      margin: 1% 0%;
+      margin: 2% 0%;
+      height: 22vh;
+      width: 90vw;
     }
 
   }
@@ -56,13 +59,13 @@
     .cards-repositorys {
       width: 90%;
       justify-content: space-between;
+      flex-grow: 2;
     }
 
     card-project {
       margin: 1%;
       width: 30%;
       height: 45%;
-      flex-grow: 1;
       flex-basis: 300px;
     }
   }

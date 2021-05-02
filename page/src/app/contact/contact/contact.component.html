@@ -5,26 +5,28 @@
   </header>
 
   <main class="content">
-    <article class="top">
-      <section class="name">
-        <header>Name</header>
-        <input type="text" placeholder="Your Name">
-      </section>
+    <nav>
+      <article class="top">
+        <section class="name">
+          <header>Name</header>
+          <input type="text" placeholder="Your Name">
+        </section>
 
-      <section class="email">
-        <header> E-mail</header>
-        <input type="email" name="" id="" placeholder="Your e-mail">
-      </section>
+        <section class="email">
+          <header> E-mail</header>
+          <input type="email" name="" id="" placeholder="Your e-mail">
+        </section>
 
-    </article>
-    <article class="message">
-      <section>
-        <header>Message</header>
-        <textarea name="" id="" cols="100" rows="10" placeholder="Your Message"></textarea>
+      </article>
+      <article class="message">
+        <section>
+          <header>Message</header>
+          <textarea name="" id="" cols="100" rows="10" placeholder="Your Message"></textarea>
+        </section>
+      </article>
+      <section class="button">
+        <button-template [redirectLink]="''" [insideText]="'Send'"></button-template>
       </section>
-    </article>
-    <section class="button">
-      <button-template [redirectLink]="''" [insideText]="'Send'"></button-template>
-    </section>
+    </nav>
   </main>
 </section>

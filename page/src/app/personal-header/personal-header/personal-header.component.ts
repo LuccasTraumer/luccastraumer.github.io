@@ -14,7 +14,7 @@ export class PersonalHeaderComponent {
 
   pathIconMenu: string;
 
-  menuIsOpen: boolean = true;
+  menuIsOpen: boolean = false;
 
   constructor(private viewportScroller: ViewportScroller) {
     this.pathIconMenu = this.setDark ? Constantes.PATH_ICON_WHITE_MENU_HAMBURGUER : Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
@@ -23,6 +23,7 @@ export class PersonalHeaderComponent {
 
   onClickScroll(elementId: string) {
     this.viewportScroller.scrollToAnchor(elementId);
+    this.clickMenu()
   }
 
   toggleDarkTheme() {

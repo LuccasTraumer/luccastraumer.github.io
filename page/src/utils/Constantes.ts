@@ -27,4 +27,6 @@ export class Constantes {
   public static readonly apiGithubRepository = environment.apiGithubRepository;
   public static readonly apiGithubOwner = environment.apiGithubOwner;
 
+  public static readonly PATH_ICON_BLACK_MENU_HAMBURGUER = environment.pathIconBlackMenuHamburguer;
+  public static readonly PATH_ICON_WHITE_MENU_HAMBURGUER = environment.pathIconWhiteMenuHamburguer;
 }

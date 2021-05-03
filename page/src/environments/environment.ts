@@ -29,5 +29,8 @@ export const environment = {
 
   apiGithubRepository: 'https://api.github.com/users/luccastraumer/repos?page=1&per_page=100',
   apiGithubOwner: 'https://api.github.com/users/luccastraumer',
+
+  pathIconBlackMenuHamburguer: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-black-png.png',
+  pathIconWhiteMenuHamburguer: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-white-png.png',
 };
 

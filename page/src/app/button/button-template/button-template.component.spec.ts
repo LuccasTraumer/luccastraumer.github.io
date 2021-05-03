@@ -19,7 +19,14 @@ describe('ButtonTemplateComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('quando iniciado deve validar se o Input foi definido', () => {
+    component.redirectLink = '#';
+    fixture.detectChanges();
+
+    expect(component.onClickScroll).toBeCalled();
   });
 });

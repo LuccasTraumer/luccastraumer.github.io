@@ -1,10 +1,10 @@
-<div class="container-fluid">
-  <div class="content " [ngClass]="{'dark-theme': isDarkModeOn}">
-    <section id="header">
+<div class="container-fluid" class="headline">
+  <nav class="content " [ngClass]="{'dark-theme': isDarkModeOn}">
+    <section id="header" class="tagline">
       <personal-header (mode)="receiveMode($event)"></personal-header>
     </section>
     <section id="home" >
-      <home [isDarkMode]=isDarkModeOn (mode)="receiveMode($event)"></home>
+      <home class="punchline" [isDarkMode]=isDarkModeOn (mode)="receiveMode($event)"></home>
     </section>
     <section id="about">
       <about [isDarkMode]=isDarkModeOn></about>
@@ -18,5 +18,5 @@
     <section>
       <personal-footer [isDarkMode]=isDarkModeOn></personal-footer>
     </section>
-  </div>
+  </nav>
 </div>

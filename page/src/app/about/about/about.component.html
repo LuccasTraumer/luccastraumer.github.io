@@ -1,59 +1,44 @@
-<div class="container-fluid">
-  <div class="conten">
-    <section class="title-section">
+<article class="container-fluid">
+  <section class="conten">
+    <header>
       <h1>About</h1>
-    </section>
+    </header>
 
-    <div class="body">
-      <div class="text">
+    <main class="body">
+      <section class="text">
         Hello! I'm Lucas. IT Student at the Technical High School of Campinas. @cotuca and Software Engineer Intern at @ciandt.
       I loved tattos, finance and martial arts
-      </div>
-      <div class="me">
+      </section>
+      <section class="me">
         <table>
           <tbody>
             <tr>
               <th>
-                <ng-container *ngIf="isDarkMode; else elseTemplate">
-                  <img src="{{ PROFILE_ICON_WHITE }}" alt="profile icon" srcset="">
-                </ng-container>
-                <ng-template #elseTemplate>
-                  <img src="{{ PROFILE_ICON_BLACK }}" alt="profile icon" srcset="">
-                </ng-template>
-
+                <img src="{{ PROFILE_ICON_WHITE }}" alt="profile icon" srcset="" [hidden] = !isDarkMode>
+                <img src="{{ PROFILE_ICON_BLACK }}" alt="profile icon" srcset="" [hidden] = isDarkMode>
               </th>
               <td>Lucas Jesus</td>
             </tr>
 
             <tr>
               <th>
-                <ng-container *ngIf="isDarkMode; else elseTemplate">
-                  <img src="{{ SOUND_ICON_WHITE }}" alt="language icon" srcset="">
-                </ng-container>
-                <ng-template #elseTemplate>
-                  <img src="{{ SOUND_ICON_BLACK }}" alt="language icon" srcset="">
-                </ng-template>
-
+                <img src="{{ SOUND_ICON_WHITE }}" alt="language icon" srcset="" [hidden] = !isDarkMode>
+                <img src="{{ SOUND_ICON_BLACK }}" alt="language icon" srcset="" [hidden] = isDarkMode>
               </th>
               <td>Portugues & English</td>
             </tr>
 
             <tr>
               <th>
-                <ng-container *ngIf="isDarkMode; else elseTemplate">
-                  <img src="{{ LOCATION_ICON_WHITE }}" alt="location icon" srcset="">
-                </ng-container>
-                <ng-template #elseTemplate>
-                  <img src="{{ LOCATION_ICON_BLACK }}" alt="location icon" srcset="">
-                </ng-template>
-
+                <img src="{{ LOCATION_ICON_WHITE }}" alt="location icon" srcset=""[hidden] = !isDarkMode>
+                <img src="{{ LOCATION_ICON_BLACK }}" alt="location icon" srcset="" [hidden] = isDarkMode>
               </th>
               <td>Campinas, Brazil</td>
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </div>
+      </section>
+    </main>
+  </section>
 
-</div>
+</article>

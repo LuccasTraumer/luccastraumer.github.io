@@ -20,7 +20,7 @@ export class CardProjectComponent implements OnInit{
 
 
 
-  clickButton(event) {
+  clickButton() {
     this.longDescription = !this.longDescription;
   }
 }

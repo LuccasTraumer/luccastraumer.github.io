@@ -1,52 +1,29 @@
-nav {
-  background-color: var(--bg-contraste);
+.mobile, .desktop {
+  width: 100%;
+  height: 7vh;
+  padding: 0;
+  margin: 0;
+  color: var(--font-color);
+  background: var(--bg-contraste);
+  position: fixed;
+
+  .header {
+    display: flex;
+    background: var(--bg-contraste);
+    padding: 0 5%;
+    width: 100%;
+    height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   a {
     color: var(--font-color);
-    cursor: pointer;
-  }
-}
-
-.navbar {
-  color: var(--font-color);
-  font-weight: bold;
-  position: fixed;
-  width: 100%;
-
-  li a:hover {
-    text-decoration: underline;
   }
 
-  a:active {
-    transition: all 1s step-start;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  div .navbar-brand::before {
-    content: 'LJ';
-    letter-spacing: 10%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navbar {
-    justify-content: space-between;
-    padding: .5rem 5rem;
-    height: 7vh;
-  }
-
-  .navbar-nav {
-    align-items: baseline;
-  }
-
-  .navbar-collapse {
-    flex-grow: 0;
-
-  }
-
-  div .navbar-brand::before {
+  div .logo::before {
     content: '<lucas-jesus/>';
+    letter-spacing: 10%;
   }
 
   .switch {
@@ -100,7 +77,6 @@ nav {
     transform: translateX(26px);
   }
 
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
@@ -108,7 +84,78 @@ nav {
   .slider.round:before {
     border-radius: 50%;
   }
-
-
 }
 
+@media screen and (min-width: 769px) {
+  .mobile {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile {
+    visibility: hidden;
+  }
+
+  .header {
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1% 5%;
+    font-weight: 600;
+  }
+
+  .navbar {
+    margin: 0;
+  }
+
+  .navbar > :last-child {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    visibility: hidden;
+  }
+
+  .mobile, .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 5%;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    div .logo::before {
+      content: '<LJ>';
+      letter-spacing: 10%;
+    }
+
+    button {
+      background: none;
+      z-index: 1;
+      position: absolute;
+      left: 80%;
+
+      img {
+        width: 5vw;
+      }
+
+    }
+
+    .cont {
+      background: var(--bg-contraste);
+      position: absolute;
+      z-index: 0;
+      padding-top: 100%;
+
+      .navbar {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

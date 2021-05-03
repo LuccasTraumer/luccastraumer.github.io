@@ -1,17 +1,61 @@
+.container-fluid {
+  display: flex;
+  color: var(--font-color);
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90vw;
+
+  .content {
+    background-color: var(--bg-contraste);
+
+  }
+
+  .title {
+      font-weight: 600;
+      font-size: 1.3em;
+  }
+
+  label {
+      font-weight: 600;
+  }
+
+  .email, .name, .message {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: fit-content;
+      align-items: center;
+      margin-top: 2%;
+
+      input, textarea {
+        background-color: var(--input-color);
+        border-radius: 5px;
+        padding: 2%;
+        margin-left: 2%;
+        text-indent: 10%;
+        width: 90%;
+        height: 5vh;
+      }
+
+      textarea {
+        height: max-content;
+        // width: 95%;
+      }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .container-fluid {
-    background-color: var(--bg-contraste);
-    display: flex;
-    flex-direction: column;
     height: 95%;
-    width: 90vw;
-    border-radius: 10px;
-    padding: 5%;
+    width: 100vw;
+    border-radius: 0px;
+    padding: 0%;
+    margin-bottom: 5%;
     text-align: center;
-    color: var(--font-color);
 
-    label {
-      font-weight: 600;
+    .content {
+      width: 100%;
+      padding: 5%;
     }
 
     .email, .name, .message {
@@ -23,7 +67,6 @@
       margin-top: 2%;
 
       input, textarea {
-        background-color: var(--bg-color);
         border-radius: 5px;
         padding: 2%;
         margin-left: 2%;
@@ -42,7 +85,6 @@
       height: 7vh;
       margin-top: 5%;
     }
-
   }
 
   .container-fluid > div {
@@ -55,22 +97,11 @@
 
 @media screen and (min-width: 768px) {
   .container-fluid {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90vw;
     align-items: center;
-    color: var(--font-color);
-
-    .title {
-      font-weight: 600;
-      font-size: 1.3em;
-    }
 
     .content {
       padding: 2%;
       margin: 0%;
-      background-color: var(--bg-contraste);
       width: 60%;
       max-width: 70%;
       border-radius: 10px;
@@ -78,39 +109,30 @@
 
     label {
       padding-left: 2%;
-      font-weight: 600;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .top {
       display: flex;
-    }
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
 
-    .email, .name, .message {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      height: fit-content;
-      align-items: flex-start;
-      margin-top: 2%;
-
-      input, textarea {
-        background-color: var(--bg-color-input);
-        border-radius: 5px;
-        padding: 2%;
-        margin-left: 2%;
-        text-indent: 7%;
+      input {
         width: 90%;
-        height: 5vh;
-      }
-
-      textarea {
-        width: 100%;
-        height: max-content;
+        padding: 5%
       }
     }
 
     .message {
-      width: 95%;
+      text-align: center;
+      width: 100%;
     }
 
     .button {

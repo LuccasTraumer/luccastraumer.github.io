@@ -1,24 +1,32 @@
-<div class="container-fluid">
-  <h1>Contact</h1>
+<section class="container-fluid">
 
-  <div class="content">
-    <div class="top">
-      <div class="email">
-        <label>E-mail</label>
-        <input type="email" name="" id="" placeholder="Your e-mail">
-      </div>
+  <header>
+    <h1>Contact</h1>
+  </header>
 
-      <div class="name">
-        <label>Name</label>
-        <input type="text" placeholder="Your Name">
-      </div>
-    </div>
-    <div class="message">
-      <label>Message</label>
-      <textarea name="" id="" cols="10" rows="8" placeholder="Your Message"></textarea>
-    </div>
-    <div class="button">
-      <button-template [redirectLink]="''" [insideText]="'Send'"></button-template>
-    </div>
-  </div>
-</div>
+  <main class="content">
+    <nav>
+      <article class="top">
+        <section class="name">
+          <header>Name</header>
+          <input type="text" placeholder="Your Name">
+        </section>
+
+        <section class="email">
+          <header> E-mail</header>
+          <input type="email" name="" id="" placeholder="Your e-mail">
+        </section>
+
+      </article>
+      <article class="message">
+        <section>
+          <header>Message</header>
+          <textarea name="" id="" cols="100" rows="10" placeholder="Your Message"></textarea>
+        </section>
+      </article>
+      <section class="button">
+        <button-template [redirectLink]="''" [insideText]="'Send'"></button-template>
+      </section>
+    </nav>
+  </main>
+</section>

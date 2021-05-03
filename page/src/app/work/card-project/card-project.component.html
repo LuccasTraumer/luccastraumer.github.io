@@ -1,18 +1,19 @@
-<div  class="container-fluid">
+<section  class="container-fluid">
 
-  <h3 class="title">{{repository.name.split('_').splice(0,2).join(' ')}}</h3>
+  <header>
+    <h3 class="title">{{repository.name.split('_').splice(0,2).join(' ')}}</h3>
+  </header>
 
-  <!-- <ng-container  *ngIf="longDescription; else elseTemplate">
-    - {{repository.description.split(' ').splice(0, 7).join(' ')}} <a class="descript" (click)="clickButton()"> mostrar mais</a>
-  </ng-container>
-  <ng-template #elseTemplate>
-    {{repository.description.split(' ').splice(0, 9).join(' ')}}... <a class="descript" (click)="clickButton()"> mostrar menos</a>
-  </ng-template> -->
+  <main>
+    <label [hidden]="!longDescription" class="descript">- {{repository.description.split(' ').splice(0, 5).join(' ')}}</label>
+    <a [hidden]="!longDescription" class="descript" (click)="clickButton()"> mostrar mais</a>
 
-  - {{repository.description.split(' ').splice(0, 7).join(' ')}}
+    <label [hidden]="longDescription" class="descript">- {{repository.description.split(' ').splice(0, 8).join(' ')}}...</label>
+    <a [hidden]="longDescription" class="descript" (click)="clickButton()"> mostrar menos</a>
+  </main>
 
   <div class="button">
-    <button-template [insideText] ="'GITHUB'" [redirectLink] = '"{{repository.html_url}}"'></button-template>
+    <button-template [insideText] ="'GITHUB'" [redirectLink] = 'repository.html_url'></button-template>
   </div>
 
-</div>
+</section>

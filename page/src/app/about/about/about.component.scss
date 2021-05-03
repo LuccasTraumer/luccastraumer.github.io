@@ -1,59 +1,83 @@
+.container-fluid {
+  color: var(--font-color);
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  h1 {
+    text-align: center;
+    padding: 2%;
+  }
+
+  .body {
+    display: flex;
+  }
+
+  .text {
+    font-weight: 600;
+  }
+
+  table {
+    padding: inherit;
+
+    tbody {
+      display: flex;
+      width: inherit;
+      flex-direction: column;
+
+      tr {
+        display: inherit;
+        width: inherit;
+        align-self: center;
+        justify-content: space-between;
+        padding: 5%;
+        font-size: 0.8rem;
+        font-weight: 500;
+
+        img {
+          width: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container-fluid {
-    background-color: var(--bg-contraste);
-    display: flex;
-    padding: 5%;
     align-items: center;
-    max-width: 80vw;
-    width: 65vw;
+    max-width: 100vw;
+    width: 100vw;
     height: 40vh;
     max-height: 40vh;
-    border-radius: 50px;
-    color: var(--font-color);
+    margin: 0;
+    justify-content: center;
 
-    .title-section {
-      text-align: center;
+
+    .conten {
+      background-color: var(--bg-contraste);
+      height: inherit;
+      max-width: 60%;
+      border-radius: 50px;
+      justify-content: center;
       padding: 5%;
+      align-self: center;
+
     }
 
     .body {
-      display: flex;
       flex-direction: row;
-      width: inherit;
 
       .text {
         width: 70%;
         text-align: center;
-        font-weight: 600;
       }
 
       .me {
-        width: 30%;
+        width: 20%;
       }
 
       table {
         width: 100%;
-        padding: inherit;
-
-        tbody {
-          display: flex;
-          width: inherit;
-          flex-direction: column;
-
-          tr {
-            display: inherit;
-            width: 100%;
-            align-self: center;
-            justify-content: space-between;
-            padding: 5%;
-            font-size: 1rem;
-            font-weight: 500;
-
-            img {
-              width: 1.3rem;
-            }
-          }
-        }
       }
     }
   }
@@ -61,32 +85,23 @@
 
 @media screen and (max-width: 767px) {
   .container-fluid {
-    width: 90vw;
+    width: 100vw;
     height: 70vh;
     border-radius: 0;
-    display: flex;
     justify-content: center;
-    color: var(--font-color);
-
-    .title-section {
-      text-align: center;
-      padding: 5%;
-    }
 
     .text {
       font-size: 0.9em;
-      font-weight: 600;
     }
 
     .conten {
-      width: 90%;
+      width: inherit;
       height: 70%;
       background-color: var(--bg-contraste);
-      border-radius: 10px;
+      border-radius: 0px;
       padding: 5%;
 
       .body {
-        display: flex;
         flex-direction: column;
         align-items: center;
 
@@ -95,27 +110,6 @@
 
           table {
             width: inherit;
-            padding: inherit;
-
-            tbody {
-              display: flex;
-              width: inherit;
-              flex-direction: column;
-
-              tr {
-                display: inherit;
-                width: inherit;
-                align-self: center;
-                justify-content: space-between;
-                padding: 5%;
-                font-size: 0.8rem;
-                font-weight: 500;
-
-                img {
-                  width: 1.3rem;
-                }
-              }
-            }
           }
         }
       }

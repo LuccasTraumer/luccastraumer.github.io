@@ -36,7 +36,6 @@ export class ApiGithubService {
       errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
     }
     alert(errorMessage);
-    console.log(errorMessage);
     return throwError(errorMessage);
   }
 }

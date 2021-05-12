@@ -38,7 +38,8 @@
     </div>
 
     <button (click)="clickMenu()" class="menu-hamb">
-      <img src="{{pathIconMenu}}">
+      <img src="{{ pathIconMenuWhite }}" [hidden] = !setDark>
+      <img src="{{ pathIconMenuBlack }}" [hidden] = setDark>
     </button>
   </section>
 

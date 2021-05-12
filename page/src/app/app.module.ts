@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ViewPageModule } from './view-page/view-page.module';
 import { BuildingModule } from './building/building.module';
 import { NotFoundModule } from './not-found/not-found.module';
-import {NgsRevealConfig, NgsRevealModule} from 'ngx-scrollreveal';
 
 
 

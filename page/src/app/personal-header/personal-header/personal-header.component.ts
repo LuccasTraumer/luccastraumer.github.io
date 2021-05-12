@@ -12,13 +12,14 @@ export class PersonalHeaderComponent {
 
   setDark = false;
 
-  pathIconMenu: string;
+  pathIconMenuWhite: string;
+  pathIconMenuBlack: string;
 
   menuIsOpen: boolean = false;
 
   constructor(private viewportScroller: ViewportScroller) {
-    this.pathIconMenu = this.setDark ? Constantes.PATH_ICON_WHITE_MENU_HAMBURGUER : Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
-    console.log(this.pathIconMenu)
+    this.pathIconMenuWhite = Constantes.PATH_ICON_WHITE_MENU_HAMBURGUER;
+    this.pathIconMenuBlack = Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
   }
 
   onClickScroll(elementId: string) {
@@ -29,12 +30,10 @@ export class PersonalHeaderComponent {
   toggleDarkTheme() {
     this.setDark = !this.setDark;
     this.mode.emit(this.setDark);
-    this.pathIconMenu = this.setDark ? Constantes.PATH_ICON_WHITE_MENU_HAMBURGUER : Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
   }
 
   clickMenu() {
     this.menuIsOpen = !this.menuIsOpen;
     console.log(this.menuIsOpen);
   }
-
 }

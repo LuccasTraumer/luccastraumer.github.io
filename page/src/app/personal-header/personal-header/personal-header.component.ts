@@ -34,6 +34,5 @@ export class PersonalHeaderComponent {
 
   clickMenu() {
     this.menuIsOpen = !this.menuIsOpen;
-    console.log(this.menuIsOpen);
   }
 }

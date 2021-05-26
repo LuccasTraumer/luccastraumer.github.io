@@ -11,12 +11,12 @@
     display: flex;
     flex-wrap: wrap;
     padding: inherit;
-    margin: inherit;
     max-width: 100%;
     overflow: hidden;
     height: inherit;
     gap: 1.5%;
     justify-content: space-between;
+    margin-bottom: 5%;
 
     card-project {
       display: block;
@@ -79,6 +79,10 @@
     width: max-content;
     max-height: 90%;
     height: 85%;
+
+    card-project {
+      margin-bottom: 2%;
+    }
   }
 }
 }

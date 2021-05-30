@@ -13,6 +13,7 @@ export class ShowComponent {
   }
 
   receiveMode($event) {
+    console.log($event);
     this.isDarkModeOn = $event;
   }
 }

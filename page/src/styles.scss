@@ -18,9 +18,10 @@
 }
 
 .cont {
-  right: -100%;
+  right: -80%;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
+  height: 100vh;
 }
 
 .show {

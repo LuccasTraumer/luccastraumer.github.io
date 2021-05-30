@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnChanges, SimpleChanges } from '@angular/core';
 import { Constantes } from '../../../utils/Constantes';
 
 @Component({
@@ -10,10 +10,10 @@ import { Constantes } from '../../../utils/Constantes';
 export class PersonalHeaderComponent {
   @Output() mode = new EventEmitter<boolean>();
 
-  setDark = false;
-
   pathIconMenuWhite: string;
   pathIconMenuBlack: string;
+
+  setDark = false;
 
   menuIsOpen: boolean = false;
 
@@ -22,14 +22,18 @@ export class PersonalHeaderComponent {
     this.pathIconMenuBlack = Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
   }
 
-  onClickScroll(elementId: string) {
-    this.viewportScroller.scrollToAnchor(elementId);
-    this.clickMenu()
+  receiveMode($event) {
+    this.toggleDarkTheme();
   }
 
   toggleDarkTheme() {
     this.setDark = !this.setDark;
     this.mode.emit(this.setDark);
+  }
+
+  onClickScroll(elementId: string) {
+    this.viewportScroller.scrollToAnchor(elementId);
+    this.clickMenu()
   }
 
   clickMenu() {

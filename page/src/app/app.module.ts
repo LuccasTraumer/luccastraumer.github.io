@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ViewPageModule } from './view-page/view-page.module';
 import { BuildingModule } from './building/building.module';
 import { NotFoundModule } from './not-found/not-found.module';
+import { BackgroundStarsModule } from './background-stars/background-stars.module';
 
 
 
@@ -18,6 +19,7 @@ import { NotFoundModule } from './not-found/not-found.module';
     AppRoutingModule,
     ViewPageModule,
     BuildingModule,
+    BackgroundStarsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'show',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./show.component.scss']
 })
 export class ShowComponent {
+  @Output() mode = new EventEmitter<boolean>();
+
+  setDark = false;
 
   isDarkModeOn: boolean;
 
@@ -15,5 +18,10 @@ export class ShowComponent {
   receiveMode($event) {
     console.log($event);
     this.isDarkModeOn = $event;
+  }
+
+  toggleDarkTheme() {
+    this.setDark = !this.setDark;
+    this.mode.emit(this.setDark);
   }
 }

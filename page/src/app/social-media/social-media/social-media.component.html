@@ -2,16 +2,16 @@
   <ng-container class="social" *ngIf="inputSocialMedia !== 'email'; else elseTemplate">
     <a href="{{ socialMedia.linkSocialMedia }}" target="_blank" rel="noopener noreferrer">
 
-        <img src="{{ socialMedia.pathImageWhite }}" [hidden] = !isDarkModeOn>
-        <img src="{{ socialMedia.pathImageBlack }}" [hidden] = isDarkModeOn>
+        <img src="{{ socialMedia.pathImageWhite }}" [hidden] = !isDarkModeOn alt="{{inputSocialMedia}} icon">
+        <img src="{{ socialMedia.pathImageBlack }}" [hidden] = isDarkModeOn alt="{{inputSocialMedia}} icon">
 
      </a>
   </ng-container>
   <ng-template class="social" #elseTemplate>
     <a href="mailto:lucassj.dev@gmail.com">
 
-      <img src="{{ socialMedia.pathImageWhite }}" [hidden] = !isDarkModeOn>
-      <img src="{{ socialMedia.pathImageBlack }}" [hidden] = isDarkModeOn>
+      <img src="{{ socialMedia.pathImageWhite }}" [hidden] = !isDarkModeOn alt="{{inputSocialMedia}} icon">
+      <img src="{{ socialMedia.pathImageBlack }}" [hidden] = isDarkModeOn alt="{{inputSocialMedia}} icon">
 
     </a>
   </ng-template>

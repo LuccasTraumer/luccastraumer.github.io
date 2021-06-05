@@ -3,7 +3,7 @@
   --bg-color: #e4e4e4;
   --bg-contraste: #fff;
   --font-color: #363636;
-  --bg-color-input: #f0f0f0;
+  --bg-color-input: var(--bg-color);
   --input-color: #e4e4e4;
 }
 
@@ -12,7 +12,7 @@
   --bg-color: #252525;
   --bg-contraste: rgb(48 48 48);
   --font-color: #fff;
-  --bg-color-input: #f0f0f0;
+  --bg-color-input: var(--font-color);
   --first-color: rgb(26, 166, 139);
   --input-color: #fff;
 }

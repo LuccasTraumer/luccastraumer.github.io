@@ -14,9 +14,12 @@ export class BackgroundComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  receiveMode($event) {
+    this.toggleDarkTheme();
+  }
+
   toggleDarkTheme() {
     this.setDark = !this.setDark;
     this.mode.emit(this.setDark);
   }
-
 }

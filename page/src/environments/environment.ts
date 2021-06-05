@@ -32,5 +32,13 @@ export const environment = {
 
   pathIconBlackMenuHamburguer: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-black-png.png',
   pathIconWhiteMenuHamburguer: 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-white-png.png',
+
+
+  pathImageCardFlipAirCnC: 'https://github.com/LuccasTraumer/AirCnC/raw/master/Images_Web/Web_Screen_Login.jpg',
+  pathImageCardFlipCompactHuffman: 'https://raw.githubusercontent.com/LuccasTraumer/campact_huffman/main/1000px-Huffman_tree.svg.png',
+  pathImageCardFlipCompactMaiara: 'https://raw.githubusercontent.com/LuccasTraumer/mmartins/master/imgs/desktop-feed.jpg',
+  pathImageCardFlipCompactRemade: 'https://raw.githubusercontent.com/LuccasTraumer/remade_random_websites/master/agencia/Screenshot_2020-09-06%20Digital%20Agency.png?token=AD5NGIY6ZESMIOXSZCLN43C7L3JQG',
+  pathImageCardFlipCompactCovid: 'https://github.com/LuccasTraumer/twitter_data_covid-19/raw/master/Screenshot_2020-09-05%20Atualiza%C3%A7%C3%A3o%20sobre%20COVID-19%20(%20againstCovi19)%20Twitter.png',
+  pathImageCardFlipCompactWazeDev: 'https://github.com/LuccasTraumer/WazeDev/raw/master/psReadme/Web/createDevGif.gif',
 };
 

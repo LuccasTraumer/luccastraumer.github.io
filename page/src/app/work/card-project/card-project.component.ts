@@ -14,11 +14,10 @@ export class CardProjectComponent implements OnInit{
 
   longDescription: boolean = true;
 
-  constructor() { }
+  constructor() {}
   ngOnInit(): void {
+    console.log(this.repository.image)
   }
-
-
 
   clickButton() {
     this.longDescription = !this.longDescription;

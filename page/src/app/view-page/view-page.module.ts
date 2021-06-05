@@ -9,6 +9,7 @@ import { PersonalHeaderModule } from '../personal-header/personal-header.module'
 import { SocialMediaModule } from '../social-media/social-media.module';
 import { WorkModule } from '../work/work.module';
 import { PersonalFooterModule } from '../personal-footer/personal-footer.module';
+import { BackgroundStarsModule } from '../background-stars/background-stars.module';
 
 
 
@@ -22,7 +23,8 @@ import { PersonalFooterModule } from '../personal-footer/personal-footer.module'
     PersonalHeaderModule,
     SocialMediaModule,
     WorkModule,
-    PersonalFooterModule
+    PersonalFooterModule,
+    BackgroundStarsModule
   ],
   exports: [ShowComponent]
 })

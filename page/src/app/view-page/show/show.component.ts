@@ -16,12 +16,12 @@ export class ShowComponent {
   }
 
   receiveMode($event) {
-    console.log($event);
     this.isDarkModeOn = $event;
   }
 
   toggleDarkTheme() {
     this.setDark = !this.setDark;
+    sessionStorage.setItem('darkMode', `${this.setDark}`);
     this.mode.emit(this.setDark);
   }
 }

@@ -29,4 +29,12 @@ export class Constantes {
 
   public static readonly PATH_ICON_BLACK_MENU_HAMBURGUER = environment.pathIconBlackMenuHamburguer;
   public static readonly PATH_ICON_WHITE_MENU_HAMBURGUER = environment.pathIconWhiteMenuHamburguer;
+
+  public static readonly PATH_IMAGE_CARD_AIRCNC = environment.pathImageCardFlipAirCnC;
+  public static readonly PATH_IMAGE_CARD_COVID = environment.pathImageCardFlipCompactCovid;
+  public static readonly PATH_IMAGE_CARD_COMPACT_HUFFMAN = environment.pathImageCardFlipCompactHuffman;
+  public static readonly PATH_IMAGE_CARD_MAIARA = environment.pathImageCardFlipCompactMaiara;
+  public static readonly PATH_IMAGE_CARD_REMADE = environment.pathImageCardFlipCompactRemade;
+  public static readonly PATH_IMAGE_CARD_WAZEDEV = environment.pathImageCardFlipCompactWazeDev;
+
 }

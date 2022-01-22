@@ -11,14 +11,14 @@
     color: #8873EF;
     transform: rotate(-35deg);
     position: absolute;
-    top: 8%;
+    top: 7%;
     left: -1%;
   }
 
   .titulo {
     font-weight: 900;
     font-size: 2.5rem;
-    margin: 4% 0;
+    margin: 10% 0;
   }
 
   .descricao {
@@ -94,24 +94,32 @@
     width: 100%;
     display: inline-flex;
 
+    .left {
+      .up-title {
+        top: 17%;
+        left: 1%;
+      }
+    }
+
     .right {
       display: inline-block;
-      align-items: center;
       text-align: center;
-      margin-left: 5%;
+      position: relative;
+      margin: auto;
 
       p {
         text-align: start;
         font-weight: 900;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         display: flex;
-        justify-content: end;
+        padding-left: 55%;
+        position: absolute;
+        top: -8%;
       }
 
       img {
         width: 80%;
       }
     }
-
   }
 }

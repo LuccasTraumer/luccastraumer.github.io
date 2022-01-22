@@ -1,40 +1,16 @@
-import { environment } from "src/environments/environment";
 
 export class Constantes {
-  public static readonly LINK_GITHUB = environment.linkGithub;
-  public static readonly LINK_INSTAGRAM = environment.linkInstagram;
-  public static readonly LINK_LINKEDIN = environment.linkLinkedin;
-  public static readonly PERSONAL_EMAIL = environment.personalEmail;
+  public static readonly apiGithubRepository = 'https://api.github.com/users/luccastraumer/repos?page=1&per_page=100';
+  public static readonly apiGithubOwner = 'https://api.github.com/users/luccastraumer';
 
-  public static readonly PATH_ICON_BLACK_GITHUB = environment.pathIconBlackGithub;
-  public static readonly PATH_ICON_BLACK_LINKEDIN = environment.pathIconBlackLinkedin;
-  public static readonly PATH_ICON_BLACK_EMAIL = environment.pathIconBlackEmail;
-  public static readonly PATH_ICON_BLACK_INSTAGRAM = environment.pathIconBlackInstagram;
+  public static readonly PATH_ICON_BLACK_MENU_HAMBURGUER = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-black-png.png';
+  public static readonly PATH_ICON_WHITE_MENU_HAMBURGUER = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-white-png.png';
 
-  public static readonly PATH_ICON_WHITE_INSTAGRAM = environment.pathIconWhiteInstagram;
-  public static readonly PATH_ICON_WHITE_EMAIL = environment.pathIconWhiteEmail;
-  public static readonly PATH_ICON_WHITE_LINKEDIN = environment.pathIconWhiteLinkedin;
-  public static readonly PATH_ICON_WHITE_GITHUB = environment.pathIconWhiteGithub;
-
-  public static readonly PATH_ICON_BLACK_LOCATION = environment.pathIconBlackLocation;
-  public static readonly PATH_ICON_BLACK_SOUND = environment.pathIconBlackSound;
-  public static readonly PATH_ICON_BLACK_PROFILE = environment.pathIconBlackProfile;
-
-  public static readonly PATH_ICON_WHITE_LOCATION = environment.pathIconWhiteLocation;
-  public static readonly PATH_ICON_WHITE_SOUND = environment.pathIconWhiteSound;
-  public static readonly PATH_ICON_WHITE_PROFILE = environment.pathIconWhiteProfile;
-
-  public static readonly apiGithubRepository = environment.apiGithubRepository;
-  public static readonly apiGithubOwner = environment.apiGithubOwner;
-
-  public static readonly PATH_ICON_BLACK_MENU_HAMBURGUER = environment.pathIconBlackMenuHamburguer;
-  public static readonly PATH_ICON_WHITE_MENU_HAMBURGUER = environment.pathIconWhiteMenuHamburguer;
-
-  public static readonly PATH_IMAGE_CARD_AIRCNC = environment.pathImageCardFlipAirCnC;
-  public static readonly PATH_IMAGE_CARD_COVID = environment.pathImageCardFlipCompactCovid;
-  public static readonly PATH_IMAGE_CARD_COMPACT_HUFFMAN = environment.pathImageCardFlipCompactHuffman;
-  public static readonly PATH_IMAGE_CARD_MAIARA = environment.pathImageCardFlipCompactMaiara;
-  public static readonly PATH_IMAGE_CARD_REMADE = environment.pathImageCardFlipCompactRemade;
-  public static readonly PATH_IMAGE_CARD_WAZEDEV = environment.pathImageCardFlipCompactWazeDev;
-
+  public static readonly PATH_ICONE_ENVIAR_MENSAGEM = 'https://github.com/LuccasTraumer/luccastraumer.github.io/blob/novaPagina/page/src/assets/novaPagina/send-message-icon.png?raw=true';
+  public static readonly PATH_ICONE_ARROW = 'https://github.com/LuccasTraumer/luccastraumer.github.io/blob/novaPagina/page/src/assets/novaPagina/arrow-1.png?raw=true';
+  public static readonly PATH_ICONE_LINKEDIN = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/17042c6f4018cfea0a11f7245696e0764b59fb54/page/src/assets/novaPagina/linkedin-icon.svg';
+  public static readonly PATH_ICONE_TWITTER = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/17042c6f4018cfea0a11f7245696e0764b59fb54/page/src/assets/novaPagina/twitter-icon.svg';
+  public static readonly PATH_ICONE_INSTAGRAM = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/17042c6f4018cfea0a11f7245696e0764b59fb54/page/src/assets/novaPagina/instagram-icon.svg';
+  public static readonly PATH_ICONE_GITHUB = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/17042c6f4018cfea0a11f7245696e0764b59fb54/page/src/assets/novaPagina/github-icon.svg';
+  public static readonly IMAGEM_ABOUT = 'https://github.com/LuccasTraumer/luccastraumer.github.io/blob/novaPagina/page/src/assets/novaPagina/image-page.png?raw=true';
 }

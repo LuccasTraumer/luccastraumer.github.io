@@ -3,22 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ViewPageModule } from './view-page/view-page.module';
-import { BuildingModule } from './building/building.module';
-import { NotFoundModule } from './not-found/not-found.module';
-
-
-
+import { HeaderComponent } from './header/header.component';
+import { IntroduceCardComponent } from './introduce-card/introduce-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    IntroduceCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ViewPageModule,
-    BuildingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

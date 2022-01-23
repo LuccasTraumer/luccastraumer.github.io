@@ -74,9 +74,11 @@
   .redes-sociais {
     display: inline-flex;
     margin: 5% 0;
+    align-items: center;
 
     ul {
       display: inherit;
+      text-align: center;
 
       li {
         a {

@@ -1,0 +1,41 @@
+<section class="content-about mobile">
+  <p class="up-title">
+    Experience
+  </p>
+  <h3 class="title">
+    Skills & Experience
+  </h3>
+
+  <section class="skills">
+    <figure *ngFor="let skill of listaSkills">
+      <img
+        src="{{ skill.pathImage }}"
+        alt="{{ skill.nomeSkill }}"
+      >
+      <figcaption>
+        {{ skill.nomeSkill }}
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="experience">
+    <h4>
+      Experience
+    </h4>
+    <hr>
+    <article
+      *ngFor="let exp of listaExperiences"
+    >
+      <p class="datas">
+        {{ exp.anoInicio }} - {{ exp.anoTermino ? exp.anoTermino : 'Present'}}
+      </p>
+      <p class="cargo">
+        {{ exp.cargo }}
+      </p>
+      <p class="empresa">
+        {{ exp.nomeEmpresa }}
+      </p>
+      <hr>
+    </article>
+  </section>
+</section>

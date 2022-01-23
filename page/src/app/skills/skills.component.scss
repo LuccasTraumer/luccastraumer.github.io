@@ -1,0 +1,48 @@
+.content-about {
+  background: rgba(252, 218, 105, 0.7);
+  padding: 15% 7%;
+  position: relative;
+
+  .up-title {
+    color: #8873EF;
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 5%;
+    left: -1%;
+  }
+
+  .title {
+    font-weight: 900;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    figure {
+      text-align: center;
+
+      img {
+        width: 40%;
+      }
+    }
+  }
+
+  .experience {
+    padding: 5%;
+    margin: 0 auto;
+
+    h4 {
+      font-weight: 800;
+    }
+
+    hr {
+      border: 1px solid #000;
+    }
+
+    article>p {
+      padding: 0 5%;
+    }
+
+  }
+}

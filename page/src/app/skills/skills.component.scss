@@ -3,6 +3,10 @@
   padding: 15% 7%;
   position: relative;
 
+  .desktop {
+    display: none;
+  }
+
   .up-title {
     color: #8873EF;
     transform: rotate(-35deg);
@@ -38,11 +42,70 @@
 
     hr {
       border: 1px solid #000;
+      margin: 0;
+    }
+
+    article {
+      padding: 5% 0;
+
+      hr {
+        margin-top: 5%;
+      }
+      p {
+        margin: 0;
+      }
+
+      .cargo {
+        font-weight: 900;
+        padding: 0 10%;
+      }
+
+      .empresa {
+        opacity: 70%;
+      }
     }
 
     article>p {
       padding: 0 5%;
     }
+  }
+}
 
+
+@media screen and (min-width: 768px){
+  .content-about {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    .desktop {
+      display: block;
+    }
+    .container {
+      display: inline-flex;
+    }
+
+    .left-side {
+      .up-title {
+        top: 10%;
+        left: 2%;
+      }
+
+      .title {
+        font-size: 4rem;
+      }
+
+      ul {
+        li {
+          position: relative;
+          hr {
+            width: 2%;
+            position: absolute;
+            left: -4%;
+            border: #111111 1.5px solid;
+            top: -21.5%;
+          }
+        }
+      }
+    }
   }
 }

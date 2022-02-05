@@ -19,7 +19,13 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('Quando executar o click deve alterar o estado do menu Hamburguer', () => {
+    component.mudarEstadoMenuHamburguer();
+
+    expect((component as any).menuHambuguerAberto).toBeTruthy();
   });
 });

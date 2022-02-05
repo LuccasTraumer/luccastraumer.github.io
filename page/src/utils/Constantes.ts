@@ -22,5 +22,6 @@ export class Constantes {
   public static readonly ICONE_TYPESCRIPT = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/b7e4025f8843cf60c4b27166884b71e7e875fcbb/page/src/assets/novaPagina/typescript-icon.svg';
   public static readonly ICONE_DOCKER = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/b7e4025f8843cf60c4b27166884b71e7e875fcbb/page/src/assets/novaPagina/docker-icon.svg';
   public static readonly ICONE_CSS = 'https://github.com/LuccasTraumer/luccastraumer.github.io/blob/novaPagina/page/src/assets/novaPagina/css-icon.png?raw=true';
+  // public static readonly ICONE_SETA_GITHUB = 'https://github.com/LuccasTraumer/luccastraumer.github.io/blob/novaPagina/page/src/assets/novaPagina/css-icon.png?raw=true';
 
 }

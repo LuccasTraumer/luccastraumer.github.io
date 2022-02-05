@@ -1,0 +1,12 @@
+.content {
+  display: inline-flex;
+
+  .projects {
+    display: block;
+
+    .container {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+}

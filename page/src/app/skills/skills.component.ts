@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Constantes} from '../../utils/Constantes';
+import {DataService} from '../services/data.service';
+import {Experience} from '../../model/experience.model';
+import {Skills} from '../../model/skills.model';
 
 @Component({
   selector: 'app-skills',
@@ -7,51 +9,13 @@ import { Constantes} from '../../utils/Constantes';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-
   listaSkills = Array<Skills>();
   listaExperiences = Array<Experience>();
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.listaSkills.push(new Skills(Constantes.ICONE_ANGULAR, 'Angular', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_TYPESCRIPT, 'Typescript', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_JAVASCRIPT, 'Javascript', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_CSS, 'CSS', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_JAVA, 'Java', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_NGINX, 'Nginx', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_DOCKER, 'Docker', ''));
-    this.listaSkills.push(new Skills(Constantes.ICONE_PYTHON, 'Python', ''));
-
-    this.listaExperiences.push(new Experience(2020, 'CIANDT', 'Software Develop'));
-    this.listaExperiences.push(new Experience(2020, 'Technical High School of Campinas\n' +
-      '- UNICAMP', 'PADEMT tutor and Mentor', 2021));
-  }
-
-}
-
-class Skills {
-  pathImage: string;
-  nomeSkill: string;
-  linkDoc: string;
-
-  constructor(pathImage: string, nomeSkill: string, linkDoc: string) {
-    this.pathImage = pathImage;
-    this.nomeSkill = nomeSkill;
-    this.linkDoc = linkDoc;
-  }
-}
-
-class Experience {
-  anoInicio: number;
-  anoTermino?: number;
-  nomeEmpresa: string;
-  cargo: string;
-
-  constructor(anoInicio: number, nomeEmpresa: string, cargo: string, anoTermino?: number) {
-    this.anoInicio = anoInicio;
-    this.anoTermino = anoTermino;
-    this.nomeEmpresa = nomeEmpresa;
-    this.cargo = cargo;
+    this.listaSkills = this.dataService.buscarDadoosSkills();
+    this.listaExperiences = this.dataService.buscarDadosExperience();
   }
 }

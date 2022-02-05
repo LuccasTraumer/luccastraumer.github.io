@@ -17,6 +17,7 @@
 
   .title {
     font-weight: 900;
+    margin: 10% 0;
   }
 
   .skills {
@@ -74,12 +75,16 @@
 
 @media screen and (min-width: 768px){
   .content-about {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     justify-content: space-around;
+    align-items: center;
+
     .desktop {
       display: block;
     }
+
     .container {
       display: inline-flex;
     }
@@ -92,6 +97,7 @@
 
       .title {
         font-size: 4rem;
+        margin: 0;
       }
 
       ul {
@@ -104,6 +110,44 @@
             border: #111111 1.5px solid;
             top: -21.5%;
           }
+        }
+      }
+    }
+
+    .hire {
+      width: 10rem;
+      height: 10rem;
+
+      .background {
+        width: inherit;
+        height: inherit;
+        background-color: #000;
+        color: #fff;
+        border-radius: 100%;
+        text-align: center;
+        position: relative;
+        left: 90%;
+
+        .linha {
+          border: 2px solid #fff;
+          border-radius: inherit;
+          padding: 38%;
+          position: absolute;
+          margin: 10%;
+        }
+
+        p {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          display: inline-block;
+          align-items: center;
+          top: 40%;
+          right: 10%;
+        }
+
+        img {
+          width: 20%;
         }
       }
     }

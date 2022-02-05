@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constantes} from "../../utils/Constantes";
 
 @Component({
   selector: 'app-projects',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  readonly CONSTANTES = Constantes;
 
   constructor() { }
 

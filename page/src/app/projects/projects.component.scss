@@ -1,12 +1,74 @@
 .content {
-  display: inline-flex;
+  display: block;
+  padding: 5%;
+  position: relative;
+  background: white;
+
+  .up-title {
+    color: #8873EF;
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 8%;
+    left: 1%;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 10% 5% 0;
+    width: 50%;
+  }
 
   .projects {
-    display: block;
+    display: inline-flex;
+    margin: 0 auto;
+    flex-flow: column wrap;
+
+    .link {
+      background: #8873EF;
+      align-self: flex-end;
+      padding: 5%;
+      border-radius: 50%;
+      width: 15%;
+      margin: 5% 25%;
+    }
 
     .container {
       display: inline-flex;
       align-items: center;
+
+      .voltar,.avancar {
+        background: #FCDA69;
+        opacity: 70%;
+        border-radius: 50%;
+        padding: 2%;
+
+      }
+
+      figure {
+        text-align: center;
+
+        img {
+          width: 50%;
+        }
+
+        figcaption {
+          padding: 5% 0;
+
+          .image-title {
+            font-weight: 900;
+          }
+
+          .descricao-image {
+          }
+        }
+      }
+
+      .avancar {
+        img {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 }

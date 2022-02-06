@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {DadosRedesSociais} from '../../model/dados-redes-sociais.model';
 import {Constantes} from '../../utils/Constantes';
 import {Experience} from '../../model/experience.model';
 import {Skills} from '../../model/skills.model';
+import { RepositoryModel } from '../../model/repository-model';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   readonly CONSTANTES = Constantes;
+  private apiGithubRepositories = Constantes.apiGithubRepository;
 
   constructor(private http: HttpClient) { }
 
@@ -54,5 +58,15 @@ export class DataService {
       'https://github.com/LuccasTraumer', 'Icone Github'));
 
     return redeSociais;
+  }
+
+  buscarDadosGithub(listaRep: string[]): Observable<RepositoryModel[]> {
+    return this.makeRequestRepository();
+  }
+
+  private makeRequestRepository(): Observable<RepositoryModel[]> {
+    return this.http.get<RepositoryModel[]>(this.apiGithubRepositories)
+      .pipe(
+        retry(2));
   }
 }

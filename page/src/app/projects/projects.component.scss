@@ -21,6 +21,11 @@
 
   .desktop {
     display: none;
+    visibility: hidden;
+
+    .container-desktop {
+      display: none;
+    }
   }
 
   .projects {
@@ -92,6 +97,11 @@
 
 @media screen and (min-width: 768px){
   .content {
+    display: block;
+    visibility: visible;
+    height: 100%;
+
+
     .up-title {
 
     }
@@ -102,17 +112,55 @@
 
     .mobile {
       display: none;
+
+      .container {
+        display: none;
+      }
     }
 
     .desktop {
       display: inline-flex;
+      visibility: visible;
       flex-flow: row wrap;
-      position: relative;
+      width: 100%;
+      position: absolute;
+      left: 0;
 
-      .container {
+      .container-desktop {
         display: inline-block;
-        width: 60%;
-        //position: absolute;
+        width: 20%;
+        padding: 5%;
+        border-radius: 5% 2%;
+        margin-right: 5%;
+
+        .link {
+          margin: 5% 100%;
+        }
+
+        figure {
+          margin: 15% 0 1rem;
+
+          img {
+            border-radius: 5%;
+          }
+        }
+      }
+
+      .container-desktop:nth-child(n+4):nth-child(-n+9) {
+        visibility: hidden;
+        display: none;
+      }
+
+      .container-desktop:nth-child(1) {
+        margin-top: 20%;
+      }
+
+      .container-desktop:nth-child(2) {
+        margin-top: 15%;
+      }
+
+      .container-desktop:nth-child(3) {
+        margin-top: 10%;
       }
     }
   }

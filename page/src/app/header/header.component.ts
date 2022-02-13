@@ -7,6 +7,7 @@ import { Constantes } from '../../utils/Constantes';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  readonly CONSTANTES = Constantes;
   private menuHambuguerAberto = false;
   constructor() { }
 

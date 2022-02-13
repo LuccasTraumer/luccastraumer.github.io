@@ -28,5 +28,6 @@ export class Constantes {
   public static readonly IMAGE_CONTACT_HI = 'https://github.com/LuccasTraumer/luccastraumer.github.io/blob/novaPagina/page/src/assets/novaPagina/contact.hi.png?raw=true';
   public static readonly ICON_EMAIL = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/45efca40017a6b0f3d6ea8cf7f9414b8a7ab0051/page/src/assets/novaPagina/email-icon.svg';
   public static readonly ICON_LOCATION = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/45efca40017a6b0f3d6ea8cf7f9414b8a7ab0051/page/src/assets/novaPagina/location-icon.svg';
+  public static readonly SEARCH_ICON = 'https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/45efca40017a6b0f3d6ea8cf7f9414b8a7ab0051/page/src/assets/novaPagina/search-icon.svg';
 
 }

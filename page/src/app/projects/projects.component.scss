@@ -103,7 +103,8 @@
 
 
     .up-title {
-
+      top: 12%;
+      left: 6%;
     }
 
     .title {
@@ -146,6 +147,18 @@
           img {
             width: inherit;
             border-radius: 5%;
+          }
+
+          figcaption {
+            .image-title {
+              font-weight: 900;
+              letter-spacing: 1.5px;
+              padding: 2% 0;
+            }
+
+            .descricao-image {
+              font-style: italic;
+            }
           }
         }
       }

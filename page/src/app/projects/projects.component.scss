@@ -103,7 +103,7 @@
 
 
     .up-title {
-      top: 12%;
+      top: 8%;
       left: 6%;
     }
 
@@ -169,20 +169,29 @@
       }
 
       .container-desktop:nth-child(1) {
-        margin-top: 30%;
-      }
-
-      .container-desktop:nth-child(2) {
-        margin-top: 25%;
-      }
-
-      .container-desktop:nth-child(3) {
         margin-top: 20%;
       }
 
-      .container-desktop:nth-child(4) {
+      .container-desktop:nth-child(2) {
         margin-top: 15%;
       }
+
+      .container-desktop:nth-child(3) {
+        margin-top: 10%;
+      }
+
+      .container-desktop:nth-child(4) {
+        margin-top: 5%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    .up-title {
+      top: 12%;
+      left: 6%;
     }
   }
 }

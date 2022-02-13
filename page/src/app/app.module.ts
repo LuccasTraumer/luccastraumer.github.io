@@ -8,6 +8,7 @@ import { IntroduceCardComponent } from './introduce-card/introduce-card.componen
 import { SkillsComponent } from './skills/skills.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     IntroduceCardComponent,
     SkillsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -23,10 +23,6 @@ describe('AppComponent', () => {
   it(`should have as title 'page'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-<<<<<<< HEAD:webpage/src/app/app.component.spec.ts
-    expect(app.title).toEqual('webpage');
-=======
     expect(app.title).toEqual('page');
->>>>>>> refactory:page/src/app/app.component.spec.ts
   });
 });

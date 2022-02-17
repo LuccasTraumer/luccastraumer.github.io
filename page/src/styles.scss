@@ -3,8 +3,11 @@
   --bg-color: #e4e4e4;
   --bg-contraste: #fff;
   --font-color: #363636;
-  --bg-color-input: #f0f0f0;
+  --bg-color-input: var(--bg-color);
   --input-color: #e4e4e4;
+
+  max-width: 1400px;
+  min-width: 320px;
 }
 
 .dark-theme {
@@ -12,15 +15,16 @@
   --bg-color: #252525;
   --bg-contraste: rgb(48 48 48);
   --font-color: #fff;
-  --bg-color-input: #f0f0f0;
+  --bg-color-input: var(--font-color);
   --first-color: rgb(26, 166, 139);
   --input-color: #fff;
 }
 
 .cont {
-  right: -100%;
+  right: -80%;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
+  height: 100vh;
 }
 
 .show {
@@ -34,6 +38,7 @@
   vertical-align: baseline;
   list-style: none;
   border: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -41,7 +46,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   color: var(--font-color);

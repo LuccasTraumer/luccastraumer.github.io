@@ -5,14 +5,9 @@
     "emitDecoratorMetadata": true,
     "outDir": "./out-tsc/spec",
     "types": [
-<<<<<<< HEAD:webpage/tsconfig.spec.json
       "jest",
       "node"
     ],
-=======
-      "jest"
-    ]
->>>>>>> refactory:page/tsconfig.spec.json
   },
   "files": [
     "src/polyfills.ts"

@@ -63,7 +63,8 @@
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
             }
-          },
+          }
+        },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
@@ -110,5 +111,4 @@
     }
   },
   "defaultProject": "page"
-  }
 }

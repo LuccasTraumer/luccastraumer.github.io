@@ -17,15 +17,6 @@
     "lib": [
       "es2018",
       "dom"
-<<<<<<< HEAD:webpage/tsconfig.json
-    ],
-    "esModuleInterop": true
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-=======
     ]
->>>>>>> refactory:page/tsconfig.json
   }
 }

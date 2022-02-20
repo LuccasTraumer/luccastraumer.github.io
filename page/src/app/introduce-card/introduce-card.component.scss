@@ -34,18 +34,21 @@
     display: flex;
     flex-flow: column wrap;
 
-    a {
+    .link {
       display: inherit;
       align-items: center;
       justify-content: center;
       padding: 2% 5%;
       margin: 5% auto;
       border-radius: 20px;
+      list-style: none;
+      text-decoration: none;
 
-      input {
+      .button {
         background: inherit;
         letter-spacing: 2px;
         font-weight: 500;
+        transition: all 0.5s ease-in-out;
       }
 
       img {
@@ -65,6 +68,14 @@
     img {
       width: 20%;
     }
+  }
+
+  .contatos > a:first-child:hover {
+      background: #6042f3;
+  }
+
+  .contatos > a:last-child:hover {
+      background: var(--bg-color);
   }
 
   .redes-sociais {

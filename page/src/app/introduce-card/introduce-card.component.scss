@@ -1,5 +1,5 @@
 .content {
-  background: #fff;
+  background: var(--white-color);
   padding: 15% 7%;
   position: relative;
 
@@ -8,16 +8,12 @@
   }
 
   .up-title {
-    color: #8873EF;
     transform: rotate(-35deg);
-    position: absolute;
     top: 7%;
     left: -1%;
   }
 
   .titulo {
-    font-weight: 900;
-    font-size: 2.5rem;
     margin: 10% 0;
   }
 
@@ -48,7 +44,7 @@
 
       input {
         background: inherit;
-        letter-spacing: 2;
+        letter-spacing: 2px;
         font-weight: 500;
       }
 
@@ -60,10 +56,10 @@
     }
   }
   .contatos > a:first-child {
-    background: #8873EF;
+    background: var(--purple-color);
 
     input {
-      color: white;
+      color: var(--white-color);
     }
 
     img {

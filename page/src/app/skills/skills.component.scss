@@ -1,5 +1,5 @@
 .content-about {
-  background: rgba(252, 218, 105, 0.7);
+  background: var(--yellow-color);
   padding: 15% 7%;
   position: relative;
 
@@ -8,15 +8,12 @@
   }
 
   .up-title {
-    color: #8873EF;
     transform: rotate(-35deg);
-    position: absolute;
     top: 5%;
     left: -1%;
   }
 
   .title {
-    font-weight: 900;
     margin: 10% 0;
   }
 
@@ -103,6 +100,7 @@
       ul {
         li {
           position: relative;
+
           hr {
             width: 2%;
             position: absolute;
@@ -121,8 +119,8 @@
       .background {
         width: inherit;
         height: inherit;
-        background-color: #000;
-        color: #fff;
+        background-color: var(--black-color);
+        color: var(--white-color);
         border-radius: 100%;
         text-align: center;
         position: relative;

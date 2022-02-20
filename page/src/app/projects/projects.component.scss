@@ -2,19 +2,15 @@
   display: block;
   padding: 5%;
   position: relative;
-  background: white;
+  background: var(--white-color);
 
   .up-title {
-    color: #8873EF;
     transform: rotate(-35deg);
-    position: absolute;
     top: 8%;
     left: 1%;
   }
 
   .title {
-    font-weight: 900;
-    font-size: 2.5rem;
     margin: 10% 5% 0;
     width: 50%;
   }
@@ -34,7 +30,7 @@
     flex-flow: column wrap;
 
     .link {
-      background: #8873EF;
+      background: var(--purple-color);
       align-self: flex-end;
       padding: 5%;
       border-radius: 50%;
@@ -47,7 +43,7 @@
       align-items: center;
 
       .voltar,.avancar {
-        background: #FCDA69;
+        background: var(--yellow-color);
         opacity: 70%;
         border-radius: 50%;
         padding: 5%;
@@ -64,6 +60,7 @@
 
       .voltar {
         margin-right: 10%;
+
         img {
           transform: rotate(180deg);
         }

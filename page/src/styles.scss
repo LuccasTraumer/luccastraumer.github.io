@@ -2,19 +2,14 @@
   --first-color: rgb(26, 166, 139);
   --bg-color: #e4e4e4;
   --bg-contraste: #fff;
-  --font-color: #363636;
   --bg-color-input: var(--bg-color);
   --input-color: #e4e4e4;
-}
 
-.dark-theme {
-  --dark-color: #252525;
-  --bg-color: #252525;
-  --bg-contraste: rgb(48 48 48);
-  --font-color: #fff;
-  --bg-color-input: var(--font-color);
-  --first-color: rgb(26, 166, 139);
-  --input-color: #fff;
+  --purple-color: #8873EF;
+  --white-color: #fff;
+  --yellow-color: rgba(252, 218, 105, 0.7);
+  --font-color: #363636;
+  --black-color: #000;
 }
 
 .cont {
@@ -59,4 +54,15 @@ body {
 .dark-theme {
   background-color: var(--dark-color);
   color: var(--ligth-color);
+}
+
+.up-title {
+  color: var(--purple-color);
+  position: absolute;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2.5rem;
+
 }

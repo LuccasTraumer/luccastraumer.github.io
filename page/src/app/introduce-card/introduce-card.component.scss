@@ -8,9 +8,9 @@
   }
 
   .up-title {
-    transform: rotate(-35deg);
-    top: 7%;
     left: -1%;
+    top: 7%;
+    transform: rotate(-35deg);
   }
 
   .titulo {
@@ -35,26 +35,25 @@
     flex-flow: column wrap;
 
     .link {
-      display: inherit;
       align-items: center;
-      justify-content: center;
-      padding: 2% 5%;
-      margin: 5% auto;
       border-radius: 20px;
+      display: inherit;
+      justify-content: center;
       list-style: none;
+      margin: 5% auto;
+      padding: 2% 5%;
       text-decoration: none;
 
       .button {
         background: inherit;
-        letter-spacing: 2px;
         font-weight: 500;
+        letter-spacing: 2px;
         transition: all 0.5s ease-in-out;
       }
 
       img {
-        width: 20%;
         margin-left: 5%;
-
+        width: 20%;
       }
     }
   }
@@ -79,9 +78,9 @@
   }
 
   .redes-sociais {
+    align-items: center;
     display: inline-flex;
     margin: 5% 0;
-    align-items: center;
 
     ul {
       display: inherit;
@@ -100,27 +99,27 @@
 
 @media screen and (min-width: 768px) {
   .content {
-    width: 100%;
     display: inline-flex;
+    width: 100%;
 
     .left {
       .up-title {
-        top: 17%;
         left: 1%;
+        top: 17%;
       }
     }
 
     .right {
       display: inline-block;
-      text-align: center;
-      position: relative;
       margin: auto;
+      position: relative;
+      text-align: center;
 
       p {
-        text-align: start;
-        font-weight: 900;
-        font-size: 1.1rem;
         display: flex;
+        font-size: 1.1rem;
+        font-weight: 900;
+        text-align: start;
         padding-left: 55%;
         position: absolute;
         top: -8%;

@@ -1,13 +1,13 @@
 .content {
+  background: var(--white-color);
   display: block;
   padding: 5%;
   position: relative;
-  background: var(--white-color);
 
   .up-title {
-    transform: rotate(-35deg);
-    top: 8%;
     left: 1%;
+    top: 8%;
+    transform: rotate(-35deg);
   }
 
   .title {
@@ -26,31 +26,31 @@
 
   .projects {
     display: inline-flex;
-    margin: 0 auto;
     flex-flow: column wrap;
+    margin: 0 auto;
 
     .link {
-      background: var(--purple-color);
       align-self: flex-end;
-      padding: 5%;
+      background: var(--purple-color);
       border-radius: 50%;
-      width: 15%;
       margin: 5% 25%;
+      padding: 5%;
+      width: 15%;
     }
 
     .container {
-      display: inline-flex;
       align-items: center;
+      display: inline-flex;
 
       .voltar,.avancar {
-        background: var(--yellow-color);
-        opacity: 70%;
-        border-radius: 50%;
-        padding: 5%;
-        display: inline-flex;
         align-items: center;
-        justify-content: center;
+        background: var(--yellow-color);
+        border-radius: 50%;
+        display: inline-flex;
         height: 3vh;
+        justify-content: center;
+        opacity: 70%;
+        padding: 5%;
         width: 25%;
 
         img {
@@ -79,9 +79,6 @@
           .image-title {
             font-weight: 900;
           }
-
-          .descricao-image {
-          }
         }
       }
 
@@ -104,10 +101,6 @@
       left: 6%;
     }
 
-    .title {
-
-    }
-
     .mobile {
       display: none;
 
@@ -118,19 +111,19 @@
 
     .desktop {
       display: inline-flex;
-      visibility: visible;
       flex-flow: row wrap;
-      position: absolute;
       justify-content: space-around;
+      position: absolute;
+      visibility: visible;
 
       .container-desktop {
-        display: inline-block;
-        width: 20%;
         border-radius: 5% 2%;
+        display: inline-block;
+        height: 100%;
         margin-right: 5%;
         overflow-x: hidden;
         padding: 5% 0;
-        height: 100%;
+        width: 20%;
 
         .link {
           margin: 0 70%;
@@ -142,8 +135,8 @@
           width: 100%;
 
           img {
-            width: inherit;
             border-radius: 5%;
+            width: inherit;
           }
 
           figcaption {
@@ -161,8 +154,8 @@
       }
 
       .container-desktop:nth-child(n+5):nth-child(-n+9) {
-        visibility: hidden;
         display: none;
+        visibility: hidden;
       }
 
       .container-desktop:nth-child(1) {
@@ -187,8 +180,8 @@
 @media screen and (min-width: 1024px){
   .content {
     .up-title {
-      top: 12%;
       left: 6%;
+      top: 12%;
     }
   }
 }

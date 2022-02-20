@@ -13,10 +13,10 @@
 }
 
 .cont {
+  height: 100vh;
   right: -80%;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-  height: 100vh;
 }
 
 .show {
@@ -25,12 +25,12 @@
 }
 
 * {
+  font-family: 'Roboto', sans-serif;
+  border: 0;
+  list-style: none;
   padding: 0;
   margin: 0;
   vertical-align: baseline;
-  list-style: none;
-  border: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -39,16 +39,16 @@ html {
 
 body {
   background: var(--bg-color);
+  color: var(--font-color);
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  min-height: 10vh;
+  min-width: 10vw;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-  color: var(--font-color);
-  width: 100vw;
-  height: 100vh;
-  max-width: 100vw;
-  min-width: 10vw;
-  max-height: 100vh;
-  min-height: 10vh;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 .dark-theme {
@@ -62,7 +62,6 @@ body {
 }
 
 .title {
-  font-weight: 900;
   font-size: 2.5rem;
-
+  font-weight: 900;
 }

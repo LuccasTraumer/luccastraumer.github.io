@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Constantes} from '../../utils/Constantes';
 import {DataService} from '../services/data.service';
 import { RepositoryModel } from '../../model/repository-model';
@@ -87,7 +87,6 @@ export class ProjectsComponent implements OnInit {
         break;
       case 'campact_huffman':
         image = '../../assets/imageProjects/huffman-mobile.png';
-        console.log('Aqui');
         break;
       default:
         break;

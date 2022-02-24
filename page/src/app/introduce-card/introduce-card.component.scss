@@ -1,5 +1,5 @@
 .content {
-  background: #fff;
+  background: var(--white-color);
   padding: 15% 7%;
   position: relative;
 
@@ -8,16 +8,12 @@
   }
 
   .up-title {
-    color: #8873EF;
-    transform: rotate(-35deg);
-    position: absolute;
-    top: 7%;
     left: -1%;
+    top: 7%;
+    transform: rotate(-35deg);
   }
 
   .titulo {
-    font-weight: 900;
-    font-size: 2.5rem;
     margin: 10% 0;
   }
 
@@ -38,32 +34,34 @@
     display: flex;
     flex-flow: column wrap;
 
-    a {
-      display: inherit;
+    .link {
       align-items: center;
-      justify-content: center;
-      padding: 2% 5%;
-      margin: 5% auto;
       border-radius: 20px;
+      display: inherit;
+      justify-content: center;
+      list-style: none;
+      margin: 5% auto;
+      padding: 2% 5%;
+      text-decoration: none;
 
-      input {
+      .button {
         background: inherit;
-        letter-spacing: 2;
         font-weight: 500;
+        letter-spacing: 2px;
+        transition: all 0.5s ease-in-out;
       }
 
       img {
-        width: 20%;
         margin-left: 5%;
-
+        width: 20%;
       }
     }
   }
   .contatos > a:first-child {
-    background: #8873EF;
+    background: var(--purple-color);
 
     input {
-      color: white;
+      color: var(--white-color);
     }
 
     img {
@@ -71,10 +69,18 @@
     }
   }
 
+  .contatos > a:first-child:hover {
+      background: #6042f3;
+  }
+
+  .contatos > a:last-child:hover {
+      background: var(--bg-color);
+  }
+
   .redes-sociais {
+    align-items: center;
     display: inline-flex;
     margin: 5% 0;
-    align-items: center;
 
     ul {
       display: inherit;
@@ -93,27 +99,27 @@
 
 @media screen and (min-width: 768px) {
   .content {
-    width: 100%;
     display: inline-flex;
+    width: 100%;
 
     .left {
       .up-title {
-        top: 17%;
         left: 1%;
+        top: 17%;
       }
     }
 
     .right {
       display: inline-block;
-      text-align: center;
-      position: relative;
       margin: auto;
+      position: relative;
+      text-align: center;
 
       p {
-        text-align: start;
-        font-weight: 900;
-        font-size: 1.1rem;
         display: flex;
+        font-size: 1.1rem;
+        font-weight: 900;
+        text-align: start;
         padding-left: 55%;
         position: absolute;
         top: -8%;

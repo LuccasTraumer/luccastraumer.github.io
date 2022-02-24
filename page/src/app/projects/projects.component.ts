@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
 
   private loadData(): any{
     return this.dataService
-      .buscarDadosGithub(this.listRep)
+      .buscarDadosGithub()
       .subscribe(data => {
       data.map((repository) => {
         if (this.listRep.indexOf(repository.name) >= 0) {

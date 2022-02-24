@@ -1,27 +1,22 @@
-import { HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
+import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs/internal/observable/of';
+
 import { RepositoryModel } from 'src/model/repository-model';
 import { DataService } from '../services/data.service';
 
 import { ProjectsComponent } from './projects.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
   let fixture: ComponentFixture<ProjectsComponent>;
   let dataService: DataService;
 
-  const gitHubMock = [
-    {
-      name: 'mock1'
-    }
-  ];
-
   const reposMock = new RepositoryModel();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [ HttpClientModule ],
+      imports : [ HttpClientTestingModule ],
       declarations: [ ProjectsComponent ],
     })
     .compileComponents();
@@ -33,17 +28,31 @@ describe('ProjectsComponent', () => {
 
     dataService = TestBed.inject(DataService);
 
-    spyOn(dataService, 'buscarDadosGithub').and.returnValue(of(gitHubMock));
-    fixture.detectChanges();
-
     reposMock.description = 'mock';
     reposMock.html_url = 'urlMock';
     reposMock.image = 'imageMock';
-    reposMock.name = 'mock';
+    reposMock.name = 'AirCnC';
+
+    component.repositories.push(reposMock);
+
+    const arrayMock: RepositoryModel[] = [reposMock];
+    component.repositories = [];
+    spyOn(dataService, 'buscarDadosGithub').and.returnValue(of(arrayMock));
   });
 
-  test('should create', () => {
+  test('should create', fakeAsync(() => {
+    component.ngOnInit();
+
     expect(component).toBeTruthy();
+  }));
+
+  test('Quando iniciar o componente e busca na lista não houver contido com determinado nome não deve atribuir ' +
+    'ao projectShow', () => {
+    reposMock.name = 'mock';
+    component.ngOnInit();
+
+    expect(component).toBeTruthy();
+    expect(component.projectShow).toBeFalsy();
   });
 
   test.each([
@@ -62,38 +71,33 @@ describe('ProjectsComponent', () => {
   });
 
   test('Quando executar o metodo de voltar com index valendo 0 deve retroceder', () => {
-    component.repositories.push(reposMock);
-
+    (component as any).index = 0;
+    component.repositories = [reposMock, reposMock, reposMock];
     component.voltarProjeto();
 
-    expect((component as any).index).toEqual(3);
+    expect((component as any).index).toEqual(2);
   });
 
   test('Quando executar o metodo de voltar com index maior que 0 deve retroceder', () => {
     (component as any).index = 1;
-
-    const reposMock = new RepositoryModel();
-    component.repositories.push(reposMock);
+    component.repositories = [reposMock, reposMock, reposMock];
 
     component.voltarProjeto();
 
     expect(component.projectShow).toBeTruthy();
+    expect(component.projectShow).toEqual(reposMock);
   });
 
   test('Quando executar o metodo avancar com index valendo 0 deve prosseguir para o proximo', () => {
-    const reposMock = new RepositoryModel();
-    component.repositories.push(reposMock);
-
+    component.repositories = [reposMock, reposMock, reposMock];
     component.avancarProjeto();
 
     expect(component.projectShow).toBeTruthy();
+    expect(component.projectShow).toEqual(reposMock);
   });
 
   test('Quando executar o metodo avancar com index maior que 0 deve prosseguir para o proximo', () => {
-    (component as any).index = 1;
-
-    const reposMock = new RepositoryModel();
-    component.repositories.push(reposMock);
+    (component as any).index = 4;
 
     component.avancarProjeto();
 

@@ -2,8 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
-import { Constantes } from '../../utils/Constantes';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -12,7 +11,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [ HttpClientModule ],
+      imports : [ HttpClientTestingModule ],
       declarations: [ HeaderComponent ],
       providers: [ ViewportScroller ]
     })
@@ -37,11 +36,10 @@ describe('HeaderComponent', () => {
     expect((component as any).menuHambuguerAberto).toBeTruthy();
   });
 
-  test('Quanod executar o getManuHamburguer deve retornar uma string', () => {
+  test('Quando executar o getManuHamburguer deve retornar uma string', () => {
     const response = component.getManuHamburguer();
 
-    expect(Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER).toHaveBeenCalled();
-    expect(response).toEqual('icone');
+    expect(response).toEqual('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-black-png.png');
   });
 
   test('Quando executar o metodo onClickScroll deve efetuar o scroll da pagina', () => {

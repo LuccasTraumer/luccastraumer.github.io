@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { DataService } from '../services/data.service';
 import { SkillsComponent } from './skills.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('SkillsComponent', () => {
   let component: SkillsComponent;
@@ -11,16 +11,16 @@ describe('SkillsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [ HttpClientModule ],
+      imports : [ HttpClientTestingModule ],
       declarations: [ SkillsComponent ],
-      providers: [ DataService, HttpClient ]
+      providers: [ DataService ]
     })
     .compileComponents();
 
     dataService = TestBed.get(DataService);
 
-    spyOn(dataService, 'buscarDadoosSkills');
-    spyOn(dataService, 'buscarDadosExperience');
+    spyOn(dataService, 'buscarDadosSkills').and.returnValue([]);
+    spyOn(dataService, 'buscarDadosExperience').and.returnValue([]);
   });
 
   beforeEach(() => {

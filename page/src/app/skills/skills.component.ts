@@ -17,7 +17,7 @@ export class SkillsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.listaSkills = this.dataService.buscarDadoosSkills();
+    this.listaSkills = this.dataService.buscarDadosSkills();
     this.listaExperiences = this.dataService.buscarDadosExperience();
   }
 }

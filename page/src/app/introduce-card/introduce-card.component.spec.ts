@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IntroduceCardComponent } from './introduce-card.component';
 import { HeaderComponent } from '../header/header.component';
 import { DataService } from '../services/data.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('IntroduceCardComponent', () => {
   let component: IntroduceCardComponent;
@@ -12,7 +12,7 @@ describe('IntroduceCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [ HttpClientModule ],
+      imports : [ HttpClientTestingModule ],
       declarations: [ IntroduceCardComponent, HeaderComponent ],
       providers: [ DataService ],
     })

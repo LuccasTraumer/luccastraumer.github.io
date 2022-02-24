@@ -18,7 +18,7 @@ import { DataService } from './services/data.service';
     IntroduceCardComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

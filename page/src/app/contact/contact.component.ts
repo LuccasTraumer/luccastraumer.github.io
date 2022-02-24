@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from '../../utils/Constantes';
 
 @Component({
@@ -6,12 +6,8 @@ import { Constantes } from '../../utils/Constantes';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-
+export class ContactComponent {
   readonly CONSTANTES = Constantes;
+
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

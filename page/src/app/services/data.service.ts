@@ -17,7 +17,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  buscarDadoosSkills(): Array<Skills> {
+  buscarDadosSkills(): Array<Skills> {
     const listaSkills = Array<Skills>();
 
     listaSkills.push(new Skills(Constantes.ICONE_ANGULAR, 'Angular', ''));
@@ -60,11 +60,7 @@ export class DataService {
     return redeSociais;
   }
 
-  buscarDadosGithub(listaRep: string[]): Observable<RepositoryModel[]> {
-    return this.makeRequestRepository();
-  }
-
-  private makeRequestRepository(): Observable<RepositoryModel[]> {
+  buscarDadosGithub(): Observable<RepositoryModel[]> {
     return this.http.get<RepositoryModel[]>(this.apiGithubRepositories)
       .pipe(
         retry(2));

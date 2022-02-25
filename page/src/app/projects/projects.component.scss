@@ -94,10 +94,16 @@
     display: block;
     height: 100%;
     visibility: visible;
+    margin-bottom: 20%;
+    padding: 2% 0;
 
     .up-title {
-      left: 6%;
-      top: 8%;
+      left: 1%;
+      top: 2%;
+    }
+
+    .title {
+      margin-top: 5%;
     }
 
     .mobile {
@@ -111,18 +117,27 @@
     .desktop {
       display: inline-flex;
       flex-flow: row wrap;
-      justify-content: space-around;
       position: absolute;
       visibility: visible;
+      width: 100%;
+      height: 80%;
+      padding: 0 5%;
+      align-items: center;
+      justify-content: center;
+
 
       .container-desktop {
         border-radius: 5% 2%;
         display: inline-block;
-        height: 100%;
         margin-right: 5%;
         overflow-x: hidden;
         padding: 5% 0;
-        width: 20%;
+        width: 15%;
+        align-items: center;
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+        height: fit-content;
+
 
         .link {
           margin: 0 70%;
@@ -132,6 +147,7 @@
         figure {
           margin: 15% 0 1rem;
           width: 100%;
+          padding: 2%;
 
           img {
             border-radius: 5%;
@@ -152,25 +168,32 @@
         }
       }
 
+      .container-desktop:hover {
+        width: 20%;
+        border: var(--yellow-color) 1px solid;
+        border-radius: 10px;
+      }
+
       .container-desktop:nth-child(n+5):nth-child(-n+9) {
         display: none;
         visibility: hidden;
       }
 
       .container-desktop:nth-child(1) {
-        margin-top: 20%;
-      }
-
-      .container-desktop:nth-child(2) {
-        margin-top: 15%;
-      }
-
-      .container-desktop:nth-child(3) {
         margin-top: 10%;
       }
 
-      .container-desktop:nth-child(4) {
+      .container-desktop:nth-child(2) {
         margin-top: 5%;
+      }
+
+      .container-desktop:nth-child(3) {
+        margin-top: 0;
+      }
+
+      .container-desktop:nth-child(4) {
+        margin-top: -5%;
+        margin-right: 0;
       }
     }
   }
@@ -179,8 +202,8 @@
 @media screen and (min-width: 1024px){
   .content {
     .up-title {
-      left: 6%;
-      top: 12%;
+      left: 2%;
+      top: 10%;
     }
   }
 }

@@ -104,7 +104,7 @@
 
     .left {
       .up-title {
-        left: 1%;
+        left: 0;
         top: 17%;
       }
     }
@@ -128,6 +128,15 @@
       img {
         width: 80%;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    .up-title {
+      left: 3%;
+      top: 25%;
     }
   }
 }

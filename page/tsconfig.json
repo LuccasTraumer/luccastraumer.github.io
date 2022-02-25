@@ -19,5 +19,8 @@
       "dom"
     ],
     "emitDecoratorMetadata": true
-  }
+  },
+  "include": [
+    "src"
+  ]
 }

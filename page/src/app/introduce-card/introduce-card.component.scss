@@ -90,9 +90,16 @@
         a {
           img {
             width: 60%;
+            transition: all 0.5s ease-in-out;
+          }
+          img:hover {
+            background: var(--yellow-color);
+            border-radius: 50%;
+            width: 65%;
           }
         }
       }
+
     }
   }
 }

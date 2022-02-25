@@ -135,6 +135,41 @@
       img {
         width: 80%;
       }
+
+      .hexagon {
+        background-color: var(--yellow-color);
+        content: '';
+        width: 17vw;
+        height: 17.7vh;
+        position: absolute;
+        top: 25vh;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: all 1s;
+        border: 0.4vh solid transparent;
+        left: 40%;
+      }
+
+      /* Creating pseudo-class */
+      .hexagon:before, .hexagon:after {
+        content: "";
+        height: 100.5%;
+        width: 106.7%;
+        position: absolute;
+        top: -0.1vh;
+        left: -0.6vh;
+        background-color: var(--yellow-color);
+        border-radius: inherit;
+        border: inherit;
+      }
+
+      .hexagon:before {
+        transform: rotate(60deg);
+      }
+      .hexagon:after {
+        transform: rotate(-60deg);
+
+      }
     }
   }
 }

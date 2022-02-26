@@ -22,16 +22,20 @@ export class HeaderComponent implements OnInit {
     this.menuHambuguerAberto = !this.menuHambuguerAberto;
   }
 
+  menuEstaAberto(): boolean {
+    return this.menuHambuguerAberto;
+  }
+
   getManuHamburguer(): string {
     return Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
   }
 
-  onClickScroll(elementId: string) {
-    this.viewportScroller.scrollToAnchor(elementId);
-    this.clickMenu()
+  clickMenu(): void {
+    this.menuHambuguerAberto = !this.menuHambuguerAberto;
   }
 
-  clickMenu() {
-    this.menuHambuguerAberto = !this.menuHambuguerAberto;
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+    this.clickMenu();
   }
 }

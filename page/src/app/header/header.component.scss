@@ -23,6 +23,18 @@
   img {
     width: 10%;
   }
+
+  .cont {
+    background: var(--bg-contraste);
+    position: absolute;
+    z-index: 1;
+    max-height: 20vh;
+    max-width: 45vw;
+
+    width: 60vw;
+
+    padding: 10%;
+  }
 }
 
 .desktop {
@@ -37,11 +49,13 @@
   .content {
     max-width: 100%;
     width: 100%;
+    padding: 2% 0;
   }
 
   .desktop {
     display: inline-flex;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    position: static;
   }
 
   .logo {
@@ -49,8 +63,16 @@
   }
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+
+    li {
+      margin: 0 auto;
+      padding: 0 10%;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
   }
 
   .input {
@@ -61,14 +83,14 @@
 
     input {
       border-radius: 10px;
-      padding: 5%;
-      width: 100%;
+      padding: 2%;
+      width: 90%;
     }
 
     img {
       position: absolute;
       right: 15%;
-      width: 15%;
+      width: 10%;
     }
   }
 }

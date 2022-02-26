@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HamburguerMenuComponent } from '../hamburguer-menu/hamburguer-menu.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -12,7 +13,7 @@ describe('HeaderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports : [ HttpClientTestingModule ],
-      declarations: [ HeaderComponent ],
+      declarations: [ HeaderComponent, HamburguerMenuComponent ],
       providers: [ ViewportScroller ]
     })
     .compileComponents();

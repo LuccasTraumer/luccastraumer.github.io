@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { DataService } from './services/data.service';
+import { HamburguerMenuComponent } from './hamburguer-menu/hamburguer-menu.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DataService } from './services/data.service';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
+    HamburguerMenuComponent,
   ],
   imports: [
     BrowserModule,

@@ -80,7 +80,8 @@
       width: 60%;
 
       .up-title {
-        top: 10%;
+        top: 6%;
+        left: 0;
       }
 
       .title {
@@ -113,6 +114,15 @@
 
     footer {
       padding: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    .up-title {
+      top: 12%;
+      left: 12%;
     }
   }
 }

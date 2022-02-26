@@ -28,12 +28,10 @@
     background: var(--bg-contraste);
     position: absolute;
     z-index: 1;
-    overflow-x: hidden;
-    max-height: 100vh;
+    max-height: 20vh;
     max-width: 45vw;
 
     width: 60vw;
-    margin-top: 96vh;
 
     padding: 10%;
   }

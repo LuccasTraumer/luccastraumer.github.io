@@ -40,7 +40,7 @@ describe('HeaderComponent', () => {
   test('Quando executar o getManuHamburguer deve retornar uma string', () => {
     const response = component.getManuHamburguer();
 
-    expect(response).toEqual('https://raw.githubusercontent.com/LuccasTraumer/luccastraumer.github.io/remade/page/src/assets/menu-hamburguer-black-png.png');
+    expect(response).toEqual('/assets/menu-hamburguer-black-png.png');
   });
 
   test('Quando executar o metodo onClickScroll deve efetuar o scroll da pagina', () => {

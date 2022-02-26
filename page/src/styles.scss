@@ -14,14 +14,20 @@
 
 .cont {
   height: 100vh;
-  right: -80%;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+  right: -45%;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  background: var(--white-color);
+  display: none;
+  visibility: hidden;
 }
 
 .show {
-  right: 0%;
+  right: 0;
   transition-timing-function: ease-in-out;
+  display: block;
+  visibility: visible;
 }
 
 * {
@@ -31,6 +37,7 @@
   padding: 0;
   margin: 0;
   vertical-align: baseline;
+
 }
 
 html {

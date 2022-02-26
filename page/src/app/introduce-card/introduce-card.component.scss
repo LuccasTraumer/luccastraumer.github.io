@@ -141,8 +141,8 @@
       .hexagon {
         background-color: var(--yellow-color);
         content: '';
-        width: 20vw;
-        height: 35vh;
+        width: 25vw;
+        height: 10vh;
         position: absolute;
         top: 5vh;
         border-radius: 10px;
@@ -199,6 +199,13 @@
     .up-title {
       left: 3%;
       top: 25%;
+    }
+
+    .right {
+      .hexagon {
+        width: 20vw;
+        height: 35vh;
+      }
     }
   }
 }

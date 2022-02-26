@@ -23,6 +23,20 @@
   img {
     width: 10%;
   }
+
+  .cont {
+    background: var(--bg-contraste);
+    position: absolute;
+    z-index: 1;
+    overflow-x: hidden;
+    max-height: 100vh;
+    max-width: 45vw;
+
+    width: 60vw;
+    margin-top: 96vh;
+
+    padding: 10%;
+  }
 }
 
 .desktop {
@@ -43,6 +57,7 @@
   .desktop {
     display: inline-flex;
     font-size: 1.5rem;
+    position: static;
   }
 
   .logo {
@@ -50,8 +65,12 @@
   }
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+
+    li {
+      margin: 0 auto;
+      padding: 0 10%;
+    }
 
     li:hover {
       cursor: pointer;

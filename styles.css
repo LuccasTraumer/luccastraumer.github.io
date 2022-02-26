@@ -19,13 +19,17 @@
 
 .cont {
   height: 100vh;
-  right: -80%;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+  right: -45%;
+  top: -20vh;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  background: var(--white-color);
 }
 
 .show {
-  right: 0%;
+  right: 0;
+  top: 0;
   transition-timing-function: ease-in-out;
 }
 

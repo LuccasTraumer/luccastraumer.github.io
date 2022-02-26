@@ -13,7 +13,7 @@ In Desktop:
 ![Image of my web page](./assets/pagina-desktop.png)
 
 In Mobile:
-![Image of my web page](./assets/pagina-mobile.png.png)
+![Image of my web page](./assets/pagina-mobile.png)
 
 
 That is the coverage of the project:

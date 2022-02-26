@@ -9,7 +9,6 @@ import { ViewportScroller } from '@angular/common';
 export class HamburguerMenuComponent implements OnInit {
 
   constructor(private viewportScroller: ViewportScroller) { }
-
   @Output()
   fecharMenu = new EventEmitter<boolean>();
 

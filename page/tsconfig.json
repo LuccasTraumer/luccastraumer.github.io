@@ -13,14 +13,11 @@
     "esModuleInterop": true,
     "module": "es2020",
     "paths": {},
-    "types": ["jest"],
+    "types": ["node", "jest"],
     "lib": [
       "es2018",
       "dom"
     ],
     "emitDecoratorMetadata": true
-  },
-  "include": [
-    "src"
-  ]
+  }
 }

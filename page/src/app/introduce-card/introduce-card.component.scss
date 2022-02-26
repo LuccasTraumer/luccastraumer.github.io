@@ -90,9 +90,16 @@
         a {
           img {
             width: 60%;
+            transition: all 0.5s ease-in-out;
+          }
+          img:hover {
+            background: var(--yellow-color);
+            border-radius: 50%;
+            width: 65%;
           }
         }
       }
+
     }
   }
 }
@@ -104,29 +111,101 @@
 
     .left {
       .up-title {
-        left: 1%;
+        left: 0;
         top: 17%;
       }
     }
 
     .right {
-      display: inline-block;
-      margin: auto;
       position: relative;
       text-align: center;
+      width: 100%;
+      height: 100%;
+      display: inline-flex;
+      flex-flow: wrap column;
 
       p {
-        display: flex;
         font-size: 1.1rem;
         font-weight: 900;
         text-align: start;
         padding-left: 55%;
-        position: absolute;
-        top: -8%;
+        align-self: flex-end;
+        width: 90%;
+        padding-right: 5%;
       }
 
       img {
         width: 80%;
+      }
+
+      .hexagon {
+        background-color: var(--yellow-color);
+        content: '';
+        width: 25vw;
+        height: 10vh;
+        position: absolute;
+        top: 5vh;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+        border: 0.4vh solid transparent;
+        left: 38%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          opacity: 100%;
+          position: absolute;
+          z-index: 1;
+          width: 80%;
+          height: 80%;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      /* Creating pseudo-class */
+      .hexagon:before, .hexagon:after {
+        content: "";
+        height: 100.5%;
+        width: 106.7%;
+        position: absolute;
+        top: -0.1vh;
+        left: -0.6vh;
+        background-color: var(--yellow-color);
+        border-radius: inherit;
+        border: inherit;
+      }
+
+      .hexagon:before {
+        transform: rotate(60deg);
+      }
+      .hexagon:after {
+        transform: rotate(-60deg);
+      }
+
+      .hexagon:hover {
+        transform: rotate(25deg);
+
+        img {
+          transform: rotate(-20deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    .up-title {
+      left: 3%;
+      top: 25%;
+    }
+
+    .right {
+      .hexagon {
+        width: 20vw;
+        height: 35vh;
       }
     }
   }

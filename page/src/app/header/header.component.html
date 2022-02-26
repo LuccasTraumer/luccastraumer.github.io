@@ -1,4 +1,7 @@
-<header class="content mobile">
+<header
+  class="content mobile"
+>
+
   <p class="logo">
     LT
   </p>
@@ -7,25 +10,38 @@
     alt="Menu Hamburguer"
     (click)="mudarEstadoMenuHamburguer()"
   >
+
+  <div
+    class="cont"
+   [ngClass] = "{'show': menuEstaAberto()}"
+  >
+    <app-hamburguer-menu
+      (fecharMenu)="mudarEstadoMenuHamburguer()"
+    ></app-hamburguer-menu>
+  </div>
 </header>
 
 <header class="content desktop">
-  <p>
+  <p (click)="onClickScroll('introduce')">
     LT
   </p>
 
   <nav>
     <ul>
-      <li>
-        About
+      <li (click)="onClickScroll('skills')">
+        Skills
       </li>
-      <li>Service</li>
-      <li>Portfolio</li>
+      <li (click)="onClickScroll('projects')">
+        Portfolio
+      </li>
+      <li (click)="onClickScroll('contact')">
+        Contact
+      </li>
     </ul>
   </nav>
 
   <div class="input">
-    <input type="search" value="Search" name="" id="">
+    <input type="search" placeholder="Search" name="" id="">
     <img src="{{ CONSTANTES.SEARCH_ICON }}" alt="">
   </div>
 </header>

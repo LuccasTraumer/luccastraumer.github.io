@@ -29,7 +29,7 @@
         <figure *ngFor="let skill of listaSkills">
           <img
             src="{{ skill.pathImage }}"
-            alt="{{ skill.nomeSkill }}"
+            alt="Icone {{ skill.nomeSkill }}"
           >
           <figcaption>
             {{ skill.nomeSkill }}
@@ -45,9 +45,7 @@
         Experience
       </h4>
       <hr>
-      <article
-        *ngFor="let exp of listaExperiences"
-      >
+      <article *ngFor="let exp of listaExperiences">
         <p class="datas">
           {{ exp.anoInicio }} - {{ exp.anoTermino ? exp.anoTermino : 'Present'}}
         </p>
@@ -69,7 +67,10 @@
         <p>
           Hire Me
         </p>
-        <img src="{{ CONSTANTES.ICONE_ARROW_HIRE }}" alt="">
+        <img
+          src="{{ CONSTANTES.ICONE_ARROW_HIRE }}"
+          alt="Icone de Contratar"
+        >
     </div>
   </div>
 </section>

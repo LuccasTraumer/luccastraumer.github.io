@@ -177,13 +177,6 @@
         border: inherit;
       }
 
-      .hexagon:before {
-        transform: rotate(60deg);
-      }
-      .hexagon:after {
-        transform: rotate(-60deg);
-      }
-
       .hexagon:hover {
         transform: rotate(25deg);
 
@@ -204,8 +197,57 @@
 
     .right {
       .hexagon {
+        background-color: var(--yellow-color);
+        content: '';
         width: 20vw;
         height: 35vh;
+        position: absolute;
+        top: 5vh;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+        border: 0.4vh solid transparent;
+        left: 38%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          opacity: 100%;
+          position: absolute;
+          z-index: 1;
+          width: 80%;
+          height: 80%;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      /* Creating pseudo-class */
+      .hexagon:before, .hexagon:after {
+        content: "";
+        height: 100.5%;
+        width: 106.7%;
+        position: absolute;
+        top: -0.1vh;
+        left: -0.6vh;
+        background-color: var(--yellow-color);
+        border-radius: inherit;
+        border: inherit;
+      }
+
+      .hexagon:before {
+        transform: rotate(60deg);
+      }
+      .hexagon:after {
+        transform: rotate(-60deg);
+      }
+
+      .hexagon:hover {
+        transform: rotate(25deg);
+
+        img {
+          transform: rotate(-20deg);
+        }
       }
     }
   }

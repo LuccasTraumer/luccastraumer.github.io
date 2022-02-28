@@ -1,6 +1,4 @@
-<header
-  class="content mobile"
->
+<header class="content mobile">
 
   <p class="logo">
     LT
@@ -15,9 +13,8 @@
     class="cont"
    [ngClass] = "{'show': menuEstaAberto()}"
   >
-    <app-hamburguer-menu
-      (fecharMenu)="mudarEstadoMenuHamburguer()"
-    ></app-hamburguer-menu>
+    <app-hamburguer-menu (fecharMenu)="mudarEstadoMenuHamburguer()">
+    </app-hamburguer-menu>
   </div>
 </header>
 
@@ -41,7 +38,13 @@
   </nav>
 
   <div class="input">
-    <input type="search" placeholder="Search" name="" id="">
-    <img src="{{ CONSTANTES.SEARCH_ICON }}" alt="">
+    <input
+      type="search"
+      placeholder="Search"
+    >
+    <img
+      src="{{ CONSTANTES.SEARCH_ICON }}"
+      alt="Icone de Busca"
+    >
   </div>
 </header>

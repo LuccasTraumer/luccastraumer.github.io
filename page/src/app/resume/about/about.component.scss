@@ -1,19 +1,16 @@
+app-card {
+  position: absolute;
+  top: 15%;
+}
+
 .container {
   background: #e6dace;
-  position: relative;
-
-  app-card {
-    position: absolute;
-    z-index: 2;
-  }
+  padding: 5%;
+  margin-top: 40%;
 
   .content {
-    padding: 85% 5% 5% 10%;
+    padding: 90% 5% 5% 10%;
     background: inherit;
-    position: absolute;
-    z-index: 1;
-    top: 23vh;
-    left: 0;
 
     .titulo {
       font-weight: bold;
@@ -28,5 +25,13 @@
 
   .content > * {
     background: inherit;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .container {
+    .content {
+
+    }
   }
 }

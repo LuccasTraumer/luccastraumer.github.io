@@ -5,6 +5,9 @@
   width: 90%;
   margin: 0 auto;
   background: #f4ece6;
+  -webkit-box-shadow: -10px 10px 15px -15px #000000;
+  box-shadow: -10px 10px 15px -15px #000000;
+  border-radius: 5px;
 
   .profile-image {
     border-radius: 50%;
@@ -60,14 +63,14 @@
     background: white;
     display: flex;
     width: 100%;
-    margin: 10% 0;
+    margin: 10% 0 3%;
     align-items: center;
     text-align: center;
-    padding: 5%;
+    padding: 2%;
 
     a {
       img {
-        width: 40%;
+        width: 30%;
       }
     }
   }

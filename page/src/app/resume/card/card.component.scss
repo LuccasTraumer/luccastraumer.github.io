@@ -24,6 +24,12 @@
     width: 35%;
   }
 
+  .subtitulo {
+    background: inherit;
+    display: none;
+    visibility: hidden;
+  }
+
   .buttons {
     display: flex;
     justify-content: space-between;
@@ -67,3 +73,21 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .content {
+    .subtitulo {
+      display: block;
+      visibility: visible;
+    }
+  }
+
+  .buttons {
+    display: none;
+    visibility: hidden;
+  }
+
+  .rede-social {
+    justify-content: center;
+    margin: 0 !important;
+  }
+}

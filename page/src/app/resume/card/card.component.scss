@@ -1,0 +1,69 @@
+.content {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  width: 90%;
+  margin: 0 auto;
+  background: #f4ece6;
+
+  .profile-image {
+    border-radius: 50%;
+    width: 40%;
+    margin: 5% 0;
+  }
+
+  .titulo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: min-content;
+    background: inherit;
+  }
+
+  hr {
+    border: var(--azul) solid 1px;
+    width: 35%;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: inherit;
+    padding: 5%;
+
+    .botao {
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 35vw;
+    }
+
+    .azul {
+      background: var(--azul);
+      color: white;
+    }
+
+    .transp {
+      border: 1px solid #000;
+      background: inherit;
+    }
+  }
+
+  .rede-social {
+    background: white;
+    display: flex;
+    width: 100%;
+    margin: 10% 0;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+
+    a {
+      img {
+        width: 40%;
+      }
+    }
+  }
+}
+

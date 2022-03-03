@@ -11,7 +11,7 @@ export class Constantes {
   public static readonly PATH_ICONE_TWITTER = '/assets/novaPagina/twitter-icon.svg';
   public static readonly PATH_ICONE_INSTAGRAM = '/assets/novaPagina/instagram-icon.svg';
   public static readonly PATH_ICONE_GITHUB = '/assets/novaPagina/github-icon.svg';
-  public static readonly IMAGEM_ABOUT = '/assets/novaPagina/image-page.png';
+  public static readonly IMAGEM_ABOUT = '/assets/novaPagina/image-page.jpg';
   public static readonly ICONE_ANGULAR = '/assets/novaPagina/icons8-angularjs.svg';
   public static readonly ICONE_GCP = '/assets/novaPagina/google-cloud-platform-icon.svg';
   public static readonly ICONE_JAVA = '/assets/novaPagina/java-icon.svg';

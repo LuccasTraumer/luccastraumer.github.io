@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constantes } from '../../utils/Constantes';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  readonly CONSTANTES = Constantes;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getDate(): number {
+    return new Date().getFullYear();
   }
 
 }

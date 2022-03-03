@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './services/data.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ResumeModule } from './resume/resume.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ResumeModule
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]

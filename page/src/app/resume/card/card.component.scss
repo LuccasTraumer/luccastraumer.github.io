@@ -78,9 +78,14 @@
 
 @media screen and (min-width: 768px) {
   .content {
+    .titulo {
+      font-size: 2rem;
+    }
+
     .subtitulo {
       display: block;
       visibility: visible;
+      letter-spacing: 2px;
     }
   }
 

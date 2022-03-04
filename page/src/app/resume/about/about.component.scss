@@ -20,6 +20,12 @@ app-card {
     .subtitulo {
       font-size: 1.2rem;
       font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .buttons {
+      display: none;
+      visibility: hidden;
     }
   }
 
@@ -28,10 +34,74 @@ app-card {
   }
 }
 
-@media screen and (min-width: 768px){
-  .container {
-    .content {
+@media screen and (min-width: 767px){
+  app-card {
+    top: 25%;
+    width: 50%;
+    left: 5%;
+  }
 
+  .container {
+    margin: 0;
+    width: 100%;
+    background: #e6dace;
+    height: 80vh;
+    padding: 0 5% 0 5%;
+
+    .content {
+      background: white;
+      right: 0;
+      width: 60%;
+      margin: auto 50%;
+      padding: 20% 5% 5% 10%;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+
+      .titulo {
+        font-size: 4rem;
+      }
+
+      .subtitulo {
+        letter-spacing: 2px;
+      }
+
+      .buttons {
+        display: flex;
+        visibility: visible;
+        justify-content: space-between;
+        width: 100%;
+        background: inherit;
+        padding: 5%;
+
+        .botao {
+          border: none;
+          border-radius: 50px;
+          font-weight: bold;
+          text-transform: uppercase;
+          width: 35vw;
+          padding: 2%;
+          margin-right: 5%;
+        }
+
+        .azul {
+          background: var(--azul);
+          color: white;
+        }
+
+        .transp {
+          border: 1px solid #000;
+          background: inherit;
+        }
+      }
+
+      p {
+        letter-spacing: 1px;
+      }
+    }
+
+    .content > * {
+      padding: 5% 0;
     }
   }
 }

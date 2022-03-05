@@ -3,11 +3,11 @@
     {{ card.anoInicio }} - {{ card.anoFinal ? card.anoFinal : 'Present' }}
   </h3>
 
-  <p class="cargo">
-    {{ card.cargoExercido }}
-  </p>
-
   <div class="empresa-inst">
+    <p class="cargo">
+      {{ card.cargoExercido }}
+    </p>
+
     <p>
       {{ card.nomeEmpresa || card.nomeInstituicao }}
     </p>

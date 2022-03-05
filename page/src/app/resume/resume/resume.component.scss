@@ -10,7 +10,6 @@
     flex-direction: row;
     align-items: center;
 
-
     app-quadrado {
       margin-right: 5%;
     }
@@ -38,6 +37,11 @@
         width: 40%;
       }
     }
+
+    .container {
+      display: flex;
+      flex-flow: column wrap;
+    }
   }
 
   .education {
@@ -48,5 +52,9 @@
       font-weight: bold;
       font-size: 1rem;
     }
+  }
+
+  .language {
+    width: 100%;
   }
 }

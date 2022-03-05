@@ -1,6 +1,9 @@
 .content {
   background: white;
   padding: 10% 5%;
+  -webkit-box-shadow: -10px 10px 15px -15px #000000;
+  box-shadow: -10px 10px 15px -15px #000000;
+  border-radius: 5px;
 
   .data {
     color: var(--azul);
@@ -12,11 +15,15 @@
     text-transform: uppercase;
   }
 
-  .empresa {
+  .empresa-inst {
     margin: 0 0 10% 0;
 
     p {
       margin: 0;
+    }
+
+    .nivel-escolaridade {
+      padding: 5% 0 0 0;
     }
   }
 

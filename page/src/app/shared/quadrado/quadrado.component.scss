@@ -2,13 +2,11 @@
   content: "";
   background: var(--azul);
   width: 5vw;
-  height: 100%;
+  height: 1.8vh;
 }
 
 @media screen and (min-width: 767px){
   .quadrado {
-    content: "";
-    background: var(--azul);
     width: 2vw;
     height: 1vh;
   }
@@ -16,8 +14,6 @@
 
 @media screen and (min-width: 1024px){
   .quadrado {
-    content: "";
-    background: var(--azul);
     width: 1.5vw;
     height: 0.9vh;
   }

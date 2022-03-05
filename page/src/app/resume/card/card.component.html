@@ -7,9 +7,13 @@
     {{ card.cargoExercido }}
   </p>
 
-  <div class="empresa">
+  <div class="empresa-inst">
     <p>
-      {{ card.nomeEmpresa }}
+      {{ card.nomeEmpresa || card.nomeInstituicao }}
+    </p>
+
+    <p class="nivel-escolaridade" *ngIf="card.nivelEscolaridade">
+      {{ card.nivelEscolaridade }}
     </p>
 
     <p>

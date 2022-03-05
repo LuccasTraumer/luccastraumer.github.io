@@ -15,13 +15,6 @@
       margin: 0 0 0 3%;
       font-size: 1.5rem;
     }
-
-    &__quadrado {
-      content: "";
-      background: var(--azul);
-      width: 5vw;
-      height: 1vh;
-    }
   }
 
   .menu-hamburguer {
@@ -81,13 +74,6 @@
         margin: 0;
         font-size: 1.2rem;
       }
-
-      &__quadrado {
-        content: "";
-        background: var(--azul);
-        width: 2vw;
-        height: 1vh;
-      }
     }
 
     .menu-hamburguer {
@@ -118,13 +104,6 @@
         font-weight: bold;
         margin: 0 0 0 3%;
         font-size: 1.5rem;
-      }
-
-      &__quadrado {
-        content: "";
-        background: var(--azul);
-        width: 1.5vw;
-        height: 0.9vh;
       }
     }
 

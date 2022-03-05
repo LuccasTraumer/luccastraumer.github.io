@@ -22,4 +22,15 @@
     </app-card>
   </section>
 
+  <section class="education">
+    <h2 class="titulo">
+      Education
+    </h2>
+
+    <app-card
+      *ngFor="let education of listaEnsino"
+      [card]="education"
+    >
+    </app-card>
+  </section>
 </section>

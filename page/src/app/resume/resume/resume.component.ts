@@ -20,9 +20,11 @@ export class ResumeComponent implements OnInit {
       ' \n' +
       '\n' +
       'I’m a great place for you to tell a story and let your users know a little more about you.';
-    const mock = new CardJob(2019, 'Campinas', desc, 'Desenvolvedor Software', 'CIANDT');
+    const mockJob = new CardJob(2019, 'Campinas', desc, 'Desenvolvedor Software', 'CIANDT');
+    this.listaTrabalhos = [mockJob];
 
-    this.listaTrabalhos = [mock];
+    const mockEdu = new CardEducation(2019, 'Campinas', desc, 'Techinical', 'COTUCA', 2021)
+    this.listaEnsino = [mockEdu];
   }
 
 }

@@ -1,0 +1,25 @@
+<section class="resume">
+  <div class="title">
+    <app-quadrado></app-quadrado>
+    <h2 class="titulo">
+      Resume
+    </h2>
+  </div>
+
+  <section class="experience">
+    <div class="info">
+      <p>
+        Experience
+      </p>
+
+      <app-button [textContent]="'Download CV'" [isItalicText]="true"></app-button>
+    </div>
+
+    <app-card
+      *ngFor="let trabalho of listaTrabalhos"
+      [card]="trabalho"
+    >
+    </app-card>
+  </section>
+
+</section>

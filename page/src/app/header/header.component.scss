@@ -74,6 +74,7 @@
       &__titulo:after {
         content: " / ";
         white-space: break-spaces;
+        font-weight: normal;
       }
 
       &__subtitulo {
@@ -143,6 +144,8 @@
 
         &__item:hover {
           color: var(--azul);
+          text-decoration: underline;
+          cursor: pointer;
         }
       }
     }

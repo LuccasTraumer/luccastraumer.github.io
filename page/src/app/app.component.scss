@@ -1,1 +1,26 @@
+#header {
+}
 
+#resume {
+
+}
+
+#footer {
+
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    position: relative;
+
+    #header {
+      app-header {
+        position: fixed;
+        width: 100%;
+        background: white;
+        z-index: 2;
+        top: 0;
+      }
+    }
+  }
+}

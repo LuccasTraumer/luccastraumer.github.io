@@ -1,101 +1,26 @@
 .content {
-  align-items: center;
-  display: flex;
-  flex-flow: column wrap;
-  width: 90%;
-  margin: 0 auto;
-  background: #f4ece6;
-  -webkit-box-shadow: -10px 10px 15px -15px #000000;
-  box-shadow: -10px 10px 15px -15px #000000;
-  border-radius: 5px;
+  background: white;
+  padding: 10% 5%;
 
-  .profile-image {
-    border-radius: 50%;
-    width: 40%;
-    margin: 5% 0;
-  }
-
-  .titulo {
+  .data {
+    color: var(--azul);
     font-weight: bold;
-    font-size: 1.5rem;
-    width: min-content;
-    background: inherit;
+    font-size: 1rem;
   }
 
-  hr {
-    border: var(--azul) solid 1px;
-    width: 35%;
+  .cargo {
+    text-transform: uppercase;
   }
 
-  .subtitulo {
-    background: inherit;
-    display: none;
-    visibility: hidden;
-  }
+  .empresa {
+    margin: 0 0 10% 0;
 
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background: inherit;
-    padding: 5%;
-
-    .botao {
-      border: none;
-      border-radius: 50px;
-      font-weight: bold;
-      text-transform: uppercase;
-      width: 35vw;
-    }
-
-    .azul {
-      background: var(--azul);
-      color: white;
-    }
-
-    .transp {
-      border: 1px solid #000;
-      background: inherit;
+    p {
+      margin: 0;
     }
   }
 
-  .rede-social {
-    background: white;
-    display: flex;
-    width: 100%;
-    margin: 10% 0 3%;
-    align-items: center;
-    text-align: center;
-    padding: 2%;
-
-    a {
-      img {
-        width: 30%;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .content {
-    .titulo {
-      font-size: 2rem;
-    }
-
-    .subtitulo {
-      display: block;
-      visibility: visible;
-      letter-spacing: 2px;
-    }
-  }
-
-  .buttons {
-    display: none;
-    visibility: hidden;
-  }
-
-  .rede-social {
-    justify-content: center;
-    margin: 0 !important;
+  .descricao {
+    letter-spacing: 1px;
   }
 }

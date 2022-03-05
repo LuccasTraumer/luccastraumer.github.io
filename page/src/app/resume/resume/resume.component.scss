@@ -1,0 +1,43 @@
+.resume {
+  background: rgb(230,218,206);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+
+  .title {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+
+
+    app-quadrado {
+      height: 1.8vh;
+      margin-right: 5%;
+    }
+
+    .titulo {
+      font-weight: bold;
+    }
+  }
+
+  .experience {
+    .info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-around;
+      padding: 10% 0;
+
+      p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      app-button {
+        width: 40%;
+      }
+    }
+  }
+}

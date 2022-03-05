@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../model/card';
-import { CardJob } from '../model/card-job';
+import { Component, OnInit } from '@angular/core';
+import { Constantes } from '../../../utils/Constantes';
 
 @Component({
   selector: 'app-card',
@@ -9,9 +8,7 @@ import { CardJob } from '../model/card-job';
 })
 export class CardComponent implements OnInit {
 
-  @Input()
-  card: any;
-
+  readonly CONSTANTES = Constantes;
   constructor() { }
 
   ngOnInit(): void {

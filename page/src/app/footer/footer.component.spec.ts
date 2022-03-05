@@ -19,7 +19,13 @@ describe('FooterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('Quando executar o metodo para recuperar o ano atual deve retornar o ano', () => {
+    const response = component.getDate();
+
+    expect(response).toEqual(new Date().getFullYear());
   });
 });

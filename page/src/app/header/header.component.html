@@ -31,10 +31,10 @@
 
   <nav class="menu">
     <ul class="lista">
-      <li class="lista__item">About me</li>
-      <li class="lista__item">Resume</li>
-      <li class="lista__item">Projects</li>
-      <li class="lista__item">Contact</li>
+      <li class="lista__item" (click)="changeActive('About')">About me</li>
+      <li class="lista__item" (click)="changeActive('resume')">Resume</li>
+      <li class="lista__item" (click)="changeActive('Projects')">Projects</li>
+      <li class="lista__item" (click)="changeActive('Contact')">Contact</li>
     </ul>
   </nav>
 </header>

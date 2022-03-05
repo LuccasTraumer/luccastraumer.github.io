@@ -7,7 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './services/data.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -20,9 +22,11 @@ import { ResumeModule } from './resume/resume.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ResumeModule
+    AboutModule,
+    ResumeModule,
+    SharedModule
   ],
   providers: [ DataService ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

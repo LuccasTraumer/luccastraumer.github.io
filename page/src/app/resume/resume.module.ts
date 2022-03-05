@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ResumeComponent } from './resume/resume.component';
 import { CardComponent } from './card/card.component';
-import { AboutComponent } from './about/about.component';
-
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [CardComponent, AboutComponent],
-  exports: [
-    CardComponent,
-    AboutComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [ResumeComponent, CardComponent],
+    imports: [
+        CommonModule,
+        SharedModule
+    ],
+  exports: [ResumeComponent]
 })
 export class ResumeModule { }

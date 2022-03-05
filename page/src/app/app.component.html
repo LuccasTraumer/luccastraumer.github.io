@@ -1,13 +1,25 @@
 <section id="header">
-  <app-header></app-header>
+  <app-header
+    (elementoFocado)="mudarElementoPrincipal($event)"
+  ></app-header>
 </section>
 
 <section class="about">
-<!--  <app-about></app-about>-->
+  <app-about
+    [ngClass]="elementoEmFoco === 'about' ? '' : 'out'"
+  ></app-about>
 </section>
 
 <section id="resume">
-  <app-resume></app-resume>
+  <app-resume
+    [ngClass]="elementoEmFoco === 'resume' ? '' : 'out'"
+  ></app-resume>
+</section>
+
+<section class="projects">
+  <app-projects
+    [ngClass]="elementoEmFoco === 'projects' ? '' : 'out'"
+  ></app-projects>
 </section>
 <section class="footer">
   <app-footer></app-footer>

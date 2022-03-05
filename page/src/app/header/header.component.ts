@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,21 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output()
+  elementoFocado =  new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
-    this.changeActive('About');
+    // TODO: Alterar para deixar o about
+    this.changeActive('projects');
   }
 
   changeActive(textContent: string): void {
     const elementos = document.querySelectorAll('.lista__item');
     elementos.forEach(elemento => {
-      console.log(`Elemento ta valendo ${elemento.textContent.includes(textContent)}`);
       elemento.classList.remove('active');
 
       if (elemento.textContent.toLocaleLowerCase().includes(textContent.toLocaleLowerCase())) {
         elemento.classList.add('active');
+        this.elementoFocado.emit(textContent.toLocaleLowerCase());
       }
     });
 

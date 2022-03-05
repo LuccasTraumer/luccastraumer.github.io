@@ -10,6 +10,11 @@
     align-items: center;
     text-align: center;
 
+    app-quadrado {
+      width: 5vw;
+      height: 1.9vh;
+    }
+
     &__titulo {
       font-weight: bold;
       margin: 0 0 0 3%;

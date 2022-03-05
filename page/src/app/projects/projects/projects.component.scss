@@ -1,0 +1,32 @@
+.content {
+  background: var(--bg-marrom);
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+
+  .info {
+
+    .titulo {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      app-quadrado {
+        margin-right: 5%;
+        width: 5vw;
+        height: 1.9vh;
+      }
+
+      h3 {
+        font-weight: bold;
+
+      }
+    }
+
+    .description {
+      padding: 5% 0;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+  }
+}

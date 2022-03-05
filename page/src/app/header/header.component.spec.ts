@@ -19,7 +19,24 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('Quando executar o metodo chnageActive deve mudar o seletor', () => {
+    fixture.detectChanges();
+    let isActive: boolean;
+    let textContent = '';
+    const elementoComFoco = document.querySelectorAll('.lista__item');
+
+    elementoComFoco.forEach(elemento => {
+      if (elemento.classList.contains('active')) {
+        isActive = true;
+        textContent = elemento.textContent;
+      }
+    });
+
+    expect(isActive).toBeTruthy();
+    expect(textContent).toEqual('About me');
   });
 });

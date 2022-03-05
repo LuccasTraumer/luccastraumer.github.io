@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
 import { SharedModule } from './shared/shared.module';
+import { ProjectsModule } from './projects/projects.module';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     AboutModule,
     ResumeModule,
+    ProjectsModule,
     SharedModule
   ],
   providers: [ DataService ],

@@ -1,5 +1,6 @@
 :root {
   --azul: #116dff;
+  --bg-marrom: rgb(230,218,206);
 }
 * {
   font-family: 'Poppins', sans-serif;
@@ -10,4 +11,10 @@
 
 .active {
   color: var(--azul);
+}
+
+.out {
+  display: none;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
 }

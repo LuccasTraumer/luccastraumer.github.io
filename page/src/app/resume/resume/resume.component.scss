@@ -1,5 +1,5 @@
 .resume {
-  background: rgb(230,218,206);
+  background: var(--bg-marrom);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +12,9 @@
 
     app-quadrado {
       margin-right: 5%;
+      width: 5vw;
+      height: 1.9vh;
+
     }
 
     .titulo {

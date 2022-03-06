@@ -1,10 +1,14 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { DataService } from './services/data.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ModalHambComponent } from './modal-hamb/modal-hamb.component';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -18,15 +22,39 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
   test('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   test(`should have as title 'page'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('page');
+    expect(component.title).toEqual('page');
+  });
+
+  test('Quando executar o metodo mudarElementoPrincipal deve efetuar fluxo com sucesso', () => {
+    component.mudarElementoPrincipal('elemento');
+
+    expect(component.elementoEmFoco).toEqual('elemento');
+  });
+
+  test('Quando executar o metodo isMenuOpen com open true deve efetuar o fluxo de sucesso', () => {
+    component.isMenuOpen(true);
+
+    const bodyElement = document.querySelector('body');
+    expect(component.isOpenMenuHamburguer).toBeTruthy();
+    expect(bodyElement.classList.contains('all-screen')).toBeTruthy();
+  });
+
+  test('Quando executar o metodo isMenuOpen com open false deve efetuar o fluxo de remocao', () => {
+    component.isMenuOpen(false);
+
+    const bodyElement = document.querySelector('body');
+    expect(component.isOpenMenuHamburguer).toBeFalsy();
+    expect(bodyElement.classList.contains('all-screen')).toBeFalsy();
   });
 });

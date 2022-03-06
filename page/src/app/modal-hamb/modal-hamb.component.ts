@@ -31,12 +31,12 @@ export class ModalHambComponent implements OnInit {
   }
 
   isOpen(): void {
-    const test = document.querySelector('body');
+    const htmlBodyElement = document.querySelector('body');
 
     if (this.isAtivo) {
-      test.classList.add('all-screen');
+      htmlBodyElement.classList.add('all-screen');
     } else {
-    test.classList.remove('all-screen');
+    htmlBodyElement.classList.remove('all-screen');
     }
   }
 }

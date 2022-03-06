@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardComponent } from './card.component';
+import { CardJob } from '../model/card-job';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -16,10 +17,19 @@ describe('CardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
+
+    component.card = new CardJob(2019, 'Campinas', 'Descrição', 'Desenvolvedor de Software', 'CINADT');
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('Quando executar o card sem ano final deve preencher o ternario', () => {
+    component.card.anoFinal = null;
+
+    const data = document.querySelector('.data');
+    expect(data.textContent).toEqual(' 2019 - Present ');
   });
 });

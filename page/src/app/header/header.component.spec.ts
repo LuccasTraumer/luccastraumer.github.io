@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import spyOn = jest.spyOn;
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -38,5 +39,13 @@ describe('HeaderComponent', () => {
 
     expect(isActive).toBeTruthy();
     expect(textContent).toEqual('About me');
+  });
+
+  test('Quando executar o metodo changeManuHamb deve efetuar fluxo com sucesso', () => {
+    spyOn(component.isHamburguerAberto, 'emit');
+
+    component.changeManuHamb();
+    expect(component.isHamburguerAberto.emit).toHaveBeenCalled();
+    expect(component.isMenuHamburguerOpen).toBeTruthy();
   });
 });

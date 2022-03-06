@@ -51,3 +51,15 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px){
+  .content {
+    height: 30vh;
+    padding: 5%;
+    overflow: hidden;
+
+    .empresa-inst {
+      margin: 0 5%;
+    }
+  }
+}

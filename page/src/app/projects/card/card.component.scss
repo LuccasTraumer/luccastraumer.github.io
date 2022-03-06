@@ -83,3 +83,14 @@
     padding: 0;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .content {
+    height: 40vh;
+
+    app-quadrado {
+      top: 30%;
+      width: 1%;
+    }
+  }
+}

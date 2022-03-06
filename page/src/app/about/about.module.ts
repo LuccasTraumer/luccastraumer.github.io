@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { AboutComponent } from './about/about.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -11,8 +12,9 @@ import { AboutComponent } from './about/about.component';
     CardComponent,
     AboutComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        SharedModule
+    ]
 })
 export class AboutModule { }

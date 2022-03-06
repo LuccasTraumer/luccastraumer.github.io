@@ -53,7 +53,7 @@ app-card {
       right: 0;
       width: 60%;
       margin: auto 50%;
-      padding: 20% 5% 5% 10%;
+      padding: 10% 5% 5% 10%;
       height: inherit;
       display: flex;
       flex-direction: column;
@@ -74,35 +74,10 @@ app-card {
         background: inherit;
         padding: 5%;
 
-        .botao {
-          border: none;
-          border-radius: 50px;
-          font-weight: bold;
-          text-transform: uppercase;
-          width: 35vw;
+        app-button {
+          width: 50%;
           padding: 2%;
           margin-right: 5%;
-        }
-
-        .azul {
-          background: var(--azul);
-          color: white;
-        }
-
-        .azul:hover {
-          background: inherit;
-          color: #111111;
-          border: 1px solid #000;
-        }
-
-        .transp {
-          border: 1px solid #000;
-          background: inherit;
-        }
-
-        .transp:hover {
-          background: var(--azul);
-          color: white;
         }
       }
 
@@ -130,5 +105,11 @@ app-card {
     background: #e6dace;
     height: 100vh;
     padding: 0 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  app-card {
+    top: 45%;
   }
 }

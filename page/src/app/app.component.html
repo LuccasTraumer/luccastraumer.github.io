@@ -1,6 +1,8 @@
 <section id="header">
   <app-header
     (elementoFocado)="mudarElementoPrincipal($event)"
+    (isHamburguerAberto)="isMenuOpen($event)"
+    [ngClass]="isOpenMenuHamburguer ? 'all-screen' : ''"
   ></app-header>
 </section>
 

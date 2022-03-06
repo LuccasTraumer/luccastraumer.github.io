@@ -12,6 +12,7 @@ import { ResumeModule } from './resume/resume.module';
 import { SharedModule } from './shared/shared.module';
 import { ProjectsModule } from './projects/projects.module';
 import { ContactComponent } from './contact/contact.component';
+import { ModalHambComponent } from './modal-hamb/modal-hamb.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     FooterComponent,
     ContactComponent,
+    ModalHambComponent,
   ],
   imports: [
     BrowserModule,

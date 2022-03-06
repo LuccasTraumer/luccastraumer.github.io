@@ -10,11 +10,19 @@
     </p>
   </div>
 
-  <div class="menu-hamburguer">
+  <div
+    class="menu-hamburguer"
+    (click)="changeManuHamb()"
+    [ngClass]="isMenuHamburguerOpen ? 'active-hamb' : ''"
+  >
     <div class="menu-hamburguer__first-line"></div>
     <div class="menu-hamburguer__second-line"></div>
     <div class="menu-hamburguer__third-line"></div>
   </div>
+
+  <app-modal-hamb
+    [isAtivo]="isMenuHamburguerOpen"
+  ></app-modal-hamb>
 </header>
 
 <header class="content desktop">

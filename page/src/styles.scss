@@ -18,3 +18,9 @@
   visibility: hidden;
   transition: all 0.5s ease-in-out;
 }
+
+.all-screen {
+  height: 100vh;
+  max-width: 100vh;
+  overflow: hidden;
+}

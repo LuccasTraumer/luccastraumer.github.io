@@ -30,3 +30,18 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px){
+  .content {
+    .info {
+
+      .titulo {
+        app-quadrado {
+          margin-right: 2%;
+          height: 4vh;
+          width: 2vw;
+        }
+      }
+    }
+  }
+}

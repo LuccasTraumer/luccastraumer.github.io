@@ -1,23 +1,20 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-modal-hamb',
+  templateUrl: './modal-hamb.component.html',
+  styleUrls: ['./modal-hamb.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class ModalHambComponent implements OnInit {
   @Output()
   elementoFocado =  new EventEmitter<string>();
 
-  @Output()
-  isHamburguerAberto = new EventEmitter<boolean>();
-
-  isMenuHamburguerOpen = false;
+  @Input()
+  isAtivo: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.changeActive('about');
   }
 
   changeActive(textContent: string): void {
@@ -30,10 +27,16 @@ export class HeaderComponent implements OnInit {
         this.elementoFocado.emit(textContent.toLocaleLowerCase());
       }
     });
+    this.isOpen();
   }
 
-  changeManuHamb(): void {
-    this.isMenuHamburguerOpen = !this.isMenuHamburguerOpen;
-    this.isHamburguerAberto.emit(this.isMenuHamburguerOpen);
+  isOpen(): void {
+    const test = document.querySelector('body');
+
+    if (this.isAtivo) {
+      test.classList.add('all-screen');
+    } else {
+    test.classList.remove('all-screen');
+    }
   }
 }

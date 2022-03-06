@@ -1,0 +1,81 @@
+.content {
+  background: var(--bg-marrom);
+  padding: 5% 0;
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    app-quadrado {
+      width: 5vw;
+      height: 1.9vh;
+      margin-right: 5%;
+    }
+
+    .titulo {
+      font-weight: bold;
+    }
+  }
+
+  .formulario {
+    width: 80%;
+    background: white;
+    margin: 5% auto;
+    padding: 5%;
+    -webkit-box-shadow: -10px 10px 15px -15px #000000;
+    box-shadow: -10px 10px 15px -15px #000000;
+    border-radius: 5px;
+
+    p {
+      font-weight: bold;
+
+      span {
+        color: var(--azul);
+      }
+    }
+
+    input, textarea {
+      border: none;
+      border-bottom: 2px solid #000;
+      width: 100%;
+      color: var(--azul);
+      font-weight: bold;
+    }
+
+    input:hover, textarea:hover {
+      border-bottom: 2px solid var(--azul);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+    }
+
+    app-button {
+      display: flex;
+      justify-content: center;
+      padding: 5% 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .content {
+    .formulario {
+      display: flex;
+      flex-flow: column wrap;
+      width: max-content;
+
+      .name {
+        display: inherit;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 2%;
+      }
+
+      .name > * {
+        width: 40%;
+      }
+    }
+  }
+}

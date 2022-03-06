@@ -1,0 +1,38 @@
+<section class="content">
+  <div class="info">
+    <app-quadrado></app-quadrado>
+    <h3 class="titulo">
+      Let's talk
+    </h3>
+  </div>
+
+  <div class="formulario">
+    <div class="name">
+      <div class="nome">
+        <p>First Name <span>*</span></p>
+        <input type="text" name="" required>
+      </div>
+      <div class="sobrenome">
+        <p>Last Name <span>*</span></p>
+        <input type="text" name="" required>
+      </div>
+    </div>
+
+    <p>Email <span>*</span></p>
+    <input type="email" name="" required>
+
+    <p>Subject</p>
+    <input type="text" name="">
+
+    <p>Message</p>
+    <textarea>
+    </textarea>
+
+    <app-button
+      [isItalicText]="false"
+      [textContent]="'SEND'"
+      [buttonAzulHidden]="false"
+      >
+    </app-button>
+  </div>
+</section>

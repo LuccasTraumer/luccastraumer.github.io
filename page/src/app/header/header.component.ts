@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     // TODO: Alterar para deixar o about
-    this.changeActive('projects');
+    this.changeActive('contact');
   }
 
   changeActive(textContent: string): void {

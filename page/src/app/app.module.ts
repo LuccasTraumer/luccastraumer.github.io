@@ -11,6 +11,7 @@ import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
 import { SharedModule } from './shared/shared.module';
 import { ProjectsModule } from './projects/projects.module';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ProjectsModule } from './projects/projects.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

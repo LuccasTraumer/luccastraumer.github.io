@@ -1,0 +1,75 @@
+.resume {
+  background: var(--bg-marrom);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+
+  .title {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+
+    app-quadrado {
+      margin-right: 5%;
+      width: 5vw;
+      height: 1.9vh;
+
+    }
+
+    .titulo {
+      font-weight: bold;
+    }
+  }
+
+  .experience {
+    .info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-around;
+      padding: 10% 0;
+
+      p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      app-button {
+        width: 30%;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+
+  .education {
+    align-self: flex-start;
+    padding: 10% 0;
+    width: 100%;
+
+    .titulo {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+
+  .language {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px){
+  .resume {
+    .title {
+      app-quadrado {
+        height: 3vh;
+        width: 2vw;
+      }
+    }
+  }
+}

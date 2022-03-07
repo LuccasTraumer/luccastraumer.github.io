@@ -1,0 +1,49 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5%;
+
+  .informacoes {
+    display: inherit;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 70%;
+
+    .titulo {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .redes-sociais {
+
+      &__titulo {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .lista {
+        display: flex;
+        justify-content: space-around;
+
+        &__item {
+          list-style: none;
+
+          img {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    .informacoes {
+      flex-flow: row wrap;
+    }
+  }
+}

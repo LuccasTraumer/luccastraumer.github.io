@@ -1,50 +1,48 @@
 <header class="content mobile">
+  <div class="informacoes">
+    <app-quadrado></app-quadrado>
+    <h3 class="informacoes__titulo">
+      Lucas Jesus
+    </h3>
 
-  <p class="logo">
-    LT
-  </p>
-  <img
-    src="{{ getManuHamburguer() }}"
-    alt="Menu Hamburguer"
-    (click)="mudarEstadoMenuHamburguer()"
-  >
+    <p class="informacoes__subtitulo">
+      Software Developer
+    </p>
+  </div>
 
   <div
-    class="cont"
-   [ngClass] = "{'show': menuEstaAberto()}"
+    class="menu-hamburguer"
+    (click)="changeManuHamb()"
+    [ngClass]="isMenuHamburguerOpen ? 'active-hamb' : ''"
   >
-    <app-hamburguer-menu (fecharMenu)="mudarEstadoMenuHamburguer()">
-    </app-hamburguer-menu>
+    <div class="menu-hamburguer__first-line"></div>
+    <div class="menu-hamburguer__second-line"></div>
+    <div class="menu-hamburguer__third-line"></div>
   </div>
+
+  <app-modal-hamb
+    [isAtivo]="isMenuHamburguerOpen"
+  ></app-modal-hamb>
 </header>
 
 <header class="content desktop">
-  <p (click)="onClickScroll('introduce')">
-    LT
-  </p>
+  <div class="informacoes">
+    <div class="informacoes__quadrado"></div>
+    <h3 class="informacoes__titulo">
+      Lucas Jesus
+    </h3>
 
-  <nav>
-    <ul>
-      <li (click)="onClickScroll('skills')">
-        Skills
-      </li>
-      <li (click)="onClickScroll('projects')">
-        Portfolio
-      </li>
-      <li (click)="onClickScroll('contact')">
-        Contact
-      </li>
+    <p class="informacoes__subtitulo">
+      Software Developer
+    </p>
+  </div>
+
+  <nav class="menu">
+    <ul class="lista">
+      <li class="lista__item" (click)="changeActive('About')">About me</li>
+      <li class="lista__item" (click)="changeActive('resume')">Resume</li>
+      <li class="lista__item" (click)="changeActive('Projects')">Projects</li>
+      <li class="lista__item" (click)="changeActive('Contact')">Contact</li>
     </ul>
   </nav>
-
-  <div class="input">
-    <input
-      type="search"
-      placeholder="Search"
-    >
-    <img
-      src="{{ CONSTANTES.SEARCH_ICON }}"
-      alt="Icone de Busca"
-    >
-  </div>
 </header>

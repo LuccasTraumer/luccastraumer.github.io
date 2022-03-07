@@ -1,0 +1,25 @@
+.menu {
+  background: var(--bg-marrom);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: absolute;
+  z-index: 3;
+  right: -100%;
+  top: 0;
+  transition: all 1s ease-in-out;
+
+  .lista {
+    list-style: none;
+  }
+}
+
+.animacao {
+  right: 0;
+}

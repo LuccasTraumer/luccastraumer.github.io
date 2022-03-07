@@ -1,0 +1,30 @@
+.content {
+  background: white;
+  display: flex;
+  flex-flow: column wrap;
+  width: auto;
+  padding: 5%;
+  -webkit-box-shadow: -10px 10px 15px -15px #000000;
+  box-shadow: -10px 10px 15px -15px #000000;
+  border-radius: 5px;
+
+  .titulo {
+    font-weight: bold;
+    font-size: 1rem;
+    align-self: flex-start;
+  }
+
+  .lista {
+    &__item {
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      app-quadrado {
+        width: 1vw;
+        height: 2vh;
+        margin-right: 2%;
+      }
+    }
+  }
+}

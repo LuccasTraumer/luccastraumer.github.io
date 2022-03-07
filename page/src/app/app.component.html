@@ -1,15 +1,33 @@
-<section class="header">
-  <app-header></app-header>
+<section id="header">
+  <app-header
+    (elementoFocado)="mudarElementoPrincipal($event)"
+    (isHamburguerAberto)="isMenuOpen($event)"
+    [ngClass]="isOpenMenuHamburguer ? 'all-screen' : ''"
+  ></app-header>
 </section>
-<section class="introduce">
-  <app-introduce-card></app-introduce-card>
+
+<section class="about">
+  <app-about
+    [ngClass]="elementoEmFoco === 'about' ? '' : 'out'"
+  ></app-about>
 </section>
-<section id="skills">
-  <app-skills></app-skills>
+
+<section id="resume">
+  <app-resume
+    [ngClass]="elementoEmFoco === 'resume' ? '' : 'out'"
+  ></app-resume>
 </section>
-<section id="projects">
-  <app-projects></app-projects>
+
+<section class="projects">
+  <app-projects
+    [ngClass]="elementoEmFoco === 'projects' ? '' : 'out'"
+  ></app-projects>
 </section>
-<section id="contact">
-  <app-contact></app-contact>
+<section class="contact">
+  <app-contact
+    [ngClass]="elementoEmFoco === 'contact' ? '' : 'out'"
+  ></app-contact>
+</section>
+<section class="footer">
+  <app-footer></app-footer>
 </section>

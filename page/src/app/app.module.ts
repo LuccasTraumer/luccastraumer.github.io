@@ -1,33 +1,38 @@
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { IntroduceCardComponent } from './introduce-card/introduce-card.component';
-import { SkillsComponent } from './skills/skills.component';
-import {HttpClientModule} from '@angular/common/http';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
 import { DataService } from './services/data.service';
-import { HamburguerMenuComponent } from './hamburguer-menu/hamburguer-menu.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutModule } from './about/about.module';
+import { ResumeModule } from './resume/resume.module';
+import { SharedModule } from './shared/shared.module';
+import { ProjectsModule } from './projects/projects.module';
+import { ContactComponent } from './contact/contact.component';
+import { ModalHambComponent } from './modal-hamb/modal-hamb.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    IntroduceCardComponent,
-    SkillsComponent,
-    ProjectsComponent,
+    FooterComponent,
     ContactComponent,
-    HamburguerMenuComponent,
+    ModalHambComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AboutModule,
+    ResumeModule,
+    ProjectsModule,
+    SharedModule
   ],
   providers: [ DataService ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

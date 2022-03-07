@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .content {
   background: white;
   border-radius: 5px;
@@ -9,6 +13,9 @@
   flex-flow: column wrap;
   width: 100%;
   overflow: hidden;
+  transition: all 10s ease-in-out;
+  border: none;
+
 
   app-quadrado {
     background: var(--azul);
@@ -46,6 +53,10 @@
       width: 100%;
     }
   }
+}
+
+.content:hover {
+  border: 2px solid var(--azul);
 }
 
 @media screen and (min-width: 1024px){

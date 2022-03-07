@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  @Output()
+  elementoFoco = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  pegarNovoFocoCard(elementoFocado: string): void {
+    this.elementoFoco.emit(elementoFocado);
+  }
 }

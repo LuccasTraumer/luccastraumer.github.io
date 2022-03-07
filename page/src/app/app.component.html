@@ -9,6 +9,7 @@
 <section class="about">
   <app-about
     [ngClass]="elementoEmFoco === 'about' ? '' : 'out'"
+    (elementoFoco)="mudarElementoPrincipal($event)"
   ></app-about>
 </section>
 

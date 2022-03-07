@@ -13,8 +13,21 @@
   </p>
 
   <div class="buttons">
-    <button class="botao azul">Resume</button>
-    <button class="botao transp">Projects</button>
+    <app-button
+      [buttonAzulHidden]="false"
+      [textContent]="'Resume'"
+      [isItalicText]="false"
+      (click)="mudarFocoTela('resume')"
+    >
+    </app-button>
+
+    <app-button
+      [buttonAzulHidden]="true"
+      [isItalicText]="false"
+      [textContent]="'Projects'"
+      (click)="mudarFocoTela('projects')"
+    >
+    </app-button>
   </div>
 
   <nav class="rede-social">

@@ -1,0 +1,22 @@
+<a href="{{ projeto.linkRepository }}" target="_blank">
+  <section class="content">
+    <app-quadrado></app-quadrado>
+    <div class="title">
+      <h3 class="titulo">
+        {{ projeto.nomeProjeto }}
+      </h3>
+
+      <p class="cargo">
+        {{ projeto.cargo }}
+      </p>
+    </div>
+
+    <p class="descricao">
+      {{ projeto.descricao }}
+    </p>
+
+    <figure>
+      <img src="{{ projeto.pathImage }}" alt="Imagem do Projeto {{ projeto.nomeProjeto }}">
+    </figure>
+  </section>
+</a>

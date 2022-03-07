@@ -1,6 +1,4 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { Constantes } from '../../utils/Constantes';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,34 +6,34 @@ import { Constantes } from '../../utils/Constantes';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  readonly CONSTANTES = Constantes;
-  private menuHambuguerAberto = false;
+  @Output()
+  elementoFocado =  new EventEmitter<string>();
 
-  constructor(private viewportScroller: ViewportScroller) {
+  @Output()
+  isHamburguerAberto = new EventEmitter<boolean>();
 
-  }
+  isMenuHamburguerOpen = false;
+
+  constructor() { }
 
   ngOnInit(): void {
+    this.changeActive('about');
   }
 
-  mudarEstadoMenuHamburguer(): void {
-    this.menuHambuguerAberto = !this.menuHambuguerAberto;
+  changeActive(textContent: string): void {
+    const elementos = document.querySelectorAll('.lista__item');
+    elementos.forEach(elemento => {
+      elemento.classList.remove('active');
+
+      if (elemento.textContent.toLocaleLowerCase().includes(textContent.toLocaleLowerCase())) {
+        elemento.classList.add('active');
+        this.elementoFocado.emit(textContent.toLocaleLowerCase());
+      }
+    });
   }
 
-  menuEstaAberto(): boolean {
-    return this.menuHambuguerAberto;
-  }
-
-  getManuHamburguer(): string {
-    return Constantes.PATH_ICON_BLACK_MENU_HAMBURGUER;
-  }
-
-  clickMenu(): void {
-    this.menuHambuguerAberto = !this.menuHambuguerAberto;
-  }
-
-  onClickScroll(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
-    this.clickMenu();
+  changeManuHamb(): void {
+    this.isMenuHamburguerOpen = !this.isMenuHamburguerOpen;
+    this.isHamburguerAberto.emit(this.isMenuHamburguerOpen);
   }
 }

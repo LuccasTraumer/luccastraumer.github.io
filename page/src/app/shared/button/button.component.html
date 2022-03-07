@@ -1,0 +1,13 @@
+  <button
+    class="botao azul"
+    *ngIf="!buttonAzulHidden"
+    [ngClass]="isItalicText ? 'italic'  : ''"
+  >
+    {{ textContent }}
+  </button>
+  <button
+    class="botao transp"
+    *ngIf="buttonAzulHidden"
+  >
+    {{ textContent }}
+  </button>

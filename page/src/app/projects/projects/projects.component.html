@@ -1,0 +1,21 @@
+<section class="content">
+
+  <div class="info">
+    <div class="titulo">
+      <app-quadrado></app-quadrado>
+      <h3>
+        Projects
+      </h3>
+    </div>
+
+    <p class="description">
+      These are some of my personal projects. Some are school or college assignments. Most of them were made solely and exclusively by me, from their conception to the "final delivery".
+    </p>
+  </div>
+
+  <app-card
+    *ngFor="let projeto of listaProjecto"
+    [projeto]="projeto"
+  >
+  </app-card>
+</section>

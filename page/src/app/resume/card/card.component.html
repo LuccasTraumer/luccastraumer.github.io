@@ -1,0 +1,27 @@
+<section class="content">
+  <h3 class="data">
+    {{ card.anoInicio }} - {{ card.anoFinal ? card.anoFinal : 'Present' }}
+  </h3>
+
+  <div class="empresa-inst">
+    <p class="cargo">
+      {{ card.cargoExercido }}
+    </p>
+
+    <p>
+      {{ card.nomeEmpresa || card.nomeInstituicao }}
+    </p>
+
+    <p class="nivel-escolaridade" *ngIf="card.nivelEscolaridade">
+      {{ card.nivelEscolaridade }}
+    </p>
+
+    <p>
+      {{ card.localizacao }}
+    </p>
+  </div>
+
+  <p class="descricao">
+    {{ card.descricao }}
+  </p>
+</section>

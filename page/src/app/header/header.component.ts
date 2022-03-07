@@ -30,7 +30,6 @@ export class HeaderComponent implements OnInit {
         this.elementoFocado.emit(textContent.toLocaleLowerCase());
       }
     });
-
   }
 
   changeManuHamb(): void {

@@ -1223,7 +1223,7 @@ class FooterComponent {
     }
 }
 FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(); };
-FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 4, consts: [[1, "content"], [1, "informacoes"], [1, "email"], [1, "titulo"], ["href", "mailto:lucassj.dev@gmail.com"], [1, "redes-sociais"], [1, "redes-sociais__titulo"], [1, "lista"], [1, "lista__item"], ["href", "#", "target", "_blank"], ["alt", "Icone Twitter", 3, "src"], ["href", "", "target", "_blank"], ["alt", "Icone Linkedin", 3, "src"], ["alt", "Icone Instagram", 3, "src"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
+FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 4, consts: [[1, "content"], [1, "informacoes"], [1, "email"], [1, "titulo"], ["href", "mailto:lucassj.dev@gmail.com"], [1, "redes-sociais"], [1, "redes-sociais__titulo"], [1, "lista"], [1, "lista__item"], ["href", "https://twitter.com/luccastraumer", "target", "_blank"], ["alt", "Icone Twitter", 3, "src"], ["href", "https://www.linkedin.com/in/lucassjesus/", "target", "_blank"], ["alt", "Icone Linkedin", 3, "src"], ["href", "https://instagram.com/luccastraumer", "target", "_blank"], ["alt", "Icone Instagram", 3, "src"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "footer", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
@@ -1253,8 +1253,8 @@ FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();

@@ -22,4 +22,11 @@ describe('AboutComponent', () => {
   test('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  test('Quando executar o pegarNovoFocoCard deve efetuar fluxo com sucesso', () => {
+    spyOn(component.elementoFoco , 'emit');
+    component.pegarNovoFocoCard('');
+
+    expect(component.elementoFoco .emit).toHaveBeenCalled();
+  });
 });

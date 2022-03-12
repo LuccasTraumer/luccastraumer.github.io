@@ -22,4 +22,11 @@ describe('CardComponent', () => {
   test('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  test('Quando executar o mudarFocoTela deve efetuar fluxo com sucesso', () => {
+    spyOn(component.resumeFoco, 'emit');
+    component.mudarFocoTela('');
+
+    expect(component.resumeFoco.emit).toHaveBeenCalled();
+  });
 });

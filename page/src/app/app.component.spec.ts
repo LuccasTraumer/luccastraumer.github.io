@@ -3,7 +3,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { DataService } from './services/data.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ModalHambComponent } from './modal-hamb/modal-hamb.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -56,5 +55,21 @@ describe('AppComponent', () => {
     const bodyElement = document.querySelector('body');
     expect(component.isOpenMenuHamburguer).toBeFalsy();
     expect(bodyElement.classList.contains('all-screen')).toBeFalsy();
+  });
+
+  test('Quando executar o metodo chnageActive deve mudar o seletor', () => {
+    fixture.whenStable().then();
+
+    const mock = {
+      classList: {
+        remove: jest.fn(),
+        add: jest.fn()
+      },
+      textContent: 'about'
+    };
+    spyOn(document, 'querySelectorAll').and.returnValue([mock]);
+    component.changeActive('about');
+
+    expect(component.elementoEmFoco).toBe('about');
   });
 });

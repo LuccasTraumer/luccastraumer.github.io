@@ -1,6 +1,6 @@
 <section id="header">
   <app-header
-    (elementoFocado)="mudarElementoPrincipal($event)"
+    (elementoFocado)="changeActive($event)"
     (isHamburguerAberto)="isMenuOpen($event)"
     [ngClass]="isOpenMenuHamburguer ? 'all-screen' : ''"
   ></app-header>
@@ -9,6 +9,7 @@
 <section class="about">
   <app-about
     [ngClass]="elementoEmFoco === 'about' ? '' : 'out'"
+    (elementoFoco)="changeActive($event)"
   ></app-about>
 </section>
 

@@ -24,7 +24,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
     this.observable$ =  this.service.buscarDadosGithub().subscribe(response => {
       const lista = ['tcc-fed-fio-navalha', 'frontend-mentor', 'campact_huffman',  'algorithms'];
-
       const filtrados = response.filter(projeto => lista.includes(projeto.name));
 
       filtrados.forEach(item => {

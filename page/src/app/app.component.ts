@@ -25,4 +25,16 @@ export class AppComponent {
       test.classList.remove('all-screen');
     }
   }
+
+  changeActive(textContent: string): void {
+    const elementos = document.querySelectorAll('.lista__item');
+    elementos.forEach(elemento => {
+      elemento.classList.remove('active');
+
+      if (elemento.textContent.toLocaleLowerCase().includes(textContent.toLocaleLowerCase())) {
+        elemento.classList.add('active');
+        this.elementoEmFoco = textContent;
+      }
+    });
+  }
 }

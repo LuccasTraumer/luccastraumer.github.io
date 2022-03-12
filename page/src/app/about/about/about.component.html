@@ -1,4 +1,6 @@
-<app-card></app-card>
+<app-card
+  (resumeFoco)="pegarNovoFocoCard($event)"
+></app-card>
 <section class="container">
 
   <section class="content">
@@ -15,6 +17,7 @@
         [buttonAzulHidden]="false"
         [textContent]="'Resume'"
         [isItalicText]="false"
+        (click)="pegarNovoFocoCard('resume')"
       >
       </app-button>
 
@@ -22,6 +25,7 @@
         [isItalicText]="false"
         [textContent]="'Projects'"
         [buttonAzulHidden]="true"
+        (click)="pegarNovoFocoCard('projects')"
       >
       </app-button>
     </div>

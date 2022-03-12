@@ -13,8 +13,8 @@ a {
   flex-flow: column wrap;
   width: 100%;
   overflow: hidden;
-  transition: all 10s ease-in-out;
   border: none;
+  transition: all 0.5s ease-in-out;
 
 
   app-quadrado {

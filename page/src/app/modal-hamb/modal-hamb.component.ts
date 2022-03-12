@@ -22,21 +22,25 @@ export class ModalHambComponent implements OnInit {
     elementos.forEach(elemento => {
       elemento.classList.remove('active');
 
+      console.log(elemento.textContent.toLocaleLowerCase().includes(textContent.toLocaleLowerCase()));
       if (elemento.textContent.toLocaleLowerCase().includes(textContent.toLocaleLowerCase())) {
         elemento.classList.add('active');
         this.elementoFocado.emit(textContent.toLocaleLowerCase());
       }
     });
+
     this.isOpen();
   }
 
   isOpen(): void {
     const htmlBodyElement = document.querySelector('body');
 
+    this.isAtivo = !this.isAtivo;
     if (this.isAtivo) {
       htmlBodyElement.classList.add('all-screen');
     } else {
-    htmlBodyElement.classList.remove('all-screen');
+      htmlBodyElement.classList.remove('all-screen');
     }
+
   }
 }

@@ -45,23 +45,18 @@
     padding-top: 15%;
 
     .empresa-inst {
-      height: 50%;
+      flex-grow: 0.5;
     }
 
     .descricao {
-      width: 70%;
+      flex-grow: 0;
     }
   }
 }
 
 @media screen and (min-width: 1440px){
   .content {
-    height: 30vh;
     padding: 5%;
     overflow: hidden;
-
-    .empresa-inst {
-      margin: 0 5%;
-    }
   }
 }

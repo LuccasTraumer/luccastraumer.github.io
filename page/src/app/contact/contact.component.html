@@ -6,33 +6,34 @@
     </h3>
   </div>
 
-  <div class="formulario">
+  <form class="formulario" [formGroup]="data">
     <div class="name">
       <div class="nome">
         <p>First Name <span>*</span></p>
-        <input type="text" name="" required>
+        <input type="text" name="" required formControlName="name">
       </div>
       <div class="sobrenome">
         <p>Last Name <span>*</span></p>
-        <input type="text" name="" required>
+        <input type="text" name="" required formControlName="lastName">
       </div>
     </div>
 
     <p>Email <span>*</span></p>
-    <input type="email" name="" required>
+    <input type="email" name="" required formControlName="email">
 
     <p>Subject</p>
-    <input type="text" name="">
+    <input type="text" name="" formControlName="subject" required>
 
     <p>Message</p>
-    <textarea>
+    <textarea formControlName="message" required>
     </textarea>
 
     <app-button
       [isItalicText]="false"
       [textContent]="'SEND'"
       [buttonAzulHidden]="false"
+      (click)="sendEmail()"
       >
     </app-button>
-  </div>
+  </form>
 </section>

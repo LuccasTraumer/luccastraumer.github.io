@@ -128,9 +128,9 @@
     .informacoes {
       display: flex;
       flex-wrap: wrap;
-      width: 50%;
       align-items: center;
       text-align: center;
+      flex-grow: 1;
 
       &__titulo {
         font-weight: bold;
@@ -140,7 +140,7 @@
     }
 
     .menu {
-      width: 50%;
+      flex-grow: 2;
 
       .lista {
         display: flex;

@@ -5,14 +5,15 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './services/data.service';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { AboutModule } from './about/about.module';
 import { ResumeModule } from './resume/resume.module';
 import { SharedModule } from './shared/shared.module';
 import { ProjectsModule } from './projects/projects.module';
 import { ContactComponent } from './contact/contact.component';
 import { ModalHambComponent } from './modal-hamb/modal-hamb.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ModalHambComponent } from './modal-hamb/modal-hamb.component';
     AboutModule,
     ResumeModule,
     ProjectsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [ DataService ],
   bootstrap: [ AppComponent ]

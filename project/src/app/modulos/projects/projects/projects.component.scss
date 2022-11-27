@@ -1,0 +1,62 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 5% 0;
+
+  &__title {
+    background: inherit;
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  &__description {
+    background: inherit;
+    color: #b8b8b8;
+    font-size: 1.2rem;
+    letter-spacing: .8px;
+    line-height: 1.5em;
+  }
+
+  &__tablist {
+    display: none;
+    flex-direction: row;
+    width: 60%;
+    visibility: hidden;
+  }
+
+  &__tablist > * {
+    padding: 5%;
+    border: solid 1px #fff;
+  }
+
+  &__projects {
+    padding: 5% 0;
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+
+    img {
+      width: 80%;
+      border-radius: 30px;
+    }
+
+  }
+
+  &__projects > * {
+    width: 100%;
+    padding: 2%;
+    overflow: hidden;
+  }
+
+  &__projects > *:before {
+    background: linear-gradient(90.21deg,#aa367c -5.91%,#4a2fbd 111.58%);
+    opacity: .85;
+    transition: .4s ease-in-out;
+  }
+}

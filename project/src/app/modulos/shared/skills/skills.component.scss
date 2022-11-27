@@ -1,0 +1,66 @@
+.content {
+  background: #151515;
+  border-radius: 4rem;
+  padding: 60px 50px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  max-width: 80vw;
+
+  &__title {
+    background: inherit;
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  &__description {
+    background: inherit;
+    color: #b8b8b8;
+    font-size: 1.2rem;
+    letter-spacing: .8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px;
+  }
+
+  &__carrossel {
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--next, &--previous {
+      border-radius: 50%;
+      font-size: 1.2rem;
+      padding: 5%;
+      cursor: pointer;
+      text-align: center;
+      overflow: hidden;
+      border: none;
+    }
+
+    &--next:before {
+      content: ">";
+    }
+
+    &--previous:before {
+      content: "<";
+    }
+
+    &__container {
+      background: inherit;
+
+      img {
+        background: inherit;
+        width: 50%;
+      }
+
+      figcaption {
+        padding-top: 5%;
+        background: inherit;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}

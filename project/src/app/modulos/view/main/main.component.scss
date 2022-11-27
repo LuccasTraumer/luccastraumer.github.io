@@ -1,0 +1,89 @@
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.content {
+  position: relative;
+  box-sizing: border-box;
+
+  app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &__banner {
+    background-image: url("../../../../assets/banner-bg.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+    padding: 260px 0 100px;
+
+    .container {
+      .tagline {
+        background: linear-gradient(90.21deg,rgba(170,54,124,.5) -5.91%,rgba(74,47,189,.5) 111.58%);
+        border: 1px solid hsla(0,0%,100%,.5);
+        display: inline-block;
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+        padding: 8px 10px;
+        font-weight: 700;
+        letter-spacing: .8px;
+      }
+
+      .description {
+        color: #b8b8b8;
+        font-size: 1.2rem;
+        letter-spacing: .8px;
+        line-height: 1.5em;
+        width: 96%;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        letter-spacing: .8px;
+        font-weight: 700;
+        margin-top: 60px;
+        font-size: 1.4rem;
+        color: var(--branco);
+      }
+    }
+  }
+
+  &__head {
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    img {
+      vertical-align: middle;
+      animation: updown 3s linear infinite;
+      width: 100%;
+    }
+  }
+}
+
+

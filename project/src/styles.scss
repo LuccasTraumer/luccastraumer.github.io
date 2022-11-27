@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1s;
+
+  --branco: #fff;
+
+  color: var(--branco);
+  font-family: Centra,sans-serif;
+  background-color: #121212;
+  overflow-x: hidden;
+  position: relative;
+}

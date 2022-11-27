@@ -1,0 +1,31 @@
+<div class="content">
+  <h3 class="content__title">
+    Skills
+  </h3>
+
+  <p class="content__description">
+    The main skills that I acquired during my career.
+    <br>
+    If based on percentages it is considered
+  </p>
+
+  <nav class="content__carrossel">
+    <button
+      (click)="irParaAnterior()"
+      class="content__carrossel--previous"
+    >
+    </button>
+    <figure class="content__carrossel__container">
+      <img src="{{ skills.imagem }}" alt="Imagem de Porcentagem">
+      <figcaption>
+        {{ skills.descricao }}
+      </figcaption>
+    </figure>
+
+    <button
+      (click)="irParaProximo()"
+      class="content__carrossel--next"
+    >
+    </button>
+  </nav>
+</div>

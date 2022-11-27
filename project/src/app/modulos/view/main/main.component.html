@@ -1,0 +1,42 @@
+<div class="content">
+  <app-header></app-header>
+  <div class="content__banner">
+    <div class="container">
+      <span class="tagline">
+        Welcome to my Portfolio
+      </span>
+      <h1>
+        Hi! I'm Lucas <br>
+        <span class="wrap">
+        EFEITO E DIGITAÇÃO AQUI
+        </span>
+      </h1>
+      <p class="description">
+        I have experience in the most varied projects, whether large or small companies, I always try to do my best and serve in the best way, count on me for a work with excellence and quality for your projects.
+      </p>
+      <p>
+        Let's Connect
+        <img src="{{ CONSTANTES.SETA_ICON }}" alt="Icone conectar">
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="content__head animate__animated animate__zoomIn">
+      <img src="{{ CONSTANTES.IMAGEM_ASTRONAUTA }}" alt="Astonauta">
+    </div>
+  </div>
+
+  <app-skills
+    [skills]="habilidadeAtual"
+    (iteracaoClique)="exibicaoSkills($event)"
+  ></app-skills>
+
+  <app-projects>
+  </app-projects>
+
+  <app-contact>
+  </app-contact>
+
+  <app-footer></app-footer>
+</div>

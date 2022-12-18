@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProjectsModule } from '../projects/projects.module';
 import { ContactModule } from '../contact/contact.module';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 
 
@@ -18,7 +19,8 @@ import { ContactModule } from '../contact/contact.module';
     CommonModule,
     SharedModule,
     ProjectsModule,
-    ContactModule
+    ContactModule,
+    NgsRevealModule
   ]
 })
 export class ViewModule { }

@@ -1,5 +1,10 @@
 <div class="content">
-  <img src="{{ CONSTANTES.CONTACT_IMAGE }}" alt="Imagem de Fundo" class="content__image">
+  <img
+    src="{{ CONSTANTES.CONTACT_IMAGE }}"
+    alt="Imagem de Fundo" class="content__image"
+    #imagem
+    [ngClass]="!desaparecerImagem() ? 'animate__animated animate__fadeIn' : ''"
+  >
 
   <h3 class="content__title">
     get in touch

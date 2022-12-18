@@ -15,6 +15,7 @@ export class Constantes {
   public static readonly LINKEDIN_ICON = '../../assets/linkedin-icon.svg';
   public static readonly FACEBOOK_ICON = '../../assets/facebook-icon.svg';
   public static readonly INSTAGRAM_ICON = '../../assets/instagram-icon.svg';
+  public static readonly GITHUB_ICON = '../../assets/github-icon.svg';
 
   public static readonly SETA_ICON = '../../assets/seta.svg';
 

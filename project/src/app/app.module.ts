@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ViewModule } from './modulos/view/view.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +14,8 @@ import { ViewModule } from './modulos/view/view.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ViewModule
+    ViewModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

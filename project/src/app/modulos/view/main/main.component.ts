@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
 import { Skill } from '../../../models/skill';
 
@@ -50,6 +50,22 @@ export class MainComponent implements OnInit {
   listaFerramentas = [ "Mobile Developer", "Web Developer", "Fullstack developer", "Java developer"]
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event: any) {
+  }
+
+  desaparecerContainerScrollReveal(): boolean {
+    return this.el.nativeElement.getBoundingClientRect().top < -400;
+  }
+
+  desaparecerImagemScrollReveal() {
+    return this.el.nativeElement.getBoundingClientRect().top < -890;
+  }
+
+  isBackgroundVisible(): boolean {
+    return this.el.nativeElement.getBoundingClientRect().top !== 0;
+  }
 
   incluirHabilidade() {
     console.log()

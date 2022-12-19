@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,8 +9,15 @@ import { Constantes } from '../../../utils/constantes';
 })
 export class ContactComponent implements OnInit {
   public readonly CONSTANTES = Constantes;
+  public formGroup = this.formbBuilder.group({
+    name: ['', [Validators.required, Validators.min(3)]],
+    lastName: ['', [Validators.required, Validators.min(3)]],
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', [Validators.required, Validators.pattern('/^+91(7\\d|8\\d|9\\d)\\d{9}$/')]],
+    message: ['', [Validators.required, Validators.min(5)]]
+  })
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, private el: ElementRef, private formbBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -20,5 +28,9 @@ export class ContactComponent implements OnInit {
 
   desaparecerImagem(): boolean {
     return this.el.nativeElement.getBoundingClientRect().top > 776 || this.el.nativeElement.getBoundingClientRect().top < -323;
+  }
+
+  send() {
+    console.log(this.formGroup.value)
   }
 }

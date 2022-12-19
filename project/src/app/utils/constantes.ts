@@ -19,5 +19,9 @@ export class Constantes {
 
   public static readonly SETA_ICON = '../../assets/seta.svg';
 
-  public static readonly IMAGEM_EXEMPLO = '../../assets/project-img1.70b8ec4f1f104b644a12.png';
+  public static readonly LANDING_PAGE_IMAGE = '../../assets/landing-page.jpg';
+  public static readonly CARD_IMAGE = '../../assets/card.png';
+  public static readonly ECOMMERC_PAGE = '../../assets/e-commerc.png';
+  public static readonly PERSONAL_PAGE = '../../assets/personal-page.png';
+
 }

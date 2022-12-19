@@ -10,23 +10,23 @@
     get in touch
   </h3>
 
-  <form action="" method="post" class="content__form">
+  <form formGroup="formGroup" class="content__form">
     <label>name</label>
-    <input type="text" class="" placeholder="Name">
+    <input formControlName="name" type="text" placeholder="Name">
 
     <label>last name</label>
-    <input type="text" class="" placeholder="Last Name">
+    <input formControlName="lastName" type="text" placeholder="Last Name">
 
     <label>email</label>
-    <input type="text" class="" placeholder="Email">
+    <input formControlName="email" type="text" placeholder="Email">
 
     <label>phone no.</label>
-    <input type="tel" class="" placeholder="Phone No.">
+    <input formControlName="phone" type="tel" pattern="[789][0-9]{9}" placeholder="Phone No.">
 
     <label>message</label>
-    <textarea class="" placeholder="Message">
+    <textarea formControlName="message" placeholder="Message">
     </textarea>
 
-    <button type="submit" class="content__form--button">send</button>
+    <button type="submit" class="content__form--button" (click)="send()">send</button>
   </form>
 </div>

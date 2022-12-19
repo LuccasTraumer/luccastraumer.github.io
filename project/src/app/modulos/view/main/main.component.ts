@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
 import { Skill } from '../../../models/skill';
 
@@ -7,12 +7,12 @@ import { Skill } from '../../../models/skill';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
-  textoExposto: string = '';
+export class MainComponent implements OnInit, AfterViewInit {
   private indexFerramentas = 0;
 
   public readonly CONSTANTES = Constantes;
   indexHabilidades = 0;
+  @ViewChild('wrap') digitacao!: ElementRef<HTMLInputElement>;
 
   private habilidades: Skill[] = [
     {
@@ -49,7 +49,8 @@ export class MainComponent implements OnInit {
 
   listaFerramentas = [ "Mobile Developer", "Web Developer", "Fullstack developer", "Java developer"]
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, private el: ElementRef) {
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
@@ -67,61 +68,8 @@ export class MainComponent implements OnInit {
     return this.el.nativeElement.getBoundingClientRect().top !== 0;
   }
 
-  incluirHabilidade() {
-    console.log()
-
-    let indexItem = 0;
-    for(indexItem; indexItem <= this.listaFerramentas.length; indexItem++) {
-
-      // this.el.nativeElement.querySelector('.wrap').innerText = '';
-      // console.log(this.listaFerramentas[indexItem]);
-      // this.incluirLetras(this.listaFerramentas[indexItem]);
-      // if (indexItem == this.listaFerramentas.length) {
-      //   indexItem = 0;
-      // }
-    }
-  }
-
-  incluirLetras(item: string) {
-    console.log(item);
-    setInterval(() => {
-      // Object.keys(item).forEach((letra) => {
-      //   this.el.nativeElement.querySelector('.wrap').innerText = this.el.nativeElement.querySelector('.wrap').innerText
-      //     + item.charAt(Number.parseInt(letra));
-      // });
-
-      // console.log(item.length);
-      let indexPalavra = 0;
-      let tamanhoPalavra = item.length;
-
-      for(indexPalavra; indexPalavra <= tamanhoPalavra; indexPalavra++) {
-        console.log(item.charAt(indexPalavra));
-        this.el.nativeElement.querySelector('.wrap').innerText = this.el.nativeElement.querySelector('.wrap').innerText
-            + item.charAt(indexPalavra);
-
-        if(indexPalavra == tamanhoPalavra) {
-          console.log('Entrei aqui')
-          this.removerLetras(item);
-        }
-      }
-    }, 2500);
-  }
-
-  removerLetras(item: string) {
-    let ultimoIndexPalavra = 0;
-    let tamanhoTotalPalavra = this.el.nativeElement.querySelector('.wrap').innerText.length;
-    if (tamanhoTotalPalavra > ultimoIndexPalavra) {
-      setTimeout(() => {
-        Object.keys(item).forEach((letra) => {
-          this.el.nativeElement.querySelector('.wrap').innerText = this.el.nativeElement.querySelector('.wrap').innerText.substring(ultimoIndexPalavra, tamanhoTotalPalavra--);
-        });
-      }, 2500);
-    }
-  }
-
   ngOnInit(): void {
     this.habilidadeAtual = this.habilidades[this.indexHabilidades];
-    this.incluirHabilidade();
   }
 
   exibicaoSkills(evento: string) {
@@ -131,5 +79,22 @@ export class MainComponent implements OnInit {
       this.indexHabilidades <= 0 ? this.indexHabilidades = 0 : this.indexHabilidades--;
     }
     this.habilidadeAtual = this.habilidades[this.indexHabilidades];
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.digitacao.nativeElement.innerText);
+    console.log(this.digitacao.nativeElement.innerHTML);
+
+    setInterval(() => {
+      this.indexFerramentas++;
+      if (this.listaFerramentas.length <= this.indexFerramentas) {
+        this.indexFerramentas = 0;
+      }
+    }, 5000)
+  }
+
+  ferramentaAtual(): string {
+    this.indexFerramentas = this.indexFerramentas++;
+    return this.listaFerramentas[this.indexFerramentas];
   }
 }

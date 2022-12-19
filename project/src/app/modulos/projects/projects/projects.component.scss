@@ -41,22 +41,31 @@
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 2%;
 
-    img {
+    &--item {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
       width: 80%;
+      height: auto;
+      text-align: center;
+      margin: 0 auto;
       border-radius: 30px;
     }
 
+    //&--item:hover {
+    //  background: linear-gradient(90.21deg,#aa367c -5.91%,#4a2fbd 111.58%);
+    //  //transition: .4s ease-in-out;
+    //  //opacity: .85;
+    //  //content: "";
+    //  position: absolute;
+    //  //border-radius: 30px;
+    //}
+
+    img {
+      aspect-ratio: auto;
+      height: 100%;
+      width: 100%;
+    }
   }
 
-  &__projects > * {
-    width: 100%;
-    padding: 2%;
-    overflow: hidden;
-  }
-
-  &__projects > *:before {
-    background: linear-gradient(90.21deg,#aa367c -5.91%,#4a2fbd 111.58%);
-    opacity: .85;
-    transition: .4s ease-in-out;
-  }
 }

@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
     name: ['', [Validators.required, Validators.min(3)]],
     lastName: ['', [Validators.required, Validators.min(3)]],
     email: ['', [Validators.required, Validators.email]],
-    phone: ['', [Validators.required, Validators.pattern('/^+91(7\\d|8\\d|9\\d)\\d{9}$/')]],
+    phone: ['', [Validators.required, Validators.pattern('')]],
     message: ['', [Validators.required, Validators.min(5)]]
   })
 

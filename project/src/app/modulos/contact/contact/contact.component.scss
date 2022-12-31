@@ -64,3 +64,64 @@
   background: none;
   text-transform: capitalize;
 }
+
+@media screen and (min-width: 700px) {
+  .content {
+    display: grid;
+    grid-template-areas:
+      "imagem titulo"
+        "imagem form";
+    grid-gap: 0;
+    padding: 5% 0;
+
+    &__title {
+      grid-area: titulo;
+      font-size: 2rem;
+    }
+
+    &__image {
+      grid-area: imagem;
+      width: 70%;
+    }
+
+    &__form {
+
+      label {
+        visibility: hidden;
+      }
+      grid-area: form;
+      display: grid;
+      grid-template-areas:
+        "firstName lastName"
+        "email phone"
+        "message message"
+        "button bu";
+      padding: 1rem;
+      grid-gap: 2%;
+
+      &--name {
+        grid-area: firstName;
+      }
+
+      &--last-name {
+        grid-area: lastName;
+      }
+
+      &--email {
+        grid-area: email;
+      }
+
+      &--phone {
+        grid-area: phone;
+      }
+
+      &--message {
+        grid-area: message;
+      }
+
+      &--button {
+        grid-area: button;
+      }
+    }
+  }
+}

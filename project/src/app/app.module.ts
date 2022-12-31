@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewModule } from './modulos/view/view.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,7 @@ import { ViewModule } from './modulos/view/view.module';
     BrowserModule,
     AppRoutingModule,
     ViewModule,
-
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

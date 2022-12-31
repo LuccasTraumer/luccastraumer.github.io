@@ -11,20 +11,20 @@
   </h3>
 
   <form formGroup="formGroup" class="content__form">
-    <label>name</label>
-    <input formControlName="name" type="text" placeholder="Name">
+    <label class="content__form--name">name</label>
+    <input class="content__form--name" formControlName="name" type="text" placeholder="Name">
 
-    <label>last name</label>
-    <input formControlName="lastName" type="text" placeholder="Last Name">
+    <label class="content__form--last-name">last name</label>
+    <input class="content__form--last-name" formControlName="lastName" type="text" placeholder="Last Name">
 
-    <label>email</label>
-    <input formControlName="email" type="text" placeholder="Email">
+    <label class="content__form--email">email</label>
+    <input class="content__form--email" formControlName="email" type="text" placeholder="Email">
 
-    <label>phone no.</label>
-    <input formControlName="phone" type="tel" pattern="[789][0-9]{9}" placeholder="Phone No.">
+    <label class="content__form--phone">phone no.</label>
+    <input class="content__form--phone" formControlName="phone" type="tel" pattern="[789][0-9]{9}" placeholder="Phone No.">
 
-    <label>message</label>
-    <textarea formControlName="message" placeholder="Message">
+    <label class="content__form--message">message</label>
+    <textarea class="content__form--message" formControlName="message" placeholder="Message">
     </textarea>
 
     <button type="submit" class="content__form--button" (click)="send()">send</button>

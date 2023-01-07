@@ -62,17 +62,19 @@
       flex-direction: column;
       width: 100%;
 
-      app-welcome {
-        width: 60%;
-      }
 
-      app-astronauta {
-        width: 35%;
-        overflow: hidden;
-      }
 
       @media screen and (min-width: 768px) {
         flex-direction: row;
+
+        app-welcome {
+          width: 60%;
+        }
+
+        app-astronauta {
+          width: 35%;
+          overflow: hidden;
+        }
       }
 
     }

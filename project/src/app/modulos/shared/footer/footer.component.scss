@@ -31,6 +31,10 @@
     align-self: center;
     text-align: center;
     width: 60%;
+
+    @media screen and (min-width: 768px){
+      width: 30vw;
+    }
   }
 
   ul li {

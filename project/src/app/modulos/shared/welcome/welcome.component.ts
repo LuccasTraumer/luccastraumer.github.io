@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-welcome',
@@ -11,11 +12,21 @@ export class WelcomeComponent implements OnInit {
 
   private indexFerramentas = 0;
 
-  listaFerramentas = [ "Mobile Developer", "Web Developer", "Fullstack developer", "Java developer"]
+  listaFerramentas = [ ]
 
   constructor() { }
 
   ngOnInit(): void {
+    const options = {
+      strings: ["Mobile Developer", "Web Developer", "Fullstack developer", "Java developer"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      showCursor: true,
+      cursorChar: '|',
+      loop: true
+    };
+
+    const typed = new Typed('.typed-element', options);
   }
 
   ngAfterViewInit(): void {

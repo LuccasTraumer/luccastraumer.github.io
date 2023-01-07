@@ -1,0 +1,49 @@
+.tagline {
+  background: linear-gradient(90.21deg,rgba(170,54,124,.5) -5.91%,rgba(74,47,189,.5) 111.58%);
+  border: 1px solid hsla(0,0%,100%,.5);
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  padding: 8px 10px;
+  font-weight: 700;
+  letter-spacing: .8px;
+}
+
+.wrap {
+
+}
+
+.wrap:after{
+  text-align: center;
+  content: "|";
+  color: #b8b8b8;
+  animation: animate .5s linear infinite;
+}
+
+.description {
+  color: #b8b8b8;
+  font-size: 1.2rem;
+  letter-spacing: .8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.conect {
+  width: 50%;
+  padding: 5% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 5px;
+    transition: ease-in-out 3s;
+  }
+
+  img:active {
+    right: -90px;
+  }
+}

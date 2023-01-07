@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { HamburguerMenuComponent } from './hamburguer-menu/hamburguer-menu.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
+import { AstronautaComponent } from './astronauta/astronauta.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 
@@ -12,7 +14,9 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     HamburguerMenuComponent,
     SkillsComponent,
-    FooterComponent
+    FooterComponent,
+    AstronautaComponent,
+    WelcomeComponent
   ],
   imports: [
     CommonModule
@@ -20,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
     exports: [
         HeaderComponent,
         SkillsComponent,
-        FooterComponent
+        FooterComponent,
+        AstronautaComponent,
+        WelcomeComponent
     ]
 })
 export class SharedModule { }

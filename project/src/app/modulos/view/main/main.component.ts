@@ -7,9 +7,7 @@ import { Skill } from '../../../models/skill';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit, AfterViewInit {
-  private indexFerramentas = 0;
-
+export class MainComponent implements OnInit {
   public readonly CONSTANTES = Constantes;
   indexHabilidades = 0;
   @ViewChild('wrap') digitacao!: ElementRef<HTMLInputElement>;
@@ -47,7 +45,6 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   public habilidadeAtual: Skill = {} as Skill;
 
-  listaFerramentas = [ "Mobile Developer", "Web Developer", "Fullstack developer", "Java developer"]
 
   constructor(private renderer: Renderer2, private el: ElementRef) {
   }
@@ -58,10 +55,6 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   desaparecerContainerScrollReveal(): boolean {
     return this.el.nativeElement.getBoundingClientRect().top < -400;
-  }
-
-  desaparecerImagemScrollReveal() {
-    return this.el.nativeElement.getBoundingClientRect().top < -890;
   }
 
   isBackgroundVisible(): boolean {
@@ -81,20 +74,4 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.habilidadeAtual = this.habilidades[this.indexHabilidades];
   }
 
-  ngAfterViewInit(): void {
-    console.log(this.digitacao.nativeElement.innerText);
-    console.log(this.digitacao.nativeElement.innerHTML);
-
-    setInterval(() => {
-      this.indexFerramentas++;
-      if (this.listaFerramentas.length <= this.indexFerramentas) {
-        this.indexFerramentas = 0;
-      }
-    }, 5000)
-  }
-
-  ferramentaAtual(): string {
-    this.indexFerramentas = this.indexFerramentas++;
-    return this.listaFerramentas[this.indexFerramentas];
-  }
 }

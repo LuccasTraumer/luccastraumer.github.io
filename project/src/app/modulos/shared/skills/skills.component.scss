@@ -23,12 +23,12 @@
   }
 
   &__carrossel {
-    background: inherit;
     display: flex;
-    justify-content: center;
+    width: 100%;
+    background: none;
     align-items: center;
 
-    &--next, &--previous {
+    &--next, &--previous{
       border-radius: 50%;
       font-size: 1.2rem;
       padding: 5%;
@@ -36,22 +36,36 @@
       text-align: center;
       overflow: hidden;
       border: none;
+      height: 50%;
     }
 
-    &--next:before {
+    &--next::after {
       content: ">";
     }
 
-    &--previous:before {
+    &--previous:after {
       content: "<";
     }
+  }
 
-    &__container {
+  &__list {
+    background: inherit;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &--container {
       background: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
 
       img {
         background: inherit;
         width: 50%;
+        aspect-ratio: 1/1;
       }
 
       figcaption {
@@ -62,5 +76,63 @@
         line-height: 1.2;
       }
     }
+
+    &--item {
+      background: inherit;
+      width: 100%;
+      visibility: hidden;
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      #item-2 {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      #item-1 {
+        display: none;
+        visibility: hidden;
+      }
+    }
   }
+}
+
+
+.circular-progress{
+  position: relative;
+  height: 9.375rem;
+  width: 9.375rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(89,48,179,1) 0%, rgba(160,54,131,1) 35%, rgba(89,48,179,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 425px){
+    width: 8.375rem;
+    height: 8.375rem;
+  }
+}
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 6.875rem;
+  width: 6.875rem;
+  border-radius: 50%;
+  background-color: #151515;
+}
+.progress-value{
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  background: #151515;
+}
+
+.item-active {
+  display: inherit;
+  visibility: visible;
 }

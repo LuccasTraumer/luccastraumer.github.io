@@ -12,34 +12,60 @@ export class MainComponent implements OnInit {
   indexHabilidades = 0;
   @ViewChild('wrap') digitacao!: ElementRef<HTMLInputElement>;
 
-  private habilidades: Skill[] = [
+  public readonly habilidades: Skill[] = [
     {
       descricao: 'Angular',
-      imagem: this.CONSTANTES.PORCENTAGEM_85_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_85_SKILL,
+      porcentagem: 85,
+      completedProgress: false
     },
     {
       descricao: 'Spring boot',
-      imagem: this.CONSTANTES.PORCENTAGEM_85_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_85_SKILL,
+      porcentagem: 85,
+      completedProgress: false
     },
     {
       descricao: 'Jest',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
+      porcentagem: 80,
+      completedProgress: false
     },
     {
       descricao: 'Cypress',
-      imagem: this.CONSTANTES.PORCENTAGEM_50_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_50_SKILL,
+      porcentagem: 50,
+      completedProgress: false
     },
     {
       descricao: 'Node',
-      imagem: this.CONSTANTES.PORCENTAGEM_70_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_70_SKILL,
+      porcentagem: 70,
+      completedProgress: false
     },
     {
       descricao: 'Javascript',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
+      porcentagem: 80,
+      completedProgress: false
     },
     {
       descricao: 'Typescript',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL
+      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
+      porcentagem: 80,
+      completedProgress: false
+    },
+    {
+      descricao: 'Scrum',
+      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
+      porcentagem: 80,
+      completedProgress: false
+    },
+    {
+      descricao: 'Agile',
+      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
+      porcentagem: 80,
+      completedProgress: false
     }
   ];
 
@@ -62,15 +88,6 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.habilidadeAtual = this.habilidades[this.indexHabilidades];
-  }
-
-  exibicaoSkills(evento: string) {
-    if (evento === 'proximo') {
-      this.indexHabilidades >= this.habilidades.length ? this.indexHabilidades = 0 : this.indexHabilidades++;
-    } else {
-      this.indexHabilidades <= 0 ? this.indexHabilidades = 0 : this.indexHabilidades--;
-    }
     this.habilidadeAtual = this.habilidades[this.indexHabilidades];
   }
 

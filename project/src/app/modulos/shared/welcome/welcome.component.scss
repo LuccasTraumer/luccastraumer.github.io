@@ -10,7 +10,7 @@
 }
 
 .wrap {
-
+  background: none;
 }
 
 .wrap:after{
@@ -26,6 +26,7 @@
   letter-spacing: .8px;
   line-height: 1.5em;
   width: 96%;
+  background: inherit;
 }
 
 .conect {
@@ -36,14 +37,20 @@
   justify-content: space-around;
   font-size: 1.2rem;
   position: relative;
+  background: none;
 
   img {
     position: absolute;
     right: 5px;
     transition: ease-in-out 3s;
+    background: inherit;
   }
 
   img:active {
     right: -90px;
   }
+}
+
+h1 {
+  background: none;
 }

@@ -25,17 +25,15 @@ export class SkillsComponent implements OnInit {
 
   irParaProximo() {
     this.atualizarValores();
-    console.warn(`Primeiro valor: ${this.firstItem}. Segundo valor: ${this.secondItem}. Terceiro Valor: ${this.thirdItem}`)
   }
 
   irParaAnterior() {
     this.atualizarValores();
   }
 
-  atualizarValores(): void {
+  private atualizarValores(): void {
     if (this.firstItem === 0) {
       this.firstItem = 3;
-      console.error(this.firstItem)
     } else if (this.firstItem === 3) {
       this.firstItem = 6;
     } else {

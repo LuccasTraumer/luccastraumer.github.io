@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Skill } from '../../../models/skill';
 import { Constantes } from '../../../utils/constantes';
 
@@ -7,7 +7,7 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
   @Input()
   skills: Skill[] = [] ;
 
@@ -18,10 +18,6 @@ export class SkillsComponent implements OnInit {
   public readonly CONSTANTES = Constantes;
 
   constructor() { }
-
-  ngOnInit(): void {
-
-  }
 
   irParaProximo() {
     this.atualizarValores();

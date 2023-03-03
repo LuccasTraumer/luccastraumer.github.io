@@ -7,8 +7,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AstronautaComponent } from './astronauta/astronauta.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,

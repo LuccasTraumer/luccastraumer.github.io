@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
 
 @Component({
@@ -6,12 +6,9 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   public readonly CONSTANTES = Constantes;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

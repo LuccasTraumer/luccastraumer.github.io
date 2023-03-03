@@ -4,12 +4,6 @@ export class Constantes {
 
   public static readonly IMAGEM_ASTRONAUTA = '../../assets/astronauta.svg';
 
-  public static readonly PORCENTAGEM_SKILL = '../../assets/porcentual-skills.svg';
-  public static readonly PORCENTAGEM_85_SKILL = '../../assets/porcentagens/85-porcentual-skills.svg';
-  public static readonly PORCENTAGEM_80_SKILL = '../../assets/porcentagens/80-porcentual-skills.svg';
-  public static readonly PORCENTAGEM_70_SKILL = '../../assets/porcentagens/70-porcentual-skills.svg';
-  public static readonly PORCENTAGEM_50_SKILL = '../../assets/porcentagens/50-porcentual-skills.svg';
-
   public static readonly CONTACT_IMAGE = '../../assets/contact.svg';
 
   public static readonly LINKEDIN_ICON = '../../assets/linkedin-icon.svg';

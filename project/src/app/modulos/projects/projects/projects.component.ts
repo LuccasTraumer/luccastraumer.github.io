@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
 
 @Component({
@@ -6,7 +6,7 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
 
   public readonly CONSTANTES = Constantes;
 
@@ -34,8 +34,5 @@ export class ProjectsComponent implements OnInit {
   ]
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

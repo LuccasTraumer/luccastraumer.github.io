@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
 import { Skill } from '../../../models/skill';
 
@@ -15,55 +15,46 @@ export class MainComponent implements OnInit {
   public readonly habilidades: Skill[] = [
     {
       descricao: 'Angular',
-      imagem: this.CONSTANTES.PORCENTAGEM_85_SKILL,
       porcentagem: 85,
       completedProgress: false
     },
     {
       descricao: 'Spring boot',
-      imagem: this.CONSTANTES.PORCENTAGEM_85_SKILL,
       porcentagem: 85,
       completedProgress: false
     },
     {
       descricao: 'Jest',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
       porcentagem: 80,
       completedProgress: false
     },
     {
       descricao: 'Cypress',
-      imagem: this.CONSTANTES.PORCENTAGEM_50_SKILL,
       porcentagem: 50,
       completedProgress: false
     },
     {
       descricao: 'Node',
-      imagem: this.CONSTANTES.PORCENTAGEM_70_SKILL,
       porcentagem: 70,
       completedProgress: false
     },
     {
       descricao: 'Javascript',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
       porcentagem: 80,
       completedProgress: false
     },
     {
       descricao: 'Typescript',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
       porcentagem: 80,
       completedProgress: false
     },
     {
       descricao: 'Scrum',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
       porcentagem: 80,
       completedProgress: false
     },
     {
       descricao: 'Agile',
-      imagem: this.CONSTANTES.PORCENTAGEM_80_SKILL,
       porcentagem: 80,
       completedProgress: false
     }

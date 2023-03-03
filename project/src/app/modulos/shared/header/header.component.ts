@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Constantes } from '../../../utils/constantes';
 
 @Component({
@@ -6,7 +6,7 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   public readonly CONSTANTES = Constantes;
 
   @Input()
@@ -14,6 +14,4 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 }

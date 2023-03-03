@@ -1,6 +1,6 @@
 .content {
   height: 5vh;
-  width: 60vw;
+  width: 80vw;
   max-width: 100vw;
   max-height: 20vh;
   position: fixed;
@@ -27,7 +27,7 @@
   }
 
   &__list {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     background: none;
@@ -55,7 +55,7 @@
 
     &--button {
       padding: 1%;
-      border: 4px solid #fff;
+      border: 2px solid #fff;
       word-break: break-all;
       width: 100%;
       height: 85%;

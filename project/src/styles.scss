@@ -1,18 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$yellow: #f0bf6c;
+$grey: #34353a;
+$white: #fff;
+$yellow-title-button: #ffc86b;
+$yellow-text: #f7cd8e;
+
 * {
-  padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+  padding: 0;
+  background: $grey;
+  color: $white;
 
-  --animate-duration: 1s;
-  --animate-delay: 1s;
-  --animate-repeat: 1s;
+  font-family: 'Poppins', sans-serif;
+}
 
-  --branco: #fff;
-
-  color: var(--branco);
-  font-family: Centra,sans-serif;
-  background-color: #121212;
-  overflow-x: hidden;
-  position: relative;
+.contrast-text {
+  color: $yellow-text;
 }

@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from '../shared/shared.module';
-import { ProjectsModule } from '../projects/projects.module';
-import { ContactModule } from '../contact/contact.module';
-import { NgsRevealModule } from 'ngx-scrollreveal';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -18,9 +16,7 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
   imports: [
     CommonModule,
     SharedModule,
-    ProjectsModule,
-    ContactModule,
-    NgsRevealModule
+    ComponentsModule
   ]
 })
 export class ViewModule { }

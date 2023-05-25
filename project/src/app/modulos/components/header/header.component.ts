@@ -30,8 +30,6 @@ export class HeaderComponent implements OnInit {
 
   closeMenu(): void {
     this._isMenuMobileOpen = !this._isMenuMobileOpen;
-    console.warn(this._isMenuMobileOpen);
-
     this.menuMobileOpen.emit(this._isMenuMobileOpen);
   }
 }

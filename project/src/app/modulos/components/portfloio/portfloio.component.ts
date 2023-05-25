@@ -9,32 +9,32 @@ export class PortfloioComponent implements OnInit {
 
   projects: Project[] = [
     {
-      img: 'https://github.com/LuccasTraumer/frontend-mentor/raw/main/ecommerce-product-page-main/result/desktop.png',
+      img: 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1685057970/desktop_jai95n.png',
       ariaLabel: 'E-commerc project',
       linkProject: 'https://github.com/LuccasTraumer/frontend-mentor/tree/main/ecommerce-product-page-main'
     },
     {
-      img: 'https://github.com/LuccasTraumer/frontend-mentor/raw/main/sunnyside-agency-landing-page-main/agency/src/assets/screenshot/desktop.png',
+      img: 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1685058006/desktop_utazwo.png',
       ariaLabel: 'Landing Page Project',
       linkProject: 'https://github.com/LuccasTraumer/frontend-mentor/tree/main/sunnyside-agency-landing-page-main/agency'
     },
     {
-      img: 'https://github.com/LuccasTraumer/luccastraumer.github.io/raw/main/assets/pagina-desktop.png',
+      img: 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1685058021/pagina-desktop_lbniez.png',
       ariaLabel: 'Personal Page',
       linkProject: 'https://github.com/LuccasTraumer/luccastraumer.github.io'
     },
     {
-      img: 'https://raw.githubusercontent.com/LuccasTraumer/campact_huffman/main/1000px-Huffman_tree.svg.png',
+      img: 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1685058036/1000px-Huffman_tree.svg_caapny.png',
       ariaLabel: 'Compact Huffman Algorithm',
       linkProject: 'https://github.com/LuccasTraumer/campact_huffman'
     },
     {
-      img: 'https://github.com/LuccasTraumer/algorithms/raw/main/queue/assets/Queue-Data-Structures-1024x1024.png',
+      img: 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1685058047/Queue-Data-Structures-1024x1024_iuowt5.png',
       ariaLabel: 'Algorithm Project',
       linkProject: 'https://github.com/LuccasTraumer/algorithms/tree/main/queue'
     },
     {
-      img: 'https://github.com/LuccasTraumer/tcc-fed-fio-navalha/raw/main/images/buscar.png',
+      img: 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1685058058/buscar_igtpyr.png',
       ariaLabel: 'Fio da Navalha Project',
       linkProject: 'https://github.com/LuccasTraumer/tcc-fed-fio-navalha'
     }

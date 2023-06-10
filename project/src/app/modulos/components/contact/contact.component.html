@@ -1,24 +1,66 @@
-<section class="container p-4 border-y-4 border-yellow-500" id="contact">
-  <h2 class="py-2 text-xl">Contact</h2>
+<section class="content">
+  <h3 class="content__title title blue-porple-text">
+    send me a message!
+  </h3>
 
-  <div class="text-yellow-500 grid justify-center gap-2  grid-cols-1 md:grid-cols-2 md:gap-3 lg:grid-cols-3">
-    <nav class="flex text-inherit bg-zinc-800 w-64 p-2 rounded items-center">
-      <lucide-angular name="mailIcon" class="my-icon bg-inherit"></lucide-angular>
-      <p class="mx-2 bg-inherit text-inherit">
-        lucassj.dev@gmail.com
-      </p>
-    </nav>
-    <nav class="flex text-inherit w-64 p-2 rounded bg-zinc-800 items-center">
-      <lucide-angular name="phoneIcon" class="my-icon bg-inherit"></lucide-angular>
-      <p class="mx-2 bg-inherit text-inherit">
-        (19) *********
-      </p>
-    </nav>
-    <nav class="flex text-inherit w-64 p-2 rounded bg-zinc-800 items-center">
-      <lucide-angular name="mapPinIcon" class="my-icon bg-inherit"></lucide-angular>
-      <p class="mx-2 bg-inherit text-inherit">
-        Campinas, São Paulo - Brazil
-      </p>
-    </nav>
-  </div>
+  <p class="content__description description purple-text">
+    Got a question or proposal, or just want to say hello? Go ahead.
+  </p>
+
+  <form action="" method="post" class="content__form">
+    <label
+      for="name" class="content__form--description-input"
+      (click)="isFocus($event)"
+      [ngClass]="isNameInputFocus ? '.is-label-active' : ''"
+    >Your name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="{{ isNameInputFocus ? '' : 'Enter your name'}}"
+      class="content__form--input"
+      [ngClass]="isNameInputFocus ? '.is-input-active' : ''"
+    >
+
+    <label
+      for="email"
+      class="content__form--description-input"
+      (click)="isFocus($event)"
+      [ngClass]="isEmailInputFocus ? '.is-label-active' : ''"
+    >Email Adress</label>
+    <input
+      type="text"
+      name="name"
+      id="email"
+      placeholder="{{ isEmailInputFocus ? '' : 'Enter your email adress'}}"
+      class="content__form--input"
+      [ngClass]="isEmailInputFocus ? '.is-input-active' : ''"
+    >
+
+    <label
+      for="message"
+      class="content__form--description-input"
+      (focusin)="isFocus($event)"
+      ngClass="{{isMessageInputFocus ? '.is-label-active' : ''}}"
+    >Your message
+    </label>
+    <textarea
+      name="message"
+      id="message"
+      cols="30"
+      rows="5"
+      placeholder="{{ isMessageInputFocus ? '' : 'Hi, I think we need a developer for our products at Company X. How soon can you hop on to discuss this?'}}"
+      class="content__form--input"
+      [ngClass]="isMessageInputFocus ? '.is-input-active' : ''"
+    ></textarea>
+
+    <div class="content__form--button">
+      <app-button
+        [hasIcon]="true"
+        [classIcon]="'move-right'"
+        [content]="'shoot'"
+        (clickEventEmitter)="clickButton($event)"
+      ></app-button>
+    </div>
+  </form>
 </section>

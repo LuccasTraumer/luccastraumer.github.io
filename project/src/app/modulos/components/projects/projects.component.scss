@@ -1,0 +1,29 @@
+@import "src/assets/styles/global";
+
+.content {
+  background: #F9F9F9;
+
+  &__cards {
+    padding: 1rem;
+
+    &--card {
+      padding: 5rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-width: 0 0 0.10rem 0;
+      border-color: rgba(72, 49, 212, 0.3);
+      border-style: solid;
+
+      &--title {
+      }
+
+      &--description {
+        color: $purple;
+      }
+
+      &:last-child {
+        border-width: 0;
+        border-style: none;
+      }
+    }
+  }
+}

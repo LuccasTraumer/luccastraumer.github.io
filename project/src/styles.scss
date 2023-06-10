@@ -3,21 +3,76 @@
 @tailwind components;
 @tailwind utilities;
 
-$yellow: #f0bf6c;
-$grey: #34353a;
-$white: #fff;
-$yellow-title-button: #ffc86b;
-$yellow-text: #f7cd8e;
+@import 'assets/styles/_global.scss';
 
 * {
   margin: 0;
   padding: 0;
-  background: $grey;
-  color: $white;
 
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: #000;
+  background-color: $blue-porple;
+  overflow-x: hidden;
 }
 
 .contrast-text {
-  color: $yellow-text;
+  color: $white-text;
+}
+
+.green-color {
+ color: $green-text;
+}
+
+.white-text {
+  color: $white-text;
+}
+
+.blue-porple-text {
+  color: $blue-porple;
+}
+
+.purple-text {
+  color: $purple;
+}
+
+.bg-green {
+  background: $green-text;
+}
+
+.bg-white {
+  background: $white-text;
+}
+
+.bg-blue-porple {
+  background: $blue-porple;
+}
+
+.content {
+  max-width: 100vw;
+  padding: 2rem;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+
+}
+
+
+.description {
+  line-height: 1.2;
+  font-size: 0.9em;
+  letter-spacing: 0.01em;
+  padding: 1rem 0 2rem 0;
 }

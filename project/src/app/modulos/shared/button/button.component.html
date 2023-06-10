@@ -1,3 +1,8 @@
-<button class="rounded-md p-2" [ngClass]="hasBackground ? 'bg-yellow-500 font-semibold text-slate-800' : 'border-yellow-500 border-2 text-yellow-500'">
-  {{ content }}
+<button class="content left" (click)="clickButton()">
+  <p class="content__text">
+    {{ content }}
+  </p>
+  <ng-container *ngIf="hasIcon && classIcon">
+    <lucide-icon [name]="classIcon"></lucide-icon>
+  </ng-container>
 </button>

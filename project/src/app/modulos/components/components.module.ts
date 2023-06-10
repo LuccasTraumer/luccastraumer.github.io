@@ -2,28 +2,24 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/cor
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { PresentComponent } from './present/present.component';
-import { AboutComponent } from './about/about.component';
-import { PortfloioComponent } from './portfloio/portfloio.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { ContactComponent } from './contact/contact.component';
 import { SharedModule } from '../shared/shared.module';
 import { CloudinaryModule } from '@cloudinary/ng';
-import { DesktopComponent } from './header/desktop/desktop.component';
-import { MobileComponent } from './header/mobile/mobile.component';
 import { LucideAngularModule } from 'lucide-angular';
+import { WellcomeComponent } from './wellcome/wellcome.component';
+import { FunctionsComponent } from './functions/functions.component';
+import { HistoryComponent } from './history/history.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    PresentComponent,
-    AboutComponent,
-    PortfloioComponent,
-    ExperienceComponent,
-    ContactComponent,
-    DesktopComponent,
-    MobileComponent
+    WellcomeComponent,
+    FunctionsComponent,
+    HistoryComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
     imports: [
         CommonModule,
@@ -31,15 +27,15 @@ import { LucideAngularModule } from 'lucide-angular';
         CloudinaryModule,
         LucideAngularModule
     ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    PresentComponent,
-    AboutComponent,
-    PortfloioComponent,
-    ExperienceComponent,
-    ContactComponent
-  ],
+    exports: [
+        HeaderComponent,
+        FooterComponent,
+        WellcomeComponent,
+        FunctionsComponent,
+        HistoryComponent,
+        ProjectsComponent,
+        ContactComponent
+    ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class ComponentsModule { }

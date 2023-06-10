@@ -1,0 +1,36 @@
+<section class="content ">
+  <div class="content__cards">
+    <nav class="content__cards--card bg-white">
+      <h3 class="content__cards--card--title title blue-porple-text">
+        I build &<br>
+        design stuff
+      </h3>
+      <p class="content__cards--card--description description">
+        Open source projects, web apps and experimentals.
+      </p>
+
+      <app-button
+      [content]="'see my work'"
+      [hasIcon]="true"
+      [classIcon]="'move-right'"
+      (clickEventEmitter)="redirectToWork($event)"
+      ></app-button>
+    </nav>
+    <nav class="content__cards--card bg-white">
+      <h3 class="content__cards--card--title title blue-porple-text">
+        I write,<br>
+        sometimes
+      </h3>
+      <p class="content__cards--card--description description">
+        About design, frontend dev, learning and life.
+      </p>
+
+      <app-button
+        [content]="'read my articles'"
+        [classIcon]="'move-right'"
+        [hasIcon]="true"
+        (clickEventEmitter)="redirectArticle($event)"
+      ></app-button>
+    </nav>
+  </div>
+</section>

@@ -21,7 +21,7 @@
     "@angular/router": "^14.2.12",
     "@cloudinary/ng": "^1.11.2",
     "@cloudinary/url-gen": "^1.10.0",
-    "lucide-angular": "^0.214.0",
+    "lucide-angular": "^0.226.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "typed.js": "^2.0.12",

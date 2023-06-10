@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
+import { ViewRoutingModule } from './view-routing.module';
 
 
 
@@ -16,7 +17,8 @@ import { ComponentsModule } from '../components/components.module';
   imports: [
     CommonModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+    ViewRoutingModule
   ]
 })
 export class ViewModule { }

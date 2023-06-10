@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewModule } from './modulos/view/view.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon} from 'lucide-angular';
+import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon, MoveRight} from 'lucide-angular';
+import { RouterModule } from '@angular/router';
+import { ComponentsModule } from './modulos/components/components.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon
     AppRoutingModule,
     ViewModule,
     ReactiveFormsModule,
-    LucideAngularModule.pick({ InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon})
+    RouterModule,
+    ComponentsModule,
+    LucideAngularModule.pick({ InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon, MoveRight})
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,21 +1,35 @@
-.open {
-  animation: 1s all ease-out;
-  //right: 0;
-  display: block;
-}
+@import "~src/assets/styles/global";
 
-.closed {
-  display: none;
-  //position: absolute;
-  //left: 0;
-  //animation: 0.5s all ease-out;
-  //visibility: hidden;
-  //display: none;
-}
+.content {
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  padding: 4rem 2rem;
+  overflow: hidden;
 
-//
-//@keyframes closed-menu {
-//  0% {
-//    right: ;
-//  }
-//}
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__button {
+    color: $white-text;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: auto;
+
+    hr {
+      width: 100%;
+      height: .3vh;
+      background: #fff;
+
+      &:last-child {
+        width: 50%;
+        margin-top: 20%;
+      }
+    }
+  }
+}

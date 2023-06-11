@@ -6,6 +6,10 @@
 
   &__cards {
 
+    @media screen and  (min-width: 1024px) {
+      display: flex;
+    }
+
     &--card {
       padding: 5rem;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -23,6 +27,12 @@
       &:last-child {
         border-width: 0;
         border-style: none;
+      }
+
+      @media screen and (min-width: 1024px){
+        border-width: 0 0 0 0.10rem;
+        border-color: rgba(72, 49, 212, 0.3);
+        border-style: solid;
       }
     }
   }

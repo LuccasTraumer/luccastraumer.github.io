@@ -14,6 +14,7 @@
   }
 
   &__form {
+
     &--description-input {
       display: block;
       color: rgba(61, 21, 95, 0.5);
@@ -40,6 +41,34 @@
     &--button {
       margin: 1.2rem 0;
       width: 50%;
+    }
+
+    @media screen and (min-width: 1024px){
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "message message"
+        "button button"
+    ;
+
+      &__name {
+        grid-area: name;
+        width: 80%;
+      }
+
+      &__email {
+        grid-area: email;
+        width: 80%;
+      }
+
+      &__message {
+        grid-area: message;
+      }
+
+      &--button {
+        grid-area: button;
+        width: 25%;
+      }
     }
   }
 }

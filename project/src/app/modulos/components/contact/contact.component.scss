@@ -8,13 +8,28 @@
     &:first-letter {
       text-transform: uppercase;
     }
+
+    @media screen and (min-width: 1024px){
+      text-align: center;
+    }
   }
 
   &__description {
+
+    @media screen and (min-width: 1024px){
+      text-align: center;
+      width: 35%;
+      margin: 0 auto;
+      letter-spacing: .1rem;
+    }
   }
 
   &__form {
 
+    @media screen and (min-width: 1024px){
+      width: 70%;
+      margin: 0 auto;
+    }
     &--description-input {
       display: block;
       color: rgba(61, 21, 95, 0.5);
@@ -41,6 +56,10 @@
     &--button {
       margin: 1.2rem 0;
       width: 50%;
+
+      @media screen and (min-width: 1024px){
+        margin: 1.2rem auto;
+      }
     }
 
     @media screen and (min-width: 1024px){
@@ -70,6 +89,10 @@
         width: 25%;
       }
     }
+  }
+
+  @media screen and (min-width: 1024px){
+    padding: 10rem 2rem;
   }
 }
 

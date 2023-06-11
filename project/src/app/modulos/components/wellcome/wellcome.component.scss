@@ -3,10 +3,22 @@
 
   @media screen and (min-width: 768px){
     display: flex;
+    position: relative;
+  }
+
+  @media screen and (min-width: 1024px){
+    height: 80vh;
+    position: relative;
+    align-items: center;
   }
 
   &__main {
     padding: 1rem;
+
+    @media screen and (min-width: 1024px){
+      //width: 100vw;
+      width: 40%;
+    }
 
     &--title {
       font-size: 3rem;
@@ -43,11 +55,27 @@
       height: auto;
     }
 
+    @media screen and (min-width: 1024px){
+      height: 100%;
+      position: absolute;
+      width: 40%;
+      right: 0;
+      z-index: -1;
+      top: 0;
+    }
+
     img {
       width: 50%;
 
       @media screen and (min-width: 768px){
-        width: 35%;
+        width: 20vw;
+        height: auto;
+        position: absolute;
+        right: 13rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        right: 70%;
       }
     }
   }

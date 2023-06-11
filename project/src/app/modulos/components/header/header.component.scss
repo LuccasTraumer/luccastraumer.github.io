@@ -268,7 +268,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: rem(62px);
 }
 
 .navbar .menu-items {
@@ -295,27 +295,27 @@
 
 .nav-container {
   position: relative;
-  height: 60px;
+  height: rem(60px);
 }
 
 .nav-container .checkbox {
   position: absolute;
   display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  right: 20px;
+  height: rem(32px);
+  width: rem(32px);
+  top: rem(20px);
+  right: rem(20px);
   z-index: 5;
   opacity: 0;
   cursor: pointer;
 }
 
 .nav-container .hamburger-lines {
-  height: 26px;
-  width: 32px;
+  height: rem(26px);
+  width: rem(32px);
   position: absolute;
-  top: 17px;
-  right: 20px;
+  top: rem(17px);
+  right: rem(20px);
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -324,9 +324,9 @@
 
 .nav-container .hamburger-lines .line {
   display: block;
-  height: 4px;
+  height: rem(4px);
   width: 100%;
-  border-radius: 10px;
+  border-radius: rem(10px);
   background: $white-text;
   transition: 1s ease;
 }
@@ -350,8 +350,8 @@
   transform: translate(150%);
   display: flex;
   flex-direction: column;
-  margin-right: -40px;
-  padding-right: 50px;
+  margin-right: rem(-40px);
+  padding-right: rem(50px);
   transition: transform 0.5s ease-in-out;
   text-align: start;
 
@@ -369,7 +369,7 @@
   text-align: center;
 
   .title {
-    letter-spacing: 2px;
+    letter-spacing: rem(2px);
     text-transform: uppercase;
     padding-bottom: 2rem;
     font-weight: normal;

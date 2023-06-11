@@ -59,6 +59,10 @@ body {
   padding: 4rem;
   overflow: hidden;
   width: 100vw;
+
+  @media screen and (min-width: 1024px){
+    height: 100vh;
+  }
 }
 
 .title {

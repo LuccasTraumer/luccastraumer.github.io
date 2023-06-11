@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import {CloudinaryImage} from '@cloudinary/url-gen';
 import {fill} from '@cloudinary/url-gen/actions/resize';
+import { Router } from '@angular/router';
+import { Constantes } from '../../../utils/constantes';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +21,7 @@ export class HeaderComponent implements OnInit {
     }
   ).resize(fill().width(50).height(100));
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   get isMenuMobileOpen(): boolean {
     return this._isMenuMobileOpen
@@ -31,5 +33,21 @@ export class HeaderComponent implements OnInit {
   closeMenu(): void {
     this._isMenuMobileOpen = !this._isMenuMobileOpen;
     this.menuMobileOpen.emit(this._isMenuMobileOpen);
+  }
+
+  goToHome() {
+    this.router.navigate([Constantes.PATH_HOME]);
+  }
+
+  goToShelf() {
+
+  }
+
+  goToResume() {
+
+  }
+
+  goToWork() {
+
   }
 }

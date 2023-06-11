@@ -4,12 +4,33 @@
     say hello
   </h3>
 
-  <p class="text-inherit bg-inherit content__text">my work</p>
-  <p class="text-inherit bg-inherit content__text">my shelf</p>
-  <p class="text-inherit bg-inherit content__text">me résumé</p>
+  <div class="content__social">
+    <p class="content__social--email green-color bg-inherit">
+      {{ email }}
+    </p>
+    <p class="content__social--twitter green-color bg-inherit">
+      {{ twitter }}
+    </p>
+  </div>
+
+  <p class="text-inherit bg-inherit content__text">
+    <a href="text-inherit bg-inherit" (click)="goToWork()">
+      my work
+    </a>
+  </p>
+  <p class="text-inherit bg-inherit content__text">
+    <a class="text-inherit bg-inherit" (click)="goToShelf()">
+      my shelf
+    </a>
+  </p>
+  <p class="text-inherit bg-inherit content__text">
+    <a class="text-inherit bg-inherit" (click)="goToResume()">
+      me résumé
+    </a>
+  </p>
 
 
   <p class="content__copy">
-    Lucas Jesus {{ '2023'}}
+    &copy; Lucas Jesus {{ getYear() }}
   </p>
 </footer>

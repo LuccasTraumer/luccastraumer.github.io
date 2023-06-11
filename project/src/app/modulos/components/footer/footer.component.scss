@@ -5,16 +5,25 @@
 
   &__title {
     font-size: 1rem;
-    font-weight: lighter;
+    font-weight: normal;
     letter-spacing: 0.05em;
     color: #fff;
     text-transform: uppercase;
 
   }
 
+  &__social {
+    padding: 1rem 0;
+
+    &--twitter {
+      padding: 0.5rem 0;
+    }
+  }
+
   &__text {
     color: $green-text;
     text-transform: capitalize;
+    padding: 1rem 0;
 
     &:first-letter {
       text-transform: uppercase;
@@ -29,6 +38,6 @@
     color: $green-text;
     border-top: 0.1px solid $green-text;
     padding: 1rem 0;
-    margin: 2rem 0 0 0;
+    margin: 6rem 0 0 0;
   }
 }

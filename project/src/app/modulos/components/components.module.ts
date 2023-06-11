@@ -10,6 +10,8 @@ import { FunctionsComponent } from './functions/functions.component';
 import { HistoryComponent } from './history/history.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ContactComponent } from './contact/contact.component';
         CommonModule,
         SharedModule,
         CloudinaryModule,
-        LucideAngularModule
+        LucideAngularModule,
+      RouterModule,
+      ReactiveFormsModule
     ],
     exports: [
         HeaderComponent,

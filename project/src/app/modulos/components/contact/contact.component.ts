@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,13 @@ export class ContactComponent implements OnInit {
   isEmailInputFocus: boolean = false;
   isMessageInputFocus: boolean = false;
 
-  constructor() { }
+  formGroup: FormGroup = this.formBuilder.group({
+    name: ['', [Validators.required, Validators.nullValidator]],
+    email: ['', [Validators.required, Validators.email]],
+    message: ['', [Validators.required]],
+  });
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -27,7 +34,19 @@ export class ContactComponent implements OnInit {
     console.log(event.target.innerText);
   }
 
-  clickButton(event: any) {
+  clickButton(event?: any) {
+    console.log(this.formGroup.value);
+  }
 
+  get email() {
+    return this.formGroup.get('email');
+  }
+
+  get name() {
+    return this.formGroup.get('name');
+  }
+
+  get message() {
+    return this.formGroup.get('message');
   }
 }

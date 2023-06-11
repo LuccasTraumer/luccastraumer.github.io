@@ -18,4 +18,11 @@ export class Constantes {
   public static readonly ECOMMERC_PAGE = '../../assets/image 2.jpg';
   public static readonly PERSONAL_PAGE = '../../assets/image 1.jpg';
 
+
+  public static readonly PATH_RESUME = 'resume';
+  public static readonly PATH_WORKS = 'works';
+  public static readonly PATH_ARTICLES = 'articles';
+  public static readonly PATH_HOME = 'home';
+
+
 }

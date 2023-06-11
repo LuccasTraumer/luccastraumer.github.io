@@ -1,9 +1,35 @@
 .content {
   &__title {
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    font-size: 2rem;
   }
 
-  &__description {
-    padding-bottom: 0.8rem;
+  &__article {
+    &--description {
+      padding-bottom: 0.4rem;
+      font-size: 0.8em;
+      letter-spacing: 0;
+    }
   }
+
+  &__illustration {
+    padding-top: 2rem;
+
+    svg {
+      //width: 80vw;
+      //margin-right: 1rem;
+    }
+  }
+}
+
+.hidden-class {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }

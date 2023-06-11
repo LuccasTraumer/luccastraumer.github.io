@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Constantes } from '../../../utils/constantes';
 
 @Component({
   selector: 'app-projects',
@@ -7,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   redirectArticle(event: any) {
-
+    this.router.navigate([Constantes.PATH_ARTICLES])
   }
 
   redirectToWork(event: any) {
-
+    this.router.navigate([Constantes.PATH_WORKS]);
   }
 
 }

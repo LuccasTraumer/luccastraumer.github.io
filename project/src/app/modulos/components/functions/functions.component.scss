@@ -15,8 +15,19 @@
     }
 
     &:first-child {
+      padding: 0 0 2rem 0;
+      svg {
+        width: 100%;
+        visibility: hidden;
+        display: none;
+      }
+
       @media screen and (min-width: 768px){
+        padding: 0;
+
         svg {
+          display: block;
+          visibility: visible;
           width: 90%;
           height: auto;
         }
@@ -32,10 +43,22 @@
     }
 
     &:last-child {
+      padding: 2rem 0 0 0;
+
+      svg {
+        width: 100%;
+        visibility: hidden;
+        display: none;
+      }
+
       @media screen and (min-width: 768px){
+        padding: 0;
         svg {
+          visibility: visible;
           width: 100%;
           height: auto;
+          display: block;
+
         }
       }
 

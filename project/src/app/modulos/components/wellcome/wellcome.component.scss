@@ -4,6 +4,8 @@
   @media screen and (min-width: 768px){
     display: flex;
     position: relative;
+    align-items: center;
+    height: 70vh;
   }
 
   @media screen and (min-width: 1024px){
@@ -52,7 +54,7 @@
     box-sizing: border-box;
 
     @media screen and (min-width: 768px){
-      height: auto;
+      height: 100%;
     }
 
     @media screen and (min-width: 1024px){

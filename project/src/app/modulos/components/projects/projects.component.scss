@@ -13,7 +13,7 @@
 
   &__cards {
 
-    @media screen and  (min-width: 1024px) {
+    @media screen and  (min-width: 768px) {
       display: flex;
       align-items: center;
     }
@@ -60,7 +60,7 @@
         border-style: none;
       }
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 768px){
         border-width: 0 0.10rem 0 0;
         border-color: rgba(72, 49, 212, 0.3);
         border-style: solid;

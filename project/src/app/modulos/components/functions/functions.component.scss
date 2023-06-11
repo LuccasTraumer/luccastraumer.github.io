@@ -1,9 +1,51 @@
 .content {
-  &__title {
-    padding-bottom: 0.7rem;
-  }
+  @media screen and (min-width: 768px){
+    display: flex;
+    align-items: center;
 
-  &__text {
-    font-size: 0.8rem;
+  }
+  &__article {
+
+    &--title {
+      padding-bottom: 0.7rem;
+    }
+
+    &--text {
+      font-size: 0.8rem;
+    }
+
+    &:first-child {
+      @media screen and (min-width: 768px){
+        svg {
+          width: 90%;
+          height: auto;
+        }
+      }
+
+      @media screen and (min-width: 1024px){
+        svg {
+          width: 40%;
+          margin-left: 40%;
+          height: auto;
+        }
+      }
+    }
+
+    &:last-child {
+      @media screen and (min-width: 768px){
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media screen and (min-width: 1024px){
+        svg {
+          width: 40%;
+          margin-left: 40%;
+          height: auto;
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "version": "0.0.0",
+  "version": "4.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -25,6 +25,7 @@
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "typed.js": "^2.0.12",
+    "webpack-bundle-analyzer": "^4.9.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

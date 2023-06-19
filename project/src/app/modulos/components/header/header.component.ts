@@ -34,7 +34,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // ElementRef { nativeElement: <input> }
-    console.log(this.input);
   }
 
   closeMenu(): void {

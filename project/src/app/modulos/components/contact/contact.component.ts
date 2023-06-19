@@ -31,11 +31,9 @@ export class ContactComponent implements OnInit {
     } else {
       this.isNameInputFocus = !this.isNameInputFocus;
     }
-    console.log(event.target.innerText);
   }
 
   clickButton(event?: any) {
-    console.log(this.formGroup.value);
   }
 
   get email() {

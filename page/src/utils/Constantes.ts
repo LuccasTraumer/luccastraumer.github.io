@@ -29,4 +29,5 @@ export class Constantes {
   public static readonly ICON_LOCATION = '/assets/novaPagina/location-icon.svg';
   public static readonly SEARCH_ICON = '/assets/novaPagina/search-icon.svg';
 
+  public static readonly LOGO_NOVO = '/assets/rebuild/logo-com-camadas.svg';
 }

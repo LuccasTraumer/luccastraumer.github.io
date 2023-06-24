@@ -1,0 +1,18 @@
+@media screen and (min-width: 1024px){
+  .grid {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    //height: 100vh;
+    scroll-behavior: smooth;
+  }
+
+  .grid app-wellcome, .grid app-functions, .grid app-history, .grid app-projects, .grid app-contact, app-footer {
+    scroll-snap-align: start;
+  }
+
+  app-footer {
+    scroll-snap-align: start;
+  }
+
+}

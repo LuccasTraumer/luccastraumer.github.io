@@ -8,6 +8,7 @@
   -webkit-box-shadow: -10px 10px 15px -15px #000000;
   box-shadow: -10px 10px 15px -15px #000000;
   border-radius: 5px;
+  flex-shrink: 0;
 
   .profile-image {
     border-radius: 50%;

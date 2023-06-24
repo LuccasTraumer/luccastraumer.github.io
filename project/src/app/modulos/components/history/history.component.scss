@@ -1,0 +1,71 @@
+.content {
+
+  &__title {
+    padding-bottom: 0.4rem;
+    font-size: 2rem;
+  }
+
+  &__article {
+    &--description {
+      padding-bottom: 0.4rem;
+      font-size: 0.8em;
+      letter-spacing: 0;
+    }
+  }
+
+  &__illustration {
+    padding-top: 2rem;
+
+    @media screen and (min-width: 1024px){
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    svg {
+      //width: 80vw;
+      //margin-right: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "content illustration";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.1fr 1fr;
+    padding: 10rem 2rem;
+
+
+    &__title {
+      grid-area: title;
+    }
+
+    &__article {
+      grid-area: content;
+      width: 30vw;
+
+      &--description {
+        line-height: 2;
+      }
+    }
+
+    &__illustration {
+      grid-area: illustration;
+      width: 65vw;
+      padding: 0;
+    }
+  }
+}
+
+.hidden-class {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

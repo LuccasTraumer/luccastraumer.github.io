@@ -3,22 +3,15 @@
   display: flex;
   justify-content: space-between;
 
-  .informacoes {
+  &__informacoes {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
     align-items: center;
     text-align: center;
 
-    app-quadrado {
-      width: 5vw;
-      height: 1.9vh;
-    }
-
-    &__titulo {
-      font-weight: bold;
-      margin: 0 0 0 3%;
-      font-size: 1.5rem;
+    &--logo {
+      width: 20vw;
     }
   }
 
@@ -128,9 +121,9 @@
     .informacoes {
       display: flex;
       flex-wrap: wrap;
-      width: 50%;
       align-items: center;
       text-align: center;
+      flex-grow: 1;
 
       &__titulo {
         font-weight: bold;
@@ -140,7 +133,7 @@
     }
 
     .menu {
-      width: 50%;
+      flex-grow: 2;
 
       .lista {
         display: flex;

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Constantes } from '../../../utils/Constantes';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public readonly CONSTANTES = Constantes;
   @Output()
   elementoFocado =  new EventEmitter<string>();
 

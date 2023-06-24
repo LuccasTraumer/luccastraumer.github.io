@@ -6,7 +6,8 @@ import {Experience} from '../../model/experience.model';
 import {Skills} from '../../model/skills.model';
 import { RepositoryModel } from '../../model/repository-model';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, map, retry } from 'rxjs/operators';
+import { error } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -64,5 +65,20 @@ export class DataService {
     return this.http.get<RepositoryModel[]>(this.apiGithubRepositories)
       .pipe(
         retry(2));
+  }
+
+  sendEmail(data): any {
+    const api = 'https://mailthis.to/lucassj.dev';
+    return this.http.post(api, data, { responseType: 'text' }).pipe(
+      map((response) => {
+        if (response) {
+          return response;
+        }
+      },
+        (error: any) => {
+          return error;
+        }
+      )
+    );
   }
 }

@@ -26,7 +26,6 @@
     .info {
       display: flex;
       align-items: center;
-      width: 100%;
       justify-content: space-around;
       padding: 10% 0;
 
@@ -34,10 +33,12 @@
         font-weight: bold;
         font-size: 1.1rem;
         margin: 0;
+        flex-grow: 0.5;
+        text-align: center;
       }
 
       app-button {
-        width: 30%;
+        flex-grow: 0.5;
       }
     }
 

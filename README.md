@@ -10,12 +10,11 @@ This project was made, to prove my skills in angular and frontend, most part of 
 If you want acess this is the [link!](https://luccastraumer.github.io/) 
 
 In Desktop:
-![Image of my web page](./assets/pagina-desktop.png)
+![Image of my web page](./assets/desktop-layout.png)
 
 In Mobile:
-![Image of my web page](./assets/pagina-mobile.png)
+![Image of my web page](./assets/mobile-layout.png)
 
 
 That is the coverage of the project:
 ![Image of my web page](./assets/cobertura-dos-componentes.png)
-

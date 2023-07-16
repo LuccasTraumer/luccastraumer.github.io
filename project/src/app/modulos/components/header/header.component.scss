@@ -183,3 +183,8 @@
 .nav-container input[type="checkbox"]:checked ~ .logo{
   color: $blue-porple;
 }
+
+
+.logo {
+  cursor: pointer;
+}

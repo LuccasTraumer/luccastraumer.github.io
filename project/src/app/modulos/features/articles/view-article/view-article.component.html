@@ -1,0 +1,37 @@
+<article class="content">
+  <div class="content__time">
+    <time class="content__date--publish">{{ article.date | date:'medium' }}</time>
+    <p class="content__date--read">{{article.timeRead}} min read</p>
+  </div>
+
+  <h2 class="content__title title">
+    {{ article.title }}
+  </h2>
+
+  <div class="content__description">
+    <ng-container *ngFor="let section of article.description">
+      <h3 class="content__description--subtitle" *ngIf="section.titleSection">{{section.titleSection}}</h3>
+
+      <p class="content__description--content">{{ section.content }}</p>
+
+      <pre class="content__description--code" *ngIf="section.code">
+        {{section.code}}
+      </pre>
+
+      <figure *ngIf="section.image" class="content__description--image">
+        <img *ngIf="section.image" [src]="section.image" alt=""/>
+
+        <figcaption *ngIf="section.imageBy">{{section.imageBy}}</figcaption>
+      </figure>
+    </ng-container>
+  </div>
+
+  <div class="content__tags">
+    <p class="content__tags--title" *ngIf="article.tags">tags:</p>
+    <ng-container *ngFor="let tag of article.tags">
+     <p class="content__tags--item">
+       {{ tag }}
+     </p>
+    </ng-container>
+  </div>
+</article>

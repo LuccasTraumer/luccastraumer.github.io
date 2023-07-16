@@ -1,0 +1,85 @@
+@import "src/assets/styles/global";
+
+.content {
+  background: #F9F9F9;
+  padding-top: 8rem;
+  height: 100%;
+
+
+
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border-bottom: 0.1rem solid #474747;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+  }
+
+  &__title {
+    color: $blue-porple;
+  }
+
+  &__description {
+    letter-spacing: .011rem;
+    margin-bottom: 1.25em;
+    box-sizing: border-box;
+    padding: 1rem 0;
+
+    @media screen and (min-width: 1024px){
+      padding: 1rem 1.5rem;
+    }
+
+    &--subtitle {
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+    }
+
+    &--content {
+      font-size: 1rem;
+      padding: .5rem 0;
+    }
+
+    &--code {
+      background: #fff;
+      margin: 1rem 0;
+      width: max-content;
+      word-break: normal;
+      max-width: 90vw;
+
+      @media screen and (min-width: 1024px){
+        width: 50%;
+      }
+    }
+
+    &--image {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+
+      figcaption {
+        font-size: .8rem;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    &--title {
+      text-transform: capitalize;
+
+    }
+
+    &--item {
+      text-transform: lowercase;
+      display: flex;
+      gap: .5rem;
+    }
+  }
+}

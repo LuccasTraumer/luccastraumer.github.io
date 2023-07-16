@@ -1,0 +1,16 @@
+<div class="card">
+  <figure class="card__body">
+    <a (click)="redirectToProject()">
+      <img [src]="image" alt="company worked" class="card__body__image">
+    </a>
+
+    <figcaption class="card__body__caption">
+      <h3 class="card__body__caption--title">
+        {{ title }}
+      </h3>
+      <a [href]="link" class="card__body__caption--link" target="_blank">
+        {{ contentLink }}
+      </a>
+    </figcaption>
+  </figure>
+</div>

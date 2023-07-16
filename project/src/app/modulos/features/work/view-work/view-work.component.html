@@ -1,0 +1,19 @@
+<section class="content">
+  <h2 class="content__title title">
+    {{ work.title }}
+  </h2>
+
+  <figure class="content__work">
+    <app-caroussel
+      [listImages]="work.images"
+    ></app-caroussel>
+
+    <figcaption class="content__work__description">
+      {{ work.description }}
+    </figcaption>
+  </figure>
+
+  <div class="content__contact">
+    <app-contact></app-contact>
+  </div>
+</section>

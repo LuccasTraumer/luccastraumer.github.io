@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ViewModule } from './modulos/view/view.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon, MoveRight} from 'lucide-angular';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from './modulos/components/components.module';
+import { ViewModule } from './modulos/features/view/view.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

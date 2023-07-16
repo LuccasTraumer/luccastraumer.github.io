@@ -1,0 +1,57 @@
+.content {
+  background: #F9F9F9;
+  padding-top: 8rem;
+
+  &__title {
+    color: #474747;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    visibility: hidden;
+    display: none;
+    text-transform: lowercase;
+
+    &:before {
+      content: "/";
+      opacity: 50%;
+    }
+
+    @media screen and (min-width: 768px){
+      visibility: visible;
+      display: block;
+    }
+  }
+
+  &__list {
+    &__item {
+      padding: 1rem 0;
+
+      &--date {
+        letter-spacing: .011rem;
+        font-size: .8em;
+        margin-bottom: 1rem;
+        opacity: .8;
+        color: #474747;
+      }
+
+      &--title {
+        color: #474747;
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+
+      &--description {
+        letter-spacing: .011rem;
+        font-weight: normal;
+        font-size: .9em;
+        margin-top: 1rem;
+      }
+
+      @media screen and (min-width: 460px){
+        border-bottom: .01rem solid #474747;
+        padding: 1.3rem 0;
+      }
+    }
+  }
+}

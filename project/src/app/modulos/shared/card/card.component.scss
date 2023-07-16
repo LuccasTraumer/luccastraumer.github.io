@@ -1,0 +1,35 @@
+@import "src/assets/styles/global";
+
+.card {
+  border-radius: 0 0 rem(5px) rem(5px);
+  width: 100%;
+  max-width: 50vw;
+
+  &__body {
+    border-radius: inherit;
+
+    &__image {
+      border-radius: rem(5px) rem(5px) 0 0;
+      box-sizing: border-box;
+      object-fit: cover;
+      background: rgba(245, 244, 252, 0.62);
+      padding: 2rem;
+    }
+
+    &__caption {
+      background: $white-text;
+      padding: 2rem 1rem;
+      border-radius: inherit;
+
+      &--title {
+        color: black;
+        font-weight: bolder;
+        opacity: 60%;
+      }
+
+      &--link {
+        color: $blue-porple;
+      }
+    }
+  }
+}

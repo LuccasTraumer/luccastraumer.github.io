@@ -5,6 +5,8 @@ import { ViewWorkComponent } from './view-work/view-work.component';
 import { WorkRoutingModule } from './work-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { ComponentsModule } from '../../components/components.module';
+import { HttpClientModule } from '@angular/common/http';
+import { WorkService } from './service/work.service';
 
 
 
@@ -17,7 +19,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     WorkRoutingModule,
     SharedModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+    HttpClientModule
+  ],
+  providers: [WorkService]
 })
 export class WorkModule { }

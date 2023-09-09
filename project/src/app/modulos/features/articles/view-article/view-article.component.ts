@@ -13,13 +13,9 @@ export class ViewArticleComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: DataArticleService) { }
 
   ngOnInit(): void {
-
-    console.warn(this.dataService.getDataValue());
     this.route.data.subscribe((item: any) => {
       item.article
-      console.warn(JSON.stringify(item.article));
       this.article = item.article;
     })
   }
-
 }

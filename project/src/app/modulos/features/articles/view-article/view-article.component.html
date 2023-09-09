@@ -10,9 +10,9 @@
 
   <div class="content__description">
     <ng-container *ngFor="let section of article.description">
-      <h3 class="content__description--subtitle" *ngIf="section.titleSection">{{section.titleSection}}</h3>
+      <h3 [innerHTML]="section.titleSection" class="content__description--subtitle" *ngIf="section.titleSection"></h3>
 
-      <p class="content__description--content">{{ section.content }}</p>
+      <p [innerHTML]="section.content" class="content__description--content"></p>
 
       <pre class="content__description--code" *ngIf="section.code">
         {{section.code}}

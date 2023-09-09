@@ -2,15 +2,15 @@
   <article class="content__body">
     <div class="content__body__presentation">
       <a href="" class="content__body__presentation--webpage">
-        luccastraumer.github
+        {{personalData.personalPage}}
       </a>
 
       <p class="content__body__presentation--location">
-        Campinas, SP
+        {{personalData.city}},{{personalData.state}}
       </p>
 
       <p class="content__body__presentation--email">
-        lucassj.dev@gmail.com
+        {{personalData.email}}
       </p>
     </div>
 
@@ -43,8 +43,8 @@
 
     <div class="content__body__welcome">
       <h2 class="content__body__welcome--title title">
-        Lucas <br>
-        Jesus
+        {{personalData.name}} <br>
+        {{personalData.lastName}}
       </h2>
 
       <h3 class="content__body__welcome--subtitle">
@@ -63,7 +63,7 @@
         Experience
       </h4>
       <p class="content__body__exp--description">
-        I’ve worked on a handful of web projects over the years, some of which were for the following organizations:
+        {{personalData.experience}}
       </p>
 
       <ul class="content__body__exp__works">
@@ -80,7 +80,7 @@
             </p>
 
             <p>
-              {{getFormatDate()}} - {{work.end_date === undefined ? 'present' : work.end_date}}
+              {{formatDate}} - {{work.end_date === undefined ? 'present' : work.end_date}}
             </p>
           </div>
         </li>

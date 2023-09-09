@@ -4,6 +4,8 @@ import { ArticleComponent } from './article/article.component';
 import { ViewArticleComponent } from './view-article/view-article.component';
 import { ArrayOfComponents, ArticleRoutingModule } from './article-routing.module';
 import { PresentationArticleComponent } from './presentation-article/presentation-article.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ArticleService } from './service/article.service';
 
 
 
@@ -16,7 +18,11 @@ import { PresentationArticleComponent } from './presentation-article/presentatio
   ],
   imports: [
     CommonModule,
-    ArticleRoutingModule
+    ArticleRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+    ArticleService
   ]
 })
 export class ArticlesModule { }

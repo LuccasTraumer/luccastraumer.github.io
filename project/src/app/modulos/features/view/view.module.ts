@@ -4,6 +4,8 @@ import { MainComponent } from './main/main.component';
 import { ViewRoutingModule } from './view-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { ComponentsModule } from '../../components/components.module';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeService } from './main/service/home.service';
 
 
 
@@ -18,7 +20,11 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     SharedModule,
     ComponentsModule,
-    ViewRoutingModule
+    ViewRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+    HomeService
   ]
 })
 export class ViewModule { }

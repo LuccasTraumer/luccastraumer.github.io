@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResumeServiceService } from './service/resume-service.service';
 
 @Component({
   selector: 'app-resume',
@@ -6,51 +7,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent implements OnInit {
+  otherTechs!: string[];
+  work!: any;
+  techs!: string[];
+  formatDate!: string;
 
-  techs: string[] = [
-    'javascript',
-    'typescript',
-    'java',
-    'html5',
-    'css3',
-    'angular',
-    'node',
-    'sass',
-    'spring boot'
-  ]
+  personalData!: Personal;
 
-  otherTechs: string[] = [
-    'pwa',
-    'E2E testing',
-    'software testing',
-    'responsive web design'
-  ]
-
-  work: Work = {
-    title: 'CIANDT',
-    level: 'Mid Level',
-    specialist: 'frontend',
-    description: ' Shaping the future of commerce and entrepreneurship – building and advocating for inclusive and thoughtful experiences for over three million merchants across the globe.',
-    start_date: new Date('2020-02-10'),
-    end_date: undefined
-  };
-
-  constructor() { }
+  constructor(private service: ResumeServiceService) { }
 
   ngOnInit(): void {
-  }
-
-
-  getFormatDate(): string {
-    return `Feb 2020`
+    this.service.getDataResume().subscribe({
+      next: (res: any) => {
+        this.otherTechs = res.otherTechs;
+        this.work = res.work;
+        this.techs = res.techs;
+        this.personalData = res.personal;
+      },
+      error: err => {
+        console.error(err);
+      }
+    })
   }
 }
 
-interface Work {
-  title: string;
-  level: string;
-  specialist: string;
-  description: string;
-  start_date: Date;
-  end_date?: Date;
+
+interface Personal {
+  city: string;
+  state: string;
+  personalPage: string;
+  email: string;
+
+  name: string;
+  lastName: string;
+
+  experience: string;
+
 }

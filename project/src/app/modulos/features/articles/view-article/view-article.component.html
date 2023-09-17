@@ -19,7 +19,7 @@
       </pre>
 
       <figure *ngIf="section.image" class="content__description--image">
-        <img *ngIf="section.image" [src]="section.image" alt=""/>
+        <img *ngIf="section.image" [src]="section.image" alt="" loading="lazy"/>
 
         <figcaption *ngIf="section.imageBy">{{section.imageBy}}</figcaption>
       </figure>

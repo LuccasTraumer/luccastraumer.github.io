@@ -7,12 +7,9 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
 
   constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
 
   redirectArticle(event: any) {
     this.router.navigate([Constantes.PATH_ARTICLES])
@@ -21,5 +18,4 @@ export class ProjectsComponent implements OnInit {
   redirectToWork(event: any) {
     this.router.navigate([Constantes.PATH_WORKS]);
   }
-
 }

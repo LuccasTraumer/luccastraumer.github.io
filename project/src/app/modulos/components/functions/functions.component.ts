@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RoleSection } from '../../features/view/main/model/role-section';
 
 @Component({
@@ -6,14 +6,10 @@ import { RoleSection } from '../../features/view/main/model/role-section';
   templateUrl: './functions.component.html',
   styleUrls: ['./functions.component.scss']
 })
-export class FunctionsComponent implements OnInit {
+export class FunctionsComponent {
 
   @Input()
   roleSection!: RoleSection[];
-
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

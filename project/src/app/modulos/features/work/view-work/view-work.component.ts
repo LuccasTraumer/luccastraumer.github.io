@@ -15,7 +15,6 @@ export class ViewWorkComponent implements OnInit {
     this.workService.getWorkData().subscribe({
       next: value => {
         this.work = value as Work;
-        console.warn(value);
       },
       error: err => console.error(err)
     })

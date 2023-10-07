@@ -34,6 +34,7 @@ export class ContactComponent implements OnInit {
   }
 
   clickButton(event?: any) {
+    // TODO: send email.
   }
 
   get email() {

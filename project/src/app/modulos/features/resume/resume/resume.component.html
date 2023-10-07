@@ -1,57 +1,61 @@
-<section class="content">
-  <article class="content__body">
-    <div class="content__body__presentation">
-      <a href="" class="content__body__presentation--webpage">
-        {{personalData.personalPage}}
-      </a>
+<section class="content pt-32">
+  <article class="content__body box-border p-8">
 
-      <p class="content__body__presentation--location">
-        {{personalData.city}},{{personalData.state}}
-      </p>
+    <aside class="content__aside">
 
-      <p class="content__body__presentation--email">
-        {{personalData.email}}
-      </p>
-    </div>
+      <div class="content__aside__presentation none invisible">
+        <a href="" class="content__aside__presentation--webpage">
+          {{personalData.personalPage}}
+        </a>
 
-    <div class="content__body__techs">
-      <h3 class="content__body__techs--title title">
-        core technologies:
-      </h3>
-      <ul class="content__body__techs__list">
-        <li
-          *ngFor="let item of techs"
-          class="content__body__techs__list--item">
-          {{ item }}
-        </li>
-      </ul>
-    </div>
+        <p class="content__aside__presentation--location">
+          {{personalData.city}},{{personalData.state}}
+        </p>
 
-    <div class="content__body__others-techs">
-      <h3 class="content__body__others-techs--title title">
-        others technologies:
-      </h3>
+        <p class="content__aside__presentation--email">
+          {{personalData.email}}
+        </p>
+      </div>
 
-      <ul class="content__body__others-techs__list">
-        <li
-          *ngFor="let item of otherTechs"
-          class="content__body__others-techs__list--item">
-          {{ item }}
-        </li>
-      </ul>
-    </div>
+      <div class="content__aside__techs">
+        <h3 class="content__aside__techs--title title relative z-0">
+          core technologies:
+        </h3>
+        <ul class="content__aside__techs__list">
+          <li
+            *ngFor="let item of techs"
+            class="content__aside__techs__list--item">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="content__aside__others-techs">
+        <h3 class="content__aside__others-techs--title title relative z-0">
+          others technologies:
+        </h3>
+
+        <ul class="content__aside__others-techs__list">
+          <li
+            *ngFor="let item of otherTechs"
+            class="content__aside__others-techs__list--item capitalize">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </aside>
 
     <div class="content__body__welcome">
-      <h2 class="content__body__welcome--title title">
-        {{personalData.name}} <br>
-        {{personalData.lastName}}
+      <h2 class="content__body__welcome--title title leading-normal">
+        {{ personalData.name }} <br>
+        {{ personalData.lastName }}
       </h2>
 
       <h3 class="content__body__welcome--subtitle">
         Expert Frontend developer
       </h3>
 
-      <p class="content__body__welcome--description">
+      <p class="content__body__welcome--description pb-4">
         Engineer valued for driving high-performance accessible web experiences.
       </p>
     </div>
@@ -63,24 +67,24 @@
         Experience
       </h4>
       <p class="content__body__exp--description">
-        {{personalData.experience}}
+        {{ personalData.experience }}
       </p>
 
       <ul class="content__body__exp__works">
         <li class="content__body__exp__works--work">
-          <h3 class="content__body__exp__works--work--title">
+          <h3 class="content__body__exp__works--work--title block font-bold">
             {{ work.title }}
-            <p class="content__body__exp__works--work--title--desc">
-               - {{work.level}} {{work.specialist}}
+            <p class="content__body__exp__works--work--title--desc font-normal">
+               - {{ work.level }} {{ work.specialist }}
             </p>
           </h3>
-          <div class="content__body__exp__works--work--description">
+          <div class="content__body__exp__works--work--description flex">
             <p>
               {{ work.description }}
             </p>
 
             <p>
-              {{formatDate}} - {{work.end_date === undefined ? 'present' : work.end_date}}
+              {{ formatDate }} - {{ work.end_date === undefined ? 'present' : work.end_date }}
             </p>
           </div>
         </li>

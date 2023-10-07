@@ -1,13 +1,13 @@
 {
   "name": "project",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm run build && gh-pages -d dist/project"
+    "deploy": "npm run build --prod && gh-pages -d dist/project"
   },
   "private": true,
   "dependencies": {

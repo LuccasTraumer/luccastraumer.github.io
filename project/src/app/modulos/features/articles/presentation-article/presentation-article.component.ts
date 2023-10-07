@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataArticleService } from '../service/data-article.service';
 import { ArticlePost } from '../../../shared/models/article-post';
 import { ArticleService } from '../service/article.service';
-import { DataMock } from '../../../../utils/data-mock';
 
 @Component({
   selector: 'app-presentation-article',
@@ -25,7 +24,6 @@ export class PresentationArticleComponent implements OnInit {
       next: value => {
         this.dataService.setValueData(value);
         this.listArticle = value as ArticlePost[];
-        // DataMock.LIST_ARTICLE = value as ArticlePost[];
       },
       error: err => console.error(err)
     })
@@ -40,7 +38,6 @@ export class PresentationArticleComponent implements OnInit {
   }
 
   redirectToArticle(linkPost: string) {
-    this.dataService.setValueData('teste');
     this.router.navigate([linkPost], { relativeTo: this.route });
   }
 }

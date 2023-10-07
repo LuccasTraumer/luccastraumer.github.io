@@ -37,10 +37,7 @@ interface Personal {
   state: string;
   personalPage: string;
   email: string;
-
   name: string;
   lastName: string;
-
   experience: string;
-
 }

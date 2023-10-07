@@ -8,8 +8,6 @@ import { ComponentsModule } from '../../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { WorkService } from './service/work.service';
 
-
-
 @NgModule({
   declarations: [
     WorkComponent,

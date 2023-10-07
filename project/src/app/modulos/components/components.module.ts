@@ -24,10 +24,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent
   ],
     imports: [
-        CommonModule,
-        SharedModule,
-        CloudinaryModule,
-        LucideAngularModule,
+      CommonModule,
+      SharedModule,
+      CloudinaryModule,
+      LucideAngularModule,
       RouterModule,
       ReactiveFormsModule
     ],

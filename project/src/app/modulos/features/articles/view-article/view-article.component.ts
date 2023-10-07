@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router} from '@angular/router';
 import { DataArticleService } from '../service/data-article.service';
 import { ArticlePost } from '../../../shared/models/article-post';
 
@@ -10,12 +10,9 @@ import { ArticlePost } from '../../../shared/models/article-post';
 })
 export class ViewArticleComponent implements OnInit {
   article!: ArticlePost;
-  constructor(private route: ActivatedRoute, private dataService: DataArticleService) { }
+  constructor(private route: Router, private dataService: DataArticleService) { }
 
   ngOnInit(): void {
-    this.route.data.subscribe((item: any) => {
-      item.article
-      this.article = item.article;
-    })
+    this.article = this.dataService.getDataValue().find((item: ArticlePost) => this.route.url.includes(item.linkPost))
   }
 }

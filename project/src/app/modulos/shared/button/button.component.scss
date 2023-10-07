@@ -37,31 +37,5 @@
       content: '';
     }
   }
-
-  //&:before,
-  //&:after {
-  //  color: white;
-  //  background: $blue-porple;
-  //  transition: 1s ease;
-  //  content: '';
-  //  position: absolute;
-  //  z-index: -1;
-  //}
 }
 
-//.left {
-//  &:hover {
-//    &:before {
-//      top: 0;
-//      right: 100%;
-//      bottom: 0;
-//      left: 0;
-//      transition: 1s ease;
-//    }
-//    &:hover {
-//      &:before {
-//        right: 0;
-//      }
-//    }
-//  }
-//}

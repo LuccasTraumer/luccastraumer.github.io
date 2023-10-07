@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {ActivatedRoute, RouterModule, Routes} from '@angular/router';
 import { ArticleComponent } from './article/article.component';
 import { ViewArticleComponent } from './view-article/view-article.component';
 import { PresentationArticleComponent } from './presentation-article/presentation-article.component';
-import { DataMock } from '../../../utils/data-mock';
+import { ListArticle } from './service/list-article';
+import {Constantes} from "../../../utils/constantes";
+
 
 const routes: Routes = [
   {
@@ -13,17 +15,17 @@ const routes: Routes = [
   {
     path: 'data-structure',
     component: ViewArticleComponent,
-    data: { article: DataMock.LIST_ARTICLE[0] }
+    data: { article: ListArticle.LIST_ARTICLE[0] }
   },
   {
     path: 'search-binary',
     component: ViewArticleComponent,
-    data: { article: DataMock.LIST_ARTICLE[1] }
+    data: { article: ListArticle.LIST_ARTICLE[1] }
   },
   {
     path: 'list-and-array',
     component: ViewArticleComponent,
-    data: { article: DataMock.LIST_ARTICLE[2] }
+    data: { article: ListArticle.LIST_ARTICLE[2] }
   },
   {
     path: '**',
@@ -36,7 +38,7 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ArticleRoutingModule { }
+export class ArticleRoutingModule {}
 export const ArrayOfComponents = [
   ViewArticleComponent,
   ArticleComponent

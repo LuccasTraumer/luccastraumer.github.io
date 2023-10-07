@@ -7,8 +7,6 @@ import { PresentationArticleComponent } from './presentation-article/presentatio
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleService } from './service/article.service';
 
-
-
 @NgModule({
   declarations: [
     ArticleComponent,

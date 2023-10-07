@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Renderer2, ViewChild } from '@angular/core';
 import {CloudinaryImage} from '@cloudinary/url-gen';
 import {fill} from '@cloudinary/url-gen/actions/resize';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent {
   _isMenuMobileOpen: boolean = false;
   public readonly LOGO_SRC = 'https://res.cloudinary.com/dfixlnbhd/image/upload/c_fill,h_100,w_50/LOGO_ycaeq7?_a=AKFJtDW0';
 
@@ -29,21 +29,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     return this._isMenuMobileOpen
   }
 
-  ngOnInit(): void {
-  }
-
-  ngAfterViewInit() {
-    // ElementRef { nativeElement: <input> }
-  }
-
   closeMenu(): void {
     this.input.nativeElement.checked = false;
   }
-
-  // closeMenu(): void {
-  //   this._isMenuMobileOpen = !this._isMenuMobileOpen;
-  //   this.menuMobileOpen.emit(this._isMenuMobileOpen);
-  // }
 
   goToHome() {
     this.closeMenu();

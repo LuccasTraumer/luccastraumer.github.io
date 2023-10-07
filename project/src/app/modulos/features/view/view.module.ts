@@ -7,8 +7,6 @@ import { ComponentsModule } from '../../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeService } from './main/service/home.service';
 
-
-
 @NgModule({
   declarations: [
     MainComponent

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CardInterfaceProps } from './card.interface.props';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -13,7 +13,7 @@ export class CardComponent implements CardInterfaceProps {
   @Input() link?: string;
   @Input() contentLink?: string;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router) {
   }
 
   redirectToProject() {

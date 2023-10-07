@@ -11,7 +11,6 @@ import { HistorySection } from './model/history-section';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  public readonly CONSTANTES = Constantes;
   homeData!: HomeData;
   constructor(private homeService: HomeService) {
   }
@@ -20,7 +19,6 @@ export class MainComponent implements OnInit {
     this.homeService.getDataHome().subscribe({
       next: value => {
         this.homeData = value as HomeData;
-        console.log(this.homeData);
       },
       error: err => console.error(err)
     })

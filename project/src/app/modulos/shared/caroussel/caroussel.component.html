@@ -5,7 +5,13 @@
       <div *ngFor="let item of listImages; let i = index" class="duration-700 ease-in-out" data-carousel-item="active"
            [ngClass]="visibleImage === i ? '' : 'hidden'"
       >
-        <img [src]="item" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." loading="lazy">
+        <img
+          *inView
+          [src]="item"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+          loading="lazy"
+        >
       </div>
   </div>
   <!-- Slider indicators -->

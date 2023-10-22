@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Constantes } from '../../../../utils/constantes';
+import {AfterViewChecked, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { HomeService } from './service/home.service';
 import { WelcomeSection } from './model/welcome-section';
 import { RoleSection } from './model/role-section';
@@ -10,9 +9,12 @@ import { HistorySection } from './model/history-section';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterViewChecked {
   homeData!: HomeData;
-  constructor(private homeService: HomeService) {
+
+  @ViewChild('history')
+  historySection!: ElementRef<HTMLInputElement>;
+  constructor(private homeService: HomeService, private renderer: Renderer2, private el: ElementRef) {
   }
 
   ngOnInit(): void {
@@ -22,6 +24,16 @@ export class MainComponent implements OnInit {
       },
       error: err => console.error(err)
     })
+  }
+
+  click(event: any) {
+    event.preventDefault();
+
+    window.location.href = "#history";
+  }
+
+  ngAfterViewChecked(): void {
+    console.warn(this.historySection);
   }
 }
 

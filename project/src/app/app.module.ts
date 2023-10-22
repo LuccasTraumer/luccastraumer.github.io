@@ -8,6 +8,7 @@ import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from './modulos/components/components.module';
 import { ViewModule } from './modulos/features/view/view.module';
+import {CloudinaryModule} from '@cloudinary/ng';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ViewModule } from './modulos/features/view/view.module';
     ReactiveFormsModule,
     RouterModule,
     ComponentsModule,
+    CloudinaryModule,
     LucideAngularModule.pick({ InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon, MoveRight})
   ],
   providers: [],

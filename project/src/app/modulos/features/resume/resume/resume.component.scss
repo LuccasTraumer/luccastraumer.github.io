@@ -2,7 +2,6 @@
 
 .content {
   background: $white-one;
-  padding-top: 8rem;
 
   &__body, &__aside {
     background: $white-two;
@@ -104,7 +103,7 @@
       }
 
       &__works {
-        padding: 1rem 0;
+
         &--work {
           &--title {
             color: $blue-porple;

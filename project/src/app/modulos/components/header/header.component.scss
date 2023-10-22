@@ -1,26 +1,17 @@
 @import "src/assets/styles/global";
 
 .container {
-  max-width: 1050px;
+  max-width: 65.625rem;
   width: 90%;
   z-index: 10;
-  overflow: hidden;
-}
 
-.navbar {
-  width: 100%;
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
 }
 
 .nav-container {
   height: rem(62px);
-}
-
-.navbar .menu-items {
-
-}
-
-.navbar .nav-container li {
-  list-style: none;
 }
 
 .navbar .nav-container a {

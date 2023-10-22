@@ -10,6 +10,9 @@ export class AppComponent implements OnInit {
   title = 'Luccas Traumer';
 
   ngOnInit(): void {
+    //TODO: Incluir CDN
     const cld = new Cloudinary({cloud: {cloudName: 'dfixlnbhd'}});
+
+    const ima = cld.image('nomeImagem');
   }
 }

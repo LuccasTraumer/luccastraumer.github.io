@@ -1,19 +1,19 @@
-<section class="content">
-  <h2 class="content__title">Articles</h2>
+<section class="content p-32 overflow-hidden w-screen">
+  <h2 class="content__title font-bold py-8 hidden invisible lowercase">Articles</h2>
 
   <ul class="content__list">
-    <li class="content__list__item" *ngFor="let item of listArticle">
+    <li class="content__list__item py-4" *ngFor="let item of listArticle">
       <a (click)="redirectToArticle(item.linkPost)">
         <article class="">
           <time class="content__list__item--date">
             {{ item.date | date:'medium' }}
           </time>
 
-          <h3 class="content__list__item--title">
+          <h3 class="content__list__item--title font-bold">
             {{ item.title }}
           </h3>
 
-          <p class="content__list__item--description">
+          <p class="content__list__item--description font-normal">
             {{ getDescription(item) }}
           </p>
         </article>

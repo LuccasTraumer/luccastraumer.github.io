@@ -1,5 +1,5 @@
 <header class="content items-center p-8 h-full overflow-hidden">
-  <nav class="navbar">
+  <nav class="navbar w-full">
     <div class="container nav-container m-auto
           h-screen overflow-hidden flex justify-between items-center relative"
     >
@@ -14,17 +14,17 @@
       </div>
       <div class="menu-items flex flex-col fixed w-screen h-screen inset-y-0 left-0 overflow-hidden">
         <ul>
-          <li>
+          <li class="list-none">
             <a class="no-underline" (click)="goToWork()">
               my work
             </a>
           </li>
-          <li>
+          <li class="list-none">
             <a (click)="goToShelf()">
               my shelf
             </a>
           </li>
-          <li>
+          <li class="list-none">
             <a (click)="goToResume()">
               my résumé
             </a>

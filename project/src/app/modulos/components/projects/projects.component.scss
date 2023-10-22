@@ -1,8 +1,7 @@
 @import "src/assets/styles/global";
 
 .content {
-  background: #F9F9F9;
-  padding: 2rem;
+  background: $white-one;
 
   @media screen and  (min-width: 1024px) {
     display: flex;
@@ -11,14 +10,12 @@
   }
 
   &__cards {
-
     @media screen and  (min-width: 768px) {
       display: flex;
       align-items: center;
     }
 
     &--card {
-      padding: 5rem;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-width: 0 0 0.10rem 0;
       border-color: rgba(72, 49, 212, 0.3);
@@ -28,7 +25,6 @@
         height: 50%;
         box-sizing: content-box;
       }
-
 
       &--title {
         @media screen and (min-width: 1024px) {

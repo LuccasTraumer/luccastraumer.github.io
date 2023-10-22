@@ -28,4 +28,7 @@ export class WellcomeComponent {
     console.warn(image);
   }
 
+  getURLImage(resolution: '320' | '480' | '800') {
+    return `https://res.cloudinary.com/dfixlnbhd/image/upload/c_scale,w_${resolution}/v1691356003/t_yi87h4.png`
+  }
 }

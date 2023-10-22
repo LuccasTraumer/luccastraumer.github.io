@@ -1,17 +1,17 @@
-<div class="card">
+<div class="card w-full">
   <figure class="card__body">
     <a (click)="redirectToProject()">
       <img
         *inView
         [src]="image"
         alt="company worked"
-        class="card__body__image"
+        class="card__body__image p-8 object-cover box-border"
         loading="lazy"
       >
     </a>
 
     <figcaption class="card__body__caption">
-      <h3 class="card__body__caption--title">
+      <h3 class="card__body__caption--title font-bold">
         {{ title }}
       </h3>
       <a [href]="link" class="card__body__caption--link" target="_blank">

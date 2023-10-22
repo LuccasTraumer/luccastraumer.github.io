@@ -1,16 +1,16 @@
-<section class="content">
-  <h3 class="content__title title blue-porple-text">
+<section class="content p-16 overflow-hidden w-screen">
+  <h3 class="content__title title blue-porple-text font-bold">
     send me a message!
   </h3>
 
-  <p class="content__description description purple-text">
+  <p class="content__description description leading-tight purple-text">
     Got a question or proposal, or just want to say hello? Go ahead.
   </p>
 
   <form [formGroup]="formGroup" (ngSubmit)="clickButton()" action="" method="post" class="content__form">
     <div class="content__form__name">
       <label
-        for="name" class="content__form--description-input"
+        for="name" class="content__form--description-input block"
         (click)="isFocus($event)"
         [ngClass]="isNameInputFocus ? '.is-label-active' : ''"
       >Your name</label>
@@ -19,7 +19,7 @@
         name="name"
         id="name"
         placeholder="{{ isNameInputFocus ? '' : 'Enter your name'}}"
-        class="content__form--input"
+        class="content__form--input w-full"
         [ngClass]="isNameInputFocus ? '.is-input-active' : ''"
         formControlName="name"
       >
@@ -36,7 +36,7 @@
     <div class="content__form__email">
       <label
         for="email"
-        class="content__form--description-input"
+        class="content__form--description-input block"
         (click)="isFocus($event)"
         [ngClass]="isEmailInputFocus ? '.is-label-active' : ''"
       >Email Adress</label>
@@ -45,7 +45,7 @@
         name="email"
         id="email"
         placeholder="{{ isEmailInputFocus ? '' : 'Enter your email adress'}}"
-        class="content__form--input"
+        class="content__form--input w-full"
         [ngClass]="isEmailInputFocus ? '.is-input-active' : ''"
         formControlName="email"
       >
@@ -63,7 +63,7 @@
     <div class="content__form__message">
       <label
         for="message"
-        class="content__form--description-input"
+        class="content__form--description-input block"
         (focusin)="isFocus($event)"
         ngClass="{{isMessageInputFocus ? '.is-label-active' : ''}}"
       >Your message
@@ -74,7 +74,7 @@
         cols="30"
         rows="5"
         placeholder="{{ isMessageInputFocus ? '' : 'Hi, I think we need a developer for our products at Company X. How soon can you hop on to discuss this?'}}"
-        class="content__form--input"
+        class="content__form--input w-full"
         [ngClass]="isMessageInputFocus ? '.is-input-active' : ''"
         name="message"
         formControlName="message"
@@ -90,7 +90,7 @@
       </div>
     </div>
 
-    <div class="content__form--button">
+    <div class="content__form--button w-2/4">
       <app-button
         [disabled]="!formGroup.valid"
         [hasIcon]="true"

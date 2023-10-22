@@ -2,7 +2,6 @@
 
 .card {
   border-radius: 0 0 rem(5px) rem(5px);
-  width: 100%;
   max-width: 50vw;
 
   &__body {
@@ -10,10 +9,7 @@
 
     &__image {
       border-radius: rem(5px) rem(5px) 0 0;
-      box-sizing: border-box;
-      object-fit: cover;
       background: rgba(245, 244, 252, 0.62);
-      padding: 2rem;
     }
 
     &__caption {
@@ -23,7 +19,6 @@
 
       &--title {
         color: black;
-        font-weight: bolder;
         opacity: 60%;
       }
 

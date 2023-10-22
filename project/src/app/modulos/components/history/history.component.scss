@@ -1,5 +1,4 @@
 .content {
-
   &__title {
     padding-bottom: 0.4rem;
     font-size: 2rem;
@@ -14,16 +13,10 @@
   }
 
   &__illustration {
-    padding-top: 2rem;
 
     @media screen and (min-width: 1024px){
       width: 70%;
       margin: 0 auto;
-    }
-
-    svg {
-      //width: 80vw;
-      //margin-right: 1rem;
     }
   }
 

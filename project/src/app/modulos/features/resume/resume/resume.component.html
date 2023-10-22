@@ -1,4 +1,4 @@
-<section class="content pt-32">
+<section class="content pt-32 p-16 overflow-hidden w-screen">
   <article class="content__body box-border p-8">
 
     <aside class="content__aside">
@@ -18,7 +18,7 @@
       </div>
 
       <div class="content__aside__techs">
-        <h3 class="content__aside__techs--title title relative z-0">
+        <h3 class="content__aside__techs--title font-bold title relative z-0">
           core technologies:
         </h3>
         <ul class="content__aside__techs__list">
@@ -31,7 +31,7 @@
       </div>
 
       <div class="content__aside__others-techs">
-        <h3 class="content__aside__others-techs--title title relative z-0">
+        <h3 class="content__aside__others-techs--title title font-bold relative z-0">
           others technologies:
         </h3>
 
@@ -46,7 +46,7 @@
     </aside>
 
     <div class="content__body__welcome">
-      <h2 class="content__body__welcome--title title leading-normal">
+      <h2 class="content__body__welcome--title title leading-normal font-bold">
         {{ personalData.name }} <br>
         {{ personalData.lastName }}
       </h2>
@@ -70,7 +70,7 @@
         {{ personalData.experience }}
       </p>
 
-      <ul class="content__body__exp__works">
+      <ul class="content__body__exp__works py-4">
         <li class="content__body__exp__works--work">
           <h3 class="content__body__exp__works--work--title block font-bold">
             {{ work.title }}

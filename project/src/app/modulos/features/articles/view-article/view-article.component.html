@@ -1,5 +1,5 @@
-<article class="content">
-  <div class="content__time">
+<article class="content p-16 pt-32 h-full overflow-hidden w-screen">
+  <div class="content__time flex items-center gap-16 my-4">
     <time class="content__date--publish">{{ article.date | date:'medium' }}</time>
     <p class="content__date--read">{{article.timeRead}} min read</p>
   </div>
@@ -8,17 +8,17 @@
     {{ article.title }}
   </h2>
 
-  <div class="content__description">
+  <div class="content__description py-4">
     <ng-container *ngFor="let section of article.description">
-      <h3 [innerHTML]="section.titleSection" class="content__description--subtitle" *ngIf="section.titleSection"></h3>
+      <h3 [innerHTML]="section.titleSection" class="content__description--subtitle font-bold py-4" *ngIf="section.titleSection"></h3>
 
-      <p [innerHTML]="section.content" class="content__description--content"></p>
+      <p [innerHTML]="section.content" class="content__description--content "></p>
 
-      <pre class="content__description--code" *ngIf="section.code">
+      <pre class="content__description--code my-4 break-normal" *ngIf="section.code">
         {{section.code}}
       </pre>
 
-      <figure *ngIf="section.image" class="content__description--image">
+      <figure *ngIf="section.image" class="content__description--image flex items-center py-4 justify-center flex-col">
         <img
           *ngIf="section.image"
           [src]="section.image"
@@ -31,10 +31,10 @@
     </ng-container>
   </div>
 
-  <div class="content__tags">
-    <p class="content__tags--title" *ngIf="article.tags">tags:</p>
+  <div class="content__tags flex items-center">
+    <p class="content__tags--title capitalize" *ngIf="article.tags">tags:</p>
     <ng-container *ngFor="let tag of article.tags">
-     <p class="content__tags--item">
+     <p class="content__tags--item lowercase flex">
        {{ tag }}
      </p>
     </ng-container>

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Cloudinary} from '@cloudinary/url-gen'
 
 @Component({
@@ -6,13 +6,6 @@ import {Cloudinary} from '@cloudinary/url-gen'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Luccas Traumer';
-
-  ngOnInit(): void {
-    //TODO: Incluir CDN
-    const cld = new Cloudinary({cloud: {cloudName: 'dfixlnbhd'}});
-
-    const ima = cld.image('nomeImagem');
-  }
 }

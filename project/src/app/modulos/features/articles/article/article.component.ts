@@ -8,7 +8,8 @@ import { DataArticleService } from '../service/data-article.service';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
-  constructor(private articleService: ArticleService, private dataService: DataArticleService) { }
+  constructor(private articleService: ArticleService,
+              private dataService: DataArticleService) { }
 
   ngOnInit(): void {
     this.articleService.getArticles().subscribe({

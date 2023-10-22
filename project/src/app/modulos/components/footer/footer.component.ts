@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Constantes } from '../../../utils/constantes';
 
@@ -7,15 +7,12 @@ import { Constantes } from '../../../utils/constantes';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
   private _email = 'lucassj.dev@gmail.com'
   private _twitter = '@luccastraumer'
 
   constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
 
   goToWork() {
     this.router.navigate([Constantes.PATH_WORKS])

@@ -21,11 +21,25 @@ describe('ProjectsComponent', () => {
 
     fixture = TestBed.createComponent(ProjectsComponent);
     component = fixture.componentInstance;
-    router = TestBed.
+    router = TestBed.inject(Router);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('When method redirectArticle was called then works with success', () => {
+    jest.spyOn(router, 'navigate');
+    component.redirectArticle({});
+
+    expect(router.navigate).toBeCalledTimes(1);
+  });
+
+  it('When method redirectToWork was called then works with success', () => {
+    jest.spyOn(router, 'navigate');
+    component.redirectToWork({});
+
+    expect(router.navigate).toBeCalledTimes(1);
   });
 });

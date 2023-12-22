@@ -1,0 +1,13 @@
+@media screen and (min-width: 768px) {
+  app-header {
+    position: absolute;
+    z-index: 12;
+    top: 10px;
+  }
+}
+
+router-outlet {
+  top: 100px;
+}
+
+/*# sourceMappingURL=app.component.css.map */

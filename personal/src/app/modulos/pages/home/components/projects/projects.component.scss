@@ -1,0 +1,65 @@
+@import "../../../../../../styles.scss";
+
+.content {
+  background: $white-one;
+
+  @media screen and  (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__cards {
+    @media screen and  (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    &--card {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-width: 0 0 0.10rem 0;
+      border-color: rgba(72, 49, 212, 0.3);
+      border-style: solid;
+
+      @media screen and (min-width: 1024px){
+        height: 50%;
+        box-sizing: content-box;
+      }
+
+      &--title {
+        @media screen and (min-width: 1024px) {
+          font-size: 2rem;
+        }
+      }
+
+      &--description {
+        color: $purple;
+
+        @media screen and (min-width: 1024px){
+          width: 60%;
+          font-size: 1rem;
+          line-height: 1.2;
+          letter-spacing: 0;
+        }
+      }
+
+      &--button {
+
+        @media screen and (min-width: 1024px){
+          width: 60%;
+        }
+      }
+
+      &:last-child {
+        border-width: 0;
+        border-style: none;
+      }
+
+      @media screen and (min-width: 768px){
+        border-width: 0 0.10rem 0 0;
+        border-color: rgba(72, 49, 212, 0.3);
+        border-style: solid;
+      }
+    }
+  }
+}

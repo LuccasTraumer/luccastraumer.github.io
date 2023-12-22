@@ -1,0 +1,94 @@
+<section class="content pt-32 p-16 overflow-hidden w-screen">
+  <article class="content__body box-border p-8">
+
+    <aside class="content__aside">
+
+      <div class="content__aside__presentation none invisible">
+        <a href="" class="content__aside__presentation--webpage">
+          {{personalData.personalPage}}
+        </a>
+
+        <p class="content__aside__presentation--location">
+          {{personalData.city}},{{personalData.state}}
+        </p>
+
+        <p class="content__aside__presentation--email">
+          {{personalData.email}}
+        </p>
+      </div>
+
+      <div class="content__aside__techs">
+        <h3 class="content__aside__techs--title font-bold title relative z-0">
+          core technologies:
+        </h3>
+        <ul class="content__aside__techs__list">
+          <li
+            *ngFor="let item of techs"
+            class="content__aside__techs__list--item">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="content__aside__others-techs">
+        <h3 class="content__aside__others-techs--title title font-bold relative z-0">
+          others technologies:
+        </h3>
+
+        <ul class="content__aside__others-techs__list">
+          <li
+            *ngFor="let item of otherTechs"
+            class="content__aside__others-techs__list--item capitalize">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content__body__welcome">
+      <h2 class="content__body__welcome--title title leading-normal font-bold">
+        {{ personalData.name }} <br>
+        {{ personalData.lastName }}
+      </h2>
+
+      <h3 class="content__body__welcome--subtitle">
+        Expert Frontend developer
+      </h3>
+
+      <p class="content__body__welcome--description pb-4">
+        Engineer valued for driving high-performance accessible web experiences.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="content__body__exp">
+      <h4 class="content__body__exp--title title">
+        Experience
+      </h4>
+      <p class="content__body__exp--description">
+        {{ personalData.experience }}
+      </p>
+
+      <ul class="content__body__exp__works py-4">
+        <li class="content__body__exp__works--work">
+          <h3 class="content__body__exp__works--work--title block font-bold">
+            {{ work.title }}
+            <p class="content__body__exp__works--work--title--desc font-normal">
+               - {{ work.level }} {{ work.specialist }}
+            </p>
+          </h3>
+          <div class="content__body__exp__works--work--description flex">
+            <p>
+              {{ work.description }}
+            </p>
+
+            <p>
+              {{ formatDate }} - {{ work.end_date === undefined ? 'present' : work.end_date }}
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>

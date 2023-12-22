@@ -1,0 +1,206 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: #000;
+  background-color: #4831d4;
+  overflow-x: hidden;
+}
+
+.contrast-text {
+  color: #fff;
+}
+
+.green-color {
+  color: #ccf381;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.blue-porple-text {
+  color: #4831d4;
+}
+
+.purple-text {
+  color: #3d155f;
+}
+
+.bg-green {
+  background: #ccf381;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-blue-porple {
+  background: #4831d4;
+}
+
+.content {
+  max-width: 100vw;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    height: 100vh;
+  }
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  font-size: 0.9em;
+  letter-spacing: 0.01em;
+  padding: 1rem 0 2rem 0;
+}
+
+.text-danger {
+  color: red;
+}
+
+.container {
+  max-width: 65.625rem;
+  width: 90%;
+  z-index: 10;
+}
+@media screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.nav-container {
+  height: 3.875rem;
+}
+
+.navbar .nav-container a {
+  color: #4831d4;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  height: 3.75rem;
+}
+
+.nav-container .checkbox {
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 5;
+  opacity: 0;
+}
+
+.nav-container .hamburger-lines {
+  height: 1.625rem;
+  top: 1.0625rem;
+  right: 1.25rem;
+  z-index: 2;
+}
+
+.nav-container .hamburger-lines .line {
+  height: 0.25rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  transition: 1s ease;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  background: #fff;
+  transform: translate(150%);
+  margin-right: -2.5rem;
+  transition: transform 0.5s ease-in-out;
+  text-align: start;
+  padding: 8.5rem 2rem;
+}
+
+.menu-items .contact {
+  padding: 6rem 0;
+  text-align: center;
+}
+.menu-items .contact .title {
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  font-weight: normal;
+  color: #cbc9e2;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-left: 2.5rem;
+}
+
+.logo {
+  z-index: 200;
+  font-size: 1.2rem;
+  transition: 1s ease;
+  letter-spacing: 0.2rem;
+}
+
+.nav-container input[type=checkbox]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+  background: #4831d4;
+}
+
+.nav-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+  background: #4831d4;
+}
+
+.nav-container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+  background: #4831d4;
+}
+
+.nav-container input[type=checkbox]:checked ~ .logo {
+  color: #4831d4;
+}
+
+/*# sourceMappingURL=header.component.css.map */

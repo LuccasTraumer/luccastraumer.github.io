@@ -1,0 +1,151 @@
+@import "../../../../../styles.scss";
+
+.content {
+  background: $white-one;
+
+  &__body, &__aside {
+    background: $white-two;
+
+    @media screen and (min-width: 768px){
+      column-gap: 5rem;
+      display: grid;
+      grid-template-areas:
+      "presentation main"
+      "techs experience"
+      "techs experience"
+      "others experience"
+      "others experience";
+    }
+
+    &__presentation {
+      grid-area: presentation;
+
+      @media screen and (min-width: 768px){
+        display: block;
+        height: auto;
+        visibility: visible;
+
+        &--webpage, &--email {
+          color: $blue-porple;
+          font-weight: bolder;
+          position: relative;
+          z-index: 0;
+
+          &::after {
+            background: $green-text;
+            content: "";
+            height: 0.4em;
+            width: 100%;
+            display: block;
+            margin-top: -0.6rem;
+            margin-left: -4%;
+            position: absolute;
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    &__techs {
+      grid-area: techs;
+    }
+
+    &__others-techs {
+      grid-area: others;
+    }
+
+    &__techs, &__others-techs {
+      padding: 1rem 0;
+      &--title {
+        font-size: 1.2rem;
+        color: $blue-porple;
+
+        &::after {
+          background: $green-text;
+          content: "";
+          height: 0.4em;
+          width: 100%;
+          display: block;
+          margin-top: -0.6rem;
+          margin-left: -4%;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+
+      &__list {
+        list-style: square;
+        padding: 0 1.2rem;
+      }
+    }
+
+    &__welcome {
+      &--title {
+        text-align: start;
+        color: $blue-porple;
+        letter-spacing: 5px;
+        font-size: 2rem;
+        padding: .5rem 0;
+      }
+
+      &--subtitle {
+        padding: 0 0 1rem 0;
+        font-size: 1.2rem;
+      }
+    }
+
+    &__exp {
+      &--title {
+        text-align: start;
+        color: $blue-porple;
+        padding: .5rem 0;
+        font-size: 1.2rem;
+      }
+
+      &__works {
+
+        &--work {
+          &--title {
+            color: $blue-porple;
+
+            @media screen and (min-width: 768px){
+              display: flex;
+              align-items: center;
+            }
+
+            &--desc {
+              color: black;
+
+              &:before {
+                display: none;
+                visibility: hidden;
+
+                @media screen and (min-width: 768px){
+                  display: inherit;
+                  visibility: visible;
+                }
+              }
+            }
+          }
+
+          &--description {
+            padding: 0.5rem 0;
+
+            :first-child {
+              width: 75%;
+            }
+
+            :last-child {
+              text-align: center;
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__aside {
+    display: contents;
+  }
+}

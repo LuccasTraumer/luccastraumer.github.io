@@ -13,7 +13,8 @@
         title="CIANDT"
         contentLink="Company Link"
         [image]="linkImage"
-      ></app-card>
+        (eventEmitter)="goToWork($event)"
+      />
     </li>
   </ul>
 </section>

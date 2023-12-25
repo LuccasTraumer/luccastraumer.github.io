@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {CloudinaryModule} from '@cloudinary/ng';
-import {ViewModule} from "./modulos/pages/home/view.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ComponentsModule} from "./modulos/pages/home/components/components.module";
-import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon, MoveRight} from 'lucide-angular';
+import { LucideAngularModule} from 'lucide-angular';
+import {LoaderComponent} from "./modulos/shared/loader/loader.component";
+import {SkeltonComponent} from "./modulos/shared/skelton/skelton.component";
+import {ArticlesModule} from "./modulos/pages/articles/articles.module";
+import {LoaderService} from "./modulos/shared/loader/service/loader.service";
+import MainComponent from "./modulos/pages/home/main/main.component";
 
 
 @Component({
@@ -15,15 +19,22 @@ import { LucideAngularModule, InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon
     CommonModule,
     RouterOutlet,
     CloudinaryModule,
-    ViewModule,
     ReactiveFormsModule,
+    MainComponent,
     ComponentsModule,
-    // LucideAngularModule.pick({ InstagramIcon, LinkedinIcon, TwitterIcon, MailIcon, PhoneIcon,  MapPinIcon, MoveRight})
-
+    LoaderComponent,
+    SkeltonComponent,
+    ArticlesModule,
+    LucideAngularModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Luccas Traumer';
+  loaderService = inject(LoaderService);
+
+  constructor() {
+    this.loaderService.setStateLoader(true);
+  }
 }

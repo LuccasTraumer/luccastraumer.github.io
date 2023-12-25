@@ -1,29 +1,41 @@
 import { Routes } from '@angular/router';
 import {Constantes} from "./utils/constantes";
-import {ArticleResolver} from "./modulos/pages/articles/service/article.resolver";
+import ViewWorkComponent from "./modulos/pages/work/view-work/view-work.component";
+import ViewArticleComponent from "./modulos/pages/articles/view-article/view-article.component";
 
 export const routes: Routes = [
   {
     path: Constantes.PATH_HOME,
-    loadChildren: () => import('./modulos/pages/home/view.module').then(module => module.ViewModule),
+    loadComponent: () => import('./modulos/pages/home/main/main.component'),
     pathMatch: 'full'
   },
-
   {
     path: Constantes.PATH_WORKS,
-    loadChildren: () => import('./modulos/pages/work/work.module').then(module => module.WorkModule)
+    loadComponent: () => import('./modulos/pages/work/work/work.component'),
+    children: [
+      {
+        path: 'ciandt',
+        component: ViewWorkComponent
+      },
+    ]
   },
+  // {
+  //   path: `${Constantes.PATH_WORKS}/ciandt`,
+  //   loadComponent: () => import('./modulos/pages/work/view-work/view-work.component')
+  // },
   {
     path: Constantes.PATH_ARTICLES,
-    loadChildren: () => import('./modulos/pages/articles/articles.module').then(module => module.ArticlesModule),
-    resolve: {
-      dataArticle: ArticleResolver
-    }
-
+    loadComponent: () => import('./modulos/pages/articles/presentation-article/presentation-article.component'),
+    children: [
+      {
+        path: ':id',
+        component: ViewArticleComponent,
+      },
+    ]
   },
   {
     path: Constantes.PATH_RESUME,
-    loadChildren: () => import('./modulos/pages/resume/resume.module').then(module => module.ResumeModule)
+    loadComponent: () => import('./modulos/pages/resume/resume/resume.component')
   },
   {
     path: '**',

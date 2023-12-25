@@ -1,6 +1,5 @@
 <section class="content pt-32 p-16 overflow-hidden w-screen">
   <article class="content__body box-border p-8">
-
     <aside class="content__aside">
 
       <div class="content__aside__presentation none invisible">
@@ -22,11 +21,14 @@
           core technologies:
         </h3>
         <ul class="content__aside__techs__list">
-          <li
-            *ngFor="let item of techs"
-            class="content__aside__techs__list--item">
-            {{ item }}
+          @for(item of techs; track item) {
+          <li class="content__aside__techs__list--item"
+          >
+          {{item}}
           </li>
+          } @empty {
+          Empty list of users
+          }
         </ul>
       </div>
 
@@ -36,11 +38,13 @@
         </h3>
 
         <ul class="content__aside__others-techs__list">
-          <li
-            *ngFor="let item of otherTechs"
-            class="content__aside__others-techs__list--item capitalize">
-            {{ item }}
+          @for(item of otherTechs; track item) {
+          <li class="content__aside__others-techs__list--item capitalize">
+          {{item}}
           </li>
+          } @empty {
+          Empty List of Others Techs
+          }
         </ul>
       </div>
     </aside>
@@ -75,7 +79,7 @@
           <h3 class="content__body__exp__works--work--title block font-bold">
             {{ work.title }}
             <p class="content__body__exp__works--work--title--desc font-normal">
-               - {{ work.level }} {{ work.specialist }}
+              - {{ work.level }} {{ work.specialist }}
             </p>
           </h3>
           <div class="content__body__exp__works--work--description flex">

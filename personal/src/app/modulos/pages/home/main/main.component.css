@@ -22,6 +22,15 @@ body {
   overflow-x: hidden;
 }
 
+body .loading {
+  display: flex;
+  width: inherit;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
 .contrast-text {
   color: #fff;
 }
@@ -103,6 +112,9 @@ body {
     width: 0.6rem;
     height: 0.6rem;
     transform: rotate(-130deg);
+  }
+  .sections a.change-background {
+    background: #ccf381;
   }
 }
 

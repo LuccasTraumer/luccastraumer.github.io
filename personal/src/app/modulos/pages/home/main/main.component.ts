@@ -1,16 +1,26 @@
 import {AfterViewChecked, Component, ElementRef, inject, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { HomeService } from './service/home.service';
-import { WelcomeSection } from './model/welcome-section';
-import { RoleSection } from './model/role-section';
-import { HistorySection } from './model/history-section';
 import {catchError, map, of, retry, shareReplay, Subject, take, takeUntil} from "rxjs";
+import {HomeData} from "./model/home-data";
+import {LoaderService} from "../../../shared/loader/service/loader.service";
+import {SharedModule} from "../../../shared/shared.module";
+import {ComponentsModule} from "../components/components.module";
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
+  standalone: true,
+  imports: [
+    CommonModule,
+    SharedModule,
+    ComponentsModule,
+    HttpClientModule
+  ],
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit, AfterViewChecked, OnDestroy {
+export default class MainComponent implements OnInit, OnDestroy {
   private end!: Subject<any>;
   homeData: HomeData = {} as HomeData;
 
@@ -20,10 +30,11 @@ export class MainComponent implements OnInit, AfterViewChecked, OnDestroy {
   private homeService = inject(HomeService);
   private renderer2 = inject(Renderer2);
   private elementRef = inject(ElementRef);
+  private loaderService = inject(LoaderService);
 
   ngOnDestroy(): void {
-      this.end.next(`end`);
-      this.end.complete();
+      // this.end.next(`end`);
+      // this.end.complete();
     }
 
   ngOnInit(): void {
@@ -38,9 +49,12 @@ export class MainComponent implements OnInit, AfterViewChecked, OnDestroy {
       // .pipe(takeUntil(this.end))
       .subscribe({
       next: value => {
+        this.loaderService.setStateLoader(true);
         this.homeData = value as HomeData;
+        this.homeService.setHomeSection(this.homeData);
       },
-      error: err => console.error(err)
+      error: err => console.error(err),
+      complete: () => this.loaderService.setStateLoader(false)
     })
   }
 
@@ -50,13 +64,13 @@ export class MainComponent implements OnInit, AfterViewChecked, OnDestroy {
     window.location.href = "#history";
   }
 
-  ngAfterViewChecked(): void {
-    console.warn(this.historySection);
-  }
+  // ngAfterViewChecked(): void {
+  //   console.warn(this.historySection);
+  // }
+
+  // isChangeBackground() {
+  //   return [1746, 1574, 1468, 1227, 1525, 1525].find(item => item === this.historySection.nativeElement.offsetTop);
+  // }
 }
 
-interface HomeData {
-  welcomeSection: WelcomeSection;
-  roleSection: RoleSection[];
-  historySection: HistorySection
-}
+

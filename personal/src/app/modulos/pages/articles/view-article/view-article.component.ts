@@ -1,18 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import { Router} from '@angular/router';
-import { DataArticleService } from '../service/data-article.service';
 import { ArticlePost } from '../../../shared/models/article-post';
+import {ArticleService} from "../service/article.service";
+import {CommonModule} from "@angular/common";
+import {ArticleRoutingModule} from "../article-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-home-article',
   templateUrl: './view-article.component.html',
-  styleUrls: ['./view-article.component.scss']
+  styleUrls: ['./view-article.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    ArticleRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+    ArticleService
+  ]
 })
-export class ViewArticleComponent implements OnInit {
+export default class ViewArticleComponent implements OnInit {
+  private route: Router = inject(Router)
+
+  private articleService = inject(ArticleService);
   article!: ArticlePost;
-  constructor(private route: Router, private dataService: DataArticleService) { }
 
   ngOnInit(): void {
-    this.article = this.dataService.getDataValue().find((item: ArticlePost) => this.route.url.includes(item.linkPost))
+    if (!this.article) {
+      this.articleService.getArticleByName(parseInt(this.route.url.split('/')[2])).subscribe({
+        next: value => {
+          this.article = value;
+        }
+      })
+    }
   }
 }

@@ -1,12 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ResumeServiceService } from './service/resume-service.service';
+import { ResumeServiceService } from '../../new-resume/service/resume-service.service';
+import {CommonModule} from "@angular/common";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss']
+  standalone: true,
+  imports: [
+    CommonModule,
+    HttpClientModule
+  ],
+  styleUrls: ['./resume.component.scss'],
+  providers: [ResumeServiceService]
 })
-export class ResumeComponent implements OnInit {
+export default class ResumeComponent implements OnInit {
   otherTechs!: string[];
   work!: any;
   techs!: string[];

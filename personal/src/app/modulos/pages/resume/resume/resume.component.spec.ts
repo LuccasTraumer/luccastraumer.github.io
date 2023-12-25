@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResumeComponent } from './resume.component';
-import {ResumeServiceService} from "./service/resume-service.service";
+import {ResumeServiceService} from "../../new-resume/service/resume-service.service";
 import {of} from "rxjs";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 

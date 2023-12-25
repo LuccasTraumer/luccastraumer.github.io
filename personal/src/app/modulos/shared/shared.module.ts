@@ -2,13 +2,11 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { LucideAngularModule } from 'lucide-angular';
-import { CardComponent } from './card/card.component';
 import { CarousselComponent } from './caroussel/caroussel.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
-    CardComponent,
     CarousselComponent
   ],
   imports: [
@@ -17,7 +15,6 @@ import { CarousselComponent } from './caroussel/caroussel.component';
   ],
     exports: [
       ButtonComponent,
-      CardComponent,
       CarousselComponent
     ],
   schemas: [

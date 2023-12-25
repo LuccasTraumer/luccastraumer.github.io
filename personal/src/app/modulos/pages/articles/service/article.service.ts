@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Constantes } from '../../../../utils/constantes';
 import {Observable} from "rxjs";
@@ -9,10 +9,13 @@ import {ArticlePost} from "../../../shared/models/article-post";
 })
 export class ArticleService {
   private readonly CONSTANTES = Constantes;
-  constructor(private http: HttpClient) { }
+  private http: HttpClient = inject(HttpClient);
 
   getArticles(): Observable<ArticlePost[]> {
-    // @ts-ignore
-    return this.http.get(`${this.CONSTANTES.ROOT_PATH}/article`)
+    return this.http.get<ArticlePost[]>(`${this.CONSTANTES.ROOT_PATH}/article/all`)
+  }
+
+  getArticleByName(id: number): Observable<ArticlePost> {
+    return this.http.get<ArticlePost>(`${this.CONSTANTES.ROOT_PATH}/article/${id}`);
   }
 }

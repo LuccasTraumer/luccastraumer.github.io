@@ -1,28 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DataArticleService } from '../service/data-article.service';
 import { ArticlePost } from '../../../shared/models/article-post';
 import { ArticleService } from '../service/article.service';
+import {CommonModule} from "@angular/common";
+import {ArticleRoutingModule} from "../article-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-presentation-article',
   templateUrl: './presentation-article.component.html',
-  styleUrls: ['./presentation-article.component.scss']
+  styleUrls: ['./presentation-article.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    ArticleRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+    ArticleService
+  ]
 })
-export class PresentationArticleComponent implements OnInit {
+export default class PresentationArticleComponent implements OnInit {
   listArticle!: ArticlePost[];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private dataService: DataArticleService,
     private articleService: ArticleService
   ) {}
 
   ngOnInit(): void {
     this.articleService.getArticles().subscribe({
       next: value => {
-        this.dataService.setValueData(value);
         this.listArticle = value as ArticlePost[];
       },
       error: err => console.error(err)
@@ -37,7 +46,7 @@ export class PresentationArticleComponent implements OnInit {
     return article.description;
   }
 
-  redirectToArticle(linkPost: string) {
-    this.router.navigate([linkPost], { relativeTo: this.route });
+  redirectToArticle(id: number) {
+    this.router.navigate([id], { relativeTo: this.route });
   }
 }

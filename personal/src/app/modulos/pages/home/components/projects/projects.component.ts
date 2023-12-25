@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { Router } from '@angular/router';
 import { Constantes } from '../../../../../utils/constantes';
 
@@ -8,8 +8,7 @@ import { Constantes } from '../../../../../utils/constantes';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-
-  constructor(private router: Router) { }
+  private router: Router = inject(Router);
 
   redirectArticle(event: any) {
     this.router.navigate([Constantes.PATH_ARTICLES])

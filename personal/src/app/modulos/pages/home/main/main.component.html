@@ -1,18 +1,18 @@
 <main class="grid">
-  @defer (on viewport; when homeData.welcomeSection !== undefined) {
-  <app-wellcome id="welcome" [welcomeData]="homeData.welcomeSection"></app-wellcome>
+  @defer (on viewport) {
+  <app-wellcome id="welcome"></app-wellcome>
   }@placeholder {
   <p>Lucas</p>
   }
 
-  @defer (on viewport; when homeData.roleSection !== undefined) {
-    <app-functions id="functions" [roleSection]="homeData.roleSection"/>
+  @defer (on viewport) {
+    <app-functions id="functions"/>
   }@placeholder {
   <p>Lucas</p>
   }
 
-  @defer (on viewport; when homeData.historySection) {
-    <app-history #history id="history" [historySection]="homeData.historySection"></app-history>
+  @defer (on viewport) {
+    <app-history #history id="history"></app-history>
   } @placeholder {
   <p>Lucas</p>
   }
@@ -30,10 +30,10 @@
   }
 
   <aside class="sections">
-    <a href="#welcome" ></a>
-    <a href="#functions" ></a>
-    <a href="#history" (click)="click($event)"></a>
-    <a href="#project" ></a>
-    <a href="#contact"  ></a>
+    <a href="/home#welcome"></a>
+    <a href="/home#functions"></a>
+    <a href="/home#history"></a>
+    <a href="/home#project"></a>
+    <a href="/home#contact" ></a>
   </aside>
 </main>

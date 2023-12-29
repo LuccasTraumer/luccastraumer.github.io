@@ -7,7 +7,6 @@ import {ComponentsModule} from "./modulos/pages/home/components/components.modul
 import { LucideAngularModule} from 'lucide-angular';
 import {LoaderComponent} from "./modulos/shared/loader/loader.component";
 import {SkeltonComponent} from "./modulos/shared/skelton/skelton.component";
-import {ArticlesModule} from "./modulos/pages/articles/articles.module";
 import {LoaderService} from "./modulos/shared/loader/service/loader.service";
 import MainComponent from "./modulos/pages/home/main/main.component";
 
@@ -24,7 +23,6 @@ import MainComponent from "./modulos/pages/home/main/main.component";
     ComponentsModule,
     LoaderComponent,
     SkeltonComponent,
-    ArticlesModule,
     LucideAngularModule
   ],
   templateUrl: './app.component.html',

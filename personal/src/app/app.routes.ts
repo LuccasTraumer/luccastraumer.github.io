@@ -11,27 +11,11 @@ export const routes: Routes = [
   },
   {
     path: Constantes.PATH_WORKS,
-    loadComponent: () => import('./modulos/pages/work/work/work.component'),
-    children: [
-      {
-        path: 'ciandt',
-        component: ViewWorkComponent
-      },
-    ]
+    loadChildren: () => import('./modulos/pages/work/work-routing'),
   },
-  // {
-  //   path: `${Constantes.PATH_WORKS}/ciandt`,
-  //   loadComponent: () => import('./modulos/pages/work/view-work/view-work.component')
-  // },
   {
     path: Constantes.PATH_ARTICLES,
-    loadComponent: () => import('./modulos/pages/articles/presentation-article/presentation-article.component'),
-    children: [
-      {
-        path: ':id',
-        component: ViewArticleComponent,
-      },
-    ]
+    loadChildren: () => import('./modulos/pages/articles/article-routing.module'),
   },
   {
     path: Constantes.PATH_RESUME,

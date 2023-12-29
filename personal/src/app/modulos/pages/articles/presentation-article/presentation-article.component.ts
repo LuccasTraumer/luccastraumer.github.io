@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlePost } from '../../../shared/models/article-post';
 import { ArticleService } from '../service/article.service';
 import {CommonModule} from "@angular/common";
-import {ArticleRoutingModule} from "../article-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 
 @Component({
@@ -13,7 +12,6 @@ import {HttpClientModule} from "@angular/common/http";
   standalone: true,
   imports: [
     CommonModule,
-    ArticleRoutingModule,
     HttpClientModule
   ],
   providers: [
@@ -23,11 +21,9 @@ import {HttpClientModule} from "@angular/common/http";
 export default class PresentationArticleComponent implements OnInit {
   listArticle!: ArticlePost[];
 
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private articleService: ArticleService
-  ) {}
+  private router: Router = inject(Router);
+  private route: ActivatedRoute = inject(ActivatedRoute);
+  private articleService: ArticleService = inject(ArticleService);
 
   ngOnInit(): void {
     this.articleService.getArticles().subscribe({
@@ -47,6 +43,7 @@ export default class PresentationArticleComponent implements OnInit {
   }
 
   redirectToArticle(id: number) {
-    this.router.navigate([id], { relativeTo: this.route });
+    console.warn(`Aquiii`)
+    this.router.navigate([`articles/${id}`]);
   }
 }

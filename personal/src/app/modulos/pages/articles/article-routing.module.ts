@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import PresentationArticleComponent from "./presentation-article/presentation-article.component";
+import ViewArticleComponent from "./view-article/view-article.component";
 
-
-const routes: Routes = [
-
+export default [
+  {
+    path: ``,
+    component: PresentationArticleComponent
+  },
+  {
+    path: ':id',
+    component: ViewArticleComponent,
+  }
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ArticleRoutingModule {}
 

@@ -1,11 +1,19 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
+import {CommonModule} from "@angular/common";
+import {LucideAngularModule} from "lucide-angular";
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    LucideAngularModule
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent {
+export default class ButtonComponent {
 
   @Input()
   content: string = 'button';
@@ -27,5 +35,4 @@ export class ButtonComponent {
   clickButton() {
     this.clickEventEmitter.emit(this.content);
   }
-
 }

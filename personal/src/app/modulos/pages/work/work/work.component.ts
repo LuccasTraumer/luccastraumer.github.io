@@ -6,7 +6,6 @@ import {HttpClientModule} from "@angular/common/http";
 import CardComponent from "../../../shared/card/card.component";
 import {Router} from "@angular/router";
 
-
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
@@ -26,7 +25,6 @@ export default class WorkComponent {
   constructor() { }
 
   goToWork(event: string) {
-    console.warn(`Cheguei`)
     this.router.navigateByUrl(`/works/${event}`)
   }
 }

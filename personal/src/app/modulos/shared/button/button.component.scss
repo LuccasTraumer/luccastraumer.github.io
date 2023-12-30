@@ -1,0 +1,35 @@
+@import "../../../../styles.scss";
+
+.content {
+  border: 0.1em solid $blue-porple;
+  padding: 0.3rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $blue-porple;
+  z-index: 1;
+  transition: 1s ease;
+  height: auto;
+
+  &:hover {
+    color: white;
+    background: $blue-porple;
+
+    &:before {
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      left: 0;
+      transition: 1s ease;
+    }
+
+    &:after {
+      right: 0;
+      z-index: -1;
+      position: absolute;
+      content: '';
+    }
+  }
+}
+

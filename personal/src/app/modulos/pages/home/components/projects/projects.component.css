@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: #000;
+  background-color: #4831d4;
+  overflow-x: hidden;
+}
+
+body .loading {
+  display: flex;
+  width: inherit;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.contrast-text {
+  color: #fff;
+}
+
+.green-color {
+  color: #ccf381;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.blue-porple-text {
+  color: #4831d4;
+}
+
+.purple-text {
+  color: #3d155f;
+}
+
+.bg-green {
+  background: #ccf381;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-blue-porple {
+  background: #4831d4;
+}
+
+.content {
+  max-width: 100vw;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    height: 100vh;
+  }
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  font-size: 0.9em;
+  letter-spacing: 0.01em;
+  padding: 1rem 0 2rem 0;
+}
+
+.text-danger {
+  color: red;
+}
+
+.content {
+  background: #F9F9F9;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__cards {
+    display: flex;
+    align-items: center;
+  }
+}
+.content__cards--card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-width: 0 0 0.1rem 0;
+  border-color: rgba(72, 49, 212, 0.3);
+  border-style: solid;
+}
+@media screen and (min-width: 1024px) {
+  .content__cards--card {
+    height: 50%;
+    box-sizing: content-box;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__cards--card--title {
+    font-size: 2rem;
+  }
+}
+.content__cards--card--description {
+  color: #3d155f;
+}
+@media screen and (min-width: 1024px) {
+  .content__cards--card--description {
+    width: 60%;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__cards--card--button {
+    width: 60%;
+  }
+}
+.content__cards--card:last-child {
+  border-width: 0;
+  border-style: none;
+}
+@media screen and (min-width: 768px) {
+  .content__cards--card {
+    border-width: 0 0.1rem 0 0;
+    border-color: rgba(72, 49, 212, 0.3);
+    border-style: solid;
+  }
+}
+
+/*# sourceMappingURL=projects.component.css.map */

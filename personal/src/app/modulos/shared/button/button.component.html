@@ -1,0 +1,8 @@
+<button class="content left flex items-center justify-around w-full overflow-hidden relative" (click)="clickButton()">
+  <p class="content__text">
+    {{ content }}
+  </p>
+  <ng-container *ngIf="hasIcon && classIcon">
+    <lucide-icon [name]="classIcon"></lucide-icon>
+  </ng-container>
+</button>

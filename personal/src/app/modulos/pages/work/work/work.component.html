@@ -1,0 +1,24 @@
+<section class="content h-full pt-40 p-16 overflow-hidden w-screen">
+  <h2 class="content__title title hidden invisible font-bold">
+    work
+  </h2>
+
+  <p class="content__description py-4">
+    selected work I've taken on in the past.
+  </p>
+
+  <ul class="content__list grid">
+    <li class="content__list__item">
+      @defer(on timer(2000)) {
+      <app-card
+        title="CIANDT"
+        contentLink="Company Link"
+        [image]="linkImage"
+        (eventEmitter)="goToWork($event)"
+      />
+      } @placeholder {
+        <app-skelton [typeSkeleton]="'card'"/>
+      }
+    </li>
+  </ul>
+</section>

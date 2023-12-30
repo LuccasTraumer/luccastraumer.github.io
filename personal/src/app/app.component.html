@@ -1,0 +1,14 @@
+<app-header/>
+<main class="view">
+  <router-outlet class="absolute"></router-outlet>
+<!--  @if(loaderService.isLoaderOn()) {-->
+<!--    <app-loader class="loader"/>-->
+<!--  }-->
+
+<!--  <app-skelton/>-->
+</main>
+@defer (on viewport) {
+<app-footer/>
+} @placeholder {
+<p>Teste</p>
+}

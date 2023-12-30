@@ -1,0 +1,37 @@
+<footer class="content p-16 overflow-hidden w-screen">
+
+  <h3 class="py-2 text-inherit bg-inherit font-semibold content__title title">
+    say hello
+  </h3>
+
+  <div class="content__social">
+    <p class="content__social--email green-color bg-inherit">
+      {{ email }}
+    </p>
+    <p class="content__social--twitter green-color bg-inherit">
+      {{ twitter }}
+    </p>
+  </div>
+  <div class="content__sections">
+    <p class="text-inherit bg-inherit content__sections--text">
+      <a href="text-inherit bg-inherit" (click)="goToWork()">
+        my work
+      </a>
+    </p>
+    <p class="text-inherit bg-inherit content__sections--text">
+      <a class="text-inherit bg-inherit" (click)="goToShelf()">
+        my shelf
+      </a>
+    </p>
+    <p class="text-inherit bg-inherit content__sections--text">
+      <a class="text-inherit bg-inherit" (click)="goToResume()">
+        me résumé
+      </a>
+    </p>
+  </div>
+
+
+  <p class="content__copy">
+    &copy; Lucas Jesus {{ getYear() }}
+  </p>
+</footer>

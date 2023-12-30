@@ -1,0 +1,19 @@
+<main class="grid">
+  @defer (on timer(1500)) {
+    <app-wellcome id="welcome"/>
+    <app-functions id="functions"/>
+    <app-history #history id="history"/>
+    <app-projects id="project"/>
+    <app-contact id="contact"/>
+  }@placeholder {
+    <app-skelton [typeSkeleton]="'home'"/>
+  }
+
+  <aside class="sections">
+    <a href="/home#welcome"></a>
+    <a href="/home#functions"></a>
+    <a href="/home#history"></a>
+    <a href="/home#project"></a>
+    <a href="/home#contact" ></a>
+  </aside>
+</main>

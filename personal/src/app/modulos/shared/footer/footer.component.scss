@@ -2,8 +2,8 @@
 
 .content {
   background: $purple;
-
-
+  max-height: 20vh;
+  box-sizing: content-box;
 
   @media screen and (min-width: 1024px){
     display: grid;
@@ -13,7 +13,7 @@
       "copy copy";
     grid-template-rows: 2rem 1fr 8rem;
     grid-template-columns: 0.5fr 0.5fr;
-    padding: 30rem 2rem;
+    padding: 5rem 2rem;
 
     &__title {
       grid-area: title;

@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "deploy": "npm run build --prod && gh-pages -d dist/project"
+    "deploy": "npm run build && ng deploy --base-href=/luccastraumer.github.io/"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "@cloudinary/ng": "^2.0.0",
     "@cloudinary/url-gen": "^1.14.0",
     "@nrwl/angular": "^17.2.7",
+    "angular-cli-ghpages": "^1.0.7",
     "lucide-angular": "^0.299.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

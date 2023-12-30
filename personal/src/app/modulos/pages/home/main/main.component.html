@@ -1,32 +1,12 @@
 <main class="grid">
-  @defer (on viewport) {
-  <app-wellcome id="welcome"></app-wellcome>
-  }@placeholder {
-  <p>Lucas</p>
-  }
-
-  @defer (on viewport) {
+  @defer (on timer(1500)) {
+    <app-wellcome id="welcome"/>
     <app-functions id="functions"/>
+    <app-history #history id="history"/>
+    <app-projects id="project"/>
+    <app-contact id="contact"/>
   }@placeholder {
-  <p>Lucas</p>
-  }
-
-  @defer (on viewport) {
-    <app-history #history id="history"></app-history>
-  } @placeholder {
-  <p>Lucas</p>
-  }
-
-  @defer (on viewport) {
-    <app-projects id="project"></app-projects>
-  } @placeholder {
-  <p>Lucas</p>
-  }
-
-  @defer (on viewport) {
-    <app-contact id="contact"></app-contact>
-  } @placeholder {
-  <p>Lucas</p>
+    <app-skelton [typeSkeleton]="'home'"/>
   }
 
   <aside class="sections">

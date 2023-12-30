@@ -1,48 +1,134 @@
 @import "../../../../styles.scss";
 
-.demo:empty {
+.fpo {
+  position: relative;
+  margin: 25% auto;
+  display: flex;
 
-  margin: auto;
-  width: 500px;
-  height: 600px; /* change height to see repeat-y behavior */
+  justify-content: center;
 
-  background-image:
-    radial-gradient( circle 50px at 50px 50px, $white-one 99%, transparent 0 ),
-    linear-gradient( 100deg, rgba(71, 71, 71, 1), rgba(71, 71, 71, 0.5) 50%, rgba(71, 71, 71, 0) 80% ),
-    linear-gradient( $white-one 20px, transparent 0 ),
-    linear-gradient( $white-one 20px, transparent 0 ),
-    linear-gradient( $white-one 20px, transparent 0 ),
-    linear-gradient( $white-one 20px, transparent 0 );
+  @media screen and (min-width: 768px){
+    margin: auto;
+  }
+}
+.pulsate{
+  background: linear-gradient(-45deg, $green-text, $white-text, $green-text, $white-text);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 2.25s ease infinite;
+  -moz-animation: Gradient 2.25s ease infinite;
+  animation: Gradient 2.25s ease infinite;
+  grid-area: header;
+}
+.block {
+  display:block;
+  width:271px;
+  height:16px;
+  color: black;
+}
+.block2 {
+  width:78px;
+  height:8px;
+  margin-bottom:8px;
+}
+.block3 {
+  width:131px;
+  height:8px;
+  margin-bottom:16px;
+}
+.circle {
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  float:right;
 
-  background-repeat: repeat-y;
+}
+.card {
+  box-sizing: border-box;
+  width: 335px;
+  background: none;
+  margin:auto;
+  top:25%;
 
-  background-size:
-    6.25rem 12.5rem,
-    3.125rem 12.5rem,
-    9.375rem 12.5rem,
-    21.875rem 12.5rem,
-    18.75rem 12.5rem,
-    15.625rem 12.5rem;
 
-  background-position:
-    0 0, /* circle */
-    0 0, /* highlight */
-    7.5rem 0,
-    7.5rem 2.5rem,
-    7.5rem 5rem,
-    7.5rem 7.5rem;
+  @media screen and (min-width: 1024px){
+    margin: 2rem auto;
+  }
+}
+.card-image {
+  box-sizing: border-box;
+  display:block;
+  width: 50%;
+  height: 50%;
+  background:#FAFAFA;
+  padding:16px;
+  grid-area: image;
 
-  animation: shine 1s infinite;
+  @media screen and (min-width: 768px){
+    width: 50%;
+    height: auto;
+  }
+}
+.card-content {
+  clear:both;
+  box-sizing: border-box;
+  padding:16px;
+  background: none;
+  grid-area: subtitle;
 }
 
-@keyframes shine {
-  to {
-    background-position:
-      0 0,
-      100% 0, /* move highlight to right */
-      7.5rem 0,
-      7.5rem 2.5rem,
-      7.5rem 5rem,
-      7.5rem 7.5rem;
+.container:first-child {
+  grid-area: description;
+}
+
+.container:last-child {
+  grid-area: description2;
+}
+
+.home-container .card {
+  padding: 1rem 0;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "subtitle subtitle"
+      "description image"
+      "description2 image";
+  }
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
   }
 }

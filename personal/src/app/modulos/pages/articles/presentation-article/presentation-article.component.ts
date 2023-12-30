@@ -4,6 +4,7 @@ import { ArticlePost } from '../../../shared/models/article-post';
 import { ArticleService } from '../service/article.service';
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
+import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
 
 @Component({
   selector: 'app-presentation-article',
@@ -12,7 +13,8 @@ import {HttpClientModule} from "@angular/common/http";
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    SkeltonComponent
   ],
   providers: [
     ArticleService
@@ -43,7 +45,6 @@ export default class PresentationArticleComponent implements OnInit {
   }
 
   redirectToArticle(id: number) {
-    console.warn(`Aquiii`)
     this.router.navigate([`articles/${id}`]);
   }
 }

@@ -7,6 +7,7 @@ import {SharedModule} from "../../../shared/shared.module";
 import {ComponentsModule} from "../components/components.module";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
+import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
 
 @Component({
   selector: 'app-main',
@@ -16,7 +17,8 @@ import {CommonModule} from "@angular/common";
     CommonModule,
     SharedModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    SkeltonComponent
   ],
   styleUrls: ['./main.component.scss']
 })

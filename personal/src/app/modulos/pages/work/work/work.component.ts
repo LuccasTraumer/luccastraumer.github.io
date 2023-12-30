@@ -5,6 +5,7 @@ import {ComponentsModule} from "../../home/components/components.module";
 import {HttpClientModule} from "@angular/common/http";
 import CardComponent from "../../../shared/card/card.component";
 import {Router} from "@angular/router";
+import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
 
 @Component({
   selector: 'app-work',
@@ -15,7 +16,8 @@ import {Router} from "@angular/router";
     SharedModule,
     ComponentsModule,
     HttpClientModule,
-    CardComponent
+    CardComponent,
+    SkeltonComponent
   ],
   styleUrls: ['./work.component.scss']
 })

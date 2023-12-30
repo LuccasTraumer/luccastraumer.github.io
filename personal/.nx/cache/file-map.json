@@ -126,7 +126,7 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "9847970490013062726",
+          "hash": "14997233117554387171",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -148,25 +148,14 @@
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "14497813150368872809",
+          "hash": "7198613990956984799",
           "deps": [
             "npm:@angular/router"
           ]
         },
         {
           "file": "src/app/modulos/pages/articles/article-routing.module.ts",
-          "hash": "15935490873517988068",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "src/app/modulos/pages/articles/articles.module.ts",
-          "hash": "4758343503199380779",
-          "deps": [
-            "npm:@angular/core"
-          ]
+          "hash": "14065460055222560412"
         },
         {
           "file": "src/app/modulos/pages/articles/presentation-article/presentation-article.component.css",
@@ -178,7 +167,7 @@
         },
         {
           "file": "src/app/modulos/pages/articles/presentation-article/presentation-article.component.html",
-          "hash": "14847694234659313739"
+          "hash": "11729562827078385347"
         },
         {
           "file": "src/app/modulos/pages/articles/presentation-article/presentation-article.component.scss",
@@ -195,7 +184,7 @@
         },
         {
           "file": "src/app/modulos/pages/articles/presentation-article/presentation-article.component.ts",
-          "hash": "7762122713289511166",
+          "hash": "2555739671852562453",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -244,7 +233,7 @@
         },
         {
           "file": "src/app/modulos/pages/articles/view-article/view-article.component.ts",
-          "hash": "5092711772439923534",
+          "hash": "4473435995063095206",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -403,7 +392,7 @@
         },
         {
           "file": "src/app/modulos/pages/home/main/main.component.html",
-          "hash": "2895445237934822412"
+          "hash": "6017300267558761239"
         },
         {
           "file": "src/app/modulos/pages/home/main/main.component.scss",
@@ -418,7 +407,7 @@
         },
         {
           "file": "src/app/modulos/pages/home/main/main.component.ts",
-          "hash": "3135808260626733300",
+          "hash": "9506253685709184424",
           "deps": [
             "npm:@angular/core",
             "npm:rxjs",
@@ -580,26 +569,17 @@
         },
         {
           "file": "src/app/modulos/pages/work/view-work/view-work.component.ts",
-          "hash": "14064544165103203737",
+          "hash": "12095502192488285885",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
           ]
         },
         {
-          "file": "src/app/modulos/pages/work/work-routing.module.ts",
-          "hash": "4395483618040698585",
+          "file": "src/app/modulos/pages/work/work-routing.ts",
+          "hash": "13629655295673443395",
           "deps": [
-            "npm:@angular/core",
             "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "src/app/modulos/pages/work/work.module.ts",
-          "hash": "8067763490208850188",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
           ]
         },
         {
@@ -612,7 +592,7 @@
         },
         {
           "file": "src/app/modulos/pages/work/work/work.component.html",
-          "hash": "750478321958701375"
+          "hash": "13379027717383167790"
         },
         {
           "file": "src/app/modulos/pages/work/work/work.component.scss",
@@ -627,7 +607,7 @@
         },
         {
           "file": "src/app/modulos/pages/work/work/work.component.ts",
-          "hash": "12494705259029236118",
+          "hash": "7585671730059824994",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -659,7 +639,7 @@
         },
         {
           "file": "src/app/modulos/shared/button/button.component.ts",
-          "hash": "4692815962100984903",
+          "hash": "18371116259630264218",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -864,19 +844,19 @@
         },
         {
           "file": "src/app/modulos/shared/skelton/skelton.component.css",
-          "hash": "7354649648040831187"
+          "hash": "11186854188264610504"
         },
         {
           "file": "src/app/modulos/shared/skelton/skelton.component.css.map",
-          "hash": "6846717405789642392"
+          "hash": "8317804554700717180"
         },
         {
           "file": "src/app/modulos/shared/skelton/skelton.component.html",
-          "hash": "2266491021469563402"
+          "hash": "7109254803689199020"
         },
         {
           "file": "src/app/modulos/shared/skelton/skelton.component.scss",
-          "hash": "10644030797673149517"
+          "hash": "11454789533496291647"
         },
         {
           "file": "src/app/modulos/shared/skelton/skelton.component.spec.ts",
@@ -887,7 +867,7 @@
         },
         {
           "file": "src/app/modulos/shared/skelton/skelton.component.ts",
-          "hash": "13233388485777832735",
+          "hash": "2351618035621737547",
           "deps": [
             "npm:@angular/core"
           ]

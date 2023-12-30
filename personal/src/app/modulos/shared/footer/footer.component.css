@@ -90,6 +90,8 @@ body .loading {
 
 .content {
   background: #3d155f;
+  max-height: 20vh;
+  box-sizing: content-box;
 }
 @media screen and (min-width: 1024px) {
   .content {
@@ -97,7 +99,7 @@ body .loading {
     grid-template-areas: "title title" "social sections" "copy copy";
     grid-template-rows: 2rem 1fr 8rem;
     grid-template-columns: 0.5fr 0.5fr;
-    padding: 30rem 2rem;
+    padding: 5rem 2rem;
   }
   .content__title {
     grid-area: title;

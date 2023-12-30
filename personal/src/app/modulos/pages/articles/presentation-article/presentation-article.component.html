@@ -2,12 +2,13 @@
   <h2 class="content__title font-bold py-8 hidden invisible lowercase">Articles</h2>
 
   <ul class="content__list">
-    @for(item of listArticle; track item) {
+    @defer(on timer(1500)) {
+      @for(item of listArticle; track item) {
       <li class="content__list__item py-4">
         <a (click)="redirectToArticle(item.id)">
           <article class="">
             <time class="content__list__item--date">
-             {{ item.date | date:'medium' }}
+              {{ item.date | date:'medium' }}
             </time>
 
             <h3 class="content__list__item--title font-bold">
@@ -20,6 +21,10 @@
           </article>
         </a>
       </li>
+      }
+    } @placeholder {
+      <app-skelton [typeSkeleton]="'article'"/>
     }
+
   </ul>
 </section>

@@ -25,7 +25,6 @@ export default class ViewArticleComponent implements OnInit {
   article!: ArticlePost;
 
   ngOnInit(): void {
-    console.warn(`Chego na apresentacao dele`)
     if (!this.article) {
       this.articleService.getArticleByName(parseInt(this.route.url.split('/')[2])).subscribe({
         next: value => {

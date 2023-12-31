@@ -94,7 +94,12 @@ body .loading {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
-  .grid app-wellcome, .grid app-functions, .grid app-history, .grid app-projects, .grid app-contact, app-footer {
+  .grid app-wellcome,
+  .grid app-functions,
+  .grid app-history,
+  .grid app-projects,
+  .grid app-contact,
+  app-footer {
     scroll-snap-align: start;
   }
   .sections {

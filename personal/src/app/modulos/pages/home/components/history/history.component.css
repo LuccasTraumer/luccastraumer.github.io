@@ -1,0 +1,53 @@
+.content__title {
+  padding-bottom: 0.4rem;
+  font-size: 2rem;
+}
+.content__article--description {
+  padding-bottom: 0.4rem;
+  font-size: 0.8em;
+  letter-spacing: 0;
+}
+@media screen and (min-width: 1024px) {
+  .content__illustration {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-areas: "title title" "content illustration";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.1fr 1fr;
+    padding: 10rem 2rem;
+  }
+  .content__title {
+    grid-area: title;
+  }
+  .content__article {
+    grid-area: content;
+    width: 30vw;
+  }
+  .content__article--description {
+    line-height: 2;
+  }
+  .content__illustration {
+    grid-area: illustration;
+    width: 65vw;
+    padding: 0;
+  }
+}
+
+.hidden-class {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=history.component.css.map */

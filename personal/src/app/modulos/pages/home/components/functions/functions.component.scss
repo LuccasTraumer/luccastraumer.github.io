@@ -1,11 +1,10 @@
 .content {
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
   }
 
   &__article {
-
     &--title {
       padding-bottom: 0.7rem;
     }
@@ -22,7 +21,7 @@
         display: none;
       }
 
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         padding: 0;
 
         svg {
@@ -33,7 +32,7 @@
         }
       }
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px) {
         svg {
           width: 40%;
           margin-left: 40%;
@@ -51,18 +50,17 @@
         display: none;
       }
 
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         padding: 0;
         svg {
           visibility: visible;
           width: 100%;
           height: auto;
           display: block;
-
         }
       }
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px) {
         svg {
           width: 40%;
           margin-left: 40%;

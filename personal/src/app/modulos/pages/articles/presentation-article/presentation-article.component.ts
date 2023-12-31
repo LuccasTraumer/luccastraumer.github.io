@@ -5,6 +5,7 @@ import { ArticleService } from '../service/article.service';
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
+import {DescriptionArticlePipe} from "../service/description-article.pipe";
 
 @Component({
   selector: 'app-presentation-article',
@@ -14,10 +15,12 @@ import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
   imports: [
     CommonModule,
     HttpClientModule,
-    SkeltonComponent
+    SkeltonComponent,
+    DescriptionArticlePipe
   ],
   providers: [
-    ArticleService
+    ArticleService,
+    DescriptionArticlePipe
   ]
 })
 export default class PresentationArticleComponent implements OnInit {
@@ -34,14 +37,6 @@ export default class PresentationArticleComponent implements OnInit {
       },
       error: err => console.error(err)
     })
-  }
-
-  getDescription(article: ArticlePost) {
-    if(article.description[0].content.length > 147) {
-      return `${article.description[0].content.substring(0, 147)}...`;
-    }
-
-    return article.description;
   }
 
   redirectToArticle(id: number) {

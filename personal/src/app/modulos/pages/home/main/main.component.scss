@@ -1,13 +1,18 @@
 @import "../../../../../styles.scss";
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .grid {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
 
-  .grid app-wellcome, .grid app-functions, .grid app-history, .grid app-projects, .grid app-contact, app-footer {
+  .grid app-wellcome,
+  .grid app-functions,
+  .grid app-history,
+  .grid app-projects,
+  .grid app-contact,
+  app-footer {
     scroll-snap-align: start;
   }
 
@@ -23,8 +28,8 @@
     a {
       content: " ";
       background: $blue-porple;
-      width: .6rem;
-      height: .6rem;
+      width: 0.6rem;
+      height: 0.6rem;
       transform: rotate(-130deg);
     }
 

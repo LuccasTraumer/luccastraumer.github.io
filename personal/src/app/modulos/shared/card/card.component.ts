@@ -1,6 +1,5 @@
-import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
-import { CardInterfaceProps } from './card.interface.props';
-import { Router } from '@angular/router';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
+import {CardInterfaceProps} from './card.interface.props';
 import {LucideAngularModule} from "lucide-angular";
 import {CommonModule} from "@angular/common";
 
@@ -15,7 +14,8 @@ import {CommonModule} from "@angular/common";
   providers: [
 
   ],
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class CardComponent implements CardInterfaceProps {
   @Input() image?: string;

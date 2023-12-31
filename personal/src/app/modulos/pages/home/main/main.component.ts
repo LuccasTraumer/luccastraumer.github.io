@@ -1,6 +1,6 @@
-import {AfterViewChecked, Component, ElementRef, inject, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
+import { Component, ElementRef, inject, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { HomeService } from './service/home.service';
-import {catchError, map, of, retry, shareReplay, Subject, take, takeUntil} from "rxjs";
+import { Subscription } from "rxjs";
 import {HomeData} from "./model/home-data";
 import {LoaderService} from "../../../shared/loader/service/loader.service";
 import {SharedModule} from "../../../shared/shared.module";
@@ -23,7 +23,6 @@ import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
   styleUrls: ['./main.component.scss']
 })
 export default class MainComponent implements OnInit, OnDestroy {
-  private end!: Subject<any>;
   homeData: HomeData = {} as HomeData;
 
   @ViewChild('history')
@@ -33,22 +32,14 @@ export default class MainComponent implements OnInit, OnDestroy {
   private renderer2 = inject(Renderer2);
   private elementRef = inject(ElementRef);
   private loaderService = inject(LoaderService);
+  private subs!: Subscription;
 
   ngOnDestroy(): void {
-      // this.end.next(`end`);
-      // this.end.complete();
+      this.subs.unsubscribe();
     }
 
   ngOnInit(): void {
-    this.homeService.getDataHome()
-      // .pipe(map(value => value),
-      //   catchError(error => {
-      //     console.error(error)
-      //     return of(error);
-      //   }))
-      // .pipe(shareReplay())
-      // .pipe(retry(1))
-      // .pipe(takeUntil(this.end))
+    this.subs = this.homeService.getDataHome()
       .subscribe({
       next: value => {
         this.loaderService.setStateLoader(true);
@@ -58,12 +49,6 @@ export default class MainComponent implements OnInit, OnDestroy {
       error: err => console.error(err),
       complete: () => this.loaderService.setStateLoader(false)
     })
-  }
-
-  click(event: any) {
-    event.preventDefault();
-
-    window.location.href = "#history";
   }
 
   // ngAfterViewChecked(): void {

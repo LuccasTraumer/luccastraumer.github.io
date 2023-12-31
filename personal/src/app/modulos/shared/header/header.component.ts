@@ -1,6 +1,4 @@
 import { Component, ElementRef, EventEmitter, Renderer2, ViewChild } from '@angular/core';
-import {CloudinaryImage} from '@cloudinary/url-gen';
-import {fill} from '@cloudinary/url-gen/actions/resize';
 import { Router } from '@angular/router';
 import { Constantes } from '../../../utils/constantes';
 
@@ -16,12 +14,6 @@ export class HeaderComponent {
   @ViewChild('username') input!: ElementRef<HTMLInputElement>;
 
   menuMobileOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  myImage =  new CloudinaryImage('LOGO_ycaeq7',
-    {
-      cloudName: 'dfixlnbhd',
-    }
-  ).resize(fill().width(50).height(100));
 
   constructor(private router: Router, private render2: Renderer2) { }
 

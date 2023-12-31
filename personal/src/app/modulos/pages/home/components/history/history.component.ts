@@ -1,4 +1,4 @@
-import {Component, inject, Input, OnInit} from '@angular/core';
+import {Component, inject, OnInit } from '@angular/core';
 import { HistorySection } from '../../main/model/history-section';
 import {HomeService} from "../../main/service/home.service";
 import {HomeData} from "../../main/model/home-data";

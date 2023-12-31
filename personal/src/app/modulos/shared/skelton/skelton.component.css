@@ -153,7 +153,7 @@ body .loading {
   display: block;
   width: 50%;
   height: 50%;
-  background: #FAFAFA;
+  background: #fafafa;
   padding: 16px;
   grid-area: image;
 }

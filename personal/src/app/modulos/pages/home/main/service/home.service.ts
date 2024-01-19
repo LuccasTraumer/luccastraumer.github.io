@@ -3,6 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Constantes } from '../../../../../utils/constantes';
 import {BehaviorSubject} from "rxjs";
 import {HomeData} from "../model/home-data";
+import {WelcomeSection} from "../model/welcome-section";
+import {HistorySection} from "../model/history-section";
+import {RoleSection} from "../model/role-section";
 
 @Injectable({
   providedIn: 'root'
@@ -22,14 +25,14 @@ export class HomeService {
   }
 
   getWellcomeSection() {
-    return this.homeSectionStore.asObservable();
+    return this.http.get<WelcomeSection>(`http://localhost:3000/home/welcome`);
   }
 
   getHistorySection() {
-    return this.homeSectionStore.asObservable();
+    return this.http.get<HistorySection>(`http://localhost:3000/home/history`);
   }
 
   getRoleSection() {
-    return this.homeSectionStore.asObservable();
+    return this.http.get<RoleSection>(`http://localhost:3000/home/functions`);
   }
 }

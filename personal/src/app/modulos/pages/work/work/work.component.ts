@@ -1,7 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {SharedModule} from "../../../shared/shared.module";
-import {ComponentsModule} from "../../home/components/components.module";
 import {HttpClientModule} from "@angular/common/http";
 import CardComponent from "../../../shared/card/card.component";
 import {Router} from "@angular/router";
@@ -14,7 +13,6 @@ import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
   imports: [
     CommonModule,
     SharedModule,
-    ComponentsModule,
     HttpClientModule,
     CardComponent,
     SkeltonComponent

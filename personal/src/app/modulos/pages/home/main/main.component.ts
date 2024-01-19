@@ -1,13 +1,15 @@
-import { Component, ElementRef, inject, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
-import { HomeService } from './service/home.service';
+import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { Subscription } from "rxjs";
 import {HomeData} from "./model/home-data";
-import {LoaderService} from "../../../shared/loader/service/loader.service";
 import {SharedModule} from "../../../shared/shared.module";
-import {ComponentsModule} from "../components/components.module";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
 import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
+import ContactComponent from "../components/contact/contact.component";
+import FunctionsComponent from "../components/functions/functions.component";
+import HistoryComponent from "../components/history/history.component";
+import ProjectsComponent from "../components/projects/projects.component";
+import WellcomeComponent from "../components/wellcome/wellcome.component";
 
 @Component({
   selector: 'app-main',
@@ -16,39 +18,25 @@ import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
   imports: [
     CommonModule,
     SharedModule,
-    ComponentsModule,
     HttpClientModule,
-    SkeltonComponent
+    SkeltonComponent,
+    ContactComponent,
+    FunctionsComponent,
+    HistoryComponent,
+    ProjectsComponent,
+    WellcomeComponent
   ],
   styleUrls: ['./main.component.scss']
 })
-export default class MainComponent implements OnInit, OnDestroy {
+export default class MainComponent implements OnInit {
   homeData: HomeData = {} as HomeData;
 
   @ViewChild('history')
   historySection!: ElementRef<HTMLInputElement>;
-
-  private homeService = inject(HomeService);
-  private renderer2 = inject(Renderer2);
-  private elementRef = inject(ElementRef);
-  private loaderService = inject(LoaderService);
   private subs!: Subscription;
 
-  ngOnDestroy(): void {
-      this.subs.unsubscribe();
-    }
-
   ngOnInit(): void {
-    this.subs = this.homeService.getDataHome()
-      .subscribe({
-      next: value => {
-        this.loaderService.setStateLoader(true);
-        this.homeData = value as HomeData;
-        this.homeService.setHomeSection(this.homeData);
-      },
-      error: err => console.error(err),
-      complete: () => this.loaderService.setStateLoader(false)
-    })
+
   }
 
   // ngAfterViewChecked(): void {

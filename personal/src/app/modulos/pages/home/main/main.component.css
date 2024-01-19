@@ -88,39 +88,4 @@ body .loading {
   color: red;
 }
 
-@media screen and (min-width: 1024px) {
-  .grid {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
-  .grid app-wellcome,
-  .grid app-functions,
-  .grid app-history,
-  .grid app-projects,
-  .grid app-contact,
-  app-footer {
-    scroll-snap-align: start;
-  }
-  .sections {
-    position: fixed;
-    z-index: 9999;
-    right: 2.5rem;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .sections a {
-    content: " ";
-    background: #4831d4;
-    width: 0.6rem;
-    height: 0.6rem;
-    transform: rotate(-130deg);
-  }
-  .sections a.change-background {
-    background: #ccf381;
-  }
-}
-
 /*# sourceMappingURL=main.component.css.map */

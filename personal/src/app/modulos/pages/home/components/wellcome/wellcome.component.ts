@@ -1,16 +1,30 @@
 import {Component, inject, OnInit} from '@angular/core';
 import { WelcomeSection } from '../../main/model/welcome-section';
 import {HomeService} from "../../main/service/home.service";
-import {HomeData} from "../../main/model/home-data";
 import {LoaderService} from "../../../../shared/loader/service/loader.service";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
+import {LucideAngularModule} from "lucide-angular";
+import {CloudinaryModule} from "@cloudinary/ng";
+import LoaderComponent from "../../../../shared/loader/loader.component";
 
 @Component({
   selector: 'app-wellcome',
   templateUrl: './wellcome.component.html',
-  styleUrls: ['./wellcome.component.scss']
+  styleUrls: ['./wellcome.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    LoaderComponent,
+    LucideAngularModule,
+    CloudinaryModule,
+    NgOptimizedImage
+  ],
+  providers: [
+    HomeService,
+    LoaderService
+  ]
 })
-export class WellcomeComponent implements OnInit {
-  defaultImage = 'https://res.cloudinary.com/dfixlnbhd/image/upload/v1691356003/t_yi87h4.webp';
+export default class WellcomeComponent implements OnInit {
   image = [
     'https://res.cloudinary.com/dfixlnbhd/image/upload/v1691356003/t_yi87h4.webp'
   ];
@@ -21,8 +35,9 @@ export class WellcomeComponent implements OnInit {
 
   constructor() {
     this.loaderService.setStateLoader(true);
+    // TODO: Incluir um unsubscribe aqui
     this.homeService.getWellcomeSection().subscribe({
-      next: (value: HomeData) => {
+      next: (value: any) => {
         this.welcomeData = value.welcomeSection;
       },
       complete: () => this.loaderService.setStateLoader(false)

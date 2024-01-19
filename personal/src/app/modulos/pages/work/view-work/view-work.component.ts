@@ -2,8 +2,8 @@ import {Component, inject, OnInit} from '@angular/core';
 import { WorkService } from '../service/work.service';
 import {CommonModule} from "@angular/common";
 import {SharedModule} from "../../../shared/shared.module";
-import {ComponentsModule} from "../../home/components/components.module";
 import {HttpClientModule} from "@angular/common/http";
+import ContactComponent from "../../home/components/contact/contact.component";
 
 @Component({
   selector: 'app-home-work',
@@ -12,8 +12,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     CommonModule,
     SharedModule,
-    ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    ContactComponent
   ],
   providers: [WorkService]
 })

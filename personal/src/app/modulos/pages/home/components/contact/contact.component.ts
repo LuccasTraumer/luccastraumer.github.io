@@ -1,12 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {CommonModule} from "@angular/common";
+import ButtonComponent from "../../../../shared/button/button.component";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  imports: [
+    CommonModule,
+    ButtonComponent,
+    ReactiveFormsModule
+  ],
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContactComponent implements OnInit {
+export default class ContactComponent implements OnInit {
   isNameInputFocus: boolean = false;
   isEmailInputFocus: boolean = false;
   isMessageInputFocus: boolean = false;

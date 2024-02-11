@@ -4,7 +4,8 @@
   </h2>
 
   <ul class="content__list">
-    @defer(on timer(1500)) { @for(item of listArticle; track item) {
+    @defer(on viewport) {
+    @for(item of listArticle; track $index) {
     <li class="content__list__item py-4">
       <a (click)="redirectToArticle(item.id)">
         <article class="">

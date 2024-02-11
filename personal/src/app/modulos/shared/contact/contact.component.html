@@ -31,30 +31,32 @@
         [ngClass]="isNameInputFocus ? '.is-input-active' : ''"
         formControlName="name"
       />
-      <div
-        *ngIf="!name?.valid && (name?.dirty || name?.touched)"
-        class="text-danger"
-      >
+      @if(!name?.valid && (name?.dirty || name?.touched)) {
         <div
-          [hidden]="
+          class="text-danger"
+        >
+          <div
+            [hidden]="
             name !== null &&
             name.errors !== null && true &&
             !name.errors['required']
           "
-        >
-          name is required
-        </div>
-        <div
-          [hidden]="
+          >
+            name is required
+          </div>
+          <div
+            [hidden]="
             name !== null &&
             name.errors !== null &&
             name.errors['name'] !== null &&
             !name.errors['name']
           "
-        >
-          invalid name!
+          >
+            invalid name!
+          </div>
         </div>
-      </div>
+      }
+
     </div>
 
     <div class="content__form__email">
@@ -75,30 +77,31 @@
         formControlName="email"
       />
 
-      <div
-        *ngIf="!email?.valid && (email?.dirty || email?.touched)"
-        class="purple-text"
-      >
+      @if (!email?.valid && (email?.dirty || email?.touched)) {
         <div
-          [hidden]="
+          class="purple-text"
+        >
+          <div
+            [hidden]="
             email !== null &&
             email.errors !== null && true &&
             !email.errors['required']
           "
-        >
-          email is required
-        </div>
-        <div
-          [hidden]="
+          >
+            email is required
+          </div>
+          <div
+            [hidden]="
             email !== null &&
             email.errors !== null &&
             email.errors['email'] !== null &&
             !email.errors['email']
           "
-        >
-          invalid email id
+          >
+            invalid email id
+          </div>
         </div>
-      </div>
+      }
     </div>
 
     <div class="content__form__message">
@@ -125,30 +128,31 @@
         formControlName="message"
       ></textarea>
 
-      <div
-        *ngIf="!message?.valid && (message?.dirty || message?.touched)"
-        class="green-color"
-      >
+      @if (!message?.valid && (message?.dirty || message?.touched)) {
         <div
-          [hidden]="
+          class="green-color"
+        >
+          <div
+            [hidden]="
             message !== null &&
             message.errors !== null && true &&
             !message.errors['required']
           "
-        >
-          message is required!
-        </div>
-        <div
-          [hidden]="
+          >
+            message is required!
+          </div>
+          <div
+            [hidden]="
             message !== null &&
             message.errors !== null &&
             message.errors['message'] !== null &&
             !message.errors['message']
           "
-        >
-          invalid message!
+          >
+            invalid message!
+          </div>
         </div>
-      </div>
+      }
     </div>
 
     <div class="content__form--button w-2/4">

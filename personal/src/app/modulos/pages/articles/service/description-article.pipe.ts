@@ -6,12 +6,10 @@ import {ArticlePost} from "../../../shared/models/article-post";
   standalone: true
 })
 export class DescriptionArticlePipe implements PipeTransform {
-
   transform(article: ArticlePost, ...args: unknown[]): unknown {
     if(article.description[0].content.length > 147) {
       return `${article.description[0].content.substring(0, 147)}...`;
     }
-
     return article.description;
   }
 

@@ -1,9 +1,10 @@
-import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core';
-import {HistorySection} from '../../main/model/history-section';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
+import {HistorySection} from '../../../../shared/models/history-section';
 import {HomeService} from "../../main/service/home.service";
 import {LoaderService} from "../../../../shared/loader/service/loader.service";
 import {CommonModule} from "@angular/common";
 import LoaderComponent from "../../../../shared/loader/loader.component";
+import {Subject, takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-history',
@@ -17,30 +18,35 @@ import LoaderComponent from "../../../../shared/loader/loader.component";
   providers: [
     LoaderService,
     HomeService
-  ],
-  // TODO: Revisar a possibilidade de incluir o change detection
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  ]
 })
-export default class HistoryComponent implements OnInit {
-  historySection!: HistorySection;
-
+export default class HistoryComponent implements OnInit, OnDestroy {
+  private ngDestroy$ = new Subject();
   private loaderService = inject(LoaderService);
   homeService = inject(HomeService);
+  historySection!: HistorySection;
 
-  constructor() {
+  ngOnInit(): void {
     this.loaderService.setStateLoader(true);
-    this.homeService.getHistorySection().subscribe(
+    if (this.homeService.getSectionStore().value.historySection) {
+      this.homeService.getSectionStore().pipe(takeUntil(this.ngDestroy$)).subscribe(value => {
+        this.historySection = value.historySection;
+      });
+    } else {
+      this.homeService.getHistorySection().pipe(takeUntil(this.ngDestroy$)).subscribe(
         {
           next: (value: any) => {
             this.historySection = value.historySection
+            this.homeService.setHistorySection(this.historySection);
           },
           complete: () => this.loaderService.setStateLoader(false)
         }
-    );
+      );
+    }
   }
 
-  ngOnInit(): void {
-
+  ngOnDestroy(): void {
+    this.ngDestroy$.next(true);
+    this.ngDestroy$.complete();
   }
-
 }

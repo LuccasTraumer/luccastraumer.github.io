@@ -61,20 +61,7 @@
         d="M2.114 541.705v0l-.56 22.258v0l22.258-.561v0l-.56 22.259v0l22.258-.56v0l-.56 22.258v0l22.258-.56v0l-.559 22.26v0l22.26-.56v0"
       ></path>
     </svg>
-    <img
-      srcset="
-                {{ getURLImage('320') }} 320w,
-        {{ getURLImage('480') }} 480w,
-        {{ getURLImage('800') }} 800w
-        "
-      sizes="(max-width: 320px) 280px,
-  (max-width: 480px) 440px,
-  800px"
-      alt="Personal Image"
-      loading="lazy"
-      ngSrc="{{ welcomeData.image }}"
-      priority
-    />
+    <advanced-image [cldImg]="cdnImage" [loading]="'lazy'" [alt]="'personal image'"></advanced-image>
   </figure>
   } @else {
   <app-loader />

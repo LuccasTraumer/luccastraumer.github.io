@@ -2,23 +2,23 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ResumeServiceService } from '../../new-resume/service/resume-service.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import {DefinitionDatePipe} from "../../new-resume/service/definition-date.pipe";
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, DefinitionDatePipe],
   styleUrls: ['./resume.component.scss'],
-  providers: [ResumeServiceService],
+  providers: [ResumeServiceService, DefinitionDatePipe],
 })
 export default class ResumeComponent implements OnInit {
+  private service: ResumeServiceService = inject(ResumeServiceService);
   otherTechs!: string[];
   work!: any;
   techs!: string[];
   formatDate!: string;
-
   personalData!: Personal;
-  private service: ResumeServiceService = inject(ResumeServiceService);
 
   ngOnInit(): void {
     this.service.getDataResume().subscribe({

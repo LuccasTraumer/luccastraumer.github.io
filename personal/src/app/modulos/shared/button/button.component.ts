@@ -14,7 +14,6 @@ import {LucideAngularModule} from "lucide-angular";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ButtonComponent {
-
   @Input()
   content: string = 'button';
 
@@ -29,8 +28,6 @@ export default class ButtonComponent {
 
   @Output()
   clickEventEmitter = new EventEmitter<any>();
-
-  constructor() { }
 
   clickButton() {
     this.clickEventEmitter.emit(this.content);

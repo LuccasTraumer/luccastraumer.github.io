@@ -83,7 +83,7 @@
 
             <p>
               {{ formatDate }} -
-              {{ work.end_date === undefined ? "present" : work.end_date }}
+              {{ work.end_date | definitionDate }}
             </p>
           </div>
         </li>

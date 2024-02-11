@@ -5,7 +5,9 @@
   <p class="content__text">
     {{ content }}
   </p>
-  <ng-container *ngIf="hasIcon && classIcon">
-    <lucide-icon [name]="classIcon"></lucide-icon>
-  </ng-container>
+  @if (hasIcon && classIcon) {
+    <ng-container>
+      <lucide-icon [name]="classIcon"></lucide-icon>
+    </ng-container>
+  }
 </button>

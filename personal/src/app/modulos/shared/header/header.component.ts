@@ -1,47 +1,60 @@
-import { Component, ElementRef, EventEmitter, Renderer2, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { Constantes } from '../../../utils/constantes';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  inject,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
+import {Router, RouterModule} from '@angular/router';
+import {Constantes} from '../../../utils/constantes';
+import {LoaderService} from "../loader/service/loader.service";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  standalone: true,
+  imports:[
+    RouterModule
+  ],
+  providers: [
+    Router
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent {
-  _isMenuMobileOpen: boolean = false;
-  public readonly LOGO_SRC = 'https://res.cloudinary.com/dfixlnbhd/image/upload/c_fill,h_100,w_50/LOGO_ycaeq7?_a=AKFJtDW0';
-
+export default class HeaderComponent {
+  private router: Router = inject(Router)
+  // private render2: Renderer2 = inject(Renderer2);
+  private loader: LoaderService = inject(LoaderService);
   @ViewChild('username') input!: ElementRef<HTMLInputElement>;
 
-  menuMobileOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  constructor(private router: Router, private render2: Renderer2) { }
-
-  get isMenuMobileOpen(): boolean {
-    return this._isMenuMobileOpen
-  }
-
   closeMenu(): void {
-    this.input.nativeElement.checked = false;
+    if(this.input.nativeElement.checked)
+      this.input.nativeElement.checked = false;
   }
 
   goToHome() {
     this.closeMenu();
-    this.router.navigate([Constantes.PATH_HOME]);
+    this.router.navigateByUrl(Constantes.PATH_HOME)
+      .then(() => this.loader.setStateLoader(true)).finally(() => this.loader.setStateLoader(false));
   }
 
   goToShelf() {
     this.closeMenu();
-    this.router.navigate([Constantes.PATH_ARTICLES])
+    this.router.navigateByUrl(Constantes.PATH_ARTICLES)
+      .then(() => this.loader.setStateLoader(true)).finally(() => this.loader.setStateLoader(false));
   }
 
   goToResume() {
     this.closeMenu();
-    this.router.navigate([Constantes.PATH_RESUME])
+    this.router.navigateByUrl(Constantes.PATH_RESUME)
+      .then(() => this.loader.setStateLoader(true)).finally(() => this.loader.setStateLoader(false));
   }
 
   goToWork() {
     this.closeMenu();
-    this.router.navigate([Constantes.PATH_WORKS]);
+    this.router.navigateByUrl(`${Constantes.PATH_WORKS}`)
+      .then(() => this.loader.setStateLoader(true)).finally(() => this.loader.setStateLoader(false));;
   }
 }

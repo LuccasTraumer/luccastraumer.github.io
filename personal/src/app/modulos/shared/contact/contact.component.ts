@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CommonModule} from "@angular/common";
-import ButtonComponent from "../../../../shared/button/button.component";
+import ButtonComponent from "../button/button.component";
 
 @Component({
   selector: 'app-contact',
@@ -15,22 +15,16 @@ import ButtonComponent from "../../../../shared/button/button.component";
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export default class ContactComponent implements OnInit {
+export default class ContactComponent {
+  private formBuilder: FormBuilder = inject(FormBuilder);
   isNameInputFocus: boolean = false;
   isEmailInputFocus: boolean = false;
   isMessageInputFocus: boolean = false;
-
   formGroup: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.nullValidator]],
     email: ['', [Validators.required, Validators.email]],
     message: ['', [Validators.required]],
   });
-
-  constructor(private formBuilder: FormBuilder) { }
-
-  ngOnInit(): void {
-  }
-
 
   isFocus(event: any) {
     if (event.target.innerText.toLowerCase().includes('message')) {

@@ -10,8 +10,6 @@ import {LoaderService} from "./modulos/shared/loader/service/loader.service";
 import MainComponent from "./modulos/pages/home/main/main.component";
 import HeaderComponent from "./modulos/shared/header/header.component";
 import FooterComponent from "./modulos/shared/footer/footer.component";
-import { injectSpeedInsights } from '@vercel/speed-insights';
-
 
 @Component({
   selector: 'app-root',
@@ -37,6 +35,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.loaderService.setStateLoader(true);
-    injectSpeedInsights();
   }
 }

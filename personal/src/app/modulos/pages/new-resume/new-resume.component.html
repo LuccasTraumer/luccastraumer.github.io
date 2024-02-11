@@ -1,18 +1,17 @@
 <section class="content pt-32 p-16 overflow-hidden w-screen">
   <article class="content__body box-border p-8">
     <aside class="content__aside">
-
       <div class="content__aside__presentation none invisible">
         <a href="" class="content__aside__presentation--webpage">
-          {{personalData.personalPage}}
+          {{ personalData.personalPage }}
         </a>
 
         <p class="content__aside__presentation--location">
-          {{personalData.city}},{{personalData.state}}
+          {{ personalData.city }},{{ personalData.state }}
         </p>
 
         <p class="content__aside__presentation--email">
-          {{personalData.email}}
+          {{ personalData.email }}
         </p>
       </div>
 
@@ -22,36 +21,33 @@
         </h3>
         <ul class="content__aside__techs__list">
           @for(item of techs; track item) {
-            <li class="content__aside__techs__list--item"
-            >
-            {{item}}
-            </li>
-          } @empty {
-          Empty list of users
-          }
+          <li class="content__aside__techs__list--item">
+            {{ item }}
+          </li>
+          } @empty { Empty list of users }
         </ul>
       </div>
 
       <div class="content__aside__others-techs">
-        <h3 class="content__aside__others-techs--title title font-bold relative z-0">
+        <h3
+          class="content__aside__others-techs--title title font-bold relative z-0"
+        >
           others technologies:
         </h3>
 
         <ul class="content__aside__others-techs__list">
           @for(item of otherTechs; track item) {
-            <li class="content__aside__others-techs__list--item capitalize">
-            {{item}}
+          <li class="content__aside__others-techs__list--item capitalize">
+            {{ item }}
           </li>
-          } @empty {
-            Empty List of Others Techs
-          }
+          } @empty { Empty List of Others Techs }
         </ul>
       </div>
     </aside>
 
     <div class="content__body__welcome">
       <h2 class="content__body__welcome--title title leading-normal font-bold">
-        {{ personalData.name }} <br>
+        {{ personalData.name }} <br />
         {{ personalData.lastName }}
       </h2>
 
@@ -64,12 +60,10 @@
       </p>
     </div>
 
-    <hr>
+    <hr />
 
     <div class="content__body__exp">
-      <h4 class="content__body__exp--title title">
-        Experience
-      </h4>
+      <h4 class="content__body__exp--title title">Experience</h4>
       <p class="content__body__exp--description">
         {{ personalData.experience }}
       </p>
@@ -88,7 +82,8 @@
             </p>
 
             <p>
-              {{ formatDate }} - {{ work.end_date === undefined ? 'present' : work.end_date }}
+              {{ formatDate }} -
+              {{ work.end_date | definitionDate }}
             </p>
           </div>
         </li>

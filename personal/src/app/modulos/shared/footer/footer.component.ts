@@ -1,18 +1,29 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { Constantes } from '../../../utils/constantes';
+import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core';
+import {Router, RouterModule} from '@angular/router';
+import {Constantes} from '../../../utils/constantes';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
+  standalone: true,
+  imports:[
+    RouterModule
+  ],
+  providers:[
+    Router
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FooterComponent {
-
+export default class FooterComponent implements OnInit {
   private _email = 'lucassj.dev@gmail.com'
   private _twitter = '@luccastraumer'
+  private router: Router = inject(Router);
+  year!: number;
 
-  constructor(private router: Router) { }
+  ngOnInit(): void {
+    this.year = new Date().getFullYear();
+  }
 
   goToWork() {
     this.router.navigate([Constantes.PATH_WORKS])
@@ -35,6 +46,5 @@ export class FooterComponent {
   }
 
   getYear() {
-    return new Date().getFullYear();
   }
 }

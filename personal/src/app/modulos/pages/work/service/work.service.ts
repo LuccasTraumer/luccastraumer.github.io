@@ -1,18 +1,16 @@
-import {inject, Injectable, OnInit} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Constantes } from '../../../../utils/constantes';
+import {Work} from "../view-work/view-work.component";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class WorkService implements OnInit {
+export class WorkService {
   private httpClient: HttpClient = inject(HttpClient);
   private readonly CONSTANTES = Constantes;
-  getWorkData() {
-    return this.httpClient.get(`${this.CONSTANTES.ROOT_PATH}/work`);
-  }
-
-  ngOnInit(): void {
-    this.getWorkData();
+  getWorkData(): Observable<Work> {
+    return this.httpClient.get<Work>(`${this.CONSTANTES.ROOT_PATH}/work`);
   }
 }

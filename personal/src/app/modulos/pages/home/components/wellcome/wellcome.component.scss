@@ -1,21 +1,19 @@
 .content {
-
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     display: flex;
     position: relative;
     align-items: center;
     height: 70vh;
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     height: 80vh;
     position: relative;
     align-items: center;
   }
 
   &__main {
-
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px) {
       width: 40%;
     }
 
@@ -47,11 +45,11 @@
     align-items: center;
     box-sizing: border-box;
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       height: 100%;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px) {
       height: 100%;
       position: absolute;
       width: 40%;
@@ -64,13 +62,13 @@
       position: absolute;
       z-index: 1;
       width: 80vw;
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         width: 35vw;
         height: auto;
         right: 20%;
       }
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px) {
         height: 100%;
         position: absolute;
         width: 85%;
@@ -80,13 +78,13 @@
       }
     }
 
-    img {
+    advanced-image {
       width: 50%;
       margin: 0 auto;
       position: relative;
       z-index: 2;
 
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         width: 20vw;
         height: auto;
         position: absolute;

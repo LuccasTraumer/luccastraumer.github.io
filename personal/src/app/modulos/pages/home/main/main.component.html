@@ -1,6 +1,7 @@
 <main class="grid">
-  @defer (on timer(1500)) {
+  @defer (on viewport) {
     <app-wellcome id="welcome"/>
+
     <app-functions id="functions"/>
     <app-history #history id="history"/>
     <app-projects id="project"/>
@@ -14,6 +15,6 @@
     <a href="/home#functions"></a>
     <a href="/home#history"></a>
     <a href="/home#project"></a>
-    <a href="/home#contact" ></a>
+    <a href="/home#contact"></a>
   </aside>
 </main>

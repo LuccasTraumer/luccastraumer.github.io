@@ -3,29 +3,31 @@
 .content {
   background: $white-one;
 
-  &__body, &__aside {
+  &__body,
+  &__aside {
     background: $white-two;
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       column-gap: 5rem;
       display: grid;
       grid-template-areas:
-      "presentation main"
-      "techs experience"
-      "techs experience"
-      "others experience"
-      "others experience";
+        "presentation main"
+        "techs experience"
+        "techs experience"
+        "others experience"
+        "others experience";
     }
 
     &__presentation {
       grid-area: presentation;
 
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         display: block;
         height: auto;
         visibility: visible;
 
-        &--webpage, &--email {
+        &--webpage,
+        &--email {
           color: $blue-porple;
           font-weight: bolder;
           position: relative;
@@ -54,7 +56,8 @@
       grid-area: others;
     }
 
-    &__techs, &__others-techs {
+    &__techs,
+    &__others-techs {
       padding: 1rem 0;
       &--title {
         font-size: 1.2rem;
@@ -85,7 +88,7 @@
         color: $blue-porple;
         letter-spacing: 5px;
         font-size: 2rem;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
       }
 
       &--subtitle {
@@ -98,17 +101,16 @@
       &--title {
         text-align: start;
         color: $blue-porple;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         font-size: 1.2rem;
       }
 
       &__works {
-
         &--work {
           &--title {
             color: $blue-porple;
 
-            @media screen and (min-width: 768px){
+            @media screen and (min-width: 768px) {
               display: flex;
               align-items: center;
             }
@@ -120,7 +122,7 @@
                 display: none;
                 visibility: hidden;
 
-                @media screen and (min-width: 768px){
+                @media screen and (min-width: 768px) {
                   display: inherit;
                   visibility: visible;
                 }

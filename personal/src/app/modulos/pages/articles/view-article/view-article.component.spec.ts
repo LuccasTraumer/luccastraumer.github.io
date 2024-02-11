@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewArticleComponent } from './view-article.component';
+import ViewArticleComponent from './view-article.component';
 
 describe('ViewArticleComponent', () => {
   let component: ViewArticleComponent;
@@ -8,7 +8,10 @@ describe('ViewArticleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewArticleComponent ]
+      declarations: [],
+      imports: [
+        ViewArticleComponent
+      ]
     })
     .compileComponents();
 

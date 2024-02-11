@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewWorkComponent } from './view-work.component';
+import ViewWorkComponent from './view-work.component';
+import {CloudinaryModule} from "@cloudinary/ng";
 
 describe('ViewWorkComponent', () => {
   let component: ViewWorkComponent;
@@ -8,7 +9,10 @@ describe('ViewWorkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewWorkComponent ]
+      declarations: [ ViewWorkComponent ],
+      imports: [
+        CloudinaryModule
+      ]
     })
     .compileComponents();
 

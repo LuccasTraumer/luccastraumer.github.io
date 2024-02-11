@@ -1,9 +1,11 @@
-import {Component, inject, OnInit} from '@angular/core';
+import { Component, inject, OnDestroy, OnInit} from '@angular/core';
 import { Router} from '@angular/router';
 import { ArticlePost } from '../../../shared/models/article-post';
 import {ArticleService} from "../service/article.service";
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
+import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
+import {Subject, takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-home-article',
@@ -12,26 +14,33 @@ import {HttpClientModule} from "@angular/common/http";
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    SkeltonComponent
   ],
   providers: [
     ArticleService
   ]
 })
-export default class ViewArticleComponent implements OnInit {
+export default class ViewArticleComponent implements OnInit, OnDestroy {
   private route: Router = inject(Router)
-
   private articleService = inject(ArticleService);
+  private ngDestroy$ = new Subject();
   article!: ArticlePost;
 
   ngOnInit(): void {
-    console.warn(`Chego na apresentacao dele`)
     if (!this.article) {
-      this.articleService.getArticleByName(parseInt(this.route.url.split('/')[2])).subscribe({
+      this.articleService.getArticleByName(parseInt(this.route.url.split('/')[2]))
+        .pipe(takeUntil(this.ngDestroy$))
+        .subscribe({
         next: value => {
           this.article = value;
         }
       })
     }
+  }
+
+  ngOnDestroy(): void {
+    this.ngDestroy$.next(true);
+    this.ngDestroy$.complete();
   }
 }

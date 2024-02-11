@@ -8,7 +8,6 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrl: './skelton.component.scss'
 })
 export class SkeltonComponent implements OnInit {
-
   @Input({ required: true})
   typeSkeleton: `home` | `card` | `article` = `home`;
   ngOnInit(): void {

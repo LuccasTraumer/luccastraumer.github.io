@@ -21,7 +21,7 @@
   padding: 0.7rem;
 }
 
-.navbar .nav-container a:hover{
+.navbar .nav-container a:hover {
   font-weight: bolder;
 }
 
@@ -98,7 +98,7 @@
   z-index: 200;
   font-size: 1.2rem;
   transition: 1s ease;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -113,7 +113,6 @@
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
   transform: scaleY(0);
   background: $blue-porple;
-
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
@@ -121,6 +120,6 @@
   background: $blue-porple;
 }
 
-.nav-container input[type="checkbox"]:checked ~ .logo{
+.nav-container input[type="checkbox"]:checked ~ .logo {
   color: $blue-porple;
 }

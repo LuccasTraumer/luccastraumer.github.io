@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    align-items: center;
+  }
+}
+.content__article--title {
+  padding-bottom: 0.7rem;
+}
+.content__article--text {
+  font-size: 0.8rem;
+}
+.content__article:first-child {
+  padding: 0 0 2rem 0;
+}
+.content__article:first-child svg {
+  width: 100%;
+  visibility: hidden;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .content__article:first-child {
+    padding: 0;
+  }
+  .content__article:first-child svg {
+    display: block;
+    visibility: visible;
+    width: 90%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__article:first-child svg {
+    width: 40%;
+    margin-left: 40%;
+    height: auto;
+  }
+}
+.content__article:last-child {
+  padding: 2rem 0 0 0;
+}
+.content__article:last-child svg {
+  width: 100%;
+  visibility: hidden;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .content__article:last-child {
+    padding: 0;
+  }
+  .content__article:last-child svg {
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__article:last-child svg {
+    width: 40%;
+    margin-left: 40%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=functions.component.css.map */

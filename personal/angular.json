@@ -84,7 +84,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://github.com/LuccasTraumer/luccastraumer.github.io/",
+            "name": "Personal Page",
+            "email": "lucassj.dev@gmail.com"
+          }
         }
       }
     }

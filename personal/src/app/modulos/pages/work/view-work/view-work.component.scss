@@ -1,0 +1,28 @@
+@import "../../../../../styles.scss";
+
+.content {
+  background: $white-one;
+
+  &__title {
+    text-align: center;
+
+    &:before {
+      content: "/";
+    }
+
+    &:after {
+      content: ".";
+    }
+
+    &:before,
+    &:after {
+      opacity: 50%;
+    }
+  }
+
+  &__work {
+    @media screen and (min-width: 768px) {
+      padding: 2rem 0;
+    }
+  }
+}

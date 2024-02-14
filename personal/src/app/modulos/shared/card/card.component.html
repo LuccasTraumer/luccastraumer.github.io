@@ -1,0 +1,21 @@
+<div class="card w-full">
+  <figure class="card__body">
+    <a (click)="redirectToProject()">
+      <advanced-image
+        [cldImg]="img"
+        [alt]="'company worked'"
+        class="'card__body__image p-8 object-cover box-border'"
+        [loading]="'lazy'"
+      ></advanced-image>
+    </a>
+
+    <figcaption class="card__body__caption">
+      <h3 class="card__body__caption--title font-bold">
+        {{ title }}
+      </h3>
+      <a [href]="link" class="card__body__caption--link" target="_blank">
+        {{ contentLink }}
+      </a>
+    </figcaption>
+  </figure>
+</div>

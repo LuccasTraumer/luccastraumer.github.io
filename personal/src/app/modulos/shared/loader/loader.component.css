@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: #000;
+  background-color: #4831d4;
+  overflow-x: hidden;
+}
+
+body .loading {
+  display: flex;
+  width: inherit;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.contrast-text {
+  color: #fff;
+}
+
+.green-color {
+  color: #ccf381;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.blue-porple-text {
+  color: #4831d4;
+}
+
+.purple-text {
+  color: #3d155f;
+}
+
+.bg-green {
+  background: #ccf381;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-blue-porple {
+  background: #4831d4;
+}
+
+.content {
+  max-width: 100vw;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    height: 100vh;
+  }
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  font-size: 0.9em;
+  letter-spacing: 0.01em;
+  padding: 1rem 0 2rem 0;
+}
+
+.text-danger {
+  color: red;
+}
+
+.loading {
+  width: 7rem;
+  height: 7rem;
+  border: 10px solid #3d155f;
+  border-radius: 50%;
+  border-top-color: #ccf381;
+  animation: spin 1s linear infinite;
+  overflow: hidden;
+  position: absolute;
+  z-index: 999;
+}
+@media screen and (min-width: 1024px) {
+  .loading {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.loading:after {
+  border-top-color: #ccf381;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=loader.component.css.map */

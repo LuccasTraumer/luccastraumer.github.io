@@ -1,0 +1,43 @@
+@import "../../../../../styles.scss";
+
+.content {
+  background: $white-one;
+
+  &__title {
+
+    @media screen and (min-width: 768px){
+      visibility: visible;
+      display: block;
+      letter-spacing: .01rem;
+      line-height: 1.2;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    &:before {
+      content: "/";
+      opacity: 50%;
+    }
+
+    &:after {
+      content: ".";
+      opacity: 50%;
+    }
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__list {
+    grid-template-columns: 1fr;
+    gap: .8rem;
+
+    @media screen and (min-width: 768px){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<app-header/>
+<main class="view">
+  <router-outlet class="absolute"></router-outlet>
+</main>
+@defer (on viewport) {
+<app-footer/>
+} @placeholder {
+  <p>Carregando Conteudo!</p>
+}

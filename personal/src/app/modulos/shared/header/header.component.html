@@ -1,0 +1,65 @@
+<header class="content items-center p-8 h-full overflow-hidden">
+  <nav class="navbar w-full">
+    <div
+      class="container nav-container m-auto h-screen overflow-hidden flex justify-between items-center relative"
+    >
+      <input
+        class="checkbox absolute block h-8 w-8 cursor-pointer"
+        type="checkbox"
+        name=""
+        id=""
+        #username
+      />
+      <div class="hamburger-lines w-8 absolute flex justify-between flex-col">
+        <span class="line line1 block w-full"></span>
+        <span class="line line2 block w-full"></span>
+        <span class="line line3 block w-full"></span>
+      </div>
+      <div
+        class="logo green-color absolute leading-tight font-bold cursor-pointer"
+      >
+        <h1 (click)="goToHome()">Träumeer</h1>
+      </div>
+      <div
+        class="menu-items flex flex-col fixed w-screen h-screen inset-y-0 left-0 overflow-hidden"
+      >
+        <ul>
+          <li class="list-none">
+            <a class="no-underline" (click)="goToWork()"> my work </a>
+          </li>
+          <li class="list-none">
+            <a (click)="goToShelf()"> my shelf </a>
+          </li>
+          <li class="list-none">
+            <a (click)="goToResume()"> my résumé </a>
+          </li>
+        </ul>
+
+        <div class="contact">
+          <h3 class="title">say hello</h3>
+
+          <p class="blue-porple-text">lucassj.dev&#64;gmail.com</p>
+        </div>
+
+        <div class="flex justify-around items-center">
+          <p class="blue-porple-text">
+            <a href="https://twitter.com/luccastraumer" target="_blank"> TW </a>
+          </p>
+          <p class="blue-porple-text">
+            <a href="https://github.com/luccastraumer" target="_blank"> GH </a>
+          </p>
+          <p class="blue-porple-text">
+            <a href="https://www.linkedin.com/in/lucassjesus/" target="_blank">
+              LN
+            </a>
+          </p>
+          <p class="blue-porple-text">
+            <a href="https://instagram.com/luccastraumer" target="_blank">
+              IG
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

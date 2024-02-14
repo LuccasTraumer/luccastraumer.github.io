@@ -1,0 +1,99 @@
+@import "../../../../styles";
+
+.content {
+  background: $white-one;
+
+  &__title {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @media screen and (min-width: 1024px) {
+      text-align: center;
+      width: 35%;
+      margin: 0 auto;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &__form {
+    @media screen and (min-width: 1024px) {
+      width: 70%;
+      margin: 0 auto;
+    }
+    &--description-input {
+      //display: block;
+      color: rgba(61, 21, 95, 0.5);
+      font-size: 0.8rem;
+      padding: 0.6rem 0;
+
+      &:focus {
+        color: $blue-porple;
+      }
+    }
+
+    &--input {
+      //width: 100%;
+      padding: 0.3rem;
+      border-bottom: 1px solid rgba(61, 21, 95, 0.5);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      letter-spacing: 0.1em;
+      height: auto;
+      background: inherit;
+    }
+
+    &--button {
+      margin: 1.2rem 0;
+
+      @media screen and (min-width: 1024px) {
+        margin: 1.2rem auto;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "message message"
+        "button button";
+
+      &__name {
+        grid-area: name;
+        width: 80%;
+      }
+
+      &__email {
+        grid-area: email;
+        width: 80%;
+      }
+
+      &__message {
+        grid-area: message;
+      }
+
+      &--button {
+        grid-area: button;
+        width: 25%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 10rem 2rem;
+  }
+}
+
+.is-label-active {
+  color: $blue-porple;
+}
+
+.is-input-active {
+  border-bottom: 1px solid $blue-porple;
+}

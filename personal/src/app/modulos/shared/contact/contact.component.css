@@ -1,0 +1,176 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: #000;
+  background-color: #4831d4;
+  overflow-x: hidden;
+}
+
+body .loading {
+  display: flex;
+  width: inherit;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.contrast-text {
+  color: #fff;
+}
+
+.green-color {
+  color: #ccf381;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.blue-porple-text {
+  color: #4831d4;
+}
+
+.purple-text {
+  color: #3d155f;
+}
+
+.bg-green {
+  background: #ccf381;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-blue-porple {
+  background: #4831d4;
+}
+
+.content {
+  max-width: 100vw;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    height: 100vh;
+  }
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  font-size: 0.9em;
+  letter-spacing: 0.01em;
+  padding: 1rem 0 2rem 0;
+}
+
+.text-danger {
+  color: red;
+}
+
+.content {
+  background: #F9F9F9;
+}
+.content__title:first-letter {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+  .content__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__description {
+    text-align: center;
+    width: 35%;
+    margin: 0 auto;
+    letter-spacing: 0.1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__form {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.content__form--description-input {
+  color: rgba(61, 21, 95, 0.5);
+  font-size: 0.8rem;
+  padding: 0.6rem 0;
+}
+.content__form--description-input:focus {
+  color: #4831d4;
+}
+.content__form--input {
+  padding: 0.3rem;
+  border-bottom: 1px solid rgba(61, 21, 95, 0.5);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  height: auto;
+  background: inherit;
+}
+.content__form--button {
+  margin: 1.2rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .content__form--button {
+    margin: 1.2rem auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__form {
+    display: grid;
+    grid-template-areas: "name email" "message message" "button button";
+  }
+  .content__form__name {
+    grid-area: name;
+    width: 80%;
+  }
+  .content__form__email {
+    grid-area: email;
+    width: 80%;
+  }
+  .content__form__message {
+    grid-area: message;
+  }
+  .content__form--button {
+    grid-area: button;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    padding: 10rem 2rem;
+  }
+}
+
+.is-label-active {
+  color: #4831d4;
+}
+
+.is-input-active {
+  border-bottom: 1px solid #4831d4;
+}
+
+/*# sourceMappingURL=contact.component.css.map */

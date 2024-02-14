@@ -1,0 +1,100 @@
+@media screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    height: 80vh;
+    position: relative;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__main {
+    width: 40%;
+  }
+}
+.content__main--title {
+  font-size: 3rem;
+}
+.content__main--description {
+  width: 80%;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.content__main--subtitles {
+  font-size: 0.8rem;
+  padding: 4rem 0 0.5rem 0;
+}
+.content__me {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .content__me {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__me {
+    height: 100%;
+    position: absolute;
+    width: 40%;
+    right: 0;
+    z-index: -1;
+    top: 0;
+  }
+}
+.content__me svg {
+  position: absolute;
+  z-index: 1;
+  width: 80vw;
+}
+@media screen and (min-width: 768px) {
+  .content__me svg {
+    width: 35vw;
+    height: auto;
+    right: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__me svg {
+    height: 100%;
+    position: absolute;
+    width: 85%;
+    right: 55%;
+    z-index: -1;
+    top: 0;
+  }
+}
+.content__me advanced-image {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .content__me advanced-image {
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    right: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__me advanced-image {
+    right: 70%;
+  }
+}
+
+/*# sourceMappingURL=wellcome.component.css.map */

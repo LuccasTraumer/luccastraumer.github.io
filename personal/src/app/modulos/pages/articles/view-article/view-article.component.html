@@ -1,0 +1,92 @@
+@defer (on viewport) {
+  @if (article) {
+    <article class="content p-16 pt-32 h-full overflow-hidden w-screen">
+      <div class="content__time flex items-center gap-16 my-4">
+        <time class="content__date--publish">{{
+            article.date | date : "medium"
+          }}</time>
+        <p class="content__date--read">{{ article.timeRead }} min read</p>
+      </div>
+
+      <h2 class="content__title title">
+        {{ article.title }}
+      </h2>
+
+      <div class="content__description py-4">
+        @for(section of article.description; track section) {
+          <div>
+            @if(section && section.titleSection) {
+              <h3
+                [innerHTML]="section.titleSection"
+                class="content__description--subtitle font-bold py-4"
+              ></h3>
+            }
+            <p
+              [innerHTML]="section.content"
+              class="content__description--content"
+            ></p>
+
+            @if(section.code) {
+              <pre class="content__description--code my-4 break-normal">
+              {{ section.code }}
+          </pre
+          >
+            } @if(section.image) {
+            <figure
+              class="content__description--image flex items-center py-4 justify-center flex-col"
+            >
+              <img [src]="section.image" alt="" loading="lazy" />
+
+              @if (section.imageBy) {
+                <figcaption >{{ section.imageBy }}</figcaption>
+              }
+            </figure>
+          }
+          </div>
+        } @empty { List is Empty }
+        @for (section of article.description; track $index) {
+          <ng-container>
+            @if (section.titleSection) {
+              <h3
+                [innerHTML]="section.titleSection"
+                class="content__description--subtitle font-bold py-4"
+              ></h3>
+            }
+            <p
+              [innerHTML]="section.content"
+              class="content__description--content"
+            ></p>
+
+            @if(section.code) {
+              <pre
+                class="content__description--code my-4 break-normal"
+              >
+                {{ section.code }}
+              </pre>
+            }
+            @if(section.image) {
+              <figure
+                class="content__description--image flex items-center py-4 justify-center flex-col"
+              >
+                <img [src]="section.image" alt="" loading="lazy" />
+                @if (section.imageBy) {
+                  <figcaption>{{ section.imageBy }}</figcaption>
+                }
+              </figure>
+            }
+          </ng-container>
+        }
+      </div>
+
+      <div class="content__tags flex items-center">
+        @if (article.tags) {
+          <p class="content__tags--title capitalize">tags:</p>
+        } @for(tag of article.tags; track $index) {
+        <p class="content__tags--item lowercase flex">{{ tag }},</p>
+      }
+      </div>
+    </article>
+  }
+} @placeholder {
+  <app-skelton [typeSkeleton]="'article'"/>
+}

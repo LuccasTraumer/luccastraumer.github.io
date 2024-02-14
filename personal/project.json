@@ -10,7 +10,7 @@
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/org",
+        "outputPath": "dist",
         "index": "./src/index.html",
         "browser": "./src/main.ts",
         "polyfills": ["zone.js"],
@@ -80,7 +80,7 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "org:build",
-        "staticFilePath": "dist/org/browser"
+        "staticFilePath": "dist"
       }
     }
   }

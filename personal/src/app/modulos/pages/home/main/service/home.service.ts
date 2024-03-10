@@ -47,4 +47,8 @@ export class HomeService {
   getRoleSection() {
     return this.http.get<RoleSection>(`${this.PATH_ROOT}/functions`);
   }
+
+  getHomeData() {
+    return this.homeData;
+  }
 }

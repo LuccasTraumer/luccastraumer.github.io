@@ -18,16 +18,16 @@ import ButtonComponent from "../../../../shared/button/button.component";
     Router
   ],
   // TODO: Incluir changeDetection
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ProjectsComponent {
   private router: Router = inject(Router);
 
-  redirectArticle(event: any) {
+  redirectArticle(event: any): void {
     this.router.navigate([Constantes.PATH_ARTICLES])
   }
 
-  redirectToWork(event: any) {
+  redirectToWork(event: any): void {
     this.router.navigate([Constantes.PATH_WORKS]);
   }
 }

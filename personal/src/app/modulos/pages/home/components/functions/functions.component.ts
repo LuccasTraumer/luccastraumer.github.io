@@ -30,7 +30,11 @@ export default class FunctionsComponent implements OnInit, OnDestroy {
     this.loaderService.setStateLoader(true);
 
     if (this.homeSection.getSectionStore().value.roleSection) {
-      this.homeSection.getSectionStore().pipe(takeUntil(this.ngDestroy$)).subscribe(value => {
+      this.homeSection.getSectionStore()
+        .pipe(
+          takeUntil(this.ngDestroy$)
+        )
+        .subscribe(value => {
         this.roleSection = value.roleSection;
       })
     } else {

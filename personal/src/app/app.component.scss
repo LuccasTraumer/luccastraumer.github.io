@@ -1,3 +1,5 @@
+@import "../styles.scss";
+
 * {
   display: grid;
   grid-template-areas:
@@ -30,4 +32,28 @@ router-outlet {
 
 app-footer {
   grid-area: footer;
+}
+
+.sections {
+  position: fixed;
+  left: 90%;
+  top: 50%;
+
+  a {
+    background: $green-text;
+    transform: rotate(50deg);
+    height: 1rem;
+    width: 1rem;
+    content: " ";
+    margin: .5rem 0;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+app-wellcome, app-functions, app-history, app-projects, app-contact {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }

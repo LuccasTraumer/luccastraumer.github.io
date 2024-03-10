@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
 import ContactComponent from "../../../shared/contact/contact.component";
 import FunctionsComponent from "../components/functions/functions.component";
 import HistoryComponent from "../components/history/history.component";
 import ProjectsComponent from "../components/projects/projects.component";
 import WellcomeComponent from "../components/wellcome/wellcome.component";
+import {HomeService} from "./service/home.service";
+import {AsyncPipe} from "@angular/common";
 
 @Component({
   selector: 'app-main',
@@ -16,11 +18,13 @@ import WellcomeComponent from "../components/wellcome/wellcome.component";
     FunctionsComponent,
     HistoryComponent,
     ProjectsComponent,
-    WellcomeComponent
+    WellcomeComponent,
+    AsyncPipe
   ],
   styles: ''
 })
 export default class MainComponent {
+  homeSectionService: HomeService = inject(HomeService);
 }
 
 

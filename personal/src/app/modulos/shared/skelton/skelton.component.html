@@ -1,13 +1,11 @@
 @switch(typeSkeleton) {
   @case('home') {
     <ng-container class="home-container">
-      <div class="card">
+      <div class="card ">
         <div class="block pulsate"></div>
 
         <div class="card-content">
           <div class="block3 pulsate"></div>
-          <!--    <div class="circle pulsate">-->
-          <!--    </div>-->
         </div>
 
         <div class="container flex">
@@ -66,10 +64,8 @@
     </ng-container>
 } @case('card') {
     <ng-container class="card-container">
-      <div class="card">
+      <div class="card animate-pulse">
         <div class="card-image">
-          <!--          <div class="block pulsate">-->
-          <!--          </div>-->
           <svg
             class="fpo"
             width="84px"
@@ -123,7 +119,7 @@
     </ng-container>
 } @case('article') {
     <ng-container class="article-container">
-      <div class="card">
+      <div class="card animate-pulse">
         <div class="block pulsate"></div>
         <div class="block3 pulsate"></div>
         <div class="block3 pulsate"></div>

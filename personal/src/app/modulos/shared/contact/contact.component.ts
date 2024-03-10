@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CommonModule} from "@angular/common";
 import ButtonComponent from "../button/button.component";
@@ -15,25 +15,21 @@ import ButtonComponent from "../button/button.component";
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export default class ContactComponent {
+export default class ContactComponent implements AfterViewInit {
   private formBuilder: FormBuilder = inject(FormBuilder);
-  isNameInputFocus: boolean = false;
-  isEmailInputFocus: boolean = false;
-  isMessageInputFocus: boolean = false;
+  isNameInputFocus: boolean | undefined = false;
+  isEmailInputFocus: boolean | undefined = false;
+  isMessageInputFocus: boolean | undefined = false;
   formGroup: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.nullValidator]],
     email: ['', [Validators.required, Validators.email]],
-    message: ['', [Validators.required]],
+    message: ['', [Validators.required, Validators.minLength(15)]],
   });
 
-  isFocus(event: any) {
-    if (event.target.innerText.toLowerCase().includes('message')) {
-      this.isMessageInputFocus = !this.isMessageInputFocus;
-    } else if (event.target.innerText.toLowerCase().includes('email')) {
-      this.isEmailInputFocus = !this.isEmailInputFocus;
-    } else {
-      this.isNameInputFocus = !this.isNameInputFocus;
-    }
+  ngAfterViewInit(): void {
+    this.isNameInputFocus = this.formGroup.get('name')?.touched;
+    this.isEmailInputFocus = this.formGroup.get('email')?.touched;
+    this.isMessageInputFocus = this.formGroup.get('message')?.touched;
   }
 
   clickButton(event?: any) {

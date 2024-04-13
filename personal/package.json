@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "start:prod": "ng serve -–configuration=”production”",
-    "build": "ng build && node redirect-folder.js",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "deploy": "npm run build --outputPath='./dist/' && ng deploy"
+    "deploy": "npm run build && node redirect-folder.js && ng deploy --no-build"
   },
   "private": true,
   "dependencies": {

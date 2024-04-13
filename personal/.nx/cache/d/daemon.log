@@ -349,3 +349,256 @@ To fix this, set a unique name for each project in a project.json inside the pro
     at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
     at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
 [NX Daemon Server] - 2024-04-13T22:09:23.062Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T22:19:28.647Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T22:19:28.653Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T22:19:28.658Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T22:19:28.662Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T22:19:28.682Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T22:19:28.683Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T22:19:28.684Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T22:19:28.684Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T22:19:28.684Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T22:19:28.722Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/lucassj/Documents/github/luccastraumer.github.io/personal/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T22:19:28.725Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T22:19:35.912Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T22:19:35.914Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T22:19:35.920Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T22:19:35.922Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T22:19:35.922Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T22:19:35.923Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T22:19:35.924Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T22:19:35.924Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T22:19:35.924Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T22:19:36.007Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T22:19:36.011Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T22:19:37.396Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T22:19:37.399Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T22:19:37.405Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T22:19:37.408Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-04-13T22:19:37.408Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T22:19:37.410Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T22:19:37.482Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T22:19:37.494Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T22:19:37.494Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T22:19:37.872Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T22:19:37.873Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T23:31:36.073Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T23:31:36.076Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T23:31:36.081Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:36.103Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T23:31:36.202Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T23:31:36.209Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T23:31:36.209Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:36.209Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:36.287Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T23:31:36.291Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T23:31:36.496Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T23:31:36.498Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T23:31:36.499Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:36.500Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T23:31:36.503Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T23:31:36.504Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T23:31:36.504Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:36.504Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:36.552Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T23:31:36.556Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T23:31:37.820Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T23:31:37.919Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T23:31:37.926Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:37.928Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T23:31:37.931Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T23:31:37.934Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T23:31:37.934Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:37.934Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:37.966Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T23:31:37.968Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T23:31:38.334Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T23:31:38.336Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T23:31:38.344Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:38.344Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T23:31:38.345Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:38.346Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T23:31:38.346Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T23:31:38.346Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:38.347Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:38.476Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T23:31:38.482Z - Done responding to the client null
+[NX Daemon Server] - 2024-04-13T23:31:42.747Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/86c176bd99a63859bac1/d.sock
+[NX Daemon Server] - 2024-04-13T23:31:42.749Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Documents/github/luccastraumer.github.io/personal (native)
+[NX Daemon Server] - 2024-04-13T23:31:42.752Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:42.752Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-13T23:31:42.754Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-04-13T23:31:42.755Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-04-13T23:31:42.756Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-13T23:31:42.756Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:42.756Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-13T23:31:42.787Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- personal: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/lucassj/Documents/github/luccastraumer.github.io/personal/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-04-13T23:31:42.788Z - Done responding to the client null

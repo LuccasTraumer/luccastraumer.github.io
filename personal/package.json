@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "deploy": "npm run build && node redirect-folder.js && ng deploy --no-build"
+    "deploy": "npm run build -–configuration=”production” && node redirect-folder.js && ng deploy --no-build"
   },
   "private": true,
   "dependencies": {

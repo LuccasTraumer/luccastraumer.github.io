@@ -2,8 +2,13 @@
 
 .content {
   background: $purple;
-  max-height: 20vh;
+  //height: 20vh;
+  max-height: 100%;
   box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 
   @media screen and (min-width: 1024px){
     display: grid;
@@ -11,9 +16,10 @@
       "title title"
       "social sections"
       "copy copy";
-    grid-template-rows: 2rem 1fr 8rem;
-    grid-template-columns: 0.5fr 0.5fr;
-    padding: 5rem 2rem;
+    grid-template-rows: .4rem .5fr 1rem;
+    grid-template-columns: 0.4fr 0.4fr;
+    padding: 10rem 2rem 2rem 2rem;
+    align-items: center;
 
     &__title {
       grid-area: title;

@@ -1,31 +1,38 @@
-<main class="grid">
-  @defer (on viewport; when homeSectionService.getHomeData().welcomeSection) {
-    <app-wellcome id="welcome" class="snap-center"/>
-  }@placeholder {
-    <app-skelton [typeSkeleton]="'home'"/>
-  }
+<div class="grid" id="fullpage">
+  <app-wellcome
+    id="welcome"
+    class="snap-center section"
+    [class.active]="activeSection === 'welcome'"
 
-  @defer (on viewport; when homeSectionService.getHomeData().roleSection) {
-    <app-functions id="functions" class="snap-center"/>
-  }@placeholder {
-    <app-skelton [typeSkeleton]="'home'"/>
-  }
+  />
+  <app-functions
+    id="functions"
+    class="snap-center section"
+    [class.active]="activeSection === 'functions'"
 
-  @defer (on  viewport; when homeSectionService.getHomeData().historySection) {
-    <app-history #history id="history" class="snap-center"/>
-  }@placeholder {
-    <app-skelton [typeSkeleton]="'home'"/>
-  }
+  />
+  <app-history
+    #history
+    id="history"
+    class="snap-center section"
+    [class.active]="activeSection === 'history'"
 
-  @defer (on viewport; when homeSectionService.getHomeData().historySection) {
-    <app-projects id="project" class="snap-center"/>
-  }@placeholder {
-    <app-skelton [typeSkeleton]="'home'"/>
-  }
+  />
+  <app-projects
+    id="project"
+    class="snap-center section"
+    [class.active]="activeSection === 'project'"
 
-  @defer (on viewport; when homeSectionService.getHomeData().historySection) {
-    <app-contact id="contact" class="snap-center"/>
-  }@placeholder {
-    <app-skelton [typeSkeleton]="'home'"/>
-  }
-</main>
+  />
+  <app-contact
+    id="contact"
+    class="snap-center section"
+    [class.active]="activeSection === 'contact'"
+
+  />
+  <app-footer
+    id="footer"
+    class="snap-center section"
+    [class.active]="activeSection === 'footer'"
+  />
+</div>

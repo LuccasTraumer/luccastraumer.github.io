@@ -8,7 +8,6 @@ import WellcomeComponent from "../components/wellcome/wellcome.component";
 import {HomeService} from "./service/home.service";
 import {AsyncPipe, NgStyle} from "@angular/common";
 import {SectionVisibleService} from "../../../shared/services/section-visible/section-visible.service";
-import {AngularFullpageModule} from "@fullpage/angular-fullpage";
 import FooterComponent from "../../../shared/footer/footer.component";
 
 @Component({
@@ -24,7 +23,6 @@ import FooterComponent from "../../../shared/footer/footer.component";
     WellcomeComponent,
     AsyncPipe,
     NgStyle,
-    AngularFullpageModule,
     FooterComponent
   ],
   styles: ''

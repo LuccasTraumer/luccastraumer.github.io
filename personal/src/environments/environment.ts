@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   ROOT_PATH: 'http://localhost:3000',
-  ID_CLOUDNARY:"dfixlnbhd"
 };
 
 /*

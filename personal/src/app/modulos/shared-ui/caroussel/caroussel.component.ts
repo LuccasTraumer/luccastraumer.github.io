@@ -1,10 +1,6 @@
 import {ChangeDetectionStrategy, Component, inject, Input, OnInit} from '@angular/core';
-import {CommonModule} from "@angular/common";
-import {CloudinaryModule} from "@cloudinary/ng";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import ButtonComponent from "../button/button.component";
-import {CdnImageService} from "../../services/cdn-image.service";
-import {CloudinaryImage} from "@cloudinary/url-gen";
-import {fill} from "@cloudinary/url-gen/actions/resize";
 
 @Component({
   selector: 'app-caroussel',
@@ -13,20 +9,18 @@ import {fill} from "@cloudinary/url-gen/actions/resize";
   standalone: true,
   imports: [
     CommonModule,
-    CloudinaryModule,
-    ButtonComponent
+    ButtonComponent,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarousselComponent implements OnInit {
-  private limitTimeMS = 4000;
-  private cdnImage = inject(CdnImageService);
   @Input() listImages!: string[];
-  img!: CloudinaryImage;
+  img!: string;
   visibleImage = 0;
 
   ngOnInit(): void {
-    this.img = this.cdnImage.getCloudNary().image('CIT_TRANSPARENT').resize(fill());
+    this.img = 'CIT_TRANSPARENT';
   }
 
   goForPreveiusImage() {
@@ -44,7 +38,7 @@ export class CarousselComponent implements OnInit {
     }
   }
 
-  getCloudImage(nameImage: string): CloudinaryImage {
-    return this.cdnImage.getCloudNary().image(nameImage).resize(fill());
+  getCloudImage(nameImage: string): string {
+    return './assets/images/' + nameImage;
   }
 }

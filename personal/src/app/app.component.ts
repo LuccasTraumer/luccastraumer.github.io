@@ -1,7 +1,6 @@
 import {Component, ElementRef, HostListener, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {CloudinaryModule} from '@cloudinary/ng';
 import {ReactiveFormsModule} from "@angular/forms";
 import { LucideAngularModule} from 'lucide-angular';
 import LoaderComponent from "./modulos/shared-ui/loader/loader.component";
@@ -19,7 +18,6 @@ import ContactComponent from "./modulos/layout/contact/contact.component";
   imports: [
     CommonModule,
     RouterOutlet,
-    CloudinaryModule,
     ReactiveFormsModule,
     MainComponent,
     LoaderComponent,

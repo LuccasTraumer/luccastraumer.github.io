@@ -31,7 +31,6 @@ export default class HistoryComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loaderService.setStateLoader(true);
-    console.warn('historySection', this.homeService.getSectionStore().value.historySection);
     if (this.homeService.getSectionStore().value.historySection != null) {
       this.homeService.getSectionStore()
         .pipe(

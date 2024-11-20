@@ -1,11 +1,7 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, inject, Input, OnInit, Output} from '@angular/core';
 import {CardInterfaceProps} from './card.interface.props';
 import {LucideAngularModule} from "lucide-angular";
-import {CommonModule} from "@angular/common";
-import {CdnImageService} from "../../services/cdn-image.service";
-import {CloudinaryImage} from "@cloudinary/url-gen";
-import {fill} from "@cloudinary/url-gen/actions/resize";
-import {CloudinaryModule} from "@cloudinary/ng";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-card',
@@ -14,7 +10,7 @@ import {CloudinaryModule} from "@cloudinary/ng";
   imports: [
     LucideAngularModule,
     CommonModule,
-    CloudinaryModule
+    NgOptimizedImage,
   ],
   providers: [
 
@@ -23,7 +19,6 @@ import {CloudinaryModule} from "@cloudinary/ng";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class CardComponent implements CardInterfaceProps, OnInit {
-  private cdnImage = inject(CdnImageService);
   @Input() image?: string;
 
   @Input() title?: string;
@@ -34,13 +29,13 @@ export default class CardComponent implements CardInterfaceProps, OnInit {
 
   @Output() eventEmitter = new EventEmitter<any>();
 
-  img!: CloudinaryImage;
+  img!: string;
 
   redirectToProject() {
     this.eventEmitter.next(this.title?.toLowerCase());
   }
 
   ngOnInit(): void {
-    this.img = this.cdnImage.getCloudNary().image('CIT_TRANSPARENT').resize(fill());
+    this.img = 'CIT_TRANSPARENT';
   }
 }

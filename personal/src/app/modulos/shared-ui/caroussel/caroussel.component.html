@@ -11,11 +11,11 @@
         data-carousel-item="active"
         [ngClass]="visibleImage === $index ? '' : 'hidden'"
       >
-        <advanced-image
-          [cldImg]="getCloudImage(item)"
-          [alt]="'...'"
-          loading="'lazy'"
-        ></advanced-image>
+        <img
+          [ngSrc]="getCloudImage(item)"
+          alt="..."
+          loading="lazy"
+          class="object-cover w-full h-full" fill/>
       </div>
     }
   </div>

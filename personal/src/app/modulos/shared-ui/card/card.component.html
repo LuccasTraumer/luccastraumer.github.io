@@ -1,12 +1,11 @@
 <div class="card w-full">
   <figure class="card__body">
     <a (click)="redirectToProject()">
-      <advanced-image
-        [cldImg]="img"
+      <img
+        [ngSrc]="img"
         [alt]="'company worked'"
-        class="'card__body__image p-8 object-cover box-border'"
-        [loading]="'lazy'"
-      ></advanced-image>
+        class="card__body__image p-8 object-cover box-border"
+        loading="lazy" fill/>
     </a>
 
     <figcaption class="card__body__caption">

@@ -1,0 +1,45 @@
+<footer
+  class="p-16 overflow-hidden w-screen block
+  sm:text-xs bg-blue-porple flex flex-col items-center justify-center box-border
+  lg:grid lg:grid-areas-[title_title] lg:grid-areas-[social_sections]
+  lg:grid-areas-[copy_copy]
+  lg:grid-rows-[.4rem_.5fr_1rem]
+  lg:grid-cols-[.4fr_.4fr]
+  lg:py-40 lg:px-8 lg:pb-8 lg:items-center"
+>
+  <h3 class="py-2 text-inherit bg-inherit font-semibold uppercase text-white text-sm tracking-wider lg:col-span-2">
+    say hello
+  </h3>
+
+  <div class="flex justify-between w-full">
+    <div class="py-4">
+      <p class="text-green bg-inherit">
+        {{ email }}
+      </p>
+      <p class="text-green bg-inherit py-2">
+        {{ twitter }}
+      </p>
+    </div>
+    <div>
+      <p class="text-green capitalize py-4 first-letter:uppercase">
+        <a href="#" class="text-inherit bg-inherit" (click)="goToWork()">
+          my work
+        </a>
+      </p>
+      <p class="text-green capitalize py-4 first-letter:uppercase">
+        <a href="#" class="text-inherit bg-inherit" (click)="goToShelf()">
+          my shelf
+        </a>
+      </p>
+      <p class="text-green capitalize py-4 first-letter:uppercase">
+        <a href="#" class="text-inherit bg-inherit" (click)="goToResume()">
+          me résumé
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <p class="text-green border-t border-green-500 py-4 mt-24">
+    &copy; Lucas Jesus {{ year }}
+  </p>
+</footer>

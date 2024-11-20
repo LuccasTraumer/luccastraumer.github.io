@@ -1,38 +1,40 @@
 <div class="grid" id="fullpage">
-  <app-wellcome
-    id="welcome"
-    class="snap-center section"
-    [class.active]="activeSection === 'welcome'"
-
-  />
-  <app-functions
-    id="functions"
-    class="snap-center section"
-    [class.active]="activeSection === 'functions'"
-
-  />
-  <app-history
-    #history
-    id="history"
-    class="snap-center section"
-    [class.active]="activeSection === 'history'"
-
-  />
-  <app-projects
-    id="project"
-    class="snap-center section"
-    [class.active]="activeSection === 'project'"
-
-  />
-  <app-contact
-    id="contact"
-    class="snap-center section"
-    [class.active]="activeSection === 'contact'"
-
-  />
-  <app-footer
-    id="footer"
-    class="snap-center section"
-    [class.active]="activeSection === 'footer'"
-  />
+  @defer (when sectionVisbleService.getActiveSection()) {
+    <app-wellcome
+      id="welcome"
+      class="snap-center section"
+      [class.active]="activeSection === 'welcome'"
+    />
+    <app-functions
+      #functions
+      id="functions"
+      class="snap-center section"
+      [class.active]="activeSection === 'functions'"
+    />
+    <app-history
+      #history
+      id="history"
+      class="snap-center section"
+      [class.active]="activeSection === 'history'"
+    />
+    <app-projects
+      id="project"
+      class="snap-center section"
+      [class.active]="activeSection === 'project'"
+    />
+    <app-contact
+      id="contact"
+      class="snap-center section"
+      [class.active]="activeSection === 'contact'"
+    />
+    <app-footer
+      id="footer"
+      class="snap-center section"
+      [class.active]="activeSection === 'footer'"
+    />
+  } @loading (after 100ms; minimum 1s) {
+    <app-loader></app-loader>
+  } @placeholder {
+    <app-loader></app-loader>
+  }
 </div>

@@ -4,14 +4,14 @@ import { RouterOutlet } from '@angular/router';
 import {CloudinaryModule} from '@cloudinary/ng';
 import {ReactiveFormsModule} from "@angular/forms";
 import { LucideAngularModule} from 'lucide-angular';
-import LoaderComponent from "./modulos/shared/loader/loader.component";
-import {SkeltonComponent} from "./modulos/shared/skelton/skelton.component";
-import {LoaderService} from "./modulos/shared/loader/service/loader.service";
+import LoaderComponent from "./modulos/shared-ui/loader/loader.component";
+import {SkeltonComponent} from "./modulos/shared-ui/skelton/skelton.component";
+import {LoaderService} from "./modulos/shared-ui/loader/service/loader.service";
 import MainComponent from "./modulos/pages/home/main/main.component";
-import HeaderComponent from "./modulos/shared/header/header.component";
-import FooterComponent from "./modulos/shared/footer/footer.component";
-import {SectionVisibleService} from "./modulos/shared/services/section-visible/section-visible.service";
-import ContactComponent from "./modulos/shared/contact/contact.component";
+import HeaderComponent from "./modulos/layout/header/header.component";
+import FooterComponent from "./modulos/layout/footer/footer.component";
+import {SectionVisibleService} from "./modulos/services/section-visible/section-visible.service";
+import ContactComponent from "./modulos/layout/contact/contact.component";
 
 @Component({
   selector: 'app-root',

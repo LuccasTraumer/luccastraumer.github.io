@@ -1,14 +1,14 @@
-import {Component, ElementRef, HostListener, inject, OnInit} from '@angular/core';
-import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
-import ContactComponent from "../../../shared/contact/contact.component";
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
+import {SkeltonComponent} from "../../../shared-ui/skelton/skelton.component";
+import ContactComponent from "../../../layout/contact/contact.component";
 import FunctionsComponent from "../components/functions/functions.component";
 import HistoryComponent from "../components/history/history.component";
 import ProjectsComponent from "../components/projects/projects.component";
 import WellcomeComponent from "../components/wellcome/wellcome.component";
-import {HomeService} from "./service/home.service";
 import {AsyncPipe, NgStyle} from "@angular/common";
-import {SectionVisibleService} from "../../../shared/services/section-visible/section-visible.service";
-import FooterComponent from "../../../shared/footer/footer.component";
+import {SectionVisibleService} from "../../../services/section-visible/section-visible.service";
+import FooterComponent from "../../../layout/footer/footer.component";
+import LoaderComponent from "../../../shared-ui/loader/loader.component";
 
 @Component({
   selector: 'app-main',
@@ -23,12 +23,12 @@ import FooterComponent from "../../../shared/footer/footer.component";
     WellcomeComponent,
     AsyncPipe,
     NgStyle,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent
   ],
-  styles: ''
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class MainComponent {
-  homeSectionService: HomeService = inject(HomeService);
   activeSection: string | undefined;
   sectionVisbleService = inject(SectionVisibleService);
 }

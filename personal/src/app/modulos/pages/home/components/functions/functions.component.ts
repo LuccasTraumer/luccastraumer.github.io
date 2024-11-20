@@ -1,15 +1,14 @@
-import {Component, inject, OnDestroy, OnInit} from '@angular/core';
-import { RoleSection } from '../../../../shared/models/role-section';
+import {ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit, signal} from '@angular/core';
+import {RoleSection} from '../../../../shared-ui/models/role-section';
 import {HomeService} from "../../main/service/home.service";
-import {LoaderService} from "../../../../shared/loader/service/loader.service";
+import {LoaderService} from "../../../../shared-ui/loader/service/loader.service";
 import {CommonModule} from "@angular/common";
-import LoaderComponent from "../../../../shared/loader/loader.component";
-import {Subject, takeUntil} from "rxjs";
+import LoaderComponent from "../../../../shared-ui/loader/loader.component";
+import {finalize, Subject, takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-functions',
   templateUrl: './functions.component.html',
-  styleUrls: ['./functions.component.scss'],
   standalone: true,
   imports: [
     CommonModule,
@@ -18,13 +17,15 @@ import {Subject, takeUntil} from "rxjs";
   providers: [
     LoaderService,
     HomeService
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class FunctionsComponent implements OnInit, OnDestroy {
   private loaderService = inject(LoaderService);
   private ngDestroy$ = new Subject();
-  private homeSection = inject(HomeService);
-  roleSection!: RoleSection[];
+  protected homeSection = inject(HomeService);
+  protected firstSection = signal({} as RoleSection);
+  protected secondSection = signal({} as RoleSection);
 
   ngOnInit(): void {
     this.loaderService.setStateLoader(true);
@@ -32,18 +33,25 @@ export default class FunctionsComponent implements OnInit, OnDestroy {
     if (this.homeSection.getSectionStore().value.roleSection) {
       this.homeSection.getSectionStore()
         .pipe(
+          finalize(() => this.loaderService.setStateLoader(false)),
           takeUntil(this.ngDestroy$)
         )
         .subscribe(value => {
-        this.roleSection = value.roleSection;
+        this.firstSection.set(value.roleSection[0]);
+        this.secondSection.set(value.roleSection[1]);
       })
     } else {
-      this.homeSection.getRoleSection().pipe(takeUntil(this.ngDestroy$)).subscribe({
+      this.homeSection.getRoleSection()
+        .pipe(
+          finalize(() => this.loaderService.setStateLoader(false)),
+          takeUntil(this.ngDestroy$)
+        )
+        .subscribe({
         next: (value: any) => {
-          this.roleSection = value.roleSection;
-          this.homeSection.setRoleSection(this.roleSection);
-        },
-        complete: () => this.loaderService.setStateLoader(false)
+          this.firstSection.set(value.roleSection[0]);
+          this.secondSection.set(value.roleSection[1]);
+          value.roleSection ? this.homeSection.setRoleSection(value.roleSection) : null;
+        }
       })
     }
   }

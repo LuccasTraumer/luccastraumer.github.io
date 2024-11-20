@@ -1,8 +1,8 @@
 import {inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Constantes } from '../../../../utils/constantes';
+import { Constantes } from '../../../utils/constantes';
 import {Observable} from "rxjs";
-import {ArticlePost} from "../../../shared/models/article-post";
+import {ArticlePost} from "../../../shared-ui/models/article-post";
 
 @Injectable({
   providedIn: 'root'

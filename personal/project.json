@@ -2,31 +2,48 @@
   "name": "personal",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "personal",
+  "prefix": "app",
   "sourceRoot": "./src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": [""],
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist",
+        "outputPath": "dist/personal",
         "index": "./src/index.html",
         "browser": "./src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "./tsconfig.app.json",
+        "tsConfig": "tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["./src/favicon.ico", "./src/assets"],
-        "styles": ["./src/styles.scss"],
-        "scripts": []
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "src/styles"
+          ]
+        },
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "public"
+          }
+        ],
+        "styles": [
+          "./src/styles.scss"
+        ],
+        "scripts": [],
+        "server": "src/main.server.ts",
+        "prerender": true,
+        "ssr": {
+          "entry": "server.ts"
+        }
       },
       "configurations": {
         "production": {
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "5mb",
-              "maximumError": "5mb"
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
             },
             {
               "type": "anyComponentStyle",
@@ -48,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "org:build:production"
+          "buildTarget": "personal:build:production"
         },
         "development": {
-          "buildTarget": "org:build:development"
+          "buildTarget": "personal:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -59,12 +76,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "org:build"
+        "buildTarget": "personal:build"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["./src"]
       }
@@ -74,13 +90,18 @@
       "outputs": ["{workspaceRoot}/coverage/{projectName}"],
       "options": {
         "jestConfig": "jest.config.ts"
-      }
+      },
+      "styles": [
+        "./src/styles.scss"
+      ]
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "org:build",
-        "staticFilePath": "dist"
+        "buildTarget": "personal:build",
+        "port": 4200,
+        "staticFilePath": "dist/personal/browser",
+        "spa": true
       }
     }
   }

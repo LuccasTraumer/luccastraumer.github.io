@@ -1,0 +1,75 @@
+[NX Daemon Server] - 2024-11-18T12:49:01.726Z - Started listening on: /var/folders/_h/9qj8mnfd17n_vc2pf356my400000gp/T/9e4ebea8ff5a913369e0/d.sock
+[NX Daemon Server] - 2024-11-18T12:49:01.728Z - [WATCHER]: Subscribed to changes within: /Users/lucassj/Desktop/personal/personal (native)
+[NX Daemon Server] - 2024-11-18T12:49:01.736Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-18T12:49:01.737Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-18T12:49:01.737Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-18T12:49:01.738Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-18T12:49:01.809Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T12:49:01.809Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T12:49:01.809Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T12:49:02.024Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph. Run "nx reset" to fix this. Please report the issue if you keep seeing it.
+Failed to process project graph. Run "nx reset" to fix this. Please report the issue if you keep seeing it.
+  MultipleProjectsWithSameNameError: The following projects are defined in multiple locations:
+  - personal: 
+    - .
+    - 
+  
+  To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+      at validateAndNormalizeProjectRootMap (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:457:15)
+      at mergeCreateNodesResults (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:325:9)
+      at /Users/lucassj/Desktop/personal/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:266:85
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:148:43)
+      at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+      at async handleRequestProjectGraph (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+      at async handleResult (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/server.js:139:16)
+      at async handleMessage (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/server.js:92:9)
+      at async /Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/server.js:58:9
+[NX Daemon Server] - 2024-11-18T12:49:02.027Z - Time taken for 'Load Nx Plugin: /Users/lucassj/Desktop/personal/personal/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 63.696333998814225ms
+[NX Daemon Server] - 2024-11-18T12:49:02.028Z - [WATCHER]: .nx/workspace-data/d/server-process.json was created or restored
+[NX Daemon Server] - 2024-11-18T12:49:02.029Z - Done responding to the client null
+[NX Daemon Server] - 2024-11-18T12:49:02.029Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 286. Response time: 5.
+[NX Daemon Server] - 2024-11-18T12:49:02.033Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-18T12:49:02.129Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T12:49:02.130Z - [REQUEST]: .nx/workspace-data/d/server-process.json
+[NX Daemon Server] - 2024-11-18T12:49:02.130Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T12:49:02.153Z - Time taken for 'hash changed files from watcher' 0.1573329996317625ms
+[NX Daemon Server] - 2024-11-18T12:49:18.008Z - [WATCHER]: nx.json was modified
+[NX Daemon Server] - 2024-11-18T12:49:18.014Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T12:49:18.214Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T12:49:18.214Z - [REQUEST]: nx.json
+[NX Daemon Server] - 2024-11-18T12:49:18.214Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T12:49:18.266Z - Time taken for 'hash changed files from watcher' 0.39133300073444843ms
+[NX Daemon Server] - 2024-11-18T12:49:20.178Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-18T12:49:20.179Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-18T12:49:20.180Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-18T12:49:20.181Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-18T12:49:20.181Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T12:49:20.181Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T12:49:20.181Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T12:49:20.220Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph. Run "nx reset" to fix this. Please report the issue if you keep seeing it.
+Failed to process project graph. Run "nx reset" to fix this. Please report the issue if you keep seeing it.
+  MultipleProjectsWithSameNameError: The following projects are defined in multiple locations:
+  - personal: 
+    - .
+    - 
+  
+  To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+      at validateAndNormalizeProjectRootMap (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:457:15)
+      at mergeCreateNodesResults (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:325:9)
+      at /Users/lucassj/Desktop/personal/personal/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:266:85
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async processFilesAndCreateAndSerializeProjectGraph (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:148:43)
+      at async getCachedSerializedProjectGraphPromise (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+      at async handleRequestProjectGraph (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+      at async handleResult (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/server.js:139:16)
+      at async handleMessage (/Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/server.js:92:9)
+      at async /Users/lucassj/Desktop/personal/personal/node_modules/nx/src/daemon/server/server.js:58:9
+[NX Daemon Server] - 2024-11-18T12:49:20.223Z - Time taken for 'hash changed files from watcher' 0.0044999998062849045ms
+[NX Daemon Server] - 2024-11-18T12:49:20.225Z - Done responding to the client null
+[NX Daemon Server] - 2024-11-18T12:49:20.225Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 39. Response time: 5.
+[NX Daemon Server] - 2024-11-18T12:49:20.228Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-18T12:49:51.007Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T12:49:51.008Z - [WATCHER]: Stopping the watcher for /Users/lucassj/Desktop/personal/personal (sources)
+[NX Daemon Server] - 2024-11-18T12:49:51.008Z - [WATCHER]: Stopping the watcher for /Users/lucassj/Desktop/personal/personal (outputs)
+[NX Daemon Server] - 2024-11-18T12:49:51.008Z - Server stopped because: "LOCK_FILES_CHANGED"

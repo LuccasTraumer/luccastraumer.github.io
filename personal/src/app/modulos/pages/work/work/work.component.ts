@@ -1,10 +1,10 @@
 import {Component, inject} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
-import CardComponent from "../../../shared/card/card.component";
+import CardComponent from "../../../shared-ui/card/card.component";
 import {Router, RouterModule} from "@angular/router";
-import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
-import {Constantes} from "../../../../utils/constantes";
+import {SkeltonComponent} from "../../../shared-ui/skelton/skelton.component";
+import {Constantes} from "../../../utils/constantes";
 
 @Component({
   selector: 'app-work',

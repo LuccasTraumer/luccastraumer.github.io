@@ -4,7 +4,7 @@ import  PresentationArticleComponent  from './presentation-article.component';
 import {RouterTestingModule} from "@angular/router/testing";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ArticleService} from "../service/article.service";
-import {ArticlePost, SectionPost} from "../../../shared/models/article-post";
+import {ArticlePost, SectionPost} from "../../../shared-ui/models/article-post";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('PresentationArticleComponent', () => {

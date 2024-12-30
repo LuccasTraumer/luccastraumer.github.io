@@ -1,0 +1,115 @@
+<section class="content p-16 overflow-hidden w-screen bg-white">
+  <h3 class="content__title title blue-porple-text font-bold first-letter:uppercase text-center lg:text-center">
+    send me a message!
+  </h3>
+
+  <p class="content__description description leading-tight purple-text lg:text-center lg:w-1/3 lg:mx-auto lg:tracking-wide">
+    Got a question or proposal, or just want to say hello? Go ahead.
+  </p>
+
+  <form
+    [formGroup]="formGroup"
+    (ngSubmit)="clickButton()"
+    action=""
+    method="post"
+    class="content__form lg:w-2/3 lg:mx-auto grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-4"
+  >
+    <div class="content__form__name lg:col-span-1 lg:w-4/5">
+      <label
+        for="name"
+        class="content__form--description-input block purple-text-opacity text-sm py-2"
+        [ngClass]="isNameInputFocus ? 'text-blue-porple' : ''"
+      >Your name</label
+      >
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="{{ isNameInputFocus ? '' : 'Enter your name' }}"
+        class="content__form--input placeholder-[purple-text] w-full py-1 border-b border-gray-500 text-sm leading-6 tracking-wide bg-inherit"
+        [ngClass]="isNameInputFocus ? 'border-blue-porple' : ''"
+        formControlName="name"
+      />
+      @if(!name?.valid && (name?.dirty || name?.touched)) {
+        <div class="text-danger">
+          <div [hidden]="name !== null && name.errors !== null && true && !name.errors['required']">
+            name is required
+          </div>
+          <div [hidden]="name !== null && name.errors !== null && name.errors['name'] !== null && !name.errors['name']">
+            invalid name!
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="content__form__email lg:col-span-1 lg:w-4/5">
+      <label
+        for="email"
+        class="content__form--description-input block purple-text-opacity text-sm py-2"
+        [ngClass]="isEmailInputFocus ? 'text-blue-porple' : ''"
+      >Email Address</label
+      >
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="{{ isEmailInputFocus ? '' : 'Enter your email address' }}"
+        class="content__form--input purple-text w-full py-1 border-b border-gray-500 text-sm leading-6 tracking-wide bg-inherit"
+        [ngClass]="isEmailInputFocus ? 'border-blue-porple' : ''"
+        formControlName="email"
+      />
+      @if (!email?.valid && (email?.dirty || email?.touched)) {
+        <div class="text-purple">
+          <div [hidden]="email !== null && email.errors !== null && true && !email.errors['required']">
+            email is required
+          </div>
+          <div [hidden]="email !== null && email.errors !== null && email.errors['email'] !== null && !email.errors['email']">
+            invalid email id
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="content__form__message lg:col-span-2">
+      <label
+        for="message"
+        class="content__form--description-input block purple-text-opacity text-sm py-2"
+        [ngClass]="isMessageInputFocus ? 'text-blue-porple' : ''"
+      >Your message</label
+      >
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="5"
+        placeholder="{{
+          isMessageInputFocus
+            ? ''
+            : 'Hi, I think we need a developer for our products at Company X. How soon can you hop on to discuss this?'
+        }}"
+        class="content__form--input w-full py-1 border-b border-gray-500 purple-text text-sm leading-6 tracking-wide bg-inherit"
+        [ngClass]="isMessageInputFocus ? 'border-blue-porple' : ''"
+        formControlName="message"
+      ></textarea>
+      @if (!message?.valid && (message?.dirty || message?.touched)) {
+        <div class="text-green">
+          <div [hidden]="message !== null && message.errors !== null && true && !message.errors['required']">
+            message is required!
+          </div>
+          <div [hidden]="message !== null && message.errors !== null && message.errors['message'] !== null && !message.errors['message']">
+            invalid message!
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="content__form--button lg:col-span-2 lg:w-1/4 mx-auto my-4">
+      <app-button
+        [hasIcon]="true"
+        [classIcon]="'move-right'"
+        [content]="'shoot'"
+        (clickEventEmitter)="clickButton($event)"
+      ></app-button>
+    </div>
+  </form>
+</section>

@@ -1,13 +1,12 @@
 import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {Router, RouterModule} from '@angular/router';
-import {Constantes} from '../../../../../utils/constantes';
+import {Constantes} from '../../../../utils/constantes';
 import {CommonModule} from "@angular/common";
-import ButtonComponent from "../../../../shared/button/button.component";
+import ButtonComponent from "../../../../shared-ui/button/button.component";
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
   standalone: true,
   imports: [
     CommonModule,
@@ -17,7 +16,6 @@ import ButtonComponent from "../../../../shared/button/button.component";
   providers:[
     Router
   ],
-  // TODO: Incluir changeDetection
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ProjectsComponent {

@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {Constantes} from "./utils/constantes";
+import {Constantes} from "./modulos/utils/constantes";
 import ViewWorkComponent from "./modulos/pages/work/view-work/view-work.component";
 import ViewArticleComponent from "./modulos/pages/articles/view-article/view-article.component";
 

@@ -2,10 +2,10 @@ import { Component, inject, OnDestroy, OnInit} from '@angular/core';
 import { WorkService } from '../service/work.service';
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
-import ContactComponent from "../../../shared/contact/contact.component";
+import ContactComponent from "../../../layout/contact/contact.component";
 import {Subject, takeUntil} from "rxjs";
-import {CarousselComponent} from "../../../shared/caroussel/caroussel.component";
-import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
+import {CarousselComponent} from "../../../shared-ui/caroussel/caroussel.component";
+import {SkeltonComponent} from "../../../shared-ui/skelton/skelton.component";
 import {Router} from "@angular/router";
 
 @Component({

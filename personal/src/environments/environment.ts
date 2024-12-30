@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  ROOT_PATH: 'https://bff-personal-production.up.railway.app',
-  ID_CLOUDNARY:"dfixlnbhd"
+  ROOT_PATH: 'http://localhost:3000',
 };
 
 /*

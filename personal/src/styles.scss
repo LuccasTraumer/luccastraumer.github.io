@@ -44,6 +44,10 @@ body .loading{
   color: $green-text;
 }
 
+.text-green {
+  color: $green-text;
+}
+
 .white-text {
   color: $white-text;
 }
@@ -56,12 +60,20 @@ body .loading{
   color: $purple;
 }
 
+.purple-text-opacity {
+  color: rgba(61, 21, 95, 0.5);
+}
+
 .bg-green {
   background: $green-text;
 }
 
 .bg-white {
   background: $white-text;
+}
+
+.bg-white-one {
+  background-color: $white-one;
 }
 
 .bg-blue-porple {

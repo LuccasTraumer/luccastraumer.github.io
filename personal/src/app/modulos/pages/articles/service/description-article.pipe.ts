@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {ArticlePost} from "../../../shared/models/article-post";
+import {ArticlePost} from "../../../shared-ui/models/article-post";
 
 @Pipe({
   name: 'descriptionArticle',

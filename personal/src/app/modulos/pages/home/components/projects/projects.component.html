@@ -1,15 +1,14 @@
-<section class="content p-8 overflow-hidden w-screen">
-  <div class="content__cards">
-    <nav class="content__cards--card bg-white p-20" aria-label="navigation">
-      <h3 class="content__cards--card--title font-bold title blue-porple-text">
+<section class="content p-8 overflow-hidden w-screen h-screen bg-white-one flex items-center justify-center lg:flex">
+  <div class="flex flex-col md:flex-row items-center">
+    <nav class="bg-white p-16 grid grid-rows-3 gap-y-2 max-h-[350px] shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] border-b-[0.1rem] border-solid border-[rgba(72,49,212,0.3)] md:border-r-[0.1rem] md:border-b-0 lg:h-1/2 lg:box-content">
+      <h3 class="content__cards--card--title font-bold blue-porple-text lg:text-2xl">
         I build &<br />
         design stuff
       </h3>
-      <p class="content__cards--card--description description">
+      <p class="text-purple lg:w-3/5 lg:text-base lg:leading-[1.2] lg:tracking-normal">
         Open source projects, web apps and experimental.
       </p>
-
-      <div class="content__cards--card--button">
+      <div class="content__cards--card--button lg:w-3/5">
         <app-button
           [content]="'see my work'"
           [hasIcon]="true"
@@ -18,15 +17,15 @@
         ></app-button>
       </div>
     </nav>
-    <nav class="content__cards--card bg-white p-20">
-      <h3 class="content__cards--card--title title blue-porple-text font-bold">
+    <nav class="bg-white p-16 grid grid-rows-3 gap-y-2 max-h-[350px] shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] border-b-[0.1rem] border-solid border-[rgba(72,49,212,0.3)] md:border-r-0 md:border-b-0 lg:h-1/2 lg:box-content">
+      <h3 class="font-bold blue-porple-text lg:text-2xl">
         I write,<br />
         sometimes
       </h3>
-      <p class="content__cards--card--description description">
+      <p class="text-purple lg:w-3/5 lg:text-base lg:leading-[1.2] lg:tracking-normal">
         About design, frontend dev, learning and life.
       </p>
-      <div class="content__cards--card--button">
+      <div class="lg:w-3/5">
         <app-button
           [content]="'read my articles'"
           [classIcon]="'move-right'"

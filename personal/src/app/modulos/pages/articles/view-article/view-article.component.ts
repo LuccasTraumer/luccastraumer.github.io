@@ -1,10 +1,10 @@
 import { Component, inject, OnDestroy, OnInit} from '@angular/core';
 import { Router} from '@angular/router';
-import { ArticlePost } from '../../../shared/models/article-post';
+import { ArticlePost } from '../../../shared-ui/models/article-post';
 import {ArticleService} from "../service/article.service";
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
-import {SkeltonComponent} from "../../../shared/skelton/skelton.component";
+import {SkeltonComponent} from "../../../shared-ui/skelton/skelton.component";
 import {Subject, takeUntil} from "rxjs";
 
 @Component({

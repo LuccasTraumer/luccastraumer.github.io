@@ -1,11 +1,11 @@
 import {inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Constantes } from '../../../../../utils/constantes';
+import { Constantes } from '../../../../utils/constantes';
 import {BehaviorSubject} from "rxjs";
-import {HomeData} from "../../../../shared/models/home-data";
-import {WelcomeSection} from "../../../../shared/models/welcome-section";
-import {HistorySection} from "../../../../shared/models/history-section";
-import {RoleSection} from "../../../../shared/models/role-section";
+import {HomeData} from "../../../../shared-ui/models/home-data";
+import {WelcomeSection} from "../../../../shared-ui/models/welcome-section";
+import {HistorySection} from "../../../../shared-ui/models/history-section";
+import {RoleSection} from "../../../../shared-ui/models/role-section";
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,7 @@ export class HomeService {
   }
 
   getRoleSection() {
-    return this.http.get<RoleSection>(`${this.PATH_ROOT}/functions`);
+    return this.http.get<RoleSection[]>(`${this.PATH_ROOT}/functions`);
   }
 
   getHomeData() {

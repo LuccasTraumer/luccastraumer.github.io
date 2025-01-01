@@ -1,8 +1,8 @@
-import {inject, Injectable} from '@angular/core';
+import {inject, Injectable, signal} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Constantes } from '../../../../utils/constantes';
-import {BehaviorSubject} from "rxjs";
-import {HomeData} from "../../../../shared-ui/models/home-data";
+import {BehaviorSubject, Observable, of, switchMap} from "rxjs";
+import {HomeState} from "../../../../shared-ui/models/home-state";
 import {WelcomeSection} from "../../../../shared-ui/models/welcome-section";
 import {HistorySection} from "../../../../shared-ui/models/history-section";
 import {RoleSection} from "../../../../shared-ui/models/role-section";
@@ -16,36 +16,42 @@ export class HomeService {
 
   private readonly PATH_ROOT = `${this.CONSTANTES.ROOT_PATH}/home`;
 
-  private homeData: HomeData = {} as HomeData;
+  private homeData: HomeState = inject(HomeState);
 
-  private homeSectionStore = new BehaviorSubject<HomeData>(this.homeData);
+  private homeSectionStore = new BehaviorSubject<HomeState>(this.homeData);
 
-  getSectionStore(): BehaviorSubject<HomeData> {
+  getSectionStore(): BehaviorSubject<HomeState> {
     return this.homeSectionStore;
   }
 
   setWelcomeSection(value: WelcomeSection): void {
-    this.homeData.welcomeSection = value;
+    this.homeData.welcomeSection = signal(value);
   }
 
   setRoleSection(value: RoleSection[]): void {
-    this.homeData.roleSection = value;
+    this.homeData.roleSection = signal(value);
   }
 
   setHistorySection(value: HistorySection): void {
-    this.homeData.historySection = value;
+    this.homeData.historySection = signal(value);
   }
 
   getWellcomeSection() {
-    return this.http.get<WelcomeSection>(`${this.PATH_ROOT}/welcome`);
+    return this.http.get<WelcomeSection>(`${this.PATH_ROOT}/welcome`).pipe(switchMap((data: any) => {
+      return of(data.welcomeSection);
+    }));
   }
 
-  getHistorySection() {
-    return this.http.get<HistorySection>(`${this.PATH_ROOT}/history`);
+  getHistorySection(): Observable<HistorySection> {
+    return this.http.get<HistorySection>(`${this.PATH_ROOT}/history`).pipe(switchMap((data: any) => {
+      return of(data.historySection);
+    }));
   }
 
   getRoleSection() {
-    return this.http.get<RoleSection[]>(`${this.PATH_ROOT}/functions`);
+    return this.http.get<RoleSection[]>(`${this.PATH_ROOT}/functions`).pipe(switchMap((data: any) => {
+      return of(data.roleSection);
+    }));
   }
 
   getHomeData() {

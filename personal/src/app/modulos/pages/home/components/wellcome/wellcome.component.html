@@ -1,41 +1,42 @@
-<section class="content p-0 overflow-hidden w-screen">
-  <div class="content__main p-4">
-    <h2 class="content__main--title font-bold title green-color px-8">
-      {{ welcomeData != null ? welcomeData.expert : ''}}
-    </h2>
-    <p class="content__main--description description leading-tight white-text px-8">
-      {{ welcomeData != null && welcomeData?.description ? welcomeData!.description : ''}}
-    </p>
+@if (welcomeSection()){
+  <section class="content p-0 overflow-hidden w-screen">
+    <div class="content__main p-4">
+      <h2 class="content__main--title font-bold title green-color px-8">
+        {{ welcomeSection().expert }}
+      </h2>
+      <p class="content__main--description description leading-tight white-text px-8">
+        {{ welcomeSection().description }}
+      </p>
 
-    <div class="content__main--subtitles flex green-color px-8 justify-between items-center">
-      <p class="content__subtitles--subtitle px-8">
-        {{ welcomeData != null && welcomeData?.subtitle && welcomeData.subtitle.length > 0 ? welcomeData!.subtitle[0] : '' }}
-      </p>
-      <p class="content__main--subtitles--subtitle px-8">
-        {{ welcomeData != null && welcomeData?.subtitle && welcomeData.subtitle.length > 0 ? welcomeData!.subtitle[1] : ''}}
-      </p>
+      <div class="content__main--subtitles flex green-color px-8 justify-between items-center">
+        @for (item of welcomeSection().subtitle; track $index) {
+          <p class="px-8" [ngClass]="$index === 1 ? 'content__main--subtitles--subtitle' : 'content__subtitles--subtitle'">
+            {{ item }}
+          </p>
+        }
+      </div>
     </div>
-  </div>
 
-  <figure class="content__me bg-green w-100 w-full relative">
-    <app-icone></app-icone>
-    <ng-container *ngIf="!imageLoaded">
-      <app-loader></app-loader>
-    </ng-container>
+    <figure class="content__me bg-green w-100 w-full relative">
+      <app-icone></app-icone>
+      <ng-container *ngIf="!imageLoaded">
+        <app-loader></app-loader>
+      </ng-container>
 
-    <img
-      ngSrc="assets/images/profile_image_480.jpg"
-      alt="personal image"
-      loading="lazy"
-      (load)="onImageLoad()"
-      srcset="
+      <img
+        ngSrc="assets/images/profile_image_480.jpg"
+        alt="personal image"
+        loading="lazy"
+        (load)="onImageLoad()"
+        srcset="
     assets/images/profile_image_480.jpg 480w,
     assets/images/profile_image_1024.jpg 1024w,
     assets/images/profile_image_1600.jpg 1600w
   "
-      sizes="(min-width: 425px) 480px, (min-width: 1200px) 1024px, 1600px"
-      height="532"
-      width="480"
-    />
-  </figure>
-</section>
+        sizes="(min-width: 425px) 480px, (min-width: 1200px) 1024px, 1600px"
+        height="532"
+        width="480"
+      />
+    </figure>
+  </section>
+}

@@ -1,27 +1,29 @@
-<section
-  class="content p-16 overflow-hidden w-screen flex gap-x-0.5 flex-col
+@if(historySection()) {
+  <section
+    class="content p-16 overflow-hidden w-screen flex gap-x-0.5 flex-col
   md:flex-row
   lg:items-center
 "
->
-  <article class="w-full lg:w-[30vw] lg:row-start-1 lg:row-end-1">
-    <h3 class="content__title title green-color font-bold pb-1 text-2xl lg:col-span-2 lg:row-start-1 lg:row-end-2">
-      {{ historySection()?.title }}
-    </h3>
-    <p
-      class="content__article--description description leading-tight white-text pb-1 text-[1em] lg:leading-[2]"
-      [attr.aria-hidden]="'true'"
-    >
-      {{ paragraph() }}
-    </p>
-  </article>
-  <figure class="content__illustration pt-8 w-full lg:w-[65vw] lg:row-start-2 lg:row-end-3 lg:mx-auto lg:p-0 sm:none">
-    <app-icone></app-icone>
-    <figcaption class="hidden">
-      A Illustration of a team work on feature development.
-    </figcaption>
-    <a hidden href="https://storyset.com/online"
-    >Online illustrations by Storyset</a
-    >
-  </figure>
-</section>
+  >
+    <article class="w-full lg:w-[30vw] lg:row-start-1 lg:row-end-1">
+      <h3 class="content__title title green-color font-bold pb-1 text-2xl lg:col-span-2 lg:row-start-1 lg:row-end-2">
+        {{ historySection().title }}
+      </h3>
+      <p
+        class="content__article--description description leading-tight white-text pb-1 text-[1em] lg:leading-[2]"
+        [attr.aria-hidden]="'true'"
+      >
+        {{ historySection().paragraph[0] }}
+      </p>
+    </article>
+    <figure class="content__illustration pt-8 w-full lg:w-[65vw] lg:row-start-2 lg:row-end-3 lg:mx-auto lg:p-0 sm:none">
+      <app-icone></app-icone>
+      <figcaption class="hidden">
+        A Illustration of a team work on feature development.
+      </figcaption>
+      <a hidden href="https://storyset.com/online"
+      >Online illustrations by Storyset</a
+      >
+    </figure>
+  </section>
+}

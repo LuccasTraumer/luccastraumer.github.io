@@ -1,6 +1,6 @@
 import {Component, ElementRef, HostListener, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import {ReactiveFormsModule} from "@angular/forms";
 import { LucideAngularModule} from 'lucide-angular';
 import LoaderComponent from "./modulos/shared-ui/loader/loader.component";
@@ -27,16 +27,19 @@ import ContactComponent from "./modulos/layout/contact/contact.component";
     FooterComponent,
     ContactComponent
   ],
+  providers: [Router],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   title = 'Luccas Traumer';
-  loaderService = inject(LoaderService);
-  sectionVisbleService = inject(SectionVisibleService);
+
+  protected loaderService = inject(LoaderService);
+  protected sectionVisbleService = inject(SectionVisibleService);
+  protected router: Router = inject(Router);
   private elementRef: ElementRef = inject(ElementRef);
 
-  sections: HTMLElement[] = [];
+  protected sections: HTMLElement[] = [];
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

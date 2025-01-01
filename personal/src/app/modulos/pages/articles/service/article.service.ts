@@ -4,9 +4,7 @@ import { Constantes } from '../../../utils/constantes';
 import {Observable} from "rxjs";
 import {ArticlePost} from "../../../shared-ui/models/article-post";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ArticleService {
   private readonly CONSTANTES = Constantes;
   private http: HttpClient = inject(HttpClient);

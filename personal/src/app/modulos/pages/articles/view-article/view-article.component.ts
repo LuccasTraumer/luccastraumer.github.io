@@ -1,11 +1,11 @@
-import { Component, inject, OnDestroy, OnInit} from '@angular/core';
+import {Component, inject, WritableSignal} from '@angular/core';
 import { Router} from '@angular/router';
 import { ArticlePost } from '../../../shared-ui/models/article-post';
 import {ArticleService} from "../service/article.service";
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {SkeltonComponent} from "../../../shared-ui/skelton/skelton.component";
-import {Subject, takeUntil} from "rxjs";
+import {toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-home-article',
@@ -21,26 +21,13 @@ import {Subject, takeUntil} from "rxjs";
     ArticleService
   ]
 })
-export default class ViewArticleComponent implements OnInit, OnDestroy {
+export default class ViewArticleComponent {
   private route: Router = inject(Router)
   private articleService = inject(ArticleService);
-  private ngDestroy$ = new Subject();
-  article!: ArticlePost;
+  protected article!: WritableSignal<ArticlePost>;
 
-  ngOnInit(): void {
-    if (!this.article) {
-      this.articleService.getArticleByName(parseInt(this.route.url.split('/')[2]))
-        .pipe(takeUntil(this.ngDestroy$))
-        .subscribe({
-        next: value => {
-          this.article = value;
-        }
-      })
-    }
-  }
-
-  ngOnDestroy(): void {
-    this.ngDestroy$.next(true);
-    this.ngDestroy$.complete();
+  constructor() {
+    // @ts-ignore
+    this.article = toSignal(this.articleService.getArticleByName(parseInt(this.route.url.split('/')[2])));
   }
 }

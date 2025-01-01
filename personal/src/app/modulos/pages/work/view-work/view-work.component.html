@@ -1,16 +1,16 @@
-@defer(on viewport; when work) {
+@defer(on viewport; when work()) {
   <section class="content pt-40 h-full p-16 overflow-hidden w-screen">
     <h2 class="content__title title lowercase font-bold">
-      {{ work.title }}
+      {{ work().title }}
     </h2>
 
     <figure class="content__work">
       <app-caroussel
-        [listImages]="work.images"
+        [listImages]="work().images"
       ></app-caroussel>
 
       <figcaption class="content__work__description p-4">
-        {{ work.description }}
+        {{ work().description }}
       </figcaption>
     </figure>
 

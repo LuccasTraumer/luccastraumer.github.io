@@ -42,8 +42,7 @@ export default class HeaderComponent {
 
   goToShelf() {
     this.closeMenu();
-    this.router.navigateByUrl(Constantes.PATH_ARTICLES)
-      .then(() => this.loader.setStateLoader(true)).finally(() => this.loader.setStateLoader(false));
+    this.router.navigate([Constantes.PATH_ARTICLES]);
   }
 
   goToResume() {

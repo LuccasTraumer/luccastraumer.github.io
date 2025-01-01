@@ -1,19 +1,19 @@
 @defer (on viewport) {
-  @if (article) {
+  @if (article()) {
     <article class="content p-16 pt-32 h-full overflow-hidden w-screen">
       <div class="content__time flex items-center gap-16 my-4">
         <time class="content__date--publish">{{
-            article.date | date : "medium"
+            article().date | date : "medium"
           }}</time>
-        <p class="content__date--read">{{ article.timeRead }} min read</p>
+        <p class="content__date--read">{{ article().timeRead }} min read</p>
       </div>
 
       <h2 class="content__title title">
-        {{ article.title }}
+        {{ article().title }}
       </h2>
 
       <div class="content__description py-4">
-        @for(section of article.description; track section) {
+        @for(section of article().description; track section) {
           <div>
             @if(section && section.titleSection) {
               <h3
@@ -44,7 +44,7 @@
           }
           </div>
         } @empty { List is Empty }
-        @for (section of article.description; track $index) {
+        @for (section of article().description; track $index) {
           <ng-container>
             @if (section.titleSection) {
               <h3
@@ -79,9 +79,9 @@
       </div>
 
       <div class="content__tags flex items-center">
-        @if (article.tags) {
+        @if (article().tags) {
           <p class="content__tags--title capitalize">tags:</p>
-        } @for(tag of article.tags; track $index) {
+        } @for(tag of article().tags; track $index) {
         <p class="content__tags--item lowercase flex">{{ tag }},</p>
       }
       </div>

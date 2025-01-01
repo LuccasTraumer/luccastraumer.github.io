@@ -4,9 +4,7 @@ import { Constantes } from '../../../utils/constantes';
 import {Work} from "../view-work/view-work.component";
 import {Observable} from "rxjs";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class WorkService {
   private httpClient: HttpClient = inject(HttpClient);
   private readonly CONSTANTES = Constantes;

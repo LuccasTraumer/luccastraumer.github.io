@@ -24,7 +24,7 @@ import {Constantes} from "../../../utils/constantes";
 })
 export default class WorkComponent {
   private router: Router = inject(Router);
-  linkImage: string = 'CIT_TRANSPARENT';
+  linkImage: string = 'https://upload.wikimedia.org/wikipedia/commons/1/10/CI%26T_Logo.png';
 
   goToWork(event: string) {
     this.router.navigate([`/${Constantes.PATH_WORKS}/${event}`])

@@ -15,7 +15,7 @@ export const routes: Routes = [
   },
   {
     path: Constantes.PATH_ARTICLES,
-    loadChildren: () => import('./modulos/pages/articles/article-routing.module'),
+    loadChildren: () => import('./modulos/pages/articles/article-routing'),
   },
   {
     path: Constantes.PATH_RESUME,

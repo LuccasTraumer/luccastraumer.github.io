@@ -1,0 +1,40 @@
+<app-header/>
+<main class="view">
+  <router-outlet #scrollableElement></router-outlet>
+  @if (router.url.includes('home')) {
+    <aside class="sections fixed">
+      <a
+        class="item"
+        [class.squad]="sectionVisbleService.getActiveSection() === 'welcome'"
+        [ngClass]="isGreenBorder() ? 'border-green' : 'border-purple'"
+      ></a>
+      <a
+        class="item"
+        [class.squad]="sectionVisbleService.getActiveSection() === 'functions'"
+        [ngClass]="isGreenBorder() ? 'border-green' : 'border-purple'"
+      ></a>
+      <a
+        class="item"
+        [class.squad]="sectionVisbleService.getActiveSection() === 'history'"
+        [ngClass]="isGreenBorder() ? 'border-green' : 'border-purple'"
+      ></a>
+      <a
+        class="item"
+        [class.squad]="sectionVisbleService.getActiveSection() === 'project'"
+        [ngClass]="isGreenBorder() ? 'border-green' : 'border-purple'"
+      ></a>
+      <a
+        class="item"
+        [class.squad]="sectionVisbleService.getActiveSection() === 'contact'"
+        [ngClass]="isGreenBorder() ? 'border-green' : 'border-purple'"
+      ></a>
+      <a
+        class="item"
+        [class.squad]="sectionVisbleService.getActiveSection() === 'footer'"
+        [ngClass]="isGreenBorder() ? 'border-green' : 'border-purple'"
+      ></a>
+    </aside>
+  }
+
+</main>
+

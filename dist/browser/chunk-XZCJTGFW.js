@@ -1,0 +1,1 @@
+var t={production:!0,ROOT_PATH:"http://localhost:3000"};var i=class{static{this.PATH_RESUME="resume"}static{this.PATH_WORKS="works"}static{this.PATH_ARTICLES="articles"}static{this.PATH_HOME="home"}static{this.ROOT_PATH=t.ROOT_PATH}};export{i as a};
